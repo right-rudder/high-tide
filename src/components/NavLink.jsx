@@ -5,7 +5,7 @@ const NavLink = ({ menuItem, pathname, toggled, onShow }) => {
       <a
         id={menuItem.name}
         onClick={onShow}
-        className={`cursor-pointer font-semibold tracking-widest text-white py-3 hover:border-b-2 border-main-red whitespace-nowrap uppercase ${
+        className={`cursor-pointer font-semibold text-sm xl:text-base tracking-widest text-white py-3 hover:border-b-2 border-main-red whitespace-nowrap uppercase ${
           isActive ? "border-b-2" : ""
         }`}
       >
@@ -20,7 +20,9 @@ const NavLink = ({ menuItem, pathname, toggled, onShow }) => {
           <a
             key={item.name}
             href={item.link}
-            className={`${item.link === pathname ? "bg-main-red" : ""} px-5 py-3 border border-gray-700 hover:bg-main-red`}
+            className={`${
+              item.link === pathname ? "bg-main-red" : ""
+            } px-5 py-3 border border-gray-700 hover:bg-main-red`}
           >
             {item.name}
           </a>

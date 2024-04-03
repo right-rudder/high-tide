@@ -1,6 +1,6 @@
 export const navbarLinks = [
   {
-    name: "First Time Pilots",
+    name: "First-Time Pilots",
     submenu: [],
   },
   {

@@ -51,7 +51,7 @@ const Navbar = ({ pathname }) => {
             className={`lg:h-24 relative flex h-20 items-center justify-between transition-all`}
             id="navbar"
           >
-            <div className="flex flex-1 items-center justify-between">
+            <div className="flex w-full items-center justify-between">
               <a href="/">
                 <img
                   src="src/assets/high-tide-aviation-logo-white.png"
@@ -61,7 +61,7 @@ const Navbar = ({ pathname }) => {
                 />
               </a>
               <div className="hidden lg:block">
-                <div className="flex gap-5 xl:gap-10 items-center">
+                <div className="flex gap-5 xl:gap-10 items-center mx-5">
                   {navbarLinks.map((item) => (
                     <NavLink
                       key={item.name}
@@ -78,7 +78,7 @@ const Navbar = ({ pathname }) => {
                 <div className="group border p-3 border-mustard-yellow rounded-full bg-mustard-yellow hover:bg-white hover:border-white duration-300 cursor-pointer">
                   <FaPhone className="size-4 group-hover:text-black duration-300" />
                 </div>
-                <div className="hidden xl:block">
+                <div className="hidden 2xl:block">
                   <p className="text-sm text-white/80">Call Anytime</p>
                   <p className="font-medium">1-800-123-4567</p>
                 </div>
@@ -88,7 +88,7 @@ const Navbar = ({ pathname }) => {
             <div className="absolute inset-y-0 right-0 flex items-center lg:hidden">
               <button
                 type="button"
-                className="mobile-menu-button relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:text-white"
+                className="mobile-menu-button relative inline-flex items-center justify-center rounded-md p-2 text-white"
                 aria-controls="mobile-menu"
                 aria-expanded="false"
                 onClick={handleHamburgerClick}
