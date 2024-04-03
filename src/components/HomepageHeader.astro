@@ -1,0 +1,46 @@
+---
+import { Image } from "astro:assets";
+import HeroImage from "../assets/homepage-banner.jpg";
+import Navbar from "./Navbar.jsx";
+const { pathname } = Astro.url;
+---
+
+<header>
+	<Navbar pathname={pathname} client:load />
+
+  <div
+    class="relative isolate pt-14 overflow-hidden h-[82vh] text-white flex items-center"
+  >
+    <Image
+      src={HeroImage}
+      alt="A description of my image."
+      class="absolute top-0 w-full h-full object-cover -z-50"
+    />
+    <div
+      class="absolute inset-0 bg-dark-blue/60 -z-40 to-40%"
+    >
+    </div>
+    <div class="flex w-full justify-center">
+      <div class="px-5 animate-fade-in font-medium text-center flex flex-col gap-8">
+        <h2 class="text-lg">
+          Welcome to High Tide Aviation
+        </h2>
+        <h1 class="text-5xl lg:text-7xl font-medium uppercase max-w-4xl">
+          Southport’s Airplane and Helicopter Training Home
+        </h1>
+        <div class="flex w-full justify-center gap-10">
+          <a
+            href="#"
+            class="block uppercase py-4 px-14 bg-mustard-yellow w-fit rounded-full hover:bg-white duration-300 hover:text-black"
+            >Book Now</a
+          >
+          <a
+            href="#"
+            class="block uppercase py-4 px-14 bg-white w-fit rounded-full text-black hover:bg-mustard-yellow duration-300 hover:text-white"
+            >Read More</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

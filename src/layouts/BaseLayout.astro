@@ -1,0 +1,21 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import '@fontsource-variable/dm-sans';
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body class="Inter">
+    <slot name="header" />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+    <script src="../scripts/animate-on-scroll.js"></script>
+  </body>
+</html>
