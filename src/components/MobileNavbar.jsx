@@ -1,4 +1,4 @@
-import { firstTimePilots, flightTraining, about } from "../data/navbarLinks.js";
+import { navbarLinks } from "../data/navbarLinks.js";
 import MobileNavLink from "./MobileNavLink.jsx";
 import { useState } from "react";
 
@@ -14,24 +14,16 @@ const MobileNavBar = ({ pathname }) => {
 
   return (
     <>
-      <MobileNavLink
-        menuItem={firstTimePilots}
-        pathname={pathname}
-        toggled={firstTimePilots.name === open}
-        onShow={handleClick}
-      />
-      <MobileNavLink
-        menuItem={flightTraining}
-        pathname={pathname}
-        toggled={flightTraining.name === open}
-        onShow={handleClick}
-      />
-      <MobileNavLink
-        menuItem={about}
-        pathname={pathname}
-        toggled={about.name === open}
-        onShow={handleClick}
-      />
+      {navbarLinks.map((item) => (
+        <MobileNavLink
+          key={item.name}
+          menuItem={item}
+          pathname={pathname}
+          toggled={item.name === open}
+          onShow={handleClick}
+        />
+      ))}
+
     </>
   );
 };

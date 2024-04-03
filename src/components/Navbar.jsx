@@ -1,6 +1,6 @@
 import MobileNavbar from "./MobileNavbar";
 import NavLink from "./NavLink";
-import { firstTimePilots, flightTraining, about } from "../data/navbarLinks.js";
+import { navbarLinks } from "../data/navbarLinks.js";
 import { useEffect, useState } from "react";
 import { PiShoppingCartLight } from "react-icons/pi";
 import { FaPhone } from "react-icons/fa";
@@ -40,7 +40,11 @@ const Navbar = ({ pathname }) => {
   return (
     <nav className="w-full h-0 sticky top-0 z-50">
       <div
-        className={`${navBar || openMobile ? "bg-dark-blue/80 backdrop-blur border-dark-blue/80" : "bg-transparent border-white/20"} duration-300 border-b`}
+        className={`${
+          navBar || openMobile
+            ? "bg-dark-blue/80 backdrop-blur border-dark-blue/80"
+            : "bg-transparent border-white/20"
+        } duration-300 border-b`}
       >
         <div className="mx-auto px-5 xl:px-12">
           <div
@@ -58,30 +62,21 @@ const Navbar = ({ pathname }) => {
               </a>
               <div className="hidden lg:block">
                 <div className="flex gap-5 xl:gap-10 items-center">
-                  <NavLink
-                    pathname={pathname}
-                    menuItem={firstTimePilots}
-                    toggled={firstTimePilots.name === openSubmenu}
-                    onShow={handleMenuItemClick}
-                  />
-                  <NavLink
-                    pathname={pathname}
-                    menuItem={flightTraining}
-                    toggled={flightTraining.name === openSubmenu}
-                    onShow={handleMenuItemClick}
-                  />
-                  <NavLink
-                    pathname={pathname}
-                    menuItem={about}
-                    toggled={about.name === openSubmenu}
-                    onShow={handleMenuItemClick}
-                  />
+                  {navbarLinks.map((item) => (
+                    <NavLink
+                      key={item.name}
+                      menuItem={item}
+                      pathname={pathname}
+                      toggled={item.name === openSubmenu}
+                      onShow={handleMenuItemClick}
+                    />
+                  ))}
                 </div>
               </div>
               <div className="hidden lg:flex items-center gap-3 text-white border-l border-white/20 pl-10">
-                <PiShoppingCartLight className="size-8 cursor-pointer hover:text-white/80 duration-300"/>
+                <PiShoppingCartLight className="size-8 cursor-pointer hover:text-white/80 duration-300" />
                 <div className="group border p-3 border-mustard-yellow rounded-full bg-mustard-yellow hover:bg-white hover:border-white duration-300 cursor-pointer">
-                  <FaPhone className="size-4 group-hover:text-black duration-300"/>
+                  <FaPhone className="size-4 group-hover:text-black duration-300" />
                 </div>
                 <div className="hidden xl:block">
                   <p className="text-sm text-white/80">Call Anytime</p>
@@ -139,7 +134,9 @@ const Navbar = ({ pathname }) => {
       </div>
 
       <div
-        className={`${openMobile ? "max-h-[36rem]" : "max-h-0"} overflow-hidden transition-[max-height] duration-300 ease-in-out lg:hidden absolute w-full bg-black -z-10`}
+        className={`${
+          openMobile ? "max-h-[36rem]" : "max-h-0"
+        } overflow-hidden transition-[max-height] duration-300 ease-in-out lg:hidden absolute w-full bg-black -z-10`}
         id="mobile-menu"
       >
         <div className="px-4 pb-3 pt-2 flex flex-col">
