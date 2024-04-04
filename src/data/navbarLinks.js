@@ -1,6 +1,7 @@
 export const navbarLinks = [
   {
     name: "First-Time Pilots",
+    link: "/first-time-pilots",
     submenu: [],
   },
   {
@@ -67,6 +68,7 @@ export const navbarLinks = [
   },
   {
     name: "Helicopter Tours",
+    link: "/helicopter-tours",
     submenu: [],
   },
 ];
