@@ -1,36 +1,43 @@
-import { FaPlus, FaMinus } from "react-icons/fa6";
+import { IoIosArrowForward } from "react-icons/io";
 
 const MobileNavLink = ({ menuItem, pathname, toggled, onShow }) => {
   const isActive = menuItem.submenu.some((item) => item.link === pathname);
 
   return (
-    <div className="flex flex-col items-start">
+    <div className="flex flex-col items-start border-t border-white/30 last:border-b">
       <button
         id={menuItem.name}
         onClick={onShow}
-        className={`text-xl w-full flex items-center uppercase justify-between text-white py-3 hover:border-b-2 border-main-red whitespace-nowrap ${
-          isActive ? "border-b-2" : ""
+        className={`w-full flex items-center justify-between text-white py-3 whitespace-nowrap ${
+          isActive ? "bg-mustard-yellow/15" : ""
         }`}
       >
         <p className="pointer-events-none">{menuItem.name}</p>
-        {toggled ? (
-          <FaMinus className="mr-3 pointer-events-none" />
-        ) : (
-          <FaPlus className="mr-3 pointer-events-none" />
+        {menuItem.submenu.length > 0 && (
+          <div
+            className={` p-1 pointer-events-none duration-300 ${
+              toggled ? "bg-white rotate-90" : "bg-mustard-yellow"
+            }`}
+          >
+            <IoIosArrowForward
+              className={`${toggled ? "text-mustard-yellow" : ""} size-5`}
+            />
+          </div>
         )}
       </button>
       <ul
-        className={`overflow-hidden text-white ${
-          toggled ? "max-h-96" : "max-h-0"
-        } transition-[max-height] duration-300 ease-in-out }`}
+        className={`overflow-hidden text-white   ${
+          toggled ? "max-h-[30rem]" : "max-h-0"
+        } transition-[max-height] duration-300 ease-in-out w-full pl-3 }`}
       >
         {menuItem.submenu.map((item) => (
-          <li key={item.name} className="m-4">
+          <li
+            key={item.name}
+            className="py-3 border-t border-white/20 last:border-b"
+          >
             <a
               href={item.link}
-              className={`hover:border-b-2 border-main-red text-xl ${
-                item.link === pathname ? "border-b-2" : ""
-              }`}
+              className={` ${item.link === pathname ? "border-b-2" : ""}`}
             >
               {item.name}
             </a>
