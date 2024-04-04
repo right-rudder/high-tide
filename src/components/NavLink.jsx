@@ -2,6 +2,32 @@ import { IoIosArrowForward } from "react-icons/io";
 
 const NavLink = ({ menuItem, pathname, toggled, onShow }) => {
   const isActive = menuItem.submenu.some((item) => item.link === pathname);
+
+  let linkOrDropdown;
+  if (menuItem.submenu.length === 0) {
+    linkOrDropdown = (
+      <a
+        id={menuItem.name}
+        href={menuItem.link}
+        className={`cursor-pointer font-semibold text-sm xl:text-base tracking-widest duration-300 hover:text-mustard-yellow text-white py-12 border-main-red whitespace-nowrap uppercase ${
+          isActive ? "border-b-2" : ""
+        }`}
+      >
+        {menuItem.name}
+      </a>
+    );
+  } else {
+    linkOrDropdown = (
+      <a
+        id={menuItem.name}
+        className={`font-semibold cursor-default text-sm xl:text-base tracking-widest duration-300 hover:text-mustard-yellow text-white py-12 border-main-red whitespace-nowrap uppercase ${
+          isActive ? "border-b-2" : ""
+        }`}
+      >
+        {menuItem.name}
+      </a>
+    );
+  }
   return (
     <div
       id={menuItem.name}
@@ -9,15 +35,7 @@ const NavLink = ({ menuItem, pathname, toggled, onShow }) => {
       onMouseEnter={onShow}
       onMouseLeave={onShow}
     >
-      <a
-        id={menuItem.name}
-        // onClick={onShow}
-        className={`cursor-pointer font-semibold text-sm xl:text-base tracking-widest duration-300 hover:text-mustard-yellow text-white py-12 border-main-red whitespace-nowrap uppercase ${
-          isActive ? "border-b-2" : ""
-        }`}
-      >
-        {menuItem.name}
-      </a>
+      {linkOrDropdown}
       <div
         className={`overflow-hidden ${
           toggled ? "max-h-[30rem] opacity-100" : "max-h-0 opacity-0"
