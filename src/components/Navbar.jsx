@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { PiShoppingCartLight } from "react-icons/pi";
 import { FaPhone } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import HighTideLogo from "../assets/high-tide-aviation-logo-white.png";
 
 const Navbar = ({ pathname }) => {
   const [openMobile, setOpenMobile] = useState(false);
@@ -60,7 +61,7 @@ const Navbar = ({ pathname }) => {
             <div className="flex w-full items-center justify-between">
               <a href="/">
                 <img
-                  src="src/assets/high-tide-aviation-logo-white.png"
+                  src={HighTideLogo.src}
                   alt="High Tide Aviation Logo"
                   className={`lg:h-20 h-14 w-auto transition-all`}
                   id="navbar-image"
@@ -155,7 +156,7 @@ const Navbar = ({ pathname }) => {
         <div className="flex justify-between items-center pl-5 pr-[26px] py-6">
           <a href="/">
             <img
-              src="src/assets/high-tide-aviation-logo-white.png"
+              src={HighTideLogo.src}
               alt="High Tide Aviation Logo"
               className={`lg:h-20 h-14 w-auto transition-all`}
               id="navbar-image"
