@@ -36,8 +36,8 @@ export default {
         },
       },
       animation: {
-        "fade-down": "fade-down 1s ease-in",
-        "fade-up": "fade-up 1s ease-in",
+        "fade-down": "fade-down 1s ease-in-out",
+        "fade-up": "fade-up 1s ease-in-out",
       },
     },
   },
