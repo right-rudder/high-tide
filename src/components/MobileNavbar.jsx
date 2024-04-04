@@ -23,7 +23,6 @@ const MobileNavBar = ({ pathname }) => {
           onShow={handleClick}
         />
       ))}
-
     </>
   );
 };
