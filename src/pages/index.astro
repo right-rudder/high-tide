@@ -10,6 +10,7 @@ import { Image } from "astro:assets";
 import Feature2 from "../assets/feature-2.jpg";
 import Feature3 from "../assets/feature-3.jpg";
 import Thumbnail from "../assets/video-thumbnail.png";
+import { PHONE_NUMBER } from "../consts.ts";
 ---
 
 <BaseLayout>
@@ -77,25 +78,30 @@ import Thumbnail from "../assets/video-thumbnail.png";
           Earum facere enim minus nam nisi iste reprehenderit labore repellendus
           laborum error?
         </p>
-        <div class="flex items-center gap-5">
+        <div class="flex flex-col sm:flex-row items-center gap-5">
           <button
-            class="block uppercase py-4 px-14 bg-dark-blue w-fit rounded-full text-white hover:bg-mustard-yellow duration-300"
+            class="block font-medium uppercase py-4 px-14 bg-dark-blue w-fit rounded-full text-white hover:bg-mustard-yellow duration-300"
           >
             Book Now
           </button>
           <div class="flex items-center gap-3">
-            <div
+            <a
+              href=`tel:${PHONE_NUMBER}`
               class="group border p-4 border-mustard-yellow rounded-full hover:bg-mustard-yellow hover:border-white duration-300 cursor-pointer"
             >
               <FaPhoneAlt
                 className="size-5 group-hover:text-white text-mustard-yellow duration-300"
               />
-            </div>
+            </a>
             <div class="flex flex-col">
               <p class="text-sm text-gray-500 uppercase tracking-widest">
                 Call Anytime
               </p>
-              <p class="font-medium text-lg text-dark-blue">1-800-123-4567</p>
+              <a
+                href=`tel:${PHONE_NUMBER}`
+                class="font-medium text-lg text-dark-blue hover:text-mustard-yellow duration-300"
+                >{PHONE_NUMBER}</a
+              >
             </div>
           </div>
         </div>
@@ -116,7 +122,7 @@ import Thumbnail from "../assets/video-thumbnail.png";
     <div class="max-w-xl lg:max-w-7xl mx-auto">
       <div class="flex flex-col lg:flex-row gap-10">
         <div
-          class="flex flex-col lg:flex-1 p-12 bg-gradient-to-tr text-white from-dark-blue to-mustard-yellow to-80% from-20% via-medium-blue"
+          class="flex flex-col lg:flex-1 p-12 bg-gradient-to-tr text-white from-dark-blue to-mustard-yellow to-90% from-20% via-medium-blue"
         >
           <h2 class="uppercase tracking-widest font-semibold text-white/70">
             Lorem
@@ -128,7 +134,7 @@ import Thumbnail from "../assets/video-thumbnail.png";
             possimus a iure aliquam, dolorum totam. Accusantium, illo veritatis!
           </p>
           <button
-            class="block hover:border-white border uppercase py-4 px-14 bg-white w-fit rounded-full text-dark-blue hover:bg-dark-blue hover:text-white duration-300"
+            class="block font-medium uppercase py-4 px-14 bg-white w-fit rounded-full text-dark-blue hover:bg-medium-blue hover:text-white duration-300"
           >
             Enroll Now
           </button>
