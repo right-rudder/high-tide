@@ -150,7 +150,7 @@ const Navbar = ({ pathname }) => {
       <div
         className={`${
           openMobile ? "max-w-80 delay-300" : "max-w-0"
-        } overflow-hidden duration-300 ease-in-out h-screen lg:hidden absolute w-full bg-dark-blue z-50 top-0`}
+        } overflow-x-hidden duration-300 ease-in-out h-screen lg:hidden absolute w-full bg-dark-blue z-50 top-0`}
         id="mobile-menu"
       >
         <div className="flex justify-between items-center pl-5 pr-[26px] py-6">
