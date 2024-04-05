@@ -6,9 +6,9 @@ export default {
   theme: {
     extend: {
       colors: {
-        "dark-blue": "#262760",
-        "light-blue": "#2CA8E0",
-        "mustard-yellow": "#D4AF37",
+        "dark-blue": "#003087",
+        "light-blue": "#6cace4",
+        "mustard-yellow": "#ffc220",
       },
       fontFamily: {
         sans: ["DMSans", ...defaultTheme.fontFamily.sans],
