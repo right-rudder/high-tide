@@ -2,7 +2,9 @@
 import BaseHead from "../components/BaseHead.astro";
 import Footer from "../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
-import '@fontsource-variable/dm-sans';
+import "@fontsource-variable/dm-sans";
+import Navbar from "../components/Navbar";
+const { pathname } = Astro.url;
 ---
 
 <!doctype html>
@@ -11,6 +13,7 @@ import '@fontsource-variable/dm-sans';
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
   <body class="Inter">
+    <Navbar pathname={pathname} client:load />
     <slot name="header" />
     <main>
       <slot />
