@@ -41,19 +41,33 @@ import {
       <div class="flex flex-col gap-3">
         <h3 class="font-medium">Explore</h3>
         <ul class="flex flex-col gap-1 text-white/50">
-          <li><a class="hover:text-white" href="/">Home</a></li>
-          <li><a class="hover:text-white" href="/about">About</a></li>
-          <li><a class="hover:text-white" href="/services">Services</a></li>
-          <li><a class="hover:text-white" href="/contact">Contact</a></li>
+          <li><a class="hover:text-white duration-300" href="/">Home</a></li>
+          <li>
+            <a class="hover:text-white duration-300" href="/about">About</a>
+          </li>
+          <li>
+            <a class="hover:text-white duration-300" href="/services"
+              >Services</a>
+          </li>
+          <li>
+            <a class="hover:text-white duration-300" href="/contact">Contact</a>
+          </li>
         </ul>
       </div>
       <div class="flex flex-col gap-3">
         <h3 class="font-medium">Links</h3>
         <ul class="flex flex-col gap-1 text-white/50">
-          <li><a class="hover:text-white" href="/">Home</a></li>
-          <li><a class="hover:text-white" href="/about">About</a></li>
-          <li><a class="hover:text-white" href="/services">Services</a></li>
-          <li><a class="hover:text-white" href="/contact">Contact</a></li>
+          <li><a class="hover:text-white duration-300" href="/">Home</a></li>
+          <li>
+            <a class="hover:text-white duration-300" href="/about">About</a>
+          </li>
+          <li>
+            <a class="hover:text-white duration-300" href="/services"
+              >Services</a>
+          </li>
+          <li>
+            <a class="hover:text-white duration-300" href="/contact">Contact</a>
+          </li>
         </ul>
       </div>
       <div class="flex flex-col gap-3">
@@ -61,21 +75,22 @@ import {
         <ul class="flex flex-col gap-3 text-white/50">
           <li class="flex gap-2 items-center">
             <FaPhone className="size-4 text-mustard-yellow" />
-            <a class="hover:text-white" href=`tel:${PHONE_NUMBER}`
+            <a class="hover:text-white duration-300" href=`tel:${PHONE_NUMBER}`
               >{PHONE_NUMBER}</a
             >
           </li>
           <li class="flex gap-2 items-center">
             <MdEmail className="size-4 text-mustard-yellow" />
-            <a class="hover:text-white" href=`mailto:${EMAIL_ADDRESS}`
-              >{EMAIL_ADDRESS}</a
+            <a
+              class="hover:text-white duration-300"
+              href=`mailto:${EMAIL_ADDRESS}`>{EMAIL_ADDRESS}</a
             >
           </li>
           <li class="flex gap-2">
             <IoLocationSharp
               className="size-4 mt-1 shrink-0 text-mustard-yellow"
             />
-            <a class="hover:text-white" href="#">
+            <a class="hover:text-white duration-300" href="#">
               <p>{ADDRESS_LINE_1}</p>
               <p>{ADDRESS_LINE_2}</p>
             </a>
