@@ -9,6 +9,7 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { Image } from "astro:assets";
 import Feature2 from "../assets/feature-2.jpg";
 import Feature3 from "../assets/feature-3.jpg";
+import Thumbnail from "../assets/video-thumbnail.png";
 ---
 
 <BaseLayout>
@@ -100,7 +101,7 @@ import Feature3 from "../assets/feature-3.jpg";
         </div>
       </div>
       <div class="flex-1">
-        <video controls poster="/src/assets/video-thumbnail.png">
+        <video controls poster={Thumbnail.src} class="w-full">
           <source
             src="https://dl.dropboxusercontent.com/scl/fi/z05enxbp8tx5fbw9v5kuv/Kyle-Sapp-Testimonial.mp4?rlkey=jp08lj9zj318cwzw0iizmx97e&dl=0"
             type="video/mp4"
