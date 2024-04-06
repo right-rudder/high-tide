@@ -6,7 +6,7 @@ export const stats = [
   },
   {
     icon: "SiSpeedtest",
-    value: 2000,
+    value: "99%",
     title: "Checkride pass rate",
   },
   {
