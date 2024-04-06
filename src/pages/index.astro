@@ -16,6 +16,8 @@ import FlightProgramCard from "../components/FlightProgramCard.astro";
 import { IoIosArrowForward } from "react-icons/io";
 import { stats } from "../data/stats.js";
 import StatCard from "../components/StatCard.astro";
+import ReviewCard from "../components/ReviewCard.astro";
+import { reviews } from "../data/reviews.js";
 ---
 
 <BaseLayout>
@@ -245,13 +247,34 @@ import StatCard from "../components/StatCard.astro";
       </button>
     </div>
   </section>
-  <section class="py-24 px-5 text-white">
+
+  <section class="px-5 text-white">
     <div class="max-w-7xl mx-auto grid lg:grid-cols-4">
       {
         stats.map((stat) => (
           <StatCard icon={stat.icon} value={stat.value} title={stat.title} />
         ))
       }
+    </div>
+  </section>
+
+  <section class="py-24 px-5 bg-light-blue/10">
+    <div class="max-w-7xl mx-auto flex flex-col items-center">
+      <h2 class="uppercase text-medium-blue font-bold tracking-widest">
+        Customers Feedback
+      </h2>
+      <h3
+        class="text-5xl font-bold leading-tight text-dark-blue text-center max-w-xl"
+      >
+        What they're talking about our flight services
+      </h3>
+      <div class="grid lg:grid-cols-2 mt-10 gap-7">
+        {
+          reviews.map((review) => (
+            <ReviewCard review={review.review} name={review.name} />
+          ))
+        }
+      </div>
     </div>
   </section>
 </BaseLayout>
