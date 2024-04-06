@@ -11,6 +11,9 @@ import Feature2 from "../assets/feature-2.jpg";
 import Feature3 from "../assets/feature-3.jpg";
 import Thumbnail from "../assets/video-thumbnail.png";
 import { PHONE_NUMBER } from "../consts.ts";
+import { flightPrograms } from "../data/flightPrograms";
+import FlightProgramCard from "../components/FlightProgramCard.astro";
+import { IoIosArrowForward } from "react-icons/io";
 ---
 
 <BaseLayout>
@@ -211,4 +214,33 @@ import { PHONE_NUMBER } from "../consts.ts";
       >
     </div>
   </section>
-</BaseLayout>
+
+  <section class="py-24 px-5">
+    <div class="max-w-[95rem] mx-auto flex flex-col items-center">
+      <h2 class="uppercase text-mustard-yellow font-bold tracking-widest">
+        Any Level, Any Time
+      </h2>
+      <h3 class="text-5xl font-bold leading-tight text-dark-blue text-center">
+        Pilot Training Programs
+      </h3>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 mt-10 gap-7">
+        {
+          flightPrograms.map((program) => (
+            <FlightProgramCard
+              imagePath={program.imagePath}
+              heading={program.heading}
+              subheading={program.subheading}
+              description={program.description}
+            />
+          ))
+        }
+      </div>
+      <button
+        class="flex items-center gap-3 font-medium uppercase py-4 px-14 bg-dark-blue w-fit rounded-full text-white hover:bg-mustard-yellow duration-300"
+      >
+        <p>View all training programs</p>
+        <IoIosArrowForward className="text-xl" />
+      </button>
+    </div>
+  </section></BaseLayout
+>
