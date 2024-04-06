@@ -14,6 +14,8 @@ import { PHONE_NUMBER } from "../consts.ts";
 import { flightPrograms } from "../data/flightPrograms";
 import FlightProgramCard from "../components/FlightProgramCard.astro";
 import { IoIosArrowForward } from "react-icons/io";
+import { stats } from "../data/stats.js";
+import StatCard from "../components/StatCard.astro";
 ---
 
 <BaseLayout>
@@ -24,9 +26,9 @@ import { IoIosArrowForward } from "react-icons/io";
       <div
         class="border border-white/50 py-8 px-12 flex flex-col gap-5 hover:bg-white duration-700 group cursor-pointer"
       >
-        <TbAward className="size-14 text-dark-blue" />
+        <TbAward className="size-14 text-medium-blue" />
         <p
-          class="text-lg text-medium-blue uppercase font-semibold tracking-widest group-hover:text-dark-blue duration-700"
+          class="text-lg text-dark-blue uppercase font-semibold tracking-widest duration-700"
         >
           Why High Tide
         </p>
@@ -34,9 +36,9 @@ import { IoIosArrowForward } from "react-icons/io";
       <div
         class="border border-white/50 py-8 px-12 flex flex-col gap-5 hover:bg-white duration-700 group cursor-pointer"
       >
-        <BsAirplaneEngines className="size-14 text-dark-blue" />
+        <BsAirplaneEngines className="size-14 text-medium-blue" />
         <p
-          class="text-lg text-medium-blue uppercase font-semibold tracking-widest group-hover:text-dark-blue duration-700"
+          class="text-lg text-dark-blue uppercase font-semibold tracking-widest duration-700"
         >
           New to Flying
         </p>
@@ -44,9 +46,9 @@ import { IoIosArrowForward } from "react-icons/io";
       <div
         class="border border-white/50 py-8 px-12 flex flex-col gap-5 hover:bg-white duration-700 group cursor-pointer"
       >
-        <IoBookOutline className="size-14 text-dark-blue" />
+        <IoBookOutline className="size-14 text-medium-blue" />
         <p
-          class="text-lg text-medium-blue uppercase font-semibold tracking-widest group-hover:text-dark-blue duration-700"
+          class="text-lg text-dark-blue uppercase font-semibold tracking-widest duration-700"
         >
           Download our free eBook!
         </p>
@@ -54,9 +56,9 @@ import { IoIosArrowForward } from "react-icons/io";
       <div
         class="border border-white/50 py-8 px-12 flex flex-col gap-5 hover:bg-white duration-700 group cursor-pointer"
       >
-        <FaRegStar className="size-14 text-dark-blue" />
+        <FaRegStar className="size-14 text-medium-blue" />
         <p
-          class="text-lg text-medium-blue uppercase font-semibold tracking-widest group-hover:text-dark-blue duration-700"
+          class="text-lg text-dark-blue uppercase font-semibold tracking-widest duration-700"
         >
           Student Reviews
         </p>
@@ -69,7 +71,7 @@ import { IoIosArrowForward } from "react-icons/io";
       class="max-w-xl gap-10 lg:max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:gap-5"
     >
       <div class="flex flex-col flex-1">
-        <h2 class="uppercase text-mustard-yellow font-bold tracking-widest">
+        <h2 class="uppercase text-medium-blue font-bold tracking-widest">
           Why High Tide?
         </h2>
         <h3 class="text-5xl text-dark-blue font-bold leading-tight">
@@ -217,7 +219,7 @@ import { IoIosArrowForward } from "react-icons/io";
 
   <section class="py-24 px-5">
     <div class="max-w-[95rem] mx-auto flex flex-col items-center">
-      <h2 class="uppercase text-mustard-yellow font-bold tracking-widest">
+      <h2 class="uppercase text-medium-blue font-bold tracking-widest">
         Any Level, Any Time
       </h2>
       <h3 class="text-5xl font-bold leading-tight text-dark-blue text-center">
@@ -242,5 +244,14 @@ import { IoIosArrowForward } from "react-icons/io";
         <IoIosArrowForward className="text-xl" />
       </button>
     </div>
-  </section></BaseLayout
->
+  </section>
+  <section class="py-24 px-5 text-white">
+    <div class="max-w-7xl mx-auto grid lg:grid-cols-4">
+      {
+        stats.map((stat) => (
+          <StatCard icon={stat.icon} value={stat.value} title={stat.title} />
+        ))
+      }
+    </div>
+  </section>
+</BaseLayout>
