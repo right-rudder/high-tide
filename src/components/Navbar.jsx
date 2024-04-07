@@ -93,7 +93,7 @@ const Navbar = ({ pathname }) => {
                   href={`tel:${PHONE_NUMBER}`}
                   className="group border p-3 border-mustard-yellow rounded-full bg-mustard-yellow hover:bg-white hover:border-white duration-300"
                 >
-                  <FaPhone className="size-4 group-hover:text-black duration-300" />
+                  <FaPhone className="size-4 group-hover:text-dark-blue duration-300" />
                 </a>
                 <div className="hidden 2xl:block">
                   <p className="text-sm text-white/80">Call Anytime</p>
