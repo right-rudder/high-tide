@@ -5,13 +5,24 @@ import HeroImage from "../assets/homepage-banner.jpg";
 
 <header>
   <div
-    class="relative isolate pt-14 overflow-hidden h-[101vh] text-white flex items-center"
+    class="relative isolate pt-14 overflow-hidden h-[101vh] text-white flex
+    items-center"
   >
     <Image
       src={HeroImage}
       alt="A description of my image."
       class="absolute top-0 w-full h-full object-cover -z-50"
     />
+    <iframe
+      src="https://www.youtube.com/embed/_xfjSYwHK9k?si=R0wuAauOhyaNUtI0?vq=hd1080&controls=0&disablekb=1&showinfo=0&rel=0&iv_load_policy=3&fs=0&autoplay=1&loop=1&modestbranding=1&playlist=_xfjSYwHK9k&mute=1"
+      title="YouTube video player"
+      loading="lazy"
+      allow="accelerometer; autoplay; fullscreen;
+    clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      class="hidden lg:block absolute -top-52 w-[150rem] -left-[30rem] h-[100rem] object-cover -z-50"
+      allowfullscreen></iframe>
+
     <div class="absolute inset-0 bg-dark-blue/60 -z-40 to-40%"></div>
     <div class="flex w-full justify-center">
       <div class="px-5 font-medium text-center flex flex-col gap-4 lg:gap-8">
@@ -21,6 +32,7 @@ import HeroImage from "../assets/homepage-banner.jpg";
         >
           Southport's Leading Pilot Training Center
         </h1>
+
         <div
           class="flex flex-col md:flex-row items-center gap-5 w-full justify-center md:gap-10 animate-fade-up"
         >
