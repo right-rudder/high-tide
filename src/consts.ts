@@ -1,8 +1,11 @@
 // Place any global data in this file.
 // You can import this data from anywhere in your site by using the `import` keyword.
 
-export const SITE_TITLE = "Astro Blog";
-export const SITE_DESCRIPTION = "Welcome to my website!";
+export const SITE_TITLE = "High Tide Aviation";
+export const SITE_DESCRIPTION =
+  "Join the Southeast Coast's leading airplane and helicopter training center. High Tide Aviation in Southport, NC, and St. Simons Island, GA, offers premier flight training across the southeastern coast.";
+export const KEYWORDS =
+  "Southeast Coast flight training, Southport NC pilot school, St. Simons Island GA flight instruction, airplane training Southeast, helicopter lessons Southeast Coast";
 
 export const PHONE_NUMBER = "(910) 477-1926";
 export const ADDRESS_LINE_1 = "4345 Airport Rd SE";
