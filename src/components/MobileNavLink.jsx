@@ -1,7 +1,9 @@
 import { IoIosArrowForward } from "react-icons/io";
 
 const MobileNavLink = ({ menuItem, pathname, toggled, onShow }) => {
-  const isActive = menuItem.submenu.some((item) => item.link === pathname);
+  const isActive =
+    menuItem.submenu.some((item) => item.link === pathname) ||
+    menuItem.link === pathname;
 
   let buttonOrAnchor;
   if (menuItem.submenu.length === 0) {
@@ -9,8 +11,8 @@ const MobileNavLink = ({ menuItem, pathname, toggled, onShow }) => {
       <a
         id={menuItem.name}
         href={menuItem.link}
-        className={`w-full flex items-center justify-between text-white py-3 whitespace-nowrap ${
-          isActive ? "bg-mustard-yellow/15" : ""
+        className={`w-full flex items-center justify-between py-3 whitespace-nowrap ${
+          isActive ? "text-mustard-yellow" : "text-white"
         }`}
       >
         <p className="pointer-events-none">{menuItem.name}</p>
@@ -21,8 +23,8 @@ const MobileNavLink = ({ menuItem, pathname, toggled, onShow }) => {
       <button
         id={menuItem.name}
         onClick={onShow}
-        className={`w-full flex items-center justify-between text-white py-3 whitespace-nowrap ${
-          isActive ? "bg-mustard-yellow/15" : ""
+        className={`w-full flex items-center justify-between py-3 whitespace-nowrap ${
+          isActive ? "text-mustard-yellow" : "text-white"
         }`}
       >
         <p className="pointer-events-none">{menuItem.name}</p>
@@ -55,7 +57,7 @@ const MobileNavLink = ({ menuItem, pathname, toggled, onShow }) => {
             <a
               href={item.link}
               className={`block w-full py-3  ${
-                item.link === pathname ? "border-b-2" : ""
+                item.link === pathname ? "text-mustard-yellow" : ""
               }`}
             >
               {item.name}

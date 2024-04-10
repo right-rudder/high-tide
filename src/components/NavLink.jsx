@@ -1,7 +1,9 @@
 import { IoIosArrowForward } from "react-icons/io";
 
 const NavLink = ({ menuItem, pathname, toggled, onShow }) => {
-  const isActive = menuItem.submenu.some((item) => item.link === pathname);
+  const isActive =
+    menuItem.submenu.some((item) => item.link === pathname) ||
+    menuItem.link === pathname;
 
   let linkOrDropdown;
   if (menuItem.submenu.length === 0) {
@@ -9,8 +11,8 @@ const NavLink = ({ menuItem, pathname, toggled, onShow }) => {
       <a
         id={menuItem.name}
         href={menuItem.link}
-        className={`cursor-pointer font-semibold text-sm xl:text-base tracking-widest duration-300 hover:text-mustard-yellow text-white py-12 border-main-red whitespace-nowrap uppercase ${
-          isActive ? "border-b-2" : ""
+        className={`cursor-pointer font-semibold text-sm xl:text-base tracking-widest duration-300 hover:text-mustard-yellow py-12 border-main-red whitespace-nowrap uppercase ${
+          isActive ? "text-mustard-yellow" : "text-white"
         }`}
       >
         {menuItem.name}
@@ -20,8 +22,8 @@ const NavLink = ({ menuItem, pathname, toggled, onShow }) => {
     linkOrDropdown = (
       <a
         id={menuItem.name}
-        className={`font-semibold cursor-default text-sm xl:text-base tracking-widest duration-300 hover:text-mustard-yellow text-white py-12 border-main-red whitespace-nowrap uppercase ${
-          isActive ? "border-b-2" : ""
+        className={`font-semibold cursor-default text-sm xl:text-base tracking-widest duration-300 hover:text-mustard-yellow py-12 border-main-red whitespace-nowrap uppercase ${
+          isActive ? "text-mustard-yellow" : "text-white"
         }`}
       >
         {menuItem.name}
@@ -46,8 +48,10 @@ const NavLink = ({ menuItem, pathname, toggled, onShow }) => {
             key={item.name}
             href={item.link}
             className={`${
-              item.link === pathname ? "bg-mustard-yellow" : ""
-            } my-2 mx-5 px-3 py-2 hover:bg-mustard-yellow/15 font-medium group text-gray-500 duration-200 hover:text-dark-blue first:mt-8 last:mb-8 flex items-center justify-between`}
+              item.link === pathname
+                ? "bg-mustard-yellow/50 text-dark-blue"
+                : "text-gray-500"
+            } my-2 mx-5 px-3 py-2 hover:bg-mustard-yellow/15 font-medium group duration-200 hover:text-dark-blue first:mt-8 last:mb-8 flex items-center justify-between`}
           >
             <p>{item.name}</p>
             <IoIosArrowForward className="text-dark-blue opacity-0 group-hover:opacity-100 duration-200" />
