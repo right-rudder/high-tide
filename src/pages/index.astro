@@ -28,7 +28,8 @@ import { latestPosts } from "../data/latestPosts.js";
 
   <section class="py-16 bg-mustard-yellow px-5">
     <div class="grid lg:grid-cols-4 sm:grid-cols-2 max-w-7xl mx-auto gap-10">
-      <div
+      <a
+        href="#why-high-tide"
         class="border border-white/50 py-8 px-12 flex flex-col gap-5 hover:bg-white duration-700 group cursor-pointer"
       >
         <TbAward className="size-14 text-medium-blue" />
@@ -37,8 +38,9 @@ import { latestPosts } from "../data/latestPosts.js";
         >
           Why High Tide
         </p>
-      </div>
-      <div
+      </a>
+      <a
+        href="#new-to-flying"
         class="border border-white/50 py-8 px-12 flex flex-col gap-5 hover:bg-white duration-700 group cursor-pointer"
       >
         <BsAirplaneEngines className="size-14 text-medium-blue" />
@@ -47,8 +49,9 @@ import { latestPosts } from "../data/latestPosts.js";
         >
           New to Flying
         </p>
-      </div>
-      <div
+      </a>
+      <a
+        href="#ebook"
         class="border border-white/50 py-8 px-12 flex flex-col gap-5 hover:bg-white duration-700 group cursor-pointer"
       >
         <IoBookOutline className="size-14 text-medium-blue" />
@@ -57,8 +60,9 @@ import { latestPosts } from "../data/latestPosts.js";
         >
           Download our free eBook!
         </p>
-      </div>
-      <div
+      </a>
+      <a
+        href="#reviews"
         class="border border-white/50 py-8 px-12 flex flex-col gap-5 hover:bg-white duration-700 group cursor-pointer"
       >
         <FaRegStar className="size-14 text-medium-blue" />
@@ -67,11 +71,11 @@ import { latestPosts } from "../data/latestPosts.js";
         >
           Student Reviews
         </p>
-      </div>
+      </a>
     </div>
   </section>
 
-  <section class="py-24 px-5">
+  <section id="why-high-tide" class="py-24 px-5 scroll-my-20">
     <div
       class="max-w-xl gap-10 lg:max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:gap-5"
     >
@@ -80,13 +84,14 @@ import { latestPosts } from "../data/latestPosts.js";
           Why High Tide?
         </h2>
         <h3 class="text-5xl text-dark-blue font-bold leading-tight">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Welcome to High Tide Aviation!
         </h3>
         <p class="text-gray-500 leading-relaxed my-5">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim autem
-          perspiciatis alias incidunt, asperiores quis in? Praesentium, commodi!
-          Earum facere enim minus nam nisi iste reprehenderit labore repellendus
-          laborum error?
+          Embark on an unparalleled journey into the skies with High Tide
+          Aviation, Southport’s premier flight training center. Founded 11 years
+          ago by aviation enthusiast Jessica, we specialize in both helicopter
+          and fixed-wing aircraft training. Our unique approach includes
+          one-on-one support, ensuring every student's success.
         </p>
         <div class="flex flex-col sm:flex-row items-center gap-5">
           <button
@@ -128,20 +133,22 @@ import { latestPosts } from "../data/latestPosts.js";
     </div>
   </section>
 
-  <section class="py-24 px-5">
+  <section id="new-to-flying" class="py-24 px-5 scroll-my-20">
     <div class="max-w-xl lg:max-w-7xl mx-auto">
       <div class="flex flex-col lg:flex-row gap-10">
         <div
           class="flex flex-col lg:flex-1 p-12 bg-gradient-to-tr text-white from-dark-blue to-mustard-yellow to-90% from-20% via-medium-blue"
         >
           <h2 class="uppercase tracking-widest font-semibold text-white/70">
-            Lorem
+            New to Flying
           </h2>
-          <h3 class="text-3xl font-bold">Start Flight Training Today</h3>
+          <h3 class="text-3xl font-bold">Our Unique Training Approach</h3>
           <p class="py-8 leading-loose text-white/70">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas vel
-            deleniti ipsa odit aliquid incidunt error quos, iste illum odio et
-            possimus a iure aliquam, dolorum totam. Accusantium, illo veritatis!
+            What sets us apart is our dedicated Training Support Specialist,
+            committed to guiding our students through every step of their
+            training journey. With a 99% checkride pass rate and over 100
+            graduates, our personalized training programs include PPL through
+            CFII, Multi-Engine, and Helicopter, tailored to your aspirations.
           </p>
           <button
             class="block font-medium uppercase py-4 px-14 bg-white w-fit rounded-full text-dark-blue hover:bg-medium-blue hover:text-white duration-300"
@@ -173,52 +180,54 @@ import { latestPosts } from "../data/latestPosts.js";
     </div>
   </section>
 
-  <section class="py-24 px-5 text-white bg-dark-blue relative overflow-hidden">
-    <IoBookOutline
-      className="size-[40rem] right-16 top-0 text-white/10 absolute"
-    />
-    <div class="max-w-xl lg:max-w-7xl mx-auto relative z-10">
-      <h2 class="uppercase text-mustard-yellow font-bold tracking-widest">
-        Free eBook
-      </h2>
-      <h3 class="text-5xl font-bold leading-tight">
-        Get Your FREE Quick Start Guide
-      </h3>
-      <div class="max-w-3xl grid lg:grid-cols-2 gap-5 my-10">
-        <input
-          class="bg-[#00215D] text-white/70 py-4 px-6 w-full outline-none placeholder:text-white/50"
-          type="text"
-          name="first-name"
-          id="first-name"
-          placeholder="First Name"
-        />
-        <input
-          class="bg-[#00215D] text-white/70 py-4 px-6 w-full outline-none placeholder:text-white/50"
-          type="text"
-          name="last-name"
-          id="last-name"
-          placeholder="Last Name"
-        />
-        <input
-          class="bg-[#00215D] text-white/70 py-4 px-6 w-full outline-none placeholder:text-white/50"
-          type="email"
-          name="email"
-          id="email"
-          placeholder="Email"
-        />
-        <input
-          class="bg-[#00215D] text-white/70 py-4 px-6 w-full outline-none placeholder:text-white/50"
-          type="tel"
-          name="phone"
-          id="phone"
-          placeholder="Phone"
-        />
+  <section id="ebook" class="scroll-my-24">
+    <div class="py-24 px-5 text-white bg-dark-blue relative overflow-hidden">
+      <IoBookOutline
+        className="size-[40rem] right-16 top-0 text-white/10 absolute"
+      />
+      <div class="max-w-xl lg:max-w-7xl mx-auto relative z-10">
+        <h2 class="uppercase text-mustard-yellow font-bold tracking-widest">
+          Free eBook
+        </h2>
+        <h3 class="text-5xl font-bold leading-tight">
+          Get Your FREE Quick Start Guide
+        </h3>
+        <div class="max-w-3xl grid lg:grid-cols-2 gap-5 my-10">
+          <input
+            class="bg-[#00215D] text-white/70 py-4 px-6 w-full outline-none placeholder:text-white/50"
+            type="text"
+            name="first-name"
+            id="first-name"
+            placeholder="First Name"
+          />
+          <input
+            class="bg-[#00215D] text-white/70 py-4 px-6 w-full outline-none placeholder:text-white/50"
+            type="text"
+            name="last-name"
+            id="last-name"
+            placeholder="Last Name"
+          />
+          <input
+            class="bg-[#00215D] text-white/70 py-4 px-6 w-full outline-none placeholder:text-white/50"
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Email"
+          />
+          <input
+            class="bg-[#00215D] text-white/70 py-4 px-6 w-full outline-none placeholder:text-white/50"
+            type="tel"
+            name="phone"
+            id="phone"
+            placeholder="Phone"
+          />
+        </div>
+        <a
+          href="#"
+          class="block uppercase py-4 px-14 bg-mustard-yellow w-fit rounded-full hover:bg-medium-blue duration-300 font-medium"
+          >Download Now</a
+        >
       </div>
-      <a
-        href="#"
-        class="block uppercase py-4 px-14 bg-mustard-yellow w-fit rounded-full hover:bg-medium-blue duration-300 font-medium"
-        >Download Now</a
-      >
     </div>
   </section>
 
@@ -261,7 +270,7 @@ import { latestPosts } from "../data/latestPosts.js";
     </div>
   </section>
 
-  <section class="py-24 px-5 bg-light-blue/10">
+  <section id="reviews" class="py-24 px-5 bg-light-blue/10 scroll-my-20">
     <div class="max-w-7xl mx-auto flex flex-col items-center">
       <h2 class="uppercase text-medium-blue font-bold tracking-widest">
         Customers Feedback
