@@ -156,7 +156,7 @@ const Navbar = ({ pathname }) => {
       </div>
 
       <div
-        className={`h-screen w-full bg-black/70 absolute top-0 duration-300 ${
+        className={`h-screen w-full bg-black/70 absolute backdrop-blur-sm top-0 duration-300 ${
           openMobile ? "translate-x-0" : "-translate-x-full delay-300"
         }`}
         onClick={handleHamburgerClick}

@@ -5,15 +5,16 @@ import { SITE_TITLE, SITE_DESCRIPTION, KEYWORDS } from "../consts";
 import "@fontsource-variable/dm-sans";
 import Navbar from "../components/Navbar";
 const { pathname } = Astro.url;
+const { siteTitle, siteDescription, keywords } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en" class="scroll-smooth">
   <head>
     <BaseHead
-      title={SITE_TITLE}
-      description={SITE_DESCRIPTION}
-      keywords={KEYWORDS}
+      title={siteTitle || SITE_TITLE}
+      description={siteDescription || SITE_DESCRIPTION}
+      keywords={keywords || KEYWORDS}
     />
   </head>
   <body class="Inter">
