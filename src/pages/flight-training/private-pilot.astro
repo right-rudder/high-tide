@@ -1,20 +1,8 @@
 ---
-import BaseLayout from "../../layouts/BaseLayout.astro";
-import Header from "../../components/Header.astro";
-import Banner from "../../assets/flight-training-banner.jpg";
+import TrainingProgramLayout from "../../layouts/TrainingProgramLayout.astro";
 ---
 
-<BaseLayout
-  siteTitle="First-Time Pilots"
-  siteDescription="Begin your aviation journey with High Tide Aviation, offering comprehensive guidance and support for first-time pilots in Southport, NC, and St. Simons Island, GA."
-  siteKeywords="first-time pilot Southport NC, beginner flight training St. Simons Island GA, aviation introduction Southeast Coast, learn to fly Southport NC, pilot training for beginners."
->
-  <Header
-    slot="header"
-    image={Banner}
-    title="Our Training Programs"
-    ctaText="Enroll Now"
-  />
-
-  <section class="py-16"></section>
-</BaseLayout>
+<TrainingProgramLayout
+  imagePath="/src/assets/private-pilot.jpg"
+  title="Private Pilot"
+/>

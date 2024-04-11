@@ -1,0 +1,28 @@
+---
+import { navbarLinks } from "../data/navbarLinks";
+const flightTraining = navbarLinks.find(
+  (item) => item.name === "Flight Training",
+);
+const flightTrainingLinks = flightTraining ? flightTraining.submenu : [];
+const { pathname } = Astro.url;
+import { IoIosArrowForward } from "react-icons/io";
+---
+
+<ul class="flex flex-col gap-2">
+  {
+    flightTrainingLinks.map((item) => (
+      <li class="group">
+        <a
+          class={`py-4 px-6 flex items-center justify-between font-semibold hover:bg-dark-blue hover:text-white duration-300 ${pathname === item.link ? "bg-dark-blue text-white" : "bg-mustard-yellow/20 text-dark-blue"}`}
+          href={item.link}
+        >
+          <p>{item.name}</p>
+
+          <IoIosArrowForward
+            className={` group-hover:text-mustard-yellow duration-300 ${pathname === item.link ? "text-mustard-yellow" : "text-dark-blue"}`}
+          />
+        </a>
+      </li>
+    ))
+  }
+</ul>

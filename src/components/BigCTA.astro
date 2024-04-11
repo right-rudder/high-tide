@@ -1,0 +1,24 @@
+---
+import backgroundImage from "../assets/cta-background.jpg";
+import { Image } from "astro:assets";
+---
+
+<div
+  class="bg-medium-blue/90 p-10 flex flex-col gap-10 text-white text-center items-center relative"
+>
+  <Image
+    src={backgroundImage}
+    alt="Pilots in a cockpit of a plane"
+    class="w-full h-full absolute top-0 left-0 -z-10 object-cover"
+  />
+  <h2 class="uppercase font-semibold text-white/70">
+    Unsure if flight training is for you?
+  </h2>
+  <p class="text-3xl font-semibold">
+    Book a discovery flight today to try it out!
+  </p>
+  <a
+    class="uppercase py-4 px-14 bg-mustard-yellow text-white font-medium w-fit rounded-full hover:bg-white hover:text-dark-blue duration-300"
+    href="">Book Now</a
+  >
+</div>
