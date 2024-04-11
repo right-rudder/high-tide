@@ -11,6 +11,9 @@ interface Props {
   title: string;
 }
 import { FaArrowAltCircleRight } from "react-icons/fa";
+import { IoIosArrowForward } from "react-icons/io";
+import FlightProgramCard from "../components/FlightProgramCard.astro";
+import { flightPrograms } from "../data/flightPrograms";
 const { imagePath, title } = Astro.props;
 const images = import.meta.glob<{ default: ImageMetadata }>(
   "/src/assets/*.{jpeg,jpg,png,gif,webp}",
@@ -74,33 +77,103 @@ if (!images[imagePath])
             Consequuntur minima dolor unde laborum odit cumque vero, totam
             nesciunt!
           </p>
-          <div>
-            <h2 class="text-2xl font-medium text-dark-blue">
-              Enrollment process
-            </h2>
-            <h3 class="text-xl font-medium text-medium-blue max-w-md mt-5">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </h3>
-            <ul class="flex flex-col gap-1 mt-5">
-              <li class="flex items-center gap-3">
-                <FaArrowAltCircleRight className="text-mustard-yellow size-5" />
-                <p class="text-dark-blue font-medium">
-                  Praesent efficitur quam sit amet
-                </p>
-              </li>
-              <li class="flex items-center gap-3">
-                <FaArrowAltCircleRight className="text-mustard-yellow size-5" />
-                <p class="text-dark-blue font-medium">
-                  Nunc cursus dolor id purus euismod
-                </p>
-              </li>
-              <li class="flex items-center gap-3">
-                <FaArrowAltCircleRight className="text-mustard-yellow size-5" />
-                <p class="text-dark-blue font-medium">
-                  Quisque tincidunt eros ac place viverra
-                </p>
-              </li>
-            </ul>
+
+          <div class="flex gap-5">
+            <div class="flex-1">
+              <h2 class="text-2xl font-medium text-dark-blue">
+                Enrollment process
+              </h2>
+              <h3 class="text-xl font-medium text-medium-blue max-w-md mt-5">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </h3>
+              <ul class="flex flex-col gap-1 mt-5">
+                <li class="flex items-center gap-3">
+                  <FaArrowAltCircleRight
+                    className="text-mustard-yellow size-5"
+                  />
+                  <p class="text-dark-blue font-medium">
+                    Praesent efficitur quam sit amet
+                  </p>
+                </li>
+                <li class="flex items-center gap-3">
+                  <FaArrowAltCircleRight
+                    className="text-mustard-yellow size-5"
+                  />
+                  <p class="text-dark-blue font-medium">
+                    Nunc cursus dolor id purus euismod
+                  </p>
+                </li>
+                <li class="flex items-center gap-3">
+                  <FaArrowAltCircleRight
+                    className="text-mustard-yellow size-5"
+                  />
+                  <p class="text-dark-blue font-medium">
+                    Quisque tincidunt eros ac place viverra
+                  </p>
+                </li>
+              </ul>
+            </div>
+            <div class="flex-1">
+              <h2 class="text-2xl font-medium text-dark-blue">
+                Program Prerequisites
+              </h2>
+              <h3 class="text-xl font-medium text-medium-blue max-w-md mt-5">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </h3>
+              <ul class="flex flex-col gap-1 mt-5">
+                <li class="flex items-center gap-3">
+                  <FaArrowAltCircleRight
+                    className="text-mustard-yellow size-5"
+                  />
+                  <p class="text-dark-blue font-medium">
+                    Praesent efficitur quam sit amet
+                  </p>
+                </li>
+                <li class="flex items-center gap-3">
+                  <FaArrowAltCircleRight
+                    className="text-mustard-yellow size-5"
+                  />
+                  <p class="text-dark-blue font-medium">
+                    Nunc cursus dolor id purus euismod
+                  </p>
+                </li>
+                <li class="flex items-center gap-3">
+                  <FaArrowAltCircleRight
+                    className="text-mustard-yellow size-5"
+                  />
+                  <p class="text-dark-blue font-medium">
+                    Quisque tincidunt eros ac place viverra
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="pt-10">
+            <div class="max-w-[95rem] mx-auto flex flex-col items-center">
+              <h2 class="uppercase text-medium-blue font-bold tracking-widest">
+                Future Pathways
+              </h2>
+              <h3
+                class="text-4xl font-bold leading-tight max-w-xl text-dark-blue text-center capitalize"
+              >
+                What comes after my {title} training
+              </h3>
+              <div class="grid sm:grid-cols-2 lg:grid-cols-3 mt-10 gap-7">
+                {
+                  flightPrograms
+                    .slice(0, 3)
+                    .map((program) => (
+                      <FlightProgramCard
+                        imagePath={program.imagePath}
+                        heading={program.heading}
+                        subheading={program.subheading}
+                        description={program.description}
+                      />
+                    ))
+                }
+              </div>
+            </div>
           </div>
         </div>
       </div>
