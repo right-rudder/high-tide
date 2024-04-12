@@ -1,22 +1,22 @@
 export const stats = [
   {
-    icon: "PiStudent",
-    value: 1000,
-    title: "Students graduated",
-  },
-  {
-    icon: "SiSpeedtest",
-    value: "99%",
-    title: "Checkride pass rate",
-  },
-  {
-    icon: "CiClock1",
-    value: 3000,
+    icon: "FaRegHourglassHalf",
+    value: "+9000",
     title: "Combined flight hours",
   },
   {
-    icon: "BsAirplaneEngines",
+    icon: "GiTeacher",
     value: 14,
-    title: "Unique aircraft to choose from",
+    title: "Dedicated flight instructors",
+  },
+  {
+    icon: "BsAirplaneEngines",
+    value: 8,
+    title: "Unique fixed-wing aircraft",
+  },
+  {
+    icon: "GiHelicopter",
+    value: 2,
+    title: "R44 Helicopters",
   },
 ];

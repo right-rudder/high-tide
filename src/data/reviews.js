@@ -1,12 +1,12 @@
 export const reviews = [
   {
-    name: "John Doe",
+    name: "Jake B.",
     review:
-      "High Tide Aviation is the best flight school I've ever attended. The instructors are top-notch and the facilities are first class.",
+      "I earned my private pilot license through High Tide out of St. Simons Island, GA. They are an excellent program with a great cadre of instructors. I am very thankful to have had such a great team to help me start this journey into aviation!",
   },
   {
-    name: "Jane Smith",
+    name: "Towns S.",
     review:
-      "I had a great experience learning to fly at High Tide Aviation. The instructors were knowledgeable and the aircraft were well-maintained.",
+      "Great flight school. Keith Blackmon MEI really knows what he is doing and will train you to be a very skilled and confident multi-engine pilot. Excellent time with High Tide Aviation!",
   },
 ];

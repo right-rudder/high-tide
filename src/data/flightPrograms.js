@@ -3,28 +3,28 @@ export const flightPrograms = [
     heading: "Private Pilot",
     subheading: "Start Your Journey",
     description:
-      "If you're new to aviation, we have the resources and training to help you earn your wings.",
+      "If you're new to flight training, we have the resources and training to help you earn your wings (and rotors).",
     imagePath: "/src/assets/flight-program-1.jpg",
   },
   {
     heading: "Commercial Pilot",
-    subheading: "Earn Your Certifications",
+    subheading: "Fly for Your Career",
     description:
-      "Our flight training programs are designed to help you earn your certifications and ratings.",
+      "No matter how far you want to venture down the pilot career path, it all starts here.",
     imagePath: "/src/assets/flight-program-2.jpg",
   },
   {
     heading: "Flight Instructor",
-    subheading: "Learn About Us",
+    subheading: "Train the Next Class",
     description:
-      "Learn more about High Tide Aviation and the services we offer.",
+      "Interested in training the next class of pilots? Perhaps you want to give back to the community that trained you? Become a CFI, CFII, & MEI with High Tide.",
     imagePath: "/src/assets/flight-program-3.jpg",
   },
   {
     heading: "Helicopter Training",
-    subheading: "Maintenance & Repairs",
+    subheading: "Exclusively in Southport",
     description:
-      "Our team of experienced mechanics can help keep your aircraft in top condition.",
+      "Our helicopter training is reknowned across the banks of the Southport, North Carolina region. Come train with High Tide and earn your helicopter certification.",
     imagePath: "/src/assets/flight-program-4.jpg",
   },
 ];
