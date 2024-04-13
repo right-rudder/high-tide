@@ -4,7 +4,7 @@ import { GiTeacher } from "react-icons/gi";
 import { GiHelicopter } from "react-icons/gi";
 import { BsAirplaneEngines } from "react-icons/bs";
 
-const { icon, value, title } = Astro.props;
+const { icon, value, title, cssVariable } = Astro.props;
 
 const icons = {
   FaRegHourglassHalf: FaRegHourglassHalf,
@@ -21,7 +21,27 @@ const Icon = icons[icon];
     class="border-r border-white/20 px-10 flex flex-col items-center gap-1 group-last:border-0"
   >
     <Icon className="size-14 mb-4 text-mustard-yellow" />
-    <p class="text-5xl font-medium">{value}</p>
-    <h2 class="text-white/50">{title}</h2>
+    <span
+      class=`counter text-5xl font-medium tabular-nums [counter-set:_num_var(${cssVariable})] before:content-[counter(num)]`
+      ><span class="sr-only">{value}</span>{
+        title == "Combined flight hours" ? "+" : ""
+      }
+    </span>
+    <h2 class="text-white/50 text-center">{title}</h2>
   </div>
 </div>
+
+<script>
+  const counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("animate-[counter_3s_ease-out_forwards]");
+      }
+    });
+  });
+
+  const counterElements = document.querySelectorAll(".counter");
+  counterElements.forEach((element) => {
+    counterObserver.observe(element);
+  });
+</script>

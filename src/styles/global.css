@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@property --num-hours {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
+}
+
+@property --num-instructors {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
+}
+
+@property --num-aircrafts {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
+}
+
+@property --num-helicopters {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
+}
+
+@keyframes counter {
+  from {
+    --num-hours: 0;
+    --num-instructors: 0;
+    --num-aircrafts: 0;
+    --num-helicopters: 0;
+  }
+  to {
+    --num-hours: 9000;
+    --num-instructors: 14;
+    --num-aircrafts: 8;
+    --num-helicopters: 2;
+  }
+}

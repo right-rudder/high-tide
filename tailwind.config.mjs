@@ -43,4 +43,10 @@ export default {
     },
   },
   plugins: [],
+  safelist: [
+    "[counter-set:_num_var(--num-hours)]",
+    "[counter-set:_num_var(--num-instructors)]",
+    "[counter-set:_num_var(--num-aircrafts)]",
+    "[counter-set:_num_var(--num-helicopters)]",
+  ],
 };
