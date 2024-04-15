@@ -1,5 +1,5 @@
 ---
-const { name, qualifications, imagePath, bio } = Astro.props;
+const { name, rentalPrice, imagePath, year } = Astro.props;
 import type { ImageMetadata } from "astro";
 import { Image } from "astro:assets";
 const images = import.meta.glob<{ default: ImageMetadata }>(
@@ -11,31 +11,33 @@ if (!images[imagePath])
   );
 ---
 
-<div class="flex flex-col bg-white group relative overflow-hidden">
-  <div class="w-[90%] h-[30rem] overflow-hidden">
-    <Image
-      src={images[imagePath]()}
-      alt={name}
-      class="h-full object-cover group-hover:scale-105 duration-700 ease-in-out"
-    />
+<a class="flex cursor-pointer flex-col bg-white group relative overflow-hidden">
+  <Image
+    src={images[imagePath]()}
+    alt={name}
+    class="h-full object-cover group-hover:scale-105 duration-700 ease-in-out"
+  />
+  <div
+    class="absolute w-full h-full bg-dark-blue/15 -translate-x-[101%] group-hover:translate-x-0 duration-700"
+  >
   </div>
   <div
-    class="absolute w-full h-full bg-dark-blue/80 backdrop-blur-sm -translate-x-[101%] group-hover:translate-x-0 duration-700"
+    class="py-3 px-5 lg:py-6 lg:px-10 z-10 absolute bottom-0 left-0 bg-dark-blue/80 w-4/5"
   >
-    <p class="p-10 leading-loose text-white">{bio}</p>
-  </div>
-  <div class="p-10 z-10">
     <h2
-      class="text-dark-blue text-3xl font-medium mb-3 group-hover:text-white duration-700"
+      class="text-white text-3xl lg:text-5xl font-medium lg:mb-3 duration-700 uppercase"
     >
       {name}
     </h2>
-    {
-      qualifications.map((qualification) => (
-        <p class="uppercase tracking-widest text-xs font-light group-hover:text-mustard-yellow duration-700">
-          {qualification}
-        </p>
-      ))
-    }
+    <div class="hidden sm:flex gap-5">
+      <div class="flex gap-2">
+        <p class="text-white">Year:</p>
+        <p class="text-mustard-yellow">{year}</p>
+      </div>
+      <div class="flex gap-2">
+        <p class="text-white">Price:</p>
+        <p class="text-mustard-yellow">{rentalPrice}</p>
+      </div>
+    </div>
   </div>
-</div>
+</a>

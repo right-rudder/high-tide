@@ -57,21 +57,21 @@ import PlaneCard from "../../components/PlaneCard.astro";
   </section>
 
   <section class="py-24 px-5 bg-light-blue/10">
-    <div class="max-w-7xl mx-auto flex flex-col items-center">
+    <div class="max-w-xl lg:max-w-7xl mx-auto flex flex-col items-center">
       <h2 class="uppercase text-medium-blue font-bold tracking-widest">
         Fleet
       </h2>
       <h3 class="text-5xl text-dark-blue font-bold leading-tight mb-5">
         Meet Our Fleet
       </h3>
-      <div class="grid gap-5 lg:grid-cols-3">
+      <div class="grid gap-10 lg:grid-cols-2">
         {
           fleet.map((plane) => (
             <PlaneCard
               name={plane.name}
-              qualifications={plane.qualifications}
+              rentalPrice={plane.rentalPrice}
               imagePath={plane.imagePath}
-              bio={plane.bio}
+              year={plane.year}
             />
           ))
         }
