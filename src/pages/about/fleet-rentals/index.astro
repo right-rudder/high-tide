@@ -1,11 +1,11 @@
 ---
-import BaseLayout from "../../layouts/BaseLayout.astro";
-import Header from "../../components/Header.astro";
-import Banner from "../../assets/fleet-banner.jpg";
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Header from "../../../components/Header.astro";
+import Banner from "../../../assets/fleet-banner.jpg";
 import { Image } from "astro:assets";
-import Intro from "../../assets/fleet-intro.jpg";
-import { fleet } from "../../data/fleet";
-import PlaneCard from "../../components/PlaneCard.astro";
+import Intro from "../../../assets/fleet-intro.jpg";
+import { fleet } from "../../../data/fleet";
+import PlaneCard from "../../../components/PlaneCard.astro";
 ---
 
 <BaseLayout
@@ -64,7 +64,7 @@ import PlaneCard from "../../components/PlaneCard.astro";
       <h3 class="text-5xl text-dark-blue font-bold leading-tight mb-5">
         Meet Our Fleet
       </h3>
-      <div class="grid gap-10 lg:grid-cols-2">
+      <div class="grid gap-8 mt-5 lg:grid-cols-2">
         {
           fleet.map((plane) => (
             <PlaneCard

@@ -11,7 +11,10 @@ if (!images[imagePath])
   );
 ---
 
-<a class="flex cursor-pointer flex-col bg-white group relative overflow-hidden">
+<a
+  href=`/about/fleet-rentals/${name}`
+  class="flex cursor-pointer flex-col bg-white group relative overflow-hidden"
+>
   <Image
     src={images[imagePath]()}
     alt={name}
@@ -22,19 +25,19 @@ if (!images[imagePath])
   >
   </div>
   <div
-    class="py-3 px-5 lg:py-6 lg:px-10 z-10 absolute bottom-0 left-0 bg-dark-blue/80 w-4/5"
+    class="py-2 px-4 lg:py-6 lg:px-10 z-10 absolute bottom-0 left-0 bg-dark-blue/80 w-4/5"
   >
     <h2
-      class="text-white text-3xl lg:text-5xl font-medium lg:mb-3 duration-700 uppercase"
+      class="text-white text-2xl sm:text-3xl lg:text-5xl font-medium lg:mb-3 duration-700 uppercase"
     >
       {name}
     </h2>
-    <div class="hidden sm:flex gap-5">
-      <div class="flex gap-2">
+    <div class="flex flex-col gap-0 sm:flex-row sm:gap-5">
+      <div class="flex gap-2 text-sm sm:text-base">
         <p class="text-white">Year:</p>
         <p class="text-mustard-yellow">{year}</p>
       </div>
-      <div class="flex gap-2">
+      <div class="flex gap-2 text-sm sm:text-base">
         <p class="text-white">Price:</p>
         <p class="text-mustard-yellow">{rentalPrice}</p>
       </div>
