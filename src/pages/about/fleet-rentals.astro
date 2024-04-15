@@ -1,0 +1,81 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+import Banner from "../../assets/fleet-banner.jpg";
+import { Image } from "astro:assets";
+import Intro from "../../assets/fleet-intro.jpg";
+import { fleet } from "../../data/fleet";
+import PlaneCard from "../../components/PlaneCard.astro";
+---
+
+<BaseLayout
+  siteTitle="Fleet and rentals"
+  siteDescription="Explore High Tide Aviation's diverse fleet of aircraft available for training and rental in Southport, NC. From single-engine basics to advanced multi-engine aircraft, find the perfect fit for your flying ambitions."
+  siteKeywords="aircraft rental Southport NC, flight training fleet Southeast Coast, pilot training aircraft Southport NC, rent a plane Southport NC, aviation rentals Southeast Coast."
+>
+  <Header
+    slot="header"
+    image={Banner}
+    title="Our fleet"
+    ctaText="Discover Our Fleet"
+  />
+
+  <section class="py-24 px-5">
+    <div
+      class="max-w-xl gap-10 lg:max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:gap-20"
+    >
+      <div class="flex-1 relative">
+        <Image class="pr-6" src={Intro} alt="High Tide Aviation team" />
+        <div
+          class="h-3/4 bg-mustard-yellow absolute -z-10 -right-0 w-20 top-[12.5%]"
+        >
+        </div>
+      </div>
+      <div class="flex flex-col flex-1">
+        <h2 class="uppercase text-medium-blue font-bold tracking-widest">
+          Our Fleet
+        </h2>
+        <h3 class="text-5xl text-dark-blue font-bold leading-tight">
+          Your Ride Awaits
+        </h3>
+        <p class="text-gray-500 leading-relaxed my-5">
+          High Tide Aviation takes pride in offering a wide range of aircraft
+          for training and rental purposes. Each aircraft in our fleet is
+          meticulously maintained and equipped with the latest in avionics
+          technology, ensuring a safe, efficient, and enjoyable flying
+          experience for pilots of all skill levels
+        </p>
+        <div class="flex flex-col sm:flex-row items-center gap-5">
+          <button
+            class="block font-medium uppercase py-4 px-14 bg-dark-blue w-fit rounded-full text-white hover:bg-mustard-yellow duration-300"
+          >
+            Discover More
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 px-5 bg-light-blue/10">
+    <div class="max-w-7xl mx-auto flex flex-col items-center">
+      <h2 class="uppercase text-medium-blue font-bold tracking-widest">
+        Fleet
+      </h2>
+      <h3 class="text-5xl text-dark-blue font-bold leading-tight mb-5">
+        Meet Our Fleet
+      </h3>
+      <div class="grid gap-5 lg:grid-cols-3">
+        {
+          fleet.map((plane) => (
+            <PlaneCard
+              name={plane.name}
+              qualifications={plane.qualifications}
+              imagePath={plane.imagePath}
+              bio={plane.bio}
+            />
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</BaseLayout>
