@@ -28,11 +28,16 @@ const { pathname } = Astro.url;
       </div>
     </div>
   </div>
-  <div class="flex justify-center -translate-y-7">
-    <a
-      href="#"
-      class="uppercase py-4 px-14 bg-mustard-yellow text-white font-medium w-fit rounded-full hover:bg-medium-blue duration-300"
-      >{ctaText}</a
-    >
-  </div>
+  {
+    ctaText && (
+      <div class="flex justify-center -translate-y-7">
+        <a
+          href="#"
+          class="uppercase py-4 px-14 bg-mustard-yellow text-white font-medium w-fit rounded-full hover:bg-medium-blue duration-300"
+        >
+          {ctaText}
+        </a>
+      </div>
+    )
+  }
 </header>

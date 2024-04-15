@@ -1,0 +1,76 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+import Banner from "../../assets/our-team-banner.jpg";
+import { Image } from "astro:assets";
+import Intro from "../../assets/our-team-intro.jpg";
+import { team } from "../../data/team";
+import TeamMemberCard from "../../components/TeamMemberCard.astro";
+---
+
+<BaseLayout
+  siteTitle="The Team"
+  siteDescription="Meet the dedicated team of professionals at High Tide Aviation in Southport, NC. Our experienced pilots and instructors are committed to providing top-notch flight training."
+  siteKeywords="High Tide Aviation team, flight instructors Southport NC, aviation professionals Southeast Coast, experienced pilots High Tide, aviation staff Southport NC."
+>
+  <Header slot="header" image={Banner} title="Our team" />
+
+  <section class="py-24 px-5">
+    <div
+      class="max-w-xl gap-10 lg:max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:gap-20"
+    >
+      <div class="flex-1 relative">
+        <Image class="pr-6" src={Intro} alt="High Tide Aviation team" />
+        <div
+          class="h-3/4 bg-mustard-yellow absolute -z-10 -right-0 w-20 top-[12.5%]"
+        >
+        </div>
+      </div>
+      <div class="flex flex-col flex-1">
+        <h2 class="uppercase text-medium-blue font-bold tracking-widest">
+          About Us
+        </h2>
+        <h3 class="text-5xl text-dark-blue font-bold leading-tight">
+          Behind Every Successful Pilot Is an Exceptional Team
+        </h3>
+        <p class="text-gray-500 leading-relaxed my-5">
+          At High Tide Aviation, we pride ourselves on the collective
+          experience, passion, and dedication our team brings to the world of
+          aviation training. Each member, from our seasoned instructors to our
+          supportive administrative staff, plays a crucial role in ensuring the
+          success and safety of our students.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center gap-5">
+          <button
+            class="block font-medium uppercase py-4 px-14 bg-dark-blue w-fit rounded-full text-white hover:bg-mustard-yellow duration-300"
+          >
+            Discover More
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 px-5 bg-light-blue/10">
+    <div class="max-w-7xl mx-auto flex flex-col items-center">
+      <h2 class="uppercase text-medium-blue font-bold tracking-widest">
+        Instructors
+      </h2>
+      <h3 class="text-5xl text-dark-blue font-bold leading-tight mb-5">
+        Meet Our Instructors
+      </h3>
+      <div class="grid gap-5 lg:grid-cols-3">
+        {
+          team.map((member) => (
+            <TeamMemberCard
+              name={member.name}
+              qualifications={member.qualifications}
+              imagePath={member.imagePath}
+              bio={member.bio}
+            />
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</BaseLayout>
