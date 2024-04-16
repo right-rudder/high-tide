@@ -14,7 +14,11 @@ if (!images[imagePath])
 ---
 
 <div>
-  <Image src={images[imagePath]()} alt={heading} class="w-full" />
+  <Image
+    src={images[imagePath]()}
+    alt={heading}
+    class="w-full h-60 object-cover"
+  />
   <div
     class="flex flex-col shadow-md bg-white w-11/12 py-5 px-8 -top-10 relative"
   >
