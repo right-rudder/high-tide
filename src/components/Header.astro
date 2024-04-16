@@ -1,13 +1,9 @@
 ---
 import { Image } from "astro:assets";
-import Navbar from "./Navbar";
 const { image, title, ctaText } = Astro.props;
-const { pathname } = Astro.url;
 ---
 
 <header>
-  <Navbar pathname={pathname} client:load />
-
   <div
     class="relative isolate pt-24 overflow-hidden h-[28rem] text-white flex items-center flex-col"
   >
