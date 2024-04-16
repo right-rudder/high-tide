@@ -35,12 +35,7 @@ const index = fleet.findIndex((plane) => plane.slug === slug);
   siteDescription="Explore High Tide Aviation's diverse fleet of aircraft available for training and rental in Southport, NC. From single-engine basics to advanced multi-engine aircraft, find the perfect fit for your flying ambitions."
   siteKeywords="aircraft rental Southport NC, flight training fleet Southeast Coast, pilot training aircraft Southport NC, rent a plane Southport NC, aviation rentals Southeast Coast."
 >
-  <Header
-    slot="header"
-    image={Banner}
-    title={name}
-    ctaText="Discover Our Fleet"
-  />
+  <Header slot="header" image={Banner} title={name} ctaText="Book Now" />
 
   <section class="py-24 px-5">
     <div
@@ -127,6 +122,11 @@ const index = fleet.findIndex((plane) => plane.slug === slug);
         adipisci voluptate temporibus beatae ad rem velit quasi! Quaerat, at.
         Beatae, accusamus voluptas?
       </p>
+      <button
+        class="block font-medium uppercase py-4 px-14 bg-dark-blue w-fit rounded-full text-white hover:bg-mustard-yellow duration-300"
+      >
+        Book Now
+      </button>
       <hr />
       <div class="flex justify-between">
         <a
