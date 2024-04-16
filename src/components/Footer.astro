@@ -7,19 +7,23 @@ import { MdEmail } from "react-icons/md";
 import { IoLocationSharp } from "react-icons/io5";
 import {
   ADDRESS_LINE_1,
+  ADDRESS_LINE_1_2,
   ADDRESS_LINE_2,
+  ADDRESS_LINE_2_2,
   EMAIL_ADDRESS,
   FACEBOOK_URL,
   INSTAGRAM_URL,
   PHONE_NUMBER,
+  PHONE_NUMBER_2,
   YOUTUBE_URL,
 } from "../consts.ts";
+import { navbarLinks } from "../data/navbarLinks";
 ---
 
 <footer class="bg-dark-blue text-white">
   <div class="max-w-7xl mx-auto px-5">
     <div
-      class="grid md:grid-cols-2 lg:grid-cols-[2.5fr_1fr_1fr_1.5fr] py-20 gap-8 justify-between"
+      class="grid md:grid-cols-2 lg:grid-cols-[3fr_1fr_1fr_1.5fr] py-20 gap-8 justify-between"
     >
       <div class="flex flex-col gap-5">
         <a class="w-fit" href="/">
@@ -30,60 +34,47 @@ import {
           />
         </a>
         <p class="tracking-wide">
-          High Tide Aviation's flight schools and training facility are at Cape
-          Fear Regional Jetport in Southport, NC. Get professional pilot
-          training for commercial licenses, instrument ratings, and more. Pursue
-          aviation dreams through zero-to-hero flight training programs. Book an
-          intro flight over North Carolina's coastal regions or call to tour our
-          premier Southport flight schools at the jetport today!
+          High Tide Aviation offers flight schools and training facilities at
+          both Cape Fear Regional Jetport in Southport, NC, and McKinnon St.
+          Simons Island Airport on St. Simons Island, Georgia. Specializing in
+          both airplane and helicopter training, we provide professional pilot
+          training for commercial licenses, instrument ratings, helicopters,
+          flight instruction, and more. Pursue your aviation dreams through our
+          zero-to-hero flight training programs. Book an intro flight over North
+          Carolina or Georgia’s scenic coastlines, or call to tour our premier
+          flight schools at either location today!
         </p>
       </div>
-      <div class="flex flex-col gap-3">
-        <h3 class="font-medium">Explore</h3>
-        <ul class="flex flex-col gap-1 text-white/50">
-          <li><a class="hover:text-white duration-300" href="/">Home</a></li>
-          <li>
-            <a class="hover:text-white duration-300" href="/about">About</a>
-          </li>
-          <li>
-            <a class="hover:text-white duration-300" href="/services"
-              >Services</a>
-          </li>
-          <li>
-            <a class="hover:text-white duration-300" href="/contact">Contact</a>
-          </li>
-        </ul>
-      </div>
-      <div class="flex flex-col gap-3">
-        <h3 class="font-medium">Links</h3>
-        <ul class="flex flex-col gap-1 text-white/50">
-          <li><a class="hover:text-white duration-300" href="/">Home</a></li>
-          <li>
-            <a class="hover:text-white duration-300" href="/about">About</a>
-          </li>
-          <li>
-            <a class="hover:text-white duration-300" href="/services"
-              >Services</a>
-          </li>
-          <li>
-            <a class="hover:text-white duration-300" href="/contact">Contact</a>
-          </li>
-        </ul>
-      </div>
+      {
+        navbarLinks.slice(1, 3).map((link) => (
+          <div class="flex flex-col gap-3">
+            <h3 class="font-medium">{link.name}</h3>
+            <ul class="flex flex-col gap-2 text-white/50">
+              {link.submenu.map((item) => (
+                <li>
+                  <a class="hover:text-white duration-300" href={item.link}>
+                    {item.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))
+      }
       <div class="flex flex-col gap-3">
         <h3 class="font-medium">Contact</h3>
-        <ul class="flex flex-col gap-3 text-white/50">
-          <li class="flex gap-2 items-center">
-            <FaPhone className="size-4 text-mustard-yellow" />
-            <a class="hover:text-white duration-300" href=`tel:${PHONE_NUMBER}`
-              >{PHONE_NUMBER}</a
-            >
-          </li>
+        <ul class="flex flex-col gap-1 text-white/50">
           <li class="flex gap-2 items-center">
             <MdEmail className="size-4 text-mustard-yellow" />
             <a
               class="hover:text-white duration-300"
               href=`mailto:${EMAIL_ADDRESS}`>{EMAIL_ADDRESS}</a
+            >
+          </li>
+          <li class="flex gap-2 items-center mt-4">
+            <FaPhone className="size-4 text-mustard-yellow" />
+            <a class="hover:text-white duration-300" href=`tel:${PHONE_NUMBER}`
+              >{PHONE_NUMBER}</a
             >
           </li>
           <li class="flex gap-2">
@@ -93,6 +84,22 @@ import {
             <a class="hover:text-white duration-300" href="#">
               <p>{ADDRESS_LINE_1}</p>
               <p>{ADDRESS_LINE_2}</p>
+            </a>
+          </li>
+          <li class="flex gap-2 items-center mt-4">
+            <FaPhone className="size-4 text-mustard-yellow" />
+            <a
+              class="hover:text-white duration-300"
+              href=`tel:${PHONE_NUMBER_2}`>{PHONE_NUMBER_2}</a
+            >
+          </li>
+          <li class="flex gap-2">
+            <IoLocationSharp
+              className="size-4 mt-1 shrink-0 text-mustard-yellow"
+            />
+            <a class="hover:text-white duration-300" href="#">
+              <p>{ADDRESS_LINE_1_2}</p>
+              <p>{ADDRESS_LINE_2_2}</p>
             </a>
           </li>
         </ul>

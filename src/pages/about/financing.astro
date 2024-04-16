@@ -1,0 +1,138 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+import Banner from "../../assets/financing-banner.jpg";
+import { Image } from "astro:assets";
+import Intro from "../../assets/financing-intro.jpg";
+import { financialOptions } from "../../data/financialOptions";
+import FinancialOptionCard from "../../components/FinancialOptionCard.astro";
+import { RiTeamLine } from "react-icons/ri";
+import { BiWorld } from "react-icons/bi";
+import { GiPayMoney } from "react-icons/gi";
+---
+
+<BaseLayout
+  siteTitle="Financing"
+  siteDescription="High Tide Aviation in Southport, NC, offers flexible financing options for aspiring pilots. Discover our tailored solutions to help you achieve your aviation training goals."
+  siteKeywords="flight training financing Southport NC, pilot training loans Southeast Coast, aviation scholarships Southport NC, financing options for pilots, High Tide Aviation financing."
+>
+  <Header
+    slot="header"
+    image={Banner}
+    title="Financing"
+    ctaText="Explore Financing Options"
+  />
+
+  <section class="py-24 px-5">
+    <div
+      class="max-w-xl gap-10 lg:max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:gap-20"
+    >
+      <div class="flex-1 relative">
+        <Image class="pr-6" src={Intro} alt="High Tide Aviation team" />
+        <div
+          class="h-3/4 bg-mustard-yellow absolute -z-10 -right-0 w-20 top-[12.5%]"
+        >
+        </div>
+      </div>
+      <div class="flex flex-col flex-1">
+        <h2 class="uppercase text-medium-blue font-bold tracking-widest">
+          Financial
+        </h2>
+        <h3 class="text-5xl text-dark-blue font-bold leading-tight">
+          Your Flight Training Dreams Within Reach.
+        </h3>
+        <p class="text-gray-500 leading-relaxed my-5">
+          Understanding the financial commitment to flight training is
+          important. At High Tide Aviation, we believe in making your dreams of
+          flying accessible and achievable. That’s why we offer a variety of
+          financing options designed to suit different budgets and training
+          goals. Let us help you navigate the path to funding your aviation
+          education.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center gap-5">
+          <a
+            class="block font-medium uppercase py-4 px-14 bg-dark-blue w-fit rounded-full text-white hover:bg-mustard-yellow duration-300"
+          >
+            Discover More
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-medium-blue/10 px-5">
+    <div class="max-w-xl grid lg:grid-cols-3 lg:max-w-7xl mx-auto gap-10">
+      <div
+        class="border border-white/50 py-8 px-12 flex flex-col gap-5 hover:bg-white duration-700 group"
+      >
+        <RiTeamLine className="size-14 text-medium-blue" />
+        <h3
+          class="text-lg text-dark-blue uppercase font-semibold tracking-widest duration-700"
+        >
+          Flight Student Loan
+        </h3>
+        <p class="text-gray-600 leading-relaxed">
+          Our Aviation Academy has partnered with multiple education lenders to
+          provide competitive financing options for your airline career
+          training. Please check out our flight training loan and financing
+          options below. We are happy to assist with any questions you may have.
+        </p>
+      </div>
+      <div
+        class="border border-white/50 py-8 px-12 flex flex-col gap-5 hover:bg-white duration-700 group"
+      >
+        <BiWorld className="size-14 text-medium-blue" />
+        <h3
+          class="text-lg text-dark-blue uppercase font-semibold tracking-widest duration-700"
+        >
+          International Flight Student Loans
+        </h3>
+        <p class="text-gray-600 leading-relaxed">
+          At this time, our Aviation Academy does not offer education loans to
+          international flight students who do not reside within the U.S. or
+          have a credit history. However, there might be loan options available
+          in your home country.
+        </p>
+      </div>
+      <div
+        class="border border-white/50 py-8 px-12 flex flex-col gap-5 hover:bg-white duration-700 group"
+      >
+        <GiPayMoney className="size-14 text-medium-blue" />
+        <h3
+          class="text-lg text-dark-blue uppercase font-semibold tracking-widest duration-700"
+        >
+          Scholarships and Grants
+        </h3>
+        <p class="text-gray-600 leading-relaxed">
+          Our Avaition Academy does not offer scholarships or fully paid pilot
+          training for international or domestic flight students at this time.
+          For U.S. residents. You may find scholarships at the
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 px-5">
+    <div class="max-w-xl lg:max-w-7xl mx-auto flex flex-col items-center">
+      <h2 class="uppercase text-medium-blue font-bold tracking-widest">
+        Financing Options
+      </h2>
+      <h3
+        class="text-5xl max-w-2xl text-center text-dark-blue font-bold leading-tight mb-5"
+      >
+        Choose the one that best meets your Aviation Goals
+      </h3>
+      <div class="grid gap-5 lg:grid-cols-2">
+        {
+          financialOptions.map((option) => (
+            <FinancialOptionCard
+              name={option.name}
+              imagePath={option.imagePath}
+              description={option.description}
+            />
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</BaseLayout>
