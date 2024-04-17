@@ -34,9 +34,9 @@
     --num-helicopters: 0;
   }
   to {
-    --num-hours: 9000;
+    --num-hours: 25000;
     --num-instructors: 14;
-    --num-aircrafts: 8;
+    --num-aircrafts: 10;
     --num-helicopters: 2;
   }
 }

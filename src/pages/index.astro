@@ -160,7 +160,8 @@ import { latestPosts } from "../data/latestPosts.js";
             Enroll Now
           </button>
         </div>
-        <div
+        <a
+          href="/about/fleet-rentals"
           class="flex flex-col min-h-[28rem] lg:flex-1 gap-5 justify-end bg-gradient-to-t to-40% from-medium-blue p-12 relative text-white"
         >
           <Image
@@ -170,7 +171,7 @@ import { latestPosts } from "../data/latestPosts.js";
             quality={10}
           />
           <h3 class="text-3xl font-bold">Meet Our Fleet</h3>
-        </div>
+        </a>
         <div
           class="flex flex-col min-h-[28rem] lg:flex-1 gap-5 justify-end bg-gradient-to-t to-40% from-medium-blue p-12 relative text-white"
         >
@@ -253,16 +254,18 @@ import { latestPosts } from "../data/latestPosts.js";
               heading={program.heading}
               subheading={program.subheading}
               description={program.description}
+              url={program.url}
             />
           ))
         }
       </div>
-      <button
+      <a
+        href="/flight-training/ground-school"
         class="flex items-center gap-3 font-medium uppercase py-4 px-14 bg-dark-blue w-fit rounded-full text-white hover:bg-mustard-yellow duration-300"
       >
         <p>View all training programs</p>
         <IoIosArrowForward className="text-xl" />
-      </button>
+      </a>
     </div>
   </section>
 

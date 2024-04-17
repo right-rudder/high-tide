@@ -3,7 +3,7 @@ import { IoIosArrowForward } from "react-icons/io";
 import type { ImageMetadata } from "astro";
 import { Image } from "astro:assets";
 
-const { imagePath, heading, subheading, description } = Astro.props;
+const { imagePath, heading, subheading, description, url } = Astro.props;
 const images = import.meta.glob<{ default: ImageMetadata }>(
   "/src/assets/*.{jpeg,jpg,png,gif}",
 );
@@ -24,7 +24,8 @@ if (!images[imagePath])
     class="flex flex-col shadow-md bg-white w-11/12 py-5 px-8 -top-10 relative"
   >
     <a
-      class="absolute right-5 -top-5 bg-mustard-yellow p-3 hover:bg-dark-blue duration-500 cursor-pointer"
+      href={url}
+      class="absolute right-5 -top-5 bg-mustard-yellow p-3 hover:bg-dark-blue duration-500"
     >
       <IoIosArrowForward className="text-white" />
     </a>

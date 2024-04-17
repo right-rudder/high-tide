@@ -1,7 +1,7 @@
 export const stats = [
   {
     icon: "FaRegHourglassHalf",
-    value: 9000,
+    value: 25000,
     title: "Combined flight hours",
     cssVariable: "--num-hours",
   },
@@ -13,7 +13,7 @@ export const stats = [
   },
   {
     icon: "BsAirplaneEngines",
-    value: 8,
+    value: 10,
     title: "Unique fixed-wing aircraft",
     cssVariable: "--num-aircrafts",
   },
