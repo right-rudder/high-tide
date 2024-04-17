@@ -2,6 +2,14 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Header from "../components/Header.astro";
 import Banner from "../assets/first-time-pilots-banner.jpg";
+import { Image } from "astro:assets";
+import Intro from "../assets/first-time-pilots-intro.jpg";
+import StatCard from "../components/StatCard.astro";
+import { stats } from "../data/stats";
+import { RiTeamLine } from "react-icons/ri";
+import { IoIosArrowRoundForward } from "react-icons/io";
+import { GiExitDoor } from "react-icons/gi";
+import { MdFlightTakeoff } from "react-icons/md";
 ---
 
 <BaseLayout
@@ -16,5 +24,159 @@ import Banner from "../assets/first-time-pilots-banner.jpg";
     ctaText="Discover Flight Training"
   />
 
-  <section class="py-16"></section>
+  <section class="py-24 px-5">
+    <div
+      class="max-w-xl gap-10 lg:max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:gap-20"
+    >
+      <div class="flex-1 relative">
+        <Image class="pr-6" src={Intro} alt="High Tide Aviation team" />
+        <div
+          class="h-3/4 bg-mustard-yellow absolute -z-10 -right-0 w-20 top-[12.5%]"
+        >
+        </div>
+      </div>
+      <div class="flex flex-col flex-1">
+        <h2 class="uppercase text-medium-blue font-bold tracking-widest">
+          Training with High Tide
+        </h2>
+        <h3 class="text-5xl text-dark-blue font-bold leading-tight">
+          Why Learn to Fly?
+        </h3>
+        <p class="text-gray-500 leading-relaxed my-5">
+          Flying is freedom. As a pilot, you'll soar above the earth, exploring
+          the skies with an independence shared by only a select few
+          individuals, and experience thrilling new perspectives. Pilots at High
+          Tide Aviation have a unique opportunity to do so over the gorgeous
+          coastlines of North Carolina and Georgia. The journey to earn your
+          wings cultivates essential skills - from navigation to aircraft
+          management. Whether your goal is a rewarding hobby or a fulfilling
+          career, learning to fly offers unmatched personal and professional
+          growth. Take control and discover the timeless allure of aviation.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center gap-5">
+          <a
+            class="block font-medium uppercase py-4 px-14 bg-dark-blue w-fit rounded-full text-white hover:bg-mustard-yellow duration-300"
+          >
+            Enroll Today!
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="text-white mx-auto grid sm:grid-cols-2 lg:grid-cols-4">
+    {
+      stats.map((stat) => (
+        <StatCard
+          icon={stat.icon}
+          value={stat.value}
+          title={stat.title}
+          cssVariable={stat.cssVariable}
+        />
+      ))
+    }
+  </section>
+
+  <section
+    class="py-16 px-5 flex flex-col items-center max-w-xl lg:max-w-7xl mx-auto"
+  >
+    <h2 class="uppercase text-medium-blue font-bold tracking-widest">
+      First-time Pilots
+    </h2>
+    <h3
+      class="text-5xl text-dark-blue font-bold leading-tight max-w-2xl text-center"
+    >
+      Become a Pilot at High Tide
+    </h3>
+    <p class="text-gray-600 text-center max-w-5xl my-10 leading-loose">
+      Welcome to High Tide Aviation, the top-rated training center for airplane
+      and helicopter pilots from both Southport, NC, and St. Simons Island, GA.
+      Setting off on your pilot journey is straightforward and involves just
+      three simple steps:
+    </p>
+    <div class="grid lg:grid-cols-3 mx-auto gap-10">
+      <div
+        class="border border-white/50 py-8 px-12 flex flex-col gap-5 justify-between hover:bg-medium-blue/20 duration-700 group"
+      >
+        <div class="flex flex-col gap-5">
+          <RiTeamLine className="size-14 text-medium-blue" />
+          <h3
+            class="text-lg text-dark-blue uppercase font-semibold tracking-widest duration-700"
+          >
+            1. Meet The Team
+          </h3>
+          <p class="text-gray-600 leading-relaxed">
+            Reach out and connect with a member of the High Tide team. We’re
+            eager to understand your aspirations in aviation and explore how we
+            can support you in achieving those dreams.
+          </p>
+        </div>
+        <a class="flex gap-3 items-center self-end cursor-pointer group">
+          <p class="text-gray-500 text-sm">Contact Us</p>
+          <div
+            class="p-3 bg-light-blue/15 rounded-full group-hover:bg-medium-blue duration-700"
+          >
+            <IoIosArrowRoundForward
+              className="text-dark-blue size-6 group-hover:text-white duration-700"
+            />
+          </div>
+        </a>
+      </div>
+      <div
+        class="border border-white/50 py-8 px-12 flex flex-col gap-5 justify-between hover:bg-medium-blue/20 duration-700 group"
+      >
+        <div class="flex flex-col gap-5">
+          <GiExitDoor className="size-14 text-medium-blue" />
+          <h3
+            class="text-lg text-dark-blue uppercase font-semibold tracking-widest duration-700"
+          >
+            2. Visit High Tide Aviation
+          </h3>
+          <p class="text-gray-600 leading-relaxed">
+            Come and see our facilities and fleet at either of our locations.
+            Experience a discovery flight with one of our Certified Flight
+            Instructors (CFIs) and get a real feel of what it’s like to train
+            and fly with High Tide Aviation.
+          </p>
+        </div>
+        <a class="flex gap-3 items-center self-end cursor-pointer group">
+          <p class="text-gray-500 text-sm">Book a Visit</p>
+          <div
+            class="p-3 bg-light-blue/15 rounded-full group-hover:bg-medium-blue duration-700"
+          >
+            <IoIosArrowRoundForward
+              className="text-dark-blue size-6 group-hover:text-white duration-700"
+            />
+          </div>
+        </a>
+      </div>
+      <div
+        class="border border-white/50 py-8 px-12 flex flex-col gap-5 justify-between hover:bg-medium-blue/20 duration-700 group"
+      >
+        <div class="flex flex-col gap-5">
+          <MdFlightTakeoff className="size-14 text-medium-blue" />
+          <h3
+            class="text-lg text-dark-blue uppercase font-semibold tracking-widest duration-700"
+          >
+            3. Start Flying
+          </h3>
+          <p class="text-gray-600 leading-relaxed">
+            Whether you aim to fly as a career or just for the sheer joy of it,
+            High Tide Aviation is here to equip you with the skills and
+            knowledge needed to be a safe and proficient pilot.
+          </p>
+        </div>
+        <a class="flex gap-3 items-center self-end cursor-pointer group">
+          <p class="text-gray-500 text-sm">Enroll Today</p>
+          <div
+            class="p-3 bg-light-blue/15 rounded-full group-hover:bg-medium-blue duration-700"
+          >
+            <IoIosArrowRoundForward
+              className="text-dark-blue size-6 group-hover:text-white duration-700"
+            />
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
 </BaseLayout>
