@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { PiShoppingCartLight } from "react-icons/pi";
 import { FaPhone } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
-import HighTideLogo from "../assets/high-tide-aviation-logo-white.png";
+import HighTideLogo from "../assets/high-tide-aviation-logo-gradation.png";
 import {
   FACEBOOK_URL,
   INSTAGRAM_URL,
@@ -70,7 +70,7 @@ const Navbar = ({ pathname }) => {
                 <img
                   src={HighTideLogo.src}
                   alt="High Tide Aviation Logo"
-                  className="lg:h-20 h-14 w-auto"
+                  className="lg:h-14 h-12 w-auto"
                 />
               </a>
               <div className="hidden lg:block">
@@ -171,7 +171,7 @@ const Navbar = ({ pathname }) => {
             <img
               src={HighTideLogo.src}
               alt="High Tide Aviation Logo"
-              className="lg:h-20 h-14 w-auto"
+              className="h-12 w-auto"
             />
           </a>
           <svg
