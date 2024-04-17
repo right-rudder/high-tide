@@ -1,0 +1,203 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+import Banner from "../../assets/contact-us-banner.jpg";
+import { Image } from "astro:assets";
+import Intro from "../../assets/financing-intro.jpg";
+import { financialOptions } from "../../data/financialOptions";
+import FinancialOptionCard from "../../components/FinancialOptionCard.astro";
+import { RiTeamLine } from "react-icons/ri";
+import { BiWorld } from "react-icons/bi";
+import { GiPayMoney } from "react-icons/gi";
+import { FaClock } from "react-icons/fa";
+
+import {
+  ADDRESS_LINE_1,
+  ADDRESS_LINE_1_2,
+  ADDRESS_LINE_2,
+  ADDRESS_LINE_2_2,
+  EMAIL_ADDRESS,
+  FACEBOOK_URL,
+  INSTAGRAM_URL,
+  PHONE_NUMBER,
+  PHONE_NUMBER_2,
+  YOUTUBE_URL,
+} from "../../consts.ts";
+import { FaPhone } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
+import { IoLocationSharp } from "react-icons/io5";
+---
+
+<BaseLayout
+  siteTitle="Contact Us"
+  siteDescription="Reach out to High Tide Aviation in Southport, NC, for any inquiries about flight training, aircraft rentals, or our other aviation services. Our team is here to assist you on your aviation journey."
+  siteKeywords="contact High Tide Aviation, flight school contact Southport NC, aviation inquiries Southeast Coast, High Tide Aviation support, pilot training questions Southport NC."
+>
+  <Header slot="header" image={Banner} title="Contact Us" />
+
+  <section class="py-24 px-5">
+    <div class="max-w-xl lg:max-w-7xl mx-auto flex flex-col items-center">
+      <h2 class="uppercase text-medium-blue font-bold tracking-widest">
+        Contact Us
+      </h2>
+      <h3
+        class="text-5xl max-w-2xl text-center text-dark-blue font-bold leading-tight"
+      >
+        We're Here to Help You Soar
+      </h3>
+      <p class="text-gray-600 text-center max-w-5xl leading-loose my-3">
+        Whether you have questions about starting your flight training, need
+        more information on our aircraft services, or simply want to learn more
+        about High Tide Aviation, our team is ready to provide the answers and
+        support you need. Find the best way to contact us below.
+      </p>
+      <div class="flex gap-10 flex-col lg:flex-row">
+        <div class="flex flex-col p-14 shadow-lg w-96">
+          <h3 class="text-3xl max-w-2xl text-dark-blue font-bold leading-tight">
+            Southport Location
+          </h3>
+          <ul class="flex flex-col gap-3 mt-3 text-gray-600">
+            <li class="flex gap-2 items-center">
+              <MdEmail className="size-4 text-mustard-yellow" />
+              <a
+                class="hover:text-medium-blue duration-300"
+                href=`mailto:${EMAIL_ADDRESS}`>{EMAIL_ADDRESS}</a
+              >
+            </li>
+            <li class="flex gap-2 items-center">
+              <FaPhone className="size-4 text-mustard-yellow" />
+              <a
+                class="hover:text-medium-blue duration-300"
+                href=`tel:${PHONE_NUMBER}`>{PHONE_NUMBER}</a
+              >
+            </li>
+            <li class="flex gap-2">
+              <IoLocationSharp
+                className="size-4 mt-1 shrink-0 text-mustard-yellow"
+              />
+              <a
+                class="hover:text-medium-blue duration-300"
+                href="https://maps.app.goo.gl/szN6o8DWhLoASJTw5"
+                target="_blank"
+              >
+                <p>{ADDRESS_LINE_1}</p>
+                <p>{ADDRESS_LINE_2}</p>
+              </a>
+            </li>
+            <li class="flex gap-2">
+              <FaClock className="size-4 mt-1 shrink-0 text-mustard-yellow" />
+              <div class="flex flex-col">
+                <p>7:00 AM to 2:00 PM</p>
+                <p>All other times by appointment</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="flex flex-col p-14 shadow-lg w-96">
+          <h3 class="text-3xl text-dark-blue font-bold leading-tight">
+            St. Simons Island Location
+          </h3>
+          <ul class="flex flex-col gap-3 mt-3 text-gray-600">
+            <li class="flex gap-2 items-center">
+              <MdEmail className="size-4 text-mustard-yellow" />
+              <a
+                class="hover:text-medium-blue duration-300"
+                href=`mailto:${EMAIL_ADDRESS}`>{EMAIL_ADDRESS}</a
+              >
+            </li>
+            <li class="flex gap-2 items-center">
+              <FaPhone className="size-4 text-mustard-yellow" />
+              <a
+                class="hover:text-medium-blue duration-300"
+                href=`tel:${PHONE_NUMBER_2}`>{PHONE_NUMBER_2}</a
+              >
+            </li>
+            <li class="flex gap-2">
+              <IoLocationSharp
+                className="size-4 mt-1 shrink-0 text-mustard-yellow"
+              />
+              <a
+                class="hover:text-medium-blue duration-300"
+                href="https://maps.app.goo.gl/yBHRizAdhNHucPRk6"
+                target="_blank"
+              >
+                <p>{ADDRESS_LINE_1_2}</p>
+                <p>{ADDRESS_LINE_2_2}</p>
+              </a>
+            </li>
+            <li class="flex gap-2">
+              <FaClock className="size-4 mt-1 shrink-0 text-mustard-yellow" />
+              <div class="flex flex-col">
+                <p>7:00 AM to 2:00 PM</p>
+                <p>All other times by appointment</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="max-w-xl lg:max-w-7xl mx-auto relative z-10 flex flex-col items-center"
+    >
+      <div class="max-w-3xl mx-auto grid lg:grid-cols-2 gap-5 my-10">
+        <input
+          class="bg-mustard-yellow/20 text-dark-blue py-4 px-6 w-full outline-none placeholder:text-gray-500"
+          type="text"
+          name="first-name"
+          id="first-name"
+          placeholder="First Name"
+        />
+        <input
+          class="bg-mustard-yellow/20 text-dark-blue py-4 px-6 w-full outline-none placeholder:text-gray-500"
+          type="text"
+          name="last-name"
+          id="last-name"
+          placeholder="Last Name"
+        />
+        <input
+          class="bg-mustard-yellow/20 text-dark-blue py-4 px-6 w-full outline-none placeholder:text-gray-500"
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Email"
+        />
+        <input
+          class="bg-mustard-yellow/20 text-dark-blue py-4 px-6 w-full outline-none placeholder:text-gray-500"
+          type="tel"
+          name="phone"
+          id="phone"
+          placeholder="Phone"
+        />
+        <textarea
+          class="bg-mustard-yellow/20 text-dark-blue py-4 px-6 w-full outline-none placeholder:text-gray-500 col-span-2 h-36"
+          name="message"
+          id="message"
+          placeholder="Write message"></textarea>
+      </div>
+      <a
+        href="#"
+        class="block font-medium uppercase py-4 px-14 bg-dark-blue w-fit rounded-full text-white hover:bg-mustard-yellow duration-300"
+        >Send Message</a
+      >
+    </div>
+  </section>
+  <div class="flex flex-col md:flex-row">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3310.3953290887316!2d-78.08074522366795!3d33.93095892412375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89aa07e3b3a0b82b%3A0xe199a7d4a214440f!2sHigh%20Tide%20Aviation!5e0!3m2!1sen!2sgt!4v1713385335851!5m2!1sen!2sgt"
+      width="100%"
+      height="350"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3414.4354770734185!2d-81.3877332237487!3d31.153188865189975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e4db2855161e87%3A0xa28de7768105440a!2sHigh%20Tide%20Aviation%20Air%20Tours!5e0!3m2!1sen!2sgt!4v1713385384399!5m2!1sen!2sgt"
+      width="100%"
+      height="350"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</BaseLayout>
