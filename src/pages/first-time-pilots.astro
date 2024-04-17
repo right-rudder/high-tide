@@ -10,6 +10,7 @@ import { RiTeamLine } from "react-icons/ri";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { GiExitDoor } from "react-icons/gi";
 import { MdFlightTakeoff } from "react-icons/md";
+import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
 ---
 
 <BaseLayout
@@ -130,7 +131,7 @@ import { MdFlightTakeoff } from "react-icons/md";
           <h3
             class="text-lg text-dark-blue uppercase font-semibold tracking-widest duration-700"
           >
-            2. Visit High Tide Aviation
+            2. Visit High Tide
           </h3>
           <p class="text-gray-600 leading-relaxed">
             Come and see our facilities and fleet at either of our locations.
@@ -176,6 +177,95 @@ import { MdFlightTakeoff } from "react-icons/md";
             />
           </div>
         </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="flex flex-col lg:flex-row">
+    <div
+      class="flex flex-col justify-center bg-mustard-yellow flex-1 py-16 px-5"
+    >
+      <div class="max-w-xl lg:max-w-none mx-auto lg:mx-20">
+        <h2 class="uppercase text-medium-blue font-bold tracking-widest">
+          Take Your First Flight
+        </h2>
+        <h3 class="text-5xl text-dark-blue font-bold leading-tight">
+          Introductory Flights at High Tide Aviation
+        </h3>
+        <p class="text-gray-600 my-10 mr-10">
+          Join High Tide Aviation for an introductory flight that combines
+          hands-on flying with spectacular views of coastal landmarks. In
+          Southport, you'll fly over the historic Southport Pier, Oak Island
+          Lighthouse, and Fort Caswell, capturing unique perspectives only seen
+          from the sky. From St. Simons Island, your route includes the iconic
+          St. Simons Lighthouse, lush Sea Island Golf Course, and the majestic
+          Sidney Lanier Bridge. Each flight is an opportunity to pilot an
+          aircraft and explore scenic vistas that highlight the beauty and
+          history of these coastal regions.
+        </p>
+        <a
+          class="block font-medium uppercase py-4 px-14 bg-dark-blue w-fit rounded-full text-white hover:bg-white hover:text-dark-blue cursor-pointer duration-300"
+        >
+          Book an Intro Flight
+        </a>
+      </div>
+    </div>
+    <div
+      class="flex flex-col items-center justify-center text-white bg-dark-blue flex-1 relative py-16 px-5"
+    >
+      <div class="max-w-xl lg:max-w-none mx-auto lg:mx-28 my-20 lg:my-0">
+        <p class="md:text-xl indent-10 leading-relaxed font-medium">
+          I earned my private pilot license through High Tide out of St. Simons
+          Island, GA. They are an excellent program with a great cadre of
+          instructors. I am very thankful to have had such a great team to help
+          me start this journey into aviation!
+        </p>
+        <p class="mt-5 md:text-xl float-end">- Jake B.</p>
+        <ImQuotesLeft
+          className="absolute text-white/70 size-16 z-10 top-20 left-20"
+        />
+        <ImQuotesRight
+          className="absolute text-white/70 size-16 z-10 bottom-20 right-20"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 px-5">
+    <div
+      class="max-w-xl gap-10 lg:max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:gap-5"
+    >
+      <div class="flex flex-col flex-1">
+        <h2 class="uppercase text-medium-blue font-bold tracking-widest">
+          Finding Success at High Tide
+        </h2>
+        <h3 class="text-5xl text-dark-blue font-bold leading-tight">
+          Southport and St. Simons Flight School
+        </h3>
+        <p class="text-gray-500 leading-relaxed my-5">
+          Our graduates' paths vary widely, reflecting the flexibility and broad
+          appeal of our training. Some now enjoy flying as a recreational hobby,
+          savoring the freedom of the skies on their terms. Others have turned
+          their passion into careers, working as commercial pilots or flight
+          instructors. This video highlights some of the highlights of flying
+          with High Tide.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center gap-5">
+          <button
+            class="block font-medium uppercase py-4 px-14 bg-dark-blue w-fit rounded-full text-white hover:bg-mustard-yellow duration-300"
+          >
+            Enroll Now
+          </button>
+        </div>
+      </div>
+      <div class="flex-1 w-full">
+        <iframe
+          src="https://drive.google.com/file/d/116-WVFHGiNKe4v8pto0tlAqZia6tbV4g/preview"
+          width="100%"
+          height="360"
+          allow="autoplay"
+          allowfullscreen="true"
+          loading="lazy"></iframe>
       </div>
     </div>
   </section>
