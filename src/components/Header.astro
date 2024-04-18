@@ -10,12 +10,12 @@ const { image, title, ctaText } = Astro.props;
     <Image
       src={image}
       alt="A description of my image."
-      class="absolute -z-50 -top-72 min-w-[110rem]"
+      class="-z-50 absolute min-w-[120rem] h-[28rem] -translate-y-24 object-cover object-[50%_40%]"
       quality={10}
     />
     <div class="absolute inset-0 bg-dark-blue/70 -z-40"></div>
 
-    <div class="max-w-7xl flex w-full mx-auto h-full items-center py-14">
+    <div class="max-w-7xl flex w-full mx-auto h-full items-center py-14 z-10">
       <div class="max-w-5xl px-5 mx-auto">
         <h1
           class="text-5xl font-medium tracking-tight sm:text-5xl animate-fade-in"
