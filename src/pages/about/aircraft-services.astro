@@ -1,0 +1,116 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+import Banner from "../../assets/aircraft-services-banner.jpeg";
+import { Image } from "astro:assets";
+import Intro from "../../assets/aircraft-services-intro.jpg";
+import { financialOptions } from "../../data/financialOptions";
+import FinancialOptionCard from "../../components/FinancialOptionCard.astro";
+import { RiTeamLine } from "react-icons/ri";
+import { BiWorld } from "react-icons/bi";
+import { GiPayMoney } from "react-icons/gi";
+import { MdSell } from "react-icons/md";
+import { MdManageAccounts } from "react-icons/md";
+import BrokerageServices from "../../components/BrokerageServices";
+---
+
+<BaseLayout
+  siteTitle="Aircraft Services"
+  siteDescription="Discover comprehensive aircraft services at High Tide Aviation in Southport, NC, including expert aircraft brokerage and personalized aircraft management solutions tailored to your needs."
+  siteKeywords="aircraft services Southport NC, aircraft brokerage Southeast Coast, aircraft management services Southport NC, aviation services Southeast Coast, manage my aircraft Southport NC."
+>
+  <Header
+    slot="header"
+    image={Banner}
+    title="Aircraft Services"
+    ctaText="Learn More About Our Services"
+  />
+
+  <section class="py-24 px-5">
+    <div
+      class="max-w-xl gap-10 lg:max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:gap-20"
+    >
+      <div class="lg:flex-1 flex justify-center">
+        <div class="lg:w-[28rem] lg:h-[33rem]">
+          <Image
+            class="object-cover h-full"
+            src={Intro}
+            alt="High Tide Aviation team"
+          />
+        </div>
+      </div>
+      <div class="flex flex-col lg:flex-1">
+        <h2 class="uppercase text-medium-blue font-bold tracking-widest">
+          What Will You Get
+        </h2>
+        <h3 class="text-5xl text-dark-blue font-bold leading-tight">
+          Professional Care for Your Aviation Assets
+        </h3>
+        <p class="text-gray-500 leading-relaxed my-5">
+          At High Tide Aviation, we're dedicated to providing top-tier aircraft
+          services, offering both aircraft brokerage and management solutions.
+          Whether you’re looking to buy, sell, or ensure the optimal operation
+          of your aircraft, our experienced team is here to guide you every step
+          of the way with personalized and professional service.
+        </p>
+        <div class="flex gap-7 flex-col md:flex-row">
+          <div class="bg-mustard-yellow/20 py-2 px-5 flex gap-5 items-center">
+            <MdSell className="size-28 text-dark-blue" />
+            <div>
+              <p class="text-dark-blue font-medium text-xl leading-tight">
+                Brokerage Services
+              </p>
+              <p class="text-gray-500 text-sm">
+                Lorem ipsum dolor sit amet consectetur
+              </p>
+            </div>
+          </div>
+          <div class="bg-mustard-yellow/20 py-2 px-5 flex gap-5 items-center">
+            <MdManageAccounts className="size-28 text-dark-blue" />
+            <div>
+              <p class="text-dark-blue font-medium text-xl leading-tight">
+                Management Services
+              </p>
+              <p class="text-gray-500 text-sm">
+                Lorem ipsum dolor sit amet consectetur
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col sm:flex-row items-center gap-5 mt-5">
+          <a
+            class="block font-medium uppercase py-4 px-14 bg-dark-blue w-fit rounded-full text-white hover:bg-mustard-yellow duration-300"
+          >
+            Discover More
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 px-5 bg-medium-blue/10">
+    <div
+      class="max-w-xl gap-10 lg:max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:gap-20"
+    >
+      <div class="flex flex-col lg:flex-1">
+        <h2 class="uppercase text-medium-blue font-bold tracking-widest">
+          Brokerage Services
+        </h2>
+        <h3 class="text-5xl text-dark-blue font-bold leading-tight">
+          Why Choose Us for Brokerage
+        </h3>
+        <p class="text-gray-500 leading-relaxed my-5">
+          Our team of experienced aviation professionals is dedicated to
+          providing you with the best brokerage services in the Southeast Coast.
+          We understand the unique needs of our clients and work tirelessly to
+          ensure that you get the best value for your aircraft. Whether you’re
+          looking to buy or sell, we’re here to help you every step of the way.
+        </p>
+      </div>
+
+      <div class="flex-1 w-full">
+        <BrokerageServices client:visible />
+      </div>
+    </div>
+  </section>
+</BaseLayout>
