@@ -1,8 +1,12 @@
 ---
 import TrainingProgramLayout from "../../layouts/TrainingProgramLayout.astro";
+import groundSchool from "../../data/groundSchoolData";
 ---
 
 <TrainingProgramLayout
-  imagePath="/src/assets/ground-school.webp"
-  title="Ground School"
+  imagePath={groundSchool.imagePath}
+  title={groundSchool.title}
+  locations={groundSchool.locations}
+  description={groundSchool.description}
+  tiers={groundSchool.tiers}
 />

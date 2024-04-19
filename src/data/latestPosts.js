@@ -1,6 +1,6 @@
 export const latestPosts = [
   {
-    title: "How to Choose a Flight School asdfasdfsf sfasdf asdf asdf as fasfs",
+    title: "How to Choose a Flight School",
     date: "15 Sept, 2024",
     imagePath: "/src/assets/post-1.jpg",
   },

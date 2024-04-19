@@ -1,8 +1,12 @@
 ---
 import TrainingProgramLayout from "../../layouts/TrainingProgramLayout.astro";
+import privatePilot from "../../data/privatePilotData";
 ---
 
 <TrainingProgramLayout
-  imagePath="/src/assets/private-pilot.jpg"
-  title="Private Pilot"
+  imagePath={privatePilot.imagePath}
+  title={privatePilot.title}
+  locations={privatePilot.locations}
+  description={privatePilot.description}
+  tiers={privatePilot.tiers}
 />

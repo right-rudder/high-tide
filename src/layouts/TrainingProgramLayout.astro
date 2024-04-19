@@ -6,21 +6,19 @@ import FlightTrainingNavbar from "../components/FlightTrainingNavbar.astro";
 import BigCTA from "../components/BigCTA.astro";
 import type { ImageMetadata } from "astro";
 import { Image } from "astro:assets";
-interface Props {
-  imagePath: string;
-  title: string;
-}
 import { FaArrowAltCircleRight } from "react-icons/fa";
 import FlightProgramCard from "../components/FlightProgramCard.astro";
 import { flightPrograms } from "../data/flightPrograms";
-const { imagePath, title } = Astro.props;
+import PricingComponent from "../components/PricingComponent";
+const { imagePath, title, locations, description, tiers } = Astro.props;
 const images = import.meta.glob<{ default: ImageMetadata }>(
   "/src/assets/*.{jpeg,jpg,png,gif,webp}",
 );
-if (!images[imagePath])
+if (!images[imagePath]) {
   throw new Error(
     `"${imagePath}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif,webp}"`,
   );
+}
 ---
 
 <BaseLayout
@@ -28,158 +26,136 @@ if (!images[imagePath])
   siteDescription="Begin your aviation journey with High Tide Aviation, offering comprehensive guidance and support for first-time pilots in Southport, NC, and St. Simons Island, GA."
   siteKeywords="first-time pilot Southport NC, beginner flight training St. Simons Island GA, aviation introduction Southeast Coast, learn to fly Southport NC, pilot training for beginners."
 >
-  <Header
-    slot="header"
-    image={Banner}
-    title="Our Training Programs"
-    ctaText="Enroll Now"
-  />
+  <Header slot="header" image={Banner} title={title} ctaText="Enroll Now" />
 
-  <section class="py-16 px-5">
+  <section class="max-w-6xl mx-auto py-16 px-5">
+    <div class="flex flex-col md:flex-row gap-10">
+      <div class="min-w-72 flex flex-col gap-5">
+        <FlightTrainingNavbar />
+        <BigCTA />
+      </div>
+      <div class="flex flex-col gap-5">
+        <div
+          class="bg-dark-blue border-l-8 flex flex-col border-mustard-yellow text-white p-5 gap-2 items-center"
+        >
+          <p class="uppercase text-xl">
+            {title} is available in
+          </p>
+          <ul class="flex gap-10">
+            {
+              locations.map((location) => (
+                <li class="text-xl font-medium tracking-wider">{location}</li>
+              ))
+            }
+          </ul>
+        </div>
+        <Image
+          src={images[imagePath]()}
+          alt={title}
+          class="w-full h-full object-cover"
+          quality={10}
+        />
+      </div>
+    </div>
+
+    <div class="flex flex-col my-8 gap-3">
+      <h2 class="text-4xl font-medium text-dark-blue">{title} Training</h2>
+      {
+        description.map((paragraph) => (
+          <p class="text-gray-600 leading-loose">{paragraph}</p>
+        ))
+      }
+
+      <div class="flex gap-5">
+        <div class="flex-1">
+          <h2 class="text-2xl font-medium text-dark-blue">
+            Enrollment Process
+          </h2>
+          <h3 class="text-xl font-medium text-medium-blue max-w-md mt-5">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </h3>
+          <ul class="flex flex-col gap-1 mt-5">
+            <li class="flex items-center gap-3">
+              <FaArrowAltCircleRight className="text-mustard-yellow size-5" />
+              <p class="text-dark-blue font-medium">
+                Praesent efficitur quam sit amet
+              </p>
+            </li>
+            <li class="flex items-center gap-3">
+              <FaArrowAltCircleRight className="text-mustard-yellow size-5" />
+              <p class="text-dark-blue font-medium">
+                Nunc cursus dolor id purus euismod
+              </p>
+            </li>
+            <li class="flex items-center gap-3">
+              <FaArrowAltCircleRight className="text-mustard-yellow size-5" />
+              <p class="text-dark-blue font-medium">
+                Quisque tincidunt eros ac place viverra
+              </p>
+            </li>
+          </ul>
+        </div>
+        <div class="flex-1">
+          <h2 class="text-2xl font-medium text-dark-blue">
+            Program Prerequisites
+          </h2>
+          <h3 class="text-xl font-medium text-medium-blue max-w-md mt-5">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </h3>
+          <ul class="flex flex-col gap-1 mt-5">
+            <li class="flex items-center gap-3">
+              <FaArrowAltCircleRight className="text-mustard-yellow size-5" />
+              <p class="text-dark-blue font-medium">
+                Praesent efficitur quam sit amet
+              </p>
+            </li>
+            <li class="flex items-center gap-3">
+              <FaArrowAltCircleRight className="text-mustard-yellow size-5" />
+              <p class="text-dark-blue font-medium">
+                Nunc cursus dolor id purus euismod
+              </p>
+            </li>
+            <li class="flex items-center gap-3">
+              <FaArrowAltCircleRight className="text-mustard-yellow size-5" />
+              <p class="text-dark-blue font-medium">
+                Quisque tincidunt eros ac place viverra
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 px-5 bg-dark-blue">
     <div class="max-w-6xl mx-auto">
-      <div class="flex flex-col md:flex-row gap-10">
-        <div class="min-w-72 flex flex-col gap-5">
-          <FlightTrainingNavbar />
-          <BigCTA />
-        </div>
-        <div class="flex flex-col gap-5">
-          <Image
-            src={images[imagePath]()}
-            alt={title}
-            class="w-full"
-            quality={10}
-          />
-          <h2 class="text-4xl font-medium text-dark-blue">{title}</h2>
-          <p class="text-gray-600 leading-loose">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            Laboriosam, consequuntur ipsam doloribus facere qui deleniti tenetur
-            distinctio ullam numquam vitae ut voluptatem sint illum? Error
-            ratione ipsum dolor? Dolor, voluptas. Lorem ipsum dolor sit, amet
-            consectetur adipisicing elit. Accusantium, similique magni. Natus,
-            suscipit, ea exercitationem architecto temporibus dolor placeat
-            dolorum, reiciendis voluptatibus quis laudantium optio accusamus
-            officiis necessitatibus labore. Maxime?
-          </p>
-          <div
-            class="bg-dark-blue border-l-8 flex flex-col border-mustard-yellow text-white p-5 gap-3 items-center"
-          >
-            <p class="uppercase font-medium text-2xl">
-              This training is available in
-            </p>
-            <ul class="flex gap-10">
-              <li>Southport, NC</li>
-              <li>St. Simons Island, GA</li>
-            </ul>
-          </div>
-          <p class="text-gray-600 leading-loose">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            Laboriosam, consequuntur ipsam doloribus facere qui deleniti tenetur
-            distinctio ullam numquam vitae ut voluptatem sint illum? Error
-            ratione ipsum dolor? Dolor, voluptas. Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Quas voluptatem sequi nulla ipsum?
-            Earum, molestiae. Distinctio mollitia consectetur fugiat cumque.
-            Consequuntur minima dolor unde laborum odit cumque vero, totam
-            nesciunt!
-          </p>
+      <PricingComponent client:visible tiers={tiers} />
+    </div>
+  </section>
 
-          <div class="flex gap-5">
-            <div class="flex-1">
-              <h2 class="text-2xl font-medium text-dark-blue">
-                Enrollment process
-              </h2>
-              <h3 class="text-xl font-medium text-medium-blue max-w-md mt-5">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              </h3>
-              <ul class="flex flex-col gap-1 mt-5">
-                <li class="flex items-center gap-3">
-                  <FaArrowAltCircleRight
-                    className="text-mustard-yellow size-5"
-                  />
-                  <p class="text-dark-blue font-medium">
-                    Praesent efficitur quam sit amet
-                  </p>
-                </li>
-                <li class="flex items-center gap-3">
-                  <FaArrowAltCircleRight
-                    className="text-mustard-yellow size-5"
-                  />
-                  <p class="text-dark-blue font-medium">
-                    Nunc cursus dolor id purus euismod
-                  </p>
-                </li>
-                <li class="flex items-center gap-3">
-                  <FaArrowAltCircleRight
-                    className="text-mustard-yellow size-5"
-                  />
-                  <p class="text-dark-blue font-medium">
-                    Quisque tincidunt eros ac place viverra
-                  </p>
-                </li>
-              </ul>
-            </div>
-            <div class="flex-1">
-              <h2 class="text-2xl font-medium text-dark-blue">
-                Program Prerequisites
-              </h2>
-              <h3 class="text-xl font-medium text-medium-blue max-w-md mt-5">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              </h3>
-              <ul class="flex flex-col gap-1 mt-5">
-                <li class="flex items-center gap-3">
-                  <FaArrowAltCircleRight
-                    className="text-mustard-yellow size-5"
-                  />
-                  <p class="text-dark-blue font-medium">
-                    Praesent efficitur quam sit amet
-                  </p>
-                </li>
-                <li class="flex items-center gap-3">
-                  <FaArrowAltCircleRight
-                    className="text-mustard-yellow size-5"
-                  />
-                  <p class="text-dark-blue font-medium">
-                    Nunc cursus dolor id purus euismod
-                  </p>
-                </li>
-                <li class="flex items-center gap-3">
-                  <FaArrowAltCircleRight
-                    className="text-mustard-yellow size-5"
-                  />
-                  <p class="text-dark-blue font-medium">
-                    Quisque tincidunt eros ac place viverra
-                  </p>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="pt-10">
-            <div class="max-w-[95rem] mx-auto flex flex-col items-center">
-              <h2 class="uppercase text-medium-blue font-bold tracking-widest">
-                Future Pathways
-              </h2>
-              <h3
-                class="text-4xl font-bold leading-tight max-w-xl text-dark-blue text-center capitalize"
-              >
-                What comes after my {title} training
-              </h3>
-              <div class="grid sm:grid-cols-2 lg:grid-cols-3 mt-10 gap-7">
-                {
-                  flightPrograms
-                    .slice(0, 3)
-                    .map((program) => (
-                      <FlightProgramCard
-                        imagePath={program.imagePath}
-                        heading={program.heading}
-                        subheading={program.subheading}
-                        description={program.description}
-                      />
-                    ))
-                }
-              </div>
-            </div>
-          </div>
-        </div>
+  <section class="max-w-6xl mx-auto py-16 px-5">
+    <div class="flex flex-col items-center">
+      <h2 class="uppercase text-medium-blue font-bold tracking-widest">
+        Future Pathways
+      </h2>
+      <h3
+        class="text-4xl font-bold leading-tight max-w-xl text-dark-blue text-center capitalize"
+      >
+        What comes after my {title} training
+      </h3>
+      <div class="grid md:grid-cols-3 mt-10 gap-7">
+        {
+          flightPrograms
+            .slice(0, 3)
+            .map((program) => (
+              <FlightProgramCard
+                imagePath={program.imagePath}
+                heading={program.heading}
+                subheading={program.subheading}
+                description={program.description}
+              />
+            ))
+        }
       </div>
     </div>
   </section>

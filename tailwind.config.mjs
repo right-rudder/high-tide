@@ -48,5 +48,9 @@ export default {
     "[counter-set:_num_var(--num-instructors)]",
     "[counter-set:_num_var(--num-aircrafts)]",
     "[counter-set:_num_var(--num-helicopters)]",
+    "grid-cols-1",
+    "grid-cols-2",
+    "grid-cols-3",
+    "grid-cols-4",
   ],
 };
