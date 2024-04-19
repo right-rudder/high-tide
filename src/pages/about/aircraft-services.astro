@@ -12,6 +12,7 @@ import { GiPayMoney } from "react-icons/gi";
 import { MdSell } from "react-icons/md";
 import { MdManageAccounts } from "react-icons/md";
 import BrokerageServices from "../../components/BrokerageServices";
+import ManagementServices from "../../components/ManagementServices";
 ---
 
 <BaseLayout
@@ -110,6 +111,33 @@ import BrokerageServices from "../../components/BrokerageServices";
 
       <div class="flex-1 w-full overflow-hidden">
         <BrokerageServices client:visible />
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 px-5">
+    <div
+      class="max-w-xl gap-10 lg:max-w-7xl mx-auto flex flex-col lg:flex-row-reverse items-center lg:gap-20"
+    >
+      <div class="flex flex-col lg:flex-1">
+        <h2 class="uppercase text-medium-blue font-bold tracking-widest">
+          Management Services
+        </h2>
+        <h3 class="text-5xl text-dark-blue font-bold leading-tight">
+          Benefits of Our Management Services
+        </h3>
+        <p class="text-gray-500 leading-relaxed my-5">
+          Our aircraft management services are designed to provide you with
+          peace of mind and ensure the optimal operation of your aircraft. We
+          offer a range of services tailored to your needs, including
+          maintenance, scheduling, and more. Our team of experts is here to help
+          you manage your aircraft efficiently and effectively, so you can focus
+          on what matters most.
+        </p>
+      </div>
+
+      <div class="flex-1 w-full overflow-hidden">
+        <ManagementServices client:visible />
       </div>
     </div>
   </section>
