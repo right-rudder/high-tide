@@ -53,7 +53,7 @@ const BrokerageServices = () => {
   return (
     <div className="relative">
       <div
-        className={`flex flex-col gap-5 ease-in-out ${active ? "-translate-x-full opacity-0" : "translate-x-0 opacity-100"} duration-700`}
+        className={`flex flex-col gap-5 mb-3 ease-in-out ${active ? "-translate-x-full opacity-0" : "translate-x-0 opacity-100"} duration-700`}
       >
         {brokerageServices.map((item) => (
           <div
