@@ -88,11 +88,13 @@ const BrokerageServices = () => {
             Back
           </p>
         </button>
-        {description.map((item, index) => (
-          <p key={index} className="leading-loose text-gray-600">
-            {item}
-          </p>
-        ))}
+        <div className="flex flex-col gap-3">
+          {description.map((item, index) => (
+            <p key={index} className="leading-loose text-gray-600">
+              {item}
+            </p>
+          ))}
+        </div>
       </div>
     </div>
   );
