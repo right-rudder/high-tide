@@ -1,5 +1,5 @@
 const privatePilot = {
-  imagePath: "/src/assets/ground-school.webp",
+  imagePath: "/src/assets/private-pilot.jpg",
   title: "Private Pilot",
   locations: ["Southport NC", "St.Simons Island GA"],
   description: [
