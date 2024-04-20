@@ -7,6 +7,35 @@ const groundSchool = {
     "Safety is paramount throughout your ground school experience. You'll not only master the technical skills, but also develop the confidence to operate an aircraft responsibly and confidently. Whether you're pursuing recreational flying or a professional pilot career, High Tide's ground school lays the groundwork for a lifetime of aviation success.",
     "Upon completion, you'll be fully prepared to ace the FAA written examination - a crucial milestone on your journey to a Private Pilot License (PPL). But this is more than just preparation for a test; it's an immersive experience that sets you on course for the skies.",
   ],
+  prerequisites: {
+    subtitle: "Before joining us, ensure you meet the following criteria:",
+    list: [
+      "Basic understanding of aviation principles (recommended but not required)",
+      "Commitment to attending all scheduled classes and completing the coursework",
+      "Financial preparation for course fees, including books and supplies where applicable",
+    ],
+  },
+  enrollmentProcess: {
+    subtitle:
+      "Ready to take the first step towards your aviation goals? Here's how:",
+    steps: [
+      {
+        title: "Choose Your Program",
+        description:
+          "Select the course that aligns with your aspirations, available in both North Carolina and Georgia.",
+      },
+      {
+        title: "Contact Us",
+        description:
+          "Call the team at High Tide Aviation to reserve your spot or pick up a registration form from our office.",
+      },
+      {
+        title: "Get Started",
+        description:
+          "Complete your enrollment and get ready for an incredible learning experience",
+      },
+    ],
+  },
   tiers: {
     southport: [
       {
