@@ -1,10 +1,15 @@
 ---
 import TrainingProgramLayout from "../../layouts/TrainingProgramLayout.astro";
+import helicopter from "../../data/helicopterData";
 ---
 
 <TrainingProgramLayout
-  imagePath="/src/assets/helicopter.jpg"
-  title="Helicopter"
-  locations={["Southport NC", "St.Simons Island GA"]}
-  description={[""]}
+  imagePath={helicopter.imagePath}
+  title={helicopter.title}
+  subtitle={helicopter.subtitle}
+  locations={helicopter.locations}
+  description={helicopter.description}
+  prerequisites={helicopter.prerequisites}
+  enrollmentProcess={helicopter.enrollmentProcess}
+  tiers={helicopter.tiers}
 />

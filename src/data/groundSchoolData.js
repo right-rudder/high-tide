@@ -1,6 +1,7 @@
 const groundSchool = {
   imagePath: "/src/assets/ground-school.webp",
   title: "Ground School",
+  subtitle: "What is Ground School?",
   locations: ["Southport NC", "St.Simons Island GA"],
   description: [
     "High Tide Aviation's ground school is where your aviation dreams take flight. As the first step in pilot training, our program equips you with the essential knowledge every pilot needs. Guided by our expert instructors - seasoned aviators themselves - you'll explore a wide range of subjects, from the principles of flight and aircraft operations to navigation, weather, flight planning, and federal regulations. Through interactive lessons and practical exercises, you'll learn to think and act like a pilot.",
@@ -10,30 +11,18 @@ const groundSchool = {
   prerequisites: {
     subtitle: "Before joining us, ensure you meet the following criteria:",
     list: [
-      "Basic understanding of aviation principles (recommended but not required)",
-      "Commitment to attending all scheduled classes and completing the coursework",
-      "Financial preparation for course fees, including books and supplies where applicable",
+      "Completion of Ground School: Must have successfully completed the Ground School training to understand the theoretical aspects of flying.",
+      "Medical Certificate: Obtain a Class 2 medical certificate from an FAA-certified aviation medical examiner.",
+      "Minimum Age: Must be at least 17 years old to enroll in the Private Pilot training program.",
     ],
   },
   enrollmentProcess: {
     subtitle:
       "Ready to take the first step towards your aviation goals? Here's how:",
-    steps: [
-      {
-        title: "Choose Your Program",
-        description:
-          "Select the course that aligns with your aspirations, available in both North Carolina and Georgia.",
-      },
-      {
-        title: "Contact Us",
-        description:
-          "Call the team at High Tide Aviation to reserve your spot or pick up a registration form from our office.",
-      },
-      {
-        title: "Get Started",
-        description:
-          "Complete your enrollment and get ready for an incredible learning experience",
-      },
+    list: [
+      "Choose Your Program: Select the course that aligns with your aspirations, available in both North Carolina and Georgia.",
+      "Contact Us: Call the team at High Tide Aviation to reserve your spot or pick up a registration form from our office.",
+      "Get Started: Complete your enrollment and get ready for an incredible learning experience.",
     ],
   },
   tiers: {

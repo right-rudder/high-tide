@@ -1,10 +1,15 @@
 ---
 import TrainingProgramLayout from "../../layouts/TrainingProgramLayout.astro";
+import flightInstructor from "../../data/flightInstructorData";
 ---
 
 <TrainingProgramLayout
-  imagePath="/src/assets/flight-instructor.jpg"
-  title="Ground School"
-  locations={["Southport NC", "St.Simons Island GA"]}
-  description={[""]}
+  imagePath={flightInstructor.imagePath}
+  title={flightInstructor.title}
+  subtitle={flightInstructor.subtitle}
+  locations={flightInstructor.locations}
+  description={flightInstructor.description}
+  prerequisites={flightInstructor.prerequisites}
+  enrollmentProcess={flightInstructor.enrollmentProcess}
+  tiers={flightInstructor.tiers}
 />

@@ -13,6 +13,7 @@ import PricingComponent from "../components/PricingComponent";
 const {
   imagePath,
   title,
+  subtitle,
   locations,
   description,
   tiers,
@@ -67,7 +68,7 @@ if (!images[imagePath]) {
     </div>
 
     <div class="flex flex-col my-8 gap-3">
-      <h2 class="text-4xl font-medium text-dark-blue">{title} Training</h2>
+      <h2 class="text-4xl font-medium text-dark-blue">{subtitle}</h2>
       {
         description.map((paragraph) => (
           <p class="text-gray-600 leading-loose">{paragraph}</p>
@@ -102,13 +103,10 @@ if (!images[imagePath]) {
           </h3>
           <ul class="flex flex-col gap-1 mt-5">
             {
-              enrollmentProcess.steps.map((item) => (
+              enrollmentProcess.list.map((item) => (
                 <li class="flex gap-3">
                   <FaArrowAltCircleRight className="text-mustard-yellow size-5 flex-shrink-0 mt-1" />
-                  <p class="text-dark-blue font-medium">
-                    <span class="font-semibold">{item.title}:</span>
-                    {item.description}
-                  </p>
+                  <p class="text-dark-blue font-medium">{item}</p>
                 </li>
               ))
             }
@@ -137,7 +135,7 @@ if (!images[imagePath]) {
       <h3
         class="text-4xl font-bold leading-tight max-w-xl text-dark-blue text-center capitalize"
       >
-        What comes after my {title} training
+        What comes after my {title} training?
       </h3>
       <div class="grid md:grid-cols-3 mt-10 gap-7">
         {

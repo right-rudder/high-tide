@@ -1,10 +1,15 @@
 ---
 import TrainingProgramLayout from "../../layouts/TrainingProgramLayout.astro";
+import instrument from "../../data/instrumentData";
 ---
 
 <TrainingProgramLayout
-  imagePath="/src/assets/instrument-rating.jpg"
-  title="Instrument Rating"
-  locations={["Southport NC", "St.Simons Island GA"]}
-  description={[""]}
+  imagePath={instrument.imagePath}
+  title={instrument.title}
+  subtitle={instrument.subtitle}
+  locations={instrument.locations}
+  description={instrument.description}
+  prerequisites={instrument.prerequisites}
+  enrollmentProcess={instrument.enrollmentProcess}
+  tiers={instrument.tiers}
 />

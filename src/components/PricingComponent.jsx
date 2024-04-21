@@ -23,8 +23,8 @@ export default function PricingComponent({ tiers }) {
         <h2 className="uppercase text-mustard-yellow font-bold tracking-widest">
           Pricing
         </h2>
-        <p className="text-5xl font-bold leading-tight text-white">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        <p className="text-5xl max-w-xl mx-auto font-bold leading-tight text-white">
+          We can remove this title if not needed
         </p>
       </div>
       <p className="mx-auto mt-3 max-w-2xl text-center text-lg leading-8 text-white/70">
@@ -120,7 +120,7 @@ export default function PricingComponent({ tiers }) {
                     "text-sm font-semibold leading-6",
                   )}
                 >
-                  /one-time
+                  {tier.unitPrice ? tier.unitPrice : "/one-time"}
                 </span>
               )}
             </p>

@@ -1,10 +1,15 @@
 ---
 import TrainingProgramLayout from "../../layouts/TrainingProgramLayout.astro";
+import commercialPilot from "../../data/commercialPilotData";
 ---
 
 <TrainingProgramLayout
-  imagePath="/src/assets/commercial-pilot.jpg"
-  title="Commercial Pilot"
-  locations={["Southport NC", "St.Simons Island GA"]}
-  description={[""]}
+  imagePath={commercialPilot.imagePath}
+  title={commercialPilot.title}
+  subtitle={commercialPilot.subtitle}
+  locations={commercialPilot.locations}
+  description={commercialPilot.description}
+  prerequisites={commercialPilot.prerequisites}
+  enrollmentProcess={commercialPilot.enrollmentProcess}
+  tiers={commercialPilot.tiers}
 />
