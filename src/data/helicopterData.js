@@ -12,19 +12,20 @@ const privatePilot = {
     "Certified Flight Instructor (CFI) / Certified Flight Instructor Instrument (CFII): These certifications allow pilots to teach others. The CFI program focuses on developing a pilot’s ability to instruct students in flying helicopters, while the CFII adds the capacity to teach instrument flying. This level of certification is essential for pilots who wish to contribute to aviation education and mentor new pilots entering the field.",
   ],
   prerequisites: {
-    subtitle: "Before joining us, ensure you meet the following criteria:",
+    subtitle: "Please ensure you meet these before beginning your training:",
     list: [
-      "Medical Certificate: All trainees must have a current FAA medical certificate.",
-      "Prior Certification: Each higher level of certification requires the pilot to have completed the previous certificates; for instance, a Commercial Pilot certificate requires a Private Pilot certificate and an Instrument Rating.",
+      "Graduation from Helicopter Ground School ",
+      "FAA Medical Certificate Obtained",
+      "Prior Certificates/Licenses Complete",
     ],
   },
   enrollmentProcess: {
     subtitle:
-      "Ready to take the first step towards your aviation goals? Here's how:",
+      "To start your helicopter training at High Tide Aviation, follow these simple steps:",
     list: [
-      "Initial Consultation: Discuss your aviation goals and evaluate your current qualifications with our instructors.",
-      "Training Plan Customization: Based on your existing skills and certification goals, we tailor a training program to meet your needs.",
-      "Engagement in Practical Training: Begin your hands-on training, progressing through each certification level with focused instruction on both flying and ground subjects.",
+      "Meet the Prerequisites: Ensure you have a current FAA medical certificate and at least a private pilot certificate if enrolling for advanced courses.",
+      "Consultation: Contact us to discuss your training needs and schedule a visit.",
+      "Registration: Complete the enrollment process, and you’re ready to begin.",
     ],
   },
   tiers: {
@@ -90,8 +91,49 @@ const privatePilot = {
         cta: "Enroll in CFI Program",
       },
     ],
-    simons: [],
+    simons: [
+      {
+        name: "Zero to Hero Program",
+        id: "tier-zero-to-hero-simons",
+        href: "#",
+        price: "Custom",
+        description: "Full-range training for aspiring pilots.",
+        features: [
+          "All-inclusive from Private to CFI/CFII",
+          "Full support at your selected training location",
+          "Customized training schedule",
+        ],
+        featured: true,
+        cta: "Contact for Custom Quote",
+      },
+    ],
   },
+  futurePathways: [
+    {
+      heading: "Intro Flights",
+      subheading: "Try Out Our Airplanes",
+      description:
+        "Curious about to go up in an airplane with us? We offer intro flights for our students to try out fixed-wing aircraft training too.",
+      imagePath: "/src/assets/tow-pilots-in-cockpit.jpg",
+      url: "/first-time-pilots",
+    },
+    {
+      heading: "Private Pilot",
+      subheading: "Start Your Journey",
+      description:
+        "Now that you have your helicopter license, why not try out our fixed-wing aircraft?",
+      imagePath: "/src/assets/flight-program-1.jpg",
+      url: "/flight-training/private-pilot",
+    },
+    {
+      heading: "Rentals",
+      subheading: "Rent a Helicopter",
+      description:
+        "Want to fly on your own? Visit our fleet page to explore your options for renting aircraft with High Tide Aviation.",
+      imagePath: "/src/assets/r44-helicopter-and-pilot.jpg",
+      url: "/about/fleet-rentals",
+    },
+  ],
 };
 
 export default privatePilot;

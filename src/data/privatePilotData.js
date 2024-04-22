@@ -92,6 +92,32 @@ const privatePilot = {
       },
     ],
   },
+  futurePathways: [
+    {
+      heading: "Instrument Rating",
+      subheading: "Start Your Journey",
+      description:
+        "If you're new to flight training, we have the resources and training to help you earn your wings (and rotors).",
+      imagePath: "/src/assets/instrument-rating.jpg",
+      url: "/flight-training/instrument-rating",
+    },
+    {
+      heading: "Multi-Engine Rating",
+      subheading: "Fly Multi Engine Aircraft",
+      description:
+        "Expand your aircraft selection by training with High Tide Aviation for your Multi Engine Rating with our Beech Baron B55s.",
+      imagePath: "/src/assets/beech-baron-b55-front.jpg",
+      url: "/flight-training/multi-engine",
+    },
+    {
+      heading: "Rentals",
+      subheading: "Rent an Airplane",
+      description:
+        "Want to fly on your own? Visit our fleet page to explore your options for renting aircraft with High Tide Aviation.",
+      imagePath: "/src/assets/cessna-172-flying-over-st-simons-island.jpg",
+      url: "/about/fleet-rentals",
+    },
+  ],
 };
 
 export default privatePilot;

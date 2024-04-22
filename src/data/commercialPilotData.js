@@ -94,6 +94,32 @@ const privatePilot = {
       },
     ],
   },
+  futurePathways: [
+    {
+      heading: "Flight Instructor",
+      subheading: "Train the Next Class",
+      description:
+        "Interested in training the next class of pilots? Perhaps you want to give back to the community that trained you? Become a CFI, CFII, & MEI with High Tide.",
+      imagePath: "/src/assets/flight-program-3.jpg",
+      url: "/flight-training/flight-instructor",
+    },
+    {
+      heading: "Multi-Engine Rating",
+      subheading: "Fly Multi Engine Aircraft",
+      description:
+        "Expand your aircraft selection by training with High Tide Aviation for your Multi Engine Rating with our Beech Baron B55s.",
+      imagePath: "/src/assets/beech-baron-b55-front.jpg",
+      url: "/flight-training/multi-engine",
+    },
+    {
+      heading: "Rentals",
+      subheading: "Rent an Airplane",
+      description:
+        "Want to fly on your own? Visit our fleet page to explore your options for renting aircraft with High Tide Aviation.",
+      imagePath: "/src/assets/cessna-172-flying-over-st-simons-island.jpg",
+      url: "/about/fleet-rentals",
+    },
+  ],
 };
 
 export default privatePilot;

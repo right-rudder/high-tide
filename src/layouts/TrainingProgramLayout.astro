@@ -19,6 +19,7 @@ const {
   tiers,
   prerequisites,
   enrollmentProcess,
+  futurePathways,
 } = Astro.props;
 const images = import.meta.glob<{ default: ImageMetadata }>(
   "/src/assets/*.{jpeg,jpg,png,gif,webp}",
@@ -31,7 +32,7 @@ if (!images[imagePath]) {
 ---
 
 <BaseLayout
-  siteTitle="Our Training Programs"
+  siteTitle={title}
   siteDescription="Begin your aviation journey with High Tide Aviation, offering comprehensive guidance and support for first-time pilots in Southport, NC, and St. Simons Island, GA."
   siteKeywords="first-time pilot Southport NC, beginner flight training St. Simons Island GA, aviation introduction Southeast Coast, learn to fly Southport NC, pilot training for beginners."
 >
@@ -48,7 +49,7 @@ if (!images[imagePath]) {
           class="bg-dark-blue border-l-8 flex flex-col border-mustard-yellow text-white p-5 gap-2 items-center"
         >
           <p class="uppercase text-xl">
-            {title} is available in
+            {title} Training is available in
           </p>
           <ul class="flex gap-10">
             {
@@ -139,16 +140,15 @@ if (!images[imagePath]) {
       </h3>
       <div class="grid md:grid-cols-3 mt-10 gap-7">
         {
-          flightPrograms
-            .slice(0, 3)
-            .map((program) => (
-              <FlightProgramCard
-                imagePath={program.imagePath}
-                heading={program.heading}
-                subheading={program.subheading}
-                description={program.description}
-              />
-            ))
+          futurePathways.map((program) => (
+            <FlightProgramCard
+              imagePath={program.imagePath}
+              heading={program.heading}
+              subheading={program.subheading}
+              description={program.description}
+              url={program.url}
+            />
+          ))
         }
       </div>
     </div>

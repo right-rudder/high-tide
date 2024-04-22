@@ -92,6 +92,32 @@ const privatePilot = {
       },
     ],
   },
+  futurePathways: [
+    {
+      heading: "Multi-Engine Rating",
+      subheading: "Fly Multi Engine Aircraft",
+      description:
+        "Expand your aircraft selection by training with High Tide Aviation for your Multi Engine Rating with our Beech Baron B55s.",
+      imagePath: "/src/assets/beech-baron-b55-front.jpg",
+      url: "/flight-training/multi-engine",
+    },
+    {
+      heading: "Commercial Pilot",
+      subheading: "Fly for Your Career",
+      description:
+        "No matter how far you want to venture down the pilot career path, it all starts here.",
+      imagePath: "/src/assets/flight-program-2.jpg",
+      url: "/flight-training/commercial-pilot",
+    },
+    {
+      heading: "Rentals",
+      subheading: "Rent an Airplane",
+      description:
+        "Want to fly on your own? Visit our fleet page to explore your options for renting aircraft with High Tide Aviation.",
+      imagePath: "/src/assets/cessna-172-flying-over-st-simons-island.jpg",
+      url: "/about/fleet-rentals",
+    },
+  ],
 };
 
 export default privatePilot;

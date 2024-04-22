@@ -92,6 +92,32 @@ const privatePilot = {
       },
     ],
   },
+  futurePathways: [
+    {
+      heading: "More Ratings",
+      subheading: "Continue Training",
+      description:
+        "Once you complete your CFI training, we offer programs to get you to CFII and MEI. Contact us for more information.",
+      imagePath: "/src/assets/happy-high-tide-student.jpg",
+      url: "/about/contact-us",
+    },
+    {
+      heading: "Multi-Engine Rating",
+      subheading: "Fly Multi Engine Aircraft",
+      description:
+        "Expand your aircraft selection by training with High Tide Aviation for your Multi Engine Rating with our Beech Baron B55s.",
+      imagePath: "/src/assets/beech-baron-b55-front.jpg",
+      url: "/flight-training/multi-engine",
+    },
+    {
+      heading: "Rentals",
+      subheading: "Rent an Airplane",
+      description:
+        "Want to fly on your own? Visit our fleet page to explore your options for renting aircraft with High Tide Aviation.",
+      imagePath: "/src/assets/cessna-172-flying-over-st-simons-island.jpg",
+      url: "/about/fleet-rentals",
+    },
+  ],
 };
 
 export default privatePilot;
