@@ -10,25 +10,23 @@ const BrokerageServices = () => {
     {
       title: "Market Expertise",
       description: [
-        "Our team of experts will provide you with the most up-to-date market information and trends to help you make the best decisions for your business.",
-        "We have a deep understanding of the local market and can help you navigate the complexities of buying or selling commercial property.",
+        "High Tide Aviation brings a wealth of market expertise to our aircraft brokerage services. We possess deep insights into the aviation market trends and pricing strategies, enabling us to provide accurate valuations and market positioning for your aircraft.",
+        "Our experienced team stays updated with the latest market dynamics, ensuring that you receive the most beneficial and informed advice whether you are buying or selling.",
       ],
       icon: IoStorefrontOutline,
     },
     {
-      title: "Personalized Approach",
+      title: "Personalized Planning",
       description: [
-        "We understand that every business is unique. Our team will work with you to develop a personalized strategy that meets your specific needs and goals.",
-        "We will take the time to understand your business and provide you with the best possible solutions to help you achieve success.",
+        "Every client's needs are unique, and our personalized planning reflects this principle. We work closely with you to understand your specific requirements and goals for buying or selling an aircraft.",
+        "This tailored approach ensures that every aspect of the transaction is aligned with your expectations, from initial valuation to final negotiations and paperwork, providing a truly customized brokerage experience.",
       ],
       icon: MdOutlineDashboardCustomize,
     },
     {
-      title: "Success Stories",
+      title: "Seamless Transactions",
       description: [
-        "We have a proven track record of success in helping businesses buy, sell, and lease commercial property.",
-        "Our team has helped numerous clients achieve their real estate goals and we are confident that we can help you do the same.",
-        "We can also replace this text with a Video or Review",
+        "At High Tide Aviation, we ensure that every aspect of the aircraft brokerage process is smooth and hassle-free. Our team expertly handles all logistics, from listing to closing, ensuring that each transaction is conducted with precision and professionalism. We coordinate inspections, negotiations, and paperwork, providing seamless transitions and clear communication every step of the way. This service is designed for clients who value efficiency and expertise in their aircraft transactions, allowing them to focus on their next venture while we manage the intricate details.",
       ],
       icon: VscPreview,
     },

@@ -1,13 +1,5 @@
-import {
-  IoIosArrowBack,
-  IoIosArrowForward,
-  IoIosArrowRoundForward,
-} from "react-icons/io";
-import { IoStorefrontOutline } from "react-icons/io5";
-import { MdOutlineDashboardCustomize } from "react-icons/md";
-import { VscPreview } from "react-icons/vsc";
+import { IoIosArrowBack, IoIosArrowRoundForward } from "react-icons/io";
 import { useState } from "react";
-import { IoIosArrowRoundBack } from "react-icons/io";
 import { GiNetworkBars } from "react-icons/gi";
 import { RiHealthBookLine } from "react-icons/ri";
 import { IoMdHappy } from "react-icons/io";
@@ -17,24 +9,24 @@ const ManagementServices = () => {
     {
       title: "Operational Efficiency",
       description: [
-        "We will help you optimize your property management operations to increase efficiency and reduce costs.",
-        "Our team will work with you to identify areas for improvement and implement solutions that will help you achieve your goals.",
+        "High Tide Aviation ensures the operational efficiency of your aircraft through streamlined management practices. We meticulously handle scheduling, logistics, maintenance, and crew management to enhance the readiness and availability of your aircraft.",
+        "By optimizing these critical aspects, we reduce downtime and ensure that your aircraft is consistently prepared for flight, providing you with efficiency that saves both time and resources.",
       ],
       icon: GiNetworkBars,
     },
     {
-      title: "Comprehensive Care",
+      title: "Professional Care",
       description: [
-        "Our team will provide you with a full range of property management services to meet your needs.",
-        "We will take care of everything from leasing and maintenance to accounting and reporting, so you can focus on running your business.",
+        "Our professional care program covers every aspect of your aircraft's maintenance and upkeep. At High Tide Aviation, each aircraft is treated with utmost attention to detail, undergoing regular inspections, repairs, and necessary upgrades to maintain peak condition.",
+        "Our FAA-certified technicians employ the latest technologies and methodologies to ensure that every component meets the highest standards of safety and performance.",
       ],
       icon: RiHealthBookLine,
     },
     {
       title: "Peace of Mind",
       description: [
-        "We will handle all aspects of property management so you can have peace of mind knowing that your property is in good hands.",
-        "Our team will take care of everything from tenant relations to building maintenance, so you can relax and enjoy the benefits of owning commercial property.",
+        "Choosing High Tide Aviation's management services brings you peace of mind by simplifying the complexities of aircraft ownership. We manage all aspects of aircraft operation, including safety, security, and regulatory compliance.",
+        "Our dedicated approach allows you to enjoy flying without the operational burdens typically associated with aircraft ownership, ensuring your investment is well-protected and your mind at ease.",
       ],
       icon: IoMdHappy,
     },

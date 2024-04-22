@@ -6,14 +6,17 @@ import { Image } from "astro:assets";
 import Intro from "../../assets/our-team-intro.jpg";
 import { team } from "../../data/team";
 import TeamMemberCard from "../../components/TeamMemberCard.astro";
+import StatCard from "../../components/StatCard.astro";
+import { stats } from "../../data/stats";
+import TopView from "../../assets/top-view.jpg";
 ---
 
 <BaseLayout
-  siteTitle="The Team"
+  siteTitle="The High Tide Aviation Team"
   siteDescription="Meet the dedicated team of professionals at High Tide Aviation in Southport, NC. Our experienced pilots and instructors are committed to providing top-notch flight training."
   siteKeywords="High Tide Aviation team, flight instructors Southport NC, aviation professionals Southeast Coast, experienced pilots High Tide, aviation staff Southport NC."
 >
-  <Header slot="header" image={Banner} title="Our team" />
+  <Header slot="header" image={Banner} title="The High Tide Aviation Team" />
 
   <section class="py-24 px-5">
     <div
@@ -28,17 +31,26 @@ import TeamMemberCard from "../../components/TeamMemberCard.astro";
       </div>
       <div class="flex flex-col flex-1">
         <h2 class="uppercase text-medium-blue font-bold tracking-widest">
-          About Us
+          About High Tide Aviation
         </h2>
         <h3 class="text-5xl text-dark-blue font-bold leading-tight">
-          Behind Every Successful Pilot Is an Exceptional Team
+          Heading: The High Tide Story
         </h3>
         <p class="text-gray-500 leading-relaxed my-5">
-          At High Tide Aviation, we pride ourselves on the collective
-          experience, passion, and dedication our team brings to the world of
-          aviation training. Each member, from our seasoned instructors to our
-          supportive administrative staff, plays a crucial role in ensuring the
-          success and safety of our students.
+          High Tide Aviation, founded by Jessica Ward 11 years ago initially as
+          a helicopter flight school, has expanded to include fixed-wing
+          training at both Cape Fear Regional Jetport in Southport, NC, and
+          McKinnon St. Simons Island Airport in Georgia. We specialize in a
+          diverse array of pilot training programs, including commercial
+          licenses, instrument ratings, and flight instruction for both
+          airplanes and helicopters. What sets High Tide Aviation apart is our
+          focus on student support, underscored by our dedicated Training
+          Support Specialist who offers personalized, one-on-one assistance
+          throughout your training journey. Discover the scenic coastlines of
+          North Carolina or Georgia with an introductory flight, or visit our
+          premier flight schools to see firsthand why we excel in pilot
+          training. Call today to book a tour or start your zero-to-hero flight
+          training program.
         </p>
         <div class="flex flex-col sm:flex-row items-center gap-5">
           <button
@@ -51,15 +63,30 @@ import TeamMemberCard from "../../components/TeamMemberCard.astro";
     </div>
   </section>
 
+  <section class="px-5 text-white">
+    <div class="max-w-sm md:max-w-7xl mx-auto grid md:grid-cols-4">
+      {
+        stats.map((stat) => (
+          <StatCard
+            icon={stat.icon}
+            value={stat.value}
+            title={stat.title}
+            cssVariable={stat.cssVariable}
+          />
+        ))
+      }
+    </div>
+  </section>
+
   <section class="py-24 px-5 bg-light-blue/10">
     <div class="max-w-7xl mx-auto flex flex-col items-center">
       <h2 class="uppercase text-medium-blue font-bold tracking-widest">
-        Instructors
+        The Leadership Team
       </h2>
       <h3 class="text-5xl text-dark-blue font-bold leading-tight mb-5">
-        Meet Our Instructors
+        High Tide’s Front Office
       </h3>
-      <div class="grid gap-5 lg:grid-cols-3">
+      <div class="grid gap-5 lg:grid-cols-3 mt-5">
         {
           team.map((member) => (
             <TeamMemberCard
@@ -71,6 +98,61 @@ import TeamMemberCard from "../../components/TeamMemberCard.astro";
           ))
         }
       </div>
+    </div>
+  </section>
+
+  <section class="py-24 px-5">
+    <div class="max-w-7xl mx-auto flex flex-col items-center">
+      <h2 class="uppercase text-medium-blue font-bold tracking-widest">
+        High Tide Flight Instructors
+      </h2>
+      <h3 class="text-5xl text-dark-blue font-bold leading-tight mb-5">
+        Meet Our Instructors
+      </h3>
+      <div class="grid gap-5 lg:grid-cols-3 mt-5">
+        {
+          team.map((member) => (
+            <TeamMemberCard
+              name={member.name}
+              qualifications={member.qualifications}
+              imagePath={member.imagePath}
+              bio={member.bio}
+            />
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="flex flex-col md:flex-row bg-mustard-yellow xl:max-h-[32rem]">
+    <div class="flex-1 flex flex-col justify-center px-5 py-16">
+      <div class="max-w-xl mx-auto md:ml-auto md:mr-16">
+        <h2 class="uppercase text-medium-blue font-bold tracking-widest">
+          Interested in flying?
+        </h2>
+        <h3 class="text-5xl text-dark-blue font-bold leading-tight">
+          Come try it out with an Intro Flight at High Tide Aviation
+        </h3>
+        <p class="text-gray-600 my-10">
+          Flying can be daunting task; manning the controls even more so. If you
+          want to see what it’s like to be in the pilot’s seat, come visit us
+          for an introductory flight where we’ll show you the ropes and see if
+          flying is the right choice for you.
+        </p>
+        <a
+          class="block font-medium uppercase py-4 px-14 bg-dark-blue w-fit rounded-full text-white hover:bg-white hover:text-dark-blue cursor-pointer duration-300"
+        >
+          Request an Intro Flight
+        </a>
+      </div>
+    </div>
+    <div class="flex-1">
+      <Image
+        src={TopView}
+        alt="View from the top of the airplane"
+        class="w-full h-full object-cover"
+        quality={10}
+      />
     </div>
   </section>
 </BaseLayout>

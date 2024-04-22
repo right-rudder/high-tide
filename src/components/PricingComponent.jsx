@@ -159,6 +159,12 @@ export default function PricingComponent({ tiers }) {
           </div>
         ))}
       </div>
+      <a
+        href="/about/financing"
+        className="text-white uppercase underline hover:text-mustard-yellow mt-10 block text-center font-semibold tracking-widest duration-300"
+      >
+        Explore financing options
+      </a>
     </div>
   );
 }

@@ -3,30 +3,40 @@ export const financialOptions = [
     name: "Meritize",
     imagePath: "/src/assets/meritize-logo.png",
     description:
-      "High Tide Aviation has partnered with the nation’s leading educational funding company to help prospective pilots achieve their aviation goals and get a free flight training quote.",
+      "High Tide Aviation has partnered with Meritize, a top educational funding company in the nation, to support prospective pilots in reaching their aviation aspirations. This partnership enables you to obtain a personalized quote for your flight training at no cost. Reach out to us to discover more about how Meritize can help finance your journey to becoming a pilot.",
+    ctaText: "Contact Meritize",
+    ctaLink: "#",
   },
   {
     name: "Meratas",
     imagePath: "/src/assets/meratas-logo.png",
     description:
-      "High Tide Aviation has also partnered with Meratas to help prospective pilots achieve their aviation goals. The Meratas Lender Marketplace gives you personalized loan offers with multiple lending partners. Get instantaneous pre-qualifications to finance your education and general living expenses. No risk or impact on your credit score. All information, secured.",
+      "High Tide Aviation collaborates with Meratas to assist prospective pilots in achieving their aviation goals. The Meratas Lender Marketplace provides personalized loan offers from a variety of lending partners. This platform allows for instant pre-qualification to finance your education and living expenses without any risk to your credit score. All your information remains secure. Explore your financing options by clicking the link below to learn more.",
+    ctaText: "View Meratas’ Offer",
+    ctaLink: "https://meratas.vercel.app/lendermarketplace",
   },
   {
     name: "Federal Aviation Administration",
     imagePath: "/src/assets/faa-logo.svg",
     description:
-      "Free money for flight training is everywhere, just have to know where to look.",
+      "The Federal Aviation Administration (FAA) provides an extensive list of aviation-related scholarships available through various organizations nationwide. These opportunities are designed to support individuals pursuing careers in aviation, covering a wide array of specialties from piloting and aircraft dispatch to aerospace engineering. Scholarships are offered by groups such as the AeroClub of New England, Airline Dispatchers Federation, and Women in Aviation International, among others. Each organization provides unique funding options that can help mitigate the costs of aviation training and education.",
+    ctaText: "Explore FAA Grants & Scholarships",
+    ctaLink: "https://www.faa.gov/education/grants_and_scholarships/aviation",
   },
   {
     name: "Aircraft Owners and Pilots Association",
     imagePath: "/src/assets/aopa.jpg",
     description:
-      "Membership has it’s privileges for flight training financing with AOPA.",
+      "High Tide Aviation collaborates with the Aircraft Owners and Pilots Association (AOPA) to provide flexible financing options for flight training through AOPA's Flight Training Finance program. This program offers quick, easy, and affordable loans tailored for aspiring pilots at High Tide. With the ability to finance both training and associated costs, this partnership ensures that students can access the necessary resources to become proficient pilots without the financial strain. Students interested in utilizing AOPA’s financing options can start their application directly through the AOPA website, enabling them to focus fully on their training at High Tide Aviation.",
+    ctaText: "AOPA’s Financing Offer",
+    ctaLink: "#",
   },
   {
     name: "Experimental Aircraft Association",
     imagePath: "/src/assets/eaa-logo.png",
     description:
-      "EAA’s scholarships are supported by dozens of donors, benefactors, and others who “pass it forward” by endowing these programs. In all, EAA awards more than $1 million in aviation scholarship money via various programs each year.",
+      "The Experimental Aircraft Association (EAA) offers scholarships aimed at aspiring pilots and those seeking additional ratings, distributing over $1 million annually. These scholarships, supported by donations from aviation enthusiasts and EAA members, help reduce financial barriers to flight training. Each award is designed to assist recipients in actively pursuing their aviation goals, with typical scholarships providing a minimum of $5,000.",
+    ctaText: "Visit EAA’s Scholarship Page",
+    ctaLink: "#",
   },
 ];

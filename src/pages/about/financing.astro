@@ -7,19 +7,19 @@ import Intro from "../../assets/financing-intro.jpg";
 import { financialOptions } from "../../data/financialOptions";
 import FinancialOptionCard from "../../components/FinancialOptionCard.astro";
 import { RiTeamLine } from "react-icons/ri";
-import { BiWorld } from "react-icons/bi";
+import { BiNetworkChart } from "react-icons/bi";
 import { GiPayMoney } from "react-icons/gi";
 ---
 
 <BaseLayout
-  siteTitle="Financing"
+  siteTitle="Financing at High Tide"
   siteDescription="High Tide Aviation in Southport, NC, offers flexible financing options for aspiring pilots. Discover our tailored solutions to help you achieve your aviation training goals."
   siteKeywords="flight training financing Southport NC, pilot training loans Southeast Coast, aviation scholarships Southport NC, financing options for pilots, High Tide Aviation financing."
 >
   <Header
     slot="header"
     image={Banner}
-    title="Financing"
+    title="Financing at High Tide"
     ctaText="Explore Financing Options"
   />
 
@@ -36,18 +36,17 @@ import { GiPayMoney } from "react-icons/gi";
       </div>
       <div class="flex flex-col flex-1">
         <h2 class="uppercase text-medium-blue font-bold tracking-widest">
-          Financial
+          Financing
         </h2>
         <h3 class="text-5xl text-dark-blue font-bold leading-tight">
-          Your Flight Training Dreams Within Reach.
+          Your Flight Training Dreams Within Reach
         </h3>
         <p class="text-gray-500 leading-relaxed my-5">
-          Understanding the financial commitment to flight training is
-          important. At High Tide Aviation, we believe in making your dreams of
-          flying accessible and achievable. That’s why we offer a variety of
-          financing options designed to suit different budgets and training
-          goals. Let us help you navigate the path to funding your aviation
-          education.
+          Navigating the financial commitment of flight training is crucial. At
+          High Tide Aviation, we aim to make your dream of flying both
+          accessible and achievable. We offer a diverse range of financing
+          options tailored to various budgets and training objectives. Allow us
+          to guide you through the process of funding your aviation education.
         </p>
         <div class="flex flex-col sm:flex-row items-center gap-5">
           <a
@@ -65,33 +64,37 @@ import { GiPayMoney } from "react-icons/gi";
       <div
         class="border border-white/50 py-8 px-12 flex flex-col gap-5 hover:bg-white duration-700 group"
       >
-        <RiTeamLine className="size-14 text-medium-blue" />
+        <BiNetworkChart className="size-14 text-medium-blue" />
         <h3
           class="text-lg text-dark-blue uppercase font-semibold tracking-widest duration-700"
         >
-          Flight Student Loan
+          Financing Options at High Tide Aviation
         </h3>
         <p class="text-gray-600 leading-relaxed">
-          Our Aviation Academy has partnered with multiple education lenders to
-          provide competitive financing options for your airline career
-          training. Please check out our flight training loan and financing
-          options below. We are happy to assist with any questions you may have.
+          At High Tide Aviation, we're dedicated to helping you navigate the
+          financial aspects of your flight training. We understand the
+          importance of accessible funding solutions, and we've partnered with
+          premier financial institutions to offer a range of options that suit
+          diverse needs.
         </p>
       </div>
       <div
         class="border border-white/50 py-8 px-12 flex flex-col gap-5 hover:bg-white duration-700 group"
       >
-        <BiWorld className="size-14 text-medium-blue" />
+        <RiTeamLine className="size-14 text-medium-blue" />
         <h3
           class="text-lg text-dark-blue uppercase font-semibold tracking-widest duration-700"
         >
-          International Flight Student Loans
+          Partnered Financing
         </h3>
         <p class="text-gray-600 leading-relaxed">
-          At this time, our Aviation Academy does not offer education loans to
-          international flight students who do not reside within the U.S. or
-          have a credit history. However, there might be loan options available
-          in your home country.
+          We have established partnerships with top educational funding
+          companies to assist prospective pilots in achieving their aviation
+          goals. Through our collaboration with Meratas, we offer the Meratas
+          Lender Marketplace, which provides personalized loan offers from
+          multiple lenders. This platform allows you to obtain instant
+          pre-qualification for loans, which can cover both your educational and
+          living expenses during training—without impacting your credit score.
         </p>
       </div>
       <div
@@ -104,9 +107,13 @@ import { GiPayMoney } from "react-icons/gi";
           Scholarships and Grants
         </h3>
         <p class="text-gray-600 leading-relaxed">
-          Our Avaition Academy does not offer scholarships or fully paid pilot
-          training for international or domestic flight students at this time.
-          For U.S. residents. You may find scholarships at the
+          Beyond traditional loans, there are numerous scholarships and grants
+          available to aspiring pilots. High Tide Aviation helps you identify
+          and apply for these funds, which can significantly reduce the overall
+          cost of your flight training. Organizations like the Aircraft Owners
+          and Pilots Association (AOPA) and the Experimental Aircraft
+          Association (EAA) offer financial aid programs specifically designed
+          for aviation students.
         </p>
       </div>
     </div>
@@ -120,7 +127,7 @@ import { GiPayMoney } from "react-icons/gi";
       <h3
         class="text-5xl max-w-2xl text-center text-dark-blue font-bold leading-tight mb-5"
       >
-        Choose the one that best meets your Aviation Goals
+        Explore Our Partnerships
       </h3>
       <div class="grid gap-5 lg:grid-cols-2">
         {
@@ -129,10 +136,30 @@ import { GiPayMoney } from "react-icons/gi";
               name={option.name}
               imagePath={option.imagePath}
               description={option.description}
+              ctaText={option.ctaText}
+              ctaLink={option.ctaLink}
             />
           ))
         }
       </div>
+    </div>
+  </section>
+
+  <section class="py-16 px-5 bg-mustard-yellow">
+    <div class="max-w-7xl mx-auto flex flex-col items-center">
+      <h2 class="uppercase text-medium-blue font-bold tracking-widest">
+        Accessing Financial Assistance
+      </h2>
+      <h3
+        class="text-5xl font-bold leading-tight text-dark-blue text-center max-w-2xl"
+      >
+        Still have questions about our financial aid programs?
+      </h3>
+      <a
+        class="block font-medium uppercase text-center mt-5 py-4 px-14 bg-dark-blue w-fit rounded-full text-white hover:bg-white hover:text-dark-blue cursor-pointer duration-300"
+      >
+        Reach out to us!
+      </a>
     </div>
   </section>
 </BaseLayout>

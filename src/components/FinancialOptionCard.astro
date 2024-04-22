@@ -1,5 +1,5 @@
 ---
-const { name, imagePath, description } = Astro.props;
+const { name, imagePath, description, ctaText, ctaLink } = Astro.props;
 import type { ImageMetadata } from "astro";
 import { Image } from "astro:assets";
 const images = import.meta.glob<{ default: ImageMetadata }>(
@@ -33,9 +33,11 @@ if (!images[imagePath])
       <p class="text-gray-600 leading-loose">{description}</p>
     </div>
     <a
-      class="block mt-5 cursor-pointer font-medium uppercase py-4 px-14 bg-dark-blue w-fit rounded-full text-white hover:bg-mustard-yellow duration-300"
+      href={ctaLink}
+      target="_blank"
+      class="block mt-5 font-medium uppercase py-4 px-14 bg-dark-blue w-fit rounded-full text-white hover:bg-mustard-yellow duration-300"
     >
-      Learn More
+      {ctaText}
     </a>
   </div>
 </div>

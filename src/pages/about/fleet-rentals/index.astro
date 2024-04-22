@@ -9,14 +9,14 @@ import PlaneCard from "../../../components/PlaneCard.astro";
 ---
 
 <BaseLayout
-  siteTitle="Fleet and rentals"
+  siteTitle="Fleet and Rentals"
   siteDescription="Explore High Tide Aviation's diverse fleet of aircraft available for training and rental in Southport, NC. From single-engine basics to advanced multi-engine aircraft, find the perfect fit for your flying ambitions."
   siteKeywords="aircraft rental Southport NC, flight training fleet Southeast Coast, pilot training aircraft Southport NC, rent a plane Southport NC, aviation rentals Southeast Coast."
 >
   <Header
     slot="header"
     image={Banner}
-    title="Our fleet"
+    title="Our Fleet"
     ctaText="Discover Our Fleet"
   />
 
@@ -39,11 +39,16 @@ import PlaneCard from "../../../components/PlaneCard.astro";
           Your Ride Awaits
         </h3>
         <p class="text-gray-500 leading-relaxed my-5">
-          High Tide Aviation takes pride in offering a wide range of aircraft
-          for training and rental purposes. Each aircraft in our fleet is
-          meticulously maintained and equipped with the latest in avionics
-          technology, ensuring a safe, efficient, and enjoyable flying
-          experience for pilots of all skill levels
+          High Tide Aviation proudly provides a selection of aircraft for
+          training, tours, and rentals. Our fleet is rigorously maintained and
+          features advanced avionics, ensuring optimal safety, efficiency, and
+          enjoyment for pilots at all levels. Comprised of 7 Cessna 172
+          Skyhawks, 1 Beechcraft Bonanza, 2 Beechcraft Barons, and 2 Robinson
+          R44 helicopters, this diverse lineup allows us to cater to a variety
+          of flying needs and preferences, ensuring that whether you're training
+          for a new certification or simply renting for pleasure, you have
+          access to the best possible equipment. More details about rentals can
+          be found below the fleet lineup.
         </p>
         <div class="flex flex-col sm:flex-row items-center gap-5">
           <button
@@ -77,6 +82,25 @@ import PlaneCard from "../../../components/PlaneCard.astro";
           ))
         }
       </div>
+    </div>
+  </section>
+
+  <section class="py-12 px-5 bg-mustard-yellow">
+    <div
+      class="max-w-7xl mx-auto gap-10 lg:gap-52 flex justify-between items-center lg:flex-row flex-col"
+    >
+      <div>
+        <h3
+          class="text-5xl text-dark-blue font-bold leading-tight text-center lg:text-left"
+        >
+          Reach out to us today to fly a High Tide aircraft
+        </h3>
+      </div>
+      <a
+        href="#"
+        class="block flex-shrink-0 font-medium uppercase py-4 px-14 bg-dark-blue w-fit rounded-full text-white hover:bg-white hover:text-dark-blue duration-300"
+        >Submit Rental Inquiry</a
+      >
     </div>
   </section>
 </BaseLayout>
