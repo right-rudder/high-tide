@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Header from "../components/Header.astro";
-import Banner from "../assets/first-time-pilots-banner.jpg";
+import Banner from "../assets/private-pilot-sits-in-multi-engine-plane.jpg";
 import { Image } from "astro:assets";
 import Intro from "../assets/first-time-pilots-intro.jpg";
 import StatCard from "../components/StatCard.astro";
@@ -76,6 +76,47 @@ import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
         />
       ))
     }
+  </section>
+
+  <section class="bg-medium-blue/10">
+    <section class="py-24 px-5">
+      <div
+        class="max-w-xl gap-10 lg:max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:gap-5"
+      >
+        <div class="flex flex-col flex-1">
+          <h2 class="uppercase text-medium-blue font-bold tracking-widest">
+            Finding Success at High Tide
+          </h2>
+          <h3 class="text-5xl text-dark-blue font-bold leading-tight">
+            Southport and St. Simons Island Flight School
+          </h3>
+          <p class="text-gray-500 leading-relaxed my-5">
+            Our graduates' paths vary widely, reflecting the flexibility and
+            broad appeal of our training. Some now enjoy flying as a
+            recreational hobby, savoring the freedom of the skies on their
+            terms. Others have turned their passion into careers, working as
+            commercial pilots or flight instructors. This video highlights some
+            of the highlights of flying with High Tide.
+          </p>
+          <div class="flex flex-col sm:flex-row items-center gap-5">
+            <button
+              class="block font-medium uppercase py-4 px-14 bg-dark-blue w-fit rounded-full text-white hover:bg-mustard-yellow duration-300"
+            >
+              Enroll Now
+            </button>
+          </div>
+        </div>
+        <div class="flex-1 w-full">
+          <iframe
+            src="https://drive.google.com/file/d/116-WVFHGiNKe4v8pto0tlAqZia6tbV4g/preview"
+            width="100%"
+            height="360"
+            allow="autoplay"
+            allowfullscreen="true"
+            loading="lazy"></iframe>
+        </div>
+      </div>
+    </section>
   </section>
 
   <section
@@ -211,7 +252,7 @@ import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
       </div>
     </div>
     <div
-      class="flex flex-col items-center justify-center text-white bg-dark-blue flex-1 relative py-16 px-5"
+      class="flex flex-col items-center justify-center text-white bg-medium-blue flex-1 relative py-16 px-5"
     >
       <div
         class="max-w-xl lg:max-w-none mx-auto lg:mx-28 my-20 lg:my-0 duration-1000"
@@ -233,45 +274,6 @@ import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
         <ImQuotesRight
           className="absolute text-white/70 size-16 z-10 bottom-20 right-20"
         />
-      </div>
-    </div>
-  </section>
-
-  <section class="py-24 px-5">
-    <div
-      class="max-w-xl gap-10 lg:max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:gap-5"
-    >
-      <div class="flex flex-col flex-1">
-        <h2 class="uppercase text-medium-blue font-bold tracking-widest">
-          Finding Success at High Tide
-        </h2>
-        <h3 class="text-5xl text-dark-blue font-bold leading-tight">
-          Southport and St. Simons Island Flight School
-        </h3>
-        <p class="text-gray-500 leading-relaxed my-5">
-          Our graduates' paths vary widely, reflecting the flexibility and broad
-          appeal of our training. Some now enjoy flying as a recreational hobby,
-          savoring the freedom of the skies on their terms. Others have turned
-          their passion into careers, working as commercial pilots or flight
-          instructors. This video highlights some of the highlights of flying
-          with High Tide.
-        </p>
-        <div class="flex flex-col sm:flex-row items-center gap-5">
-          <button
-            class="block font-medium uppercase py-4 px-14 bg-dark-blue w-fit rounded-full text-white hover:bg-mustard-yellow duration-300"
-          >
-            Enroll Now
-          </button>
-        </div>
-      </div>
-      <div class="flex-1 w-full">
-        <iframe
-          src="https://drive.google.com/file/d/116-WVFHGiNKe4v8pto0tlAqZia6tbV4g/preview"
-          width="100%"
-          height="360"
-          allow="autoplay"
-          allowfullscreen="true"
-          loading="lazy"></iframe>
       </div>
     </div>
   </section>
