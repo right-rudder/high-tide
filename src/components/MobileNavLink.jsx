@@ -2,8 +2,11 @@ import { IoIosArrowForward } from "react-icons/io";
 
 const MobileNavLink = ({ menuItem, pathname, toggled, onShow }) => {
   const isActive =
-    menuItem.submenu.some((item) => item.link === pathname) ||
-    menuItem.link === pathname;
+    menuItem.submenu.some(
+      (item) => item.link === pathname || item.link + "/" === pathname,
+    ) ||
+    menuItem.link === pathname ||
+    menuItem.link + "/" === pathname;
 
   let buttonOrAnchor;
   if (menuItem.submenu.length === 0) {
@@ -57,7 +60,9 @@ const MobileNavLink = ({ menuItem, pathname, toggled, onShow }) => {
             <a
               href={item.link}
               className={`block w-full py-3  ${
-                item.link === pathname ? "text-mustard-yellow" : ""
+                item.link === pathname || item.link + "/" === pathname
+                  ? "text-mustard-yellow"
+                  : ""
               }`}
             >
               {item.name}

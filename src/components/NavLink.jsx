@@ -2,8 +2,11 @@ import { IoIosArrowForward } from "react-icons/io";
 
 const NavLink = ({ menuItem, pathname, toggled, onShow }) => {
   const isActive =
-    menuItem.submenu.some((item) => item.link === pathname) ||
-    menuItem.link === pathname;
+    menuItem.submenu.some(
+      (item) => item.link === pathname || item.link + "/" === pathname,
+    ) ||
+    menuItem.link === pathname ||
+    menuItem.link + "/" === pathname;
 
   let linkOrDropdown;
   if (menuItem.submenu.length === 0) {
@@ -48,7 +51,7 @@ const NavLink = ({ menuItem, pathname, toggled, onShow }) => {
             key={item.name}
             href={item.link}
             className={`${
-              item.link === pathname
+              item.link === pathname || item.link + "/" === pathname
                 ? "bg-mustard-yellow/50 text-dark-blue"
                 : "text-gray-500"
             } my-2 mx-5 px-3 py-2 hover:bg-mustard-yellow/15 font-medium group duration-200 hover:text-dark-blue first:mt-8 last:mb-8 flex items-center justify-between`}
