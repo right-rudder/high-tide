@@ -1,4 +1,6 @@
 const privatePilot = {
+  bannerImagePath:
+    "/src/assets/heading-to-training-at-high-tide-aviation-st-simons-island-ga.jpg",
   imagePath: "/src/assets/commercial-pilot.jpg",
   title: "Commercial Pilot",
   subtitle: "What is a Commercial Pilot Certificate?",

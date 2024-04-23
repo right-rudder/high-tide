@@ -1,4 +1,6 @@
 const privatePilot = {
+  bannerImagePath:
+    "/src/assets/private-pilot-in-front-of-cessna-172-skyhawk-st-simons-island-ga.jpg",
   imagePath: "/src/assets/private-pilot.jpg",
   title: "Private Pilot",
   subtitle: "What is a Private Pilot Certificate?",

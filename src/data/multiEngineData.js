@@ -1,4 +1,6 @@
 const privatePilot = {
+  bannerImagePath:
+    "/src/assets/beech-baron-in-front-of-high-tide-aviation-hangar.jpg",
   imagePath: "/src/assets/multi-engine.jpg",
   title: "Multi-Engine Rating",
   subtitle: "What is a Multi-Engine Rating?",

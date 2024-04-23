@@ -1,4 +1,5 @@
 const privatePilot = {
+  bannerImagePath: "/src/assets/student-and-cfi-flying-in-ifr.jpg",
   imagePath: "/src/assets/instrument-rating.jpg",
   title: "Instrument Rating",
   subtitle: "What is an Instrument Rating?",

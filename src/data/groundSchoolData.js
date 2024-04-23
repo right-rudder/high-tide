@@ -1,4 +1,5 @@
 const groundSchool = {
+  bannerImagePath: "/src/assets/ground-school-at-high-tide-aviation.jpg",
   imagePath: "/src/assets/ground-school.webp",
   title: "Ground School",
   subtitle: "What is Ground School?",

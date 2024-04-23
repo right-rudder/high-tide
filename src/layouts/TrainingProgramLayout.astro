@@ -1,16 +1,15 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Header from "../components/Header.astro";
-import Banner from "../assets/first-time-pilots-banner.jpg";
 import FlightTrainingNavbar from "../components/FlightTrainingNavbar.astro";
 import BigCTA from "../components/BigCTA.astro";
 import type { ImageMetadata } from "astro";
 import { Image } from "astro:assets";
 import { FaArrowAltCircleRight } from "react-icons/fa";
 import FlightProgramCard from "../components/FlightProgramCard.astro";
-import { flightPrograms } from "../data/flightPrograms";
 import PricingComponent from "../components/PricingComponent";
 const {
+  bannerImagePath,
   imagePath,
   title,
   subtitle,
@@ -29,6 +28,7 @@ if (!images[imagePath]) {
     `"${imagePath}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif,webp}"`,
   );
 }
+const Banner = images[bannerImagePath]();
 ---
 
 <BaseLayout

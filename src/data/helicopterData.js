@@ -1,4 +1,5 @@
 const privatePilot = {
+  bannerImagePath: "/src/assets/high-tide-r44-helicopter-in-southport-nc.jpg",
   imagePath: "/src/assets/helicopter.jpg",
   title: "Helicopter",
   subtitle:

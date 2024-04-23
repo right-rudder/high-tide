@@ -1,4 +1,6 @@
 const privatePilot = {
+  bannerImagePath:
+    "/src/assets/cfi-and-student-at-high-tide-aviation-southport-nc.jpg",
   imagePath: "/src/assets/flight-instructor.jpg",
   title: "Flight Instructor",
   subtitle: "What is a CFI/CFII?",
