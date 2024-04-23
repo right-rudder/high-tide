@@ -16,7 +16,10 @@ import { IoIosArrowForward } from "react-icons/io";
           class={`py-4 px-6 flex items-center justify-between font-semibold hover:bg-dark-blue hover:text-white duration-300 ${pathname === item.link ? "bg-dark-blue text-white" : "bg-mustard-yellow/20 text-dark-blue"}`}
           href={item.link}
         >
-          <p>{item.name}</p>
+          <p>
+            {item.name}
+            {pathname}
+          </p>
 
           <IoIosArrowForward
             className={`group-hover:text-mustard-yellow duration-300 ${pathname === item.link ? "text-mustard-yellow" : "text-dark-blue"}`}
