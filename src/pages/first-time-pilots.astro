@@ -213,14 +213,20 @@ import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
     <div
       class="flex flex-col items-center justify-center text-white bg-dark-blue flex-1 relative py-16 px-5"
     >
-      <div class="max-w-xl lg:max-w-none mx-auto lg:mx-28 my-20 lg:my-0">
-        <p class="md:text-xl indent-10 leading-relaxed font-medium">
+      <div
+        class="max-w-xl lg:max-w-none mx-auto lg:mx-28 my-20 lg:my-0 duration-1000"
+        id="reviews-container"
+      >
+        <p
+          id="review-text"
+          class="md:text-2xl italic indent-10 leading-relaxed font-medium"
+        >
           I earned my private pilot license through High Tide out of St. Simons
           Island, GA. They are an excellent program with a great cadre of
           instructors. I am very thankful to have had such a great team to help
           me start this journey into aviation!
         </p>
-        <p class="mt-5 md:text-xl float-end">- Jake B.</p>
+        <p id="review-author" class="mt-5 md:text-xl float-end">- Jake B.</p>
         <ImQuotesLeft
           className="absolute text-white/70 size-16 z-10 top-20 left-20"
         />
@@ -270,3 +276,54 @@ import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
     </div>
   </section>
 </BaseLayout>
+
+<script>
+  const reviews = [
+    {
+      text: "I earned my private pilot license through High Tide out of St. Simons Island, GA. They are an excellent program with a great cadre of instructors. I am very thankful to have had such a great team to help me start this journey into aviation!",
+      author: "— Jake B.",
+    },
+    {
+      text: "Great flight school. Keith Blackmon MEI really knows what he is doing and will train you to be a very skilled and confident multi—engine pilot. Excellent time with High Tide Aviation!",
+      author: "— Towns S.",
+    },
+    {
+      text: "The pilot was so patient and made me feel at ease at all times. Was very attentive to give the experience that was important to me! Thank you!",
+      author: "— Kathi G.",
+    },
+    {
+      text: "Life is too short to fly commercial and be treated like dirt. Fly High Tide Aviation and set your own schedule. Be treated like an appreciated customer flown by folks who love what they do. When it works, it works.",
+      author: "— George B.",
+    },
+    {
+      text: "I took my daughter on a helicopter Discovery Flight. We both loved it. She flew the helicopter using all 3 controls. If we lived nearby, she would definitely take helicopter flight training from High Tide Aviation. Willis was a great instructor and encouragement to her! Now, I want to do it!",
+      author: "— David R.",
+    },
+  ];
+  let currentIndex = 0;
+  const reviewTextElement = document.getElementById("review-text");
+  const reviewAuthorElement = document.getElementById("review-author");
+  const reviewsContainerElement = document.getElementById("reviews-container");
+
+  function showMessage() {
+    if (reviewAuthorElement && reviewTextElement) {
+      reviewTextElement.textContent = reviews[currentIndex].text;
+      reviewAuthorElement.textContent = reviews[currentIndex].author;
+    }
+    reviewsContainerElement?.classList.add("opacity-100");
+    reviewsContainerElement?.classList.remove("opacity-0");
+
+    currentIndex = (currentIndex + 1) % reviews.length;
+
+    setTimeout(hideMessage, 6000);
+  }
+
+  function hideMessage() {
+    reviewsContainerElement?.classList.remove("opacity-100");
+    reviewsContainerElement?.classList.add("opacity-0");
+
+    setTimeout(showMessage, 1200);
+  }
+
+  showMessage();
+</script>
