@@ -12,18 +12,42 @@ const privatePilot = {
   prerequisites: {
     subtitle: "Before joining us, ensure you meet the following criteria:",
     list: [
-      "Private Pilot Certificate: Already obtained from High Tide Aviation or another certified training school.",
-      "Logged Flight Hours: Must have recorded sufficient flight hours under VFR conditions as stipulated by FAA regulations",
-      "Medical Certificate: Current Class 3 medical certificate, as issued by an FAA-certified aviation medical examiner.",
+      {
+        heading: "Private Pilot Certificate",
+        description:
+          "Already obtained from High Tide Aviation or another certified training school.",
+      },
+      {
+        heading: "Logged Flight Hours",
+        description:
+          "Must have recorded sufficient flight hours under VFR conditions as stipulated by FAA regulations.",
+      },
+      {
+        heading: "Medical Certificate",
+        description:
+          "Current Class 3 medical certificate, as issued by an FAA-certified aviation medical examiner.",
+      },
     ],
   },
   enrollmentProcess: {
     subtitle:
       "Ready to take the first step towards your aviation goals? Here's how:",
     list: [
-      "Review Training Goals: Existing High Tide students should meet with their instructor to review their flight logs, discuss IFR training goals, and outline the instrument rating pathway.",
-      "Advanced Simulation Introduction: Participate in an orientation session focused on our advanced instrument flight simulators and IFR training methodologies.",
-      "Formalize Training Plan: Complete your enrollment by formalizing your personalized Instrument Rating training plan with High Tide Aviation.",
+      {
+        heading: "Review Training Goals",
+        description:
+          "Existing High Tide students should meet with their instructor to review their flight logs, discuss IFR training goals, and outline the instrument rating pathway.",
+      },
+      {
+        heading: "Advanced Simulation Introduction",
+        description:
+          "Participate in an orientation session focused on our advanced instrument flight simulators and IFR training methodologies.",
+      },
+      {
+        heading: "Formalize Training Plan",
+        description:
+          "Complete your enrollment by formalizing your personalized Instrument Rating training plan with High Tide Aviation.",
+      },
     ],
   },
   tiers: {
@@ -95,9 +119,9 @@ const privatePilot = {
   futurePathways: [
     {
       heading: "Multi-Engine Rating",
-      subheading: "Fly Multi Engine Aircraft",
+      subheading: "Fly Multi-Engine Aircraft",
       description:
-        "Expand your aircraft selection by training with High Tide Aviation for your Multi Engine Rating with our Beech Baron B55s.",
+        "Expand your aircraft selection by training with High Tide Aviation for your Multi-Engine Rating with our Beech Baron B55s.",
       imagePath: "/src/assets/beech-baron-b55-front.jpg",
       url: "/flight-training/multi-engine",
     },

@@ -52,5 +52,11 @@ export default {
     "grid-cols-2",
     "grid-cols-3",
     "grid-cols-4",
+    "text-mustard-yellow",
+    "text-dark-blue",
+    "bg-dark-blue",
+    "text-white",
+    "bg-mustard-yellow/20",
+    "text-dark-blue",
   ],
 };

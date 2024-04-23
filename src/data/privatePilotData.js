@@ -10,18 +10,42 @@ const privatePilot = {
   prerequisites: {
     subtitle: "Before joining us, ensure you meet the following criteria:",
     list: [
-      "Completion of Ground School: Must have successfully completed the Ground School training to understand the theoretical aspects of flying.",
-      "Medical Certificate: Obtain a Class 2 medical certificate from an FAA-certified aviation medical examiner.",
-      "Minimum Age: Must be at least 17 years old to enroll in the Private Pilot training program.",
+      {
+        heading: "Completion of Ground School",
+        description:
+          "Must have successfully completed the Ground School training to understand the theoretical aspects of flying.",
+      },
+      {
+        heading: "Medical Certificate",
+        description:
+          "Obtain a Class 2 medical certificate from an FAA-certified aviation medical examiner.",
+      },
+      {
+        heading: "Minimum Age",
+        description:
+          "Must be at least 17 years old to enroll in the Private Pilot training program.",
+      },
     ],
   },
   enrollmentProcess: {
     subtitle:
       "Ready to take the first step towards your aviation goals? Here's how:",
     list: [
-      "Meet Our Instructors: Connect with High Tide’s private pilot experts in Southport, NC, and St. Simons Island, GA",
-      "Tour Our Facilities: Take an introductory flight and explore our training centers tailored for private pilots.",
-      "Begin Training: Enroll at High Tide Aviation and start your journey to becoming a private pilot.",
+      {
+        heading: "Meet Our Instructors",
+        description:
+          "Connect with High Tide’s private pilot experts in Southport, NC, and St. Simons Island, GA.",
+      },
+      {
+        heading: "Tour Our Facilities",
+        description:
+          "Take an introductory flight and explore our training centers tailored for private pilots.",
+      },
+      {
+        heading: "Begin Training",
+        description:
+          "Enroll at High Tide Aviation and start your journey to becoming a private pilot.",
+      },
     ],
   },
   tiers: {
@@ -103,9 +127,9 @@ const privatePilot = {
     },
     {
       heading: "Multi-Engine Rating",
-      subheading: "Fly Multi Engine Aircraft",
+      subheading: "Fly Multi-Engine Aircraft",
       description:
-        "Expand your aircraft selection by training with High Tide Aviation for your Multi Engine Rating with our Beech Baron B55s.",
+        "Expand your aircraft selection by training with High Tide Aviation for your Multi-Engine Rating with our Beech Baron B55s.",
       imagePath: "/src/assets/beech-baron-b55-front.jpg",
       url: "/flight-training/multi-engine",
     },

@@ -89,7 +89,10 @@ if (!images[imagePath]) {
               prerequisites.list.map((item) => (
                 <li class="flex gap-3">
                   <FaArrowAltCircleRight className="text-mustard-yellow size-5 flex-shrink-0 mt-1" />
-                  <p class="text-dark-blue font-medium">{item}</p>
+                  <p class="text-dark-blue">
+                    <span class="font-semibold">{item.heading}: </span>
+                    {item.description}
+                  </p>
                 </li>
               ))
             }
@@ -107,7 +110,10 @@ if (!images[imagePath]) {
               enrollmentProcess.list.map((item) => (
                 <li class="flex gap-3">
                   <FaArrowAltCircleRight className="text-mustard-yellow size-5 flex-shrink-0 mt-1" />
-                  <p class="text-dark-blue font-medium">{item}</p>
+                  <p class="text-dark-blue">
+                    <span class="font-semibold">{item.heading}: </span>
+                    {item.description}
+                  </p>
                 </li>
               ))
             }

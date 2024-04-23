@@ -20,17 +20,14 @@ export default function PricingComponent({ tiers }) {
 
   return (
     <div className="mx-auto max-w-7xl px-6 lg:px-8">
-      <div className="mx-auto max-w-4xl text-center">
+      {/* <div className="mx-auto max-w-4xl text-center">
         <h2 className="uppercase text-mustard-yellow font-bold tracking-widest">
           Pricing
         </h2>
         <p className="text-5xl max-w-xl mx-auto font-bold leading-tight text-white">
           We can remove this title if not needed
         </p>
-      </div>
-      <p className="mx-auto mt-3 max-w-2xl text-center text-lg leading-8 text-white/70">
-        *Please note all prices are approximate and based on FAA minimums*
-      </p>
+      </div> */}
       <div className="mt-7 flex justify-center">
         <RadioGroup
           value={location}
@@ -166,6 +163,9 @@ export default function PricingComponent({ tiers }) {
           ))
         )}
       </div>
+      <p className="mx-auto mt-3 max-w-2xl text-center text-lg leading-8 text-white/70">
+        *Please note all prices are approximate and based on FAA minimums*
+      </p>
       <a
         href="/about/financing"
         className="text-white uppercase underline hover:text-mustard-yellow mt-10 block text-center font-semibold tracking-widest duration-300"

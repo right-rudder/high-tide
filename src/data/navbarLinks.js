@@ -28,7 +28,7 @@ export const navbarLinks = [
         link: "/flight-training/flight-instructor",
       },
       {
-        name: "Multi Engine",
+        name: "Multi-Engine Rating",
         link: "/flight-training/multi-engine",
       },
       {

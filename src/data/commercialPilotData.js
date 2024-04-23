@@ -11,19 +11,47 @@ const privatePilot = {
   prerequisites: {
     subtitle: "Before joining us, ensure you meet the following criteria:",
     list: [
-      "Private Pilot Certificate: Must already hold a Private Pilot Certificate, which is the foundational certification for all higher aviation training.",
-      "Instrument Rating: Must hold an Instrument Rating to ensure proficiency in navigating under IFR (Instrument Flight Rules), a necessary skill for commercial flight operations.",
-      "Flight Hours: Must have logged a required number of total flight hours, including pilot-in-command time under VFR and IFR conditions.",
-      "Medical Certificate: Must possess a current Class 1 medical certificate issued by an FAA-certified aviation medical examiner, ensuring fitness to fly at the commercial level.",
+      {
+        heading: "Private Pilot Certificate",
+        description:
+          "Must already hold a Private Pilot Certificate, which is the foundational certification for all higher aviation training.",
+      },
+      {
+        heading: "Instrument Rating",
+        description:
+          "Must hold an Instrument Rating to ensure proficiency in navigating under IFR (Instrument Flight Rules), a necessary skill for commercial flight operations.",
+      },
+      {
+        heading: "Flight Hours",
+        description:
+          "Must have logged a required number of total flight hours, including pilot-in-command time under VFR and IFR conditions.",
+      },
+      {
+        heading: "Medical Certificate",
+        description:
+          "Must possess a current Class 1 medical certificate issued by an FAA-certified aviation medical examiner, ensuring fitness to fly at the commercial level.",
+      },
     ],
   },
   enrollmentProcess: {
     subtitle:
       "Ready to take the first step towards your aviation goals? Here's how:",
     list: [
-      "Initial Consultation: Returning students are encouraged to consult with High Tide Aviation instructors to review their flight records and discuss career objectives.",
-      "Training Plan Customization: Tailor your commercial pilot training plan based on previous experience and future goals, ensuring a focused and efficient learning path.",
-      "Training Program Initiation: Start your training, focusing on both theoretical knowledge and practical flying skills required for commercial pilot certification.",
+      {
+        heading: "Initial Consultation",
+        description:
+          "Returning students are encouraged to consult with High Tide Aviation instructors to review their flight records and discuss career objectives.",
+      },
+      {
+        heading: "Training Plan Customization",
+        description:
+          "Tailor your commercial pilot training plan based on previous experience and future goals, ensuring a focused and efficient learning path.",
+      },
+      {
+        heading: "Training Program Initiation",
+        description:
+          "Start your training, focusing on both theoretical knowledge and practical flying skills required for commercial pilot certification.",
+      },
     ],
   },
   tiers: {
@@ -105,9 +133,9 @@ const privatePilot = {
     },
     {
       heading: "Multi-Engine Rating",
-      subheading: "Fly Multi Engine Aircraft",
+      subheading: "Fly Multi-Engine Aircraft",
       description:
-        "Expand your aircraft selection by training with High Tide Aviation for your Multi Engine Rating with our Beech Baron B55s.",
+        "Expand your aircraft selection by training with High Tide Aviation for your Multi-Engine Rating with our Beech Baron B55s.",
       imagePath: "/src/assets/beech-baron-b55-front.jpg",
       url: "/flight-training/multi-engine",
     },

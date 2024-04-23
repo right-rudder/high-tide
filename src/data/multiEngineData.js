@@ -10,18 +10,40 @@ const privatePilot = {
   prerequisites: {
     subtitle: "Before joining us, ensure you meet the following criteria:",
     list: [
-      "Current Pilot Certificate: Must already hold at least a Private Pilot Certificate.",
-      "FAA Medical: Must have a valid FAA medical certificate.",
-      "Previous Flight Experience: Should have a fundamental understanding of single-engine aircraft operations to build upon with multi-engine techniques.",
+      {
+        heading: "Current Pilot Certificate",
+        description: "Must already hold at least a Private Pilot Certificate.",
+      },
+      {
+        heading: "FAA Medical",
+        description: "Must have a valid FAA medical certificate.",
+      },
+      {
+        heading: "Previous Flight Experience",
+        description:
+          "Should have a fundamental understanding of single-engine aircraft operations to build upon with multi-engine techniques.",
+      },
     ],
   },
   enrollmentProcess: {
     subtitle:
       "Ready to take the first step towards your aviation goals? Here's how:",
     list: [
-      "Initial Assessment: Conduct an initial assessment with High Tide Aviation to discuss your current certification level and aviation goals.",
-      "Tailored Training Schedule: Set up a training schedule that fits within the 1-2 week intensive course framework, designed to maximize learning retention and skill acquisition",
-      "Engage in Hands-On Training: Begin your multi-engine flight training in the Baron B55, focusing on mastering the skills necessary to safely operate multi-engine aircraft.",
+      {
+        heading: "Initial Assessment",
+        description:
+          "Conduct an initial assessment with High Tide Aviation to discuss your current certification level and aviation goals.",
+      },
+      {
+        heading: "Tailored Training Schedule",
+        description:
+          "Set up a training schedule that fits within the 1-2 week intensive course framework, designed to maximize learning retention and skill acquisition.",
+      },
+      {
+        heading: "Hands-On Training",
+        description:
+          "Begin your multi-engine flight training in the Baron B55, focusing on mastering the skills necessary to safely operate multi-engine aircraft.",
+      },
     ],
   },
   tiers: {

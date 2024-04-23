@@ -11,18 +11,42 @@ const groundSchool = {
   prerequisites: {
     subtitle: "Before joining us, ensure you meet the following criteria:",
     list: [
-      "Completion of Ground School: Must have successfully completed the Ground School training to understand the theoretical aspects of flying.",
-      "Medical Certificate: Obtain a Class 2 medical certificate from an FAA-certified aviation medical examiner.",
-      "Minimum Age: Must be at least 17 years old to enroll in the Private Pilot training program.",
+      {
+        heading: "Completion of Ground School",
+        description:
+          "Must have successfully completed the Ground School training to understand the theoretical aspects of flying.",
+      },
+      {
+        heading: "Medical Certificate",
+        description:
+          "Obtain a Class 2 medical certificate from an FAA-certified aviation medical examiner.",
+      },
+      {
+        heading: "Minimum Age",
+        description:
+          "Must be at least 17 years old to enroll in the Private Pilot training program.",
+      },
     ],
   },
   enrollmentProcess: {
     subtitle:
       "Ready to take the first step towards your aviation goals? Here's how:",
     list: [
-      "Choose Your Program: Select the course that aligns with your aspirations, available in both North Carolina and Georgia.",
-      "Contact Us: Call the team at High Tide Aviation to reserve your spot or pick up a registration form from our office.",
-      "Get Started: Complete your enrollment and get ready for an incredible learning experience.",
+      {
+        heading: "Choose Your Program",
+        description:
+          "Select the course that aligns with your aspirations, available in both North Carolina and Georgia.",
+      },
+      {
+        heading: "Contact Us",
+        description:
+          "Call the team at High Tide Aviation to reserve your spot or pick up a registration form from our office.",
+      },
+      {
+        heading: "Get Started",
+        description:
+          "Complete your enrollment and get ready for an incredible learning experience.",
+      },
     ],
   },
   tiers: {

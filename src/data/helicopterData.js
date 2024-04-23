@@ -14,18 +14,40 @@ const privatePilot = {
   prerequisites: {
     subtitle: "Please ensure you meet these before beginning your training:",
     list: [
-      "Graduation from Helicopter Ground School ",
-      "FAA Medical Certificate Obtained",
-      "Prior Certificates/Licenses Complete",
+      {
+        heading: "Graduation from Helicopter Ground School",
+        description: "Completion of the helicopter ground school program.",
+      },
+      {
+        heading: "FAA Medical Certificate Obtained",
+        description: "Obtaining a medical certificate from the FAA.",
+      },
+      {
+        heading: "Prior Certificates/Licenses Complete",
+        description:
+          "Completion of any prior certificates or licenses required.",
+      },
     ],
   },
   enrollmentProcess: {
     subtitle:
       "To start your helicopter training at High Tide Aviation, follow these simple steps:",
     list: [
-      "Meet the Prerequisites: Ensure you have a current FAA medical certificate and at least a private pilot certificate if enrolling for advanced courses.",
-      "Consultation: Contact us to discuss your training needs and schedule a visit.",
-      "Registration: Complete the enrollment process, and you’re ready to begin.",
+      {
+        heading: "Meet the Prerequisites",
+        description:
+          "Ensure you have a current FAA medical certificate and at least a private pilot certificate if enrolling for advanced courses.",
+      },
+      {
+        heading: "Consultation",
+        description:
+          "Contact us to discuss your training needs and schedule a visit.",
+      },
+      {
+        heading: "Registration",
+        description:
+          "Complete the enrollment process, and you’re ready to begin.",
+      },
     ],
   },
   tiers: {

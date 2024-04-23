@@ -10,18 +10,41 @@ const privatePilot = {
   prerequisites: {
     subtitle: "Before joining us, ensure you meet the following criteria:",
     list: [
-      "Commercial Pilot Certificate with Instrument Rating: Must have an existing Commercial Pilot Certificate and Instrument Rating, ensuring a complete understanding of advanced flying techniques and regulations.",
-      "Proficiency Check: Must demonstrate teaching proficiency and a thorough understanding of pilot training curricula.",
-      "Medical Certificate: Must possess a valid FAA medical certificate.",
+      {
+        heading: "Commercial Pilot Certificate with Instrument Rating",
+        description:
+          "Must have an existing Commercial Pilot Certificate and Instrument Rating, ensuring a complete understanding of advanced flying techniques and regulations.",
+      },
+      {
+        heading: "Proficiency Check",
+        description:
+          "Must demonstrate teaching proficiency and a thorough understanding of pilot training curricula.",
+      },
+      {
+        heading: "Medical Certificate",
+        description: "Must possess a valid FAA medical certificate.",
+      },
     ],
   },
   enrollmentProcess: {
     subtitle:
       "Ready to take the first step towards your aviation goals? Here's how:",
     list: [
-      "Instructor Meeting: Schedule a meeting with a senior CFI at High Tide Aviation to discuss your career goals and training objectives.",
-      "Customized Training Plan: Develop a personalized training plan focusing on pedagogical skills and instructional techniques in both VFR and IFR conditions.",
-      "Official Enrollment: Complete the formal enrollment and begin your instructor training, transitioning from being a pilot to becoming a mentor and leader in the aviation community",
+      {
+        heading: "Instructor Meeting",
+        description:
+          "Schedule a meeting with a senior CFI at High Tide Aviation to discuss your career goals and training objectives.",
+      },
+      {
+        heading: "Customized Training Plan",
+        description:
+          "Develop a personalized training plan focusing on pedagogical skills and instructional techniques in both VFR and IFR conditions.",
+      },
+      {
+        heading: "Official Enrollment",
+        description:
+          "Complete the formal enrollment and begin your instructor training, transitioning from being a pilot to becoming a mentor and leader in the aviation community.",
+      },
     ],
   },
   tiers: {
@@ -103,9 +126,9 @@ const privatePilot = {
     },
     {
       heading: "Multi-Engine Rating",
-      subheading: "Fly Multi Engine Aircraft",
+      subheading: "Fly Multi-Engine Aircraft",
       description:
-        "Expand your aircraft selection by training with High Tide Aviation for your Multi Engine Rating with our Beech Baron B55s.",
+        "Expand your aircraft selection by training with High Tide Aviation for your Multi-Engine Rating with our Beech Baron B55s.",
       imagePath: "/src/assets/beech-baron-b55-front.jpg",
       url: "/flight-training/multi-engine",
     },
