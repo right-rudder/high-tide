@@ -37,7 +37,7 @@ const MobileNavLink = ({ menuItem, pathname, toggled, onShow }) => {
           }`}
         >
           <IoIosArrowForward
-            className={`${toggled ? "text-mustard-yellow" : ""} size-5`}
+            className={`${toggled ? "text-mustard-yellow" : "text-white"} size-5`}
           />
         </div>
       </button>
