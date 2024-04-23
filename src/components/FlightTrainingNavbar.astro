@@ -19,6 +19,8 @@ import { IoIosArrowForward } from "react-icons/io";
           <p>
             {item.name}
             {pathname}
+            {item.link}
+            {pathname === item.link ? "true" : "false"}
           </p>
 
           <IoIosArrowForward
