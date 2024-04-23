@@ -60,15 +60,11 @@ export const navbarLinks = [
         name: "News & Events",
         link: "/about/news-events",
       },
-      {
-        name: "Contact Us",
-        link: "/about/contact-us",
-      },
     ],
   },
   {
-    name: "Helicopter Tours",
-    link: "/helicopter-tours",
+    name: "Contact Us",
+    link: "/contact-us",
     submenu: [],
   },
 ];

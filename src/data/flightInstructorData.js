@@ -124,7 +124,7 @@ const privatePilot = {
       description:
         "Once you complete your CFI training, we offer programs to get you to CFII and MEI. Contact us for more information.",
       imagePath: "/src/assets/happy-high-tide-student.jpg",
-      url: "/about/contact-us",
+      url: "/contact-us",
     },
     {
       heading: "Multi-Engine Rating",
