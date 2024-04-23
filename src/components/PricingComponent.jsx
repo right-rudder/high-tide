@@ -4,6 +4,7 @@ import { CheckIcon } from "@heroicons/react/20/solid";
 import { FaRegHourglassHalf } from "react-icons/fa6";
 import { FaCalendar } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
+import PricingComponentPlaceholder from "./PricingComponentPlaceholder";
 
 const locations = [
   { value: "southport", label: "Southport" },
@@ -58,106 +59,112 @@ export default function PricingComponent({ tiers }) {
       <div
         className={`isolate mx-auto mt-10 grid max-w-md grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-${tiers[location.value].length}`}
       >
-        {tiers[location.value].map((tier) => (
-          <div
-            key={tier.id}
-            className={classNames(
-              tier.featured
-                ? "bg-gray-900 ring-gray-900"
-                : "ring-gray-200 bg-white",
-              "rounded-3xl p-8 ring-1 xl:p-10 max-w-md mx-auto",
-            )}
-          >
-            <h3
-              id={tier.id}
-              className={classNames(
-                tier.featured ? "text-white" : "text-gray-900",
-                "text-lg font-semibold leading-8",
-              )}
-            >
-              {tier.name}
-            </h3>
-            <p
-              className={classNames(
-                tier.featured ? "text-gray-300" : "text-gray-600",
-                "mt-4 text-sm leading-6",
-              )}
-            >
-              {tier.description}
-            </p>
-            {tier.duration && (
-              <p className="flex mt-2 gap-x-2 text-sm leading-6">
-                <FaRegHourglassHalf className="text-mustard-yellow size-3 flex-shrink-0 mt-[5.5px]" />
-                <span className="text-gray-600">{tier.duration}</span>
-              </p>
-            )}
-            {tier.schedule && (
-              <p className="flex gap-x-2 text-sm leading-6">
-                <FaCalendar className="text-mustard-yellow size-3 flex-shrink-0 mt-[5.5px]" />
-                <span className="text-gray-600">{tier.schedule}</span>
-              </p>
-            )}
-            {tier.venue && (
-              <p className="flex gap-x-2 text-sm leading-6">
-                <FaLocationDot className="text-mustard-yellow size-3 flex-shrink-0 mt-[5.5px]" />
-                <span className="text-gray-600">{tier.venue}</span>
-              </p>
-            )}
-            <p className="mt-6 flex items-baseline gap-x-1">
-              <span
-                className={classNames(
-                  tier.featured ? "text-white" : "text-gray-900",
-                  "text-4xl font-bold tracking-tight",
-                )}
-              >
-                {tier.price}
-              </span>
-
-              {tier.price !== "Custom" && (
-                <span
-                  className={classNames(
-                    tier.featured ? "text-gray-300" : "text-gray-600",
-                    "text-sm font-semibold leading-6",
-                  )}
-                >
-                  {tier.unitPrice ? tier.unitPrice : "/one-time"}
-                </span>
-              )}
-            </p>
-            <a
-              href={tier.href}
-              aria-describedby={tier.id}
+        {tiers[location.value].length == 0 ? (
+          <PricingComponentPlaceholder />
+        ) : (
+          tiers[location.value].map((tier) => (
+            <div
+              key={tier.id}
               className={classNames(
                 tier.featured
-                  ? "bg-white/10 text-white hover:bg-mustard-yellow focus-visible:outline-white"
-                  : "bg-dark-blue text-white shadow-sm hover:bg-mustard-yellow focus-visible:outline-dark-blue",
-                "mt-6 block duration-300 rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2",
+                  ? "bg-gray-900 ring-gray-900"
+                  : "ring-gray-200 bg-white",
+                "rounded-3xl p-8 ring-1 xl:p-10 max-w-md mx-auto",
               )}
             >
-              {tier.cta}
-            </a>
-            <ul
-              role="list"
-              className={classNames(
-                tier.featured ? "text-gray-300" : "text-gray-600",
-                "mt-8 space-y-3 text-sm leading-6 xl:mt-10",
+              <h3
+                id={tier.id}
+                className={classNames(
+                  tier.featured ? "text-white" : "text-gray-900",
+                  "text-lg font-semibold leading-8",
+                )}
+              >
+                {tier.name}
+              </h3>
+              <p
+                className={classNames(
+                  tier.featured ? "text-gray-300" : "text-gray-600",
+                  "mt-4 text-sm leading-6",
+                )}
+              >
+                {tier.description}
+              </p>
+              {tier.duration && (
+                <p className="flex mt-2 gap-x-2 text-sm leading-6">
+                  <FaRegHourglassHalf className="text-mustard-yellow size-3 flex-shrink-0 mt-[5.5px]" />
+                  <span className="text-gray-600">{tier.duration}</span>
+                </p>
               )}
-            >
-              {tier.features.map((feature) => (
-                <li key={feature} className="flex gap-x-3">
-                  <CheckIcon
+              {tier.schedule && (
+                <p className="flex gap-x-2 text-sm leading-6">
+                  <FaCalendar className="text-mustard-yellow size-3 flex-shrink-0 mt-[5.5px]" />
+                  <span className="text-gray-600">{tier.schedule}</span>
+                </p>
+              )}
+              {tier.venue && (
+                <p className="flex gap-x-2 text-sm leading-6">
+                  <FaLocationDot className="text-mustard-yellow size-3 flex-shrink-0 mt-[5.5px]" />
+                  <span className="text-gray-600">{tier.venue}</span>
+                </p>
+              )}
+              <p className="mt-6 flex items-baseline gap-x-1">
+                <span
+                  className={classNames(
+                    tier.featured ? "text-white" : "text-gray-900",
+                    "text-4xl font-bold tracking-tight",
+                  )}
+                >
+                  {tier.price}
+                </span>
+
+                {tier.price !== "Custom" && (
+                  <span
                     className={classNames(
-                      tier.featured ? "text-mustard-yellow" : "text-dark-blue",
-                      "h-6 w-5 flex-none",
+                      tier.featured ? "text-gray-300" : "text-gray-600",
+                      "text-sm font-semibold leading-6",
                     )}
-                    aria-hidden="true"
-                  />
-                  {feature}
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
+                  >
+                    {tier.unitPrice ? tier.unitPrice : "/one-time"}
+                  </span>
+                )}
+              </p>
+              <a
+                href={tier.href}
+                aria-describedby={tier.id}
+                className={classNames(
+                  tier.featured
+                    ? "bg-white/10 text-white hover:bg-mustard-yellow focus-visible:outline-white"
+                    : "bg-dark-blue text-white shadow-sm hover:bg-mustard-yellow focus-visible:outline-dark-blue",
+                  "mt-6 block duration-300 rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2",
+                )}
+              >
+                {tier.cta}
+              </a>
+              <ul
+                role="list"
+                className={classNames(
+                  tier.featured ? "text-gray-300" : "text-gray-600",
+                  "mt-8 space-y-3 text-sm leading-6 xl:mt-10",
+                )}
+              >
+                {tier.features.map((feature) => (
+                  <li key={feature} className="flex gap-x-3">
+                    <CheckIcon
+                      className={classNames(
+                        tier.featured
+                          ? "text-mustard-yellow"
+                          : "text-dark-blue",
+                        "h-6 w-5 flex-none",
+                      )}
+                      aria-hidden="true"
+                    />
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))
+        )}
       </div>
       <a
         href="/about/financing"

@@ -59,22 +59,7 @@ const privatePilot = {
         cta: "Contact for Custom Quote",
       },
     ],
-    simons: [
-      {
-        name: "Zero to Hero Program",
-        id: "tier-zero-to-hero-simons",
-        href: "#",
-        price: "Custom",
-        description: "Full-range training for aspiring pilots.",
-        features: [
-          "All-inclusive from Private to CFI/CFII",
-          "Full support at your selected training location",
-          "Customized training schedule",
-        ],
-        featured: true,
-        cta: "Contact for Custom Quote",
-      },
-    ],
+    simons: [],
   },
   futurePathways: [
     {
