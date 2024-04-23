@@ -108,28 +108,28 @@ const groundSchool = {
   },
   futurePathways: [
     {
-      heading: "Instrument Rating",
+      heading: "Private Pilot",
       subheading: "Start Your Journey",
       description:
         "If you're new to flight training, we have the resources and training to help you earn your wings (and rotors).",
-      imagePath: "/src/assets/instrument-rating.jpg",
-      url: "/flight-training/instrument",
+      imagePath: "/src/assets/flight-program-1.jpg",
+      url: "/flight-training/private-pilot",
     },
     {
-      heading: "Multi-Engine Rating",
-      subheading: "Fly Multi Engine Aircraft",
+      heading: "Commercial Pilot",
+      subheading: "Fly for Your Career",
       description:
-        "Expand your aircraft selection by training with High Tide Aviation for your Multi Engine Rating with our Beech Baron B55s.",
-      imagePath: "/src/assets/beech-baron-b55-front.jpg",
-      url: "/flight-training/multi-engine",
+        "No matter how far you want to venture down the pilot career path, it all starts here.",
+      imagePath: "/src/assets/flight-program-2.jpg",
+      url: "/flight-training/commercial-pilot",
     },
     {
-      heading: "Rentals",
-      subheading: "Rent an Airplane",
+      heading: "Flight Instructor",
+      subheading: "Train the Next Class",
       description:
-        "Want to fly on your own? Visit our fleet page to explore your options for renting aircraft with High Tide Aviation.",
-      imagePath: "/src/assets/cessna-172-flying-over-st-simons-island.jpg",
-      url: "/about/fleet-rentals",
+        "Interested in training the next class of pilots? Perhaps you want to give back to the community that trained you? Become a CFI, CFII, & MEI with High Tide.",
+      imagePath: "/src/assets/flight-program-3.jpg",
+      url: "/flight-training/flight-instructor",
     },
   ],
 };
