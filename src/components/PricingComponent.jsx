@@ -126,7 +126,7 @@ export default function PricingComponent({ tiers }) {
                 )}
               </p>
               <a
-                href={tier.href}
+                href="/enrollment-form"
                 aria-describedby={tier.id}
                 className={classNames(
                   tier.featured

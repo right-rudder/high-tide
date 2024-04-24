@@ -43,7 +43,13 @@ function getLastWord(str) {
   siteDescription="Begin your aviation journey with High Tide Aviation, offering comprehensive guidance and support for first-time pilots in Southport, NC, and St. Simons Island, GA."
   siteKeywords="first-time pilot Southport NC, beginner flight training St. Simons Island GA, aviation introduction Southeast Coast, learn to fly Southport NC, pilot training for beginners."
 >
-  <Header slot="header" image={Banner} title={title} ctaText="Enroll Now" />
+  <Header
+    slot="header"
+    image={Banner}
+    title={title}
+    ctaText="Enroll Now"
+    ctaLink="/enrollment-form"
+  />
 
   <section class="max-w-6xl mx-auto py-16 px-5">
     <div class="flex flex-col md:flex-row gap-10">
@@ -130,6 +136,7 @@ function getLastWord(str) {
       </div>
     </div>
     <a
+      href="/enrollment-form"
       class="block mx-auto font-medium uppercase py-4 px-14 bg-dark-blue w-fit rounded-full text-white hover:bg-mustard-yellow duration-300"
     >
       Enroll Today
