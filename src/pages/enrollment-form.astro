@@ -30,7 +30,7 @@ import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
       >
         Fill Out the Form Below to Start Flying
       </h3>
-      <div class="grid lg:grid-cols-2 gap-5 my-10">
+      <div class="grid md:grid-cols-2 gap-5 my-10">
         <input
           class="bg-medium-blue/15 text-dark-blue py-4 px-6 w-full outline-none placeholder:text-gray-500"
           type="text"
@@ -59,11 +59,167 @@ import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
           id="phone"
           placeholder="Phone"
         />
+
+        <fieldset>
+          <legend class="font-medium leading-6 text-dark-blue"
+            >Training Type:</legend
+          >
+          <div class="mt-2 space-y-1">
+            <div class="flex items-center gap-x-3">
+              <input
+                id="airplane"
+                name="training-type"
+                type="radio"
+                class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
+              />
+              <label for="airplane" class="block leading-6 text-gray-600"
+                >Airplane</label
+              >
+            </div>
+            <div class="flex items-center gap-x-3">
+              <input
+                id="helicopter"
+                name="training-type"
+                type="radio"
+                class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
+              />
+              <label for="helicopter" class="block leading-6 text-gray-600"
+                >Helicopter (Southport exclusive)</label
+              >
+            </div>
+            <div class="flex items-center gap-x-3">
+              <input
+                id="both"
+                name="training-type"
+                type="radio"
+                class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
+              />
+              <label for="both" class="block leading-6 text-gray-600"
+                >Both</label
+              >
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend class="font-medium leading-6 text-dark-blue"
+            >Preferred Program:</legend
+          >
+          <p class="text-gray-500 text-sm">Select all that apply</p>
+          <div class="mt-2 space-y-1">
+            <div class="relative flex gap-x-3">
+              <div class="flex h-6 items-center">
+                <input
+                  id="ground-school"
+                  name="ground-school"
+                  type="checkbox"
+                  class="h-4 w-4 rounded border-gray-300 text-medium-blue focus:ring-medium-blue"
+                />
+              </div>
+              <div class="leading-6">
+                <label for="ground-school" class="text-gray-600"
+                  >Ground School</label
+                >
+              </div>
+            </div>
+            <div class="relative flex gap-x-3">
+              <div class="flex h-6 items-center">
+                <input
+                  id="private-pilot"
+                  name="private-pilot"
+                  type="checkbox"
+                  class="h-4 w-4 rounded border-gray-300 text-medium-blue focus:ring-medium-blue"
+                />
+              </div>
+              <div class="leading-6">
+                <label for="private-pilot" class="text-gray-600"
+                  >Private Pilot</label
+                >
+              </div>
+            </div>
+            <div class="relative flex gap-x-3">
+              <div class="flex h-6 items-center">
+                <input
+                  id="instrument-rating"
+                  name="instrument-rating"
+                  type="checkbox"
+                  class="h-4 w-4 rounded border-gray-300 text-medium-blue focus:ring-medium-blue"
+                />
+              </div>
+              <div class="leading-6">
+                <label for="instrument-rating" class="text-gray-600"
+                  >Instrument Rating</label
+                >
+              </div>
+            </div>
+            <div class="relative flex gap-x-3">
+              <div class="flex h-6 items-center">
+                <input
+                  id="commercial-pilot"
+                  name="commercial-pilot"
+                  type="checkbox"
+                  class="h-4 w-4 rounded border-gray-300 text-medium-blue focus:ring-medium-blue"
+                />
+              </div>
+              <div class="leading-6">
+                <label for="commercial-pilot" class="text-gray-600"
+                  >Commercial Pilot</label
+                >
+              </div>
+            </div>
+            <div class="relative flex gap-x-3">
+              <div class="flex h-6 items-center">
+                <input
+                  id="flight-instructor"
+                  name="flight-instructor"
+                  type="checkbox"
+                  class="h-4 w-4 rounded border-gray-300 text-medium-blue focus:ring-medium-blue"
+                />
+              </div>
+              <div class="leading-6">
+                <label for="flight-instructor" class="text-gray-600"
+                  >Flight Instructor</label
+                >
+              </div>
+            </div>
+            <div class="relative flex gap-x-3">
+              <div class="flex h-6 items-center">
+                <input
+                  id="multi-engine"
+                  name="multi-engine"
+                  type="checkbox"
+                  class="h-4 w-4 rounded border-gray-300 text-medium-blue focus:ring-medium-blue"
+                />
+              </div>
+              <div class="leading-6">
+                <label for="multi-engine" class="text-gray-600"
+                  >Multi-Engine (Airplane only)</label
+                >
+              </div>
+            </div>
+            <div class="relative flex gap-x-3">
+              <div class="flex h-6 items-center">
+                <input
+                  id="zero-to-hero"
+                  name="zero-to-hero"
+                  type="checkbox"
+                  class="h-4 w-4 rounded border-gray-300 text-medium-blue focus:ring-medium-blue"
+                />
+              </div>
+              <div class="leading-6">
+                <label for="zero-to-hero" class="text-gray-600"
+                  >Zero to Hero</label
+                >
+              </div>
+            </div>
+          </div>
+        </fieldset>
+
         <textarea
-          class="bg-medium-blue/15 text-dark-blue py-4 px-6 w-full outline-none placeholder:text-gray-500 col-span-2 h-36"
+          class="bg-medium-blue/15 text-dark-blue py-4 px-6 w-full outline-none placeholder:text-gray-500 md:col-span-2 h-36"
           name="message"
           id="message"
-          placeholder="What is your goal?"></textarea>
+          placeholder="Feel free to elaborate"></textarea>
       </div>
       <a
         href="#"
