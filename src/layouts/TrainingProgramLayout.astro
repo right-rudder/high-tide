@@ -29,6 +29,13 @@ if (!images[imagePath]) {
   );
 }
 const Banner = images[bannerImagePath]();
+
+function getLastWord(str) {
+  str = str.trim();
+  let words = str.split(" ");
+  let lastWord = words[words.length - 1];
+  return lastWord;
+}
 ---
 
 <BaseLayout
@@ -49,7 +56,8 @@ const Banner = images[bannerImagePath]();
           class="bg-dark-blue border-l-8 flex flex-col border-mustard-yellow text-white p-5 gap-2 items-center"
         >
           <p class="uppercase text-xl">
-            {title} Training is available in
+            {title}
+            {getLastWord(title) === "Training" ? "" : "Training"} is available in
           </p>
           <ul class="flex gap-10">
             {

@@ -32,7 +32,7 @@ export const navbarLinks = [
         link: "/flight-training/multi-engine",
       },
       {
-        name: "Helicopter",
+        name: "Helicopter Training",
         link: "/flight-training/helicopter",
       },
     ],

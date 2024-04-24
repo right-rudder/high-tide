@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets";
-const { image, title, ctaText } = Astro.props;
+const { image, title, ctaText, ctaLink } = Astro.props;
 ---
 
 <header>
@@ -29,7 +29,7 @@ const { image, title, ctaText } = Astro.props;
     ctaText && (
       <div class="flex justify-center -translate-y-7">
         <a
-          href="#"
+          href={ctaLink}
           class="uppercase py-4 px-14 bg-mustard-yellow text-white font-medium w-fit rounded-full hover:bg-medium-blue duration-300"
         >
           {ctaText}

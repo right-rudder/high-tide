@@ -3,6 +3,7 @@ import HomepageHeader from "../components/HomepageHeader.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { TbAward } from "react-icons/tb";
 import { BsAirplaneEngines } from "react-icons/bs";
+import { MdOutlineQuiz } from "react-icons/md";
 import { IoBookOutline } from "react-icons/io5";
 import { FaRegStar } from "react-icons/fa6";
 import { FaPhoneAlt } from "react-icons/fa";
@@ -26,7 +27,7 @@ import { latestPosts } from "../data/latestPosts.js";
 <BaseLayout>
   <HomepageHeader slot="header" />
 
-  <section class="py-16 bg-mustard-yellow px-5">
+  <section id="home-menu" class="py-16 bg-mustard-yellow px-5 scroll-my-20">
     <div class="grid lg:grid-cols-4 sm:grid-cols-2 max-w-7xl mx-auto gap-10">
       <a
         href="#why-high-tide"
@@ -40,7 +41,7 @@ import { latestPosts } from "../data/latestPosts.js";
         </p>
       </a>
       <a
-        href="#new-to-flying"
+        href="/first-time-pilots"
         class="border border-white/50 py-8 px-12 flex flex-col gap-5 hover:bg-white duration-700 group cursor-pointer"
       >
         <BsAirplaneEngines className="size-14 text-medium-blue" />
@@ -54,11 +55,11 @@ import { latestPosts } from "../data/latestPosts.js";
         href="#ebook"
         class="border border-white/50 py-8 px-12 flex flex-col gap-5 hover:bg-white duration-700 group cursor-pointer"
       >
-        <IoBookOutline className="size-14 text-medium-blue" />
+        <MdOutlineQuiz className="size-14 text-medium-blue" />
         <p
           class="text-lg text-dark-blue uppercase font-semibold tracking-widest duration-700"
         >
-          Download our free eBook!
+          Pilot Readiness Quiz
         </p>
       </a>
       <a
@@ -98,11 +99,12 @@ import { latestPosts } from "../data/latestPosts.js";
           flight schools at either location today!
         </p>
         <div class="flex flex-col sm:flex-row items-center gap-5">
-          <button
+          <a
+            href="/discovery-flight-form"
             class="block font-medium uppercase py-4 px-14 bg-dark-blue w-fit rounded-full text-white hover:bg-mustard-yellow duration-300"
           >
             Book Now
-          </button>
+          </a>
           <div class="flex items-center gap-3">
             <a
               href=`tel:${PHONE_NUMBER}`
@@ -154,35 +156,37 @@ import { latestPosts } from "../data/latestPosts.js";
             various training programs including PPL through CFII, Multi-Engine,
             and Helicopter, tailored to your learning speed and location.
           </p>
-          <button
+          <a
+            href="/enrollment-form"
             class="block font-medium uppercase py-4 px-14 bg-white w-fit rounded-full text-dark-blue hover:bg-medium-blue hover:text-white duration-300"
           >
             Enroll Now
-          </button>
+          </a>
         </div>
         <a
           href="/about/fleet-rentals"
-          class="flex flex-col min-h-[28rem] lg:flex-1 gap-5 justify-end bg-gradient-to-t to-40% from-medium-blue p-12 relative text-white"
+          class="flex flex-col group overflow-hidden min-h-[28rem] lg:flex-1 gap-5 justify-end bg-gradient-to-t to-40% from-medium-blue p-12 relative text-white"
         >
           <Image
             src={Feature2}
             alt="Feature 2"
-            class="absolute w-full h-full object-cover top-0 left-0 -z-10"
+            class="absolute w-full h-full object-cover top-0 left-0 -z-10 group-hover:scale-110 duration-300"
             quality={10}
           />
           <h3 class="text-3xl font-bold">Meet Our Fleet</h3>
         </a>
-        <div
-          class="flex flex-col min-h-[28rem] lg:flex-1 gap-5 justify-end bg-gradient-to-t to-40% from-medium-blue p-12 relative text-white"
+        <a
+          href="/contact-us"
+          class="flex flex-col group overflow-hidden min-h-[28rem] lg:flex-1 gap-5 justify-end bg-gradient-to-t to-40% from-medium-blue p-12 relative text-white"
         >
           <Image
             src={Feature3}
             alt="Feature 3"
-            class="absolute w-full h-full object-cover top-0 left-0 -z-10"
+            class="absolute w-full h-full object-cover top-0 left-0 -z-10 group-hover:scale-110 duration-300"
             quality={10}
           />
           <h3 class="text-3xl font-bold">Visit High Tide Aviation</h3>
-        </div>
+        </a>
       </div>
     </div>
   </section>
@@ -320,6 +324,7 @@ import { latestPosts } from "../data/latestPosts.js";
           flying is the right choice for you.
         </p>
         <a
+          href="/discovery-flight-form"
           class="block font-medium uppercase py-4 px-14 bg-dark-blue w-fit rounded-full text-white hover:bg-white hover:text-dark-blue cursor-pointer duration-300"
         >
           Request an Intro Flight
@@ -371,6 +376,7 @@ import { latestPosts } from "../data/latestPosts.js";
         Ready to start your journey with High Tide Aviation?
       </h3>
       <a
+        href="/contact-us"
         class="block font-medium uppercase text-center mt-5 py-4 px-14 bg-dark-blue w-fit rounded-full text-white hover:bg-white hover:text-dark-blue cursor-pointer duration-300"
       >
         Schedule a call with us today!

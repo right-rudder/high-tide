@@ -18,6 +18,7 @@ import PlaneCard from "../../../components/PlaneCard.astro";
     image={Banner}
     title="Our Fleet"
     ctaText="Discover Our Fleet"
+    ctaLink="#fleet"
   />
 
   <section class="py-24 px-5">
@@ -51,17 +52,18 @@ import PlaneCard from "../../../components/PlaneCard.astro";
           be found below the fleet lineup.
         </p>
         <div class="flex flex-col sm:flex-row items-center gap-5">
-          <button
+          <a
+            href="/contact-us"
             class="block font-medium uppercase py-4 px-14 bg-dark-blue w-fit rounded-full text-white hover:bg-mustard-yellow duration-300"
           >
-            Discover More
-          </button>
+            Rent Today
+          </a>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="py-24 px-5 bg-light-blue/10">
+  <section id="fleet" class="py-24 px-5 bg-light-blue/10 scroll-my-20">
     <div class="max-w-xl lg:max-w-7xl mx-auto flex flex-col items-center">
       <h2 class="uppercase text-medium-blue font-bold tracking-widest">
         Fleet
@@ -98,7 +100,7 @@ import PlaneCard from "../../../components/PlaneCard.astro";
         </h3>
       </div>
       <a
-        href="#"
+        href="/contact-us"
         class="block flex-shrink-0 font-medium uppercase py-4 px-14 bg-dark-blue w-fit rounded-full text-white hover:bg-white hover:text-dark-blue duration-300"
         >Submit Rental Inquiry</a
       >

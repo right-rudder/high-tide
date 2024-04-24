@@ -1,0 +1,63 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Banner from "../assets/private-pilot-sits-in-multi-engine-plane.jpg";
+import { Image } from "astro:assets";
+import Intro from "../assets/first-time-pilots-intro.jpg";
+import StatCard from "../components/StatCard.astro";
+import { stats } from "../data/stats";
+import { RiTeamLine } from "react-icons/ri";
+import { IoIosArrowRoundForward } from "react-icons/io";
+import { GiExitDoor } from "react-icons/gi";
+import { MdFlightTakeoff } from "react-icons/md";
+import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
+---
+
+<BaseLayout siteTitle="Enrollment Form">
+  <Header slot="header" image={Banner} title="Enrollment Form" />
+
+  <section class="py-24 px-5">
+    <div class="flex flex-col items-center">
+      <div class="grid lg:grid-cols-2 gap-5 my-10">
+        <input
+          class="bg-medium-blue/15 text-dark-blue py-4 px-6 w-full outline-none placeholder:text-gray-500"
+          type="text"
+          name="first-name"
+          id="first-name"
+          placeholder="First Name"
+        />
+        <input
+          class="bg-medium-blue/15 text-dark-blue py-4 px-6 w-full outline-none placeholder:text-gray-500"
+          type="text"
+          name="last-name"
+          id="last-name"
+          placeholder="Last Name"
+        />
+        <input
+          class="bg-medium-blue/15 text-dark-blue py-4 px-6 w-full outline-none placeholder:text-gray-500"
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Email"
+        />
+        <input
+          class="bg-medium-blue/15 text-dark-blue py-4 px-6 w-full outline-none placeholder:text-gray-500"
+          type="tel"
+          name="phone"
+          id="phone"
+          placeholder="Phone"
+        />
+        <textarea
+          class="bg-medium-blue/15 text-dark-blue py-4 px-6 w-full outline-none placeholder:text-gray-500 col-span-2 h-36"
+          name="message"
+          id="message"
+          placeholder="What is your goal?"></textarea>
+      </div>
+      <a
+        href="#"
+        class="block font-medium uppercase py-4 px-14 bg-dark-blue w-fit rounded-full text-white hover:bg-mustard-yellow duration-300"
+        >Submit</a
+      >
+    </div>
+  </section>
+</BaseLayout>
