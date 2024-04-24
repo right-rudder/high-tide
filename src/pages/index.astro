@@ -127,14 +127,14 @@ import { latestPosts } from "../data/latestPosts.js";
           </div>
         </div>
       </div>
-      <div class="flex-1">
-        <video controls poster={Thumbnail.src} class="w-full">
-          <source
-            src="https://dl.dropboxusercontent.com/scl/fi/z05enxbp8tx5fbw9v5kuv/Kyle-Sapp-Testimonial.mp4?rlkey=jp08lj9zj318cwzw0iizmx97e&dl=0"
-            type="video/mp4"
-          />
-          Your browser does not support the video tag.
-        </video>
+      <div class="flex-1 w-full">
+        <iframe
+          class="aspect-video w-full"
+          src="https://www.youtube.com/embed/2jVkLit8I4k?si=Yb9MGwdyaAdzpfZQ"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen></iframe>
       </div>
     </div>
   </section>
