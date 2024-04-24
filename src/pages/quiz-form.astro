@@ -1,0 +1,493 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Banner from "../assets/private-pilot-sits-in-multi-engine-plane.jpg";
+import { Image } from "astro:assets";
+import Intro from "../assets/first-time-pilots-intro.jpg";
+import StatCard from "../components/StatCard.astro";
+import { stats } from "../data/stats";
+import { RiTeamLine } from "react-icons/ri";
+import { IoIosArrowRoundForward } from "react-icons/io";
+import { GiExitDoor } from "react-icons/gi";
+import { MdFlightTakeoff } from "react-icons/md";
+import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
+---
+
+<BaseLayout siteTitle="Quiz Form">
+  <Header slot="header" image={Banner} title="Quiz Form" />
+
+  <section class="py-24 px-5 max-w-5xl mx-auto">
+    <form>
+      <div class="space-y-12">
+        <div class="">
+          <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+            <div class="sm:col-span-3">
+              <label
+                for="first-name"
+                class="block text-sm font-medium leading-6 text-gray-900"
+                >First name</label
+              >
+              <div class="mt-2">
+                <input
+                  type="text"
+                  name="first-name"
+                  id="first-name"
+                  autocomplete="given-name"
+                  class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                />
+              </div>
+            </div>
+
+            <div class="sm:col-span-3">
+              <label
+                for="last-name"
+                class="block text-sm font-medium leading-6 text-gray-900"
+                >Last name</label
+              >
+              <div class="mt-2">
+                <input
+                  type="text"
+                  name="last-name"
+                  id="last-name"
+                  autocomplete="family-name"
+                  class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                />
+              </div>
+            </div>
+
+            <div class="sm:col-span-3">
+              <label
+                for="email"
+                class="block text-sm font-medium leading-6 text-gray-900"
+                >Email address</label
+              >
+              <div class="mt-2">
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                />
+              </div>
+            </div>
+
+            <div class="sm:col-span-3">
+              <label
+                for="phone"
+                class="block text-sm font-medium leading-6 text-gray-900"
+                >Phone</label
+              >
+              <div class="mt-2">
+                <input
+                  id="phone"
+                  name="phone"
+                  type="tel"
+                  autocomplete="phone"
+                  class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="">
+          <div class="mt-10 space-y-10">
+            <fieldset>
+              <legend class="text-sm font-semibold leading-6 text-gray-900"
+                >What inspires you to pursue a career as a pilot?</legend
+              >
+              <p class="text-gray-500 text-sm">
+                You can select multiple options
+              </p>
+              <div class="mt-2 space-y-1">
+                <div class="relative flex gap-x-3">
+                  <div class="flex h-6 items-center">
+                    <input
+                      id="adventure"
+                      name="adventure"
+                      type="checkbox"
+                      class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                    />
+                  </div>
+                  <div class="text-sm leading-6">
+                    <label for="adventure" class="text-gray-900"
+                      >A passion for adventure</label
+                    >
+                  </div>
+                </div>
+                <div class="relative flex gap-x-3">
+                  <div class="flex h-6 items-center">
+                    <input
+                      id="opportunities"
+                      name="opportunities"
+                      type="checkbox"
+                      class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                    />
+                  </div>
+                  <div class="text-sm leading-6">
+                    <label for="opportunities" class="text-gray-900"
+                      >Professional growth and opportunities</label
+                    >
+                  </div>
+                </div>
+                <div class="relative flex gap-x-3">
+                  <div class="flex h-6 items-center">
+                    <input
+                      id="hobby"
+                      name="hobby"
+                      type="checkbox"
+                      class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                    />
+                  </div>
+                  <div class="text-sm leading-6">
+                    <label for="hobby" class="text-gray-900"
+                      >Personal hobby</label
+                    >
+                  </div>
+                </div>
+                <div class="relative flex gap-x-3">
+                  <div class="flex h-6 items-center">
+                    <input
+                      id="other"
+                      name="other"
+                      type="checkbox"
+                      class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                    />
+                  </div>
+                  <div class="text-sm leading-6">
+                    <label for="other" class="text-gray-900"
+                      >Other (please specify)</label
+                    >
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+        </div>
+
+        <div class="col-span-full">
+          <label
+            for="long-term-goals"
+            class="block text-sm font-medium leading-6 text-gray-900"
+            >What are your long-term goals within the aviation industry?</label
+          >
+          <div class="mt-2">
+            <textarea
+              id="long-term-goals"
+              name="long-term-goals"
+              rows="3"
+              class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+            ></textarea>
+          </div>
+        </div>
+
+        <div class="">
+          <div class="mt-10 space-y-10">
+            <fieldset>
+              <legend class="text-sm font-semibold leading-6 text-gray-900"
+                >What is your current level of aviation experience?</legend
+              >
+              <div class="mt-2 space-y-1">
+                <div class="flex items-center gap-x-3">
+                  <input
+                    id="no-experience"
+                    name="experience"
+                    type="radio"
+                    class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                  />
+                  <label
+                    for="no-experience"
+                    class="block text-sm leading-6 text-gray-900"
+                    >No prior experience with piloting aircraft</label
+                  >
+                </div>
+                <div class="flex items-center gap-x-3">
+                  <input
+                    id="simulator-experience"
+                    name="experience"
+                    type="radio"
+                    class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                  />
+                  <label
+                    for="simulator-experience"
+                    class="block text-sm leading-6 text-gray-900"
+                    >Experience with flight simulators or drones</label
+                  >
+                </div>
+                <div class="flex items-center gap-x-3">
+                  <input
+                    id="flight-training"
+                    name="experience"
+                    type="radio"
+                    class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                  />
+                  <label
+                    for="flight-training"
+                    class="block text-sm leading-6 text-gray-900"
+                    >Some flight training but haven't soloed yet</label
+                  >
+                </div>
+                <div class="flex items-center gap-x-3">
+                  <input
+                    id="checkride"
+                    name="experience"
+                    type="radio"
+                    class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                  />
+                  <label
+                    for="checkride"
+                    class="block text-sm leading-6 text-gray-900"
+                    >Currently working towards completing a checkride</label
+                  >
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend class="text-sm font-semibold leading-6 text-gray-900"
+                >Which learning style resonates with you the most?</legend
+              >
+              <div class="mt-2 space-y-1">
+                <div class="flex items-center gap-x-3">
+                  <input
+                    id="practical"
+                    name="learning-experience"
+                    type="radio"
+                    class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                  />
+                  <label
+                    for="practical"
+                    class="block text-sm leading-6 text-gray-900"
+                    >Hands-on, practical learning</label
+                  >
+                </div>
+                <div class="flex items-center gap-x-3">
+                  <input
+                    id="visual"
+                    name="learning-experience"
+                    type="radio"
+                    class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                  />
+                  <label
+                    for="visual"
+                    class="block text-sm leading-6 text-gray-900"
+                    >Visual learning through observation</label
+                  >
+                </div>
+                <div class="flex items-center gap-x-3">
+                  <input
+                    id="reading"
+                    name="learning-experience"
+                    type="radio"
+                    class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                  />
+                  <label
+                    for="reading"
+                    class="block text-sm leading-6 text-gray-900"
+                    >Learning through reading and studying materials</label
+                  >
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend class="text-sm font-semibold leading-6 text-gray-900"
+                >Do you prefer a structured learning environment with clearly
+                defined expectations, or a more flexible, adaptable approach?</legend
+              >
+              <div class="mt-2 space-y-1">
+                <div class="flex items-center gap-x-3">
+                  <input
+                    id="structured"
+                    name="approach"
+                    type="radio"
+                    class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                  />
+                  <label
+                    for="structured"
+                    class="block text-sm leading-6 text-gray-900"
+                    >I prefer a structured approach</label
+                  >
+                </div>
+                <div class="flex items-center gap-x-3">
+                  <input
+                    id="flexible"
+                    name="approach"
+                    type="radio"
+                    class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                  />
+                  <label
+                    for="flexible"
+                    class="block text-sm leading-6 text-gray-900"
+                    >I prefer a flexible approach</label
+                  >
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend class="text-sm font-semibold leading-6 text-gray-900"
+                >What kind of guidance and support would you prefer from your
+                flight instructor?
+              </legend>
+              <p class="text-gray-500 text-sm">
+                You can select multiple options
+              </p>
+              <div class="mt-2 space-y-1">
+                <div class="relative flex gap-x-3">
+                  <div class="flex h-6 items-center">
+                    <input
+                      id="personalized-approach"
+                      name="personalized-approach"
+                      type="checkbox"
+                      class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                    />
+                  </div>
+                  <div class="text-sm leading-6">
+                    <label for="personalized-approach" class="text-gray-900"
+                      >A personalized approach tailored to my individual
+                      learning needs and preferences</label
+                    >
+                  </div>
+                </div>
+                <div class="relative flex gap-x-3">
+                  <div class="flex h-6 items-center">
+                    <input
+                      id="hands-on-involvement"
+                      name="hands-on-involvement"
+                      type="checkbox"
+                      class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                    />
+                  </div>
+                  <div class="text-sm leading-6">
+                    <label for="hands-on-involvement" class="text-gray-900"
+                      >Hands-on involvement from the instructor, with constant
+                      feedback and guidance</label
+                    >
+                  </div>
+                </div>
+                <div class="relative flex gap-x-3">
+                  <div class="flex h-6 items-center">
+                    <input
+                      id="structured-approach"
+                      name="structured-approach"
+                      type="checkbox"
+                      class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                    />
+                  </div>
+                  <div class="text-sm leading-6">
+                    <label for="structured-approach" class="text-gray-900"
+                      >A structured approach with clear goals and objectives</label
+                    >
+                  </div>
+                </div>
+                <div class="relative flex gap-x-3">
+                  <div class="flex h-6 items-center">
+                    <input
+                      id="guidance"
+                      name="guidance"
+                      type="checkbox"
+                      class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                    />
+                  </div>
+                  <div class="text-sm leading-6">
+                    <label for="guidance" class="text-gray-900"
+                      >Supportive and encouraging guidance, with a focus on
+                      building confidence</label
+                    >
+                  </div>
+                </div>
+                <div class="relative flex gap-x-3">
+                  <div class="flex h-6 items-center">
+                    <input
+                      id="other2"
+                      name="other2"
+                      type="checkbox"
+                      class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                    />
+                  </div>
+                  <div class="text-sm leading-6">
+                    <label for="other2" class="text-gray-900"
+                      >Other (please specify)</label
+                    >
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+
+            <div class="col-span-full">
+              <label
+                for="lift-generation"
+                class="block text-sm font-medium leading-6 text-gray-900"
+                >Do you know how a wing generates lift?</label
+              >
+              <div class="mt-2">
+                <textarea
+                  id="lift-generation"
+                  name="lift-generation"
+                  rows="3"
+                  class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                ></textarea>
+              </div>
+            </div>
+
+            <div class="col-span-full">
+              <label
+                for="expectations"
+                class="block text-sm font-medium leading-6 text-gray-900"
+                >Is there anything else you'd like us to know about your
+                interests or expectations regarding flight training?</label
+              >
+              <div class="mt-2">
+                <textarea
+                  id="expectations"
+                  name="expectations"
+                  rows="3"
+                  class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                ></textarea>
+              </div>
+            </div>
+
+            <fieldset>
+              <legend class="text-sm font-semibold leading-6 text-gray-900"
+                >Would you be interested in scheduling a visit to High Tide
+                Aviation?</legend
+              >
+              <div class="mt-2 space-y-1">
+                <div class="flex items-center gap-x-3">
+                  <input
+                    id="yes"
+                    name="visit"
+                    type="radio"
+                    class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                  />
+                  <label for="yes" class="block text-sm leading-6 text-gray-900"
+                    >Yes</label
+                  >
+                </div>
+                <div class="flex items-center gap-x-3">
+                  <input
+                    id="no"
+                    name="visit"
+                    type="radio"
+                    class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                  />
+                  <label for="no" class="block text-sm leading-6 text-gray-900"
+                    >No</label
+                  >
+                </div>
+              </div>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+
+      <button
+        type="submit"
+        class="block font-medium uppercase mt-10 py-4 px-14 bg-dark-blue w-fit rounded-full text-white hover:bg-mustard-yellow duration-300"
+        >Submit</button
+      >
+    </form>
+  </section>
+</BaseLayout>
