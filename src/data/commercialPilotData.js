@@ -4,7 +4,7 @@ const privatePilot = {
   imagePath: "/src/assets/commercial-pilot.jpg",
   title: "Commercial Pilot",
   subtitle: "What is a Commercial Pilot Certificate?",
-  locations: ["Southport NC", "St.Simons Island GA"],
+  locations: ["Southport, NC", "St. Simons Island, GA"],
   description: [
     "A Commercial Pilot Certificate enables qualified pilots to operate aircraft for compensation or hire, a crucial step for anyone aiming to pursue a career in aviation. This certification allows pilots to participate in diverse operations such as cargo transport, aerial surveying, and passenger carrying, among others.",
     "Tide Aviation offers this advanced training at both Southport, NC, and St. Simons Island, GA, providing aspiring commercial pilots with training that includes advanced flight techniques, extensive knowledge of aviation regulations, and the professional conduct required of a commercial pilot.",

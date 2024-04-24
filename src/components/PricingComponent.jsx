@@ -8,7 +8,7 @@ import PricingComponentPlaceholder from "./PricingComponentPlaceholder";
 
 const locations = [
   { value: "southport", label: "Southport" },
-  { value: "simons", label: "St.Simons Island" },
+  { value: "simons", label: "St. Simons Island" },
 ];
 
 function classNames(...classes) {

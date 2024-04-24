@@ -1,5 +1,5 @@
 ---
-const { review, name } = Astro.props;
+const { review, name, title } = Astro.props;
 import { PiQuotes } from "react-icons/pi";
 import { IoIosStar } from "react-icons/io";
 ---
@@ -22,7 +22,7 @@ import { IoIosStar } from "react-icons/io";
       </div>
       <div class="flex flex-col items-end">
         <p class="text-xl text-right text-dark-blue font-semibold">{name}</p>
-        <p class="uppercase tracking-widest text-xs font-light">Student</p>
+        <p class="uppercase tracking-widest text-xs font-light">{title}</p>
       </div>
     </div>
   </div>

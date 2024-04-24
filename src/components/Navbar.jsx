@@ -2,7 +2,7 @@ import MobileNavbar from "./MobileNavbar";
 import NavLink from "./NavLink";
 import { navbarLinks } from "../data/navbarLinks.js";
 import { useEffect, useState } from "react";
-import { PiShoppingCartLight } from "react-icons/pi";
+import { IoStorefront } from "react-icons/io5";
 import { FaPhone } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import HighTideLogo from "../assets/high-tide-aviation-logo-gradation.png";
@@ -87,14 +87,14 @@ const Navbar = ({ pathname }) => {
                 </div>
               </div>
               <div className="hidden lg:flex items-center gap-3 text-white border-l border-white/20 pl-10">
-                <PiShoppingCartLight className="size-8 cursor-pointer hover:text-white/80 duration-300" />
+                <IoStorefront className="size-8 cursor-pointer hover:text-mustard-yellow duration-300 shrink-0" />
                 <a
                   href={`tel:${PHONE_NUMBER}`}
                   className="group border p-3 border-mustard-yellow rounded-full bg-mustard-yellow hover:bg-white hover:border-white duration-300"
                 >
                   <FaPhone className="size-4 group-hover:text-dark-blue duration-300" />
                 </a>
-                <div className="hidden 2xl:block">
+                <div className="hidden xl:block shrink-0">
                   <p className="text-sm text-white/80">Call Anytime</p>
                   <a
                     href={`tel:${PHONE_NUMBER}`}

@@ -4,7 +4,7 @@ const privatePilot = {
   imagePath: "/src/assets/private-pilot.jpg",
   title: "Private Pilot",
   subtitle: "What is a Private Pilot Certificate?",
-  locations: ["Southport NC", "St.Simons Island GA"],
+  locations: ["Southport, NC", "St. Simons Island, GA"],
   description: [
     "A Private Pilot Certificate is the first significant step for individuals aspiring to pilot aircraft. It authorizes the holder to operate aircraft for personal and business purposes under visual flight rules (VFR), which require clear weather conditions where the pilot must be able to see where the aircraft is going. This certification opens up new horizons, allowing pilots to fly single-engine aircraft during the day or night, provided they stay out of commercial airspace and adhere to all aviation regulations.",
     "The journey to obtaining a Private Pilot Certificate involves rigorous training, both practical and theoretical. Candidates must complete a minimum number of flying hours and pass a series of written exams that test their understanding of aircraft operations, navigation, weather, and aviation law. The training equips pilots with the necessary skills to handle an aircraft safely, understand weather impacts on flying, and make informed decisions in real-time flying situations. Ultimately, this certification lays the foundational skills for all advanced pilot training.",

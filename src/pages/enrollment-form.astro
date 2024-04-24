@@ -21,7 +21,7 @@ import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
   />
 
   <section class="py-16 px-5">
-    <div class="flex flex-col items-center">
+    <form class="flex flex-col items-center">
       <h2 class="uppercase text-medium-blue font-bold tracking-widest">
         Enrollment Process
       </h2>
@@ -37,6 +37,7 @@ import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
           name="first-name"
           id="first-name"
           placeholder="First Name"
+          required
         />
         <input
           class="bg-medium-blue/15 text-dark-blue py-4 px-6 w-full outline-none placeholder:text-gray-500"
@@ -44,6 +45,7 @@ import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
           name="last-name"
           id="last-name"
           placeholder="Last Name"
+          required
         />
         <input
           class="bg-medium-blue/15 text-dark-blue py-4 px-6 w-full outline-none placeholder:text-gray-500"
@@ -51,6 +53,7 @@ import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
           name="email"
           id="email"
           placeholder="Email"
+          required
         />
         <input
           class="bg-medium-blue/15 text-dark-blue py-4 px-6 w-full outline-none placeholder:text-gray-500"
@@ -58,6 +61,7 @@ import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
           name="phone"
           id="phone"
           placeholder="Phone"
+          required
         />
 
         <fieldset>
@@ -93,6 +97,7 @@ import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
                 name="training-type"
                 type="radio"
                 class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
+                required
               />
               <label for="both" class="block leading-6 text-gray-600"
                 >Both</label
@@ -221,11 +226,11 @@ import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
           id="message"
           placeholder="Feel free to elaborate"></textarea>
       </div>
-      <a
-        href="#"
+      <button
+        type="submit"
         class="block font-medium uppercase py-4 px-14 bg-dark-blue w-fit rounded-full text-white hover:bg-mustard-yellow duration-300"
-        >Submit</a
+        >Submit</button
       >
-    </div>
+    </form>
   </section>
 </BaseLayout>

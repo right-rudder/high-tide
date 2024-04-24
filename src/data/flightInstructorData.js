@@ -4,7 +4,7 @@ const privatePilot = {
   imagePath: "/src/assets/flight-instructor.jpg",
   title: "Flight Instructor",
   subtitle: "What is a CFI/CFII?",
-  locations: ["Southport NC", "St.Simons Island GA"],
+  locations: ["Southport, NC", "St. Simons Island, GA"],
   description: [
     "A Certified Flight Instructor (CFI) certificate authorizes pilots to teach aspiring aviators the skills needed to become pilots themselves, while a Certified Flight Instructor – Instrument (CFII) allows instructors to teach instrument flying. Both certifications are crucial for pilots who wish to advance their careers in aviation education, enabling them to provide training for Private, Commercial, and Instrument Rating certifications. High Tide Aviation in Southport, NC, and St. Simons Island, GA, offers extensive training for these credentials, ensuring instructors are well-prepared to educate new pilots under varying flight conditions.",
     "The CFI program focuses on developing a pilot’s ability to teach theory, flight techniques, and safety procedures in single-engine aircraft, while the CFII program extends these teaching capabilities to include instrument flying. These programs are designed not only to pass on knowledge but also to enhance the communication and leadership skills of the instructors. Candidates undergo rigorous practical training, learning to deliver instructions effectively and handle various in-flight situations. The pathway to these certifications requires a deep understanding of aviation theory, demonstrated flight proficiency, and successful completion of FAA written and practical exams.",

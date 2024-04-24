@@ -25,7 +25,7 @@ export const flightPrograms = [
   },
   {
     heading: "Helicopter Training",
-    subheading: "Exclusively in Southport",
+    subheading: "Southport Exclusive",
     description:
       "Our helicopter training is reknowned across the banks of the Southport, North Carolina region. Come train with High Tide and earn your helicopter certification.",
     imagePath: "/src/assets/flight-program-4.jpg",

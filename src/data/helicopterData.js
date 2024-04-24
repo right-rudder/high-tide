@@ -4,7 +4,7 @@ const privatePilot = {
   title: "Helicopter Training",
   subtitle:
     "What are the Different Levels of Helicopter Training Certificates?",
-  locations: ["Southport NC", "St.Simons Island GA"],
+  locations: ["Southport, NC", "St. Simons Island, GA"],
   description: [
     "High Tide Aviation in Southport, NC offers a complete progression of helicopter training programs that cater to aspiring pilots at various stages of their aviation careers. Each level of certification builds upon the previous one, starting from the foundational Private Pilot Certificate to more advanced certifications such as the Instrument Rating and Commercial Pilot Certificate, and culminating in the Certified Flight Instructor (CFI) and Certified Flight Instructor – Instrument (CFII) certifications.",
     "Private Pilot Helicopter Certificate: This initial certification allows individuals to fly helicopters for personal use and lays the groundwork for all subsequent aviation training. It requires at least 40 hours of flight time, which includes 30 hours of dual instruction and 10 hours of solo flight. Trainees also undergo ground instruction to cover essential aviation topics such as aerodynamics, navigation, and weather conditions.",

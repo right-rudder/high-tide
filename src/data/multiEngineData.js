@@ -4,7 +4,7 @@ const privatePilot = {
   imagePath: "/src/assets/multi-engine.jpg",
   title: "Multi-Engine Rating",
   subtitle: "What is a Multi-Engine Rating?",
-  locations: ["Southport NC"],
+  locations: ["Southport, NC"],
   description: [
     "A Multi-Engine Rating certifies pilots to operate aircraft with more than one engine, enhancing their flight capabilities and opening opportunities in a variety of aviation sectors, including commercial and cargo transport. High Tide Aviation, located in Southport, NC, offers multi-engine training in the Baron B55, equipped with a G500 glass panel. This training allows pilots to experience the added performance and safety of flying multi-engine aircraft under both VFR and IFR conditions. The course focuses on the complexities associated with managing multiple engines, which include increased power, different handling characteristics during normal and emergency operations, and advanced navigation techniques.",
     "The training for a Multi-Engine Rating includes detailed instruction on preflight procedures, airport operations, multi-engine aerodynamics, engine failure protocols, and high-altitude operations, among others. Typically, pilots require about 10 hours of flight training to prepare for the practical checkride, which includes an oral exam but no written test. High Tide Aviation's program is designed to be intensive and fast-paced, ideally completed over 1-2 weeks to ensure that pilots retain the skills and knowledge they acquire.",
