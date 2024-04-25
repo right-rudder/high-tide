@@ -105,7 +105,7 @@ function getLastWord(str) {
                   <FaArrowAltCircleRight className="text-mustard-yellow size-5 flex-shrink-0 mt-1" />
                   <p class="text-dark-blue">
                     <span class="font-semibold">{item.heading}: </span>
-                    {item.description}
+                    <span class="text-dark-blue/80">{item.description}</span>
                   </p>
                 </li>
               ))
@@ -126,7 +126,7 @@ function getLastWord(str) {
                   <FaArrowAltCircleRight className="text-mustard-yellow size-5 flex-shrink-0 mt-1" />
                   <p class="text-dark-blue">
                     <span class="font-semibold">{item.heading}: </span>
-                    {item.description}
+                    <span class="text-dark-blue/80">{item.description}</span>
                   </p>
                 </li>
               ))
@@ -144,9 +144,7 @@ function getLastWord(str) {
   </section>
 
   <section class="py-16 px-5 bg-dark-blue">
-    <div class="max-w-6xl mx-auto">
-      <PricingComponent client:visible tiers={tiers} />
-    </div>
+    <PricingComponent client:visible tiers={tiers} program={title} />
   </section>
 
   <section class="max-w-6xl mx-auto py-16 px-5">

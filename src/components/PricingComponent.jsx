@@ -15,19 +15,21 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function PricingComponent({ tiers }) {
+export default function PricingComponent({ tiers, program }) {
   const [location, setLocation] = useState(locations[0]);
 
   return (
-    <div className="mx-auto max-w-7xl px-6 lg:px-8">
-      {/* <div className="mx-auto max-w-4xl text-center">
+    <div
+      className={`mx-auto ${program === "Helicopter Training" ? "max-w-[100rem]" : "max-w-7xl"} px-6 lg:px-8`}
+    >
+      <div className="mx-auto max-w-4xl text-center">
         <h2 className="uppercase text-mustard-yellow font-bold tracking-widest">
-          Pricing
+          Costs Estimates
         </h2>
-        <p className="text-5xl max-w-xl mx-auto font-bold leading-tight text-white">
+        {/* <p className="text-5xl max-w-xl mx-auto font-bold leading-tight text-white">
           We can remove this title if not needed
-        </p>
-      </div> */}
+        </p> */}
+      </div>
       <div className="mt-7 flex justify-center">
         <RadioGroup
           value={location}
@@ -54,7 +56,7 @@ export default function PricingComponent({ tiers }) {
         </RadioGroup>
       </div>
       <div
-        className={`isolate mx-auto mt-10 grid max-w-md grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-${tiers[location.value].length}`}
+        className={`isolate mx-auto mt-10 grid gap-8 lg:mx-0 lg:max-w-none ${program === "Helicopter Training" && location.value === "southport" ? "xl:grid-cols-4 md:grid-cols-2" : "lg:grid-cols-" + tiers[location.value].length}`}
       >
         {tiers[location.value].length == 0 ? (
           <PricingComponentPlaceholder />
@@ -62,48 +64,53 @@ export default function PricingComponent({ tiers }) {
           tiers[location.value].map((tier) => (
             <div
               key={tier.id}
+              id={location.value}
               className={classNames(
                 tier.featured
                   ? "bg-gray-900 ring-gray-900"
                   : "ring-gray-200 bg-white",
-                "rounded-3xl p-8 ring-1 xl:p-10 max-w-md mx-auto",
+                "rounded-3xl p-8 ring-1 xl:p-10 max-w-[26rem] mx-auto flex flex-col",
               )}
             >
-              <h3
-                id={tier.id}
-                className={classNames(
-                  tier.featured ? "text-white" : "text-gray-900",
-                  "text-lg font-semibold leading-8",
-                )}
+              <div
+                className={`flex flex-col ${location.value === "southport" && program === "Ground School" ? "lg:min-h-64" : ""} ${location.value === "southport" && program === "Helicopter Training" ? "xl:min-h-40" : ""}`}
               >
-                {tier.name}
-              </h3>
-              <p
-                className={classNames(
-                  tier.featured ? "text-gray-300" : "text-gray-600",
-                  "mt-4 text-sm leading-6",
+                <h3
+                  id={tier.id}
+                  className={classNames(
+                    tier.featured ? "text-white" : "text-gray-900",
+                    "text-lg font-semibold leading-8",
+                  )}
+                >
+                  {tier.name}
+                </h3>
+                <p
+                  className={classNames(
+                    tier.featured ? "text-gray-300" : "text-gray-600",
+                    "mt-4 text-sm leading-6",
+                  )}
+                >
+                  {tier.description}
+                </p>
+                {tier.duration && (
+                  <p className="flex mt-2 gap-x-2 text-sm leading-6">
+                    <FaRegHourglassHalf className="text-mustard-yellow size-3 flex-shrink-0 mt-[5.5px]" />
+                    <span className="text-gray-600">{tier.duration}</span>
+                  </p>
                 )}
-              >
-                {tier.description}
-              </p>
-              {tier.duration && (
-                <p className="flex mt-2 gap-x-2 text-sm leading-6">
-                  <FaRegHourglassHalf className="text-mustard-yellow size-3 flex-shrink-0 mt-[5.5px]" />
-                  <span className="text-gray-600">{tier.duration}</span>
-                </p>
-              )}
-              {tier.schedule && (
-                <p className="flex gap-x-2 text-sm leading-6">
-                  <FaCalendar className="text-mustard-yellow size-3 flex-shrink-0 mt-[5.5px]" />
-                  <span className="text-gray-600">{tier.schedule}</span>
-                </p>
-              )}
-              {tier.venue && (
-                <p className="flex gap-x-2 text-sm leading-6">
-                  <FaLocationDot className="text-mustard-yellow size-3 flex-shrink-0 mt-[5.5px]" />
-                  <span className="text-gray-600">{tier.venue}</span>
-                </p>
-              )}
+                {tier.schedule && (
+                  <p className="flex gap-x-2 text-sm leading-6">
+                    <FaCalendar className="text-mustard-yellow size-3 flex-shrink-0 mt-[5.5px]" />
+                    <span className="text-gray-600">{tier.schedule}</span>
+                  </p>
+                )}
+                {tier.venue && (
+                  <p className="flex gap-x-2 text-sm leading-6">
+                    <FaLocationDot className="text-mustard-yellow size-3 flex-shrink-0 mt-[5.5px]" />
+                    <span className="text-gray-600">{tier.venue}</span>
+                  </p>
+                )}
+              </div>
               <p className="mt-6 flex items-baseline gap-x-1">
                 <span
                   className={classNames(

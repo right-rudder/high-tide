@@ -31,7 +31,7 @@ const privatePilot = {
       {
         heading: "Medical Certificate",
         description:
-          "Must possess a current Class 1 medical certificate issued by an FAA-certified aviation medical examiner, ensuring fitness to fly at the commercial level.",
+          "Must possess a current medical certificate issued by an FAA-certified aviation medical examiner, ensuring fitness to fly at the commercial level.",
       },
     ],
   },

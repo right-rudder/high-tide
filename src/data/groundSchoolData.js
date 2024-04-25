@@ -20,12 +20,12 @@ const groundSchool = {
       {
         heading: "Medical Certificate",
         description:
-          "Obtain a Class 2 medical certificate from an FAA-certified aviation medical examiner.",
+          "Obtain a medical certificate from an FAA-certified aviation medical examiner.",
       },
       {
         heading: "Minimum Age",
         description:
-          "Must be at least 17 years old to enroll in the Private Pilot training program.",
+          "Must be at least 17 years old to obtain the Private Pilot training program.",
       },
     ],
   },
