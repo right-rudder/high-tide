@@ -4,7 +4,7 @@ const privatePilot = {
   title: "Helicopter Training",
   subtitle:
     "What are the Different Levels of Helicopter Training Certificates?",
-  locations: ["Southport, NC", "St. Simons Island, GA"],
+  locations: ["Southport, NC"],
   description: [
     "High Tide Aviation in Southport, NC offers a complete progression of helicopter training programs that cater to aspiring pilots at various stages of their aviation careers. Each level of certification builds upon the previous one, starting from the foundational Private Pilot Certificate to more advanced certifications such as the Instrument Rating and Commercial Pilot Certificate, and culminating in the Certified Flight Instructor (CFI) and Certified Flight Instructor – Instrument (CFII) certifications.",
     "Private Pilot Helicopter Certificate: This initial certification allows individuals to fly helicopters for personal use and lays the groundwork for all subsequent aviation training. It requires at least 40 hours of flight time, which includes 30 hours of dual instruction and 10 hours of solo flight. Trainees also undergo ground instruction to cover essential aviation topics such as aerodynamics, navigation, and weather conditions.",
@@ -67,7 +67,7 @@ const privatePilot = {
           "For Airplane Certificate Holders: $21,762",
         ],
         featured: false,
-        cta: "Enroll in Private Pilot Program",
+        cta: "Enroll Now",
       },
       {
         name: "Helicopter Instrument Rating",
@@ -82,7 +82,7 @@ const privatePilot = {
           "Subsidized Cost for Airplane Instrument-Rated Pilots: $20,925",
         ],
         featured: false,
-        cta: "Enroll in Instrument Rating Program",
+        cta: "Enroll Now",
       },
       {
         name: "Commercial Pilot Helicopter Certificate",
@@ -97,21 +97,21 @@ const privatePilot = {
           "For Airplane Commercial Pilots Adding Helicopter Rating: $36,050",
         ],
         featured: false,
-        cta: "Enroll in Commercial Pilot Program",
+        cta: "Enroll Now",
       },
       {
-        name: "Helicopter Certified Flight Instructor (CFI) & CFII Certificates",
+        name: "Helicopter Certified Flight Instructor",
         id: "tier-helicopter-cfi-cfii",
         href: "#",
         price: "$12,400",
-        description: "Take the next step in your helicopter flying career.",
+        description: "Training available for both CFI and CFII.",
         features: [
           "15 hours of dual instruction in R-44",
           "Optional 20 hours of ground instruction",
           "Includes books, FAA written exams, and checkride",
         ],
         featured: false,
-        cta: "Enroll in CFI Program",
+        cta: "Enroll Now",
       },
     ],
     simons: [

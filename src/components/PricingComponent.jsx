@@ -24,7 +24,7 @@ export default function PricingComponent({ tiers, program }) {
     >
       <div className="mx-auto max-w-4xl text-center">
         <h2 className="uppercase text-mustard-yellow font-bold tracking-widest">
-          Costs Estimates
+          Cost Estimates
         </h2>
         {/* <p className="text-5xl max-w-xl mx-auto font-bold leading-tight text-white">
           We can remove this title if not needed
@@ -73,7 +73,7 @@ export default function PricingComponent({ tiers, program }) {
               )}
             >
               <div
-                className={`flex flex-col ${location.value === "southport" && program === "Ground School" ? "lg:min-h-64" : ""} ${location.value === "southport" && program === "Helicopter Training" ? "xl:min-h-40" : ""}`}
+                className={`flex flex-col ${location.value === "southport" && program === "Ground School" ? "lg:min-h-64" : ""} ${location.value === "southport" && program === "Helicopter Training" ? "xl:min-h-32" : ""}`}
               >
                 <h3
                   id={tier.id}

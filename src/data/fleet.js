@@ -178,7 +178,7 @@ export const fleet = [
     usableFuel: "29.5 gal",
     model: "Robinson R44 Raven I",
     equipment: [],
-    imagePath: "/src/assets/N830FM.jpg",
+    imagePath: "/src/assets/helicopter-r44-high-tide-aviation-n570h.jpg",
     description: [
       "The Robinson R44 helicopter is an excellent training aircraft for those pursuing a pilot license in helicopter operation. Known for its reliability and cost-effectiveness, the R44 is an ideal platform for new pilots to develop a strong foundation in helicopter flying. The training program adheres to FAA Part 61 requirements, ensuring comprehensive flight instruction that includes 30 hours of dual instruction and 10 hours of solo flight, totaling a minimum of 40 hours in the cockpit.",
       "High Tide Aviation's use of the R44 emphasizes a thorough understanding of helicopter mechanics and operations too, making it an excellent starting point for aspiring helicopter pilots.",
