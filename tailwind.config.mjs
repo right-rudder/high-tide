@@ -42,7 +42,7 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
   safelist: [
     "[counter-set:_num_var(--num-hours)]",
     "[counter-set:_num_var(--num-instructors)]",

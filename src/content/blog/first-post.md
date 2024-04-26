@@ -1,16 +1,26 @@
 ---
-title: 'First post'
-description: 'Lorem ipsum dolor sit amet'
-pubDate: 'Jul 08 2022'
-heroImage: '/blog-placeholder-3.jpg'
+title: "Student Pilot & FAA Medical Certificates"
+description: "All student pilots are required to have a Student Pilot Certificate before your solo flight. A FAA Medical Certificate is also needed depending on your training goals."
+pubDate: "Jan 23, 2024 "
+heroImage: "/src/assets/aircraft-services-banner.jpg"
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
+All student pilots are required to have a Student Pilot Certificate before your solo flight. A FAA Medical Certificate is also needed depending on your training goals.
 
-Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum quisque non tellus. Habitasse platea dictumst quisque sagittis purus sit amet. Tellus molestie nunc non blandit massa. Cursus vitae congue mauris rhoncus. Accumsan tortor posuere ac ut. Fringilla urna porttitor rhoncus dolor. Elit ullamcorper dignissim cras tincidunt lobortis. In cursus turpis massa tincidunt dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim nunc. Bibendum neque egestas congue quisque egestas diam. Cras ornare arcu dui vivamus arcu felis bibendum. Dignissim suspendisse in est ante in nibh mauris. Sed tempus urna et pharetra pharetra massa massa ultricies mi.
+For your Student Pilot Certificate, you must complete an application through the Integrated Airman Certification and Rating Application (IACRA) website. You’ll obtain a unique FAA tracking number or FTN. Your flight instructor needs to verify your identity before your application can be completed and submitted. The student pilot certificate will be mailed to the address provided by you on the application within a few weeks and will be available to download from IACRA within a few days.
 
-Mollis nunc sed id semper risus in. Convallis a cras semper auctor neque. Diam sit amet nisl suscipit. Lacus viverra vitae congue eu consequat ac felis donec. Egestas integer eget aliquet nibh praesent tristique magna sit amet. Eget magna fermentum iaculis eu non diam. In vitae turpis massa sed elementum. Tristique et egestas quis ipsum suspendisse ultrices. Eget lorem dolor sed viverra ipsum. Vel turpis nunc eget lorem dolor sed viverra. Posuere ac ut consequat semper viverra nam. Laoreet suspendisse interdum consectetur libero id faucibus. Diam phasellus vestibulum lorem sed risus ultricies tristique. Rhoncus dolor purus non enim praesent elementum facilisis. Ultrices tincidunt arcu non sodales neque. Tempus egestas sed sed risus pretium quam vulputate. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Fringilla urna porttitor rhoncus dolor purus non. Amet dictum sit amet justo donec enim.
+A FAA Medical Certificate is needed prior to flying solo. FAA Medical Certificate’s are issued by an FAA Aviation Medical Examiner (AME). These physicians have experience in aviation safety and aviation medicine. Should you have any issues that may medically disqualify you or slow your medical approval, speak with your flight instructor prior to scheduling with an AME. You can also check out Title 14 Code of Federal Regulations (CFR) Part 67 for more information.
 
-Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Tortor posuere ac ut consequat semper viverra. Tellus mauris a diam maecenas sed enim ut sem viverra. Venenatis urna cursus eget nunc scelerisque viverra mauris in. Arcu ac tortor dignissim convallis aenean et tortor at. Curabitur gravida arcu ac tortor dignissim convallis aenean et tortor. Egestas tellus rutrum tellus pellentesque eu. Fusce ut placerat orci nulla pellentesque dignissim enim sit amet. Ut enim blandit volutpat maecenas volutpat blandit aliquam etiam. Id donec ultrices tincidunt arcu. Id cursus metus aliquam eleifend mi.
+When you are ready to acquire your FAA Medical Certificate, schedule an appointment with an AME and complete your application on (https://medexpress.faa.gov). Always be truthful on your application, especially with any alcohol related driving offenses. The FAA will check the National Driver Register database to verify your answers. Any false statements can lead to your certificate being revoke, and or fines.
 
-Tempus quam pellentesque nec nam aliquam sem. Risus at ultrices mi tempus imperdiet. Id porta nibh venenatis cras sed felis eget velit. Ipsum a arcu cursus vitae. Facilisis magna etiam tempor orci eu lobortis elementum. Tincidunt dui ut ornare lectus sit. Quisque non tellus orci ac. Blandit libero volutpat sed cras. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin gravida. Egestas integer eget aliquet nibh praesent tristique magna.
+The following are the types of Medical Certificates:
+
+A 1st Class medical is required when flight operations require an Air Transport Pilot (ATP) certificate. An ATP certificate is required to act as the Pilot in Command (PIC) or Captain of a scheduled airliner.
+
+A 2nd Class medical is required when flight operations require a Commercial Pilot certificate. A Commercial certificate is required essentially to get paid to be a pilot.
+
+A 3rd Class medical is required for all other flight operations that require an FAA Medical Certificate. This includes Student Pilots pursuing a Recreational or Private certificate, Recreational and Private pilots, and most Flight Instructors.
+
+For a Student, Recreational, or Private Pilot, all classes of medical certificates are valid for 60 months if obtained prior to your 40th birthday. If you obtained the medical on or after your 40th birthday, the certificate is valid for only 24 months. More detailed information about FAA Medical Certificate expirations can be found in FAA 14 CFR Part 61.
+
+If you have any questions regarding your Pilot Certificate or your Medical Certificate, please reach out to our Training Development Specialist, Justin Townsend who is always available to assist you.

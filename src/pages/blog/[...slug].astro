@@ -1,20 +1,30 @@
 ---
-import { type CollectionEntry, getCollection } from 'astro:content';
-import BlogPost from '../../layouts/BlogPost.astro';
+import { type CollectionEntry, getCollection } from "astro:content";
+import BlogPost from "../../layouts/BlogPost.astro";
 
 export async function getStaticPaths() {
-	const posts = await getCollection('blog');
-	return posts.map((post) => ({
-		params: { slug: post.slug },
-		props: post,
-	}));
+  const posts = await getCollection("blog");
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: post,
+  }));
 }
-type Props = CollectionEntry<'blog'>;
+type Props = CollectionEntry<"blog">;
 
 const post = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage } = post.data;
 const { Content } = await post.render();
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+import Banner from "../../assets/financing-banner.jpg";
 ---
 
-<BlogPost {...post.data}>
-	<Content />
-</BlogPost>
+<!-- <BlogPost {...post.data}>
+  <Content />
+</BlogPost> -->
+<BaseLayout siteTitle={title}>
+  <Header slot="header" image={Banner} title={title} />
+  <article class="max-w-3xl mx-auto py-24 prose lg:prose-xl">
+    <Content />
+  </article>
+</BaseLayout>

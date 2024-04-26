@@ -4,26 +4,36 @@ import { Image } from "astro:assets";
 import { IoPersonCircle } from "react-icons/io5";
 import { FaComments } from "react-icons/fa6";
 import { IoIosArrowRoundForward } from "react-icons/io";
+import FormattedDate from "./FormattedDate.astro";
 
-const { imagePath, title, date } = Astro.props;
+const { imagePath, title, date, blogUrl } = Astro.props;
 const images = import.meta.glob<{ default: ImageMetadata }>(
   "/src/assets/*.{jpeg,jpg,png,gif}",
 );
-if (!images[imagePath])
+if (!images[imagePath]) {
   throw new Error(
     `"${imagePath}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif}"`,
   );
+}
+
+const dateData = new Date(date);
 ---
 
-<div class="shadow-md flex flex-col">
-  <Image src={images[imagePath]()} alt={title} class="w-full" quality={10} />
-
+<a href={blogUrl} class="max-w-sm shadow-md flex flex-col group">
+  <div class="h-96 overflow-hidden shrink-0">
+    <Image
+      src={images[imagePath]()}
+      alt={title}
+      class="h-full object-cover scale-105 group-hover:scale-100 duration-700"
+      quality={50}
+    />
+  </div>
   <div class="flex flex-col bg-white py-8 px-12 gap-3 justify-between h-full">
     <div class="flex flex-col gap-3">
       <p
         class="text-white bg-medium-blue py-2 uppercase font-bold text-xs px-4 rounded-full w-fit"
       >
-        {date}
+        <FormattedDate date={dateData} />
       </p>
       <div class="flex items-center gap-3">
         <div class="flex items-center gap-1">
@@ -39,7 +49,7 @@ if (!images[imagePath])
         {title}
       </h3>
     </div>
-    <a class="flex gap-3 items-center self-end cursor-pointer group">
+    <div class="flex gap-3 items-center self-end cursor-pointer group">
       <p class="text-gray-500 text-sm">Read More</p>
       <div
         class="p-3 bg-light-blue/15 rounded-full group-hover:bg-medium-blue duration-700"
@@ -48,6 +58,6 @@ if (!images[imagePath])
           className="text-dark-blue size-6 group-hover:text-white duration-700"
         />
       </div>
-    </a>
+    </div>
   </div>
-</div>
+</a>
