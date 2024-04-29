@@ -145,7 +145,7 @@ const groundSchool = {
       subheading: "Fly for Your Career",
       description:
         "No matter how far you want to venture down the pilot career path, it all starts here.",
-      imagePath: "/src/assets/flight-program-2.jpg",
+      imagePath: "/src/assets/commercial-pilot-discussing-flight-plans.jpg",
       url: "/flight-training/commercial-pilot",
     },
     {

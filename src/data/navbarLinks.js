@@ -41,8 +41,8 @@ export const navbarLinks = [
     name: "About High Tide",
     submenu: [
       {
-        name: "The Team",
-        link: "/about/the-team",
+        name: "Our Story & Team",
+        link: "/about/our-story-and-team",
       },
       {
         name: "Fleet & Rentals",
@@ -60,11 +60,15 @@ export const navbarLinks = [
         name: "News & Events",
         link: "/blog",
       },
+      {
+        name: "Contact Us",
+        link: "/contact-us",
+      },
     ],
   },
   {
-    name: "Contact Us",
-    link: "/contact-us",
+    name: "Aerial Tours",
+    link: "#",
     submenu: [],
   },
 ];

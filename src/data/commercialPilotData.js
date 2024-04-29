@@ -62,7 +62,7 @@ const privatePilot = {
         name: "Commercial Pilot",
         id: "tier-commercial-pilot",
         href: "#",
-        price: "$27,725",
+        price: "$31,000",
         description:
           "*Assumes student already holds a private pilot license and instrument rating",
         features: [
@@ -95,7 +95,7 @@ const privatePilot = {
         name: "Commercial Pilot",
         id: "tier-commercial-pilot-simons",
         href: "#",
-        price: "$27,725",
+        price: "$31,000",
         description:
           "*Assumes student already holds a private pilot license and instrument rating",
         features: [
@@ -115,7 +115,7 @@ const privatePilot = {
         price: "Custom",
         description: "Full-range training for aspiring pilots.",
         features: [
-          "All-inclusive from Private to CFI/CFII",
+          "All-inclusive from Private to CFI/CFII/MEI",
           "Full support at your selected training location",
           "Customized training schedule",
         ],

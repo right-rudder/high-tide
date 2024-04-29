@@ -16,7 +16,6 @@ export async function getStaticPaths() {
       imagePath,
       model,
       equipment,
-      emptyWeight,
       usableFuel,
       description,
     }) => {
@@ -29,7 +28,6 @@ export async function getStaticPaths() {
           slug,
           model,
           equipment,
-          emptyWeight,
           usableFuel,
           description,
         },
@@ -45,7 +43,6 @@ const {
   slug,
   model,
   equipment,
-  emptyWeight,
   usableFuel,
   description,
 } = Astro.props;
@@ -80,7 +77,7 @@ const index = fleet.findIndex((plane) => plane.slug === slug);
         quality={10}
       />
       <div
-        class="flex w-full py-8 px-10 flex-col justify-between gap-2 lg:h-[27rem] lg:min-w-60 bg-mustard-yellow/15"
+        class="flex w-full py-8 px-10 flex-col justify-around gap-2 lg:h-[27rem] lg:min-w-60 bg-mustard-yellow/15"
       >
         <div class="flex flex-col gap-2">
           <h4 class="text-dark-blue font-medium">Model:</h4>
@@ -88,19 +85,25 @@ const index = fleet.findIndex((plane) => plane.slug === slug);
         </div>
         <hr />
         <div class="flex flex-col gap-2">
-          <h4 class="text-dark-blue font-medium">Empty Weight:</h4>
-          <p class="text-medium-blue">{emptyWeight}</p>
+          <h4 class="text-dark-blue font-medium">Tail Number:</h4>
+          <p class="text-medium-blue">{slug}</p>
         </div>
         <hr />
         <div class="flex flex-col gap-2">
           <h4 class="text-dark-blue font-medium">Usable Fuel:</h4>
           <p class="text-medium-blue">{usableFuel}</p>
         </div>
-        <hr />
-        <div class="flex flex-col gap-2">
-          <h4 class="text-dark-blue font-medium">Rental Price:</h4>
-          <p class="text-medium-blue">{rentalPrice}</p>
-        </div>
+        {
+          rentalPrice && (
+            <>
+              <hr />
+              <div class="flex flex-col gap-2">
+                <h4 class="text-dark-blue font-medium">Rental Price:</h4>
+                <p class="text-medium-blue">{rentalPrice}</p>
+              </div>
+            </>
+          )
+        }
       </div>
     </div>
 
@@ -111,23 +114,38 @@ const index = fleet.findIndex((plane) => plane.slug === slug);
           <p class="leading-loose text-gray-600">{item}</p>
         ))
       }
-      <h3 class="text-3xl text-dark-blue font-medium">Equipment</h3>
-      <ul class="grid sm:grid-cols-2 gap-3">
-        {
-          equipment?.map((item) => (
-            <li class="flex items-center gap-3">
-              <FaArrowAltCircleRight className="text-mustard-yellow size-5" />
-              <p class="text-dark-blue font-semibold">{item}</p>
-            </li>
-          ))
-        }
-      </ul>
-      <a
-        href="/contact-us"
-        class="block font-medium uppercase py-4 px-14 my-5 mx-auto bg-dark-blue w-fit rounded-full text-white hover:bg-mustard-yellow duration-300"
-      >
-        Book Now
-      </a>
+      {
+        equipment.length > 0 && (
+          <>
+            <h3 class="text-3xl text-dark-blue font-medium">Equipment</h3>
+            <ul class="grid sm:grid-cols-2 gap-3">
+              {equipment?.map((item) => (
+                <li class="flex items-center gap-3">
+                  <FaArrowAltCircleRight className="text-mustard-yellow size-5" />
+                  <p class="text-dark-blue font-semibold">{item}</p>
+                </li>
+              ))}
+            </ul>
+          </>
+        )
+      }
+      {
+        rentalPrice ? (
+          <a
+            href="/contact-us"
+            class="block font-medium uppercase py-4 px-14 my-5 mx-auto bg-dark-blue w-fit rounded-full text-white hover:bg-mustard-yellow duration-300"
+          >
+            Book Now
+          </a>
+        ) : (
+          <a
+            href="/enrollment-form"
+            class="block font-medium uppercase py-4 px-14 my-5 mx-auto bg-dark-blue w-fit rounded-full text-white hover:bg-mustard-yellow duration-300"
+          >
+            Start Training
+          </a>
+        )
+      }
       <hr />
       <div class="flex justify-between">
         <a

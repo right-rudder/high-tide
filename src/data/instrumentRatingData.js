@@ -57,7 +57,7 @@ const privatePilot = {
         name: "Instrument Rating",
         id: "tier-instrument-rating",
         href: "#",
-        price: "$11,025",
+        price: "$13,500",
         description: "*Assumes student already holds a private pilot license",
         features: [
           "40 hours of total flight time (Cessna 172)",
@@ -89,7 +89,7 @@ const privatePilot = {
         name: "Instrument Rating",
         id: "tier-instrument-rating-simons",
         href: "#",
-        price: "$11,025",
+        price: "$13,500",
         description: "*Assumes student already holds a private pilot license",
         features: [
           "40 hours of total flight time (Cessna 172)",
@@ -108,7 +108,7 @@ const privatePilot = {
         price: "Custom",
         description: "Full-range training for aspiring pilots.",
         features: [
-          "All-inclusive from Private to CFI/CFII",
+          "All-inclusive from Private to CFI/CFII/MEI",
           "Full support at your selected training location",
           "Customized training schedule",
         ],
@@ -131,7 +131,7 @@ const privatePilot = {
       subheading: "Fly for Your Career",
       description:
         "No matter how far you want to venture down the pilot career path, it all starts here.",
-      imagePath: "/src/assets/flight-program-2.jpg",
+      imagePath: "/src/assets/commercial-pilot-discussing-flight-plans.jpg",
       url: "/flight-training/commercial-pilot",
     },
     {

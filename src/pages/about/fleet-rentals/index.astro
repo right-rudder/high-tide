@@ -43,13 +43,13 @@ import PlaneCard from "../../../components/PlaneCard.astro";
           High Tide Aviation proudly provides a selection of aircraft for
           training, tours, and rentals. Our fleet is rigorously maintained and
           features advanced avionics, ensuring optimal safety, efficiency, and
-          enjoyment for pilots at all levels. Comprised of 7 Cessna 172
-          Skyhawks, 1 Beechcraft Bonanza, 2 Beechcraft Barons, and 2 Robinson
-          R44 helicopters, this diverse lineup allows us to cater to a variety
-          of flying needs and preferences, ensuring that whether you're training
-          for a new certification or simply renting for pleasure, you have
-          access to the best possible equipment. More details about rentals can
-          be found below the fleet lineup.
+          enjoyment for pilots at all levels. Comprised of Cessna 172 Skyhawks,
+          a Beechcraft Bonanza, Beechcraft Barons, and Robinson R44 helicopters,
+          this diverse lineup allows us to cater to a variety of flying needs
+          and preferences, ensuring that whether you're training for a new
+          certification or simply renting for pleasure, you have access to the
+          best possible equipment. More details about rentals can be found below
+          the fleet lineup.
         </p>
         <div class="flex flex-col sm:flex-row items-center gap-5">
           <a
@@ -66,23 +66,50 @@ import PlaneCard from "../../../components/PlaneCard.astro";
   <section id="fleet" class="py-24 px-5 bg-light-blue/10 scroll-my-20">
     <div class="max-w-xl lg:max-w-7xl mx-auto flex flex-col items-center">
       <h2 class="uppercase text-medium-blue font-bold tracking-widest">
-        Fleet
+        Available for Rent
       </h2>
       <h3 class="text-5xl text-dark-blue font-bold leading-tight mb-5">
-        Meet Our Fleet
+        Meet Our Cessna Skyhawk Fleet
       </h3>
       <div class="grid gap-8 mt-5 lg:grid-cols-2">
         {
-          fleet.map((plane) => (
-            <PlaneCard
-              name={plane.name}
-              rentalPrice={plane.rentalPrice}
-              imagePath={plane.imagePath}
-              year={plane.year}
-              slug={plane.slug}
-              model={plane.model}
-            />
-          ))
+          fleet
+            .slice(0, 7)
+            .map((plane) => (
+              <PlaneCard
+                name={plane.name}
+                rentalPrice={plane.rentalPrice}
+                imagePath={plane.imagePath}
+                slug={plane.slug}
+                model={plane.model}
+              />
+            ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 px-5 scroll-my-20">
+    <div class="max-w-xl lg:max-w-7xl mx-auto flex flex-col items-center">
+      <h2 class="uppercase text-medium-blue font-bold tracking-widest">
+        Available for Dual Instruction Only
+      </h2>
+      <h3 class="text-5xl text-dark-blue font-bold leading-tight mb-5">
+        Our Advanced Aircraft
+      </h3>
+      <div class="grid gap-8 mt-5 lg:grid-cols-2">
+        {
+          fleet
+            .slice(7)
+            .map((plane) => (
+              <PlaneCard
+                name={plane.name}
+                rentalPrice={plane.rentalPrice}
+                imagePath={plane.imagePath}
+                slug={plane.slug}
+                model={plane.model}
+              />
+            ))
         }
       </div>
     </div>

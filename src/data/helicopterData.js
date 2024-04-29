@@ -57,7 +57,7 @@ const privatePilot = {
         name: "Private Pilot Helicopter Certificate",
         id: "tier-private-pilot-helicopter",
         href: "#",
-        price: "$27,762",
+        price: "$30,000",
         description: "The foundation of your helicopter flying journey.",
         features: [
           "30 hours of dual instruction in R-44",
@@ -73,7 +73,7 @@ const privatePilot = {
         name: "Helicopter Instrument Rating",
         id: "tier-helicopter-instrument-rating",
         href: "#",
-        price: "$32,425",
+        price: "$36,000",
         description: "Elevate your helicopter piloting skills.",
         features: [
           "47 hours of dual instruction in R-44",
@@ -88,7 +88,7 @@ const privatePilot = {
         name: "Commercial Pilot Helicopter Certificate",
         id: "tier-commercial-pilot-helicopter",
         href: "#",
-        price: "$39,200",
+        price: "$43,000",
         description: "Take the next step in your helicopter flying career.",
         features: [
           "60 hours of dual instruction in R-44",
@@ -103,7 +103,7 @@ const privatePilot = {
         name: "Helicopter Certified Flight Instructor",
         id: "tier-helicopter-cfi-cfii",
         href: "#",
-        price: "$12,400",
+        price: "$14,000",
         description: "Training available for both CFI and CFII.",
         features: [
           "15 hours of dual instruction in R-44",
@@ -114,22 +114,7 @@ const privatePilot = {
         cta: "Enroll Now",
       },
     ],
-    simons: [
-      {
-        name: "Zero to Hero Program",
-        id: "tier-zero-to-hero-simons",
-        href: "#",
-        price: "Custom",
-        description: "Full-range training for aspiring pilots.",
-        features: [
-          "All-inclusive from Private to CFI/CFII",
-          "Full support at your selected training location",
-          "Customized training schedule",
-        ],
-        featured: true,
-        cta: "Contact for Custom Quote",
-      },
-    ],
+    simons: [],
   },
   futurePathways: [
     {

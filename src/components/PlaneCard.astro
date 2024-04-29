@@ -38,10 +38,14 @@ if (!images[imagePath])
         <p class="text-white">Model:</p>
         <p class="text-mustard-yellow">{model}</p>
       </div>
-      <div class="flex gap-2 text-sm sm:text-base">
-        <p class="text-white">Price:</p>
-        <p class="text-mustard-yellow">{rentalPrice}</p>
-      </div>
+      {
+        rentalPrice && (
+          <div class="flex gap-2 text-sm sm:text-base">
+            <p class="text-white">Price:</p>
+            <p class="text-mustard-yellow">{rentalPrice}</p>
+          </div>
+        )
+      }
     </div>
   </div>
 </a>

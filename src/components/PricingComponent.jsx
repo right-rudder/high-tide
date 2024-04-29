@@ -73,7 +73,7 @@ export default function PricingComponent({ tiers, program }) {
               )}
             >
               <div
-                className={`flex flex-col ${location.value === "southport" && program === "Ground School" ? "lg:min-h-64" : ""} ${location.value === "southport" && program === "Helicopter Training" ? "xl:min-h-32" : ""}`}
+                className={`flex flex-col ${location.value === "southport" && program === "Ground School" ? "lg:min-h-64" : "lg:min-h-28"} ${location.value === "southport" && program === "Helicopter Training" ? "xl:min-h-32" : ""}`}
               >
                 <h3
                   id={tier.id}
@@ -111,7 +111,14 @@ export default function PricingComponent({ tiers, program }) {
                   </p>
                 )}
               </div>
-              <p className="mt-6 flex items-baseline gap-x-1">
+
+              <p
+                className={`mt-6 text-xs font-bold ${tier.price !== "Custom" ? "" : "opacity-0"}`}
+              >
+                Starting at
+              </p>
+
+              <p className="flex items-baseline gap-x-1">
                 <span
                   className={classNames(
                     tier.featured ? "text-white" : "text-gray-900",
@@ -128,7 +135,7 @@ export default function PricingComponent({ tiers, program }) {
                       "text-sm font-semibold leading-6",
                     )}
                   >
-                    {tier.unitPrice ? tier.unitPrice : "/one-time"}
+                    {tier.unitPrice ? tier.unitPrice : ""}
                   </span>
                 )}
               </p>

@@ -3,7 +3,7 @@ import { CheckIcon } from "@heroicons/react/20/solid";
 const PricingComponentPlaceholder = () => {
   return (
     <div className="bg-gray-900 ring-gray-900 rounded-3xl p-8 ring-1 xl:p-10 max-w-md mx-auto relative">
-      <div className="uppercase text-4xl text-gray-600 absolute h-full w-full backdrop-blur-sm top-0 left-0 rounded-3xl flex items-center bg-black/40">
+      <div className="uppercase text-4xl text-gray-600 absolute h-full w-full backdrop-blur top-0 left-0 rounded-3xl flex items-center bg-black/40">
         <p className="-rotate-45 text-center font-bold text-white">
           No programs available at this location
         </p>
@@ -16,7 +16,7 @@ const PricingComponentPlaceholder = () => {
       </p>
       <p className="mt-6 flex items-baseline gap-x-1">
         <span className="text-white text-4xl font-bold tracking-tight">
-          $600
+          $10,000
         </span>
         <span className="text-gray-300 text-sm font-semibold leading-6">
           /one-time

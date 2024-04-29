@@ -52,14 +52,31 @@ const privatePilot = {
   tiers: {
     southport: [
       {
-        name: "Flight Instructor",
-        id: "tier-flight-instructor",
+        name: "Certified Flight Instructor (CFI) Training",
+        id: "tier-flight-instructor-cfi",
         href: "#",
-        price: "Custom",
+        price: "$10,000",
         description: "*Pricing based on individual proficiency",
         features: [
           "Trains candidates for the role of a Certified Flight Instructor",
           "Focus on teaching methodologies and flight instruction principles",
+          "Proficiency from the opposite seat emphasized",
+          "Must hold a commercial license with an instrument rating",
+          "FAA CFI and FOI Written Exams included",
+          "Final check ride evaluation included",
+        ],
+        featured: false,
+        cta: "Contact for CFI Program Details",
+      },
+      {
+        name: "Certified Flight Instructor-Instrument (CFII) Training",
+        id: "tier-flight-instructor-cfii",
+        href: "#",
+        price: "$5,000",
+        description: "*Assumes pilot holds CFI certification",
+        features: [
+          "Trains candidates for the role of Certified Flight Instructor-Instrument",
+          "Focus on teaching methodologies and instrument flight instruction principles",
           "Proficiency from the opposite seat emphasized",
           "Must hold a commercial license with an instrument rating",
           "FAA CFI and FOI Written Exams included",
@@ -85,14 +102,31 @@ const privatePilot = {
     ],
     simons: [
       {
-        name: "Flight Instructor",
-        id: "tier-flight-instructor-simons",
+        name: "Certified Flight Instructor (CFI) Training",
+        id: "tier-flight-instructor-cfi",
         href: "#",
-        price: "Custom",
+        price: "$10,000",
         description: "*Pricing based on individual proficiency",
         features: [
           "Trains candidates for the role of a Certified Flight Instructor",
           "Focus on teaching methodologies and flight instruction principles",
+          "Proficiency from the opposite seat emphasized",
+          "Must hold a commercial license with an instrument rating",
+          "FAA CFI and FOI Written Exams included",
+          "Final check ride evaluation included",
+        ],
+        featured: false,
+        cta: "Contact for CFI Program Details",
+      },
+      {
+        name: "Certified Flight Instructor-Instrument (CFII) Training",
+        id: "tier-flight-instructor-cfii",
+        href: "#",
+        price: "$5,000",
+        description: "*Assumes pilot holds CFI certification",
+        features: [
+          "Trains candidates for the role of Certified Flight Instructor-Instrument",
+          "Focus on teaching methodologies and instrument flight instruction principles",
           "Proficiency from the opposite seat emphasized",
           "Must hold a commercial license with an instrument rating",
           "FAA CFI and FOI Written Exams included",
@@ -108,7 +142,7 @@ const privatePilot = {
         price: "Custom",
         description: "Full-range training for aspiring pilots.",
         features: [
-          "All-inclusive from Private to CFI/CFII",
+          "All-inclusive from Private to CFI/CFII/MEI",
           "Full support at your selected training location",
           "Customized training schedule",
         ],

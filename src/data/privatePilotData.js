@@ -56,7 +56,7 @@ const privatePilot = {
         name: "Private Pilot",
         id: "tier-private-pilot",
         href: "#",
-        price: "$9,525",
+        price: "$10,500",
         description: "The foundation of your aviation journey.",
         features: [
           "30 hours of dual flight instruction (Cessna 172)",
@@ -89,7 +89,7 @@ const privatePilot = {
         name: "Private Pilot",
         id: "tier-private-pilot-simons",
         href: "#",
-        price: "$9,525",
+        price: "$10,500",
         description: "Elevate your piloting skills by the coast.",
         features: [
           "30 hours of dual flight instruction (Cessna 172)",
@@ -109,7 +109,7 @@ const privatePilot = {
         price: "Custom",
         description: "Full-range training for aspiring pilots.",
         features: [
-          "All-inclusive from Private to CFI/CFII",
+          "All-inclusive from Private to CFI/CFII/MEI",
           "Full support at your selected training location",
           "Customized training schedule",
         ],

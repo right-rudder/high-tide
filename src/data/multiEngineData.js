@@ -4,9 +4,9 @@ const privatePilot = {
   imagePath: "/src/assets/multi-engine.jpg",
   title: "Multi-Engine Rating",
   subtitle: "What is a Multi-Engine Rating?",
-  locations: ["Southport, NC"],
+  locations: ["Southport, NC", "St. Simons Island, GA"],
   description: [
-    "A Multi-Engine Rating certifies pilots to operate aircraft with more than one engine, enhancing their flight capabilities and opening opportunities in a variety of aviation sectors, including commercial and cargo transport. High Tide Aviation, located in Southport, NC, offers multi-engine training in the Baron B55, equipped with a G500 glass panel. This training allows pilots to experience the added performance and safety of flying multi-engine aircraft under both VFR and IFR conditions. The course focuses on the complexities associated with managing multiple engines, which include increased power, different handling characteristics during normal and emergency operations, and advanced navigation techniques.",
+    "A Multi-Engine Rating certifies pilots to operate aircraft with more than one engine, enhancing their flight capabilities and opening opportunities in a variety of aviation sectors, including commercial and cargo transport. High Tide Aviation offers multi-engine training in the Baron B55, equipped with a G500 glass panel. This training allows pilots to experience the added performance and safety of flying multi-engine aircraft under both VFR and IFR conditions. The course focuses on the complexities associated with managing multiple engines, which include increased power, different handling characteristics during normal and emergency operations, and advanced navigation techniques.",
     "The training for a Multi-Engine Rating includes detailed instruction on preflight procedures, airport operations, multi-engine aerodynamics, engine failure protocols, and high-altitude operations, among others. Typically, pilots require about 10 hours of flight training to prepare for the practical checkride, which includes an oral exam but no written test. High Tide Aviation's program is designed to be intensive and fast-paced, ideally completed over 1-2 weeks to ensure that pilots retain the skills and knowledge they acquire.",
   ],
   prerequisites: {
@@ -54,8 +54,7 @@ const privatePilot = {
         name: "Multi-Engine Rating",
         id: "tier-multi-engine-rating",
         href: "#",
-        price: "$600",
-        unitPrice: "/per hour",
+        price: "$10,000",
         description: "Dual training in the Baron B55",
         features: [
           "Training in Baron B55 with dual engines for enhanced performance and safety",
@@ -83,7 +82,39 @@ const privatePilot = {
         cta: "Contact for Custom Quote",
       },
     ],
-    simons: [],
+    simons: [
+      {
+        name: "Multi-Engine Rating",
+        id: "tier-multi-engine-rating",
+        href: "#",
+        price: "$10,000",
+        description: "Advanced flight training in our Baron B55",
+        features: [
+          "Training in Baron B55 with dual engines for enhanced performance and safety",
+          "Curriculum includes VFR and IFR operations as a certificate add-on",
+          "Training covers preflight, airport operations, takeoffs, landings, and navigation",
+          "Emergency and high-altitude operations included",
+          "No written exam; oral exam and practical checkride required",
+          "Typically requires about 10 hours of training for checkride readiness",
+        ],
+        featured: false,
+        cta: "Start Your Multi-Engine Training",
+      },
+      {
+        name: "Zero to Hero Program",
+        id: "tier-zero-to-hero",
+        href: "#",
+        price: "Custom",
+        description: "Full-range training for aspiring pilots.",
+        features: [
+          "All-inclusive from Private to CFI/CFII/MEI",
+          "Full support at your selected training location",
+          "Customized training schedule",
+        ],
+        featured: true,
+        cta: "Contact for Custom Quote",
+      },
+    ],
   },
   futurePathways: [
     {
@@ -91,7 +122,7 @@ const privatePilot = {
       subheading: "Fly for Your Career",
       description:
         "No matter how far you want to venture down the pilot career path, it all starts here.",
-      imagePath: "/src/assets/flight-program-2.jpg",
+      imagePath: "/src/assets/commercial-pilot-discussing-flight-plans.jpg",
       url: "/flight-training/commercial-pilot",
     },
     {

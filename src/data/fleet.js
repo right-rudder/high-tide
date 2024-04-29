@@ -2,8 +2,7 @@ export const fleet = [
   {
     name: "N7085G",
     slug: "N7085G",
-    rentalPrice: "$170 /hr wet",
-    emptyWeight: "1,418 lbs",
+    rentalPrice: "$190 /hr wet",
     usableFuel: "38 gal",
     model: "Cessna 172K",
     equipment: [
@@ -11,7 +10,8 @@ export const fleet = [
       "Garmin GNX 375 Navigator/Transponder",
       "Dual Bendix/King KX 155 Nav/Comm",
     ],
-    imagePath: "/src/assets/N7085G.jpg",
+    imagePath:
+      "/src/assets/n7085g-cessna-skyhawk-172-high-tide-aviation-flight-school.jpg",
     description: [
       "The Cessna 172 is the gold standard for new pilots. Its forgiving flight characteristics and robust reliability make it the perfect choice for initial flight training. The high-wing design offers exceptional stability and visibility, boosting student confidence as they master essential flying skills. The aircraft responds gently to control inputs and recovers smoothly from errors, instilling the poise needed to become a competent pilot. With widespread availability and easy access to maintenance expertise, the Cessna 172 keeps operational costs low, allowing for consistent training schedules.",
       "Beyond its physical attributes, the aircraft is equipped with modern avionics and instrumentation, giving students a real-world flying experience. Its versatility extends from solo flights to instrument training, making the Cessna 172 a fundamental tool in developing proficient pilots",
@@ -20,8 +20,7 @@ export const fleet = [
   {
     name: "N7994X",
     slug: "N7994X",
-    rentalPrice: "$170 /hr wet",
-    emptyWeight: "1,342.59 lbs",
+    rentalPrice: "$190 /hr wet",
     usableFuel: "38 gal",
     model: "Cessna 172B",
     equipment: [
@@ -40,8 +39,7 @@ export const fleet = [
   {
     name: "N79072",
     slug: "N79072",
-    rentalPrice: "$170 /hr wet",
-    emptyWeight: "1,421.20 lbs",
+    rentalPrice: "$190 /hr wet",
     usableFuel: "38 gal",
     model: "Cessna 172K",
     equipment: [
@@ -59,8 +57,7 @@ export const fleet = [
   {
     name: "N8234U",
     slug: "N8234U",
-    rentalPrice: "$170 /hr wet",
-    emptyWeight: "-",
+    rentalPrice: "$190 /hr wet",
     usableFuel: "38 gal",
     model: "Cessna 172F",
     equipment: ["Garmin GNS 430W"],
@@ -73,8 +70,7 @@ export const fleet = [
   {
     name: "N8409L",
     slug: "N8409L",
-    rentalPrice: "$170 /hr wet",
-    emptyWeight: "1,369.40 lbs",
+    rentalPrice: "$190 /hr wet",
     usableFuel: "38 gal",
     model: "Cessna 172K",
     equipment: [
@@ -96,8 +92,7 @@ export const fleet = [
   {
     name: "N79136",
     slug: "N79136",
-    rentalPrice: "$170 /hr wet",
-    emptyWeight: "1,407.28 lbs",
+    rentalPrice: "$190 /hr wet",
     usableFuel: "38 gal",
     model: "Cessna 172K",
     equipment: [
@@ -117,8 +112,7 @@ export const fleet = [
   {
     name: "N79475",
     slug: "N79475",
-    rentalPrice: "$170 /hr wet",
-    emptyWeight: "- lbs",
+    rentalPrice: "$190 /hr wet",
     usableFuel: "- gal",
     model: "Cessna 172K",
     equipment: [],
@@ -131,22 +125,18 @@ export const fleet = [
   {
     name: "Bonanza",
     slug: "N4457S",
-    rentalPrice: "$170 /hr wet",
-    emptyWeight: "- lbs",
     usableFuel: "74 gal",
     model: "Beechcraft Bonanza",
     equipment: [],
     imagePath: "/src/assets/N4457S.jpg",
     description: [
       "The Beechcraft Bonanza remains a prominent choice for pilots in training due to its blend of classic design and modern performance. The aircraft boasts a high-performance six-cylinder engine and a low-wing configuration with retractable landing gear, making it a robust platform for teaching advanced flying skills. This single-engined, six-seater has been continuously produced for over seven decades, highlighting its reliability and enduring popularity.",
-      "The Bonanza is an excellent option for flight training or aircraft rental at High Tide Aviation because it offers a blend of complex systems and manageable handling, ideal for students progressing beyond basic skills to more sophisticated piloting. Its reputation for speed and comfort adds to its appeal as a training aircraft that students can aspire to master, bridging the gap between learning environments and real-world aviation demands.",
+      "The Bonanza is an excellent option for flight training at High Tide Aviation because it offers a blend of complex systems and manageable handling, ideal for students progressing beyond basic skills to more sophisticated piloting. Its reputation for speed and comfort adds to its appeal as a training aircraft that students can aspire to master, bridging the gap between learning environments and real-world aviation demands.",
     ],
   },
   {
     name: "N626H",
     slug: "N626H",
-    rentalPrice: "$- /hr wet",
-    emptyWeight: "- lbs",
     usableFuel: "127 gal",
     model: "Beechcraft Baron B55",
     equipment: ["Garmin G500 glass panel", "Garmin GTN 650"],
@@ -159,8 +149,6 @@ export const fleet = [
   {
     name: "N531Q",
     slug: "N531Q",
-    rentalPrice: "$- /hr wet",
-    emptyWeight: "- lbs",
     usableFuel: "127 gal",
     model: "Beechcraft Baron B55",
     equipment: ["Dual Garmin G5s", "Garmin GNS 430W"],
@@ -173,8 +161,6 @@ export const fleet = [
   {
     name: "N570H",
     slug: "N570H",
-    rentalPrice: "$- /hr wet",
-    emptyWeight: "- lbs",
     usableFuel: "29.5 gal",
     model: "Robinson R44 Raven I",
     equipment: [],
@@ -187,8 +173,6 @@ export const fleet = [
   {
     name: "N830FM",
     slug: "N830FM",
-    rentalPrice: "$- /hr wet",
-    emptyWeight: "- lbs",
     usableFuel: "29.5 gal",
     model: "Robinson R44 Raven II",
     equipment: ["IFR Certified"],
