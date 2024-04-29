@@ -16,6 +16,7 @@ import {
 import { FaPhone } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { IoLocationSharp } from "react-icons/io5";
+const CONTACT_US_FORM_WEBHOOK_URL = import.meta.env.CONTACT_US_FORM_WEBHOOK_URL;
 ---
 
 <BaseLayout
@@ -125,7 +126,10 @@ import { IoLocationSharp } from "react-icons/io5";
             </li>
           </ul>
         </div>
-        <div
+        <form
+          id="contact-us-form"
+          method="POST"
+          action=""
           class="relative z-20 flex flex-col items-center p-5 shadow-lg xl:scale-125 bg-white xl:order-2"
         >
           <div class="grid lg:grid-cols-2 gap-5 my-10">
@@ -150,6 +154,13 @@ import { IoLocationSharp } from "react-icons/io5";
               id="email"
               placeholder="Email"
             />
+            <p class="hidden">
+              <label>
+                Don't fill this out if you're human: <input
+                  name="confirm-email"
+                />
+              </label>
+            </p>
             <input
               class="bg-medium-blue/15 text-dark-blue py-4 px-6 w-full outline-none placeholder:text-gray-500"
               type="tel"
@@ -163,12 +174,12 @@ import { IoLocationSharp } from "react-icons/io5";
               id="message"
               placeholder="Write message"></textarea>
           </div>
-          <a
-            href="#"
+          <button
+            type="submit"
             class="block font-medium uppercase py-4 px-14 bg-dark-blue w-fit rounded-full text-white hover:bg-mustard-yellow duration-300"
-            >Send Message</a
+            >Send Message</button
           >
-        </div>
+        </form>
       </div>
     </div>
   </section>
@@ -191,3 +202,62 @@ import { IoLocationSharp } from "react-icons/io5";
       referrerpolicy="no-referrer-when-downgrade"></iframe>
   </div>
 </BaseLayout>
+
+<script define:vars={{ CONTACT_US_FORM_WEBHOOK_URL }}>
+  // Wait for the DOM content to be fully loaded
+  document.addEventListener("DOMContentLoaded", function () {
+    // Get the contactUs form element
+    const contactUsForm = document.getElementById("contact-us-form");
+
+    // Check if the contactUs form element exists
+    if (contactUsForm !== null) {
+      // Add submit event listener to the contactUs form
+      contactUsForm.addEventListener("submit", function (event) {
+        // Prevent the default form submission
+        event.preventDefault();
+
+        // Serialize the form data
+        const formData = new FormData(contactUsForm);
+
+        // Check the value of the honeypot field
+        const confirmEmailValue = formData.get("confirm-email");
+        if (confirmEmailValue === "" || confirmEmailValue === null) {
+          // If the honeypot field is empty, it's a human
+          // Set the form action to the URL for processing the form and redirecting to thank you
+          contactUsForm.action = CONTACT_US_FORM_WEBHOOK_URL;
+        }
+
+        // Convert FormData to URLSearchParams
+        const urlSearchParams = new URLSearchParams();
+        for (const pair of formData.entries()) {
+          urlSearchParams.append(pair[0], pair[1]);
+        }
+
+        // Send an AJAX request to submit the form
+        const xhr = new XMLHttpRequest();
+        xhr.open("POST", contactUsForm.action);
+        xhr.setRequestHeader(
+          "Content-Type",
+          "application/x-www-form-urlencoded",
+        );
+        xhr.onload = function () {
+          // Check if the request was successful (status 200)
+          if (xhr.status === 200) {
+            // Redirect the user after a successful form submission
+            window.location.href = "/contact-us-confirmation";
+          } else {
+            // Handle errors if any
+            console.error("Form submission failed:", xhr.statusText);
+          }
+        };
+        xhr.onerror = function () {
+          // Handle network errors
+          console.error("Network error occurred while submitting the form.");
+        };
+        xhr.send(urlSearchParams);
+      });
+    } else {
+      console.error("Contact us form element not found.");
+    }
+  });
+</script>
