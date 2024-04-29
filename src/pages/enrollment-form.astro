@@ -2,15 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Header from "../components/Header.astro";
 import Banner from "../assets/private-pilot-sits-in-multi-engine-plane.jpg";
-import { Image } from "astro:assets";
-import Intro from "../assets/first-time-pilots-intro.jpg";
-import StatCard from "../components/StatCard.astro";
-import { stats } from "../data/stats";
-import { RiTeamLine } from "react-icons/ri";
-import { IoIosArrowRoundForward } from "react-icons/io";
-import { GiExitDoor } from "react-icons/gi";
-import { MdFlightTakeoff } from "react-icons/md";
-import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
+const ENROLLMENT_FORM_WEBHOOK_URL = import.meta.env.ENROLLMENT_FORM_WEBHOOK_URL;
 ---
 
 <BaseLayout siteTitle="Enrollment Form">
@@ -21,7 +13,12 @@ import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
   />
 
   <section class="py-16 px-5">
-    <form class="flex flex-col items-center">
+    <form
+      id="enrollment_form"
+      method="POST"
+      action=""
+      class="flex flex-col items-center"
+    >
       <h2 class="uppercase text-medium-blue font-bold tracking-widest">
         Enrollment Process
       </h2>
@@ -55,6 +52,11 @@ import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
           placeholder="Email"
           required
         />
+        <p class="hidden">
+          <label>
+            Don't fill this out if you're human: <input name="confirm-email" />
+          </label>
+        </p>
         <input
           class="bg-medium-blue/15 text-dark-blue py-4 px-6 w-full outline-none placeholder:text-gray-500"
           type="tel"
@@ -75,6 +77,7 @@ import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
                 name="training-type"
                 type="radio"
                 class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
+                value="airplane"
               />
               <label for="airplane" class="block leading-6 text-gray-600"
                 >Airplane</label
@@ -86,6 +89,7 @@ import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
                 name="training-type"
                 type="radio"
                 class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
+                value="helicopter"
               />
               <label for="helicopter" class="block leading-6 text-gray-600"
                 >Helicopter (Southport exclusive)</label
@@ -97,6 +101,7 @@ import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
                 name="training-type"
                 type="radio"
                 class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
+                value="both"
                 required
               />
               <label for="both" class="block leading-6 text-gray-600"
@@ -234,3 +239,80 @@ import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
     </form>
   </section>
 </BaseLayout>
+
+<script define:vars={{ ENROLLMENT_FORM_WEBHOOK_URL }}>
+  // Wait for the DOM content to be fully loaded
+  document.addEventListener("DOMContentLoaded", function () {
+    // Get the enrollment form element
+    const enrollmentForm = document.getElementById("enrollment_form");
+
+    // Check if the enrollment form element exists
+    if (enrollmentForm !== null) {
+      // Add submit event listener to the enrollment form
+      enrollmentForm.addEventListener("submit", function (event) {
+        // Prevent the default form submission
+        event.preventDefault();
+
+        // Serialize the form data
+        const formData = new FormData(enrollmentForm);
+
+        // Check the value of the honeypot field
+        const confirmEmailValue = formData.get("confirm-email");
+        if (confirmEmailValue === "" || confirmEmailValue === null) {
+          // If the honeypot field is empty, it's a human
+          // Set the form action to the URL for processing the form and redirecting to thank you
+          enrollmentForm.action = ENROLLMENT_FORM_WEBHOOK_URL;
+        }
+
+        const preferredPrograms = [];
+
+        // Iterate over the FormData entries
+        formData.forEach((value, key) => {
+          // Check if the value is "on"
+          if (value === "on") {
+            // Add the key to the preferredPrograms array
+            preferredPrograms.push(key);
+          }
+        });
+
+        preferredPrograms.forEach((program) => {
+          formData.delete(program);
+        });
+
+        // Append the preferredPrograms array to formData
+        formData.append("preferred-programs", preferredPrograms.join(","));
+
+        // Convert FormData to URLSearchParams
+        const urlSearchParams = new URLSearchParams();
+        for (const pair of formData.entries()) {
+          urlSearchParams.append(pair[0], pair[1]);
+        }
+
+        // Send an AJAX request to submit the form
+        const xhr = new XMLHttpRequest();
+        xhr.open("POST", enrollmentForm.action);
+        xhr.setRequestHeader(
+          "Content-Type",
+          "application/x-www-form-urlencoded",
+        );
+        xhr.onload = function () {
+          // Check if the request was successful (status 200)
+          if (xhr.status === 200) {
+            // Redirect the user after a successful form submission
+            window.location.href = "/enrollment-confirmation";
+          } else {
+            // Handle errors if any
+            console.error("Form submission failed:", xhr.statusText);
+          }
+        };
+        xhr.onerror = function () {
+          // Handle network errors
+          console.error("Network error occurred while submitting the form.");
+        };
+        xhr.send(urlSearchParams);
+      });
+    } else {
+      console.error("Enrollment form element not found.");
+    }
+  });
+</script>
