@@ -17,8 +17,7 @@ export const discoveryFlights = [
     name: "Helicopter Discovery Flight",
     location: "Southport, NC",
     price: "$199 per person",
-    imagePath:
-      "/src/assets/r44-helicopter-at-high-tide-aviation-front-view.jpg",
+    imagePath: "/src/assets/n570h-at-high-tide-aviation.jpg",
     url: "https://fareharbor.com/embeds/book/hightidehelicopters/items/32658/?full-items=yes&flow=335655",
   },
   {
