@@ -121,9 +121,9 @@ const privatePilot = {
   futurePathways: [
     {
       heading: "Instrument Rating",
-      subheading: "Start Your Journey",
+      subheading: "Advance Your Training",
       description:
-        "If you're new to flight training, we have the resources and training to help you earn your wings (and rotors).",
+        "Learn how to fly aircraft in IFR conditions and navigate in low-visibility conditions.",
       imagePath: "/src/assets/instrument-rating.jpg",
       url: "/flight-training/instrument-rating",
     },

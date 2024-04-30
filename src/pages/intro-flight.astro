@@ -1,0 +1,49 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Banner from "../assets/cessna-172-flying-over-st-simons-island.jpg";
+import { Image } from "astro:assets";
+import Intro from "../assets/first-time-pilots-intro.jpg";
+import StatCard from "../components/StatCard.astro";
+import { stats } from "../data/stats";
+import { RiTeamLine } from "react-icons/ri";
+import { IoIosArrowRoundForward } from "react-icons/io";
+import { GiExitDoor } from "react-icons/gi";
+import { MdFlightTakeoff } from "react-icons/md";
+import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
+import DiscoveryFlightCard from "../components/DiscoveryFlightCard.astro";
+import { discoveryFlights } from "../data/discoveryFlights";
+---
+
+<BaseLayout siteTitle="Book an Intro Flight at High Tide">
+  <Header
+    slot="header"
+    image={Banner}
+    title="Book an Intro Flight at High Tide"
+  />
+
+  <section class="py-16 px-5">
+    <div class="flex flex-col items-center">
+      <h2 class="uppercase text-medium-blue font-bold tracking-widest">
+        Flight and Location Selection
+      </h2>
+      <h3 class="text-5xl text-center text-dark-blue font-bold leading-tight">
+        Choose Your Intro Flight
+      </h3>
+    </div>
+
+    <div class="grid gap-8 mt-5 max-w-xs md:grid-cols-2 md:max-w-3xl mx-auto">
+      {
+        discoveryFlights.map((discoveryFlight) => (
+          <DiscoveryFlightCard
+            name={discoveryFlight.name}
+            price={discoveryFlight.price}
+            imagePath={discoveryFlight.imagePath}
+            location={discoveryFlight.location}
+            url={discoveryFlight.url}
+          />
+        ))
+      }
+    </div>
+  </section>
+</BaseLayout>
