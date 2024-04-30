@@ -35,17 +35,6 @@ const posts = (await getCollection("blog")).sort(
       >
         Checkout latest aviation news and articles
       </h3>
-      <div class="grid md:grid-cols-3 mt-10 gap-7">
-        {
-          latestPosts.map((post) => (
-            <BlogPostCard
-              imagePath={post.imagePath}
-              title={post.title}
-              date={post.date}
-            />
-          ))
-        }
-      </div>
       <ul class="grid md:grid-cols-2 lg:grid-cols-3 mt-10 gap-7">
         {
           posts.map((post) => (
@@ -54,6 +43,7 @@ const posts = (await getCollection("blog")).sort(
               title={post.data.title}
               date={post.data.pubDate}
               blogUrl={`/blog/${post.slug}/`}
+              description={post.data.description}
             />
           ))
         }

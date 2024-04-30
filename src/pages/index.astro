@@ -23,6 +23,10 @@ import TopView from "../assets/top-view.jpg";
 import BlogPostCard from "../components/BlogPostCard.astro";
 import { latestPosts } from "../data/latestPosts.js";
 import ReviewsCarousel from "../components/ReviewsCarousel";
+import { getCollection } from "astro:content";
+const posts = (await getCollection("blog")).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
 ---
 
 <BaseLayout>
@@ -390,17 +394,21 @@ import ReviewsCarousel from "../components/ReviewsCarousel";
       >
         Checkout latest aviation news and articles
       </h3>
-      <div class="grid md:grid-cols-3 mt-10 gap-7">
+      <ul class="grid lg:grid-cols-3 mt-10 gap-7">
         {
-          latestPosts.map((post) => (
-            <BlogPostCard
-              imagePath={post.imagePath}
-              title={post.title}
-              date={post.date}
-            />
-          ))
+          posts
+            .slice(0, 3)
+            .map((post) => (
+              <BlogPostCard
+                imagePath={post.data.heroImage}
+                title={post.data.title}
+                date={post.data.pubDate}
+                blogUrl={`/blog/${post.slug}/`}
+                description={post.data.description}
+              />
+            ))
         }
-      </div>
+      </ul>
     </div>
   </section>
 

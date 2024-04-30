@@ -1,8 +1,8 @@
 ---
 title: "Student Pilot & FAA Medical Certificates"
 description: "All student pilots are required to have a Student Pilot Certificate before your solo flight. A FAA Medical Certificate is also needed depending on your training goals."
-pubDate: "Jan 23, 2024 "
-heroImage: "/src/assets/aircraft-services-banner.jpg"
+pubDate: "Jan 23, 2024"
+heroImage: "/src/assets/cfi-and-student-at-high-tide-aviation-southport-nc.jpg"
 ---
 
 All student pilots are required to have a Student Pilot Certificate before your solo flight. A FAA Medical Certificate is also needed depending on your training goals.
