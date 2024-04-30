@@ -3,12 +3,13 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import Header from "../../components/Header.astro";
 import Banner from "../../assets/high-tide-aviation-team-of-cfis.jpg";
 import { Image } from "astro:assets";
-import Intro from "../../assets/our-team-intro.jpg";
+import Intro from "../../assets/female-cfis-at-high-tide-aviation.jpg";
 import { team } from "../../data/team";
 import TeamMemberCard from "../../components/TeamMemberCard.astro";
 import StatCard from "../../components/StatCard.astro";
 import { stats } from "../../data/stats";
 import TopView from "../../assets/top-view.jpg";
+import Team from "../../assets/high-tide-aviation-team-southport.jpg";
 ---
 
 <BaseLayout
@@ -83,7 +84,7 @@ import TopView from "../../assets/top-view.jpg";
       class="max-w-xl gap-10 lg:max-w-7xl mx-auto flex flex-col lg:flex-row-reverse items-center lg:gap-20"
     >
       <div class="flex-1 relative">
-        <Image class="pr-6" src={Banner} alt="High Tide Aviation team" />
+        <Image class="pr-6" src={Team} alt="High Tide Aviation team" />
         <div
           class="h-3/4 bg-mustard-yellow absolute -z-10 -right-0 w-20 top-[12.5%]"
         >

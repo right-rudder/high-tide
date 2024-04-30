@@ -1,20 +1,8 @@
 ---
-import BaseHead from "../../components/BaseHead.astro";
-import Footer from "../../components/Footer.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
 import { getCollection } from "astro:content";
-import FormattedDate from "../../components/FormattedDate.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import Header from "../../components/Header.astro";
 import Banner from "../../assets/high-tide-aviation-front-sign-in-southport-nc.jpg";
-import { Image } from "astro:assets";
-import Intro from "../../assets/financing-intro.jpg";
-import { financialOptions } from "../../data/financialOptions";
-import FinancialOptionCard from "../../components/FinancialOptionCard.astro";
-import { RiTeamLine } from "react-icons/ri";
-import { BiNetworkChart } from "react-icons/bi";
-import { GiPayMoney } from "react-icons/gi";
-import { latestPosts } from "../../data/latestPosts";
 import BlogPostCard from "../../components/BlogPostCard.astro";
 
 const posts = (await getCollection("blog")).sort(
