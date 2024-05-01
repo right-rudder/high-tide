@@ -65,3 +65,18 @@ const {
 <meta property="twitter:image" content={new URL(image, Astro.url)} />
 
 <link rel="sitemap" href="/sitemap-index.xml" />
+
+<!-- Google tag (gtag.js) -->
+<script
+  type="text/partytown"
+  async
+  src="https://www.googletagmanager.com/gtag/js?id=G-M7S5SBC1X0"></script>
+<script type="text/partytown">
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+
+  gtag("config", "G-M7S5SBC1X0");
+</script>
