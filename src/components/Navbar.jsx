@@ -87,7 +87,9 @@ const Navbar = ({ pathname }) => {
                 </div>
               </div>
               <div className="hidden lg:flex items-center gap-3 text-white border-l border-white/20 pl-10">
-                <IoStorefront className="size-8 cursor-pointer hover:text-mustard-yellow duration-300 shrink-0" />
+                <a href="https://shop.flyhightide.com/" target="_blank">
+                  <IoStorefront className="size-8 cursor-pointer hover:text-mustard-yellow duration-300 shrink-0" />
+                </a>
                 <a
                   href={`tel:${PHONE_NUMBER}`}
                   className="group border p-3 border-mustard-yellow rounded-full bg-mustard-yellow hover:bg-white hover:border-white duration-300"
