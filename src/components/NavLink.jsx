@@ -12,7 +12,7 @@ const NavLink = ({ menuItem, pathname, toggled, onShow }) => {
   if (menuItem.submenu.length === 0) {
     linkOrDropdown = (
       <a
-        id={menuItem.name}
+        name={menuItem.name}
         href={menuItem.link}
         className={`cursor-pointer font-semibold text-sm xl:text-base tracking-widest duration-300 hover:text-mustard-yellow py-12 border-main-red whitespace-nowrap uppercase ${
           isActive ? "text-mustard-yellow" : "text-white"
@@ -24,7 +24,7 @@ const NavLink = ({ menuItem, pathname, toggled, onShow }) => {
   } else {
     linkOrDropdown = (
       <a
-        id={menuItem.name}
+        name={menuItem.name}
         className={`font-semibold cursor-default text-sm xl:text-base tracking-widest duration-300 hover:text-mustard-yellow py-12 border-main-red whitespace-nowrap uppercase ${
           isActive ? "text-mustard-yellow" : "text-white"
         }`}
@@ -34,12 +34,7 @@ const NavLink = ({ menuItem, pathname, toggled, onShow }) => {
     );
   }
   return (
-    <div
-      id={menuItem.name}
-      className="relative"
-      onMouseEnter={onShow}
-      onMouseLeave={onShow}
-    >
+    <div className="relative" onMouseEnter={onShow} onMouseLeave={onShow}>
       {linkOrDropdown}
       <div
         className={`overflow-hidden ${

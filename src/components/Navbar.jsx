@@ -29,10 +29,10 @@ const Navbar = ({ pathname }) => {
   };
 
   const handleMenuItemClick = (e) => {
-    if (openSubmenu === e.target.id) {
+    if (openSubmenu === e.target.getAttribute("name")) {
       setOpenSubmenu("");
     } else {
-      setOpenSubmenu(e.target.id);
+      setOpenSubmenu(e.target.getAttribute("name"));
     }
   };
 
