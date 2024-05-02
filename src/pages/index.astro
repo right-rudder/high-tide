@@ -109,6 +109,7 @@ const posts = (await getCollection("blog")).sort(
           <div class="flex items-center gap-3">
             <a
               href=`tel:${PHONE_NUMBER}`
+              aria-label="Call High Tide Aviation"
               class="group border p-4 border-mustard-yellow rounded-full hover:bg-mustard-yellow hover:border-white duration-300 cursor-pointer"
             >
               <FaPhoneAlt
@@ -121,6 +122,7 @@ const posts = (await getCollection("blog")).sort(
               </p>
               <a
                 href=`tel:${PHONE_NUMBER}`
+                aria-label="Call High Tide Aviation for more information"
                 class="font-medium text-lg text-dark-blue hover:text-mustard-yellow duration-300"
                 >{PHONE_NUMBER}</a
               >
@@ -372,7 +374,7 @@ const posts = (await getCollection("blog")).sort(
       >
         Checkout latest aviation news and articles
       </h3>
-      <ul class="grid lg:grid-cols-3 mt-10 gap-7">
+      <div class="grid lg:grid-cols-3 mt-10 gap-7">
         {
           posts
             .slice(0, 3)
@@ -386,7 +388,7 @@ const posts = (await getCollection("blog")).sort(
               />
             ))
         }
-      </ul>
+      </div>
     </div>
   </section>
 

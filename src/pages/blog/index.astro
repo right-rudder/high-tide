@@ -23,7 +23,7 @@ const posts = (await getCollection("blog")).sort(
       >
         Checkout latest aviation news and articles
       </h3>
-      <ul class="grid md:grid-cols-2 lg:grid-cols-3 mt-10 gap-7">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 mt-10 gap-7">
         {
           posts.map((post) => (
             <BlogPostCard
@@ -35,7 +35,7 @@ const posts = (await getCollection("blog")).sort(
             />
           ))
         }
-      </ul>
+      </div>
     </div>
   </section>
 </BaseLayout>
