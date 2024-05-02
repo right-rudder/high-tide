@@ -28,10 +28,7 @@ const { image, title, ctaText, ctaLink } = Astro.props;
   {
     ctaText && (
       <div class="flex justify-center -translate-y-7">
-        <a
-          href={ctaLink}
-          class="uppercase py-4 px-14 bg-mustard-yellow text-white font-medium w-fit rounded-full hover:bg-medium-blue duration-300"
-        >
+        <a href={ctaLink} class="btn-yellow">
           {ctaText}
         </a>
       </div>
