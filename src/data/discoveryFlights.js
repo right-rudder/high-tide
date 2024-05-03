@@ -1,15 +1,15 @@
 export const discoveryFlights = [
   {
-    name: "Cessna Discovery Flight",
+    name: "Career Discovery Flight",
     location: "Southport, NC",
-    price: "$119 per person",
+    price: "$149 per person",
     imagePath: "/src/assets/n79136-cessna-at-high-tide-aviation.png",
     url: "https://fareharbor.com/embeds/book/hightidehelicopters/items/207028/?full-items=yes&flow=335655",
   },
   {
-    name: "Cessna Discovery Flight",
+    name: "Career Discovery Flight",
     location: "St. Simons Island, GA",
-    price: "$119 per person",
+    price: "$149 per person",
     imagePath: "/src/assets/cessna-over-st-simons-island.jpg",
     url: "https://fareharbor.com/embeds/book/flyhightide-ssi/items/347994/?full-items=yes&flow=621000",
   },
