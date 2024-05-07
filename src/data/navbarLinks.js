@@ -68,7 +68,7 @@ export const navbarLinks = [
   },
   {
     name: "Aerial Tours",
-    link: "#",
+    link: "https://flyhightide.com/",
     submenu: [],
   },
 ];
