@@ -1,9 +1,9 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import Header from "../../components/Header.astro";
-import Banner from "../../assets/financing-banner.jpg";
+import Banner from "../../assets/cessna-taking-off.jpg";
 import { Image } from "astro:assets";
-import Intro from "../../assets/financing-intro.jpg";
+import Intro from "../../assets/student-receiving-a-pilot-certificate.jpg";
 import { financialOptions } from "../../data/financialOptions";
 import FinancialOptionCard from "../../components/FinancialOptionCard.astro";
 import { RiTeamLine } from "react-icons/ri";
@@ -22,6 +22,7 @@ import { GiPayMoney } from "react-icons/gi";
     title="Financing at High Tide"
     ctaText="Explore Financing Options"
     ctaLink="#financing-options"
+    alt="Cessna taking off at sunset from a runway at High Tide Aviation in Southport, NC."
   />
 
   <section class="py-24 px-5">
@@ -29,7 +30,11 @@ import { GiPayMoney } from "react-icons/gi";
       class="max-w-xl gap-10 lg:max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:gap-20"
     >
       <div class="flex-1 relative">
-        <Image class="pr-6" src={Intro} alt="High Tide Aviation team" />
+        <Image
+          class="pr-6"
+          src={Intro}
+          alt="Student receiving a pilot certificate from an instructor at High Tide Aviation in Southport, NC."
+        />
         <div
           class="h-3/4 bg-mustard-yellow absolute -z-10 -right-0 w-20 top-[12.5%]"
         >

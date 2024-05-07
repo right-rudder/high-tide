@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets";
-const { image, title, ctaText, ctaLink } = Astro.props;
+const { image, title, ctaText, ctaLink, alt } = Astro.props;
 ---
 
 <header>
@@ -9,7 +9,7 @@ const { image, title, ctaText, ctaLink } = Astro.props;
   >
     <Image
       src={image}
-      alt="A description of my image."
+      alt={alt}
       class="-z-50 absolute min-w-[120rem] h-[28rem] -translate-y-24 object-cover object-[50%_40%]"
       quality={10}
     />

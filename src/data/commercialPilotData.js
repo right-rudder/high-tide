@@ -2,6 +2,7 @@ const privatePilot = {
   bannerImagePath:
     "/src/assets/heading-to-training-at-high-tide-aviation-st-simons-island-ga.jpg",
   imagePath: "/src/assets/commercial-pilot.jpg",
+  alt: "Heading to Training at High Tide Aviation St. Simons Island, GA",
   title: "Commercial Pilot",
   subtitle: "What is a Commercial Pilot Certificate?",
   locations: ["Southport, NC", "St. Simons Island, GA"],
@@ -130,7 +131,7 @@ const privatePilot = {
       subheading: "Train the Next Class",
       description:
         "Interested in training the next class of pilots? Perhaps you want to give back to the community that trained you? Become a CFI, CFII, & MEI with High Tide.",
-      imagePath: "/src/assets/flight-program-3.jpg",
+      imagePath: "/src/assets/high-tide-aviation-team-of-cfis-talking.jpg",
       url: "/flight-training/flight-instructor",
     },
     {

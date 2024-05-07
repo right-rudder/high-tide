@@ -2,7 +2,7 @@
 title: "Four Reasons People Learn to Fly"
 description: "At some point in their life, just about everyone has looked around and wondered what their next big adventure is going to be. For some people, that next adventure is learning to fly. "
 pubDate: "Mar 6, 2023"
-heroImage: "/src/assets/learn-to-fly.jpeg"
+heroImage: "/src/assets/mother-and-daughter-discovery-flight.jpeg"
 ---
 
 At some point in their life, just about everyone has looked around and wondered what their next big adventure is going to be. For some people, that next adventure is learning to fly. There are many reasons why people decide to learn to fly. Not only is it an incredible way to see the world, but learning to fly also gives you freedom.

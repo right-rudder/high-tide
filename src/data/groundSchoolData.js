@@ -1,6 +1,7 @@
 const groundSchool = {
   bannerImagePath: "/src/assets/ground-school-at-high-tide-aviation.jpg",
   imagePath: "/src/assets/ground-school.webp",
+  alt: "Student and instructor reviewing flight charts in a classroom setting.",
   title: "Ground School",
   subtitle: "What is Ground School?",
   locations: ["Southport, NC", "St. Simons Island, GA"],
@@ -137,7 +138,7 @@ const groundSchool = {
       subheading: "Start Your Journey",
       description:
         "If you're new to flight training, we have the resources and training to help you earn your wings (and rotors).",
-      imagePath: "/src/assets/flight-program-1.jpg",
+      imagePath: "/src/assets/commercial-pilot.jpg",
       url: "/flight-training/private-pilot",
     },
     {
@@ -153,7 +154,7 @@ const groundSchool = {
       subheading: "Train the Next Class",
       description:
         "Interested in training the next class of pilots? Perhaps you want to give back to the community that trained you? Become a CFI, CFII, & MEI with High Tide.",
-      imagePath: "/src/assets/flight-program-3.jpg",
+      imagePath: "/src/assets/high-tide-aviation-team-of-cfis-talking.jpg",
       url: "/flight-training/flight-instructor",
     },
   ],

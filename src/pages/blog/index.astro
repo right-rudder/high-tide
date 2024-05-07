@@ -11,7 +11,12 @@ const posts = (await getCollection("blog")).sort(
 ---
 
 <BaseLayout siteTitle="The High Tide Blog">
-  <Header slot="header" image={Banner} title="The High Tide Blog" />
+  <Header
+    slot="header"
+    image={Banner}
+    title="The High Tide Blog"
+    alt="High Tide Aviation front sign in Southport, NC"
+  />
 
   <section class="py-24 px-5">
     <div class="max-w-7xl mx-auto flex flex-col items-center">

@@ -1,9 +1,9 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 import Header from "../../../components/Header.astro";
-import Banner from "../../../assets/contact-us-banner.jpg";
+import Banner from "../../../assets/high-tide-fleet.jpg";
 import { Image } from "astro:assets";
-import Intro from "../../../assets/fleet-intro.jpg";
+import Intro from "../../../assets/high-tide-aviation-logo-on-plane-tail.jpg";
 import { fleet } from "../../../data/fleet";
 import PlaneCard from "../../../components/PlaneCard.astro";
 ---
@@ -19,6 +19,7 @@ import PlaneCard from "../../../components/PlaneCard.astro";
     title="Our Fleet"
     ctaText="Discover Our Fleet"
     ctaLink="#fleet"
+    alt="High Tide Aviation fleet of aircraft in hangar at sunset"
   />
 
   <section class="py-24 px-5">
@@ -26,7 +27,11 @@ import PlaneCard from "../../../components/PlaneCard.astro";
       class="max-w-xl gap-10 lg:max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:gap-20"
     >
       <div class="flex-1 relative">
-        <Image class="pr-6" src={Intro} alt="High Tide Aviation team" />
+        <Image
+          class="pr-6"
+          src={Intro}
+          alt="High Tide logo at the tail of a Cessna"
+        />
         <div
           class="h-3/4 bg-mustard-yellow absolute -z-10 -right-0 w-20 top-[12.5%]"
         >

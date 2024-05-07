@@ -3,7 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Header from "../components/Header.astro";
 import Banner from "../assets/private-pilot-sits-in-multi-engine-plane.jpg";
 import { Image } from "astro:assets";
-import Intro from "../assets/first-time-pilots-intro.jpg";
+import Intro from "../assets/first-time-pilot-on-cessna.jpg";
 import StatCard from "../components/StatCard.astro";
 import { stats } from "../data/stats";
 import { RiTeamLine } from "react-icons/ri";
@@ -25,6 +25,7 @@ import { reviews } from "../data/reviews";
     title="Why Become a Pilot?"
     ctaText="Discover Flight Training"
     ctaLink="#first-time-pilots"
+    alt="Private pilot sits in multi-engine plane"
   />
 
   <section class="py-24 px-5">
@@ -32,7 +33,7 @@ import { reviews } from "../data/reviews";
       class="max-w-xl gap-10 lg:max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:gap-20"
     >
       <div class="flex-1 relative">
-        <Image class="pr-6" src={Intro} alt="High Tide Aviation team" />
+        <Image class="pr-6" src={Intro} alt="Private pilot sits in Cessna" />
         <div
           class="h-3/4 bg-mustard-yellow absolute -z-10 -right-0 w-20 top-[12.5%]"
         >

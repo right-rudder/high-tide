@@ -25,7 +25,7 @@ export const financialOptions = [
   },
   {
     name: "Aircraft Owners and Pilots Association",
-    imagePath: "/src/assets/aopa.jpg",
+    imagePath: "/src/assets/aopa-logo.jpg",
     description:
       "High Tide Aviation collaborates with the Aircraft Owners and Pilots Association (AOPA) to provide flexible financing options for flight training through AOPA's Flight Training Finance program. This program offers quick, easy, and affordable loans tailored for aspiring pilots at High Tide. With the ability to finance both training and associated costs, this partnership ensures that students can access the necessary resources to become proficient pilots without the financial strain. Students interested in utilizing AOPA’s financing options can start their application directly through the AOPA website, enabling them to focus fully on their training at High Tide Aviation.",
     ctaText: "AOPA’s Financing Offer",

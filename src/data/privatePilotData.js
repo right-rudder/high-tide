@@ -2,6 +2,7 @@ const privatePilot = {
   bannerImagePath:
     "/src/assets/private-pilot-in-front-of-cessna-172-skyhawk-st-simons-island-ga.jpg",
   imagePath: "/src/assets/private-pilot.jpg",
+  alt: "Private Pilot Training at High Tide Aviation",
   title: "Private Pilot",
   subtitle: "What is a Private Pilot Certificate?",
   locations: ["Southport, NC", "St. Simons Island, GA"],

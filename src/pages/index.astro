@@ -7,8 +7,8 @@ import { MdOutlineQuiz } from "react-icons/md";
 import { FaRegStar } from "react-icons/fa6";
 import { FaPhoneAlt } from "react-icons/fa";
 import { Image } from "astro:assets";
-import Feature2 from "../assets/feature-2.jpg";
-import Feature3 from "../assets/feature-3.jpg";
+import Feature2 from "../assets/student-getting-ready-to-fly.jpg";
+import Feature3 from "../assets/couple-visiting-high-tide-aviation.jpg";
 import { PHONE_NUMBER } from "../consts.ts";
 import { flightPrograms } from "../data/flightPrograms";
 import FlightProgramCard from "../components/FlightProgramCard.astro";
@@ -172,7 +172,7 @@ const posts = (await getCollection("blog")).sort(
         >
           <Image
             src={Feature2}
-            alt="Feature 2"
+            alt="Student getting ready to fly"
             class="absolute w-full h-full object-cover top-0 left-0 -z-10 group-hover:scale-110 duration-300"
             quality={10}
           />
@@ -184,7 +184,7 @@ const posts = (await getCollection("blog")).sort(
         >
           <Image
             src={Feature3}
-            alt="Feature 3"
+            alt="Couple visiting High Tide Aviation"
             class="absolute w-full h-full object-cover top-0 left-0 -z-10 group-hover:scale-110 duration-300"
             quality={10}
           />
@@ -357,7 +357,7 @@ const posts = (await getCollection("blog")).sort(
     <div class="flex-1">
       <Image
         src={TopView}
-        alt="View from the top of the airplane"
+        alt="View from the top of the airplane looking down at the ocean"
         class="w-full h-full object-cover"
         quality={10}
       />

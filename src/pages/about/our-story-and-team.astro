@@ -4,8 +4,6 @@ import Header from "../../components/Header.astro";
 import Banner from "../../assets/high-tide-aviation-team-of-cfis.jpg";
 import { Image } from "astro:assets";
 import Intro from "../../assets/female-cfis-at-high-tide-aviation.jpg";
-import { team } from "../../data/team";
-import TeamMemberCard from "../../components/TeamMemberCard.astro";
 import StatCard from "../../components/StatCard.astro";
 import { stats } from "../../data/stats";
 import TopView from "../../assets/top-view.jpg";
@@ -17,14 +15,23 @@ import Team from "../../assets/high-tide-aviation-team-southport.jpg";
   siteDescription="Meet the dedicated team of professionals at High Tide Aviation in Southport, NC. Our experienced pilots and instructors are committed to providing top-notch flight training."
   siteKeywords="High Tide Aviation team, flight instructors Southport NC, aviation professionals Southeast Coast, experienced pilots High Tide, aviation staff Southport NC."
 >
-  <Header slot="header" image={Banner} title="Get to Know High Tide Aviation" />
+  <Header
+    slot="header"
+    image={Banner}
+    title="Get to Know High Tide Aviation"
+    alt="High Tide Aviation team of CFIs"
+  />
 
   <section class="py-24 px-5">
     <div
       class="max-w-xl gap-10 lg:max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:gap-20"
     >
       <div class="flex-1 relative">
-        <Image class="pr-6" src={Intro} alt="High Tide Aviation team" />
+        <Image
+          class="pr-6"
+          src={Intro}
+          alt="Female CFIs at High Tide Aviation"
+        />
         <div
           class="h-3/4 bg-mustard-yellow absolute -z-10 -right-0 w-20 top-[12.5%]"
         >
@@ -186,7 +193,7 @@ import Team from "../../assets/high-tide-aviation-team-southport.jpg";
     <div class="flex-1">
       <Image
         src={TopView}
-        alt="View from the top of the airplane"
+        alt="View from the top of the airplane cockpit"
         class="w-full h-full object-cover"
         quality={10}
       />

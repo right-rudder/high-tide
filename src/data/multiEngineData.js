@@ -1,7 +1,8 @@
 const privatePilot = {
   bannerImagePath:
     "/src/assets/beech-baron-in-front-of-high-tide-aviation-hangar.jpg",
-  imagePath: "/src/assets/multi-engine.jpg",
+  imagePath: "/src/assets/multiengine-plane-at-high-tide-aviation.jpg",
+  alt: "Beech Baron B55 in front of High Tide Aviation hangar",
   title: "Multi-Engine Rating",
   subtitle: "What is a Multi-Engine Rating?",
   locations: ["Southport, NC", "St. Simons Island, GA"],
@@ -130,7 +131,7 @@ const privatePilot = {
       subheading: "Train the Next Class",
       description:
         "Interested in training the next class of pilots? Perhaps you want to give back to the community that trained you? Become a CFI, CFII, & MEI with High Tide.",
-      imagePath: "/src/assets/flight-program-3.jpg",
+      imagePath: "/src/assets/high-tide-aviation-team-of-cfis-talking.jpg",
       url: "/flight-training/flight-instructor",
     },
     {

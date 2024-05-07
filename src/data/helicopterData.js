@@ -1,6 +1,7 @@
 const privatePilot = {
   bannerImagePath: "/src/assets/high-tide-r44-helicopter-in-southport-nc.jpg",
-  imagePath: "/src/assets/helicopter.jpg",
+  imagePath: "/src/assets/r44-helicopter-at-high-tide-aviation.jpg",
+  alt: "High Tide Aviation R44 helicopter in Southport, NC.",
   title: "Helicopter Training",
   subtitle:
     "What are the Different Levels of Helicopter Training Certificates?",
@@ -130,7 +131,7 @@ const privatePilot = {
       subheading: "Start Your Journey",
       description:
         "Now that you have your helicopter license, why not try out our fixed-wing aircraft?",
-      imagePath: "/src/assets/flight-program-1.jpg",
+      imagePath: "/src/assets/commercial-pilot.jpg",
       url: "/flight-training/private-pilot",
     },
     {
