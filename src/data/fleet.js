@@ -83,7 +83,7 @@ export const fleet = [
       "ADSB Out",
       "IFR Certified",
     ],
-    imagePath: "/src/assets/N8409L.jpg",
+    imagePath: "/src/assets/high-tide-aviation-cessna-172-n8409l-side.jpg",
     description: [
       "The Cessna 172 is the gold standard for new pilots. Its forgiving flight characteristics and robust reliability make it the perfect choice for initial flight training. The high-wing design offers exceptional stability and visibility, boosting student confidence as they master essential flying skills. The aircraft responds gently to control inputs and recovers smoothly from errors, instilling the poise needed to become a competent pilot. With widespread availability and easy access to maintenance expertise, the Cessna 172 keeps operational costs low, allowing for consistent training schedules.",
       "Beyond its physical attributes, the aircraft is equipped with modern avionics and instrumentation, giving students a real-world flying experience. Its versatility extends from solo flights to instrument training, making the Cessna 172 a fundamental tool in developing proficient pilots",

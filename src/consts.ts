@@ -7,10 +7,10 @@ export const SITE_DESCRIPTION =
 export const KEYWORDS =
   "Southeast Coast flight training, Southport NC pilot school, St. Simons Island GA flight instruction, airplane training Southeast, helicopter lessons Southeast Coast";
 
-export const PHONE_NUMBER = "(910) 477-1926";
+export const PHONE_NUMBER = "(910) 294-5871";
 export const ADDRESS_LINE_1 = "4345 Airport Rd SE";
 export const ADDRESS_LINE_2 = "Southport, NC 28461";
-export const PHONE_NUMBER_2 = "(912) 434-4843";
+export const PHONE_NUMBER_2 = "(912) 434-2937";
 export const ADDRESS_LINE_1_2 = "1759 Demere Rd";
 export const ADDRESS_LINE_2_2 = "St. Simons Island, GA 31522";
 export const YOUTUBE_URL = "https://www.youtube.com/@hightideaviation";
