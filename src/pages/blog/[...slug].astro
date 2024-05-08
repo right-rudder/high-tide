@@ -28,7 +28,12 @@ if (!images[heroImage]) {
 ---
 
 <BaseLayout siteTitle={title}>
-  <Header slot="header" image={images[heroImage]()} title={title} />
+  <Header
+    slot="header"
+    image={images[heroImage]()}
+    title={title}
+    alt="High Tide Sign"
+  />
   <article class="max-w-3xl mx-auto py-24 px-5">
     <div class="max-h-[30rem] flex mb-10">
       <Image
