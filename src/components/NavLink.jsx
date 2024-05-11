@@ -14,6 +14,7 @@ const NavLink = ({ menuItem, pathname, toggled, onShow }) => {
       <a
         name={menuItem.name}
         href={menuItem.link}
+        target={menuItem.external ? "_blank" : "_self"}
         className={`cursor-pointer font-semibold text-sm xl:text-base tracking-widest duration-300 hover:text-mustard-yellow py-12 border-main-red whitespace-nowrap uppercase ${
           isActive ? "text-mustard-yellow" : "text-white"
         }`}

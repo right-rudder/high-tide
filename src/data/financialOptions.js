@@ -8,14 +8,6 @@ export const financialOptions = [
     ctaLink: "#",
   },
   {
-    name: "Meratas",
-    imagePath: "/src/assets/meratas-logo.png",
-    description:
-      "High Tide Aviation collaborates with Meratas to assist prospective pilots in achieving their aviation goals. The Meratas Lender Marketplace provides personalized loan offers from a variety of lending partners. This platform allows for instant pre-qualification to finance your education and living expenses without any risk to your credit score. All your information remains secure. Explore your financing options by clicking the link below to learn more.",
-    ctaText: "View Meratas’ Offer",
-    ctaLink: "https://meratas.vercel.app/lendermarketplace",
-  },
-  {
     name: "Federal Aviation Administration",
     imagePath: "/src/assets/faa-logo.svg",
     description:
