@@ -14,11 +14,6 @@ const groundSchool = {
     subtitle: "Before joining us, ensure you meet the following criteria:",
     list: [
       {
-        heading: "Completion of Ground School",
-        description:
-          "Must have successfully completed the Ground School training to understand the theoretical aspects of flying.",
-      },
-      {
         heading: "Medical Certificate",
         description:
           "Obtain a medical certificate from an FAA-certified aviation medical examiner.",
@@ -27,6 +22,11 @@ const groundSchool = {
         heading: "Minimum Age",
         description:
           "Must be at least 17 years old to obtain the Private Pilot training program.",
+      },
+      {
+        heading: "English Proficiency",
+        description:
+          "Must be able to understand English at a level sufficient to understand the training materials and communicate.",
       },
     ],
   },

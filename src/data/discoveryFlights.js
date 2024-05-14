@@ -27,4 +27,18 @@ export const discoveryFlights = [
     imagePath: "/src/assets/r44-helicopter-at-high-tide-aviation.jpg",
     url: "https://fareharbor.com/embeds/book/hightidehelicopters/items/529569/?full-items=yes&flow=335655",
   },
+  {
+    name: "St. Simon Flight Gift Cards",
+    location: "St. Simons Island, GA",
+    price: "Choose Your Gift Amount!",
+    imagePath: "/src/assets/pleasure-island.jpg",
+    url: "https://fareharbor.com/embeds/book/flyhightide-ssi/items/350303/calendar/?full-items=yes&flow=621000",
+  },
+  {
+    name: "Southport Flight Gift Cards",
+    location: "Southport, NC",
+    price: "Choose Your Gift Amount!",
+    imagePath: "/src/assets/town-in-southport-nc.jpg",
+    url: "https://fareharbor.com/embeds/book/hightidehelicopters/items/208253/?full-items=yes&back=https://flyhightide.com/fly-with-us-southport-nc/scenic-air-tours/&flow=335643&g4=yes",
+  },
 ];
