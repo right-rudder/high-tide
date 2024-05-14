@@ -20,6 +20,7 @@ const {
   enrollmentProcess,
   futurePathways,
   alt,
+  programs,
 } = Astro.props;
 const images = import.meta.glob<{ default: ImageMetadata }>(
   "/src/assets/*.{jpeg,jpg,png,gif,webp}",
@@ -41,8 +42,8 @@ function getLastWord(str) {
 
 <BaseLayout
   siteTitle={title}
-  siteDescription="Begin your aviation journey with High Tide Aviation, offering comprehensive guidance and support for first-time pilots in Southport, NC, and St. Simons Island, GA."
-  siteKeywords="first-time pilot Southport NC, beginner flight training St. Simons Island GA, aviation introduction Southeast Coast, learn to fly Southport NC, pilot training for beginners."
+  siteDescription="Begin your aviation journey with High Tide Aviation, offering comprehensive guidance and support for first-time pilots in Southport, NC, and St Simons Island, GA."
+  siteKeywords="first-time pilot Southport NC, beginner flight training St Simons Island GA, aviation introduction Southeast Coast, learn to fly Southport NC, pilot training for beginners."
 >
   <Header
     slot="header"
@@ -90,6 +91,15 @@ function getLastWord(str) {
         description.map((paragraph) => (
           <p class="text-gray-600 leading-loose">{paragraph}</p>
         ))
+      }
+      {
+        programs &&
+          programs.map((program) => (
+            <p class="text-gray-600 leading-loose">
+              <span class="font-medium text-gray-800">{program.title}: </span>
+              {program.description}
+            </p>
+          ))
       }
 
       <div class="flex flex-col lg:flex-row gap-8 lg:gap-16 mt-7">

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { RadioGroup } from "@headlessui/react";
-import { CheckIcon } from "@heroicons/react/20/solid";
+import { CheckIcon, XMarkIcon } from "@heroicons/react/20/solid";
 import { FaRegHourglassHalf } from "react-icons/fa6";
 import { FaCalendar } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
@@ -8,7 +8,7 @@ import PricingComponentPlaceholder from "./PricingComponentPlaceholder";
 
 const locations = [
   { value: "southport", label: "Southport" },
-  { value: "simons", label: "St. Simons Island" },
+  { value: "simons", label: "St Simons Island" },
 ];
 
 function classNames(...classes) {
@@ -20,7 +20,7 @@ export default function PricingComponent({ tiers, program }) {
 
   return (
     <div
-      className={`mx-auto ${program === "Helicopter Training" ? "max-w-[100rem]" : "max-w-7xl"} px-6 lg:px-8`}
+      className={`mx-auto ${tiers[location.value].length >= 4 ? "max-w-[100rem]" : "max-w-7xl"} px-6 lg:px-8`}
     >
       <div className="mx-auto max-w-4xl text-center">
         <h2 className="uppercase text-mustard-yellow font-bold tracking-widest">
@@ -30,33 +30,36 @@ export default function PricingComponent({ tiers, program }) {
           We can remove this title if not needed
         </p> */}
       </div>
-      <div className="mt-7 flex justify-center">
-        <RadioGroup
-          value={location}
-          onChange={setLocation}
-          className="grid grid-cols-2 gap-x-1 rounded-full p-1 text-center text-xs font-semibold leading-5 ring-2 ring-inset ring-medium-blue"
-        >
-          <RadioGroup.Label className="sr-only">
-            Payment location
-          </RadioGroup.Label>
-          {locations.map((option) => (
-            <RadioGroup.Option
-              key={option.value}
-              value={option}
-              className={({ checked }) =>
-                classNames(
-                  checked ? "bg-medium-blue text-white" : "text-gray-500",
-                  "cursor-pointer rounded-full px-5 py-2 duration-300 flex justify-center items-center",
-                )
-              }
-            >
-              <span className="text-lg">{option.label}</span>
-            </RadioGroup.Option>
-          ))}
-        </RadioGroup>
-      </div>
+      {tiers.simons !== undefined && (
+        <div className="mt-7 flex justify-center">
+          <RadioGroup
+            value={location}
+            onChange={setLocation}
+            className="grid grid-cols-2 gap-x-1 rounded-full p-1 text-center text-xs font-semibold leading-5 ring-2 ring-inset ring-medium-blue"
+          >
+            <RadioGroup.Label className="sr-only">
+              Payment location
+            </RadioGroup.Label>
+            {locations.map((option) => (
+              <RadioGroup.Option
+                key={option.value}
+                value={option}
+                className={({ checked }) =>
+                  classNames(
+                    checked ? "bg-medium-blue text-white" : "text-gray-500",
+                    "cursor-pointer rounded-full px-5 py-2 duration-300 flex justify-center items-center",
+                  )
+                }
+              >
+                <span className="text-lg">{option.label}</span>
+              </RadioGroup.Option>
+            ))}
+          </RadioGroup>
+        </div>
+      )}
+
       <div
-        className={`isolate mx-auto mt-10 grid gap-8 lg:mx-0 lg:max-w-none ${program === "Helicopter Training" && location.value === "southport" ? "xl:grid-cols-4 md:grid-cols-2" : "lg:grid-cols-" + tiers[location.value].length}`}
+        className={`isolate mx-auto mt-10 grid gap-8 lg:mx-0 lg:max-w-none ${tiers[location.value].length >= 4 ? "xl:grid-cols-4 md:grid-cols-2" : "lg:grid-cols-" + tiers[location.value].length}`}
       >
         {tiers[location.value].length == 0 ? (
           <PricingComponentPlaceholder />
@@ -73,7 +76,7 @@ export default function PricingComponent({ tiers, program }) {
               )}
             >
               <div
-                className={`flex flex-col ${location.value === "southport" && program === "Ground School" ? "lg:min-h-64" : "lg:min-h-28"} ${location.value === "southport" && program === "Helicopter Training" ? "xl:min-h-32" : ""}`}
+                className={`flex flex-col ${location.value === "southport" && program === "Ground School" ? "lg:min-h-40" : "lg:min-h-28"} ${tiers[location.value].length >= 4 ? "xl:min-h-40" : ""}`}
               >
                 <h3
                   id={tier.id}
@@ -87,13 +90,13 @@ export default function PricingComponent({ tiers, program }) {
                 <p
                   className={classNames(
                     tier.featured ? "text-gray-300" : "text-gray-600",
-                    "mt-4 text-sm leading-6",
+                    "mt-4 text-sm leading-6 mb-2",
                   )}
                 >
                   {tier.description}
                 </p>
                 {tier.duration && (
-                  <p className="flex mt-2 gap-x-2 text-sm leading-6">
+                  <p className="flex gap-x-2 text-sm leading-6">
                     <FaRegHourglassHalf className="text-mustard-yellow size-3 flex-shrink-0 mt-[5.5px]" />
                     <span className="text-gray-600">{tier.duration}</span>
                   </p>
@@ -172,6 +175,21 @@ export default function PricingComponent({ tiers, program }) {
                     {feature}
                   </li>
                 ))}
+                {tier.nonfeatures &&
+                  tier.nonfeatures.map((nonfeature) => (
+                    <li key={nonfeature} className="flex gap-x-3 font-medium">
+                      <XMarkIcon
+                        className={classNames(
+                          tier.featured
+                            ? "text-mustard-yellow"
+                            : "text-dark-blue",
+                          "h-6 w-5 flex-none",
+                        )}
+                        aria-hidden="true"
+                      />
+                      {nonfeature}
+                    </li>
+                  ))}
               </ul>
             </div>
           ))

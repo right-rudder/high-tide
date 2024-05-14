@@ -2,13 +2,13 @@ const privatePilot = {
   bannerImagePath:
     "/src/assets/heading-to-training-at-high-tide-aviation-st-simons-island-ga.jpg",
   imagePath: "/src/assets/commercial-pilot.jpg",
-  alt: "Heading to Training at High Tide Aviation St. Simons Island, GA",
+  alt: "Heading to Training at High Tide Aviation St Simons Island, GA",
   title: "Commercial Pilot",
   subtitle: "What is a Commercial Pilot Certificate?",
-  locations: ["Southport, NC", "St. Simons Island, GA"],
+  locations: ["Southport, NC", "St Simons Island, GA"],
   description: [
     "A Commercial Pilot Certificate enables qualified pilots to operate aircraft for compensation or hire, a crucial step for anyone aiming to pursue a career in aviation. This certification allows pilots to participate in diverse operations such as cargo transport, aerial surveying, and passenger carrying, among others.",
-    "High Tide Aviation offers this advanced training at both Southport, NC, and St. Simons Island, GA, providing aspiring commercial pilots with training that includes advanced flight techniques, extensive knowledge of aviation regulations, and the professional conduct required of a commercial pilot.",
+    "High Tide Aviation offers this advanced training at both Southport, NC, and St Simons Island, GA, providing aspiring commercial pilots with training that includes advanced flight techniques, extensive knowledge of aviation regulations, and the professional conduct required of a commercial pilot.",
     "The program is structured to deepen the technical and practical skills of pilots through rigorous training that includes both classroom instruction and significant flight time. Pilots will learn to perform complex maneuvers, manage commercial flight operations, and respond adeptly to challenging flying conditions. The goal is to ensure that each pilot not only meets but exceeds the stringent standards set by the aviation industry.",
   ],
   prerequisites: {
@@ -79,39 +79,6 @@ const privatePilot = {
       {
         name: "Zero to Hero Program",
         id: "tier-zero-to-hero",
-        href: "#",
-        price: "Custom",
-        description: "Full-range training for aspiring pilots.",
-        features: [
-          "All-inclusive from Private to CFI/CFII/MEI",
-          "Full support at your selected training location",
-          "Customized training schedule",
-        ],
-        featured: true,
-        cta: "Contact for Custom Quote",
-      },
-    ],
-    simons: [
-      {
-        name: "Commercial Pilot",
-        id: "tier-commercial-pilot-simons",
-        href: "#",
-        price: "$31,000",
-        description:
-          "*Assumes student already holds a private pilot license and instrument rating",
-        features: [
-          "150 hours solo flight time (Cessna 172)",
-          "20 hours of ground instruction",
-          "FAA Written Exam",
-          "Required supplies",
-          "Final check ride evaluation",
-        ],
-        featured: false,
-        cta: "Enroll Now",
-      },
-      {
-        name: "Zero to Hero Program",
-        id: "tier-zero-to-hero-simons",
         href: "#",
         price: "Custom",
         description: "Full-range training for aspiring pilots.",

@@ -88,13 +88,6 @@ const Navbar = ({ pathname }) => {
               </div>
               <div className="hidden lg:flex items-center gap-3 text-white border-l border-white/20 pl-10">
                 <a
-                  href="https://shop.flyhightide.com/"
-                  target="_blank"
-                  aria-label="High Tide's Shop"
-                >
-                  <IoStorefront className="size-8 cursor-pointer hover:text-mustard-yellow duration-300 shrink-0" />
-                </a>
-                <a
                   href={`tel:${PHONE_NUMBER}`}
                   aria-label="Call High Tide Aviation Now!"
                   className="group border p-3 border-mustard-yellow rounded-full bg-mustard-yellow hover:bg-white hover:border-white duration-300"

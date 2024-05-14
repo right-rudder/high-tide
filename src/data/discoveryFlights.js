@@ -8,7 +8,7 @@ export const discoveryFlights = [
   },
   {
     name: "Career Discovery Flight",
-    location: "St. Simons Island, GA",
+    location: "St Simons Island, GA",
     price: "$149 per person",
     imagePath: "/src/assets/cessna-over-st-simons-island.jpg",
     url: "https://fareharbor.com/embeds/book/flyhightide-ssi/items/347994/?full-items=yes&flow=621000",
@@ -28,8 +28,8 @@ export const discoveryFlights = [
     url: "https://fareharbor.com/embeds/book/hightidehelicopters/items/529569/?full-items=yes&flow=335655",
   },
   {
-    name: "St. Simons Flight Gift Cards",
-    location: "St. Simons Island, GA",
+    name: "St Simons Flight Gift Cards",
+    location: "St Simons Island, GA",
     price: "Choose Your Gift Amount!",
     imagePath: "/src/assets/pleasure-island.jpg",
     url: "https://fareharbor.com/embeds/book/flyhightide-ssi/items/350303/calendar/?full-items=yes&flow=621000",

@@ -72,4 +72,10 @@ export const navbarLinks = [
     external: true,
     submenu: [],
   },
+  {
+    name: "Pilot Shop",
+    link: "https://shop.flyhightide.com/",
+    external: true,
+    submenu: [],
+  },
 ];

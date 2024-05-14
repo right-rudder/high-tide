@@ -44,7 +44,7 @@ At High Tide Aviation, we have assembled a team of highly experienced instructor
 
 The location of a flight school can also play a significant role in the overall experience. Ideally, the school should be situated in an area that offers optimal flying conditions, as well as easy access and amenities for students.
 
-High Tide Aviation's locations in St. Simons Island, Georgia and Southport, North Carolina provide the perfect backdrop for our flight training programs. With their ideal weather, diverse terrain, and proximity to major airports, our students can take advantage of a wide range of learning opportunities. Additionally, our facilities are conveniently located and equipped with the resources necessary to support a seamless training experience.
+High Tide Aviation's locations in St Simons Island, Georgia and Southport, North Carolina provide the perfect backdrop for our flight training programs. With their ideal weather, diverse terrain, and proximity to major airports, our students can take advantage of a wide range of learning opportunities. Additionally, our facilities are conveniently located and equipped with the resources necessary to support a seamless training experience.
 
 ## Joining the High Tide Aviation Community
 

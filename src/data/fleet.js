@@ -139,6 +139,25 @@ export const fleet = [
     ],
   },
   {
+    name: "Redbird FMX",
+    slug: "RedbirdFMX",
+    rentalPrice: "$190 /hr",
+    usableFuel: "N/A",
+    model: "Redbird FMX",
+    equipment: [],
+    imagePath: "/src/assets/redbird-simulator.jpg",
+    imagesArray: [
+      "/src/assets/redbird-simulator.jpg",
+      "/src/assets/redbird-simulator-from-the-outside.jpg",
+      "/src/assets/students-inside-redbird-simultor.jpg",
+      "/src/assets/students-learning-inside-redbird-simulator.jpg",
+    ],
+    description: [
+      "The Redbird FMX Full-Motion Flight Simulator stands as a cornerstone of our flight training program at High Tide Aviation. This advanced simulator goes beyond traditional training methods by providing an electric motion platform that offers realistic, tactile feedback, closely replicating the in-flight experience. Pilots can engage in a variety of training scenarios within a fully enclosed cockpit, complete with wrap-around visuals and high-fidelity sound, allowing for an immersive learning environment.",
+      "Essential for developing and refining pilot skills, the FMX supports training in instrument procedures, emergency response techniques, and weather navigation—key areas for any aviator. By simulating real-world conditions in a controlled environment, the FMX enhances both the safety and effectiveness of pilot training.",
+    ],
+  },
+  {
     name: "Bonanza",
     slug: "N4457S",
     usableFuel: "74 gal",
@@ -201,19 +220,6 @@ export const fleet = [
     description: [
       "The Robinson R44 helicopter is an excellent training aircraft for those pursuing a pilot license in helicopter operation. Known for its reliability and cost-effectiveness, the R44 is an ideal platform for new pilots to develop a strong foundation in helicopter flying. The training program adheres to FAA Part 61 requirements, ensuring comprehensive flight instruction that includes 30 hours of dual instruction and 10 hours of solo flight, totaling a minimum of 40 hours in the cockpit.",
       "High Tide Aviation's use of the R44 emphasizes a thorough understanding of helicopter mechanics and operations too, making it an excellent starting point for aspiring helicopter pilots.",
-    ],
-  },
-  {
-    name: "Redbird FMX",
-    slug: "RedbirdFMX",
-    usableFuel: "N/A",
-    model: "Redbird FMX",
-    equipment: [],
-    imagePath: "/src/assets/r44-helicopter-at-high-tide-aviation.jpg",
-    imagesArray: ["/src/assets/r44-helicopter-at-high-tide-aviation.jpg"],
-    description: [
-      "The Redbird FMX Full-Motion Flight Simulator stands as a cornerstone of our flight training program at High Tide Aviation. This advanced simulator goes beyond traditional training methods by providing an electric motion platform that offers realistic, tactile feedback, closely replicating the in-flight experience. Pilots can engage in a variety of training scenarios within a fully enclosed cockpit, complete with wrap-around visuals and high-fidelity sound, allowing for an immersive learning environment.",
-      "Essential for developing and refining pilot skills, the FMX supports training in instrument procedures, emergency response techniques, and weather navigation—key areas for any aviator. By simulating real-world conditions in a controlled environment, the FMX enhances both the safety and effectiveness of pilot training.",
     ],
   },
 ];

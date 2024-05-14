@@ -3,7 +3,7 @@ export const reviews = [
     name: "Jake B.",
     title: "High Tide Private Pilot",
     review:
-      "I earned my private pilot license through High Tide out of St. Simons Island, GA. They are an excellent program with a great cadre of instructors. I am very thankful to have had such a great team to help me start this journey into aviation!",
+      "I earned my private pilot license through High Tide out of St Simons Island, GA. They are an excellent program with a great cadre of instructors. I am very thankful to have had such a great team to help me start this journey into aviation!",
   },
   {
     name: "Towns S.",

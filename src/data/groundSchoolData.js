@@ -4,7 +4,7 @@ const groundSchool = {
   alt: "Student and instructor reviewing flight charts in a classroom setting.",
   title: "Ground School",
   subtitle: "What is Ground School?",
-  locations: ["Southport, NC", "St. Simons Island, GA"],
+  locations: ["Southport, NC", "St Simons Island, GA"],
   description: [
     "High Tide Aviation's ground school is where your aviation dreams take flight. As the first step in pilot training, our program equips you with the essential knowledge every pilot needs. Guided by our expert instructors - seasoned aviators themselves - you'll explore a wide range of subjects, from the principles of flight and aircraft operations to navigation, weather, flight planning, and federal regulations. Through interactive lessons and practical exercises, you'll learn to think and act like a pilot.",
     "Safety is paramount throughout your ground school experience. You'll not only master the technical skills, but also develop the confidence to operate an aircraft responsibly and confidently. Whether you're pursuing recreational flying or a professional pilot career, High Tide's ground school lays the groundwork for a lifetime of aviation success.",
@@ -14,19 +14,9 @@ const groundSchool = {
     subtitle: "Before joining us, ensure you meet the following criteria:",
     list: [
       {
-        heading: "Medical Certificate",
-        description:
-          "Obtain a medical certificate from an FAA-certified aviation medical examiner.",
-      },
-      {
         heading: "Minimum Age",
         description:
-          "Must be at least 17 years old to obtain the Private Pilot training program.",
-      },
-      {
-        heading: "English Proficiency",
-        description:
-          "Must be able to understand English at a level sufficient to understand the training materials and communicate.",
+          "Must be at least 16 years old to enroll in ground school.",
       },
     ],
   },
@@ -59,16 +49,14 @@ const groundSchool = {
         href: "#",
         price: "$180",
         description: "Your first step toward the skies.",
-        duration: "February 20th through April 25th",
-        schedule: "Tuesday and Thursday, 6-9pm",
-        venue:
-          "Brunswick Community College Leland Center, Room 208 - Southport, North Carolina",
+        schedule: "Offered every fall and spring semester",
         features: [
           "In-depth study of aerodynamics, weather, and navigation",
           "Understanding of instruments, preflight planning, and regulations",
           "Mastery of radio communications and flight procedures",
           "Preparedness for the FAA Private Pilot written exam",
         ],
+        nonfeatures: ["Prices do not include books and supplies"],
         featured: false,
         cta: "Reserve Your Spot",
       },
@@ -78,16 +66,14 @@ const groundSchool = {
         href: "#",
         price: "$180",
         description: "Elevate your piloting with instrument mastery.",
-        duration: "February 20th through April 25th",
-        schedule: "Tuesday and Thursday, 6-9pm",
-        venue:
-          "Brunswick Community College Leland Campus, Room 105 - Southport, North Carolina",
+        schedule: "Offered every fall and spring semester",
         features: [
           "Training for instrument rating status",
           "Courses on instrument flying and navigation systems",
           "Knowledge of Federal Aviation Regulations and aeromedical factors",
           "Preparedness for the FAA Instrument Pilot written exam",
         ],
+        nonfeatures: ["Prices do not include books and supplies"],
         featured: false,
         cta: "Enroll Now",
       },
@@ -96,19 +82,31 @@ const groundSchool = {
         id: "tier-drones",
         href: "#",
         price: "$125",
-        description: "Navigate the future of flight with drone piloting.",
-        duration: "April 8th through May 6th",
-        schedule: "Monday & Wednesday, 6-9pm",
-        venue:
-          "Brunswick Community College Leland Campus, Room 105 - Southport, North Carolina",
+        schedule: "Offered every fall and spring semester",
         features: [
           "Introduction to commercial and recreational drone uses",
           "Comprehension of regulations, weather, and airspace",
           "Focus on human factors and drone performance",
           "Preparation for the FAA Part 107 Remote Pilot Knowledge Test",
         ],
+        nonfeatures: ["Prices do not include books and supplies"],
         featured: false,
         cta: "Start Drone Training",
+      },
+      {
+        name: "One-on-One Ground School",
+        id: "tier-one-on-one",
+        href: "#",
+        price: "Custom",
+        description:
+          "Contact us to set up your personalized ground school instruction in Southport or St Simons Island.",
+        features: [
+          "Full range of instruction available",
+          "Cater ground school to your schedule",
+          "Personalized support",
+        ],
+        featured: true,
+        cta: "Contact for Custom Quote",
       },
     ],
     simons: [
@@ -116,12 +114,11 @@ const groundSchool = {
         name: "Private Pilot",
         id: "tier-private-pilot-simons",
         href: "#",
-        price: "$450-550",
+        price: "$450",
         description: "Embark on your aviation journey by the coast.",
-        duration: "January 16th - March 28th",
-        schedule: "Tuesday and Thursday, 6-9pm",
-        venue: "Coastal Pines Technical College - St. Simons Island, Georgia",
+        schedule: "Offered every fall and spring semester",
         features: [
+          "Includes books and supplies",
           "Full-scale private pilot training",
           "Hands-on experience with weather, aerodynamics, and navigation",
           "Detailed study of flight regulations and communication",
@@ -129,6 +126,21 @@ const groundSchool = {
         ],
         featured: false,
         cta: "Join GA Ground School",
+      },
+      {
+        name: "One-on-One Ground School",
+        id: "tier-one-on-one-simons",
+        href: "#",
+        price: "Custom",
+        description:
+          "Contact us to set up your personalized ground school instruction in Southport or St Simons Island.",
+        features: [
+          "Full range of instruction available",
+          "Cater ground school to your schedule",
+          "Personalized support",
+        ],
+        featured: true,
+        cta: "Contact for Custom Quote",
       },
     ],
   },
