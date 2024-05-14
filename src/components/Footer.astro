@@ -119,32 +119,10 @@ import { navbarLinks } from "../data/navbarLinks";
           </div>
         ))
       }
-      <div class="flex flex-col gap-3">
+      <div class="flex flex-col">
         <h3 class="font-medium">Contact</h3>
         <ul class="flex flex-col gap-1 text-white/50">
-          <li class="flex flex-col gap-2">
-            <div>
-              <p class="text-white">Flight Training Inquiries</p>
-              <div class="flex items-center gap-2">
-                <MdEmail className="size-4 text-mustard-yellow" />
-                <a
-                  class="hover:text-white duration-300"
-                  href=`mailto:${EMAIL_ADDRESS}`>{EMAIL_ADDRESS}</a
-                >
-              </div>
-            </div>
-            <div>
-              <p class="text-white">Other Inquiries</p>
-              <div class="flex items-center gap-2">
-                <MdEmail className="size-4 text-mustard-yellow" />
-                <a
-                  class="hover:text-white duration-300"
-                  href=`mailto:office@flyhightide.com`>office@flyhightide.com</a
-                >
-              </div>
-            </div>
-          </li>
-          <li class="mt-4 font-medium text-white">Southport Location</li>
+          <li class="mt-1 font-medium text-white">Southport Location</li>
           <li class="flex gap-2 items-center">
             <FaPhone className="size-4 text-mustard-yellow" />
             <a class="hover:text-white duration-300" href=`tel:${PHONE_NUMBER}`

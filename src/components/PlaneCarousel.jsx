@@ -4,6 +4,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import Image1 from "../assets/N4457S.jpg";
 
 const PlaneCarousel = ({ imagesArray }) => {
   return (

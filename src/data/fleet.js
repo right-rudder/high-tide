@@ -141,7 +141,7 @@ export const fleet = [
   {
     name: "Redbird FMX",
     slug: "RedbirdFMX",
-    rentalPrice: "$190 /hr",
+    rentalPrice: "$85 /hr",
     usableFuel: "N/A",
     model: "Redbird FMX",
     equipment: [],

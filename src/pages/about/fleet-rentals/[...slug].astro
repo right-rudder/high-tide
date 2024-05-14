@@ -61,6 +61,9 @@ if (!images[imagePath]) {
 }
 
 const index = fleet.findIndex((plane) => plane.slug === slug);
+// const newImagesArray = imagesArray.map((image) => {
+//   return images[image]();
+// });
 ---
 
 <BaseLayout
@@ -79,7 +82,12 @@ const index = fleet.findIndex((plane) => plane.slug === slug);
     <div
       class="max-w-xl gap-8 lg:max-w-6xl mx-auto flex flex-col lg:flex-row items-center"
     >
-      <PlaneCarousel client:load imagesArray={imagesArray} />
+      <Image
+        src={images[imagePath]()}
+        alt={name}
+        class="w-full lg:h-[27rem] object-cover"
+      />
+      <!-- <PlaneCarousel client:load imagesArray={imagesArray} /> -->
       <div
         class="flex lg:flex-1 w-full py-8 px-10 flex-col justify-around gap-2 lg:h-[27rem] lg:min-w-60 bg-mustard-yellow/15"
       >
@@ -201,3 +209,9 @@ const index = fleet.findIndex((plane) => plane.slug === slug);
     </div>
   </section>
 </BaseLayout>
+
+<!-- <script define:vars={{ imagesArray, newImagesArray, Banner }}>
+  console.log(imagesArray);
+  console.log(newImagesArray);
+  console.log(Banner);
+</script> -->
