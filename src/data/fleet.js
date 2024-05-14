@@ -146,6 +146,8 @@ export const fleet = [
     model: "Redbird FMX",
     equipment: [],
     imagePath: "/src/assets/redbird-simulator.jpg",
+    hasRibbon: true,
+    ribbonTitle: "Great for time building!",
     imagesArray: [
       "/src/assets/redbird-simulator.jpg",
       "/src/assets/redbird-simulator-from-the-outside.jpg",
