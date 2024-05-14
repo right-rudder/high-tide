@@ -28,7 +28,7 @@ export const discoveryFlights = [
     url: "https://fareharbor.com/embeds/book/hightidehelicopters/items/529569/?full-items=yes&flow=335655",
   },
   {
-    name: "St. Simon Flight Gift Cards",
+    name: "St. Simons Flight Gift Cards",
     location: "St. Simons Island, GA",
     price: "Choose Your Gift Amount!",
     imagePath: "/src/assets/pleasure-island.jpg",
