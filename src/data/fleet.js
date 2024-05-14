@@ -12,6 +12,10 @@ export const fleet = [
     ],
     imagePath:
       "/src/assets/n7085g-cessna-skyhawk-172-high-tide-aviation-flight-school.jpg",
+    imagesArray: [
+      "/src/assets/n7085g-cessna-skyhawk-172-high-tide-aviation-flight-school.jpg",
+      "/src/assets/N7085G-panel.png",
+    ],
     description: [
       "The Cessna 172 is the gold standard for new pilots. Its forgiving flight characteristics and robust reliability make it the perfect choice for initial flight training. The high-wing design offers exceptional stability and visibility, boosting student confidence as they master essential flying skills. The aircraft responds gently to control inputs and recovers smoothly from errors, instilling the poise needed to become a competent pilot. With widespread availability and easy access to maintenance expertise, the Cessna 172 keeps operational costs low, allowing for consistent training schedules.",
       "Beyond its physical attributes, the aircraft is equipped with modern avionics and instrumentation, giving students a real-world flying experience. Its versatility extends from solo flights to instrument training, making the Cessna 172 a fundamental tool in developing proficient pilots",
@@ -31,6 +35,7 @@ export const fleet = [
       "JPI Fuel Flow Gauge",
     ],
     imagePath: "/src/assets/N7994X.jpg",
+    imagesArray: ["/src/assets/N7994X.jpg", "/src/assets/N7994X-panel.png"],
     description: [
       "The Cessna 172 is the gold standard for new pilots. Its forgiving flight characteristics and robust reliability make it the perfect choice for initial flight training. The high-wing design offers exceptional stability and visibility, boosting student confidence as they master essential flying skills. The aircraft responds gently to control inputs and recovers smoothly from errors, instilling the poise needed to become a competent pilot. With widespread availability and easy access to maintenance expertise, the Cessna 172 keeps operational costs low, allowing for consistent training schedules.",
       "Beyond its physical attributes, the aircraft is equipped with modern avionics and instrumentation, giving students a real-world flying experience. Its versatility extends from solo flights to instrument training, making the Cessna 172 a fundamental tool in developing proficient pilots",
@@ -49,6 +54,10 @@ export const fleet = [
       "Dual King Analog Comms",
     ],
     imagePath: "/src/assets/N79072-high-tide-aviation-flight-school.jpg",
+    imagesArray: [
+      "/src/assets/N79072-high-tide-aviation-flight-school.jpg",
+      "/src/assets/N79072-panel.png",
+    ],
     description: [
       "The Cessna 172 is the gold standard for new pilots. Its forgiving flight characteristics and robust reliability make it the perfect choice for initial flight training. The high-wing design offers exceptional stability and visibility, boosting student confidence as they master essential flying skills. The aircraft responds gently to control inputs and recovers smoothly from errors, instilling the poise needed to become a competent pilot. With widespread availability and easy access to maintenance expertise, the Cessna 172 keeps operational costs low, allowing for consistent training schedules.",
       "Beyond its physical attributes, the aircraft is equipped with modern avionics and instrumentation, giving students a real-world flying experience. Its versatility extends from solo flights to instrument training, making the Cessna 172 a fundamental tool in developing proficient pilots",
@@ -62,6 +71,7 @@ export const fleet = [
     model: "Cessna 172F",
     equipment: ["Garmin GNS 430W"],
     imagePath: "/src/assets/N8234U-high-tide-aviation-fleet.jpg",
+    imagesArray: ["/src/assets/N8234U-high-tide-aviation-fleet.jpg"],
     description: [
       "The Cessna 172 is the gold standard for new pilots. Its forgiving flight characteristics and robust reliability make it the perfect choice for initial flight training. The high-wing design offers exceptional stability and visibility, boosting student confidence as they master essential flying skills. The aircraft responds gently to control inputs and recovers smoothly from errors, instilling the poise needed to become a competent pilot. With widespread availability and easy access to maintenance expertise, the Cessna 172 keeps operational costs low, allowing for consistent training schedules.",
       "Beyond its physical attributes, the aircraft is equipped with modern avionics and instrumentation, giving students a real-world flying experience. Its versatility extends from solo flights to instrument training, making the Cessna 172 a fundamental tool in developing proficient pilots",
@@ -84,6 +94,10 @@ export const fleet = [
       "IFR Certified",
     ],
     imagePath: "/src/assets/high-tide-aviation-cessna-172-n8409l-side.jpg",
+    imagesArray: [
+      "/src/assets/high-tide-aviation-cessna-172-n8409l-side.jpg",
+      "/src/assets/N8409L-panel.png",
+    ],
     description: [
       "The Cessna 172 is the gold standard for new pilots. Its forgiving flight characteristics and robust reliability make it the perfect choice for initial flight training. The high-wing design offers exceptional stability and visibility, boosting student confidence as they master essential flying skills. The aircraft responds gently to control inputs and recovers smoothly from errors, instilling the poise needed to become a competent pilot. With widespread availability and easy access to maintenance expertise, the Cessna 172 keeps operational costs low, allowing for consistent training schedules.",
       "Beyond its physical attributes, the aircraft is equipped with modern avionics and instrumentation, giving students a real-world flying experience. Its versatility extends from solo flights to instrument training, making the Cessna 172 a fundamental tool in developing proficient pilots",
@@ -104,6 +118,7 @@ export const fleet = [
       "IFR Certified",
     ],
     imagePath: "/src/assets/N79136.jpg",
+    imagesArray: ["/src/assets/N79136.jpg", "/src/assets/N79136-panel.png"],
     description: [
       "The Cessna 172 is the gold standard for new pilots. Its forgiving flight characteristics and robust reliability make it the perfect choice for initial flight training. The high-wing design offers exceptional stability and visibility, boosting student confidence as they master essential flying skills. The aircraft responds gently to control inputs and recovers smoothly from errors, instilling the poise needed to become a competent pilot. With widespread availability and easy access to maintenance expertise, the Cessna 172 keeps operational costs low, allowing for consistent training schedules.",
       "Beyond its physical attributes, the aircraft is equipped with modern avionics and instrumentation, giving students a real-world flying experience. Its versatility extends from solo flights to instrument training, making the Cessna 172 a fundamental tool in developing proficient pilots",
@@ -117,6 +132,7 @@ export const fleet = [
     model: "Cessna 172K",
     equipment: [],
     imagePath: "/src/assets/N79475.jpg",
+    imagesArray: ["/src/assets/N79475.jpg", "/src/assets/N79475-panel.png"],
     description: [
       "The Cessna 172 is the gold standard for new pilots. Its forgiving flight characteristics and robust reliability make it the perfect choice for initial flight training. The high-wing design offers exceptional stability and visibility, boosting student confidence as they master essential flying skills. The aircraft responds gently to control inputs and recovers smoothly from errors, instilling the poise needed to become a competent pilot. With widespread availability and easy access to maintenance expertise, the Cessna 172 keeps operational costs low, allowing for consistent training schedules.",
       "Beyond its physical attributes, the aircraft is equipped with modern avionics and instrumentation, giving students a real-world flying experience. Its versatility extends from solo flights to instrument training, making the Cessna 172 a fundamental tool in developing proficient pilots",
@@ -129,6 +145,7 @@ export const fleet = [
     model: "Beechcraft Bonanza",
     equipment: [],
     imagePath: "/src/assets/N4457S.jpg",
+    imagesArray: ["/src/assets/N4457S.jpg"],
     description: [
       "The Beechcraft Bonanza remains a prominent choice for pilots in training due to its blend of classic design and modern performance. The aircraft boasts a high-performance six-cylinder engine and a low-wing configuration with retractable landing gear, making it a robust platform for teaching advanced flying skills. This single-engined, six-seater has been continuously produced for over seven decades, highlighting its reliability and enduring popularity.",
       "The Bonanza is an excellent option for flight training at High Tide Aviation because it offers a blend of complex systems and manageable handling, ideal for students progressing beyond basic skills to more sophisticated piloting. Its reputation for speed and comfort adds to its appeal as a training aircraft that students can aspire to master, bridging the gap between learning environments and real-world aviation demands.",
@@ -141,6 +158,7 @@ export const fleet = [
     model: "Beechcraft Baron B55",
     equipment: ["Garmin G500 glass panel", "Garmin GTN 650"],
     imagePath: "/src/assets/N626H.jpg",
+    imagesArray: ["/src/assets/N626H.jpg"],
     description: [
       "The Beech Baron B55, utilized for Multi-Engine training, stands out as an excellent aircraft for aspiring pilots seeking to obtain their multi-engine rating. This training aircraft is pivotal in mastering both Visual Flight Rules (VFR) and Instrument Flight Rules (IFR) operations, without specific minimum time requirements.",
       "Our syllabus is designed to cover all necessary skills for safe multi-engine operations, including emergency procedures and high-altitude operations, typically over a concise training period of 1-2 weeks. This aircraft is an ideal choice for pilots to efficiently and effectively gain multi-engine competencies.",
@@ -153,6 +171,7 @@ export const fleet = [
     model: "Beechcraft Baron B55",
     equipment: ["Dual Garmin G5s", "Garmin GNS 430W"],
     imagePath: "/src/assets/N531Q.jpg",
+    imagesArray: ["/src/assets/N531Q.jpg"],
     description: [
       "The Beech Baron B55, utilized for Multi-Engine training, stands out as an excellent aircraft for aspiring pilots seeking to obtain their multi-engine rating. This training aircraft is pivotal in mastering both Visual Flight Rules (VFR) and Instrument Flight Rules (IFR) operations, without specific minimum time requirements.",
       "Our syllabus is designed to cover all necessary skills for safe multi-engine operations, including emergency procedures and high-altitude operations, typically over a concise training period of 1-2 weeks. This aircraft is an ideal choice for pilots to efficiently and effectively gain multi-engine competencies.",
@@ -165,6 +184,7 @@ export const fleet = [
     model: "Robinson R44 Raven I",
     equipment: [],
     imagePath: "/src/assets/helicopter-r44-high-tide-aviation-n570h.jpg",
+    imagesArray: ["/src/assets/helicopter-r44-high-tide-aviation-n570h.jpg"],
     description: [
       "The Robinson R44 helicopter is an excellent training aircraft for those pursuing a pilot license in helicopter operation. Known for its reliability and cost-effectiveness, the R44 is an ideal platform for new pilots to develop a strong foundation in helicopter flying. The training program adheres to FAA Part 61 requirements, ensuring comprehensive flight instruction that includes 30 hours of dual instruction and 10 hours of solo flight, totaling a minimum of 40 hours in the cockpit.",
       "High Tide Aviation's use of the R44 emphasizes a thorough understanding of helicopter mechanics and operations too, making it an excellent starting point for aspiring helicopter pilots.",
@@ -177,6 +197,7 @@ export const fleet = [
     model: "Robinson R44 Raven II",
     equipment: ["IFR Certified"],
     imagePath: "/src/assets/r44-helicopter-at-high-tide-aviation.jpg",
+    imagesArray: ["/src/assets/r44-helicopter-at-high-tide-aviation.jpg"],
     description: [
       "The Robinson R44 helicopter is an excellent training aircraft for those pursuing a pilot license in helicopter operation. Known for its reliability and cost-effectiveness, the R44 is an ideal platform for new pilots to develop a strong foundation in helicopter flying. The training program adheres to FAA Part 61 requirements, ensuring comprehensive flight instruction that includes 30 hours of dual instruction and 10 hours of solo flight, totaling a minimum of 40 hours in the cockpit.",
       "High Tide Aviation's use of the R44 emphasizes a thorough understanding of helicopter mechanics and operations too, making it an excellent starting point for aspiring helicopter pilots.",
