@@ -16,4 +16,4 @@ export const ADDRESS_LINE_2_2 = "St. Simons Island, GA 31522";
 export const YOUTUBE_URL = "https://www.youtube.com/@hightideaviation";
 export const FACEBOOK_URL = "https://www.facebook.com/flyhightide";
 export const INSTAGRAM_URL = "https://www.instagram.com/hightideaviation/";
-export const EMAIL_ADDRESS = "info@hightideaviation.com";
+export const EMAIL_ADDRESS = "trainingsupport@flyhightide.com";
