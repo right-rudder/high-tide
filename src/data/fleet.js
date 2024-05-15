@@ -14,7 +14,7 @@ export const fleet = [
       "/src/assets/n7085g-cessna-skyhawk-172-high-tide-aviation-flight-school.jpg",
     imagesArray: [
       "/src/assets/n7085g-cessna-skyhawk-172-high-tide-aviation-flight-school.jpg",
-      "/src/assets/N7085G-panel.png",
+      "/src/assets/N7085G-panel.webp",
     ],
     description: [
       "The Cessna 172 is the gold standard for new pilots. Its forgiving flight characteristics and robust reliability make it the perfect choice for initial flight training. The high-wing design offers exceptional stability and visibility, boosting student confidence as they master essential flying skills. The aircraft responds gently to control inputs and recovers smoothly from errors, instilling the poise needed to become a competent pilot. With widespread availability and easy access to maintenance expertise, the Cessna 172 keeps operational costs low, allowing for consistent training schedules.",
@@ -35,7 +35,7 @@ export const fleet = [
       "JPI Fuel Flow Gauge",
     ],
     imagePath: "/src/assets/N7994X.jpg",
-    imagesArray: ["/src/assets/N7994X.jpg", "/src/assets/N7994X-panel.png"],
+    imagesArray: ["/src/assets/N7994X.jpg", "/src/assets/N7994X-panel.webp"],
     description: [
       "The Cessna 172 is the gold standard for new pilots. Its forgiving flight characteristics and robust reliability make it the perfect choice for initial flight training. The high-wing design offers exceptional stability and visibility, boosting student confidence as they master essential flying skills. The aircraft responds gently to control inputs and recovers smoothly from errors, instilling the poise needed to become a competent pilot. With widespread availability and easy access to maintenance expertise, the Cessna 172 keeps operational costs low, allowing for consistent training schedules.",
       "Beyond its physical attributes, the aircraft is equipped with modern avionics and instrumentation, giving students a real-world flying experience. Its versatility extends from solo flights to instrument training, making the Cessna 172 a fundamental tool in developing proficient pilots",
@@ -56,7 +56,7 @@ export const fleet = [
     imagePath: "/src/assets/N79072-high-tide-aviation-flight-school.jpg",
     imagesArray: [
       "/src/assets/N79072-high-tide-aviation-flight-school.jpg",
-      "/src/assets/N79072-panel.png",
+      "/src/assets/N79072-panel.webp",
     ],
     description: [
       "The Cessna 172 is the gold standard for new pilots. Its forgiving flight characteristics and robust reliability make it the perfect choice for initial flight training. The high-wing design offers exceptional stability and visibility, boosting student confidence as they master essential flying skills. The aircraft responds gently to control inputs and recovers smoothly from errors, instilling the poise needed to become a competent pilot. With widespread availability and easy access to maintenance expertise, the Cessna 172 keeps operational costs low, allowing for consistent training schedules.",
@@ -96,7 +96,7 @@ export const fleet = [
     imagePath: "/src/assets/high-tide-aviation-cessna-172-n8409l-side.jpg",
     imagesArray: [
       "/src/assets/high-tide-aviation-cessna-172-n8409l-side.jpg",
-      "/src/assets/N8409L-panel.png",
+      "/src/assets/N8409L-panel.webp",
     ],
     description: [
       "The Cessna 172 is the gold standard for new pilots. Its forgiving flight characteristics and robust reliability make it the perfect choice for initial flight training. The high-wing design offers exceptional stability and visibility, boosting student confidence as they master essential flying skills. The aircraft responds gently to control inputs and recovers smoothly from errors, instilling the poise needed to become a competent pilot. With widespread availability and easy access to maintenance expertise, the Cessna 172 keeps operational costs low, allowing for consistent training schedules.",
@@ -118,7 +118,7 @@ export const fleet = [
       "IFR Certified",
     ],
     imagePath: "/src/assets/N79136.jpg",
-    imagesArray: ["/src/assets/N79136.jpg", "/src/assets/N79136-panel.png"],
+    imagesArray: ["/src/assets/N79136.jpg", "/src/assets/N79136-panel.webp"],
     description: [
       "The Cessna 172 is the gold standard for new pilots. Its forgiving flight characteristics and robust reliability make it the perfect choice for initial flight training. The high-wing design offers exceptional stability and visibility, boosting student confidence as they master essential flying skills. The aircraft responds gently to control inputs and recovers smoothly from errors, instilling the poise needed to become a competent pilot. With widespread availability and easy access to maintenance expertise, the Cessna 172 keeps operational costs low, allowing for consistent training schedules.",
       "Beyond its physical attributes, the aircraft is equipped with modern avionics and instrumentation, giving students a real-world flying experience. Its versatility extends from solo flights to instrument training, making the Cessna 172 a fundamental tool in developing proficient pilots",
@@ -132,7 +132,7 @@ export const fleet = [
     model: "Cessna 172K",
     equipment: [],
     imagePath: "/src/assets/N79475.jpg",
-    imagesArray: ["/src/assets/N79475.jpg", "/src/assets/N79475-panel.png"],
+    imagesArray: ["/src/assets/N79475.jpg", "/src/assets/N79475-panel.webp"],
     description: [
       "The Cessna 172 is the gold standard for new pilots. Its forgiving flight characteristics and robust reliability make it the perfect choice for initial flight training. The high-wing design offers exceptional stability and visibility, boosting student confidence as they master essential flying skills. The aircraft responds gently to control inputs and recovers smoothly from errors, instilling the poise needed to become a competent pilot. With widespread availability and easy access to maintenance expertise, the Cessna 172 keeps operational costs low, allowing for consistent training schedules.",
       "Beyond its physical attributes, the aircraft is equipped with modern avionics and instrumentation, giving students a real-world flying experience. Its versatility extends from solo flights to instrument training, making the Cessna 172 a fundamental tool in developing proficient pilots",
