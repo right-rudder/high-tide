@@ -4,7 +4,6 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
-import Image1 from "../assets/N4457S.jpg";
 
 const PlaneCarousel = ({ imagesArray }) => {
   return (
@@ -25,9 +24,9 @@ const PlaneCarousel = ({ imagesArray }) => {
         className="inline lg:h-[27rem] lg:flex-[4_4_0] w-full"
       >
         {imagesArray.map((image) => (
-          <SwiperSlide key={image}>
+          <SwiperSlide key={image.src}>
             <img
-              src={image}
+              src={image.src}
               className="h-full w-full object-cover"
               loading="lazy"
               decoding="async"
