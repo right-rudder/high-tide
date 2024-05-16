@@ -3,16 +3,4 @@ import TrainingProgramLayout from "../../layouts/TrainingProgramLayout.astro";
 import flightInstructor from "../../data/flightInstructorData";
 ---
 
-<TrainingProgramLayout
-  bannerImagePath={flightInstructor.bannerImagePath}
-  imagePath={flightInstructor.imagePath}
-  title={flightInstructor.title}
-  subtitle={flightInstructor.subtitle}
-  locations={flightInstructor.locations}
-  description={flightInstructor.description}
-  prerequisites={flightInstructor.prerequisites}
-  enrollmentProcess={flightInstructor.enrollmentProcess}
-  tiers={flightInstructor.tiers}
-  futurePathways={flightInstructor.futurePathways}
-  alt={flightInstructor.alt}
-/>
+<TrainingProgramLayout {...flightInstructor} />

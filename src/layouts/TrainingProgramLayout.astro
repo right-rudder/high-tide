@@ -21,6 +21,7 @@ const {
   futurePathways,
   alt,
   programs,
+  meet,
 } = Astro.props;
 const images = import.meta.glob<{ default: ImageMetadata }>(
   "/src/assets/*.{jpeg,jpg,png,gif,webp}",
@@ -151,7 +152,12 @@ function getLastWord(str) {
   </section>
 
   <section class="py-16 px-5 bg-dark-blue">
-    <PricingComponent client:visible tiers={tiers} program={title} />
+    <PricingComponent
+      client:visible
+      tiers={tiers}
+      program={title}
+      meet={meet}
+    />
   </section>
 
   <section class="max-w-6xl mx-auto py-16 px-5">

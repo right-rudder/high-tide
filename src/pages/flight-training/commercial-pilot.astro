@@ -3,16 +3,4 @@ import TrainingProgramLayout from "../../layouts/TrainingProgramLayout.astro";
 import commercialPilot from "../../data/commercialPilotData";
 ---
 
-<TrainingProgramLayout
-  bannerImagePath={commercialPilot.bannerImagePath}
-  imagePath={commercialPilot.imagePath}
-  title={commercialPilot.title}
-  subtitle={commercialPilot.subtitle}
-  locations={commercialPilot.locations}
-  description={commercialPilot.description}
-  prerequisites={commercialPilot.prerequisites}
-  enrollmentProcess={commercialPilot.enrollmentProcess}
-  tiers={commercialPilot.tiers}
-  futurePathways={commercialPilot.futurePathways}
-  alt={commercialPilot.alt}
-/>
+<TrainingProgramLayout {...commercialPilot} />

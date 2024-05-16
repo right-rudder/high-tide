@@ -57,7 +57,7 @@ const privatePilot = {
         href: "#",
         price: "$3,900",
         description:
-          "Dual training in the Baron B55 ($550/hr wet); completion is based on proficiency rather than hourly minimums",
+          "Dual training in the Baron B55 ($650/hr wet); completion is based on proficiency rather than hourly minimums",
         features: [
           "Training in Baron B55 with dual engines for enhanced performance and safety",
           "Curriculum includes VFR and IFR operations as a certificate add-on",
@@ -111,6 +111,10 @@ const privatePilot = {
       url: "/about/fleet-rentals",
     },
   ],
+  meet: {
+    url: "/about/fleet-rentals/#advanced-aircraft",
+    text: "Meet our Beech Barons",
+  },
 };
 
 export default privatePilot;

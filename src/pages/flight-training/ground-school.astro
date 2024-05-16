@@ -3,16 +3,4 @@ import TrainingProgramLayout from "../../layouts/TrainingProgramLayout.astro";
 import groundSchool from "../../data/groundSchoolData";
 ---
 
-<TrainingProgramLayout
-  bannerImagePath={groundSchool.bannerImagePath}
-  imagePath={groundSchool.imagePath}
-  title={groundSchool.title}
-  subtitle={groundSchool.subtitle}
-  locations={groundSchool.locations}
-  description={groundSchool.description}
-  prerequisites={groundSchool.prerequisites}
-  enrollmentProcess={groundSchool.enrollmentProcess}
-  tiers={groundSchool.tiers}
-  futurePathways={groundSchool.futurePathways}
-  alt={groundSchool.alt}
-/>
+<TrainingProgramLayout {...groundSchool} />

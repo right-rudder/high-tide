@@ -3,16 +3,4 @@ import TrainingProgramLayout from "../../layouts/TrainingProgramLayout.astro";
 import multiEngine from "../../data/multiEngineData";
 ---
 
-<TrainingProgramLayout
-  bannerImagePath={multiEngine.bannerImagePath}
-  imagePath={multiEngine.imagePath}
-  title={multiEngine.title}
-  subtitle={multiEngine.subtitle}
-  locations={multiEngine.locations}
-  description={multiEngine.description}
-  prerequisites={multiEngine.prerequisites}
-  enrollmentProcess={multiEngine.enrollmentProcess}
-  tiers={multiEngine.tiers}
-  futurePathways={multiEngine.futurePathways}
-  alt={multiEngine.alt}
-/>
+<TrainingProgramLayout {...multiEngine} />

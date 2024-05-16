@@ -3,16 +3,4 @@ import TrainingProgramLayout from "../../layouts/TrainingProgramLayout.astro";
 import privatePilot from "../../data/privatePilotData";
 ---
 
-<TrainingProgramLayout
-  bannerImagePath={privatePilot.bannerImagePath}
-  imagePath={privatePilot.imagePath}
-  title={privatePilot.title}
-  subtitle={privatePilot.subtitle}
-  locations={privatePilot.locations}
-  description={privatePilot.description}
-  prerequisites={privatePilot.prerequisites}
-  enrollmentProcess={privatePilot.enrollmentProcess}
-  tiers={privatePilot.tiers}
-  futurePathways={privatePilot.futurePathways}
-  alt={privatePilot.alt}
-/>
+<TrainingProgramLayout {...privatePilot} />

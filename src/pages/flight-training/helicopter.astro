@@ -3,17 +3,4 @@ import TrainingProgramLayout from "../../layouts/TrainingProgramLayout.astro";
 import helicopter from "../../data/helicopterData";
 ---
 
-<TrainingProgramLayout
-  bannerImagePath={helicopter.bannerImagePath}
-  imagePath={helicopter.imagePath}
-  title={helicopter.title}
-  subtitle={helicopter.subtitle}
-  locations={helicopter.locations}
-  description={helicopter.description}
-  prerequisites={helicopter.prerequisites}
-  enrollmentProcess={helicopter.enrollmentProcess}
-  tiers={helicopter.tiers}
-  futurePathways={helicopter.futurePathways}
-  alt={helicopter.alt}
-  programs={helicopter.programs}
-/>
+<TrainingProgramLayout {...helicopter} />

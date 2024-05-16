@@ -129,6 +129,10 @@ const privatePilot = {
       url: "/about/fleet-rentals",
     },
   ],
+  meet: {
+    url: "/about/fleet-rentals",
+    text: "Meet our Fleet",
+  },
 };
 
 export default privatePilot;

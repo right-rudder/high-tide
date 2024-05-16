@@ -162,6 +162,10 @@ const privatePilot = {
       url: "/about/fleet-rentals",
     },
   ],
+  meet: {
+    url: "/about/fleet-rentals/#N570H",
+    text: "Meet the Robinson 44",
+  },
 };
 
 export default privatePilot;
