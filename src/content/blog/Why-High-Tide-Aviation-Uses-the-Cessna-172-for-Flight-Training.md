@@ -22,7 +22,7 @@ tags:
 
 The Cessna 172 is often hailed as the quintessential training aircraft for pilots, a reputation earned through its reliability, forgiving flight characteristics, and versatility. High Tide Aviation recommends the Cessna 172 for its students due to these advantages. Here are several reasons why the Cessna 172 is considered the perfect training plane for pilots:
 
-![Cessna 172 over beach](/src/assets/cessna-in-flight-high-tide-aviation.jpg)
+![Cessna 172 over beach](../../assets/cessna-in-flight-high-tide-aviation.jpg)
 _Cessna 172 in flight over the beach, showcasing the versatile training environments accessible at High Tide Aviation_
 
 ### **1. Stable Flight Characteristics**
@@ -33,7 +33,7 @@ The Cessna 172 is renowned for its stable and forgiving flight characteristics, 
 
 Built by one of the most reputable manufacturers in the industry, the Cessna 172 has a long-standing reputation for reliability. Its durable construction and robust systems ensure that it can handle the rigors of flight training, where aircraft frequently undergo numerous take-offs and landings under various conditions. This reliability reduces downtime due to maintenance, thus allowing more consistent training sessions at High Tide Aviation.
 
-![Cessna 172 ready on runway](/src/assets/cessna-on-runway-high-tide-aviation.jpg)
+![Cessna 172 ready on runway](../../assets/cessna-on-runway-high-tide-aviation.jpg)
 _One of our Cessna 172s taking off for another training session on the runway at High Tide Aviation_
 
 ### **3. Widespread Availability**
@@ -48,7 +48,7 @@ The aircraft’s forgiving nature extends to its handling characteristics, which
 
 Many Cessna 172 models at High Tide Aviation come equipped with modern avionics and instrumentation, providing students with the opportunity to train on equipment that they are likely to encounter in commercial and private aircraft. This includes GPS and other navigation systems, integral to modern piloting.
 
-![Cessna 172 cockpit view](/src/assets/cockpit-view-high-tide-aviation.jpg)
+![Cessna 172 cockpit view](../../assets/cockpit-view-high-tide-aviation.jpg)
 _Inside the cockpit of the Cessna 172, featuring the state-of-the-art avionics used in pilot training at High Tide Aviation_
 
 ### **6. Versatility**
@@ -63,5 +63,5 @@ The Cessna 172 remains a top choice for flight training due to its forgiving nat
 
 [Come fly with us today](https://hightideaviation.com/enrollment-form/).
 
-![Cessna 172 parked at hangar](/src/assets/cessna-parked-high-tide-aviation.jpg)
+![Cessna 172 parked at hangar](../../assets/cessna-parked-high-tide-aviation.jpg)
 _The Cessna Skyhawk 172 parked at High Tide Aviation, ready for the next flight training session_

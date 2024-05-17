@@ -198,22 +198,18 @@ export default function PricingComponent({ tiers, program, meet }) {
       <p className="mx-auto mt-3 max-w-2xl text-center text-lg leading-8 text-white/70">
         *Please note all prices are approximate and based on FAA minimums*
       </p>
-      <div className="flex flex-col lg:flex-row mx-auto w-fit lg:gap-5">
-        <a
-          href="/about/financing"
-          className="text-white uppercase underline hover:text-mustard-yellow mt-10 block text-center font-semibold tracking-widest duration-300"
-        >
-          Explore financing options
+
+      <a
+        href="/about/financing"
+        className="text-white uppercase underline hover:text-mustard-yellow mt-10 block text-center font-semibold tracking-widest duration-300"
+      >
+        Explore financing options
+      </a>
+      {meet && (
+        <a href={meet.url} className="btn-yellow mx-auto mt-5">
+          {meet.text}
         </a>
-        {meet && (
-          <a
-            href={meet.url}
-            className="text-white uppercase underline hover:text-mustard-yellow mt-10 block text-center font-semibold tracking-widest duration-300"
-          >
-            {meet.text}
-          </a>
-        )}
-      </div>
+      )}
     </div>
   );
 }
