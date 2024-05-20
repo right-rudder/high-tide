@@ -16,8 +16,8 @@ export const navbarLinks = [
         link: "/flight-training/private-pilot",
       },
       {
-        name: "Instrument",
-        link: "/flight-training/instrument",
+        name: "Instrument Rating",
+        link: "/flight-training/instrument-rating",
       },
       {
         name: "Commercial Pilot",
@@ -28,11 +28,11 @@ export const navbarLinks = [
         link: "/flight-training/flight-instructor",
       },
       {
-        name: "Multi Engine",
+        name: "Multi-Engine Rating",
         link: "/flight-training/multi-engine",
       },
       {
-        name: "Helicopter",
+        name: "Helicopter Training",
         link: "/flight-training/helicopter",
       },
     ],
@@ -41,8 +41,8 @@ export const navbarLinks = [
     name: "About High Tide",
     submenu: [
       {
-        name: "The Team",
-        link: "/about/the-team",
+        name: "Our Story & Team",
+        link: "/about/our-story-and-team",
       },
       {
         name: "Fleet & Rentals",
@@ -58,17 +58,24 @@ export const navbarLinks = [
       },
       {
         name: "News & Events",
-        link: "/about/news-events",
+        link: "/blog",
       },
       {
         name: "Contact Us",
-        link: "/about/contact-us",
+        link: "/contact-us",
       },
     ],
   },
   {
-    name: "Helicopter Tours",
-    link: "/helicopter-tours",
+    name: "Aerial Tours",
+    link: "https://flyhightide.com/",
+    external: true,
+    submenu: [],
+  },
+  {
+    name: "Pilot Shop",
+    link: "https://shop.flyhightide.com/",
+    external: true,
     submenu: [],
   },
 ];

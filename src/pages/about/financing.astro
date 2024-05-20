@@ -1,0 +1,164 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+import Banner from "../../assets/cessna-taking-off.jpg";
+import { Image } from "astro:assets";
+import Intro from "../../assets/student-receiving-a-pilot-certificate.jpg";
+import { financialOptions } from "../../data/financialOptions";
+import FinancialOptionCard from "../../components/FinancialOptionCard.astro";
+import { RiTeamLine } from "react-icons/ri";
+import { BiNetworkChart } from "react-icons/bi";
+import { GiPayMoney } from "react-icons/gi";
+---
+
+<BaseLayout
+  siteTitle="Financing at High Tide"
+  siteDescription="High Tide Aviation in Southport, NC, offers flexible financing options for aspiring pilots. Discover our tailored solutions to help you achieve your aviation training goals."
+  siteKeywords="flight training financing Southport NC, pilot training loans Southeast Coast, aviation scholarships Southport NC, financing options for pilots, High Tide Aviation financing."
+>
+  <Header
+    slot="header"
+    image={Banner}
+    title="Financing at High Tide"
+    ctaText="Explore Financing Options"
+    ctaLink="#financing-options"
+    alt="Cessna taking off at sunset from a runway at High Tide Aviation in Southport, NC."
+  />
+
+  <section class="py-24 px-5">
+    <div
+      class="max-w-xl gap-10 lg:max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:gap-20"
+    >
+      <div class="flex-1 relative">
+        <Image
+          class="pr-6"
+          src={Intro}
+          alt="Student receiving a pilot certificate from an instructor at High Tide Aviation in Southport, NC."
+        />
+        <div
+          class="h-3/4 bg-mustard-yellow absolute -z-10 -right-0 w-20 top-[12.5%]"
+        >
+        </div>
+      </div>
+      <div class="flex flex-col flex-1">
+        <h2 class="uppercase text-medium-blue font-bold tracking-widest">
+          Financing
+        </h2>
+        <h3 class="text-5xl text-dark-blue font-bold leading-tight">
+          Your Flight Training Dreams Within Reach
+        </h3>
+        <p class="text-gray-500 leading-relaxed my-5">
+          Navigating the financial commitment of flight training is crucial. At
+          High Tide Aviation, we aim to make your dream of flying both
+          accessible and achievable. We offer a diverse range of financing
+          options tailored to various budgets and training objectives. Allow us
+          to guide you through the process of funding your aviation education.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center gap-5">
+          <a href="#financing-options" class="btn-blue"> Discover More </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-medium-blue/10 px-5">
+    <div class="max-w-xl grid lg:grid-cols-3 lg:max-w-7xl mx-auto gap-10">
+      <div
+        class="border border-white/50 py-8 px-12 flex flex-col gap-5 hover:bg-white duration-700 group"
+      >
+        <BiNetworkChart className="size-14 text-medium-blue" />
+        <h3
+          class="text-lg text-dark-blue uppercase font-semibold tracking-widest duration-700"
+        >
+          Financing Options at High Tide Aviation
+        </h3>
+        <p class="text-gray-600 leading-relaxed">
+          At High Tide Aviation, we're dedicated to helping you navigate the
+          financial aspects of your flight training. We understand the
+          importance of accessible funding solutions, and we've partnered with
+          premier financial institutions to offer a range of options that suit
+          diverse needs.
+        </p>
+      </div>
+      <div
+        class="border border-white/50 py-8 px-12 flex flex-col gap-5 hover:bg-white duration-700 group"
+      >
+        <RiTeamLine className="size-14 text-medium-blue" />
+        <h3
+          class="text-lg text-dark-blue uppercase font-semibold tracking-widest duration-700"
+        >
+          Partnered Financing
+        </h3>
+        <p class="text-gray-600 leading-relaxed">
+          We have established partnerships with top educational funding
+          companies to assist prospective pilots in achieving their aviation
+          goals. Through our collaboration with our financing partners, you to
+          obtain scholarships, grants, and instant pre-qualification for loans,
+          which can cover both your educational and living expenses during
+          training—without impacting your credit score.
+        </p>
+      </div>
+      <div
+        class="border border-white/50 py-8 px-12 flex flex-col gap-5 hover:bg-white duration-700 group"
+      >
+        <GiPayMoney className="size-14 text-medium-blue" />
+        <h3
+          class="text-lg text-dark-blue uppercase font-semibold tracking-widest duration-700"
+        >
+          Scholarships and Grants
+        </h3>
+        <p class="text-gray-600 leading-relaxed">
+          Beyond traditional loans, there are numerous scholarships and grants
+          available to aspiring pilots. High Tide Aviation helps you identify
+          and apply for these funds, which can significantly reduce the overall
+          cost of your flight training. Organizations like the Aircraft Owners
+          and Pilots Association (AOPA) and the Experimental Aircraft
+          Association (EAA) offer financial aid programs specifically designed
+          for aviation students.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="financing-options" class="py-24 px-5 scroll-my-20">
+    <div class="max-w-xl lg:max-w-7xl mx-auto flex flex-col items-center">
+      <h2 class="uppercase text-medium-blue font-bold tracking-widest">
+        Financing Options
+      </h2>
+      <h3
+        class="text-5xl max-w-2xl text-center text-dark-blue font-bold leading-tight mb-5"
+      >
+        Explore Our Partnerships
+      </h3>
+      <div class="grid gap-5 lg:grid-cols-2">
+        {
+          financialOptions.map((option) => (
+            <FinancialOptionCard
+              name={option.name}
+              imagePath={option.imagePath}
+              description={option.description}
+              ctaText={option.ctaText}
+              ctaLink={option.ctaLink}
+            />
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 px-5 bg-mustard-yellow">
+    <div class="max-w-7xl mx-auto flex flex-col items-center">
+      <h2 class="uppercase text-medium-blue font-bold tracking-widest">
+        Accessing Financial Assistance
+      </h2>
+      <h3
+        class="text-5xl font-bold leading-tight text-dark-blue text-center max-w-2xl"
+      >
+        Still have questions about our financial aid programs?
+      </h3>
+      <a href="/contact-us" class="btn-blue mt-5 hover:bg-white"
+        >Reach out to us!</a
+      >
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,315 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Banner from "../assets/private-pilot-sits-in-multi-engine-plane.jpg";
+const ENROLLMENT_FORM_WEBHOOK_URL = import.meta.env.ENROLLMENT_FORM_WEBHOOK_URL;
+---
+
+<BaseLayout siteTitle="Enrollment Form">
+  <Header
+    slot="header"
+    image={Banner}
+    title="Interested in Enrolling at High Tide Aviation?"
+    alt="Private pilot sits in multi-engine plane with instructor"
+  />
+
+  <section class="py-16 px-5">
+    <form
+      id="enrollment-form"
+      method="POST"
+      action=""
+      class="flex flex-col items-center"
+    >
+      <h2 class="uppercase text-medium-blue font-bold tracking-widest">
+        Enrollment Process
+      </h2>
+      <h3
+        class="text-5xl font-bold leading-tight text-dark-blue text-center max-w-xl"
+      >
+        Fill Out the Form Below to Start Flying
+      </h3>
+      <div class="grid md:grid-cols-2 gap-5 my-10">
+        <input
+          class="bg-medium-blue/15 text-dark-blue py-4 px-6 w-full outline-none placeholder:text-gray-500"
+          type="text"
+          name="first-name"
+          id="first-name"
+          placeholder="First Name"
+          required
+        />
+        <input
+          class="bg-medium-blue/15 text-dark-blue py-4 px-6 w-full outline-none placeholder:text-gray-500"
+          type="text"
+          name="last-name"
+          id="last-name"
+          placeholder="Last Name"
+          required
+        />
+        <input
+          class="bg-medium-blue/15 text-dark-blue py-4 px-6 w-full outline-none placeholder:text-gray-500"
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Email"
+          required
+        />
+        <p class="hidden">
+          <label>
+            Don't fill this out if you're human: <input name="confirm-email" />
+          </label>
+        </p>
+        <input
+          class="bg-medium-blue/15 text-dark-blue py-4 px-6 w-full outline-none placeholder:text-gray-500"
+          type="tel"
+          name="phone"
+          id="phone"
+          placeholder="Phone"
+          required
+        />
+
+        <fieldset>
+          <legend class="font-medium leading-6 text-dark-blue"
+            >Training Type:</legend
+          >
+          <div class="mt-2 space-y-1">
+            <div class="flex items-center gap-x-3">
+              <input
+                id="airplane"
+                name="training-type"
+                type="radio"
+                class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
+                value="airplane"
+              />
+              <label for="airplane" class="block leading-6 text-gray-600"
+                >Airplane</label
+              >
+            </div>
+            <div class="flex items-center gap-x-3">
+              <input
+                id="helicopter"
+                name="training-type"
+                type="radio"
+                class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
+                value="helicopter"
+              />
+              <label for="helicopter" class="block leading-6 text-gray-600"
+                >Helicopter (Southport exclusive)</label
+              >
+            </div>
+            <div class="flex items-center gap-x-3">
+              <input
+                id="both"
+                name="training-type"
+                type="radio"
+                class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
+                value="both"
+                required
+              />
+              <label for="both" class="block leading-6 text-gray-600"
+                >Both</label
+              >
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend class="font-medium leading-6 text-dark-blue"
+            >Preferred Program:</legend
+          >
+          <p class="text-gray-500 text-sm">Select all that apply</p>
+          <div class="mt-2 space-y-1">
+            <div class="relative flex gap-x-3">
+              <div class="flex h-6 items-center">
+                <input
+                  id="ground-school"
+                  name="ground-school"
+                  type="checkbox"
+                  class="h-4 w-4 rounded border-gray-300 text-medium-blue focus:ring-medium-blue"
+                />
+              </div>
+              <div class="leading-6">
+                <label for="ground-school" class="text-gray-600"
+                  >Ground School</label
+                >
+              </div>
+            </div>
+            <div class="relative flex gap-x-3">
+              <div class="flex h-6 items-center">
+                <input
+                  id="private-pilot"
+                  name="private-pilot"
+                  type="checkbox"
+                  class="h-4 w-4 rounded border-gray-300 text-medium-blue focus:ring-medium-blue"
+                />
+              </div>
+              <div class="leading-6">
+                <label for="private-pilot" class="text-gray-600"
+                  >Private Pilot</label
+                >
+              </div>
+            </div>
+            <div class="relative flex gap-x-3">
+              <div class="flex h-6 items-center">
+                <input
+                  id="instrument-rating"
+                  name="instrument-rating"
+                  type="checkbox"
+                  class="h-4 w-4 rounded border-gray-300 text-medium-blue focus:ring-medium-blue"
+                />
+              </div>
+              <div class="leading-6">
+                <label for="instrument-rating" class="text-gray-600"
+                  >Instrument Rating</label
+                >
+              </div>
+            </div>
+            <div class="relative flex gap-x-3">
+              <div class="flex h-6 items-center">
+                <input
+                  id="commercial-pilot"
+                  name="commercial-pilot"
+                  type="checkbox"
+                  class="h-4 w-4 rounded border-gray-300 text-medium-blue focus:ring-medium-blue"
+                />
+              </div>
+              <div class="leading-6">
+                <label for="commercial-pilot" class="text-gray-600"
+                  >Commercial Pilot</label
+                >
+              </div>
+            </div>
+            <div class="relative flex gap-x-3">
+              <div class="flex h-6 items-center">
+                <input
+                  id="flight-instructor"
+                  name="flight-instructor"
+                  type="checkbox"
+                  class="h-4 w-4 rounded border-gray-300 text-medium-blue focus:ring-medium-blue"
+                />
+              </div>
+              <div class="leading-6">
+                <label for="flight-instructor" class="text-gray-600"
+                  >Flight Instructor</label
+                >
+              </div>
+            </div>
+            <div class="relative flex gap-x-3">
+              <div class="flex h-6 items-center">
+                <input
+                  id="multi-engine"
+                  name="multi-engine"
+                  type="checkbox"
+                  class="h-4 w-4 rounded border-gray-300 text-medium-blue focus:ring-medium-blue"
+                />
+              </div>
+              <div class="leading-6">
+                <label for="multi-engine" class="text-gray-600"
+                  >Multi-Engine (Airplane only)</label
+                >
+              </div>
+            </div>
+            <div class="relative flex gap-x-3">
+              <div class="flex h-6 items-center">
+                <input
+                  id="zero-to-hero"
+                  name="zero-to-hero"
+                  type="checkbox"
+                  class="h-4 w-4 rounded border-gray-300 text-medium-blue focus:ring-medium-blue"
+                />
+              </div>
+              <div class="leading-6">
+                <label for="zero-to-hero" class="text-gray-600"
+                  >Zero to Hero</label
+                >
+              </div>
+            </div>
+          </div>
+        </fieldset>
+
+        <textarea
+          class="bg-medium-blue/15 text-dark-blue py-4 px-6 w-full outline-none placeholder:text-gray-500 md:col-span-2 h-36"
+          name="message"
+          id="message"
+          placeholder="Feel free to elaborate"></textarea>
+      </div>
+      <button type="submit" class="btn-blue">Submit</button>
+    </form>
+  </section>
+</BaseLayout>
+
+<script define:vars={{ ENROLLMENT_FORM_WEBHOOK_URL }}>
+  // Wait for the DOM content to be fully loaded
+  document.addEventListener("DOMContentLoaded", function () {
+    // Get the enrollment form element
+    const enrollmentForm = document.getElementById("enrollment-form");
+
+    // Check if the enrollment form element exists
+    if (enrollmentForm !== null) {
+      // Add submit event listener to the enrollment form
+      enrollmentForm.addEventListener("submit", function (event) {
+        // Prevent the default form submission
+        event.preventDefault();
+
+        // Serialize the form data
+        const formData = new FormData(enrollmentForm);
+
+        // Check the value of the honeypot field
+        const confirmEmailValue = formData.get("confirm-email");
+        if (confirmEmailValue === "" || confirmEmailValue === null) {
+          // If the honeypot field is empty, it's a human
+          // Set the form action to the URL for processing the form and redirecting to thank you
+          enrollmentForm.action = ENROLLMENT_FORM_WEBHOOK_URL;
+        }
+
+        const preferredPrograms = [];
+
+        // Iterate over the FormData entries
+        formData.forEach((value, key) => {
+          // Check if the value is "on"
+          if (value === "on") {
+            // Add the key to the preferredPrograms array
+            preferredPrograms.push(key);
+          }
+        });
+
+        preferredPrograms.forEach((program) => {
+          formData.delete(program);
+        });
+
+        // Append the preferredPrograms array to formData
+        formData.append("preferred-programs", preferredPrograms.join(","));
+
+        // Convert FormData to URLSearchParams
+        const urlSearchParams = new URLSearchParams();
+        for (const pair of formData.entries()) {
+          urlSearchParams.append(pair[0], pair[1]);
+        }
+
+        // Send an AJAX request to submit the form
+        const xhr = new XMLHttpRequest();
+        xhr.open("POST", enrollmentForm.action);
+        xhr.setRequestHeader(
+          "Content-Type",
+          "application/x-www-form-urlencoded",
+        );
+        xhr.onload = function () {
+          // Check if the request was successful (status 200)
+          if (xhr.status === 200) {
+            // Redirect the user after a successful form submission
+            window.location.href = "/enrollment-confirmation";
+          } else {
+            // Handle errors if any
+            console.error("Form submission failed:", xhr.statusText);
+          }
+        };
+        xhr.onerror = function () {
+          // Handle network errors
+          console.error("Network error occurred while submitting the form.");
+        };
+        xhr.send(urlSearchParams);
+      });
+    } else {
+      console.error("Enrollment form element not found.");
+    }
+  });
+</script>

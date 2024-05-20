@@ -1,0 +1,253 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Banner from "../assets/high-tide-aviation-hangar.jpg";
+import { FaClock } from "react-icons/fa";
+
+import {
+  ADDRESS_LINE_1,
+  ADDRESS_LINE_1_2,
+  ADDRESS_LINE_2,
+  ADDRESS_LINE_2_2,
+  EMAIL_ADDRESS,
+  PHONE_NUMBER,
+  PHONE_NUMBER_2,
+} from "../consts.ts";
+import { FaPhone } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
+import { IoLocationSharp } from "react-icons/io5";
+const CONTACT_US_FORM_WEBHOOK_URL = import.meta.env.CONTACT_US_FORM_WEBHOOK_URL;
+---
+
+<BaseLayout
+  siteTitle="Contact Us"
+  siteDescription="Reach out to High Tide Aviation in Southport, NC, for any inquiries about flight training, aircraft rentals, or our other aviation services. Our team is here to assist you on your aviation journey."
+  siteKeywords="contact High Tide Aviation, flight school contact Southport NC, aviation inquiries Southeast Coast, High Tide Aviation support, pilot training questions Southport NC."
+>
+  <Header
+    slot="header"
+    image={Banner}
+    title="Contact Us"
+    alt="High Tide Aviation Hangar"
+  />
+
+  <section class="py-24 px-5">
+    <div class="max-w-xl lg:max-w-7xl mx-auto flex flex-col items-center">
+      <h2 class="uppercase text-medium-blue font-bold tracking-widest">
+        Reach Out to High Tide Aviation
+      </h2>
+      <h3
+        class="text-5xl max-w-2xl text-center text-dark-blue font-bold leading-tight"
+      >
+        We're Here to Help You Soar
+      </h3>
+      <p class="text-gray-600 text-center max-w-5xl leading-loose my-3">
+        Whether you have questions about starting your flight training, need
+        more information on our aircraft services, or simply want to learn more
+        about High Tide Aviation, our team is ready to provide the answers and
+        support you need. Find the best way to contact us below.
+      </p>
+      <div class="grid gap-10 xl:grid-cols-3 my-10 xl:my-20">
+        <div class="flex flex-col p-14 shadow-lg xl:order-1">
+          <h3 class="text-3xl max-w-2xl text-dark-blue font-bold leading-tight">
+            Southport Location
+          </h3>
+          <ul class="flex flex-col gap-3 mt-3 text-gray-600">
+            <li class="flex gap-2 items-center">
+              <FaPhone className="size-4 text-mustard-yellow" />
+              <a
+                class="hover:text-medium-blue duration-300"
+                href=`tel:${PHONE_NUMBER}`>{PHONE_NUMBER}</a
+              >
+            </li>
+            <li class="flex gap-2">
+              <IoLocationSharp
+                className="size-4 mt-1 shrink-0 text-mustard-yellow"
+              />
+              <a
+                class="hover:text-medium-blue duration-300"
+                href="https://maps.app.goo.gl/szN6o8DWhLoASJTw5"
+                target="_blank"
+              >
+                <p>{ADDRESS_LINE_1}</p>
+                <p>{ADDRESS_LINE_2}</p>
+              </a>
+            </li>
+            <li class="flex gap-2">
+              <FaClock className="size-4 mt-1 shrink-0 text-mustard-yellow" />
+              <div class="flex flex-col">
+                <p>Mon - Thurs: 10AM - 5PM</p>
+                <p>Fri - Sat: 10AM - 6PM</p>
+                <p>Sun: Closed</p>
+                <p>All other times by appointment</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="flex flex-col p-14 shadow-lg xl:order-3">
+          <h3 class="text-3xl text-dark-blue font-bold leading-tight">
+            St Simons Island Location
+          </h3>
+          <ul class="flex flex-col gap-3 mt-3 text-gray-600">
+            <li class="flex gap-2 items-center">
+              <FaPhone className="size-4 text-mustard-yellow" />
+              <a
+                class="hover:text-medium-blue duration-300"
+                href=`tel:${PHONE_NUMBER_2}`>{PHONE_NUMBER_2}</a
+              >
+            </li>
+            <li class="flex gap-2">
+              <IoLocationSharp
+                className="size-4 mt-1 shrink-0 text-mustard-yellow"
+              />
+              <a
+                class="hover:text-medium-blue duration-300"
+                href="https://maps.app.goo.gl/yBHRizAdhNHucPRk6"
+                target="_blank"
+              >
+                <p>{ADDRESS_LINE_1_2}</p>
+                <p>{ADDRESS_LINE_2_2}</p>
+              </a>
+            </li>
+            <li class="flex gap-2">
+              <FaClock className="size-4 mt-1 shrink-0 text-mustard-yellow" />
+              <div class="flex flex-col">
+                <p>Mon - Sat: 10AM - 5PM</p>
+                <p>Sun: Closed</p>
+                <p>All other times by appointment</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <form
+          id="contact-us-form"
+          method="POST"
+          action=""
+          class="relative z-20 flex flex-col items-center p-5 shadow-lg xl:scale-125 bg-white xl:order-2"
+        >
+          <div class="grid lg:grid-cols-2 gap-5 my-10">
+            <input
+              class="bg-medium-blue/15 text-dark-blue py-4 px-6 w-full outline-none placeholder:text-gray-500"
+              type="text"
+              name="first-name"
+              id="first-name"
+              placeholder="First Name"
+            />
+            <input
+              class="bg-medium-blue/15 text-dark-blue py-4 px-6 w-full outline-none placeholder:text-gray-500"
+              type="text"
+              name="last-name"
+              id="last-name"
+              placeholder="Last Name"
+            />
+            <input
+              class="bg-medium-blue/15 text-dark-blue py-4 px-6 w-full outline-none placeholder:text-gray-500"
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email"
+            />
+            <p class="hidden">
+              <label>
+                Don't fill this out if you're human: <input
+                  name="confirm-email"
+                />
+              </label>
+            </p>
+            <input
+              class="bg-medium-blue/15 text-dark-blue py-4 px-6 w-full outline-none placeholder:text-gray-500"
+              type="tel"
+              name="phone"
+              id="phone"
+              placeholder="Phone"
+            />
+            <textarea
+              class="bg-medium-blue/15 text-dark-blue py-4 px-6 w-full outline-none placeholder:text-gray-500 col-span-2 h-36"
+              name="message"
+              id="message"
+              placeholder="Write message"></textarea>
+          </div>
+          <button type="submit" class="btn-blue">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+  <div class="flex flex-col md:flex-row">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3310.3953290887316!2d-78.08074522366795!3d33.93095892412375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89aa07e3b3a0b82b%3A0xe199a7d4a214440f!2sHigh%20Tide%20Aviation!5e0!3m2!1sen!2sgt!4v1713385335851!5m2!1sen!2sgt"
+      width="100%"
+      height="350"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3414.4354770734185!2d-81.3877332237487!3d31.153188865189975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e4db2855161e87%3A0xa28de7768105440a!2sHigh%20Tide%20Aviation%20Air%20Tours!5e0!3m2!1sen!2sgt!4v1713385384399!5m2!1sen!2sgt"
+      width="100%"
+      height="350"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</BaseLayout>
+
+<script define:vars={{ CONTACT_US_FORM_WEBHOOK_URL }}>
+  // Wait for the DOM content to be fully loaded
+  document.addEventListener("DOMContentLoaded", function () {
+    // Get the contactUs form element
+    const contactUsForm = document.getElementById("contact-us-form");
+
+    // Check if the contactUs form element exists
+    if (contactUsForm !== null) {
+      // Add submit event listener to the contactUs form
+      contactUsForm.addEventListener("submit", function (event) {
+        // Prevent the default form submission
+        event.preventDefault();
+
+        // Serialize the form data
+        const formData = new FormData(contactUsForm);
+
+        // Check the value of the honeypot field
+        const confirmEmailValue = formData.get("confirm-email");
+        if (confirmEmailValue === "" || confirmEmailValue === null) {
+          // If the honeypot field is empty, it's a human
+          // Set the form action to the URL for processing the form and redirecting to thank you
+          contactUsForm.action = CONTACT_US_FORM_WEBHOOK_URL;
+        }
+
+        // Convert FormData to URLSearchParams
+        const urlSearchParams = new URLSearchParams();
+        for (const pair of formData.entries()) {
+          urlSearchParams.append(pair[0], pair[1]);
+        }
+
+        // Send an AJAX request to submit the form
+        const xhr = new XMLHttpRequest();
+        xhr.open("POST", contactUsForm.action);
+        xhr.setRequestHeader(
+          "Content-Type",
+          "application/x-www-form-urlencoded",
+        );
+        xhr.onload = function () {
+          // Check if the request was successful (status 200)
+          if (xhr.status === 200) {
+            // Redirect the user after a successful form submission
+            window.location.href = "/contact-us-confirmation";
+          } else {
+            // Handle errors if any
+            console.error("Form submission failed:", xhr.statusText);
+          }
+        };
+        xhr.onerror = function () {
+          // Handle network errors
+          console.error("Network error occurred while submitting the form.");
+        };
+        xhr.send(urlSearchParams);
+      });
+    } else {
+      console.error("Contact us form element not found.");
+    }
+  });
+</script>

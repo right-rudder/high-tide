@@ -1,0 +1,243 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+import Banner from "../../assets/high-tide-aviation-team-of-cfis.jpg";
+import { Image } from "astro:assets";
+import Intro from "../../assets/female-cfis-at-high-tide-aviation.jpg";
+import StatCard from "../../components/StatCard.astro";
+import { stats } from "../../data/stats";
+import TopView from "../../assets/top-view.jpg";
+import Team from "../../assets/high-tide-aviation-team-southport.jpg";
+import StudentSupport from "../../assets/student-support.jpg";
+---
+
+<BaseLayout
+  siteTitle="Our Story & Team"
+  siteDescription="Meet the dedicated team of professionals at High Tide Aviation in Southport, NC. Our experienced pilots and instructors are committed to providing top-notch flight training."
+  siteKeywords="High Tide Aviation team, flight instructors Southport NC, aviation professionals Southeast Coast, experienced pilots High Tide, aviation staff Southport NC."
+>
+  <Header
+    slot="header"
+    image={Banner}
+    title="Get to Know High Tide Aviation"
+    alt="High Tide Aviation team of CFIs"
+  />
+
+  <section class="py-24 px-5">
+    <div
+      class="max-w-xl gap-10 lg:max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:gap-20"
+    >
+      <div class="flex-1 relative">
+        <Image
+          class="pr-6"
+          src={Intro}
+          alt="Female CFIs at High Tide Aviation"
+        />
+        <div
+          class="h-3/4 bg-mustard-yellow absolute -z-10 -right-0 w-20 top-[12.5%]"
+        >
+        </div>
+      </div>
+      <div class="flex flex-col flex-1">
+        <h2 class="uppercase text-medium-blue font-bold tracking-widest">
+          About High Tide Aviation
+        </h2>
+        <h3 class="text-5xl text-dark-blue font-bold leading-tight">
+          The High Tide Story
+        </h3>
+        <p class="text-gray-500 leading-relaxed mt-3 mb-2">
+          High Tide Aviation began in 2013 as High Tide Helicopters with just
+          one Robinson R22. Quickly expanding to include airplanes, the school
+          rebranded and now operates 12 aircraft at locations in Southport, NC,
+          and St Simons Island, GA. As the top flight school in Southeastern
+          North Carolina and Southeastern Georgia, High Tide offers training for
+          commercial licenses and instrument ratings, using ASA publications and
+          maintaining a pilot shop.
+        </p>
+        <p class="text-gray-500 leading-relaxed mb-5">
+          The company emphasizes community involvement and education, partnering
+          with local colleges to teach aviation courses and engaging with local
+          youth about aviation careers. High Tide ensures personalized support
+          for each student through dedicated specialists, focusing on safety,
+          professionalism, and inclusivity. Aspiring pilots are invited to
+          explore the coastlines and learn at a leading school known for quality
+          training and community commitment.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center gap-5">
+          <a href="#the-team" class="btn-blue"> Meet the Team </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 px-5 scroll-my-20 bg-medium-blue/10">
+    <div
+      class="max-w-xl gap-10 lg:max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:gap-10"
+    >
+      <div class="flex flex-col flex-1">
+        <h2 class="uppercase text-medium-blue font-bold tracking-widest">
+          Student Support Specialist
+        </h2>
+        <h3 class="text-5xl text-dark-blue font-bold leading-tight">
+          Personalized Guidance at High Tide
+        </h3>
+        <p class="text-gray-500 leading-relaxed mt-5">
+          As such a specialized skill, flight training can be confusing on even
+          its best day. We understand that each student comes to us with
+          different learning preferences and a diverse range of experiences. To
+          better support our students, we have an in-house Student Support
+          Department and assign a specific support specialist to every High Tide
+          student in Southport and St Simons Island.
+        </p>
+        <p class="font-medium mb-5 mt-2 text-gray-600">
+          Contact us today and receive tailored flight instruction at High Tide
+          Aviation.
+        </p>
+
+        <div class="flex flex-col sm:flex-row items-center gap-5">
+          <a href="/contact-us" class="btn-blue"> Contact Us </a>
+        </div>
+      </div>
+      <div class="flex-1">
+        <Image
+          src={StudentSupport}
+          alt="Student getting ready to fly"
+          class="object-cover top-0 left-0 -z-10 max-h-96"
+          quality={10}
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="text-white mx-auto grid sm:grid-cols-2 lg:grid-cols-4">
+    {
+      stats.map((stat) => (
+        <StatCard
+          icon={stat.icon}
+          value={stat.value}
+          title={stat.title}
+          cssVariable={stat.cssVariable}
+        />
+      ))
+    }
+  </section>
+
+  <section class="py-24 px-5 scroll-my-20" id="the-team">
+    <div
+      class="max-w-xl gap-10 lg:max-w-7xl mx-auto flex flex-col lg:flex-row-reverse items-center lg:gap-20"
+    >
+      <div class="flex-1 relative">
+        <Image class="pr-6" src={Team} alt="High Tide Aviation team" />
+        <div
+          class="h-3/4 bg-mustard-yellow absolute -z-10 -right-0 w-20 top-[12.5%]"
+        >
+        </div>
+      </div>
+      <div class="flex flex-col flex-1">
+        <h2 class="uppercase text-medium-blue font-bold tracking-widest">
+          Our elite instruction team
+        </h2>
+        <h3 class="text-5xl text-dark-blue font-bold leading-tight">
+          Meet the High Tide Family
+        </h3>
+        <p class="text-gray-500 leading-relaxed mt-3 mb-2">
+          At High Tide Aviation, we pride ourselves on having a highly skilled
+          and passionate team of aviation professionals. Our instructors hold a
+          diverse range of certifications, including CFI (Certified Flight
+          Instructor), CFII (Certified Flight Instructor - Instrument), and MEI
+          (Multi-Engine Instructor), ensuring that we can offer a wide array of
+          training services tailored to your needs. Whether you are just
+          starting out on your aviation journey or looking to advance your
+          skills, our team is here to guide you every step of the way.
+        </p>
+        <p class="text-gray-500 leading-relaxed mb-5">
+          We invite you to visit us and meet our team in person at our two
+          locations in Southport, NC, and St Simons Island, GA. Each location
+          offers a unique atmosphere and a variety of training opportunities to
+          enhance your flying experience. Reach out to us today to schedule your
+          visit and take the first step towards reaching new heights with High
+          Tide Aviation!
+        </p>
+        <div class="flex flex-col sm:flex-row items-center gap-5">
+          <a href="/contact-us" class="btn-blue"> Visit High Tide </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- <section id="the-team" class="py-24 px-5 bg-light-blue/10 scroll-my-20">
+    <div class="max-w-7xl mx-auto flex flex-col items-center">
+      <h2 class="uppercase text-medium-blue font-bold tracking-widest">
+        The Leadership Team
+      </h2>
+      <h3 class="text-5xl text-dark-blue font-bold leading-tight mb-5">
+        High Tide’s Front Office
+      </h3>
+      <div class="grid gap-5 lg:grid-cols-3 mt-5">
+        {
+          team.map((member) => (
+            <TeamMemberCard
+              name={member.name}
+              qualifications={member.qualifications}
+              imagePath={member.imagePath}
+              bio={member.bio}
+            />
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 px-5">
+    <div class="max-w-7xl mx-auto flex flex-col items-center">
+      <h2 class="uppercase text-medium-blue font-bold tracking-widest">
+        High Tide Flight Instructors
+      </h2>
+      <h3 class="text-5xl text-dark-blue font-bold leading-tight mb-5">
+        Meet Our Instructors
+      </h3>
+      <div class="grid gap-5 lg:grid-cols-3 mt-5">
+        {
+          team.map((member) => (
+            <TeamMemberCard
+              name={member.name}
+              qualifications={member.qualifications}
+              imagePath={member.imagePath}
+              bio={member.bio}
+            />
+          ))
+        }
+      </div>
+    </div>
+  </section> -->
+
+  <section class="flex flex-col md:flex-row bg-mustard-yellow xl:max-h-[32rem]">
+    <div class="flex-1 flex flex-col justify-center px-5 py-16">
+      <div class="max-w-xl mx-auto md:ml-auto md:mr-16">
+        <h2 class="uppercase text-medium-blue font-bold tracking-widest">
+          Interested in flying?
+        </h2>
+        <h3 class="text-5xl text-dark-blue font-bold leading-tight">
+          Come try it out with an Intro Flight at High Tide Aviation
+        </h3>
+        <p class="text-gray-600 my-10">
+          Flying can be daunting task; manning the controls even more so. If you
+          want to see what it’s like to be in the pilot’s seat, come visit us
+          for an introductory flight where we’ll show you the ropes and see if
+          flying is the right choice for you.
+        </p>
+        <a href="/intro-flight" class="btn-blue hover:bg-white">
+          Request an Intro Flight
+        </a>
+      </div>
+    </div>
+    <div class="flex-1">
+      <Image
+        src={TopView}
+        alt="View from the top of the airplane cockpit"
+        class="w-full h-full object-cover"
+        quality={10}
+      />
+    </div>
+  </section>
+</BaseLayout>

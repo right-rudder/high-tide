@@ -1,0 +1,188 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import FlightTrainingNavbar from "../components/FlightTrainingNavbar.astro";
+import BigCTA from "../components/BigCTA.astro";
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
+import { FaArrowAltCircleRight } from "react-icons/fa";
+import FlightProgramCard from "../components/FlightProgramCard.astro";
+import PricingComponent from "../components/PricingComponent";
+const {
+  bannerImagePath,
+  imagePath,
+  title,
+  subtitle,
+  locations,
+  description,
+  tiers,
+  prerequisites,
+  enrollmentProcess,
+  futurePathways,
+  alt,
+  programs,
+  meet,
+} = Astro.props;
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  "/src/assets/*.{jpeg,jpg,png,gif,webp}",
+);
+if (!images[imagePath]) {
+  throw new Error(
+    `"${imagePath}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif,webp}"`,
+  );
+}
+const Banner = images[bannerImagePath]();
+
+function getLastWord(str) {
+  str = str.trim();
+  let words = str.split(" ");
+  let lastWord = words[words.length - 1];
+  return lastWord;
+}
+---
+
+<BaseLayout
+  siteTitle={title}
+  siteDescription="Begin your aviation journey with High Tide Aviation, offering comprehensive guidance and support for first-time pilots in Southport, NC, and St Simons Island, GA."
+  siteKeywords="first-time pilot Southport NC, beginner flight training St Simons Island GA, aviation introduction Southeast Coast, learn to fly Southport NC, pilot training for beginners."
+>
+  <Header
+    slot="header"
+    image={Banner}
+    title={title}
+    ctaText="Enroll Now"
+    ctaLink="/enrollment-form"
+    alt={alt}
+  />
+
+  <section class="max-w-6xl mx-auto py-16 px-5">
+    <div class="flex flex-col md:flex-row gap-10">
+      <div class="min-w-72 flex flex-col gap-5">
+        <FlightTrainingNavbar />
+        <BigCTA />
+      </div>
+      <div class="flex flex-col gap-5">
+        <div
+          class="bg-dark-blue border-l-8 flex flex-col border-mustard-yellow text-white p-5 gap-2 items-center"
+        >
+          <p class="uppercase text-xl">
+            {title}
+            {getLastWord(title) === "Training" ? "" : "Training"} is available in
+          </p>
+          <ul class="flex gap-10">
+            {
+              locations.map((location) => (
+                <li class="text-xl font-medium tracking-wider">{location}</li>
+              ))
+            }
+          </ul>
+        </div>
+        <Image
+          src={images[imagePath]()}
+          alt={title}
+          class="w-full h-full object-cover"
+          quality={10}
+        />
+      </div>
+    </div>
+
+    <div class="flex flex-col my-8 gap-3">
+      <h2 class="text-4xl font-medium text-dark-blue">{subtitle}</h2>
+      {
+        description.map((paragraph) => (
+          <p class="text-gray-600 leading-loose">{paragraph}</p>
+        ))
+      }
+      {
+        programs &&
+          programs.map((program) => (
+            <p class="text-gray-600 leading-loose">
+              <span class="font-medium text-gray-800">{program.title}: </span>
+              {program.description}
+            </p>
+          ))
+      }
+
+      <div class="flex flex-col lg:flex-row gap-8 lg:gap-16 mt-7">
+        <div class="flex-1">
+          <h2 class="text-2xl font-medium text-dark-blue">
+            Program Prerequisites
+          </h2>
+          <h3 class="text-xl font-medium text-medium-blue max-w-md mt-5">
+            {prerequisites.subtitle}
+          </h3>
+          <ul class="flex flex-col gap-1 mt-5">
+            {
+              prerequisites.list.map((item) => (
+                <li class="flex gap-3">
+                  <FaArrowAltCircleRight className="text-mustard-yellow size-5 flex-shrink-0 mt-1" />
+                  <p class="text-dark-blue">
+                    <span class="font-semibold">{item.heading}: </span>
+                    <span class="text-dark-blue/80">{item.description}</span>
+                  </p>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+        <div class="flex-1">
+          <h2 class="text-2xl font-medium text-dark-blue">
+            Enrollment Process
+          </h2>
+          <h3 class="text-xl font-medium text-medium-blue max-w-md mt-5">
+            {enrollmentProcess.subtitle}
+          </h3>
+          <ul class="flex flex-col gap-1 mt-5">
+            {
+              enrollmentProcess.list.map((item) => (
+                <li class="flex gap-3">
+                  <FaArrowAltCircleRight className="text-mustard-yellow size-5 flex-shrink-0 mt-1" />
+                  <p class="text-dark-blue">
+                    <span class="font-semibold">{item.heading}: </span>
+                    <span class="text-dark-blue/80">{item.description}</span>
+                  </p>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+      </div>
+    </div>
+    <a href="/enrollment-form" class="btn-blue mx-auto"> Enroll Today </a>
+  </section>
+
+  <section class="py-16 px-5 bg-dark-blue">
+    <PricingComponent
+      client:visible
+      tiers={tiers}
+      program={title}
+      meet={meet}
+    />
+  </section>
+
+  <section class="max-w-6xl mx-auto py-16 px-5">
+    <div class="flex flex-col items-center">
+      <h2 class="uppercase text-medium-blue font-bold tracking-widest">
+        Future Pathways
+      </h2>
+      <h3
+        class="text-4xl font-bold leading-tight max-w-xl text-dark-blue text-center capitalize"
+      >
+        What comes after my {title} training?
+      </h3>
+      <div class="grid md:grid-cols-3 mt-10 gap-7">
+        {
+          futurePathways.map((program) => (
+            <FlightProgramCard
+              imagePath={program.imagePath}
+              heading={program.heading}
+              subheading={program.subheading}
+              description={program.description}
+              url={program.url}
+            />
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</BaseLayout>

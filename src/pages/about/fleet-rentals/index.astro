@@ -1,0 +1,136 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Header from "../../../components/Header.astro";
+import Banner from "../../../assets/high-tide-fleet.jpg";
+import { Image } from "astro:assets";
+import Intro from "../../../assets/high-tide-aviation-logo-on-plane-tail.jpg";
+import { fleet } from "../../../data/fleet";
+import PlaneCard from "../../../components/PlaneCard.astro";
+---
+
+<BaseLayout
+  siteTitle="Fleet and Rentals"
+  siteDescription="Explore High Tide Aviation's diverse fleet of aircraft available for training and rental in Southport, NC. From single-engine basics to advanced multi-engine aircraft, find the perfect fit for your flying ambitions."
+  siteKeywords="aircraft rental Southport NC, flight training fleet Southeast Coast, pilot training aircraft Southport NC, rent a plane Southport NC, aviation rentals Southeast Coast."
+>
+  <Header
+    slot="header"
+    image={Banner}
+    title="Our Fleet"
+    ctaText="Discover Our Fleet"
+    ctaLink="#fleet"
+    alt="High Tide Aviation fleet of aircraft in hangar at sunset"
+  />
+
+  <section class="py-24 px-5">
+    <div
+      class="max-w-xl gap-10 lg:max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:gap-20"
+    >
+      <div class="flex-1 relative">
+        <Image
+          class="pr-6"
+          src={Intro}
+          alt="High Tide logo at the tail of a Cessna"
+        />
+        <div
+          class="h-3/4 bg-mustard-yellow absolute -z-10 -right-0 w-20 top-[12.5%]"
+        >
+        </div>
+      </div>
+      <div class="flex flex-col flex-1">
+        <h2 class="uppercase text-medium-blue font-bold tracking-widest">
+          Our Fleet
+        </h2>
+        <h3 class="text-5xl text-dark-blue font-bold leading-tight">
+          Your Ride Awaits
+        </h3>
+        <p class="text-gray-500 leading-relaxed my-5">
+          High Tide Aviation proudly provides a selection of aircraft for
+          training, tours, and rentals. Our fleet is rigorously maintained and
+          features advanced avionics, ensuring optimal safety, efficiency, and
+          enjoyment for pilots at all levels. Comprised of Cessna 172 Skyhawks,
+          a Beechcraft Bonanza, Beechcraft Barons, and Robinson R44 helicopters,
+          this diverse lineup allows us to cater to a variety of flying needs
+          and preferences, ensuring that whether you're training for a new
+          certification or simply renting for pleasure, you have access to the
+          best possible equipment. More details about rentals can be found below
+          the fleet lineup.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center gap-5">
+          <a href="/contact-us" class="btn-blue"> Rent Today </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="fleet" class="py-24 px-5 bg-light-blue/10 scroll-my-20">
+    <div class="max-w-xl lg:max-w-7xl mx-auto flex flex-col items-center">
+      <h2 class="uppercase text-medium-blue font-bold tracking-widest">
+        Available for Rent
+      </h2>
+      <h3 class="text-5xl text-dark-blue font-bold leading-tight mb-5">
+        Meet Our Cessna Skyhawk Fleet
+      </h3>
+      <div class="grid gap-8 mt-5 lg:grid-cols-2">
+        {
+          fleet
+            .slice(0, 8)
+            .map((plane) => (
+              <PlaneCard
+                name={plane.name}
+                rentalPrice={plane.rentalPrice}
+                imagePath={plane.imagePath}
+                slug={plane.slug}
+                model={plane.model}
+                hasRibbon={plane.hasRibbon}
+                ribbonTitle={plane.ribbonTitle}
+              />
+            ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section id="advanced-aircraft" class="py-24 px-5 scroll-my-20">
+    <div class="max-w-xl lg:max-w-7xl mx-auto flex flex-col items-center">
+      <h2 class="uppercase text-medium-blue font-bold tracking-widest">
+        Available for Dual Instruction Only
+      </h2>
+      <h3 class="text-5xl text-dark-blue font-bold leading-tight mb-5">
+        Our Advanced Aircraft
+      </h3>
+      <div class="grid gap-8 mt-5 lg:grid-cols-2">
+        {
+          fleet
+            .slice(8)
+            .map((plane) => (
+              <PlaneCard
+                name={plane.name}
+                rentalPrice={plane.rentalPrice}
+                imagePath={plane.imagePath}
+                slug={plane.slug}
+                model={plane.model}
+              />
+            ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 px-5 bg-mustard-yellow">
+    <div
+      class="max-w-7xl mx-auto gap-10 lg:gap-52 flex justify-between items-center lg:flex-row flex-col"
+    >
+      <div>
+        <h3
+          class="text-5xl text-dark-blue font-bold leading-tight text-center lg:text-left"
+        >
+          Reach out to us today to fly a High Tide aircraft
+        </h3>
+      </div>
+      <a href="/contact-us" class="flex-shrink-0 btn-blue hover:bg-white"
+        >Submit Rental Inquiry</a
+      >
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@property --num-hours {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
+}
+
+@property --num-instructors {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
+}
+
+@property --num-aircrafts {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
+}
+
+@property --num-helicopters {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
+}
+
+@keyframes counter {
+  from {
+    --num-hours: 0;
+    --num-instructors: 0;
+    --num-aircrafts: 0;
+    --num-helicopters: 0;
+  }
+  to {
+    --num-hours: 25000;
+    --num-instructors: 14;
+    --num-aircrafts: 10;
+    --num-helicopters: 2;
+  }
+}
+
+@layer components {
+  .btn-yellow {
+    @apply block text-center font-medium uppercase py-4 px-14 bg-mustard-yellow w-fit text-dark-blue hover:text-white rounded-full hover:bg-medium-blue duration-300;
+  }
+  .btn-white {
+    @apply block text-center font-medium uppercase py-4 px-14 bg-white w-fit text-dark-blue hover:bg-medium-blue rounded-full  hover:text-white duration-300;
+  }
+  .btn-blue {
+    @apply block text-center font-medium uppercase py-4 px-14 bg-dark-blue w-fit text-white hover:bg-mustard-yellow hover:text-dark-blue rounded-full duration-300;
+  }
+}

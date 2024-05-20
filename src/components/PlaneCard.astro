@@ -1,0 +1,63 @@
+---
+const { name, rentalPrice, imagePath, slug, model, hasRibbon, ribbonTitle } =
+  Astro.props;
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  "/src/assets/*.{jpeg,jpg,png,gif}",
+);
+if (!images[imagePath]) {
+  throw new Error(
+    `"${imagePath}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif}"`,
+  );
+}
+---
+
+<a
+  href=`/about/fleet-rentals/${slug}`
+  class="flex cursor-pointer flex-col bg-white group relative overflow-hidden scroll-my-20"
+  id={name}
+>
+  {
+    hasRibbon && ribbonTitle && (
+      <div class="absolute right-[-24px] 2xl:right-[-21px] rtl:right-auto rtl:left-[-8px] rtl:2xl:left-[-0px] top-[-5px] 2xl:top-[0px] z-[1] h-[200px] w-[200px] overflow-hidden text-right">
+        <span class="absolute top-[45px] right-[-21px] rtl:right-auto rtl:left-[-21px] block w-full rotate-45 rtl:-rotate-45 bg-medium-blue text-center text-[10px] font-bold uppercase leading-5 text-white shadow-[0_3px_10px_-5px_rgba(0,0,0,0.3)] before:absolute before:left-0 before:top-full before:z-[-1] before:border-[3px] before:border-r-transparent before:border-b-transparent before:border-l-green-800 before:border-t-green-800 before:content-[''] after:absolute after:right-0 after:top-full after:z-[-1] after:border-[3px] after:border-l-transparent after:border-b-transparent after:border-r-green-800 after:border-t-green-800 after:content-['']">
+          {ribbonTitle}
+        </span>
+      </div>
+    )
+  }
+  <Image
+    src={images[imagePath]()}
+    alt={name}
+    class="h-full object-cover group-hover:scale-105 duration-700 ease-in-out"
+    quality={10}
+  />
+  <div
+    class="absolute w-full h-full bg-dark-blue/15 -translate-x-[101%] group-hover:translate-x-0 duration-700"
+  >
+  </div>
+  <div
+    class="py-2 px-4 lg:py-6 lg:px-10 z-10 absolute bottom-0 left-0 bg-dark-blue/80 w-4/5"
+  >
+    <h2
+      class="text-white text-2xl sm:text-3xl lg:text-5xl font-medium lg:mb-3 duration-700 uppercase"
+    >
+      {name}
+    </h2>
+    <div class="flex flex-col gap-0 sm:flex-row sm:gap-5">
+      <div class="flex gap-2 text-sm sm:text-base">
+        <p class="text-white">Model:</p>
+        <p class="text-mustard-yellow">{model}</p>
+      </div>
+      {
+        rentalPrice && (
+          <div class="flex gap-2 text-sm sm:text-base">
+            <p class="text-white">Price:</p>
+            <p class="text-mustard-yellow">{rentalPrice}</p>
+          </div>
+        )
+      }
+    </div>
+  </div>
+</a>

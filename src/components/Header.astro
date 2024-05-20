@@ -1,33 +1,37 @@
 ---
 import { Image } from "astro:assets";
-import Navbar from "./Navbar";
-const { image } = Astro.props;
-const { pathname } = Astro.url;
+const { image, title, ctaText, ctaLink, alt } = Astro.props;
 ---
 
 <header>
-  <Navbar pathname={pathname} client:load />
-
   <div
-    class="relative isolate pt-14 overflow-hidden h-[28rem] text-white flex items-center"
+    class="relative isolate pt-24 overflow-hidden h-[28rem] text-white flex items-center flex-col"
   >
     <Image
       src={image}
-      alt="A description of my image."
-      class="absolute top-0 h-full object-cover -z-50"
+      alt={alt}
+      class="-z-50 absolute min-w-[120rem] h-[28rem] -translate-y-24 object-cover object-[50%_40%]"
+      quality={10}
     />
-    <div
-      class="absolute inset-0 bg-black/50 bg-gradient-to-t from-black -z-40 to-40%"
-    >
-    </div>
-    <div class="max-w-7xl flex w-full mx-auto h-full items-end py-14">
-      <div class="max-w-5xl px-5">
+    <div class="absolute inset-0 bg-dark-blue/70 -z-40"></div>
+
+    <div class="max-w-7xl flex w-full mx-auto h-full items-center py-14 z-10">
+      <div class="max-w-5xl px-5 mx-auto">
         <h1
-          class="text-5xl font-medium tracking-tight sm:text-6xl uppercase animate-fade-in"
+          class="text-5xl font-medium tracking-tight sm:text-5xl animate-fade-in"
         >
-          <slot name="title" />
+          {title}
         </h1>
       </div>
     </div>
   </div>
+  {
+    ctaText && (
+      <div class="flex justify-center -translate-y-7">
+        <a href={ctaLink} class="btn-yellow">
+          {ctaText}
+        </a>
+      </div>
+    )
+  }
 </header>

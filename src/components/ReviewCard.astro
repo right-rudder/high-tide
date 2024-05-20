@@ -1,0 +1,29 @@
+---
+const { review, name, title } = Astro.props;
+import { PiQuotes } from "react-icons/pi";
+import { IoIosStar } from "react-icons/io";
+---
+
+<div
+  class="flex items-center gap-5 p-10 shadow-md bg-white border-dark-blue duration-300 border-l-4"
+>
+  <div class="bg-medium-blue w-fit h-fit p-3 rounded-full">
+    <PiQuotes className="size-10 text-white" />
+  </div>
+  <div class="flex flex-col gap-5">
+    <p class="text-gray-500 leading-loose">{review}</p>
+    <div class="flex items-center justify-between">
+      <div class="flex">
+        <IoIosStar className="text-mustard-yellow" />
+        <IoIosStar className="text-mustard-yellow" />
+        <IoIosStar className="text-mustard-yellow" />
+        <IoIosStar className="text-mustard-yellow" />
+        <IoIosStar className="text-mustard-yellow" />
+      </div>
+      <div class="flex flex-col items-end">
+        <p class="text-xl text-right text-dark-blue font-semibold">{name}</p>
+        <p class="uppercase tracking-widest text-xs font-light">{title}</p>
+      </div>
+    </div>
+  </div>
+</div>

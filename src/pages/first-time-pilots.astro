@@ -1,0 +1,357 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Banner from "../assets/private-pilot-sits-in-multi-engine-plane.jpg";
+import { Image } from "astro:assets";
+import Intro from "../assets/first-time-pilot-on-cessna.jpg";
+import StatCard from "../components/StatCard.astro";
+import { stats } from "../data/stats";
+import { RiTeamLine } from "react-icons/ri";
+import { IoIosArrowRoundForward } from "react-icons/io";
+import { GiExitDoor } from "react-icons/gi";
+import { MdFlightTakeoff } from "react-icons/md";
+import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
+import { reviews } from "../data/reviews";
+import StudentSupport from "../assets/student-support.jpg";
+---
+
+<BaseLayout
+  siteTitle="First-Time Pilots"
+  siteDescription="Begin your aviation journey with High Tide Aviation, offering comprehensive guidance and support for first-time pilots in Southport, NC, and St Simons Island, GA."
+  siteKeywords="first-time pilot Southport NC, beginner flight training St Simons Island GA, aviation introduction Southeast Coast, learn to fly Southport NC, pilot training for beginners."
+>
+  <Header
+    slot="header"
+    image={Banner}
+    title="Why Become a Pilot?"
+    ctaText="Discover Flight Training"
+    ctaLink="#first-time-pilots"
+    alt="Private pilot sits in multi-engine plane"
+  />
+
+  <section class="py-24 px-5">
+    <div
+      class="max-w-xl gap-10 lg:max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:gap-20"
+    >
+      <div class="flex-1 relative">
+        <Image class="pr-6" src={Intro} alt="Private pilot sits in Cessna" />
+        <div
+          class="h-3/4 bg-mustard-yellow absolute -z-10 -right-0 w-20 top-[12.5%]"
+        >
+        </div>
+      </div>
+      <div class="flex flex-col flex-1">
+        <h2 class="uppercase text-medium-blue font-bold tracking-widest">
+          Training with High Tide
+        </h2>
+        <h3 class="text-5xl text-dark-blue font-bold leading-tight">
+          Why Learn to Fly?
+        </h3>
+        <p class="text-gray-500 leading-relaxed my-5">
+          Flying is freedom. As a pilot, you'll soar above the earth, exploring
+          the skies with an independence shared by only a select few
+          individuals, and experience thrilling new perspectives. Pilots at High
+          Tide Aviation have a unique opportunity to do so over the gorgeous
+          coastlines of North Carolina and Georgia. The journey to earn your
+          wings cultivates essential skills - from navigation to aircraft
+          management. Whether your goal is a rewarding hobby or a fulfilling
+          career, learning to fly offers unmatched personal and professional
+          growth. Take control and discover the timeless allure of aviation.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center gap-5">
+          <a href="/enrollment-form" class="btn-blue"> Enroll Today! </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 px-5 scroll-my-20 bg-medium-blue/10">
+    <div
+      class="max-w-xl gap-10 lg:max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:gap-10"
+    >
+      <div class="flex flex-col flex-1">
+        <h2 class="uppercase text-medium-blue font-bold tracking-widest">
+          Student Support Specialist
+        </h2>
+        <h3 class="text-5xl text-dark-blue font-bold leading-tight">
+          Personalized Guidance at High Tide
+        </h3>
+        <p class="text-gray-500 leading-relaxed mt-5">
+          As such a specialized skill, flight training can be confusing on even
+          its best day. We understand that each student comes to us with
+          different learning preferences and a diverse range of experiences. To
+          better support our students, we have an in-house Student Support
+          Department and assign a specific support specialist to every High Tide
+          student in Southport and St Simons Island.
+        </p>
+        <p class="font-medium mb-5 mt-2 text-gray-600">
+          Contact us today and receive tailored flight instruction at High Tide
+          Aviation.
+        </p>
+
+        <div class="flex flex-col sm:flex-row items-center gap-5">
+          <a href="/contact-us" class="btn-blue"> Contact Us </a>
+        </div>
+      </div>
+      <div class="flex-1">
+        <Image
+          src={StudentSupport}
+          alt="Student getting ready to fly"
+          class="object-cover top-0 left-0 -z-10 max-h-96"
+          quality={10}
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="text-white mx-auto grid sm:grid-cols-2 lg:grid-cols-4">
+    {
+      stats.map((stat) => (
+        <StatCard
+          icon={stat.icon}
+          value={stat.value}
+          title={stat.title}
+          cssVariable={stat.cssVariable}
+        />
+      ))
+    }
+  </section>
+
+  <section class="bg-medium-blue/10">
+    <section class="py-24 px-5">
+      <div
+        class="max-w-xl gap-10 lg:max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:gap-5"
+      >
+        <div class="flex flex-col flex-1">
+          <h2 class="uppercase text-medium-blue font-bold tracking-widest">
+            Finding Success at High Tide
+          </h2>
+          <h3 class="text-5xl text-dark-blue font-bold leading-tight">
+            Southport and St Simons Island Flight School
+          </h3>
+          <p class="text-gray-500 leading-relaxed my-5">
+            Our graduates' paths vary widely, reflecting the flexibility and
+            broad appeal of our training. Some now enjoy flying as a
+            recreational hobby, savoring the freedom of the skies on their
+            terms. Others have turned their passion into careers, working as
+            commercial pilots or flight instructors. This video demonstrates
+            some of the highlights of flying with High Tide.
+          </p>
+          <div class="flex flex-col sm:flex-row items-center gap-5">
+            <a href="/enrollment-form" class="btn-blue"> Enroll Now </a>
+          </div>
+        </div>
+        <div class="flex-1 w-full">
+          <div
+            style="height: 0px; overflow: hidden; padding-top: 56.25%; position: relative; width: 100%;"
+          >
+            <iframe
+              style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;"
+              src="https://tube.rvere.com/embed?v=h7qFbNtpGZQ"
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            >
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <section
+    id="first-time-pilots"
+    class="py-16 px-5 flex flex-col items-center max-w-xl lg:max-w-7xl mx-auto scroll-my-20"
+  >
+    <h2 class="uppercase text-medium-blue font-bold tracking-widest">
+      First-time Pilots
+    </h2>
+    <h3
+      class="text-5xl text-dark-blue font-bold leading-tight max-w-2xl text-center"
+    >
+      Become a Pilot at High Tide
+    </h3>
+    <p class="text-gray-600 text-center max-w-5xl my-10 leading-loose">
+      Welcome to High Tide Aviation, the top-rated training center for airplane
+      and helicopter pilots from both Southport, NC, and St Simons Island, GA.
+      Setting off on your pilot journey is straightforward and involves just
+      three simple steps:
+    </p>
+    <div class="grid lg:grid-cols-3 mx-auto gap-10">
+      <div
+        class="border border-white/50 py-8 px-12 flex flex-col gap-5 justify-between hover:bg-medium-blue/20 duration-700 group"
+      >
+        <div class="flex flex-col gap-5">
+          <RiTeamLine className="size-14 text-medium-blue" />
+          <h3
+            class="text-lg text-dark-blue uppercase font-semibold tracking-widest duration-700"
+          >
+            1. Meet The Team
+          </h3>
+          <p class="text-gray-600 leading-relaxed">
+            Reach out and connect with a member of the High Tide team. We’re
+            eager to understand your aspirations in aviation and explore how we
+            can support you in achieving those dreams.
+          </p>
+        </div>
+        <a
+          href="/contact-us"
+          class="flex gap-3 items-center self-end cursor-pointer group"
+        >
+          <p class="text-gray-500 text-sm">Contact Us</p>
+          <div
+            class="p-3 bg-light-blue/15 rounded-full group-hover:bg-medium-blue duration-700"
+          >
+            <IoIosArrowRoundForward
+              className="text-dark-blue size-6 group-hover:text-white duration-700"
+            />
+          </div>
+        </a>
+      </div>
+      <div
+        class="border border-white/50 py-8 px-12 flex flex-col gap-5 justify-between hover:bg-medium-blue/20 duration-700 group"
+      >
+        <div class="flex flex-col gap-5">
+          <GiExitDoor className="size-14 text-medium-blue" />
+          <h3
+            class="text-lg text-dark-blue uppercase font-semibold tracking-widest duration-700"
+          >
+            2. Visit High Tide
+          </h3>
+          <p class="text-gray-600 leading-relaxed">
+            Come and see our facilities and fleet at either of our locations.
+            Experience a discovery flight with one of our Certified Flight
+            Instructors (CFIs) and get a real feel of what it’s like to train
+            and fly with High Tide Aviation.
+          </p>
+        </div>
+        <a
+          href="/contact-us"
+          class="flex gap-3 items-center self-end cursor-pointer group"
+        >
+          <p class="text-gray-500 text-sm">Book a Visit</p>
+          <div
+            class="p-3 bg-light-blue/15 rounded-full group-hover:bg-medium-blue duration-700"
+          >
+            <IoIosArrowRoundForward
+              className="text-dark-blue size-6 group-hover:text-white duration-700"
+            />
+          </div>
+        </a>
+      </div>
+      <div
+        class="border border-white/50 py-8 px-12 flex flex-col gap-5 justify-between hover:bg-medium-blue/20 duration-700 group"
+      >
+        <div class="flex flex-col gap-5">
+          <MdFlightTakeoff className="size-14 text-medium-blue" />
+          <h3
+            class="text-lg text-dark-blue uppercase font-semibold tracking-widest duration-700"
+          >
+            3. Start Flying
+          </h3>
+          <p class="text-gray-600 leading-relaxed">
+            Whether you aim to fly as a career or just for the sheer joy of it,
+            High Tide Aviation is here to equip you with the skills and
+            knowledge needed to be a safe and proficient pilot.
+          </p>
+        </div>
+        <a
+          href="/enrollment-form"
+          class="flex gap-3 items-center self-end cursor-pointer group"
+        >
+          <p class="text-gray-500 text-sm">Enroll Today</p>
+          <div
+            class="p-3 bg-light-blue/15 rounded-full group-hover:bg-medium-blue duration-700"
+          >
+            <IoIosArrowRoundForward
+              className="text-dark-blue size-6 group-hover:text-white duration-700"
+            />
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="flex flex-col lg:flex-row">
+    <div
+      class="flex flex-col justify-center bg-mustard-yellow flex-1 py-16 px-5"
+    >
+      <div class="max-w-xl lg:max-w-none mx-auto lg:mx-20">
+        <h2 class="uppercase text-medium-blue font-bold tracking-widest">
+          Take Your First Flight
+        </h2>
+        <h3 class="text-5xl text-dark-blue font-bold leading-tight">
+          Introductory Flights at High Tide Aviation
+        </h3>
+        <p class="text-gray-600 my-10 mr-10">
+          Join High Tide Aviation for an introductory flight that combines
+          hands-on flying with spectacular views of coastal landmarks. In
+          Southport, you'll fly over the historic Southport Pier, Oak Island
+          Lighthouse, and Fort Caswell, capturing unique perspectives only seen
+          from the sky. From St Simons Island, your route includes the iconic St
+          Simons Lighthouse, lush Sea Island Golf Course, and the majestic
+          Sidney Lanier Bridge. Each flight is an opportunity to pilot an
+          aircraft and explore scenic vistas that highlight the beauty and
+          history of these coastal regions.
+        </p>
+        <a href="/intro-flight" target="_blank" class="btn-blue hover:bg-white">
+          Book an Intro Flight
+        </a>
+      </div>
+    </div>
+    <div
+      class="flex flex-col items-center justify-center text-white bg-medium-blue flex-1 relative py-16 px-5"
+    >
+      <div
+        class="max-w-xl lg:max-w-none mx-auto lg:mx-28 my-20 lg:my-0 duration-1000"
+        id="reviews-container"
+      >
+        <p
+          id="review-text"
+          class="md:text-2xl italic indent-10 leading-relaxed font-medium"
+        >
+          I earned my private pilot license through High Tide out of St Simons
+          Island, GA. They are an excellent program with a great cadre of
+          instructors. I am very thankful to have had such a great team to help
+          me start this journey into aviation!
+        </p>
+        <p id="review-author" class="mt-5 md:text-xl float-end">- Jake B.</p>
+        <ImQuotesLeft
+          className="absolute text-white/70 size-16 z-10 top-20 left-20"
+        />
+        <ImQuotesRight
+          className="absolute text-white/70 size-16 z-10 bottom-20 right-20"
+        />
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<script define:vars={{ reviews }}>
+  let currentIndex = 0;
+  const reviewTextElement = document.getElementById("review-text");
+  const reviewAuthorElement = document.getElementById("review-author");
+  const reviewsContainerElement = document.getElementById("reviews-container");
+
+  function showMessage() {
+    if (reviewAuthorElement && reviewTextElement) {
+      reviewTextElement.textContent = reviews[currentIndex].review;
+      reviewAuthorElement.textContent = `— ${reviews[currentIndex].name}`;
+    }
+    reviewsContainerElement?.classList.add("opacity-100");
+    reviewsContainerElement?.classList.remove("opacity-0");
+
+    currentIndex = (currentIndex + 1) % reviews.length;
+
+    setTimeout(hideMessage, 6000);
+  }
+
+  function hideMessage() {
+    reviewsContainerElement?.classList.remove("opacity-100");
+    reviewsContainerElement?.classList.add("opacity-0");
+
+    setTimeout(showMessage, 1200);
+  }
+
+  showMessage();
+</script>
