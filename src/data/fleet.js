@@ -145,14 +145,16 @@ export const fleet = [
     usableFuel: "N/A",
     model: "Redbird FMX",
     equipment: [],
-    imagePath: "/src/assets/redbird-simulator.jpg",
+    imagePath:
+      "/src/assets/redbird-fmx-simulator-exterior-high-tide-aviation-flight-school.jpg",
     hasRibbon: true,
     ribbonTitle: "Great for time building!",
     imagesArray: [
-      "/src/assets/redbird-simulator.jpg",
-      "/src/assets/redbird-simulator-from-the-outside.jpg",
-      "/src/assets/students-inside-redbird-simultor.jpg",
-      "/src/assets/students-learning-inside-redbird-simulator.jpg",
+      "/src/assets/redbird-fmx-simulator-exterior-high-tide-aviation-flight-school.jpg",
+      "/src/assets/redbird-fmx-interior.jpg",
+      "/src/assets/redbird-interface.jpg",
+      "/src/assets/student-trains-with-cfi-at-high-tide-aviation-in-redbird-fmx-simulator.jpg",
+      "/src/assets/redbird-flight-simulator-logo.jpg",
     ],
     description: [
       "The Redbird FMX Full-Motion Flight Simulator stands as a cornerstone of our flight training program at High Tide Aviation. This advanced simulator goes beyond traditional training methods by providing an electric motion platform that offers realistic, tactile feedback, closely replicating the in-flight experience. Pilots can engage in a variety of training scenarios within a fully enclosed cockpit, complete with wrap-around visuals and high-fidelity sound, allowing for an immersive learning environment.",
