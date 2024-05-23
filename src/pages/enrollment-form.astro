@@ -28,7 +28,7 @@ const ENROLLMENT_FORM_WEBHOOK_URL = import.meta.env.ENROLLMENT_FORM_WEBHOOK_URL;
       >
         Fill Out the Form Below to Start Flying
       </h3>
-      <div class="grid md:grid-cols-2 gap-5 my-10">
+      <div class="grid md:grid-cols-2 gap-5 mt-10">
         <input
           class="bg-medium-blue/15 text-dark-blue py-4 px-6 w-full outline-none placeholder:text-gray-500"
           type="text"
@@ -230,9 +230,29 @@ const ENROLLMENT_FORM_WEBHOOK_URL = import.meta.env.ENROLLMENT_FORM_WEBHOOK_URL;
           class="bg-medium-blue/15 text-dark-blue py-4 px-6 w-full outline-none placeholder:text-gray-500 md:col-span-2 h-36"
           name="message"
           id="message"
-          placeholder="Feel free to elaborate"></textarea>
+          placeholder="Feel free to elaborate"
+        >
+        </textarea>
       </div>
-      <button type="submit" class="btn-blue">Submit</button>
+      <div class="flex gap-3 my-5 max-w-xs md:max-w-xl mx-auto">
+        <input
+          type="checkbox"
+          name="agree-data-collection"
+          id="agree-data-collection"
+        />
+
+        <label for="agree-data-collection" class="text-gray-500 text-sm">
+          By providing my email and phone number, I agree to receive email and
+          text messages from High Tide Aviation. I understand that I can opt-out
+          at any time.
+        </label>
+      </div>
+      <button
+        type="submit"
+        id="submit-button"
+        class="btn-blue cursor-not-allowed bg-gray-400 hover:bg-gray-400 hover:text-white"
+        disabled>Submit</button
+      >
     </form>
   </section>
 </BaseLayout>
@@ -310,6 +330,29 @@ const ENROLLMENT_FORM_WEBHOOK_URL = import.meta.env.ENROLLMENT_FORM_WEBHOOK_URL;
       });
     } else {
       console.error("Enrollment form element not found.");
+    }
+  });
+
+  const checkbox = document.getElementById("agree-data-collection");
+  const submitButton = document.getElementById("submit-button");
+
+  checkbox.addEventListener("change", function () {
+    if (checkbox.checked) {
+      submitButton.disabled = false;
+      submitButton.classList.remove(
+        "cursor-not-allowed",
+        "bg-gray-400",
+        "hover:bg-gray-400",
+        "hover:text-white",
+      );
+    } else {
+      submitButton.disabled = true;
+      submitButton.classList.add(
+        "cursor-not-allowed",
+        "bg-gray-400",
+        "hover:bg-gray-400",
+        "hover:text-white",
+      );
     }
   });
 </script>

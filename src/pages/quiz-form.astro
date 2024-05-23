@@ -526,8 +526,26 @@ const QUIZ_FORM_WEBHOOK_URL = import.meta.env.QUIZ_FORM_WEBHOOK_URL;
           </div>
         </div>
       </div>
+      <div class="flex gap-3 my-5 items-center">
+        <input
+          type="checkbox"
+          name="agree-data-collection"
+          id="agree-data-collection"
+          class="h-4 w-4 rounded border-gray-300 text-medium-blue focus:ring-medium-blue"
+        />
 
-      <button type="submit" class="btn-blue mt-10">Submit</button>
+        <label for="agree-data-collection" class="text-gray-500 text-sm">
+          By providing my email and phone number, I agree to receive email and
+          text messages from High Tide Aviation. I understand that I can opt-out
+          at any time.
+        </label>
+      </div>
+      <button
+        type="submit"
+        id="submit-button"
+        class="btn-blue cursor-not-allowed bg-gray-400 hover:bg-gray-400 hover:text-white"
+        disabled>Submit</button
+      >
     </form>
   </section>
 </BaseLayout>
@@ -608,6 +626,29 @@ const QUIZ_FORM_WEBHOOK_URL = import.meta.env.QUIZ_FORM_WEBHOOK_URL;
       });
     } else {
       console.error("Quiz form element not found.");
+    }
+  });
+
+  const checkbox = document.getElementById("agree-data-collection");
+  const submitButton = document.getElementById("submit-button");
+
+  checkbox.addEventListener("change", function () {
+    if (checkbox.checked) {
+      submitButton.disabled = false;
+      submitButton.classList.remove(
+        "cursor-not-allowed",
+        "bg-gray-400",
+        "hover:bg-gray-400",
+        "hover:text-white",
+      );
+    } else {
+      submitButton.disabled = true;
+      submitButton.classList.add(
+        "cursor-not-allowed",
+        "bg-gray-400",
+        "hover:bg-gray-400",
+        "hover:text-white",
+      );
     }
   });
 </script>
