@@ -14,12 +14,12 @@ import { flightPrograms } from "../data/flightPrograms";
 import FlightProgramCard from "../components/FlightProgramCard.astro";
 import { IoIosArrowForward } from "react-icons/io";
 import { stats } from "../data/stats.js";
-import StatCard from "../components/StatCard.astro";
 import TopView from "../assets/top-view.jpg";
 import BlogPostCard from "../components/BlogPostCard.astro";
 import ReviewsCarousel from "../components/ReviewsCarousel";
 import StudentSupport from "../assets/student-support.jpg";
 import { getCollection } from "astro:content";
+import CounterCard from "../components/CounterCard.jsx";
 const posts = (await getCollection("blog")).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
@@ -349,11 +349,11 @@ const posts = (await getCollection("blog")).sort(
     <div class="max-w-sm md:max-w-7xl mx-auto grid md:grid-cols-4">
       {
         stats.map((stat) => (
-          <StatCard
+          <CounterCard
+            client:only="react"
             icon={stat.icon}
             value={stat.value}
             title={stat.title}
-            cssVariable={stat.cssVariable}
           />
         ))
       }

@@ -4,7 +4,7 @@ import Header from "../../components/Header.astro";
 import Banner from "../../assets/high-tide-aviation-team-of-cfis.jpg";
 import { Image } from "astro:assets";
 import Intro from "../../assets/female-cfis-at-high-tide-aviation.jpg";
-import StatCard from "../../components/StatCard.astro";
+import CounterCard from "../../components/CounterCard";
 import { stats } from "../../data/stats";
 import TopView from "../../assets/top-view.jpg";
 import Team from "../../assets/high-tide-aviation-team-southport.jpg";
@@ -112,11 +112,11 @@ import StudentSupport from "../../assets/student-support.jpg";
   <section class="text-white mx-auto grid sm:grid-cols-2 lg:grid-cols-4">
     {
       stats.map((stat) => (
-        <StatCard
+        <CounterCard
+          client:only="react"
           icon={stat.icon}
           value={stat.value}
           title={stat.title}
-          cssVariable={stat.cssVariable}
         />
       ))
     }

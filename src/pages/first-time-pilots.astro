@@ -4,7 +4,7 @@ import Header from "../components/Header.astro";
 import Banner from "../assets/private-pilot-sits-in-multi-engine-plane.jpg";
 import { Image } from "astro:assets";
 import Intro from "../assets/first-time-pilot-on-cessna.jpg";
-import StatCard from "../components/StatCard.astro";
+import CounterCard from "../components/CounterCard";
 import { stats } from "../data/stats";
 import { RiTeamLine } from "react-icons/ri";
 import { IoIosArrowRoundForward } from "react-icons/io";
@@ -107,11 +107,11 @@ import StudentSupport from "../assets/student-support.jpg";
   <section class="text-white mx-auto grid sm:grid-cols-2 lg:grid-cols-4">
     {
       stats.map((stat) => (
-        <StatCard
+        <CounterCard
+          client:only="react"
           icon={stat.icon}
           value={stat.value}
           title={stat.title}
-          cssVariable={stat.cssVariable}
         />
       ))
     }
