@@ -10,23 +10,23 @@ const posts = (await getCollection("blog")).sort(
 );
 ---
 
-<BaseLayout siteTitle="The High Tide Blog">
+<BaseLayout siteTitle="The High Tide Newsroom">
   <Header
     slot="header"
     image={Banner}
-    title="The High Tide Blog"
+    title="The High Tide Newsroom"
     alt="High Tide Aviation front sign in Southport, NC"
   />
 
   <section class="py-24 px-5">
     <div class="max-w-7xl mx-auto flex flex-col items-center">
       <h2 class="uppercase text-medium-blue font-bold tracking-widest">
-        From the Blog Posts
+        News and Pilot Resources
       </h2>
       <h3
         class="text-5xl font-bold leading-tight text-dark-blue text-center max-w-xl"
       >
-        Checkout latest aviation news and articles
+        Read the latest from High Tide
       </h3>
       <div class="grid md:grid-cols-2 lg:grid-cols-3 mt-10 gap-7">
         {
@@ -35,7 +35,7 @@ const posts = (await getCollection("blog")).sort(
               imagePath={post.data.heroImage}
               title={post.data.title}
               date={post.data.pubDate}
-              blogUrl={`/blog/${post.slug}/`}
+              blogUrl={post.data.url || `/blog/${post.slug}/`}
               description={post.data.description}
             />
           ))

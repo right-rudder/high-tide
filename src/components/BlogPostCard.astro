@@ -6,6 +6,10 @@ import { FaComments } from "react-icons/fa6";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import FormattedDate from "./FormattedDate.astro";
 
+function isWebsite(str) {
+  return str.startsWith("http");
+}
+
 const { imagePath, title, date, blogUrl, description } = Astro.props;
 const images = import.meta.glob<{ default: ImageMetadata }>(
   "/src/assets/*.{jpeg,jpg,png,gif}",
@@ -19,7 +23,11 @@ if (!images[imagePath]) {
 const dateData = new Date(date);
 ---
 
-<a href={blogUrl} class="max-w-sm shadow-md flex flex-col group">
+<a
+  href={blogUrl}
+  target={isWebsite(blogUrl) ? "_blank" : ""}
+  class="max-w-sm shadow-md flex flex-col group"
+>
   <div class="h-96 overflow-hidden shrink-0 relative">
     <Image
       src={images[imagePath]()}
