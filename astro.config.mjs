@@ -10,6 +10,6 @@ import netlify from "@astrojs/netlify";
 export default defineConfig({
   site: "https://hightideaviation.com",
   integrations: [mdx(), sitemap(), react(), tailwind(), partytown()],
-  output: "server",
+  output: "hybrid",
   adapter: netlify(),
 });

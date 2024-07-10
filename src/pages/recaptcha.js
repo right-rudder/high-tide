@@ -1,4 +1,5 @@
 const RECAPTCHA_SECRET_KEY = import.meta.env.RECAPTCHA_SECRET_KEY;
+export const prerender = false;
 
 export async function POST({ request }) {
   const data = await request.json();
