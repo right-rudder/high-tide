@@ -133,6 +133,7 @@ const CONTACT_US_FORM_WEBHOOK_URL = import.meta.env.CONTACT_US_FORM_WEBHOOK_URL;
               name="first-name"
               id="first-name"
               placeholder="First Name"
+              required
             />
             <input
               class="bg-medium-blue/15 text-dark-blue py-4 px-6 w-full outline-none placeholder:text-gray-500"
@@ -140,6 +141,7 @@ const CONTACT_US_FORM_WEBHOOK_URL = import.meta.env.CONTACT_US_FORM_WEBHOOK_URL;
               name="last-name"
               id="last-name"
               placeholder="Last Name"
+              required
             />
             <input
               class="bg-medium-blue/15 text-dark-blue py-4 px-6 w-full outline-none placeholder:text-gray-500"
@@ -147,6 +149,7 @@ const CONTACT_US_FORM_WEBHOOK_URL = import.meta.env.CONTACT_US_FORM_WEBHOOK_URL;
               name="email"
               id="email"
               placeholder="Email"
+              required
             />
             <p class="hidden">
               <label>
@@ -161,12 +164,16 @@ const CONTACT_US_FORM_WEBHOOK_URL = import.meta.env.CONTACT_US_FORM_WEBHOOK_URL;
               name="phone"
               id="phone"
               placeholder="Phone"
+              required
             />
             <textarea
               class="bg-medium-blue/15 text-dark-blue py-4 px-6 w-full outline-none placeholder:text-gray-500 col-span-2 h-36"
               name="message"
               id="message"
-              placeholder="Write message"></textarea>
+              placeholder="Write message"
+              required
+            >
+            </textarea>
           </div>
           <div class="flex gap-3 my-5 max-w-xl mx-auto">
             <input
@@ -181,10 +188,18 @@ const CONTACT_US_FORM_WEBHOOK_URL = import.meta.env.CONTACT_US_FORM_WEBHOOK_URL;
               opt-out at any time.
             </label>
           </div>
+
+          <div
+            class="g-recaptcha"
+            data-sitekey="6LdINgwqAAAAAHqhspAFZMyuR1ks9CeEVI8lWl2B"
+            data-callback="onRecaptchaSuccess"
+          >
+          </div>
+
           <button
             type="submit"
             id="submit-button"
-            class="btn-blue cursor-not-allowed bg-gray-400 hover:bg-gray-400 hover:text-white"
+            class="btn-blue cursor-not-allowed mt-5 bg-gray-400 hover:bg-gray-400 hover:text-white"
             disabled>Send Message</button
           >
         </form>
@@ -213,6 +228,8 @@ const CONTACT_US_FORM_WEBHOOK_URL = import.meta.env.CONTACT_US_FORM_WEBHOOK_URL;
 
 <script define:vars={{ CONTACT_US_FORM_WEBHOOK_URL }}>
   // Wait for the DOM content to be fully loaded
+  let isRecaptchaVerified = false;
+
   document.addEventListener("DOMContentLoaded", function () {
     // Get the contactUs form element
     const contactUsForm = document.getElementById("contact-us-form");
@@ -223,6 +240,11 @@ const CONTACT_US_FORM_WEBHOOK_URL = import.meta.env.CONTACT_US_FORM_WEBHOOK_URL;
       contactUsForm.addEventListener("submit", function (event) {
         // Prevent the default form submission
         event.preventDefault();
+
+        if (!isRecaptchaVerified) {
+          alert("Please complete the reCAPTCHA verification.");
+          return;
+        }
 
         // Serialize the form data
         const formData = new FormData(contactUsForm);
@@ -291,4 +313,23 @@ const CONTACT_US_FORM_WEBHOOK_URL = import.meta.env.CONTACT_US_FORM_WEBHOOK_URL;
       );
     }
   });
+
+  function onRecaptchaSuccess(token) {
+    fetch("/recaptcha", {
+      method: "POST",
+      body: JSON.stringify({ recaptcha: token }),
+    })
+      .then((response) => response.json())
+      .then((gResponse) => {
+        if (gResponse.success) {
+          isRecaptchaVerified = true;
+        } else {
+          isRecaptchaVerified = false;
+          alert("reCAPTCHA verification failed. Please try again.");
+        }
+      });
+  }
+
+  window.onRecaptchaSuccess = onRecaptchaSuccess; // Make the function globally accessible
 </script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
