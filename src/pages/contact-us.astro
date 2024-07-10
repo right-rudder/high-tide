@@ -133,6 +133,7 @@ const CONTACT_US_FORM_WEBHOOK_URL = import.meta.env.CONTACT_US_FORM_WEBHOOK_URL;
               name="first-name"
               id="first-name"
               placeholder="First Name"
+              required
             />
             <input
               class="bg-medium-blue/15 text-dark-blue py-4 px-6 w-full outline-none placeholder:text-gray-500"
@@ -140,6 +141,7 @@ const CONTACT_US_FORM_WEBHOOK_URL = import.meta.env.CONTACT_US_FORM_WEBHOOK_URL;
               name="last-name"
               id="last-name"
               placeholder="Last Name"
+              required
             />
             <input
               class="bg-medium-blue/15 text-dark-blue py-4 px-6 w-full outline-none placeholder:text-gray-500"
@@ -147,6 +149,7 @@ const CONTACT_US_FORM_WEBHOOK_URL = import.meta.env.CONTACT_US_FORM_WEBHOOK_URL;
               name="email"
               id="email"
               placeholder="Email"
+              required
             />
             <p class="hidden">
               <label>
@@ -161,12 +164,16 @@ const CONTACT_US_FORM_WEBHOOK_URL = import.meta.env.CONTACT_US_FORM_WEBHOOK_URL;
               name="phone"
               id="phone"
               placeholder="Phone"
+              required
             />
             <textarea
               class="bg-medium-blue/15 text-dark-blue py-4 px-6 w-full outline-none placeholder:text-gray-500 col-span-2 h-36"
               name="message"
               id="message"
-              placeholder="Write message"></textarea>
+              placeholder="Write message"
+              required
+            >
+            </textarea>
           </div>
           <div class="flex gap-3 my-5 max-w-xl mx-auto">
             <input
