@@ -7,6 +7,8 @@ export async function POST({ request }) {
   const requestHeaders = {
     "Content-Type": "application/x-www-form-urlencoded",
   };
+  console.log(data);
+  console.log(RECAPTCHA_SECRET_KEY);
   const requestBody = new URLSearchParams({
     secret: RECAPTCHA_SECRET_KEY, // This can be an environment variable
     response: data.recaptcha, // The token passed in from the client

@@ -3,6 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Header from "../components/Header.astro";
 import Banner from "../assets/high-tide-aviation-hangar.jpg";
 import { FaClock } from "react-icons/fa";
+import HiringOptions from "../components/HiringOptions.astro";
 
 import {
   ADDRESS_LINE_1,
@@ -204,6 +205,9 @@ const CONTACT_US_FORM_WEBHOOK_URL = import.meta.env.CONTACT_US_FORM_WEBHOOK_URL;
       </div>
     </div>
   </section>
+
+  <HiringOptions />
+
   <div class="flex flex-col md:flex-row">
     <iframe
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3310.3953290887316!2d-78.08074522366795!3d33.93095892412375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89aa07e3b3a0b82b%3A0xe199a7d4a214440f!2sHigh%20Tide%20Aviation!5e0!3m2!1sen!2sgt!4v1713385335851!5m2!1sen!2sgt"
