@@ -4,6 +4,7 @@ import Header from "../components/Header.astro";
 import Banner from "../assets/cessna-172-flying-over-st-simons-island.jpg";
 import DiscoveryFlightCard from "../components/DiscoveryFlightCard.astro";
 import { discoveryFlights } from "../data/discoveryFlights";
+import ToursCTA from "../components/ToursCTA.astro";
 ---
 
 <BaseLayout siteTitle="Book an Intro Flight at High Tide">
@@ -40,4 +41,6 @@ import { discoveryFlights } from "../data/discoveryFlights";
       }
     </div>
   </section>
+
+  <ToursCTA />
 </BaseLayout>

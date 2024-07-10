@@ -1,0 +1,263 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Banner from "../assets/high-tide-aviation-hangar.jpg";
+const JOB_APPLICATION_FORM_WEBHOOK_URL = import.meta.env
+  .JOB_APPLICATION_FORM_WEBHOOK_URL;
+---
+
+<BaseLayout
+  siteTitle="Submit Interest"
+  siteDescription="Reach out to High Tide Aviation in Southport, NC, for any inquiries about flight training, aircraft rentals, or our other aviation services. Our team is here to assist you on your aviation journey."
+  siteKeywords="contact High Tide Aviation, flight school contact Southport NC, aviation inquiries Southeast Coast, High Tide Aviation support, pilot training questions Southport NC."
+>
+  <Header
+    slot="header"
+    image={Banner}
+    title="Submit Interest"
+    alt="High Tide Aviation Hangar"
+  />
+
+  <section class="py-24 px-5">
+    <div class="max-w-xl lg:max-w-7xl mx-auto flex flex-col items-center">
+      <h2 class="uppercase text-medium-blue font-bold tracking-widest">
+        Interested in working at High Tide Aviation?
+      </h2>
+      <h3
+        class="text-5xl max-w-2xl text-center text-dark-blue font-bold leading-tight"
+      >
+        Get notified when an opening is available!
+      </h3>
+
+      <form
+        id="job-application-form"
+        method="POST"
+        action=""
+        class="z-20 flex flex-col items-center p-5 shadow-lg bg-white xl:order-2"
+      >
+        <div class="grid lg:grid-cols-2 gap-5 mt-10">
+          <input
+            class="bg-medium-blue/15 text-dark-blue py-4 px-6 w-full outline-none placeholder:text-gray-500"
+            type="text"
+            name="first-name"
+            id="first-name"
+            placeholder="First Name"
+            required
+          />
+          <input
+            class="bg-medium-blue/15 text-dark-blue py-4 px-6 w-full outline-none placeholder:text-gray-500"
+            type="text"
+            name="last-name"
+            id="last-name"
+            placeholder="Last Name"
+            required
+          />
+          <input
+            class="bg-medium-blue/15 text-dark-blue py-4 px-6 w-full outline-none placeholder:text-gray-500"
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Email"
+            required
+          />
+          <p class="hidden">
+            <label>
+              Don't fill this out if you're human: <input
+                name="confirm-email"
+              />
+            </label>
+          </p>
+          <input
+            class="bg-medium-blue/15 text-dark-blue py-4 px-6 w-full outline-none placeholder:text-gray-500"
+            type="tel"
+            name="phone"
+            id="phone"
+            placeholder="Phone"
+            required
+          />
+          <fieldset class="col-span-2">
+            <legend class="font-medium leading-6 text-dark-blue"
+              >High Tide Location</legend
+            >
+            <div class="mt-2 space-y-1">
+              <div class="flex items-center gap-x-3">
+                <input
+                  id="southport"
+                  name="location"
+                  type="radio"
+                  class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
+                  value="Southport"
+                  required
+                />
+                <label for="southport" class="block leading-6 text-gray-600"
+                  >Southport</label
+                >
+              </div>
+              <div class="flex items-center gap-x-3">
+                <input
+                  id="st-simons"
+                  name="location"
+                  type="radio"
+                  class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
+                  value="St Simons"
+                />
+                <label for="st-simons" class="block leading-6 text-gray-600"
+                  >St Simons</label
+                >
+              </div>
+            </div>
+          </fieldset>
+          <input
+            class="bg-medium-blue/15 text-dark-blue py-4 px-6 w-full outline-none placeholder:text-gray-500 col-span-2"
+            type="text"
+            name="certifications"
+            id="certifications"
+            placeholder="Ratings / Certifications"
+            required
+          />
+          <textarea
+            class="bg-medium-blue/15 text-dark-blue py-4 px-6 w-full outline-none placeholder:text-gray-500 col-span-2 h-36"
+            name="experience"
+            id="experience"
+            required
+            placeholder="Former Experience"></textarea>
+        </div>
+        <div class="flex gap-3 my-5 max-w-xl mx-auto">
+          <input
+            type="checkbox"
+            name="agree-data-collection"
+            id="agree-data-collection"
+          />
+
+          <label for="agree-data-collection" class="text-gray-500 text-xs">
+            I understand that this is a form to submit interest and <span
+              class="underline">not</span
+            > a formal application. We will reach out to you when we have openings.
+          </label>
+        </div>
+
+        <div
+          class="g-recaptcha"
+          data-sitekey="6LdINgwqAAAAAHqhspAFZMyuR1ks9CeEVI8lWl2B"
+          data-callback="onRecaptchaSuccess"
+        >
+        </div>
+
+        <button
+          type="submit"
+          id="submit-button"
+          class="btn-blue cursor-not-allowed mt-5 bg-gray-400 hover:bg-gray-400 hover:text-white"
+          disabled>Send Message</button
+        >
+      </form>
+    </div>
+  </section>
+</BaseLayout>
+
+<script define:vars={{ JOB_APPLICATION_FORM_WEBHOOK_URL }}>
+  // Wait for the DOM content to be fully loaded
+  let isRecaptchaVerified = false;
+
+  document.addEventListener("DOMContentLoaded", function () {
+    // Get the contactUs form element
+    const contactUsForm = document.getElementById("job-application-form");
+
+    // Check if the contactUs form element exists
+    if (contactUsForm !== null) {
+      // Add submit event listener to the contactUs form
+      contactUsForm.addEventListener("submit", function (event) {
+        // Prevent the default form submission
+        event.preventDefault();
+
+        if (!isRecaptchaVerified) {
+          alert("Please complete the reCAPTCHA verification.");
+          return;
+        }
+
+        // Serialize the form data
+        const formData = new FormData(contactUsForm);
+
+        // Check the value of the honeypot field
+        const confirmEmailValue = formData.get("confirm-email");
+        if (confirmEmailValue === "" || confirmEmailValue === null) {
+          // If the honeypot field is empty, it's a human
+          // Set the form action to the URL for processing the form and redirecting to thank you
+          contactUsForm.action = JOB_APPLICATION_FORM_WEBHOOK_URL;
+        }
+
+        // Convert FormData to URLSearchParams
+        const urlSearchParams = new URLSearchParams();
+        for (const pair of formData.entries()) {
+          urlSearchParams.append(pair[0], pair[1]);
+        }
+
+        // Send an AJAX request to submit the form
+        const xhr = new XMLHttpRequest();
+        xhr.open("POST", contactUsForm.action);
+        xhr.setRequestHeader(
+          "Content-Type",
+          "application/x-www-form-urlencoded",
+        );
+        xhr.onload = function () {
+          // Check if the request was successful (status 200)
+          if (xhr.status === 200) {
+            // Redirect the user after a successful form submission
+            window.location.href = "/contact-us-confirmation";
+          } else {
+            // Handle errors if any
+            console.error("Form submission failed:", xhr.statusText);
+          }
+        };
+        xhr.onerror = function () {
+          // Handle network errors
+          console.error("Network error occurred while submitting the form.");
+        };
+        xhr.send(urlSearchParams);
+      });
+    } else {
+      console.error("Contact us form element not found.");
+    }
+  });
+
+  const checkbox = document.getElementById("agree-data-collection");
+  const submitButton = document.getElementById("submit-button");
+
+  checkbox.addEventListener("change", function () {
+    if (checkbox.checked) {
+      submitButton.disabled = false;
+      submitButton.classList.remove(
+        "cursor-not-allowed",
+        "bg-gray-400",
+        "hover:bg-gray-400",
+        "hover:text-white",
+      );
+    } else {
+      submitButton.disabled = true;
+      submitButton.classList.add(
+        "cursor-not-allowed",
+        "bg-gray-400",
+        "hover:bg-gray-400",
+        "hover:text-white",
+      );
+    }
+  });
+
+  function onRecaptchaSuccess(token) {
+    fetch("/recaptcha", {
+      method: "POST",
+      body: JSON.stringify({ recaptcha: token }),
+    })
+      .then((response) => response.json())
+      .then((gResponse) => {
+        if (gResponse.success) {
+          isRecaptchaVerified = true;
+        } else {
+          isRecaptchaVerified = false;
+          alert("reCAPTCHA verification failed. Please try again.");
+        }
+      });
+  }
+
+  window.onRecaptchaSuccess = onRecaptchaSuccess; // Make the function globally accessible
+</script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
