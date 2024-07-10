@@ -20,6 +20,7 @@ import ReviewsCarousel from "../components/ReviewsCarousel";
 import StudentSupport from "../assets/student-support.jpg";
 import { getCollection } from "astro:content";
 import CounterCard from "../components/CounterCard.jsx";
+import ToursCTA from "../components/ToursCTA.astro";
 const posts = (await getCollection("blog")).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
@@ -432,19 +433,5 @@ const posts = (await getCollection("blog")).sort(
     </div>
   </section>
 
-  <section class="py-16 px-5 bg-mustard-yellow">
-    <div class="max-w-7xl mx-auto flex flex-col items-center">
-      <h2 class="uppercase text-medium-blue font-bold tracking-widest">
-        Book Your Flight Today
-      </h2>
-      <h3
-        class="text-5xl font-bold leading-tight text-dark-blue text-center max-w-2xl"
-      >
-        Ready to start your journey with High Tide Aviation?
-      </h3>
-      <a href="/contact-us" class="btn-blue hover:bg-white mt-5">
-        Schedule a call with us today!
-      </a>
-    </div>
-  </section>
+  <ToursCTA />
 </BaseLayout>
