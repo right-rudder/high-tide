@@ -152,13 +152,12 @@ const CONTACT_US_FORM_WEBHOOK_URL = import.meta.env.CONTACT_US_FORM_WEBHOOK_URL;
               placeholder="Email"
               required
             />
-            <p class="hidden">
+            <div class="hidden">
               <label>
-                Don't fill this out if you're human: <input
-                  name="confirm-email"
-                />
+                Don't fill this out if you're human:
+                <input name="confirm-email" />
               </label>
-            </p>
+            </div>
             <input
               class="bg-medium-blue/15 text-dark-blue py-4 px-6 w-full outline-none placeholder:text-gray-500"
               type="tel"

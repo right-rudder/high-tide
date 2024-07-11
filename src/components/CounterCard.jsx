@@ -23,7 +23,9 @@ const Counter = ({ icon, value, title }) => {
             <CountUp end={value} enableScrollSpy scrollSpyDelay={200} />
             {title == "Combined flight hours" ? "+" : ""}
           </span>
-          <h2 className="text-white/50 text-center">{title}</h2>
+          <h2 className="text-white/50 text-center whitespace-nowrap">
+            {title}
+          </h2>
         </div>
       </div>
     </div>

@@ -3,7 +3,6 @@ import HomepageHeader from "../components/HomepageHeader.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { TbAward } from "react-icons/tb";
 import { BsAirplaneEngines } from "react-icons/bs";
-import { MdOutlineQuiz } from "react-icons/md";
 import { FaRegStar } from "react-icons/fa6";
 import { FaPhoneAlt } from "react-icons/fa";
 import { Image } from "astro:assets";
@@ -13,6 +12,8 @@ import { PHONE_NUMBER } from "../consts.ts";
 import { flightPrograms } from "../data/flightPrograms";
 import FlightProgramCard from "../components/FlightProgramCard.astro";
 import { IoIosArrowForward } from "react-icons/io";
+import { IoBookOutline } from "react-icons/io5";
+import Ebook from "../components/Ebook.astro";
 import { stats } from "../data/stats.js";
 import TopView from "../assets/top-view.jpg";
 import BlogPostCard from "../components/BlogPostCard.astro";
@@ -54,14 +55,14 @@ const posts = (await getCollection("blog")).sort(
         </p>
       </a>
       <a
-        href="#quiz"
+        href="#ebook"
         class="border border-white/50 py-8 px-12 flex flex-col gap-5 hover:bg-white duration-700 group cursor-pointer"
       >
-        <MdOutlineQuiz className="size-14 text-medium-blue" />
+        <IoBookOutline className="size-14 text-medium-blue" />
         <p
           class="text-lg text-dark-blue uppercase font-semibold tracking-widest duration-700"
         >
-          Pilot Readiness Quiz
+          Free eBook
         </p>
       </a>
       <a
@@ -235,85 +236,7 @@ const posts = (await getCollection("blog")).sort(
     </div>
   </section>
 
-  <!-- <section id="ebook" class="scroll-my-24">
-    <div class="py-24 px-5 text-white bg-dark-blue relative overflow-hidden">
-      <IoBookOutline
-        className="size-[40rem] right-16 top-0 text-white/10 absolute"
-      />
-      <div class="max-w-xl lg:max-w-7xl mx-auto relative z-10">
-        <h2 class="uppercase text-mustard-yellow font-bold tracking-widest">
-          Free eBook
-        </h2>
-        <h3 class="text-5xl font-bold leading-tight">
-          Get Your FREE Quick Start Guide
-        </h3>
-        <div class="max-w-3xl grid lg:grid-cols-2 gap-5 my-10">
-          <input
-            class="bg-[#00215D] text-white/70 py-4 px-6 w-full outline-none placeholder:text-white/50"
-            type="text"
-            name="first-name"
-            id="first-name"
-            placeholder="First Name"
-          />
-          <input
-            class="bg-[#00215D] text-white/70 py-4 px-6 w-full outline-none placeholder:text-white/50"
-            type="text"
-            name="last-name"
-            id="last-name"
-            placeholder="Last Name"
-          />
-          <input
-            class="bg-[#00215D] text-white/70 py-4 px-6 w-full outline-none placeholder:text-white/50"
-            type="email"
-            name="email"
-            id="email"
-            placeholder="Email"
-          />
-          <input
-            class="bg-[#00215D] text-white/70 py-4 px-6 w-full outline-none placeholder:text-white/50"
-            type="tel"
-            name="phone"
-            id="phone"
-            placeholder="Phone"
-          />
-        </div>
-        <a
-          href="#"
-          class="block uppercase py-4 px-14 bg-mustard-yellow w-fit rounded-full hover:bg-medium-blue duration-300 font-medium"
-          >Download Now</a
-        >
-      </div>
-    </div>
-  </section> -->
-
-  <section id="quiz" class="scroll-my-24">
-    <div class="py-24 px-5 text-white bg-dark-blue relative overflow-hidden">
-      <MdOutlineQuiz
-        className="size-[40rem] right-16 -top-8 text-white/10 absolute"
-      />
-      <div class="max-w-xl lg:max-w-7xl mx-auto relative z-10">
-        <div class="max-w-3xl">
-          <h2 class="uppercase text-mustard-yellow font-bold tracking-widest">
-            Become a Pilot
-          </h2>
-          <h3 class="text-5xl font-bold leading-tight">
-            Are You Ready to Become a Pilot?
-          </h3>
-          <p class="text-white/70 leading-loose my-5">
-            Do you ever wonder what it takes to be a pilot? Sometimes, the
-            thought of flight training is exhilarating but comes with nerves
-            toward getting started. We understand that flight training may be
-            daunting to some, so we have put together a readiness quiz for you
-            to see what becoming a pilot is like at High Tide Aviation. Whether
-            in Southport, North Carolina, or St Simons Island, Georgia, we hope
-            this quiz helps assuage any doubts about starting your path toward
-            becoming a pilot!
-          </p>
-          <a href="/quiz-form" class="btn-yellow">Take the Quiz</a>
-        </div>
-      </div>
-    </div>
-  </section>
+  <Ebook />
 
   <section class="py-24 px-5">
     <div class="max-w-[95rem] mx-auto flex flex-col items-center">
@@ -346,19 +269,17 @@ const posts = (await getCollection("blog")).sort(
     </div>
   </section>
 
-  <section class="px-5 text-white">
-    <div class="max-w-sm md:max-w-7xl mx-auto grid md:grid-cols-4">
-      {
-        stats.map((stat) => (
-          <CounterCard
-            client:only="react"
-            icon={stat.icon}
-            value={stat.value}
-            title={stat.title}
-          />
-        ))
-      }
-    </div>
+  <section class="text-white mx-auto grid sm:grid-cols-2 lg:grid-cols-4">
+    {
+      stats.map((stat) => (
+        <CounterCard
+          client:only="react"
+          icon={stat.icon}
+          value={stat.value}
+          title={stat.title}
+        />
+      ))
+    }
   </section>
 
   <section id="reviews" class="py-24 px-5 bg-light-blue/10 scroll-my-20">

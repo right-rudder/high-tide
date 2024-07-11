@@ -1,0 +1,160 @@
+---
+import { IoBookOutline } from "react-icons/io5";
+const EBOOK_FORM_WEBHOOK_URL = import.meta.env.EBOOK_FORM_WEBHOOK_URL;
+---
+
+<section id="ebook" class="scroll-my-24">
+  <div class="py-24 px-5 text-white bg-dark-blue relative overflow-hidden">
+    <IoBookOutline
+      className="size-[40rem] right-16 top-0 text-white/10 absolute"
+    />
+    <div class="max-w-xl lg:max-w-7xl mx-auto relative z-10">
+      <h2 class="uppercase text-mustard-yellow font-bold tracking-widest">
+        Free eBook
+      </h2>
+      <h3 class="text-5xl font-bold leading-tight">
+        Get Your FREE Quick Start Guide
+      </h3>
+
+      <form
+        id="ebook-form"
+        method="POST"
+        class="max-w-3xl grid lg:grid-cols-2 gap-5 my-10"
+      >
+        <input
+          class="bg-[#00215D] text-white/70 py-4 px-6 w-full outline-none placeholder:text-white/50"
+          type="text"
+          name="first-name"
+          id="first-name"
+          placeholder="First Name"
+          required
+        />
+        <input
+          class="bg-[#00215D] text-white/70 py-4 px-6 w-full outline-none placeholder:text-white/50"
+          type="text"
+          name="last-name"
+          id="last-name"
+          placeholder="Last Name"
+          required
+        />
+        <input
+          class="bg-[#00215D] text-white/70 py-4 px-6 w-full outline-none placeholder:text-white/50"
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Email"
+          required
+        />
+        <div class="hidden">
+          <label>
+            Don't fill this out if you're human: <input name="confirm-email" />
+          </label>
+        </div>
+        <input
+          class="bg-[#00215D] text-white/70 py-4 px-6 w-full outline-none placeholder:text-white/50"
+          type="tel"
+          name="phone"
+          id="phone"
+          placeholder="Phone"
+          required
+        />
+
+        <div
+          class="g-recaptcha"
+          data-sitekey="6LdINgwqAAAAAHqhspAFZMyuR1ks9CeEVI8lWl2B"
+          data-callback="onRecaptchaSuccess"
+        >
+        </div>
+
+        <button type="submit" id="submit-button" class="btn-yellow my-2"
+          >Download Now</button
+        >
+      </form>
+    </div>
+  </div>
+</section>
+
+<script define:vars={{ EBOOK_FORM_WEBHOOK_URL }}>
+  // Wait for the DOM content to be fully loaded
+  let isRecaptchaVerified = false;
+
+  document.addEventListener("DOMContentLoaded", function () {
+    // Get the contactUs form element
+    const pageForm = document.getElementById("ebook-form");
+
+    // Check if the contactUs form element exists
+    if (pageForm !== null) {
+      // Add submit event listener to the contactUs form
+      pageForm.addEventListener("submit", function (event) {
+        // Prevent the default form submission
+        event.preventDefault();
+
+        if (!isRecaptchaVerified) {
+          alert("Please complete the reCAPTCHA verification.");
+          return;
+        }
+
+        // Serialize the form data
+        const formData = new FormData(pageForm);
+
+        // Check the value of the honeypot field
+        const confirmEmailValue = formData.get("confirm-email");
+        if (confirmEmailValue === "" || confirmEmailValue === null) {
+          // If the honeypot field is empty, it's a human
+          // Set the form action to the URL for processing the form and redirecting to thank you
+          pageForm.action = EBOOK_FORM_WEBHOOK_URL;
+        }
+
+        // Convert FormData to URLSearchParams
+        const urlSearchParams = new URLSearchParams();
+        for (const pair of formData.entries()) {
+          urlSearchParams.append(pair[0], pair[1]);
+        }
+
+        // Send an AJAX request to submit the form
+        const xhr = new XMLHttpRequest();
+        xhr.open("POST", pageForm.action);
+        xhr.setRequestHeader(
+          "Content-Type",
+          "application/x-www-form-urlencoded",
+        );
+        xhr.onload = function () {
+          // Check if the request was successful (status 200)
+          if (xhr.status === 200) {
+            // Redirect the user after a successful form submission
+            window.location.href = "/ebook-confirmation";
+          } else {
+            // Handle errors if any
+            console.error("Form submission failed:", xhr.statusText);
+          }
+        };
+        xhr.onerror = function () {
+          // Handle network errors
+          console.error("Network error occurred while submitting the form.");
+        };
+        xhr.send(urlSearchParams);
+      });
+    } else {
+      console.error("Contact us form element not found.");
+    }
+  });
+
+  function onRecaptchaSuccess(token) {
+    fetch("/recaptcha", {
+      method: "POST",
+      body: JSON.stringify({ recaptcha: token }),
+    })
+      .then((response) => response.json())
+      .then((gResponse) => {
+        if (gResponse.success) {
+          isRecaptchaVerified = true;
+        } else {
+          isRecaptchaVerified = false;
+          alert("reCAPTCHA verification failed. Please try again.");
+        }
+      });
+  }
+
+  window.onRecaptchaSuccess = onRecaptchaSuccess;
+</script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>

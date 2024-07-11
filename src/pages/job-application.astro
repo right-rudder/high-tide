@@ -7,14 +7,14 @@ const JOB_APPLICATION_FORM_WEBHOOK_URL = import.meta.env
 ---
 
 <BaseLayout
-  siteTitle="Submit Interest"
+  siteTitle="Work at High Tide"
   siteDescription="Reach out to High Tide Aviation in Southport, NC, for any inquiries about flight training, aircraft rentals, or our other aviation services. Our team is here to assist you on your aviation journey."
   siteKeywords="contact High Tide Aviation, flight school contact Southport NC, aviation inquiries Southeast Coast, High Tide Aviation support, pilot training questions Southport NC."
 >
   <Header
     slot="header"
     image={Banner}
-    title="Submit Interest"
+    title="Work at High Tide"
     alt="High Tide Aviation Hangar"
   />
 
@@ -60,13 +60,13 @@ const JOB_APPLICATION_FORM_WEBHOOK_URL = import.meta.env
             placeholder="Email"
             required
           />
-          <p class="hidden">
+          <div class="hidden">
             <label>
               Don't fill this out if you're human: <input
                 name="confirm-email"
               />
             </label>
-          </p>
+          </div>
           <input
             class="bg-medium-blue/15 text-dark-blue py-4 px-6 w-full outline-none placeholder:text-gray-500"
             type="tel"

@@ -7,6 +7,7 @@ interface ImportMetaEnv {
   readonly QUIZ_FORM_WEBHOOK_URL: string;
   readonly RECAPTCHA_SECRET_KEY: string;
   readonly JOB_APPLICATION_FORM_WEBHOOK_URL: string;
+  readonly EBOOK_FORM_WEBHOOK_URL: string;
 }
 
 interface ImportMeta {

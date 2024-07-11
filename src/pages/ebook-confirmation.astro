@@ -6,11 +6,11 @@ import { FaCheckCircle } from "react-icons/fa";
 import { PHONE_NUMBER } from "../consts";
 ---
 
-<BaseLayout siteTitle="Thank You for Contacting Us">
+<BaseLayout siteTitle="Thank You for Downloading Our eBook">
   <Header
     slot="header"
     image={Banner}
-    title="Thank You for Contacting Us"
+    title="Thank You for Downloading Our eBook"
     alt="Beech Baron B55 from the front"
   />
 
@@ -18,15 +18,16 @@ import { PHONE_NUMBER } from "../consts";
     <div class="flex flex-col items-center max-w-5xl mx-auto text-center gap-8">
       <FaCheckCircle className="text-9xl text-medium-blue" />
       <p class="text-gray-600 leading-loose">
-        Thank you for contacting High Tide Aviation. We are looking forward to
-        working with you soon. We will review your message and get back with you
-        within 1-5 business days.
+        Thank you for choosing to download our "Learn to Fly" eBook. Please
+        expect an email in the inbox associated with the email address provided.
+        You'll find it as an attachment and a shareable link. We hope you find
+        it helpful.
       </p>
       <p class="text-gray-600 leading-loose">
-        You can also give us a call at <a
+        Are you interested in flight training with us? You can give us a call at <a
           class="hover:text-dark-blue hover:underline duration-300"
           href=`tel:${PHONE_NUMBER}`>{PHONE_NUMBER}</a
-        >.
+        > to schedule a visit.
       </p>
     </div>
   </section>
