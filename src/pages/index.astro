@@ -345,7 +345,7 @@ const posts = (await getCollection("blog")).sort(
                 imagePath={post.data.heroImage}
                 title={post.data.title}
                 date={post.data.pubDate}
-                blogUrl={`/blog/${post.slug}/`}
+                blogUrl={post.data.url || `/blog/${post.slug}/`}
                 description={post.data.description}
               />
             ))
