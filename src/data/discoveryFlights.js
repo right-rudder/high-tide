@@ -18,14 +18,14 @@ export const discoveryFlights = [
     location: "Southport, NC",
     price: "$199 per person",
     imagePath: "/src/assets/n570h-at-high-tide-aviation.jpg",
-    url: "https://fareharbor.com/embeds/book/hightidehelicopters/items/32658/?full-items=yes&flow=335655",
+    url: "https://www.flightcircle.com/shop/5c9443ea346a/4000014491",
   },
   {
     name: "*NEW* Deluxe Helicopter Discovery Flight",
     location: "Southport, NC",
     price: "$299 per person",
     imagePath: "/src/assets/r44-helicopter-at-high-tide-aviation.jpg",
-    url: "https://fareharbor.com/embeds/book/hightidehelicopters/items/529569/?full-items=yes&flow=335655",
+    url: "https://www.flightcircle.com/shop/5c9443ea346a/4000014493",
   },
   {
     name: "St Simons Flight Gift Cards",
