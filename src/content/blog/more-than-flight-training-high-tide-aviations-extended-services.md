@@ -2,10 +2,22 @@
 author: "Ed Simpson"
 title: "More Than Flight Training: High Tide Aviation's Extended Services"
 description: "Explore the wide range of additional services offered by High Tide Aviation, including aircraft brokerage, management, airplane tours, helicopter tours, aerial photography, and videography, all based near Wilmington, NC, in Southport and Cape Fear."
-heroImage: "/src/assets/ocean-crest-pier-southport-wilmington-nc.jpg"
+heroImage: "/src/assets/ocean-crest-pier-southport-wilmington-nc.webp"
 pubDate: "Aug 7, 2024"
 category: "Aviation Services"
-tags: ["aviation-services", "aircraft-brokerage", "aircraft-management", "airplane-tours", "helicopter-tours", "aerial-photography", "aerial-videography", "Wilmington NC", "Southport, NC", "St Simons Island, GA"]
+tags:
+  [
+    "aviation-services",
+    "aircraft-brokerage",
+    "aircraft-management",
+    "airplane-tours",
+    "helicopter-tours",
+    "aerial-photography",
+    "aerial-videography",
+    "Wilmington NC",
+    "Southport, NC",
+    "St Simons Island, GA",
+  ]
 ---
 
 High Tide Aviation is renowned for its flight school, but our offerings extend far beyond pilot training. Based in Southport near Wilmington, NC, we provide a variety of services tailored to meet the diverse needs of our clients. Whether you are looking to buy or manage an aircraft, explore the skies through tours, or capture stunning aerial footage, High Tide Aviation has you covered.
@@ -53,4 +65,4 @@ Discover our Aerial Videography services [here](https://flyhightide.com/packages
 
 At High Tide Aviation, we are dedicated to providing top-notch aviation services that go beyond traditional flight training. Our diverse offerings, including Aircraft Brokerage, Management, Tours, and Aerial Photography and Videography, are designed to meet the unique needs of our clients near Wilmington, NC, and near St Simons Island, GA. Whether you are an aircraft owner, an adventure seeker, or a professional looking for aerial imagery, High Tide Aviation has the expertise and resources to exceed your expectations.
 
-For more information on any of our services, [visit our website](https://hightideaviation.com/) or [contact us directly](https://hightideaviation.com/contact-us/). 
+For more information on any of our services, [visit our website](https://hightideaviation.com/) or [contact us directly](https://hightideaviation.com/contact-us/).
