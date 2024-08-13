@@ -1,0 +1,36 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Banner from "../assets/high-tide-aviation-hangar.jpg";
+---
+
+<BaseLayout
+  siteTitle="404 Page Not Found | High Tide Aviation"
+  siteDescription="High Tide Aviation is a flight school and aircraft services provider located in Southport, North Carolina. Contact us for more information about our pilot training programs, aircraft rentals, and more."
+  siteKeywords="contact High Tide Aviation, flight school contact Southport NC, aviation inquiries Southeast Coast, High Tide Aviation support, pilot training questions Southport NC."
+>
+  <Header
+    slot="header"
+    image={Banner}
+    title="404 Page Not Found"
+    alt="High Tide Aviation Hangar"
+  />
+
+  <section class="py-24 px-5">
+    <div class="max-w-xl lg:max-w-7xl mx-auto flex flex-col items-center gap-5">
+      <h2 class="uppercase text-medium-blue text-lg font-bold tracking-widest">
+        Sorry, we couldn't find this page.
+      </h2>
+      <h3
+        class="text-5xl max-w-4xl text-center text-dark-blue font-bold leading-tight"
+      >
+        But dont worry, you can find plenty of other things on our homepage.
+      </h3>
+      <p class="text-gray-600 text-center max-w-5xl leading-loose my-3">
+        <a rel="noopener noreferrer" href="/" class="btn-blue"
+          >Back to homepage</a
+        >
+      </p>
+    </div>
+  </section>
+</BaseLayout>
