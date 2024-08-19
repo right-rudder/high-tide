@@ -1,0 +1,34 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Banner from "../assets/cessna-172-flying-over-st-simons-island.jpg";
+import DiscoveryFlightCard from "../components/DiscoveryFlightCard.astro";
+import { discoveryFlights } from "../data/discoveryFlights";
+import ToursCTA from "../components/ToursCTA.astro";
+import SimulatorHeader from "../components/SimulatorHeader.astro";
+---
+
+<BaseLayout
+  siteTitle="Redbird FMX flight simulator at High Tide Aviation"
+  siteDescription="Experience advanced flight training with the Redbird FMX flight simulator at High Tide Aviation in Southport near Wilmington, NC. Ideal for new and experienced pilots, our full-motion simulator offers realistic, immersive, and cost-effective training. Perfect for time-building and skill enhancement."
+  siteKeywords="Redbird FMX flight simulator, advanced flight training, Southport NC, Wilmington NC, pilot training, full-motion simulator, time-building, immersive training, realistic flight simulator, aviation training, emergency scenarios, weather simulation, High Tide Aviation"
+>
+  <SimulatorHeader slot="header" />
+
+  <section class="py-16 px-5">
+    <div class="flex flex-col items-center">
+      <h2 class="uppercase text-medium-blue font-bold tracking-widest">
+        Fly Anytime with High Tide’s Redbird Simulator
+      </h2>
+      <h3
+        class="text-5xl max-w-4xl text-center text-dark-blue font-bold leading-tight"
+      >
+        Southeastern NC’s only full-motion flight simulator
+      </h3>
+    </div>
+
+    <div class="mt-5 max-w-xs sm:max-w-2xl lg:max-w-7xl mx-auto"></div>
+  </section>
+
+  <ToursCTA />
+</BaseLayout>
