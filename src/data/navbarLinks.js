@@ -49,6 +49,10 @@ export const navbarLinks = [
         link: "/about/fleet-rentals",
       },
       {
+        name: "Redbird FMX Simulator",
+        link: "/flight-simulator",
+      },
+      {
         name: "Aircraft Services",
         link: "/about/aircraft-services",
       },
