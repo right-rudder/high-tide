@@ -22,6 +22,7 @@ import StudentSupport from "../assets/student-support.jpg";
 import { getCollection } from "astro:content";
 import CounterCard from "../components/CounterCard.jsx";
 import ToursCTA from "../components/ToursCTA.astro";
+import { TbUserScreen } from "react-icons/tb";
 const posts = (await getCollection("blog")).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
@@ -32,17 +33,6 @@ const posts = (await getCollection("blog")).sort(
 
   <section id="home-menu" class="py-16 bg-mustard-yellow px-5 scroll-my-20">
     <div class="grid lg:grid-cols-4 sm:grid-cols-2 max-w-7xl mx-auto gap-10">
-      <a
-        href="#why-high-tide"
-        class="border border-white/50 py-8 px-12 flex flex-col gap-5 hover:bg-white duration-700 group cursor-pointer"
-      >
-        <TbAward className="size-14 text-medium-blue" />
-        <p
-          class="text-lg text-dark-blue uppercase font-semibold tracking-widest duration-700"
-        >
-          Why High Tide
-        </p>
-      </a>
       <a
         href="/first-time-pilots"
         class="border border-white/50 py-8 px-12 flex flex-col gap-5 hover:bg-white duration-700 group cursor-pointer"
@@ -62,7 +52,7 @@ const posts = (await getCollection("blog")).sort(
         <p
           class="text-lg text-dark-blue uppercase font-semibold tracking-widest duration-700"
         >
-          Free eBook
+          Becoming a Pilot eBook
         </p>
       </a>
       <a
@@ -74,6 +64,17 @@ const posts = (await getCollection("blog")).sort(
           class="text-lg text-dark-blue uppercase font-semibold tracking-widest duration-700"
         >
           Student Reviews
+        </p>
+      </a>
+      <a
+        href="#why-high-tide"
+        class="border border-white/50 py-8 px-12 flex flex-col gap-5 hover:bg-white duration-700 group cursor-pointer"
+      >
+        <TbUserScreen className="size-14 text-medium-blue" />
+        <p
+          class="text-lg text-dark-blue uppercase font-semibold tracking-widest duration-700"
+        >
+          Fly the Redbird Simulator
         </p>
       </a>
     </div>
