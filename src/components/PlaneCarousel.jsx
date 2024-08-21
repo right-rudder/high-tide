@@ -5,7 +5,7 @@ import "swiper/css/navigation";
 
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
-const PlaneCarousel = ({ imagesArray }) => {
+const PlaneCarousel = ({ imagesArray, swiperClass }) => {
   return (
     <>
       <Swiper
@@ -21,7 +21,7 @@ const PlaneCarousel = ({ imagesArray }) => {
         }}
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
-        className="inline lg:h-[27rem] lg:flex-[4_4_0] w-full"
+        className={swiperClass}
       >
         {imagesArray.map((image) => (
           <SwiperSlide key={image.src}>

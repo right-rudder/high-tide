@@ -142,6 +142,7 @@ export const fleet = [
     name: "Redbird FMX",
     slug: "RedbirdFMX",
     rentalPrice: "$85 /hr",
+    specialUrl: "/flight-simulator",
     usableFuel: "N/A",
     model: "Redbird FMX",
     equipment: [],

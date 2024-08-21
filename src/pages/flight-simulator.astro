@@ -1,0 +1,92 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SimulatorHeader from "../components/SimulatorHeader.astro";
+import PlaneCarousel from "../components/PlaneCarousel";
+import { fleet } from "../data/fleet";
+import type { ImageMetadata } from "astro";
+const simulatorImages = fleet.find(
+  (fleetItem) => fleetItem.slug === "RedbirdFMX",
+)?.imagesArray;
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  "/src/assets/*.{jpeg,jpg,png,gif,webp}",
+);
+const newImagesArray = await Promise.all(
+  simulatorImages?.map(async (image) => {
+    const imgModule = await images[image]();
+    return imgModule.default;
+  }) ?? [],
+);
+---
+
+<BaseLayout
+  siteTitle="Redbird FMX flight simulator at High Tide Aviation"
+  siteDescription="Experience advanced flight training with the Redbird FMX flight simulator at High Tide Aviation in Southport near Wilmington, NC. Ideal for new and experienced pilots, our full-motion simulator offers realistic, immersive, and cost-effective training. Perfect for time-building and skill enhancement."
+  siteKeywords="Redbird FMX flight simulator, advanced flight training, Southport NC, Wilmington NC, pilot training, full-motion simulator, time-building, immersive training, realistic flight simulator, aviation training, emergency scenarios, weather simulation, High Tide Aviation"
+>
+  <SimulatorHeader slot="header" />
+
+  <section class="py-16 px-5">
+    <div class="flex flex-col items-center">
+      <h2
+        class="uppercase text-center text-medium-blue font-bold tracking-widest"
+      >
+        Fly Anytime with High Tide’s Redbird Simulator
+      </h2>
+      <h3
+        class="text-5xl max-w-4xl text-center text-dark-blue font-bold leading-tight"
+      >
+        Southeastern NC’s only full-motion flight simulator
+      </h3>
+    </div>
+
+    <div
+      class="mt-10 max-w-xs sm:max-w-2xl lg:max-w-5xl mx-auto flex flex-col gap-10 md:text-xl text-center leading-loose tracking-wide"
+    >
+      <p>
+        At High Tide Aviation, located in Southport, NC near Wilmington, we
+        offer the Redbird FMX flight simulator for an unparalleled flight
+        training experience. Our full-motion simulator provides realistic and
+        immersive training, ideal for both new and experienced pilots. With a
+        fully enclosed cockpit, wrap-around visuals, and the ability to simulate
+        various weather conditions and emergency scenarios, the Redbird FMX
+        ensures comprehensive and cost-effective flight training.
+      </p>
+      <p>
+        The Redbird FMX is also perfect for time-building, allowing pilots to
+        log hours efficiently and economically. Its advanced features replicate
+        real-world flying conditions, enabling you to practice instrument
+        procedures, emergency responses, and complex navigational tasks. This
+        helps build muscle memory and enhances overall flying skills. At High
+        Tide Aviation, we are dedicated to providing top-notch flight training
+        services, ensuring that every pilot is well-prepared for real-world
+        flying.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <PlaneCarousel
+      client:load
+      imagesArray={newImagesArray}
+      swiperClass="h-full w-full"
+    />
+  </section>
+
+  <section class="py-16 px-5 bg-mustard-yellow">
+    <div class="max-w-7xl mx-auto flex flex-col items-center">
+      <h2
+        class="uppercase text-medium-blue font-bold tracking-widest text-center"
+      >
+        Experience the Ultimate Flight Simulation
+      </h2>
+      <h3
+        class="text-5xl font-bold leading-tight text-dark-blue text-center max-w-2xl"
+      >
+        Interested in booking the Redbird Flight Simulator?
+      </h3>
+      <a href="/contact-us" class="btn-blue mt-5 hover:bg-white">
+        Contact the High Tide Office
+      </a>
+    </div>
+  </section>
+</BaseLayout>

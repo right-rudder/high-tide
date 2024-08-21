@@ -1,6 +1,14 @@
 ---
-const { name, rentalPrice, imagePath, slug, model, hasRibbon, ribbonTitle } =
-  Astro.props;
+const {
+  name,
+  rentalPrice,
+  imagePath,
+  slug,
+  model,
+  hasRibbon,
+  ribbonTitle,
+  specialUrl,
+} = Astro.props;
 import type { ImageMetadata } from "astro";
 import { Image } from "astro:assets";
 const images = import.meta.glob<{ default: ImageMetadata }>(
@@ -14,7 +22,7 @@ if (!images[imagePath]) {
 ---
 
 <a
-  href=`/about/fleet-rentals/${slug}`
+  href={specialUrl || `/about/fleet-rentals/${slug}`}
   class="flex cursor-pointer flex-col bg-white group relative overflow-hidden scroll-my-20"
   id={name}
 >
