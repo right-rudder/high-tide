@@ -5,12 +5,24 @@ description: "Understand the essential role flight simulators play in pilot trai
 heroImage: "/src/assets/redbird-fmx-simulator-exterior-high-tide-aviation-flight-school.jpg"
 pubDate: "Sep 4, 2024"
 category: "Pilot Training"
-tags: ["flight simulators", "pilot training", "Redbird FMX", "High Tide Aviation", "Southport, NC", "St Simons Island, GA", "aviation technology", "flight training tools", "pilot education"]
+tags:
+  [
+    "flight simulators",
+    "pilot training",
+    "Redbird FMX",
+    "High Tide Aviation",
+    "Southport, NC",
+    "St Simons Island, GA",
+    "aviation technology",
+    "flight training tools",
+    "pilot education",
+  ]
 ---
+
 Training to become a pilot involves more than just getting into an aircraft and flying. It requires thorough preparation, practice, and the ability to handle a wide range of situations, both expected and unexpected. At High Tide Aviation, the **Redbird FMX flight simulator** is a vital tool that helps students develop the necessary skills and confidence in a controlled environment.
 
-![Ground School at High Tide Aviation](/src/assets/ground-school-at-high-tide-aviation.jpg)
-*A student at High Tide Aviation meticulously planning a flight during ground school, emphasizing the importance of preparation in pilot training.*
+![Ground School at High Tide Aviation](../../assets/ground-school-at-high-tide-aviation.jpg)
+_A student at High Tide Aviation meticulously planning a flight during ground school, emphasizing the importance of preparation in pilot training._
 
 ### Why Use Flight Simulators?
 
@@ -42,9 +54,8 @@ The **Redbird FMX simulator** at High Tide Aviation is more than just a piece of
 
 - **Customizable Scenarios:** The Redbird FMX can simulate a variety of flight scenarios, allowing instructors to tailor training to the specific needs of each student, from instrument approaches to emergency procedures.
 
-![Student Trains with CFI at High Tide Aviation in Redbird FMX Simulator](/src/assets/student-trains-with-cfi-at-high-tide-aviation-in-redbird-fmx-simulator.jpg)
-*A student working with a Certified Flight Instructor (CFI) in the Redbird FMX simulator at High Tide Aviation, practicing vital flight procedures in a realistic environment.*
-
+![Student Trains with CFI at High Tide Aviation in Redbird FMX Simulator](../../assets/student-trains-with-cfi-at-high-tide-aviation-in-redbird-fmx-simulator.jpg)
+_A student working with a Certified Flight Instructor (CFI) in the Redbird FMX simulator at High Tide Aviation, practicing vital flight procedures in a realistic environment._
 
 ### Where Simulators Fit in Your Training
 
@@ -67,4 +78,3 @@ High Tide Aviation offers a professional and supportive environment with facilit
 ### Ready to Take the Next Step?
 
 If you're serious about becoming a pilot, High Tide Aviation offers the tools and training you need to succeed. The Redbird FMX simulator provides an opportunity to hone your skills in a practical and effective way. Interested in learning more? [Schedule a session](https://hightideaviation.com/flight-simulator/) or contact us today to see how we can help you achieve your pilot goals.
-
