@@ -175,6 +175,64 @@ const CONTACT_US_FORM_WEBHOOK_URL = import.meta.env.CONTACT_US_FORM_WEBHOOK_URL;
               required
               placeholder="Write message"></textarea>
           </div>
+
+          <fieldset class="w-full mt-5">
+            <legend class="text-sm font-semibold leading-6 text-dark-blue"
+              >Which campus are you inquiring about?
+            </legend>
+            <div class="mt-2 space-y-1 ml-8">
+              <div class="relative flex gap-x-3">
+                <div class="flex h-6 items-center">
+                  <input
+                    id="southport"
+                    value="Southport, NC"
+                    name="campus"
+                    type="radio"
+                    class="h-4 w-4 rounded border-gray-300 text-main-color focus:ring-main-color"
+                    required
+                  />
+                </div>
+                <div class="text-sm leading-6">
+                  <label for="southport" class="text-gray-700"
+                    >Southport, NC</label
+                  >
+                </div>
+              </div>
+              <div class="relative flex gap-x-3">
+                <div class="flex h-6 items-center">
+                  <input
+                    id="st-simons"
+                    value="St Simons Island, GA"
+                    name="campus"
+                    type="radio"
+                    class="h-4 w-4 rounded border-gray-300 text-main-color focus:ring-main-color"
+                  />
+                </div>
+                <div class="text-sm leading-6">
+                  <label for="st-simons" class="text-gray-700"
+                    >St Simons Island, GA
+                  </label>
+                </div>
+              </div>
+              <div class="relative flex gap-x-3">
+                <div class="flex h-6 items-center">
+                  <input
+                    id="wallace"
+                    value="Wallace, NC"
+                    name="campus"
+                    type="radio"
+                    class="h-4 w-4 rounded border-gray-300 text-main-color focus:ring-main-color"
+                  />
+                </div>
+                <div class="text-sm leading-6">
+                  <label for="wallace" class="text-gray-700"
+                    >Wallace, NC (Coming Soon)
+                  </label>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+
           <div class="flex gap-3 my-5 max-w-xl mx-auto">
             <input
               type="checkbox"
