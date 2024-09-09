@@ -122,8 +122,9 @@ const ENROLLMENT_FORM_WEBHOOK_URL = import.meta.env.ENROLLMENT_FORM_WEBHOOK_URL;
               <div class="flex h-6 items-center">
                 <input
                   id="ground-school"
-                  name="ground-school"
+                  name="preferred-programs"
                   type="checkbox"
+                  value="Ground School"
                   class="h-4 w-4 rounded border-gray-300 text-medium-blue focus:ring-medium-blue"
                 />
               </div>
@@ -137,8 +138,9 @@ const ENROLLMENT_FORM_WEBHOOK_URL = import.meta.env.ENROLLMENT_FORM_WEBHOOK_URL;
               <div class="flex h-6 items-center">
                 <input
                   id="private-pilot"
-                  name="private-pilot"
+                  name="preferred-programs"
                   type="checkbox"
+                  value="Private Pilot"
                   class="h-4 w-4 rounded border-gray-300 text-medium-blue focus:ring-medium-blue"
                 />
               </div>
@@ -152,8 +154,9 @@ const ENROLLMENT_FORM_WEBHOOK_URL = import.meta.env.ENROLLMENT_FORM_WEBHOOK_URL;
               <div class="flex h-6 items-center">
                 <input
                   id="instrument-rating"
-                  name="instrument-rating"
+                  name="preferred-programs"
                   type="checkbox"
+                  value="Instrument Rating"
                   class="h-4 w-4 rounded border-gray-300 text-medium-blue focus:ring-medium-blue"
                 />
               </div>
@@ -167,8 +170,9 @@ const ENROLLMENT_FORM_WEBHOOK_URL = import.meta.env.ENROLLMENT_FORM_WEBHOOK_URL;
               <div class="flex h-6 items-center">
                 <input
                   id="commercial-pilot"
-                  name="commercial-pilot"
+                  name="preferred-programs"
                   type="checkbox"
+                  value="Commercial Pilot"
                   class="h-4 w-4 rounded border-gray-300 text-medium-blue focus:ring-medium-blue"
                 />
               </div>
@@ -182,8 +186,9 @@ const ENROLLMENT_FORM_WEBHOOK_URL = import.meta.env.ENROLLMENT_FORM_WEBHOOK_URL;
               <div class="flex h-6 items-center">
                 <input
                   id="flight-instructor"
-                  name="flight-instructor"
+                  name="preferred-programs"
                   type="checkbox"
+                  value="Flight Instructor"
                   class="h-4 w-4 rounded border-gray-300 text-medium-blue focus:ring-medium-blue"
                 />
               </div>
@@ -197,8 +202,9 @@ const ENROLLMENT_FORM_WEBHOOK_URL = import.meta.env.ENROLLMENT_FORM_WEBHOOK_URL;
               <div class="flex h-6 items-center">
                 <input
                   id="multi-engine"
-                  name="multi-engine"
+                  name="preferred-programs"
                   type="checkbox"
+                  value="Multi-Engine (Airplane only)"
                   class="h-4 w-4 rounded border-gray-300 text-medium-blue focus:ring-medium-blue"
                 />
               </div>
@@ -212,8 +218,9 @@ const ENROLLMENT_FORM_WEBHOOK_URL = import.meta.env.ENROLLMENT_FORM_WEBHOOK_URL;
               <div class="flex h-6 items-center">
                 <input
                   id="zero-to-hero"
-                  name="zero-to-hero"
+                  name="preferred-programs"
                   type="checkbox"
+                  value="Zero to Hero"
                   class="h-4 w-4 rounded border-gray-300 text-medium-blue focus:ring-medium-blue"
                 />
               </div>
@@ -231,6 +238,63 @@ const ENROLLMENT_FORM_WEBHOOK_URL = import.meta.env.ENROLLMENT_FORM_WEBHOOK_URL;
           name="message"
           id="message"
           placeholder="Feel free to elaborate"></textarea>
+
+        <fieldset class="w-full mt-5">
+          <legend class="font-medium leading-6 text-dark-blue"
+            >Which campus are you inquiring about?
+          </legend>
+          <div class="mt-2 space-y-1">
+            <div class="relative flex gap-x-3">
+              <div class="flex h-6 items-center">
+                <input
+                  id="southport"
+                  value="Southport, NC"
+                  name="campus"
+                  type="radio"
+                  class="h-4 w-4 rounded border-gray-300 text-main-color focus:ring-main-color"
+                  required
+                />
+              </div>
+              <div class="leading-6">
+                <label for="southport" class="text-gray-600"
+                  >Southport, NC</label
+                >
+              </div>
+            </div>
+            <div class="relative flex gap-x-3">
+              <div class="flex h-6 items-center">
+                <input
+                  id="st-simons"
+                  value="St Simons Island, GA"
+                  name="campus"
+                  type="radio"
+                  class="h-4 w-4 rounded border-gray-300 text-main-color focus:ring-main-color"
+                />
+              </div>
+              <div class="leading-6">
+                <label for="st-simons" class="text-gray-600"
+                  >St Simons Island, GA
+                </label>
+              </div>
+            </div>
+            <div class="relative flex gap-x-3">
+              <div class="flex h-6 items-center">
+                <input
+                  id="wallace"
+                  value="Wallace, NC"
+                  name="campus"
+                  type="radio"
+                  class="h-4 w-4 rounded border-gray-300 text-main-color focus:ring-main-color"
+                />
+              </div>
+              <div class="leading-6">
+                <label for="wallace" class="text-gray-600"
+                  >Wallace, NC (Coming Soon)
+                </label>
+              </div>
+            </div>
+          </div>
+        </fieldset>
       </div>
       <div class="flex gap-3 my-5 max-w-xs md:max-w-xl mx-auto">
         <input
@@ -292,24 +356,6 @@ const ENROLLMENT_FORM_WEBHOOK_URL = import.meta.env.ENROLLMENT_FORM_WEBHOOK_URL;
           // Set the form action to the URL for processing the form and redirecting to thank you
           enrollmentForm.action = ENROLLMENT_FORM_WEBHOOK_URL;
         }
-
-        const preferredPrograms = [];
-
-        // Iterate over the FormData entries
-        formData.forEach((value, key) => {
-          // Check if the value is "on"
-          if (value === "on") {
-            // Add the key to the preferredPrograms array
-            preferredPrograms.push(key);
-          }
-        });
-
-        preferredPrograms.forEach((program) => {
-          formData.delete(program);
-        });
-
-        // Append the preferredPrograms array to formData
-        formData.append("preferred-programs", preferredPrograms.join(","));
 
         // Convert FormData to URLSearchParams
         const urlSearchParams = new URLSearchParams();
