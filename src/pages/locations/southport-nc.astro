@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import Header from "../../components/Header.astro";
-import Banner from "../../assets/cessna-172-flying-over-st-simons-island.jpg";
+import Banner from "../../assets/high-tide-aviation-hangar.jpg";
 import { RiTeamLine } from "react-icons/ri";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
@@ -9,19 +9,19 @@ import { reviews } from "../../data/reviews";
 import { IoLocationSharp } from "react-icons/io5";
 import { TfiBlackboard } from "react-icons/tfi";
 import { PiAirplaneTilt } from "react-icons/pi";
-import { GiMilitaryFort } from "react-icons/gi";
+import { GrMapLocation } from "react-icons/gr";
 ---
 
 <BaseLayout
-  siteTitle="Flight Training with High Tide at Wallace-Penderton Airport (KACZ)"
-  siteDescription="High Tide Aviation offers specialized flight training at Wallace-Penderton Airport (ACZ) in Wallace, NC. Ideal for military personnel from nearby bases, we provide Private Pilot License (PPL) and Instrument Rating (IR) training with a Cessna 172 Skyhawk."
-  siteKeywords="Wallace NC flight training, Henderson Field Airport, Wallace-Penderton Airport, ACZ, military pilot training, Private Pilot License, Instrument Rating, Cessna 172, Marine Corps Base Camp Lejeune, Seymour Johnson AFB, Fort Liberty, High Tide Aviation"
+  siteTitle="Flight Training with High Tide at Cape Fear Regional Jetport (KSUT)"
+  siteDescription="High Tide Aviation's flagship location at Cape Fear Regional Jetport (KSUT) in Southport, NC, offers full-range, zero-to-hero flight training in both fixed-wing and rotary-wing aircraft. From Private Pilot to Multi-Engine Flight Instructor (MEI), our programs cover all levels with a full fleet of training aircraft."
+  siteKeywords="Southport NC flight training, Cape Fear Regional Jetport, KSUT, military pilot training, Private Pilot License, Instrument Rating, Multi-Engine Instructor, Cessna 172, Beechcraft Baron, Robinson R44, High Tide Aviation."
 >
   <Header
     slot="header"
     image={Banner}
-    title="Flight Training in Wallace, NC"
-    alt="Sunset flight over Wallace, NC, near Wilmington"
+    title="Flight Training in Southport, NC"
+    alt="The Southport, NC, location facility hangar"
   />
 
   <section class="py-24 px-5">
@@ -33,39 +33,32 @@ import { GiMilitaryFort } from "react-icons/gi";
           Training with High Tide
         </h2>
         <h3 class="text-5xl text-dark-blue font-bold leading-tight">
-          At Wallace-Penderton Airport (ACZ)
+          At Cape Fear Regional Jetport (KSUT)
         </h3>
         <div class="text-gray-500 leading-relaxed my-5 flex gap-3">
           <IoLocationSharp className="size-10 mt-1 shrink-0" />
           <div>
-            <p>250 Skydive Lane</p>
-            <p>Wallace, NC 28466</p>
+            <p>4345 Airport Rd SE</p>
+            <p>Southport, NC 28461</p>
           </div>
         </div>
         <p class="text-gray-500 leading-relaxed my-5">
-          High Tide Aviation provides focused flight training at
-          Wallace-Penderton Airport (ACZ) in Wallace, NC, a convenient location
-          for military personnel stationed at nearby bases. This facility
-          specializes in Private Pilot License (PPL) and Instrument Rating (IR)
-          training using the Cessna 172 Skyhawk, a reliable aircraft ideal for
-          both beginner and advanced flight training.
+          High Tide Aviation's flagship location at Cape Fear Regional Jetport
+          (KSUT) in Southport, NC, offers a full spectrum of flight training
+          programs. We provide training in both fixed-wing and rotary-wing
+          aircraft, utilizing our entire fleet, which includes Cessna 172s,
+          Beechcraft Barons, and Robinson R44 helicopters. Our programs range
+          from Private Pilot License (PPL) to advanced certifications like
+          Multi-Engine Instructor (MEI), including ground school training.
         </p>
         <h4 class="text-medium-blue text-xl font-bold mt-5">
           How do I find this High Tide Aviation training center?
         </h4>
         <p class="text-gray-500 leading-relaxed mt-5">
-          Wallace-Penderton Airport is easily accessible from major routes.
+          Cape Fear Regional Jetport is easily accessible from major routes.
           Contact us for detailed directions from your location.
         </p>
-        <p class="text-gray-500 leading-relaxed my-5">
-          High Tide Aviation provides focused flight training at
-          Wallace-Penderton Airport (ACZ) in Wallace, NC, a convenient location
-          for military personnel stationed at nearby bases. This facility
-          specializes in Private Pilot License (PPL) and Instrument Rating (IR)
-          training using the Cessna 172 Skyhawk, a reliable aircraft ideal for
-          both beginner and advanced flight training.
-        </p>
-        <div class="flex flex-col sm:flex-row items-center gap-5">
+        <div class="flex flex-col sm:flex-row items-center gap-5 mt-5">
           <a href="/enrollment-form" class="btn-blue"
             >Request Training with High Tide</a
           >
@@ -75,14 +68,12 @@ import { GiMilitaryFort } from "react-icons/gi";
   </section>
 
   <iframe
-    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4635.191876333364!2d-78.00370142891344!3d34.71856185522368!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89abd6a4c0ca44ff%3A0xae306acb0e8c169f!2sHenderson%20Field%20Airport!5e0!3m2!1sen!2sar!4v1725031971531!5m2!1sen!2sar"
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3310.1362999215235!2d-78.06717182416774!3d33.93762232377368!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89aa07e3b3a0b82b%3A0xe199a7d4a214440f!2sHigh%20Tide%20Aviation!5e0!3m2!1sen!2sar!4v1725033818096!5m2!1sen!2sar"
     class="w-full h-96"
     style="border:0;"
     allowfullscreen=""
     loading="lazy"
-    referrerpolicy="no-referrer-when-downgrade"
-  >
-  </iframe>
+    referrerpolicy="no-referrer-when-downgrade"></iframe>
 
   <section class="bg-medium-blue/10">
     <div
@@ -92,7 +83,7 @@ import { GiMilitaryFort } from "react-icons/gi";
         <h3
           class="text-5xl text-dark-blue font-bold leading-tight max-w-2xl text-center lg:text-left"
         >
-          Our Wallace Facilities
+          Our Southport Facilities
         </h3>
 
         <a href="/contact-us" class="btn-blue mx-auto my-5 lg:mx-0"
@@ -111,15 +102,16 @@ import { GiMilitaryFort } from "react-icons/gi";
               Programs
             </h3>
             <p class="text-gray-600 leading-relaxed">
-              We offer lessons to obtain your Fixed-Wing <a
+              We offer a complete range of flight training programs at KSUT,
+              from <a
                 href="/flight-training/private-pilot"
                 class="text-dark-blue font-medium hover:underline"
-                >Private Pilot Certificate (PPL)</a
+                >Private Pilot</a
               > and <a
-                href="/flight-training/instrument-rating"
+                href="/flight-training/multi-engine"
                 class="text-dark-blue font-medium hover:underline"
-                >Instrument Rating (IR)</a
-              > at KACZ.
+                >Multi-Engine Instructor (MEI)</a
+              >, in both fixed-wing and rotary-wing aircraft.
             </p>
           </div>
           <a
@@ -147,8 +139,9 @@ import { GiMilitaryFort } from "react-icons/gi";
               Aircraft
             </h3>
             <p class="text-gray-600 leading-relaxed">
-              At the moment, we only offer training in our Cessna 172 at the
-              Wallace location.
+              Our Southport location features our full fleet, including Cessna
+              172s, Beechcraft Barons, and Robinson R44 helicopters, ensuring
+              that all training needs are met, from basic to advanced levels.
             </p>
           </div>
         </div>
@@ -156,18 +149,17 @@ import { GiMilitaryFort } from "react-icons/gi";
           class="bg-white py-8 px-12 flex flex-col gap-5 justify-between hover:bg-medium-blue/20 duration-700 group"
         >
           <div class="flex flex-col gap-5">
-            <GiMilitaryFort className="size-14 text-medium-blue" />
+            <GrMapLocation className="size-14 text-medium-blue" />
             <h3
               class="text-lg text-dark-blue uppercase font-semibold tracking-widest duration-700"
             >
               Nearby
             </h3>
             <p class="text-gray-600 leading-relaxed">
-              Wallace-Penderton Airport (ACZ) is near several major military
-              installations, including Marine Corps Base Camp Lejeune, Marine
-              Corps Air Station New River, Seymour Johnson Air Force Base, and
-              Fort Liberty. This location serves military personnel from nearby
-              communities such as Jacksonville, Goldsboro, and Wilmington.
+              Cape Fear Regional Jetport (KSUT) is conveniently located for
+              students from Southport, Oak Island, Wilmington, and the
+              surrounding communities, providing easy access to scenic flight
+              training.
             </p>
           </div>
         </div>
@@ -182,12 +174,11 @@ import { GiMilitaryFort } from "react-icons/gi";
               Availability
             </h3>
             <p class="text-gray-600 leading-relaxed">
-              This is our newest location! While we’re proud to be furthering
-              our reach and mission to remain the number one flight school on
-              the Southeast Coast, we will offer training on limited days until
-              we have enough volume. <span class="font-medium"
-                >Contact us at the Southport location for more information on
-                training in Wallace, NC.</span
+              As our flagship location, Southport offers training year-round
+              with a full schedule of classes and flight opportunities. <span
+                class="font-medium"
+                >Contact us for more information on training availability and to
+                schedule your sessions.</span
               >
             </p>
           </div>
@@ -222,11 +213,10 @@ import { GiMilitaryFort } from "react-icons/gi";
         </h3>
         <p class="text-gray-600 my-10 mr-10 leading-loose">
           <span class="font-semibold"
-            >Still on the fence about flying or pursuing flight training in
-            Wallace?</span
-          > Come fly with us at our Southport location and experience the genuine
-          thrill flying brings our pilots. You can book an intro flight (discovery
-          flight) with us and visit the team. We know you’ll love it!
+            >Not sure if flight training is right for you?</span
+          > Experience the thrill of flying at our Southport location with an intro
+          flight (discovery flight). Book your session today in Southport and meet
+          our team of instructors and training support staff.
         </p>
         <a href="/intro-flight" target="_blank" class="btn-blue hover:bg-white">
           Book an Intro Flight

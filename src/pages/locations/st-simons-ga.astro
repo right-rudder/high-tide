@@ -1,27 +1,35 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import Header from "../../components/Header.astro";
-import Banner from "../../assets/cessna-172-flying-over-st-simons-island.jpg";
+import Banner from "../../assets/high-tide-aviation-hangar.jpg";
+import { Image } from "astro:assets";
+import Intro from "../../assets/first-time-pilot-on-cessna.jpg";
+import CounterCard from "../../components/CounterCard";
+import { stats } from "../../data/stats";
 import { RiTeamLine } from "react-icons/ri";
 import { IoIosArrowRoundForward } from "react-icons/io";
+import { GiExitDoor } from "react-icons/gi";
+import { MdFlightTakeoff } from "react-icons/md";
 import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
 import { reviews } from "../../data/reviews";
+import StudentSupport from "../../assets/student-support.jpg";
 import { IoLocationSharp } from "react-icons/io5";
 import { TfiBlackboard } from "react-icons/tfi";
 import { PiAirplaneTilt } from "react-icons/pi";
 import { GiMilitaryFort } from "react-icons/gi";
+import { GrMapLocation } from "react-icons/gr";
 ---
 
 <BaseLayout
-  siteTitle="Flight Training with High Tide at Wallace-Penderton Airport (KACZ)"
-  siteDescription="High Tide Aviation offers specialized flight training at Wallace-Penderton Airport (ACZ) in Wallace, NC. Ideal for military personnel from nearby bases, we provide Private Pilot License (PPL) and Instrument Rating (IR) training with a Cessna 172 Skyhawk."
-  siteKeywords="Wallace NC flight training, Henderson Field Airport, Wallace-Penderton Airport, ACZ, military pilot training, Private Pilot License, Instrument Rating, Cessna 172, Marine Corps Base Camp Lejeune, Seymour Johnson AFB, Fort Liberty, High Tide Aviation"
+  siteTitle="Flight Training with High Tide at McKinnon St. Simons Island Airport (KSSI)"
+  siteDescription="High Tide Aviation offers fixed-wing flight training at McKinnon St. Simons Island Airport (KSSI) in St. Simons Island, GA. We provide training from Private Pilot to Multi-Engine ratings with a full fleet of aircraft."
+  siteKeywords="St. Simons Island flight training, McKinnon St. Simons Island Airport, KSSI, Georgia pilot training, Private Pilot License, Instrument Rating, Multi-Engine, High Tide Aviation."
 >
   <Header
     slot="header"
     image={Banner}
-    title="Flight Training in Wallace, NC"
-    alt="Sunset flight over Wallace, NC, near Wilmington"
+    title="Flight Training in St. Simons Island, GA"
+    alt="Northern landscape of St Simons Island, GA"
   />
 
   <section class="py-24 px-5">
@@ -33,39 +41,30 @@ import { GiMilitaryFort } from "react-icons/gi";
           Training with High Tide
         </h2>
         <h3 class="text-5xl text-dark-blue font-bold leading-tight">
-          At Wallace-Penderton Airport (ACZ)
+          At McKinnon St. Simons Island Airport (KSSI)
         </h3>
         <div class="text-gray-500 leading-relaxed my-5 flex gap-3">
           <IoLocationSharp className="size-10 mt-1 shrink-0" />
           <div>
-            <p>250 Skydive Lane</p>
-            <p>Wallace, NC 28466</p>
+            <p>1759 Demere Road</p>
+            <p>St. Simons Island, GA 31522</p>
           </div>
         </div>
         <p class="text-gray-500 leading-relaxed my-5">
-          High Tide Aviation provides focused flight training at
-          Wallace-Penderton Airport (ACZ) in Wallace, NC, a convenient location
-          for military personnel stationed at nearby bases. This facility
-          specializes in Private Pilot License (PPL) and Instrument Rating (IR)
-          training using the Cessna 172 Skyhawk, a reliable aircraft ideal for
-          both beginner and advanced flight training.
+          High Tide Aviation provides fixed-wing flight training at McKinnon St.
+          Simons Island Airport (KSSI) in St. Simons Island, GA. We offer
+          training from Private Pilot License (PPL) to advanced ratings,
+          including Instrument and Multi-Engine, using a fleet of Cessna 172s
+          and Beechcraft Barons.
         </p>
         <h4 class="text-medium-blue text-xl font-bold mt-5">
           How do I find this High Tide Aviation training center?
         </h4>
         <p class="text-gray-500 leading-relaxed mt-5">
-          Wallace-Penderton Airport is easily accessible from major routes.
-          Contact us for detailed directions from your location.
+          McKinnon St. Simons Island Airport is accessible from major routes.
+          Contact us for detailed directions.
         </p>
-        <p class="text-gray-500 leading-relaxed my-5">
-          High Tide Aviation provides focused flight training at
-          Wallace-Penderton Airport (ACZ) in Wallace, NC, a convenient location
-          for military personnel stationed at nearby bases. This facility
-          specializes in Private Pilot License (PPL) and Instrument Rating (IR)
-          training using the Cessna 172 Skyhawk, a reliable aircraft ideal for
-          both beginner and advanced flight training.
-        </p>
-        <div class="flex flex-col sm:flex-row items-center gap-5">
+        <div class="flex flex-col sm:flex-row items-center gap-5 mt-5">
           <a href="/enrollment-form" class="btn-blue"
             >Request Training with High Tide</a
           >
@@ -75,14 +74,12 @@ import { GiMilitaryFort } from "react-icons/gi";
   </section>
 
   <iframe
-    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4635.191876333364!2d-78.00370142891344!3d34.71856185522368!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89abd6a4c0ca44ff%3A0xae306acb0e8c169f!2sHenderson%20Field%20Airport!5e0!3m2!1sen!2sar!4v1725031971531!5m2!1sen!2sar"
+    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13657.437560067998!2d-81.3870436!3d31.1553009!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e4da7fa12a75cf%3A0xda80e104dd43fe35!2sSaint%20Simons%20Island%20Airport%20(KSSI)!5e0!3m2!1sen!2sar!4v1725034086007!5m2!1sen!2sar"
     class="w-full h-96"
     style="border:0;"
     allowfullscreen=""
     loading="lazy"
-    referrerpolicy="no-referrer-when-downgrade"
-  >
-  </iframe>
+    referrerpolicy="no-referrer-when-downgrade"></iframe>
 
   <section class="bg-medium-blue/10">
     <div
@@ -92,7 +89,7 @@ import { GiMilitaryFort } from "react-icons/gi";
         <h3
           class="text-5xl text-dark-blue font-bold leading-tight max-w-2xl text-center lg:text-left"
         >
-          Our Wallace Facilities
+          Our Southport Facilities
         </h3>
 
         <a href="/contact-us" class="btn-blue mx-auto my-5 lg:mx-0"
@@ -111,15 +108,18 @@ import { GiMilitaryFort } from "react-icons/gi";
               Programs
             </h3>
             <p class="text-gray-600 leading-relaxed">
-              We offer lessons to obtain your Fixed-Wing <a
+              We offer flight training at KSSI, from <a
                 href="/flight-training/private-pilot"
                 class="text-dark-blue font-medium hover:underline"
-                >Private Pilot Certificate (PPL)</a
-              > and <a
+                >Private Pilot
+              </a> to advanced ratings such as <a
                 href="/flight-training/instrument-rating"
+                class="text-dark-blue font-medium hover:underline">Instrument</a
+              > and <a
+                href="/flight-training/multi-engine"
                 class="text-dark-blue font-medium hover:underline"
-                >Instrument Rating (IR)</a
-              > at KACZ.
+                >Multi-engine</a
+              > training.
             </p>
           </div>
           <a
@@ -147,8 +147,9 @@ import { GiMilitaryFort } from "react-icons/gi";
               Aircraft
             </h3>
             <p class="text-gray-600 leading-relaxed">
-              At the moment, we only offer training in our Cessna 172 at the
-              Wallace location.
+              Our St. Simons Island location features a fleet of Cessna 172s,
+              Beechcraft Barons, and other fixed-wing aircraft, meeting all
+              training requirements.
             </p>
           </div>
         </div>
@@ -156,18 +157,17 @@ import { GiMilitaryFort } from "react-icons/gi";
           class="bg-white py-8 px-12 flex flex-col gap-5 justify-between hover:bg-medium-blue/20 duration-700 group"
         >
           <div class="flex flex-col gap-5">
-            <GiMilitaryFort className="size-14 text-medium-blue" />
+            <GrMapLocation className="size-14 text-medium-blue" />
             <h3
               class="text-lg text-dark-blue uppercase font-semibold tracking-widest duration-700"
             >
               Nearby
             </h3>
             <p class="text-gray-600 leading-relaxed">
-              Wallace-Penderton Airport (ACZ) is near several major military
-              installations, including Marine Corps Base Camp Lejeune, Marine
-              Corps Air Station New River, Seymour Johnson Air Force Base, and
-              Fort Liberty. This location serves military personnel from nearby
-              communities such as Jacksonville, Goldsboro, and Wilmington.
+              McKinnon St. Simons Island Airport (KSSI) is centrally located on
+              St. Simons Island, providing easy access for students from the
+              surrounding areas, including Brunswick and the Golden Isles
+              region.
             </p>
           </div>
         </div>
@@ -182,12 +182,10 @@ import { GiMilitaryFort } from "react-icons/gi";
               Availability
             </h3>
             <p class="text-gray-600 leading-relaxed">
-              This is our newest location! While we’re proud to be furthering
-              our reach and mission to remain the number one flight school on
-              the Southeast Coast, we will offer training on limited days until
-              we have enough volume. <span class="font-medium"
-                >Contact us at the Southport location for more information on
-                training in Wallace, NC.</span
+              Training is available year-round at our St. Simons Island
+              location, with flexible scheduling. <span class="font-medium"
+                >Contact us for more information on training availability and to
+                schedule your sessions.</span
               >
             </p>
           </div>
@@ -222,11 +220,9 @@ import { GiMilitaryFort } from "react-icons/gi";
         </h3>
         <p class="text-gray-600 my-10 mr-10 leading-loose">
           <span class="font-semibold"
-            >Still on the fence about flying or pursuing flight training in
-            Wallace?</span
-          > Come fly with us at our Southport location and experience the genuine
-          thrill flying brings our pilots. You can book an intro flight (discovery
-          flight) with us and visit the team. We know you’ll love it!
+            >Not sure if flight training is right for you?</span
+          > Experience flying at our St. Simons Island location with an intro flight
+          (discovery flight). Book your session today and meet our instructors.
         </p>
         <a href="/intro-flight" target="_blank" class="btn-blue hover:bg-white">
           Book an Intro Flight
