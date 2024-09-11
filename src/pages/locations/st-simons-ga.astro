@@ -1,0 +1,287 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+import Banner from "../../assets/northern_ssi.jpg";
+import { Image } from "astro:assets";
+import Intro from "../../assets/first-time-pilot-on-cessna.jpg";
+import CounterCard from "../../components/CounterCard";
+import { stats } from "../../data/stats";
+import { RiTeamLine } from "react-icons/ri";
+import { IoIosArrowRoundForward } from "react-icons/io";
+import { GiExitDoor } from "react-icons/gi";
+import { MdFlightTakeoff } from "react-icons/md";
+import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
+import { reviews } from "../../data/reviews";
+import StudentSupport from "../../assets/student-support.jpg";
+import { IoLocationSharp } from "react-icons/io5";
+import { TfiBlackboard } from "react-icons/tfi";
+import { PiAirplaneTilt } from "react-icons/pi";
+import { GiMilitaryFort } from "react-icons/gi";
+import { GrMapLocation } from "react-icons/gr";
+---
+
+<BaseLayout
+  siteTitle="Flight Training with High Tide at McKinnon St. Simons Island Airport (KSSI)"
+  siteDescription="High Tide Aviation offers fixed-wing flight training at McKinnon St. Simons Island Airport (KSSI) in St. Simons Island, GA. We provide training from Private Pilot to Multi-Engine ratings with a full fleet of aircraft."
+  siteKeywords="St. Simons Island flight training, McKinnon St. Simons Island Airport, KSSI, Georgia pilot training, Private Pilot License, Instrument Rating, Multi-Engine, High Tide Aviation."
+>
+  <Header
+    slot="header"
+    image={Banner}
+    title="Flight Training in St. Simons Island, GA"
+    alt="Northern landscape of St Simons Island, GA"
+  />
+
+  <section class="py-24 px-5">
+    <div
+      class="max-w-xl gap-10 lg:max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:gap-20"
+    >
+      <div class="flex flex-col flex-1">
+        <h2 class="uppercase text-medium-blue font-bold tracking-widest">
+          Training with High Tide
+        </h2>
+        <h3 class="text-5xl text-dark-blue font-bold leading-tight">
+          At McKinnon St. Simons Island Airport (KSSI)
+        </h3>
+        <div class="text-gray-500 leading-relaxed my-5 flex gap-3">
+          <IoLocationSharp className="size-10 mt-1 shrink-0" />
+          <div>
+            <p>1759 Demere Road</p>
+            <p>St. Simons Island, GA 31522</p>
+          </div>
+        </div>
+        <p class="text-gray-500 leading-relaxed my-5">
+          High Tide Aviation provides fixed-wing flight training at McKinnon St.
+          Simons Island Airport (KSSI) in St. Simons Island, GA. We offer
+          training from Private Pilot License (PPL) to advanced ratings,
+          including Instrument and Multi-Engine, using a fleet of Cessna 172s
+          and Beechcraft Barons.
+        </p>
+        <h4 class="text-medium-blue text-xl font-bold mt-5">
+          How do I find this High Tide Aviation training center?
+        </h4>
+        <p class="text-gray-500 leading-relaxed mt-5">
+          McKinnon St. Simons Island Airport is accessible from major routes.
+          Contact us for detailed directions.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center gap-5 mt-5">
+          <a href="/enrollment-form" class="btn-blue"
+            >Request Training with High Tide</a
+          >
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13657.437560067998!2d-81.3870436!3d31.1553009!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e4da7fa12a75cf%3A0xda80e104dd43fe35!2sSaint%20Simons%20Island%20Airport%20(KSSI)!5e0!3m2!1sen!2sar!4v1725034086007!5m2!1sen!2sar"
+    class="w-full h-96"
+    style="border:0;"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+  <section class="bg-medium-blue/10">
+    <div
+      class="py-16 px-5 flex flex-col lg:flex-row gap-5 max-w-xl lg:max-w-7xl scroll-my-20 mx-auto"
+    >
+      <div class="flex-1">
+        <h3
+          class="text-5xl text-dark-blue font-bold leading-tight max-w-2xl text-center lg:text-left"
+        >
+          Our St Simons Island Facilities
+        </h3>
+
+        <a href="/contact-us" class="btn-blue mx-auto my-5 lg:mx-0"
+          >Contact Us</a
+        >
+      </div>
+      <div class="flex-[2.2_2.2_0%] grid lg:grid-cols-2 gap-10">
+        <div
+          class="bg-white py-8 px-12 flex flex-col gap-5 justify-between hover:bg-medium-blue/20 duration-700 group"
+        >
+          <div class="flex flex-col gap-5">
+            <TfiBlackboard className="size-14 text-medium-blue" />
+            <h3
+              class="text-lg text-dark-blue uppercase font-semibold tracking-widest duration-700"
+            >
+              Programs
+            </h3>
+            <p class="text-gray-600 leading-relaxed">
+              We offer flight training at KSSI, from <a
+                href="/flight-training/private-pilot"
+                class="text-dark-blue font-medium hover:underline"
+                >Private Pilot
+              </a> to advanced ratings such as <a
+                href="/flight-training/instrument-rating"
+                class="text-dark-blue font-medium hover:underline">Instrument</a
+              > and <a
+                href="/flight-training/multi-engine"
+                class="text-dark-blue font-medium hover:underline"
+                >Multi-engine</a
+              > training.
+            </p>
+          </div>
+          <a
+            href="/flight-training/private-pilot"
+            class="flex gap-3 items-center self-end cursor-pointer group"
+          >
+            <p class="text-gray-500 text-sm">Training Programs</p>
+            <div
+              class="p-3 bg-light-blue/15 rounded-full group-hover:bg-medium-blue duration-700"
+            >
+              <IoIosArrowRoundForward
+                className="text-dark-blue size-6 group-hover:text-white duration-700"
+              />
+            </div>
+          </a>
+        </div>
+        <div
+          class="bg-white py-8 px-12 flex flex-col gap-5 justify-between hover:bg-medium-blue/20 duration-700 group"
+        >
+          <div class="flex flex-col gap-5">
+            <PiAirplaneTilt className="size-14 text-medium-blue" />
+            <h3
+              class="text-lg text-dark-blue uppercase font-semibold tracking-widest duration-700"
+            >
+              Aircraft
+            </h3>
+            <p class="text-gray-600 leading-relaxed">
+              Our St. Simons Island location features a fleet of Cessna 172s,
+              Beechcraft Barons, and other fixed-wing aircraft, meeting all
+              training requirements.
+            </p>
+          </div>
+        </div>
+        <div
+          class="bg-white py-8 px-12 flex flex-col gap-5 justify-between hover:bg-medium-blue/20 duration-700 group"
+        >
+          <div class="flex flex-col gap-5">
+            <GrMapLocation className="size-14 text-medium-blue" />
+            <h3
+              class="text-lg text-dark-blue uppercase font-semibold tracking-widest duration-700"
+            >
+              Nearby
+            </h3>
+            <p class="text-gray-600 leading-relaxed">
+              McKinnon St. Simons Island Airport (KSSI) is centrally located on
+              St. Simons Island, providing easy access for students from the
+              surrounding areas, including Brunswick and the Golden Isles
+              region.
+            </p>
+          </div>
+        </div>
+        <div
+          class="bg-white py-8 px-12 flex flex-col gap-5 justify-between hover:bg-medium-blue/20 duration-700 group"
+        >
+          <div class="flex flex-col gap-5">
+            <RiTeamLine className="size-14 text-medium-blue" />
+            <h3
+              class="text-lg text-dark-blue uppercase font-semibold tracking-widest duration-700"
+            >
+              Availability
+            </h3>
+            <p class="text-gray-600 leading-relaxed">
+              Training is available year-round at our St. Simons Island
+              location, with flexible scheduling. <span class="font-medium"
+                >Contact us for more information on training availability and to
+                schedule your sessions.</span
+              >
+            </p>
+          </div>
+          <a
+            href="/contact-us"
+            class="flex gap-3 items-center self-end cursor-pointer group"
+          >
+            <p class="text-gray-500 text-sm">Contact Us</p>
+            <div
+              class="p-3 bg-light-blue/15 rounded-full group-hover:bg-medium-blue duration-700"
+            >
+              <IoIosArrowRoundForward
+                className="text-dark-blue size-6 group-hover:text-white duration-700"
+              />
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="flex flex-col lg:flex-row">
+    <div
+      class="flex flex-col justify-center bg-mustard-yellow flex-1 py-16 px-5"
+    >
+      <div class="max-w-xl lg:max-w-none mx-auto lg:mx-20">
+        <h2 class="uppercase text-medium-blue font-bold tracking-widest">
+          Intro flights at high tide
+        </h2>
+        <h3 class="text-5xl text-dark-blue font-bold leading-tight">
+          Take a Test Flight with High Tide Aviation
+        </h3>
+        <p class="text-gray-600 my-10 mr-10 leading-loose">
+          <span class="font-semibold"
+            >Not sure if flight training is right for you?</span
+          > Experience flying at our St. Simons Island location with an intro flight
+          (discovery flight). Book your session today and meet our instructors.
+        </p>
+        <a href="/intro-flight" target="_blank" class="btn-blue hover:bg-white">
+          Book an Intro Flight
+        </a>
+      </div>
+    </div>
+    <div
+      class="flex flex-col items-center justify-center text-white bg-medium-blue flex-1 relative py-16 px-5"
+    >
+      <div
+        class="max-w-xl lg:max-w-none mx-auto lg:mx-28 my-20 lg:my-0 duration-1000"
+        id="reviews-container"
+      >
+        <p
+          id="review-text"
+          class="md:text-2xl italic indent-10 leading-relaxed font-medium"
+        >
+          I earned my private pilot license through High Tide out of St Simons
+          Island, GA. They are an excellent program with a great cadre of
+          instructors. I am very thankful to have had such a great team to help
+          me start this journey into aviation!
+        </p>
+        <p id="review-author" class="mt-5 md:text-xl float-end">- Jake B.</p>
+        <ImQuotesLeft
+          className="absolute text-white/70 size-16 z-10 top-20 left-20"
+        />
+        <ImQuotesRight
+          className="absolute text-white/70 size-16 z-10 bottom-20 right-20"
+        />
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<script define:vars={{ reviews }}>
+  let currentIndex = 0;
+  const reviewTextElement = document.getElementById("review-text");
+  const reviewAuthorElement = document.getElementById("review-author");
+  const reviewsContainerElement = document.getElementById("reviews-container");
+
+  function showMessage() {
+    if (reviewAuthorElement && reviewTextElement) {
+      reviewTextElement.textContent = reviews[currentIndex].review;
+      reviewAuthorElement.textContent = `— ${reviews[currentIndex].name}`;
+    }
+    reviewsContainerElement?.classList.add("opacity-100");
+    reviewsContainerElement?.classList.remove("opacity-0");
+
+    currentIndex = (currentIndex + 1) % reviews.length;
+
+    setTimeout(hideMessage, 6000);
+  }
+
+  function hideMessage() {
+    reviewsContainerElement?.classList.remove("opacity-100");
+    reviewsContainerElement?.classList.add("opacity-0");
+
+    setTimeout(showMessage, 1200);
+  }
+
+  showMessage();
+</script>

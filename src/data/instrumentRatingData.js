@@ -4,7 +4,7 @@ const privatePilot = {
   alt: "Student and CFI flying in IFR conditions.",
   title: "Instrument Rating",
   subtitle: "What is an Instrument Rating?",
-  locations: ["Southport, NC", "St Simons Island, GA"],
+  locations: ["Southport, NC", "St Simons Island, GA", "Wallace, NC"],
   description: [
     "An Instrument Rating is vital for pilots seeking to fly under instrument flight rules (IFR), especially in challenging weather conditions where visibility is restricted. This advanced certification equips pilots to navigate using only aircraft instruments, essential for safe operations in clouds or fog and during night flights.",
     "Instrument Rating training at High Tide Aviation, available in Southport, NC, and St Simons Island, GA, deepens a pilot’s understanding of avionic systems and enhances their ability to make precise navigational decisions based on instrument readings alone.",
