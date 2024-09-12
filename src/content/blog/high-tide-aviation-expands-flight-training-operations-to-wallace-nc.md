@@ -2,7 +2,7 @@
 pubDate: "September 11, 2024"
 author: "Ed Simpson"
 title: "High Tide Aviation Expands Flight Training Operations to Wallace, NC"
-description: "High Tide Aviation is expanding its flight training operations to Wallace, NC, at Wallace-Penderton Airport (KACZ), serving aspiring pilots and military personnel from nearby communities."
+description: "High Tide Aviation is expanding its flight training operations to Wallace, NC, at Wallace-Pender Airport (KACZ), serving aspiring pilots and military personnel from nearby communities."
 heroImage: "/src/assets/high-tide-aviation-front-sign-in-southport-nc.jpg"
 category: "News"
 tags:
@@ -17,14 +17,14 @@ tags:
     "Flight lessons",
     "Cessna 172 training",
     "North Carolina aviation",
-    "Wallace-Penderton Airport",
+    "Wallace-Pender Airport",
     "KACZ",
   ]
 ---
 
-**Flight Training Now Available at Wallace-Penderton Airport (KACZ)**
+**Flight Training Now Available at Wallace-Pender Airport (KACZ)**
 
-High Tide Aviation is excited to announce the expansion of its flight training operations with a new location at [**Wallace-Penderton Airport (KACZ)**](https://hightideaviation.com/locations/wallace-nc/) in Wallace, North Carolina. This new location was opened to meet the increasing demand for professional flight training, especially from military personnel and civilian pilots in the surrounding communities.
+High Tide Aviation is excited to announce the expansion of its flight training operations with a new location at [**Wallace-Pender Airport (KACZ)**](https://hightideaviation.com/locations/wallace-nc/) in Wallace, North Carolina. This new location was opened to meet the increasing demand for professional flight training, especially from military personnel and civilian pilots in the surrounding communities.
 
 ### Why High Tide Aviation Expanded to Wallace
 High Tide Aviation’s move into Wallace is part of our strategy to bring high-quality flight training to underserved areas. The Wallace location will serve aspiring pilots from **Burgaw, Jacksonville, Wilmington, Clinton**, and other nearby municipalities that have historically lacked access to professional aviation training. Now, residents of these towns no longer need to travel long distances for flight instruction.
@@ -32,7 +32,7 @@ High Tide Aviation’s move into Wallace is part of our strategy to bring high-q
 Additionally, this [new location](https://hightideaviation.com/locations/wallace-nc/) will cater to the flight training needs of military personnel stationed at **Marine Corps Base Camp Lejeune, Marine Corps Air Station New River**, and **Seymour Johnson Air Force Base**. Many service members and veterans are interested in flight training, whether to enhance their aviation skills or transition into civilian aviation careers. High Tide Aviation’s programs offer flexible scheduling options to meet the demands of military personnel, allowing them to pursue their **Private Pilot License (PPL)** and **Instrument Rating (IR)** certifications.
 
 ### What the Wallace Location Offers
-The Wallace-Penderton Airport location will provide fixed-wing training using the **Cessna 172 Skyhawk**, one of the most trusted and reliable training aircraft in aviation. Students at Wallace can pursue both their **Private Pilot License (PPL)** and **Instrument Rating (IR)** certifications. Our flight programs meet all FAA standards, ensuring students receive thorough training that equips them to fly single-engine aircraft safely.
+The Wallace-Pender Airport location will provide fixed-wing training using the **Cessna 172 Skyhawk**, one of the most trusted and reliable training aircraft in aviation. Students at Wallace can pursue both their **Private Pilot License (PPL)** and **Instrument Rating (IR)** certifications. Our flight programs meet all FAA standards, ensuring students receive thorough training that equips them to fly single-engine aircraft safely.
 
 ### Communities and Military Personnel Served
 The new High Tide Aviation location in [Wallace](https://hightideaviation.com/locations/wallace-nc/) will benefit nearby towns such as **Teachey, Rose Hill, and Burgaw**, in addition to serving the broader Wilmington and Jacksonville areas. For local residents, this new facility provides a convenient, professional option for aviation training without long commutes.
