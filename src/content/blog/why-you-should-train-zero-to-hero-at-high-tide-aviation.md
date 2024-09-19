@@ -9,8 +9,6 @@ category: "Pilot Resources"
 tags: ["pilot-resources", "zero-to-hero training", "aviation training", "High Tide Aviation", "pilot career"]
 ---
 
-# Why You Should Train Zero to Hero at High Tide Aviation
-
 When it comes to becoming a professional pilot, the decision to pursue a full-path, zero-to-hero training program can be pivotal in shaping your future career. At [High Tide Aviation](https://hightideaviation.com/), we offer a zero-to-hero program that takes you from having no flying experience to becoming a fully qualified commercial pilot. This all-encompassing program is designed for individuals who want a clear, structured, and efficient path to reaching their aviation goals. Here's why committing to a zero-to-hero program at High Tide Aviation may be the best decision for your future in aviation.
 
 ![Ground School at High Tide Aviation](/src/assets/high-tide-ground-school.jpg)
