@@ -1,0 +1,290 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Header from "../../../components/Header.astro";
+import Banner from "../../../assets/aopa-logo-banner.png";
+import { IoIosArrowRoundForward } from "react-icons/io";
+import PilotFinancingProgramsAOPA from "../../../components/PilotFinancingProgramsAOPA";
+import { BsListCheck } from "react-icons/bs";
+import { BsPersonFillUp } from "react-icons/bs";
+import { BsClipboardCheckFill } from "react-icons/bs";
+import { GiReceiveMoney } from "react-icons/gi";
+import { FaMoneyCheckAlt } from "react-icons/fa";
+import { MdCardMembership } from "react-icons/md";
+---
+
+<BaseLayout
+  siteTitle="AOPA Financing | High Tide Aviation"
+  siteDescription="Discover AOPA's flexible flight training financing options at High Tide Aviation. Finance your private pilot, instrument rating, or multi-engine training with affordable monthly payments and flexible terms."
+  siteKeywords="AOPA flight training finance, High Tide Aviation financing, AOPA pilot loans, private pilot loan, instrument rating loan, multi-engine rating loan, flexible pilot financing, aviation loan options"
+>
+  <Header
+    slot="header"
+    image={Banner}
+    title="Finance Your Flight Training with AOPA"
+    alt="AOPA Logo"
+  />
+
+  <section class="py-24 px-5 bg-medium-blue/10 scroll-my-20">
+    <div
+      class="max-w-xl gap-10 lg:max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:gap-20"
+    >
+      <div class="flex flex-col lg:flex-1">
+        <h2 class="uppercase text-medium-blue font-bold tracking-widest">
+          Pilot Financing Programs
+        </h2>
+        <h3 class="text-5xl text-dark-blue font-bold leading-tight">
+          Why Finance with AOPA?
+        </h3>
+        <p class="text-gray-500 leading-relaxed my-5">
+          At High Tide Aviation, we’ve partnered with the Aircraft Owners and
+          Pilots Association (AOPA) to provide quick and easy financing options,
+          helping you achieve your aviation dreams without the burden of
+          financial strain.
+        </p>
+        <a href="#aopa-programs" class="btn-blue">Finance Now</a>
+      </div>
+
+      <div class="flex-1 w-full overflow-hidden">
+        <PilotFinancingProgramsAOPA client:visible />
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-medium-blue/10 scroll-my-12" id="aopa-programs">
+    <div
+      class="py-16 px-5 flex flex-col gap-5 max-w-xl lg:max-w-7xl scroll-my-20 mx-auto"
+    >
+      <div class="flex-1">
+        <h3
+          class="text-5xl text-dark-blue font-bold leading-tight max-w-2xl text-center lg:text-left"
+        >
+          AOPA Financing Options
+        </h3>
+      </div>
+      <div class="flex-[2.2_2.2_0%] grid lg:grid-cols-3 gap-10">
+        <div
+          class="bg-white py-8 px-12 flex flex-col gap-5 justify-between hover:bg-medium-blue/20 duration-700 group"
+        >
+          <div class="flex flex-col gap-5">
+            <GiReceiveMoney className="size-14 text-medium-blue" />
+            <h3
+              class="text-lg text-dark-blue uppercase font-semibold tracking-widest duration-700"
+            >
+              Flight Training Loan
+            </h3>
+            <p class="text-gray-600 leading-relaxed">
+              AOPA offers dedicated flight training loans for aspiring pilots.
+              With flexible terms and manageable payments, you can finance a
+              private pilot license, instrument rating, or multi-engine rating.
+              This line of credit is available for all flight training programs
+              at High Tide Aviation.
+            </p>
+          </div>
+          <a
+            href="https://finance.aopa.org/flight-training-finance"
+            class="flex gap-3 items-center self-end cursor-pointer group"
+            target="_blank"
+          >
+            <p class="text-gray-500 text-sm">Apply Now</p>
+            <div
+              class="p-3 bg-light-blue/15 rounded-full group-hover:bg-medium-blue duration-700"
+            >
+              <IoIosArrowRoundForward
+                className="text-dark-blue size-6 group-hover:text-white duration-700"
+              />
+            </div>
+          </a>
+        </div>
+        <div
+          class="bg-white py-8 px-12 flex flex-col gap-5 justify-between hover:bg-medium-blue/20 duration-700 group"
+        >
+          <div class="flex flex-col gap-5">
+            <FaMoneyCheckAlt className="size-14 text-medium-blue" />
+            <h3
+              class="text-lg text-dark-blue uppercase font-semibold tracking-widest duration-700"
+            >
+              Flight Training Scholarships
+            </h3>
+            <p class="text-gray-600 leading-relaxed">
+              AOPA provides scholarships to help offset the cost of flight
+              training for students. Whether you’re just starting or advancing
+              your aviation career, these scholarships provide an additional
+              financial resource to help you succeed.
+            </p>
+          </div>
+          <a
+            href="https://www.aopa.org/training-and-safety/students/aopa-flight-training-scholarships"
+            class="flex gap-3 items-center self-end cursor-pointer group"
+            target="_blank"
+          >
+            <p class="text-gray-500 text-sm">Apply Now</p>
+            <div
+              class="p-3 bg-light-blue/15 rounded-full group-hover:bg-medium-blue duration-700"
+            >
+              <IoIosArrowRoundForward
+                className="text-dark-blue size-6 group-hover:text-white duration-700"
+              />
+            </div>
+          </a>
+        </div>
+        <div
+          class="bg-white py-8 px-12 flex flex-col gap-5 justify-between hover:bg-medium-blue/20 duration-700 group"
+        >
+          <div class="flex flex-col gap-5">
+            <MdCardMembership className="size-14 text-medium-blue" />
+            <h3
+              class="text-lg text-dark-blue uppercase font-semibold tracking-widest duration-700"
+            >
+              High School Membership
+            </h3>
+            <p class="text-gray-600 leading-relaxed">
+              High school students can take advantage of the AOPA High School
+              Membership program, which offers free membership to those
+              passionate about aviation. This membership gives access to flight
+              training resources, networking opportunities, and scholarship
+              information to kickstart a future in aviation.
+            </p>
+          </div>
+          <a
+            href="https://www.aopa.org/account/studentjoinform"
+            class="flex gap-3 items-center self-end cursor-pointer group"
+            target="_blank"
+          >
+            <p class="text-gray-500 text-sm">Apply Now</p>
+            <div
+              class="p-3 bg-light-blue/15 rounded-full group-hover:bg-medium-blue duration-700"
+            >
+              <IoIosArrowRoundForward
+                className="text-dark-blue size-6 group-hover:text-white duration-700"
+              />
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section
+    class="py-16 px-5 flex flex-col items-center max-w-xl lg:max-w-7xl mx-auto scroll-my-20"
+  >
+    <h2 class="uppercase text-medium-blue font-bold tracking-widest">
+      How to Apply
+    </h2>
+    <h3
+      class="text-5xl text-dark-blue font-bold leading-tight max-w-2xl text-center"
+    >
+      Start Your Journey with AOPA
+    </h3>
+    <div class="grid lg:grid-cols-3 mx-auto gap-10 mt-10">
+      <div
+        class="border border-white/50 py-8 px-12 flex flex-col gap-5 justify-between hover:bg-medium-blue/20 duration-700 group"
+      >
+        <div class="flex flex-col gap-5">
+          <BsListCheck className="size-14 text-medium-blue" />
+          <h3
+            class="text-lg text-dark-blue uppercase font-semibold tracking-widest duration-700"
+          >
+            1. Choose a Program
+          </h3>
+          <p class="text-gray-600 leading-relaxed">
+            Review the eligible programs above to find the right loan for your
+            flight training needs.
+          </p>
+        </div>
+        <a
+          href="#aopa-programs"
+          class="flex gap-3 items-center self-end cursor-pointer group"
+        >
+          <p class="text-gray-500 text-sm">Our Programs</p>
+          <div
+            class="p-3 bg-light-blue/15 rounded-full group-hover:bg-medium-blue duration-700"
+          >
+            <IoIosArrowRoundForward
+              className="text-dark-blue size-6 group-hover:text-white duration-700"
+            />
+          </div>
+        </a>
+      </div>
+      <div
+        class="border border-white/50 py-8 px-12 flex flex-col gap-5 justify-between hover:bg-medium-blue/20 duration-700 group"
+      >
+        <div class="flex flex-col gap-5">
+          <BsPersonFillUp className="size-14 text-medium-blue" />
+          <h3
+            class="text-lg text-dark-blue uppercase font-semibold tracking-widest duration-700"
+          >
+            2. Apply Online
+          </h3>
+          <p class="text-gray-600 leading-relaxed">
+            Complete the AOPA application through their secure platform using
+            your basic information and proof of income.
+          </p>
+        </div>
+        <a
+          href="#aopa-programs"
+          class="flex gap-3 items-center self-end cursor-pointer group"
+        >
+          <p class="text-gray-500 text-sm">Start Application</p>
+          <div
+            class="p-3 bg-light-blue/15 rounded-full group-hover:bg-medium-blue duration-700"
+          >
+            <IoIosArrowRoundForward
+              className="text-dark-blue size-6 group-hover:text-white duration-700"
+            />
+          </div>
+        </a>
+      </div>
+      <div
+        class="border border-white/50 py-8 px-12 flex flex-col gap-5 justify-between hover:bg-medium-blue/20 duration-700 group"
+      >
+        <div class="flex flex-col gap-5">
+          <BsClipboardCheckFill className="size-14 text-medium-blue" />
+          <h3
+            class="text-lg text-dark-blue uppercase font-semibold tracking-widest duration-700"
+          >
+            3. Set-up Your Plan
+          </h3>
+          <p class="text-gray-600 leading-relaxed">
+            Receive approval and set up your repayment plan. You’ll be off the
+            ground within minutes.
+          </p>
+        </div>
+        <a
+          href="/enrollment-form"
+          class="flex gap-3 items-center self-end cursor-pointer group"
+        >
+          <p class="text-gray-500 text-sm">Enroll with High Tide</p>
+          <div
+            class="p-3 bg-light-blue/15 rounded-full group-hover:bg-medium-blue duration-700"
+          >
+            <IoIosArrowRoundForward
+              className="text-dark-blue size-6 group-hover:text-white duration-700"
+            />
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 px-5 bg-mustard-yellow">
+    <div class="max-w-7xl mx-auto flex flex-col items-center">
+      <h2 class="uppercase text-medium-blue font-bold tracking-widest">
+        Questions
+      </h2>
+      <h3
+        class="text-3xl lg:text-5xl font-bold leading-tight text-dark-blue text-center max-w-5xl"
+      >
+        Have any questions about AOPA financing options or the application
+        process?
+      </h3>
+      <p class="text-dark-blue text-lg mt-5 text-center">
+        Feel free to reach out to our team. We’re here to help guide you through
+        every step of the process, ensuring your aviation training journey is
+        smooth and stress-free.
+      </p>
+      <a href="/contact-us" class="btn-blue mt-5 hover:bg-white"
+        >Contact High Tide</a
+      >
+    </div>
+  </section>
+</BaseLayout>
