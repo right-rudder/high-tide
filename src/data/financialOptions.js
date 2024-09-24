@@ -1,13 +1,5 @@
 export const financialOptions = [
   {
-    name: "Meritize",
-    imagePath: "/src/assets/meritize-logo.png",
-    description:
-      "High Tide Aviation has partnered with Meritize, a top educational funding company in the nation, to support prospective pilots in reaching their aviation aspirations. This partnership enables you to obtain a personalized quote for your flight training at no cost. Reach out to us to discover more about how Meritize can help finance your journey to becoming a pilot.",
-    ctaText: "Contact Us",
-    ctaLink: "/contact-us",
-  },
-  {
     name: "Wurthy",
     imagePath: "/src/assets/wurthy_logo.png",
     description:
@@ -16,20 +8,28 @@ export const financialOptions = [
     ctaLink: "/about/financing/wurthy",
   },
   {
-    name: "Federal Aviation Administration",
-    imagePath: "/src/assets/faa-logo.svg",
-    description:
-      "The Federal Aviation Administration (FAA) provides an extensive list of aviation-related scholarships available through various organizations nationwide. These opportunities are designed to support individuals pursuing careers in aviation, covering a wide array of specialties from piloting and aircraft dispatch to aerospace engineering. Scholarships are offered by groups such as the AeroClub of New England, Airline Dispatchers Federation, and Women in Aviation International, among others. Each organization provides unique funding options that can help mitigate the costs of aviation training and education.",
-    ctaText: "Explore FAA Grants & Scholarships",
-    ctaLink: "https://www.faa.gov/education/grants_and_scholarships/aviation",
-  },
-  {
     name: "Aircraft Owners and Pilots Association (AOPA)",
     imagePath: "/src/assets/aopa-logo.png",
     description:
       "At High Tide Aviation, we’ve partnered with the Aircraft Owners and Pilots Association (AOPA) to offer flexible flight training financing. Through AOPA's Flight Training Finance program, students can access affordable loans for training, with the flexibility to manage associated costs such as aircraft rental, instructor fees, and more. AOPA’s financing ensures you can focus on your aviation training without the worry of upfront financial strain.",
     ctaText: "Learn More about AOPA Financing",
     ctaLink: "/about/financing/aopa",
+  },
+  {
+    name: "Meritize",
+    imagePath: "/src/assets/meritize-logo.png",
+    description:
+      "High Tide Aviation has partnered with Meritize, a top educational funding company in the nation, to support prospective pilots in reaching their aviation aspirations. This partnership enables you to obtain a personalized quote for your flight training at no cost. Reach out to us to discover more about how Meritize can help finance your journey to becoming a pilot.",
+    ctaText: "Contact Us",
+    ctaLink: "/contact-us",
+  },
+  {
+    name: "Federal Aviation Administration",
+    imagePath: "/src/assets/faa-logo.svg",
+    description:
+      "The Federal Aviation Administration (FAA) provides an extensive list of aviation-related scholarships available through various organizations nationwide. These opportunities are designed to support individuals pursuing careers in aviation, covering a wide array of specialties from piloting and aircraft dispatch to aerospace engineering. Scholarships are offered by groups such as the AeroClub of New England, Airline Dispatchers Federation, and Women in Aviation International, among others. Each organization provides unique funding options that can help mitigate the costs of aviation training and education.",
+    ctaText: "Explore FAA Grants & Scholarships",
+    ctaLink: "https://www.faa.gov/education/grants_and_scholarships/aviation",
   },
   {
     name: "Experimental Aircraft Association",
