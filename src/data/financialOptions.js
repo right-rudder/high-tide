@@ -16,14 +16,6 @@ export const financialOptions = [
     ctaLink: "/about/financing/aopa",
   },
   {
-    name: "Meritize",
-    imagePath: "/src/assets/meritize-logo.png",
-    description:
-      "High Tide Aviation has partnered with Meritize, a top educational funding company in the nation, to support prospective pilots in reaching their aviation aspirations. This partnership enables you to obtain a personalized quote for your flight training at no cost. Reach out to us to discover more about how Meritize can help finance your journey to becoming a pilot.",
-    ctaText: "Contact Us",
-    ctaLink: "/contact-us",
-  },
-  {
     name: "Federal Aviation Administration",
     imagePath: "/src/assets/faa-logo.svg",
     description:
