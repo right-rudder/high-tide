@@ -1,0 +1,328 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Header from "../../../components/Header.astro";
+import Banner from "../../../assets/wurthy_logo.png";
+import { IoIosArrowRoundForward } from "react-icons/io";
+import PilotFinancingPrograms from "../../../components/PilotFinancingPrograms";
+import { FaIdCardClip } from "react-icons/fa6";
+import { IoSpeedometerOutline } from "react-icons/io5";
+import { GiCommercialAirplane } from "react-icons/gi";
+import { FaIdCard } from "react-icons/fa6";
+import { BsAirplaneEnginesFill } from "react-icons/bs";
+import { BsListCheck } from "react-icons/bs";
+import { BsPersonFillUp } from "react-icons/bs";
+import { BsClipboardCheckFill } from "react-icons/bs";
+---
+
+<BaseLayout
+  siteTitle="Wurthy Financing | High Tide Aviation"
+  siteDescription="Discover affordable flight training financing options with High Tide Aviation through our partnership with Wurthy. Start your training with as little as $99 down and choose from flexible payment plans with terms up to 60 months."
+  siteKeywords="flight training financing, High Tide Aviation financing, Wurthy flight school loans, pilot license financing, flexible payment plans for pilots, private pilot loan, instrument rating loan, commercial pilot loan, multi-engine rating loan, career pilot loan, Wurthy aviation financing"
+>
+  <Header
+    slot="header"
+    image={Banner}
+    title="Financing Your Flight Training with Wurthy"
+    alt="Wurthy Logo"
+  />
+
+  <section class="py-24 px-5 bg-medium-blue/10 scroll-my-20">
+    <div
+      class="max-w-xl gap-10 lg:max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:gap-20"
+    >
+      <div class="flex flex-col lg:flex-1">
+        <h2 class="uppercase text-medium-blue font-bold tracking-widest">
+          Pilot Financing Programs
+        </h2>
+        <h3 class="text-5xl text-dark-blue font-bold leading-tight">
+          Why Finance with Wurthy?
+        </h3>
+        <p class="text-gray-500 leading-relaxed my-5">
+          At High Tide Aviation, we’ve partnered with Wurthy to provide flexible
+          financing options, making your flight training journey more accessible
+          than ever. With Wurthy, you can start training with as little as $99
+          down and choose repayment plans that suit your budget.
+        </p>
+        <a href="#wurthy-programs" class="btn-blue">Finance Now</a>
+      </div>
+
+      <div class="flex-1 w-full overflow-hidden">
+        <PilotFinancingPrograms client:visible />
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-medium-blue/10 scroll-my-16" id="wurthy-programs">
+    <div
+      class="py-16 px-5 flex flex-col gap-5 max-w-xl lg:max-w-7xl scroll-my-20 mx-auto"
+    >
+      <div class="flex-1">
+        <h3
+          class="text-5xl text-dark-blue font-bold leading-tight max-w-2xl text-center lg:text-left"
+        >
+          Wurthy Eligible Programs
+        </h3>
+      </div>
+      <div class="flex-[2.2_2.2_0%] grid lg:grid-cols-3 gap-10">
+        <div
+          class="bg-white py-8 px-12 flex flex-col gap-5 justify-between hover:bg-medium-blue/20 duration-700 group"
+        >
+          <div class="flex flex-col gap-5">
+            <FaIdCardClip className="size-14 text-medium-blue" />
+            <h3
+              class="text-lg text-dark-blue uppercase font-semibold tracking-widest duration-700"
+            >
+              Private Pilot License (PPL)
+            </h3>
+            <p class="text-gray-600 leading-relaxed">Up to $15,000</p>
+          </div>
+          <a
+            href="https://app.wurthy.co/product/cm0wp039w0001dmycingplpfh"
+            class="flex gap-3 items-center self-end cursor-pointer group"
+            target="_blank"
+          >
+            <p class="text-gray-500 text-sm">Apply Now</p>
+            <div
+              class="p-3 bg-light-blue/15 rounded-full group-hover:bg-medium-blue duration-700"
+            >
+              <IoIosArrowRoundForward
+                className="text-dark-blue size-6 group-hover:text-white duration-700"
+              />
+            </div>
+          </a>
+        </div>
+        <div
+          class="bg-white py-8 px-12 flex flex-col gap-5 justify-between hover:bg-medium-blue/20 duration-700 group"
+        >
+          <div class="flex flex-col gap-5">
+            <IoSpeedometerOutline className="size-14 text-medium-blue" />
+            <h3
+              class="text-lg text-dark-blue uppercase font-semibold tracking-widest duration-700"
+            >
+              Instrument Rating (IR)
+            </h3>
+            <p class="text-gray-600 leading-relaxed">Up to $15,000</p>
+          </div>
+          <a
+            href="https://app.wurthy.co/product/cm0wp3w8m00012j2dvcmx1dbf"
+            class="flex gap-3 items-center self-end cursor-pointer group"
+            target="_blank"
+          >
+            <p class="text-gray-500 text-sm">Apply Now</p>
+            <div
+              class="p-3 bg-light-blue/15 rounded-full group-hover:bg-medium-blue duration-700"
+            >
+              <IoIosArrowRoundForward
+                className="text-dark-blue size-6 group-hover:text-white duration-700"
+              />
+            </div>
+          </a>
+        </div>
+        <div
+          class="bg-white py-8 px-12 flex flex-col gap-5 justify-between hover:bg-medium-blue/20 duration-700 group"
+        >
+          <div class="flex flex-col gap-5">
+            <GiCommercialAirplane className="size-14 text-medium-blue" />
+            <h3
+              class="text-lg text-dark-blue uppercase font-semibold tracking-widest duration-700"
+            >
+              Commercial Pilot License (CPL)
+            </h3>
+            <p class="text-gray-600 leading-relaxed">Up to $35,000</p>
+          </div>
+          <a
+            href="https://app.wurthy.co/product/cm0wp702d0001koo86eb5t7xl"
+            class="flex gap-3 items-center self-end cursor-pointer group"
+            target="_blank"
+          >
+            <p class="text-gray-500 text-sm">Apply Now</p>
+            <div
+              class="p-3 bg-light-blue/15 rounded-full group-hover:bg-medium-blue duration-700"
+            >
+              <IoIosArrowRoundForward
+                className="text-dark-blue size-6 group-hover:text-white duration-700"
+              />
+            </div>
+          </a>
+        </div>
+        <div
+          class="bg-white py-8 px-12 flex flex-col gap-5 justify-between hover:bg-medium-blue/20 duration-700 group"
+        >
+          <div class="flex flex-col gap-5">
+            <FaIdCard className="size-14 text-medium-blue" />
+            <h3
+              class="text-lg text-dark-blue uppercase font-semibold tracking-widest duration-700"
+            >
+              Career Pilot Program
+            </h3>
+            <p class="text-gray-600 leading-relaxed">Up to $80,000</p>
+          </div>
+          <a
+            href="https://app.wurthy.co/product/cm0wyofkq000lwlwy4jan99pr"
+            class="flex gap-3 items-center self-end cursor-pointer group"
+            target="_blank"
+          >
+            <p class="text-gray-500 text-sm">Apply Now</p>
+            <div
+              class="p-3 bg-light-blue/15 rounded-full group-hover:bg-medium-blue duration-700"
+            >
+              <IoIosArrowRoundForward
+                className="text-dark-blue size-6 group-hover:text-white duration-700"
+              />
+            </div>
+          </a>
+        </div>
+        <div
+          class="bg-white py-8 px-12 flex flex-col gap-5 justify-between hover:bg-medium-blue/20 duration-700 group"
+        >
+          <div class="flex flex-col gap-5">
+            <BsAirplaneEnginesFill className="size-14 text-medium-blue" />
+            <h3
+              class="text-lg text-dark-blue uppercase font-semibold tracking-widest duration-700"
+            >
+              Multi-Engine Rating
+            </h3>
+            <p class="text-gray-600 leading-relaxed">Up to $7,500</p>
+          </div>
+          <a
+            href="https://app.wurthy.co/product/cm0wyx634000zwlwy9397jkba"
+            class="flex gap-3 items-center self-end cursor-pointer group"
+            target="_blank"
+          >
+            <p class="text-gray-500 text-sm">Apply Now</p>
+            <div
+              class="p-3 bg-light-blue/15 rounded-full group-hover:bg-medium-blue duration-700"
+            >
+              <IoIosArrowRoundForward
+                className="text-dark-blue size-6 group-hover:text-white duration-700"
+              />
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section
+    class="py-16 px-5 flex flex-col items-center max-w-xl lg:max-w-7xl mx-auto scroll-my-20"
+  >
+    <h2 class="uppercase text-medium-blue font-bold tracking-widest">
+      How to Apply
+    </h2>
+    <h3
+      class="text-5xl text-dark-blue font-bold leading-tight max-w-2xl text-center"
+    >
+      Start Flying with Wurthy in the Right Seat
+    </h3>
+    <div class="grid lg:grid-cols-3 mx-auto gap-10 mt-10">
+      <div
+        class="border border-white/50 py-8 px-12 flex flex-col gap-5 justify-between hover:bg-medium-blue/20 duration-700 group"
+      >
+        <div class="flex flex-col gap-5">
+          <BsListCheck className="size-14 text-medium-blue" />
+          <h3
+            class="text-lg text-dark-blue uppercase font-semibold tracking-widest duration-700"
+          >
+            1. Choose a Program
+          </h3>
+          <p class="text-gray-600 leading-relaxed">
+            Select the appropriate loan link above based on the training you
+            want to pursue.
+          </p>
+        </div>
+        <a
+          href="#wurthy-programs"
+          class="flex gap-3 items-center self-end cursor-pointer group"
+        >
+          <p class="text-gray-500 text-sm">Our Programs</p>
+          <div
+            class="p-3 bg-light-blue/15 rounded-full group-hover:bg-medium-blue duration-700"
+          >
+            <IoIosArrowRoundForward
+              className="text-dark-blue size-6 group-hover:text-white duration-700"
+            />
+          </div>
+        </a>
+      </div>
+      <div
+        class="border border-white/50 py-8 px-12 flex flex-col gap-5 justify-between hover:bg-medium-blue/20 duration-700 group"
+      >
+        <div class="flex flex-col gap-5">
+          <BsPersonFillUp className="size-14 text-medium-blue" />
+          <h3
+            class="text-lg text-dark-blue uppercase font-semibold tracking-widest duration-700"
+          >
+            2. Apply Online
+          </h3>
+          <p class="text-gray-600 leading-relaxed">
+            Complete the quick and easy application through Wurthy’s secure
+            platform.
+          </p>
+        </div>
+        <a
+          href="/enrollment-form"
+          class="flex gap-3 items-center self-end cursor-pointer group"
+        >
+          <p class="text-gray-500 text-sm">Enroll with High Tide</p>
+          <div
+            class="p-3 bg-light-blue/15 rounded-full group-hover:bg-medium-blue duration-700"
+          >
+            <IoIosArrowRoundForward
+              className="text-dark-blue size-6 group-hover:text-white duration-700"
+            />
+          </div>
+        </a>
+      </div>
+      <div
+        class="border border-white/50 py-8 px-12 flex flex-col gap-5 justify-between hover:bg-medium-blue/20 duration-700 group"
+      >
+        <div class="flex flex-col gap-5">
+          <BsClipboardCheckFill className="size-14 text-medium-blue" />
+          <h3
+            class="text-lg text-dark-blue uppercase font-semibold tracking-widest duration-700"
+          >
+            3. Set-up Your Plan
+          </h3>
+          <p class="text-gray-600 leading-relaxed">
+            Receive approval and set up your repayment plan. You’ll be off the
+            ground within minutes.
+          </p>
+        </div>
+        <a
+          href="/contact-us"
+          class="flex gap-3 items-center self-end cursor-pointer group"
+        >
+          <p class="text-gray-500 text-sm">Contact Us</p>
+          <div
+            class="p-3 bg-light-blue/15 rounded-full group-hover:bg-medium-blue duration-700"
+          >
+            <IoIosArrowRoundForward
+              className="text-dark-blue size-6 group-hover:text-white duration-700"
+            />
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 px-5 bg-mustard-yellow">
+    <div class="max-w-7xl mx-auto flex flex-col items-center">
+      <h2 class="uppercase text-medium-blue font-bold tracking-widest">
+        Questions
+      </h2>
+      <h3
+        class="text-3xl lg:text-5xl font-bold leading-tight text-dark-blue text-center max-w-5xl"
+      >
+        Have any questions about Wurthy financing options or the application
+        process?
+      </h3>
+      <p class="text-dark-blue text-lg mt-5 text-center">
+        Feel free to reach out to our team. We’re here to help you get started
+        on your aviation journey with minimal financial stress.
+      </p>
+      <a href="/contact-us" class="btn-blue mt-5 hover:bg-white"
+        >Contact High Tide</a
+      >
+    </div>
+  </section>
+</BaseLayout>

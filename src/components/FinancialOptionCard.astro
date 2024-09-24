@@ -2,6 +2,7 @@
 const { name, imagePath, description, ctaText, ctaLink } = Astro.props;
 import type { ImageMetadata } from "astro";
 import { Image } from "astro:assets";
+const target = ctaLink.startsWith("http") ? "_blank" : "_self";
 const images = import.meta.glob<{ default: ImageMetadata }>(
   "/src/assets/*.{jpeg,jpg,png,gif,webp,svg}",
 );
@@ -32,7 +33,7 @@ if (!images[imagePath])
       </h2>
       <p class="text-gray-600 leading-loose">{description}</p>
     </div>
-    <a href={ctaLink} target="_blank" class="btn-blue mt-5">
+    <a href={ctaLink} target={target} class="btn-blue mt-5">
       {ctaText}
     </a>
   </div>

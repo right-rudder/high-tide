@@ -8,6 +8,14 @@ export const financialOptions = [
     ctaLink: "/contact-us",
   },
   {
+    name: "Wurthy",
+    imagePath: "/src/assets/wurthy_logo.png",
+    description:
+      "At High Tide Aviation, we’ve partnered with Wurthy to provide flexible financing options, making your flight training journey more accessible than ever. With Wurthy, you can start training with as little as $99 down and choose repayment plans that suit your budget. Click below to explore our financing options for airplane flight training for our Private Pilot, Instrument Rating, Commercial Pilot, Multi-Engine Rating, and Career Pilot Programs.",
+    ctaText: "Learn More about Wurthy",
+    ctaLink: "/about/financing/wurthy",
+  },
+  {
     name: "Federal Aviation Administration",
     imagePath: "/src/assets/faa-logo.svg",
     description:
@@ -16,12 +24,12 @@ export const financialOptions = [
     ctaLink: "https://www.faa.gov/education/grants_and_scholarships/aviation",
   },
   {
-    name: "Aircraft Owners and Pilots Association",
-    imagePath: "/src/assets/aopa-logo.jpg",
+    name: "Aircraft Owners and Pilots Association (AOPA)",
+    imagePath: "/src/assets/aopa-logo.png",
     description:
-      "High Tide Aviation collaborates with the Aircraft Owners and Pilots Association (AOPA) to provide flexible financing options for flight training through AOPA's Flight Training Finance program. This program offers quick, easy, and affordable loans tailored for aspiring pilots at High Tide. With the ability to finance both training and associated costs, this partnership ensures that students can access the necessary resources to become proficient pilots without the financial strain. Students interested in utilizing AOPA’s financing options can start their application directly through the AOPA website, enabling them to focus fully on their training at High Tide Aviation.",
-    ctaText: "AOPA’s Financing Offer",
-    ctaLink: "https://finance.aopa.org/flight-training-finance",
+      "At High Tide Aviation, we’ve partnered with the Aircraft Owners and Pilots Association (AOPA) to offer flexible flight training financing. Through AOPA's Flight Training Finance program, students can access affordable loans for training, with the flexibility to manage associated costs such as aircraft rental, instructor fees, and more. AOPA’s financing ensures you can focus on your aviation training without the worry of upfront financial strain.",
+    ctaText: "Learn More about AOPA Financing",
+    ctaLink: "/about/financing/aopa",
   },
   {
     name: "Experimental Aircraft Association",
