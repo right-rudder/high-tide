@@ -13,6 +13,7 @@ import { MdFlightTakeoff } from "react-icons/md";
 import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
 import { reviews } from "../data/reviews";
 import StudentSupport from "../assets/student-support.jpg";
+import StudenPilot from "../assets/pilot-flying-over-southport.jpg";
 ---
 
 <BaseLayout
@@ -142,7 +143,7 @@ import StudentSupport from "../assets/student-support.jpg";
           </div>
         </div>
         <div class="flex-1 w-full">
-          <div
+          <!-- <div
             style="height: 0px; overflow: hidden; padding-top: 56.25%; position: relative; width: 100%;"
           >
             <iframe
@@ -153,7 +154,12 @@ import StudentSupport from "../assets/student-support.jpg";
               allowfullscreen
             >
             </iframe>
-          </div>
+          </div> -->
+          <Image
+            src={StudenPilot}
+            alt="Pilot flying over Southport"
+            class="object-cover w-full"
+          />
         </div>
       </div>
     </section>
