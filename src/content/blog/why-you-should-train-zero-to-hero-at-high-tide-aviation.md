@@ -6,13 +6,24 @@ heroImage: "/src/assets/beech-bonanza-at-high-tide-aviation.jpg"
 imgAlt: "Beech Bonanza at High Tide Aviation"
 pubDate: "Oct 10, 2024"
 category: "Pilot Resources"
-tags: ["pilot-resources", "zero-to-hero training", "aviation training", "High Tide Aviation", "pilot career"]
+tags:
+  [
+    "pilot-resources",
+    "zero-to-hero training",
+    "aviation training",
+    "High Tide Aviation",
+    "pilot career",
+  ]
 ---
 
 When it comes to becoming a professional pilot, the decision to pursue a full-path, zero-to-hero training program can be pivotal in shaping your future career. At [High Tide Aviation](https://hightideaviation.com/), we offer a zero-to-hero program that takes you from having no flying experience to becoming a fully qualified commercial pilot. This all-encompassing program is designed for individuals who want a clear, structured, and efficient path to reaching their aviation goals. Here's why committing to a zero-to-hero program at High Tide Aviation may be the best decision for your future in aviation.
 
-![Ground School at High Tide Aviation](/src/assets/high-tide-ground-school.jpg)
-*Students learning flight navigation techniques during ground school at High Tide Aviation.*
+---
+
+![Ground School at High Tide Aviation](/blog/high-tide-ground-school.jpg)
+_Students learning flight navigation techniques during ground school at High Tide Aviation._
+
+---
 
 ### What is Zero-to-Hero Training?
 
@@ -22,8 +33,12 @@ Zero-to-hero training is a streamlined flight training program designed to take 
 
 At [High Tide Aviation](https://hightideaviation.com/first-time-pilots/), we provide an ideal environment for aspiring pilots to begin their aviation journey. Our zero-to-hero program offers a variety of benefits that help ensure students receive a top-tier education that prepares them for real-world challenges in the aviation industry.
 
-![Kyle getting ready for his discovery flight](/src/assets/kyle-getting-ready-for-discovery-flight.jpg)
-*Kyle preparing for his discovery flight at High Tide Aviation.*
+---
+
+![Kyle getting ready for his discovery flight](/blog/kyle-getting-ready-for-discovery-flight.jpg)
+_Kyle preparing for his discovery flight at High Tide Aviation._
+
+---
 
 #### 1. **Structured Learning Path**
 
@@ -33,8 +48,12 @@ The zero-to-hero program at High Tide is meticulously designed to take students 
 
 By committing to a full zero-to-hero program, you’ll benefit from a consistent learning environment at High Tide Aviation. Our fleet of modern aircraft and experienced instructors provide the perfect combination of practical and theoretical knowledge needed to excel. Having a consistent team of instructors ensures personalized attention and helps students develop strong relationships with their mentors, which enhances the learning experience.
 
-![Looking out the wing during a flight at High Tide Aviation](/src/assets/rainbow-looking-down-the-wing.jpg)
-*Enjoying a scenic flight with a beautiful rainbow view at High Tide Aviation.*
+---
+
+![Looking out the wing during a flight at High Tide Aviation](/blog/rainbow-looking-down-the-wing.jpg)
+_Enjoying a scenic flight with a beautiful rainbow view at High Tide Aviation._
+
+---
 
 #### 3. **Immersive Flight Training Experience**
 
