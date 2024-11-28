@@ -4,7 +4,7 @@ title: "Why You Should Train Zero to Hero at High Tide Aviation"
 description: "Explore the benefits of High Tide Aviation's zero-to-hero training program, designed to take aspiring pilots from no experience to a commercial license. Learn why this program offers a structured, efficient path to an aviation career."
 heroImage: "/src/assets/beech-bonanza-at-high-tide-aviation.jpg"
 imgAlt: "Beech Bonanza at High Tide Aviation"
-pubDate: "Nov 11, 2024"
+pubDate: "Nov 8, 2024"
 category: "Pilot Resources"
 tags:
   [
