@@ -1,0 +1,82 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Header from "../../../components/Header.astro";
+import Banner from "../../../assets/meratas-logo-3.png";
+import { IoIosArrowRoundForward } from "react-icons/io";
+import PilotFinancingPrograms from "../../../components/PilotFinancingPrograms";
+import { FaIdCardClip } from "react-icons/fa6";
+import { IoSpeedometerOutline } from "react-icons/io5";
+import { GiCommercialAirplane } from "react-icons/gi";
+import { FaIdCard } from "react-icons/fa6";
+import { BsAirplaneEnginesFill } from "react-icons/bs";
+import { BsListCheck } from "react-icons/bs";
+import { BsPersonFillUp } from "react-icons/bs";
+import { BsClipboardCheckFill } from "react-icons/bs";
+import PilotFinancingProgramsMeratas from "../../../components/PilotFinancingProgramsMeratas";
+---
+
+<BaseLayout
+  siteTitle="Meratas | High Tide Aviation"
+  siteDescription="High Tide Aviation offers flexible financing options for flight training through Meratas."
+  siteKeywords="flight training financing, High Tide Aviation financing, Meratas flight school loans, pilot license financing, flexible payment plans for pilots, private pilot loan, instrument rating loan, commercial pilot loan, multi-engine rating loan, career pilot loan, Meratas aviation financing"
+>
+  <Header
+    slot="header"
+    image={Banner}
+    title="Financing Your Flight Training with Meratas"
+    alt="Meratas Logo"
+  />
+
+  <section class="py-24 px-5 bg-medium-blue/10 scroll-my-20">
+    <div
+      class="max-w-xl gap-10 lg:max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:gap-20"
+    >
+      <div class="flex flex-col lg:flex-1">
+        <h2 class="uppercase text-medium-blue font-bold tracking-widest">
+          Meratas
+        </h2>
+        <h3 class="text-5xl text-dark-blue font-bold leading-tight">
+          The Career Loan Marketplace
+        </h3>
+        <p class="text-gray-500 leading-relaxed mt-5 mb-3">
+          With Meratas, you can explore financing options from multiple lenders
+          with one simple application—without impacting your credit score.
+        </p>
+        <p class="text-gray-500 leading-relaxed mb-5">
+          Meratas makes it easy to find the right financing for your
+          education—all in one place.
+        </p>
+        <a
+          href="https://apply.meratas.com/hightide"
+          target="_blank"
+          class="btn-blue">Finance Now</a
+        >
+      </div>
+
+      <div class="flex-1 w-full overflow-hidden">
+        <PilotFinancingProgramsMeratas client:visible />
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 px-5 bg-mustard-yellow">
+    <div class="max-w-7xl mx-auto flex flex-col items-center">
+      <h2 class="uppercase text-medium-blue font-bold tracking-widest">
+        Questions
+      </h2>
+      <h3
+        class="text-3xl lg:text-5xl font-bold leading-tight text-dark-blue text-center max-w-5xl"
+      >
+        Have any questions about Meratas financing options or the application
+        process?
+      </h3>
+      <p class="text-dark-blue text-lg mt-5 text-center">
+        Feel free to reach out to our team. We’re here to help you get started
+        on your aviation journey with minimal financial stress.
+      </p>
+      <a href="/contact-us" class="btn-blue mt-5 hover:bg-white"
+        >Contact High Tide</a
+      >
+    </div>
+  </section>
+</BaseLayout>
