@@ -3,6 +3,7 @@ const privatePilot = {
     "/src/assets/beech-baron-in-front-of-high-tide-aviation-hangar.jpg",
   imagePath: "/src/assets/multiengine-plane-at-high-tide-aviation.jpg",
   alt: "Beech Baron B55 in front of High Tide Aviation hangar",
+  programName: "Multi-Engine Rating",
   title: "Multi-Engine Rating",
   subtitle: "What is a Multi-Engine Rating?",
   locations: ["Southport, NC", "St Simons Island, GA"],

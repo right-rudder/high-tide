@@ -4,6 +4,7 @@ const privatePilot = {
   imagePath:
     "/src/assets/cfi-and-student-pilot-in-beech-baron-b55-at-high-tide-aviation.jpg",
   alt: "CFI and student pilot in Beech Baron B55 at High Tide Aviation.",
+  programName: "Flight Instructor",
   title: "Flight Instructor",
   subtitle: "What is a CFI/CFII?",
   locations: ["Southport, NC", "St Simons Island, GA"],

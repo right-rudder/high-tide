@@ -2,6 +2,7 @@ const privatePilot = {
   bannerImagePath: "/src/assets/student-and-cfi-flying-in-ifr.jpg",
   imagePath: "/src/assets/instrument-rating.jpg",
   alt: "Student and CFI flying in IFR conditions.",
+  programName: "Instrument Rating",
   title: "Instrument Rating",
   subtitle: "What is an Instrument Rating?",
   locations: ["Southport, NC", "St Simons Island, GA", "Wallace, NC"],

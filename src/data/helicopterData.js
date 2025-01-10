@@ -2,6 +2,7 @@ const privatePilot = {
   bannerImagePath: "/src/assets/high-tide-r44-helicopter-in-southport-nc.jpg",
   imagePath: "/src/assets/r44-helicopter-at-high-tide-aviation.jpg",
   alt: "High Tide Aviation R44 helicopter in Southport, NC.",
+  programName: "Helicopter",
   title: "Helicopter Training",
   subtitle:
     "What are the Different Levels of Helicopter Training Certificates?",

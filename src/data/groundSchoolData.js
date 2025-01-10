@@ -2,6 +2,7 @@ const groundSchool = {
   bannerImagePath: "/src/assets/ground-school-at-high-tide-aviation.jpg",
   imagePath: "/src/assets/ground-school.webp",
   alt: "Student and instructor reviewing flight charts in a classroom setting.",
+  programName: "Ground School",
   title: "Ground School",
   subtitle: "What is Ground School?",
   locations: ["Southport, NC", "St Simons Island, GA"],

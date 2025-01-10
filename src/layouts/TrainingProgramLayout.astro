@@ -22,6 +22,7 @@ const {
   alt,
   programs,
   meet,
+  programName,
 } = Astro.props;
 const images = import.meta.glob<{ default: ImageMetadata }>(
   "/src/assets/*.{jpeg,jpg,png,gif,webp}",
@@ -168,7 +169,7 @@ function getLastWord(str) {
       <h3
         class="text-4xl font-bold leading-tight max-w-xl text-dark-blue text-center capitalize"
       >
-        What comes after my {title} training?
+        What comes after my {programName} training?
       </h3>
       <div class="grid md:grid-cols-3 mt-10 gap-7">
         {
