@@ -4,7 +4,9 @@ const commercialPilot = {
   imagePath: "/src/assets/commercial-pilot.jpg",
   alt: "Heading to Training at High Tide Aviation St Simons Island, GA",
   programName: "Commercial Pilot",
-  title: "Commercial Pilot",
+  siteDescription:
+    "Take your aviation career to new heights with High Tide Aviation's Commercial Pilot Training Program. Offered at multiple locations including Southport, St. Simons Island, and Wallace, NC, our program provides expert instruction and real-world flying experience to help you succeed in the commercial aviation industry. Learn advanced flight techniques, navigation, and operational management under varying conditions. Enroll today and start your journey toward becoming a certified commercial pilot!",
+  title: "Commercial Pilot | High Tide Aviation",
   subtitle: "What is a Commercial Pilot Certificate?",
   locations: ["Southport, NC", "St Simons Island, GA"],
   description: [

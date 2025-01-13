@@ -23,6 +23,7 @@ const {
   programs,
   meet,
   programName,
+  siteDescription,
 } = Astro.props;
 const images = import.meta.glob<{ default: ImageMetadata }>(
   "/src/assets/*.{jpeg,jpg,png,gif,webp}",
@@ -44,13 +45,13 @@ function getLastWord(str) {
 
 <BaseLayout
   siteTitle={title}
-  siteDescription="Begin your aviation journey with High Tide Aviation, offering comprehensive guidance and support for first-time pilots in Southport, NC, and St Simons Island, GA."
+  siteDescription={siteDescription}
   siteKeywords="first-time pilot Southport NC, beginner flight training St Simons Island GA, aviation introduction Southeast Coast, learn to fly Southport NC, pilot training for beginners."
 >
   <Header
     slot="header"
     image={Banner}
-    title={title}
+    title={programName}
     ctaText="Enroll Now"
     ctaLink="/enrollment-form"
     alt={alt}

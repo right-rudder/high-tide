@@ -4,7 +4,9 @@ const privatePilot = {
   imagePath: "/src/assets/multiengine-plane-at-high-tide-aviation.jpg",
   alt: "Beech Baron B55 in front of High Tide Aviation hangar",
   programName: "Multi-Engine Rating",
-  title: "Multi-Engine Rating",
+  siteDescription:
+    "Master the skills to fly multi-engine aircraft with High Tide Aviation’s Multi-Engine Training Program. Available in Southport, St Simons Island, and Wallace, our course provides hands-on instruction in advanced aerodynamics, engine management, and emergency protocols. Whether you’re looking to expand your career opportunities or enhance your flying abilities, our program prepares you for success.",
+  title: "Multi-Engine Rating | High Tide Aviation",
   subtitle: "What is a Multi-Engine Rating?",
   locations: ["Southport, NC", "St Simons Island, GA"],
   description: [

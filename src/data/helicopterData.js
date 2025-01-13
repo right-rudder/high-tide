@@ -3,7 +3,9 @@ const privatePilot = {
   imagePath: "/src/assets/r44-helicopter-at-high-tide-aviation.jpg",
   alt: "High Tide Aviation R44 helicopter in Southport, NC.",
   programName: "Helicopter",
-  title: "Helicopter Training",
+  siteDescription:
+    "Take flight with High Tide Aviation’s Helicopter Training Program, offered in Southport, St Simons Island, and Wallace. Whether you’re aspiring to become a commercial helicopter pilot or seeking recreational flight skills, our comprehensive program provides expert instruction and hands-on experience in a range of helicopter models.",
+  title: "Helicopter Training | High Tide Aviation",
   subtitle:
     "What are the Different Levels of Helicopter Training Certificates?",
   locations: ["Southport, NC"],

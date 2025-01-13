@@ -2,7 +2,9 @@ import instrumentRating from "../instrumentRatingData.js";
 
 const instrumentRatingSouthport = {
   ...instrumentRating,
-  title: "Instrument Rating Training in Wallace, NC",
+  title: "Instrument Rating Training in Wallace, NC | High Tide Aviation",
+  siteDescription:
+    "Get your Instrument Rating with High Tide Aviation in Wallace, NC. Our training program equips you with the skills to fly safely under IFR conditions, even when visibility is low. Gain essential experience in real-world weather scenarios, from navigation to instrument systems, preparing you for career advancement in aviation. Begin your Instrument Rating journey today in Wallace, NC.",
   description: [
     "An Instrument Rating is essential for pilots in Wallace, NC, who want to fly under instrument flight rules (IFR), particularly in challenging weather conditions where visibility is limited. This advanced certification prepares pilots to navigate using only aircraft instruments, a critical skill for safely operating in clouds, fog, or during night flights over the picturesque Wallace area and the North Carolina coastline.",
     "Instrument Rating training at High Tide Aviation, conveniently located in Wallace, NC, and St. Simons Island, GA, enhances a pilot’s expertise in avionic systems and sharpens their ability to make precise navigational decisions based solely on instrument readings. Pilots training in Wallace benefit from a unique coastal environment that provides practical experience in real-world IFR conditions common to the region.",
