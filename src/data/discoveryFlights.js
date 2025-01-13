@@ -14,6 +14,13 @@ export const discoveryFlights = [
     url: "https://fareharbor.com/embeds/book/flyhightide-ssi/items/347994/?full-items=yes&flow=621000",
   },
   {
+    name: "Career Discovery Flight",
+    location: "Wilmington, NC",
+    price: "$199 per person",
+    imagePath: "/src/assets/private-pilot.jpg",
+    url: "https://www.flightcircle.com/shop/5c9443ea346a/4000017965",
+  },
+  {
     name: "Helicopter Discovery Flight",
     location: "Southport, NC",
     price: "$199 per person",
