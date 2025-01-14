@@ -28,7 +28,11 @@ const posts = (await getCollection("blog")).sort(
 );
 ---
 
-<BaseLayout>
+<BaseLayout
+  siteTitle="The Southeast Shores' Leading Pilot Training Center in Southport, St. Simons, and Wallace | High Tide Aviation"
+  siteDescription="High Tide Aviation offers premier flight training programs in Southport, St. Simons Island, and Wallace. Whether you're aspiring to be a private pilot, commercial pilot, flight instructor, or earn advanced ratings, our experienced instructors and state-of-the-art aircraft provide the hands-on training you need to succeed in the skies. Join our aviation community and start your journey to becoming a skilled, certified pilot. Explore our comprehensive courses and enroll today."
+  siteKeywords="High Tide Aviation, pilot training, flight school, aviation training, commercial pilot training, private pilot certification, flight instructor training, helicopter training, aviation services, aviation resources, aviation blog, pilot education, flight school programs, aviation training programs"
+>
   <HomepageHeader slot="header" />
 
   <section id="home-menu" class="py-16 bg-mustard-yellow px-5 scroll-my-20">
@@ -93,9 +97,10 @@ const posts = (await getCollection("blog")).sort(
         </h3>
         <p class="text-gray-500 leading-relaxed mt-5">
           High Tide Aviation offers flight schools and training facilities at
-          both Cape Fear Regional Jetport in Southport, NC, and McKinnon St
-          Simons Island Airport on St Simons Island, Georgia. Specializing in
-          both airplane and helicopter training, we provide professional pilot
+          Cape Fear Regional Jetport (KSUT) in Southport, NC; McKinnon St.
+          Simons Island Airport (KSSI) on St Simons Island, GA; and
+          Wallace-Pender Airport (ACZ) in Wallace, NC. Specializing in both
+          airplane and helicopter training, we provide professional pilot
           training for commercial licenses, instrument ratings, helicopters,
           flight instruction, and more. Pursue your aviation dreams through our
           zero-to-hero flight training programs.

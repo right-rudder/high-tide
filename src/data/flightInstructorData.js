@@ -4,7 +4,10 @@ const privatePilot = {
   imagePath:
     "/src/assets/cfi-and-student-pilot-in-beech-baron-b55-at-high-tide-aviation.jpg",
   alt: "CFI and student pilot in Beech Baron B55 at High Tide Aviation.",
-  title: "Flight Instructor",
+  programName: "Flight Instructor",
+  siteDescription:
+    "Become a Certified Flight Instructor (CFI) with High Tide Aviation's Flight Instructor Training Program. Offered at our locations in Southport, St Simons Island, and Wallace, our program provides the expertise and hands-on experience you need to teach aspiring pilots. Learn the fundamentals of flight instruction, aerodynamics, safety, and navigation techniques from experienced instructors. Enroll today and start your journey toward becoming a skilled aviation educator!",
+  title: "Flight Instructor | High Tide Aviation",
   subtitle: "What is a CFI/CFII?",
   locations: ["Southport, NC", "St Simons Island, GA"],
   description: [

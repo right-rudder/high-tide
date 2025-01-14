@@ -10,7 +10,11 @@ const posts = (await getCollection("blog")).sort(
 );
 ---
 
-<BaseLayout siteTitle="The High Tide Newsroom">
+<BaseLayout
+  siteTitle="The High Tide Newsroom | High Tide Aviation"
+  siteDescription="Stay updated with the latest aviation news, tips, and insights on the High Tide Aviation Blog. Whether you're looking for information on pilot training, aircraft maintenance, or the best flying destinations in Southport, St Simons Island, Wallace, and beyond, our blog is your go-to resource for all things aviation. Join us for expert advice, industry updates, and helpful guides for aspiring pilots and aviation enthusiasts."
+  siteKeywords="aviation blog, pilot training tips, helicopter training, flight school Southport, St Simons Island aviation, Wallace NC flying, aviation news, commercial pilot training, private pilot tips, flight instructor training, aviation resources, helicopter pilot training, flying in coastal Georgia, FAA certification, aviation education, flying destinations, aviation industry updates"
+>
   <Header
     slot="header"
     image={Banner}

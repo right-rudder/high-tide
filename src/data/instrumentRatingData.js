@@ -2,7 +2,10 @@ const privatePilot = {
   bannerImagePath: "/src/assets/student-and-cfi-flying-in-ifr.jpg",
   imagePath: "/src/assets/instrument-rating.jpg",
   alt: "Student and CFI flying in IFR conditions.",
-  title: "Instrument Rating",
+  programName: "Instrument Rating",
+  siteDescription:
+    "Elevate your flying skills with an Instrument Rating from High Tide Aviation. Our comprehensive training program is available in Southport, St Simons Island, and Wallace, providing pilots with the expertise to fly safely under instrument flight rules (IFR) in challenging weather conditions. Gain the confidence to navigate in low visibility and advance your aviation career with our expert-led courses.",
+  title: "Instrument Rating | High Tide Aviation",
   subtitle: "What is an Instrument Rating?",
   locations: ["Southport, NC", "St Simons Island, GA", "Wallace, NC"],
   description: [

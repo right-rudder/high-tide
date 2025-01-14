@@ -3,7 +3,10 @@ const privatePilot = {
     "/src/assets/private-pilot-in-front-of-cessna-172-skyhawk-st-simons-island-ga.jpg",
   imagePath: "/src/assets/private-pilot.jpg",
   alt: "Private Pilot Training at High Tide Aviation",
-  title: "Private Pilot",
+  programName: "Private Pilot",
+  siteDescription:
+    "Start your aviation journey with High Tide Aviation’s Private Pilot Training Program. Available in Southport, St Simons Island, and Wallace, our course provides comprehensive instruction to help you earn your Private Pilot Certificate. Learn to fly single-engine aircraft, navigate weather conditions, and develop the skills to explore the skies confidently and safely.",
+  title: "Private Pilot | High Tide Aviation",
   subtitle: "What is a Private Pilot Certificate?",
   locations: ["Southport, NC", "St Simons Island, GA", "Wallace, NC"],
   description: [

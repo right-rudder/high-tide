@@ -2,7 +2,10 @@ const groundSchool = {
   bannerImagePath: "/src/assets/ground-school-at-high-tide-aviation.jpg",
   imagePath: "/src/assets/ground-school.webp",
   alt: "Student and instructor reviewing flight charts in a classroom setting.",
-  title: "Ground School",
+  programName: "Ground School",
+  siteDescription:
+    "High Tide Aviation’s Ground School Training provides aspiring pilots with essential knowledge on flight operations, navigation, weather patterns, and aviation regulations. Offered at our locations in Southport, St Simons Island, and Wallace, our comprehensive program prepares students for the FAA written exam and sets them up for success in their aviation career. Join us today and gain the foundational skills needed to become a skilled pilot!",
+  title: "Ground School | High Tide Aviation",
   subtitle: "What is Ground School?",
   locations: ["Southport, NC", "St Simons Island, GA"],
   description: [
