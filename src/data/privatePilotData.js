@@ -27,7 +27,7 @@ const privatePilot = {
     subtitle: "To earn your Private Pilot Certificate, you must complete:",
     list: [
       {
-        heading: "Completion of Ground School",
+        heading: "Ground School",
         description:
           "Must have successfully completed the Ground School training to understand the theoretical aspects of flying.",
       },
