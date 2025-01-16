@@ -1,7 +1,8 @@
 ---
 const { title, btnId, btnTitle, url } = Astro.props;
 import { Image } from "astro:assets";
-import flyer from "../assets/coastal-pines-ground-school-flyer.webp";
+import flyer1 from "../assets/coastal-pines-ground-school-flyer.webp";
+import flyer2 from "../assets/brunswick-ground-school.webp";
 ---
 
 <astro-banner btnId={btnId}>
@@ -18,7 +19,7 @@ import flyer from "../assets/coastal-pines-ground-school-flyer.webp";
           Ground School training starting soon! Enroll now to save up to 15%
           off!
         </p>
-        <div class="ml-auto">
+        <div class="lg:ml-auto">
           {
             title && (
               <p class="me-2 inline-block font-medium text-neutral-50 dark:text-neutral-700">
@@ -28,7 +29,7 @@ import flyer from "../assets/coastal-pines-ground-school-flyer.webp";
           }
           <button
             id="show"
-            class="group inline-flex items-center gap-x-2 rounded-full border-2 border-neutral-50 backdrop-brightness-75 sm:backdrop-brightness-100 px-3 py-2 text-sm font-semibold text-neutral-50 transition duration-300 hover:border-neutral-100/70 hover:text-neutral-50/70 disabled:pointer-events-none disabled:opacity-50 dark:backdrop-brightness-100 dark:border-neutral-700 dark:text-neutral-700 dark:hover:border-neutral-700/70 dark:hover:text-neutral-800/70 dark:focus:outline-none"
+            class="group inline-flex items-center gap-x-2 rounded-full border-2 border-dark-blue bg-mustard-yellow backdrop-brightness-75 sm:backdrop-brightness-100 px-3 py-2 text-sm font-semibold text-dark-blue transition duration-300 hover:text-neutral-50/70 disabled:pointer-events-none disabled:opacity-50"
           >
             Learn More
           </button>
@@ -52,7 +53,7 @@ import flyer from "../assets/coastal-pines-ground-school-flyer.webp";
         </div>
         <button
           type="button"
-          class="ml-auto inline-flex items-center gap-x-2 rounded-full border border-transparent bg-gray-100 p-2 text-sm font-semibold text-gray-800 hover:bg-gray-200 disabled:pointer-events-none disabled:opacity-50 dark:bg-neutral-700 dark:text-neutral-50 dark:hover:bg-neutral-700/80 dark:hover:text-neutral-50 dark:focus:outline-none"
+          class="ml-auto inline-flex items-center gap-x-2 rounded-full border border-transparent bg-dark-blue p-2 text-sm font-semibold text-white hover:bg-medium-blue duration-200 disabled:pointer-events-none disabled:opacity-50"
           id={btnId}
         >
           <span class="sr-only">Dismiss</span>
@@ -71,8 +72,14 @@ import flyer from "../assets/coastal-pines-ground-school-flyer.webp";
         </button>
       </div>
       <Image
-        id="flyer"
-        src={flyer}
+        id="flyer1"
+        src={flyer1}
+        alt="Ground School training starting soon"
+        class="w-full h-full object-cover hidden mt-6 rounded-lg"
+      />
+      <Image
+        id="flyer2"
+        src={flyer2}
         alt="Ground School training starting soon"
         class="w-full h-full object-cover hidden mt-6 rounded-lg"
       />
@@ -92,10 +99,12 @@ import flyer from "../assets/coastal-pines-ground-school-flyer.webp";
 
   customElements.define("astro-banner", AstroBanner);
 
-  const imageElements = document.getElementById("flyer");
+  const flyer1 = document.getElementById("flyer1");
+  const flyer2 = document.getElementById("flyer2");
   const showButton = document.getElementById("show");
 
   showButton.addEventListener("click", () => {
-    imageElements.classList.toggle("hidden");
+    flyer1.classList.toggle("hidden");
+    flyer2.classList.toggle("hidden");
   });
 </script>
