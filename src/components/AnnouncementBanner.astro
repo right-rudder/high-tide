@@ -12,14 +12,33 @@ import flyer2 from "../assets/brunswick-ground-school.webp";
     aria-label="Informational Banner"
   >
     <div
-      class="rounded-xl bg-neutral-200 bg-cover bg-center bg-no-repeat p-4 text-center shadow-sm"
+      class="rounded-xl bg-neutral-200/90 bg-cover bg-center bg-no-repeat p-4 text-center shadow-sm"
     >
       <div class="flex items-center justify-center flex-col lg:flex-row gap-2">
-        <p class="font-bold">
+        <button
+          type="button"
+          class="ml-auto order-1 lg:order-4 inline-flex items-center gap-x-2 rounded-full border border-transparent bg-dark-blue p-2 text-sm font-semibold text-white hover:bg-medium-blue duration-200 disabled:pointer-events-none disabled:opacity-50"
+          id={btnId}
+        >
+          <span class="sr-only">Dismiss</span>
+          <svg
+            class="size-5 flex-shrink-0"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            ><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg
+          >
+        </button>
+        <p class="font-bold order-2">
           Ground School training starting soon! Enroll now to save up to 15%
           off!
         </p>
-        <div class="lg:ml-auto">
+        <div class="lg:ml-auto order-3 flex gap-3">
           {
             title && (
               <p class="me-2 inline-block font-medium text-neutral-50 dark:text-neutral-700">
@@ -51,25 +70,6 @@ import flyer2 from "../assets/brunswick-ground-school.webp";
             >
           </a>
         </div>
-        <button
-          type="button"
-          class="ml-auto inline-flex items-center gap-x-2 rounded-full border border-transparent bg-dark-blue p-2 text-sm font-semibold text-white hover:bg-medium-blue duration-200 disabled:pointer-events-none disabled:opacity-50"
-          id={btnId}
-        >
-          <span class="sr-only">Dismiss</span>
-          <svg
-            class="size-5 flex-shrink-0"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            ><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg
-          >
-        </button>
       </div>
       <Image
         id="flyer1"
