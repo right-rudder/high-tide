@@ -17,6 +17,16 @@ const privatePilot = {
     subtitle: "Before joining us, ensure you meet the following criteria:",
     list: [
       {
+        heading: "Minimum Age",
+        description:
+          "Must be at least 17 years old to obtain the Private Pilot training program.",
+      },
+    ],
+  },
+  requirements: {
+    subtitle: "To earn your Private Pilot Certificate, you must complete:",
+    list: [
+      {
         heading: "Completion of Ground School",
         description:
           "Must have successfully completed the Ground School training to understand the theoretical aspects of flying.",
@@ -25,11 +35,6 @@ const privatePilot = {
         heading: "Medical Certificate",
         description:
           "Obtain a medical certificate from an FAA-certified aviation medical examiner.",
-      },
-      {
-        heading: "Minimum Age",
-        description:
-          "Must be at least 17 years old to obtain the Private Pilot training program.",
       },
     ],
   },
