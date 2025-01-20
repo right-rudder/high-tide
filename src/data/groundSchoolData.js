@@ -117,7 +117,7 @@ const groundSchool = {
         name: "Private Pilot",
         id: "tier-private-pilot-simons",
         href: "#",
-        price: "$450",
+        price: "$550",
         description: "Embark on your aviation journey by the coast.",
         schedule: "Offered every fall and spring semester",
         features: [

@@ -7,7 +7,7 @@ export const stats = [
   },
   {
     icon: "GiTeacher",
-    value: 14,
+    value: 17,
     title: "Dedicated flight instructors",
     cssVariable: "--num-instructors",
   },

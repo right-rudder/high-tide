@@ -23,6 +23,7 @@ import { getCollection } from "astro:content";
 import CounterCard from "../components/CounterCard.jsx";
 import ToursCTA from "../components/ToursCTA.astro";
 import { TbUserScreen } from "react-icons/tb";
+import AnnouncementBanner from "../components/AnnouncementBanner.astro";
 const posts = (await getCollection("blog")).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
@@ -34,6 +35,12 @@ const posts = (await getCollection("blog")).sort(
   siteKeywords="High Tide Aviation, pilot training, flight school, aviation training, commercial pilot training, private pilot certification, flight instructor training, helicopter training, aviation services, aviation resources, aviation blog, pilot education, flight school programs, aviation training programs"
 >
   <HomepageHeader slot="header" />
+
+  <AnnouncementBanner
+    btnId="dismiss-button"
+    btnTitle="Sign Up Now"
+    url="/contact-us"
+  />
 
   <section id="home-menu" class="py-16 bg-mustard-yellow px-5 scroll-my-20">
     <div class="grid lg:grid-cols-4 sm:grid-cols-2 max-w-7xl mx-auto gap-10">

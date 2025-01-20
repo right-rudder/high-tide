@@ -30,7 +30,7 @@ const privatePilot = {
       {
         heading: "Medical Certificate",
         description:
-          "Current Class 3 medical certificate, as issued by an FAA-certified aviation medical examiner.",
+          "Obtain a medical certificate from an FAA-certified aviation medical examiner.",
       },
     ],
   },
