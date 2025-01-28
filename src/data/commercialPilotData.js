@@ -5,10 +5,10 @@ const commercialPilot = {
   alt: "Heading to Training at High Tide Aviation St Simons Island, GA",
   programName: "Commercial Pilot",
   siteDescription:
-    "Take your aviation career to new heights with High Tide Aviation's Commercial Pilot Training Program. Offered at multiple locations including Southport, St. Simons Island, and Wallace, NC, our program provides expert instruction and real-world flying experience to help you succeed in the commercial aviation industry. Learn advanced flight techniques, navigation, and operational management under varying conditions. Enroll today and start your journey toward becoming a certified commercial pilot!",
+    "Take your aviation career to new heights with High Tide Aviation's Commercial Pilot Training Program. Offered at multiple locations including Southport, St. Simons Island, wilmington, and Wallace, NC, our program provides expert instruction and real-world flying experience to help you succeed in the commercial aviation industry. Learn advanced flight techniques, navigation, and operational management under varying conditions. Enroll today and start your journey toward becoming a certified commercial pilot!",
   title: "Commercial Pilot | High Tide Aviation",
   subtitle: "What is a Commercial Pilot Certificate?",
-  locations: ["Southport, NC", "St Simons Island, GA"],
+  locations: ["Southport, NC", "St Simons Island, GA", "Wilmington, NC"],
   description: [
     "A Commercial Pilot Certificate enables qualified pilots to operate aircraft for compensation or hire, a crucial step for anyone aiming to pursue a career in aviation. This certification allows pilots to participate in diverse operations such as cargo transport, aerial surveying, and passenger carrying, among others.",
     "High Tide Aviation offers this advanced training at both Southport, NC, and St Simons Island, GA, providing aspiring commercial pilots with training that includes advanced flight techniques, extensive knowledge of aviation regulations, and the professional conduct required of a commercial pilot.",
