@@ -1,0 +1,154 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Banner from "../assets/high-tide-aviation-hangar.jpg";
+const FEEDBACK_FORM_WEBHOOK_URL = import.meta.env.FEEDBACK_FORM_WEBHOOK_URL;
+---
+
+<BaseLayout
+  siteTitle="Feedback | High Tide Aviation"
+  siteDescription="Share your feedback with High Tide Aviation. Let us know about your experience with our flight training, aircraft rentals, and aviation services in Southport, NC; St. Simons, GA; Wilmington, NC; and Wallace, NC. Your input helps us improve!"
+  siteKeywords="High Tide Aviation feedback, customer reviews High Tide Aviation, pilot training experience, aviation service feedback, flight school reviews Southport NC, aircraft rental testimonials."
+>
+  <Header
+    slot="header"
+    image={Banner}
+    title="Feedback"
+    alt="High Tide Aviation Hangar"
+  />
+
+  <section class="py-24 px-5">
+    <div class="max-w-xl lg:max-w-7xl mx-auto flex flex-col items-center">
+      <h2 class="uppercase text-medium-blue font-bold tracking-widest">
+        Feedback
+      </h2>
+      <h3
+        class="text-5xl max-w-2xl text-center text-dark-blue font-bold leading-tight"
+      >
+        We'd Love to Hear From You
+      </h3>
+      <p class="text-gray-600 text-center max-w-5xl leading-loose my-3">
+        Your feedback is important to us. Please share your thoughts,
+        suggestions, or any issues you may have encountered. We appreciate your
+        time and will use your feedback to improve our services
+      </p>
+
+      <form
+        id="feedback-form"
+        method="POST"
+        class="relative z-20 flex flex-col items-center p-5 shadow-lg bg-white w-full max-w-3xl"
+      >
+        <div class="gap-5 mt-10 w-full">
+          <div class="hidden">
+            <label>
+              Don't fill this out if you're human:
+              <input name="confirm-email" />
+            </label>
+          </div>
+          <label for="feedback"> Please share your feedback with us: </label>
+          <textarea
+            class="bg-medium-blue/15 h-72 text-dark-blue py-4 px-6 w-full outline-none placeholder:text-gray-500"
+            name="feedback"
+            id="feedback"
+            required></textarea>
+        </div>
+
+        <div
+          class="g-recaptcha"
+          data-sitekey="6LdINgwqAAAAAHqhspAFZMyuR1ks9CeEVI8lWl2B"
+          data-callback="onRecaptchaSuccess"
+        >
+        </div>
+
+        <button type="submit" id="submit-button" class="btn-blue mt-5" disabled
+          >Send Feedback</button
+        >
+      </form>
+    </div>
+  </section>
+</BaseLayout>
+
+<script define:vars={{ FEEDBACK_FORM_WEBHOOK_URL }}>
+  // Wait for the DOM content to be fully loaded
+  let isRecaptchaVerified = false;
+
+  document.addEventListener("DOMContentLoaded", function () {
+    // Get the contactUs form element
+    const contactUsForm = document.getElementById("feedback-form");
+
+    // Check if the contactUs form element exists
+    if (contactUsForm !== null) {
+      // Add submit event listener to the contactUs form
+      contactUsForm.addEventListener("submit", function (event) {
+        // Prevent the default form submission
+        event.preventDefault();
+
+        if (!isRecaptchaVerified) {
+          alert("Please complete the reCAPTCHA verification.");
+          return;
+        }
+
+        // Serialize the form data
+        const formData = new FormData(contactUsForm);
+
+        // Check the value of the honeypot field
+        const confirmEmailValue = formData.get("confirm-email");
+        if (confirmEmailValue === "" || confirmEmailValue === null) {
+          // If the honeypot field is empty, it's a human
+          // Set the form action to the URL for processing the form and redirecting to thank you
+          contactUsForm.action = FEEDBACK_FORM_WEBHOOK_URL;
+        }
+
+        // Convert FormData to URLSearchParams
+        const urlSearchParams = new URLSearchParams();
+        for (const pair of formData.entries()) {
+          urlSearchParams.append(pair[0], pair[1]);
+        }
+
+        // Send an AJAX request to submit the form
+        const xhr = new XMLHttpRequest();
+        xhr.open("POST", contactUsForm.action);
+        xhr.setRequestHeader(
+          "Content-Type",
+          "application/x-www-form-urlencoded",
+        );
+        xhr.onload = function () {
+          // Check if the request was successful (status 200)
+          if (xhr.status === 200) {
+            // Redirect the user after a successful form submission
+            window.location.href = "/contact-us-confirmation";
+          } else {
+            // Handle errors if any
+            console.error("Form submission failed:", xhr.statusText);
+          }
+        };
+        xhr.onerror = function () {
+          // Handle network errors
+          console.error("Network error occurred while submitting the form.");
+        };
+        xhr.send(urlSearchParams);
+      });
+    } else {
+      console.error("Contact us form element not found.");
+    }
+  });
+
+  function onRecaptchaSuccess(token) {
+    fetch("/recaptcha", {
+      method: "POST",
+      body: JSON.stringify({ recaptcha: token }),
+    })
+      .then((response) => response.json())
+      .then((gResponse) => {
+        if (gResponse.success) {
+          isRecaptchaVerified = true;
+        } else {
+          isRecaptchaVerified = false;
+          alert("reCAPTCHA verification failed. Please try again.");
+        }
+      });
+  }
+
+  window.onRecaptchaSuccess = onRecaptchaSuccess; // Make the function globally accessible
+</script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
