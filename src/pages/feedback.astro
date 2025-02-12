@@ -45,11 +45,11 @@ const FEEDBACK_FORM_WEBHOOK_URL = import.meta.env.FEEDBACK_FORM_WEBHOOK_URL;
               <input name="confirm-email" />
             </label>
           </div>
-          <label for="feedback"> Please share your feedback with us: </label>
           <textarea
             class="bg-medium-blue/15 h-72 text-dark-blue py-4 px-6 w-full outline-none placeholder:text-gray-500"
             name="feedback"
             id="feedback"
+            placeholder="Please share your feedback with us"
             required></textarea>
         </div>
 
@@ -60,7 +60,7 @@ const FEEDBACK_FORM_WEBHOOK_URL = import.meta.env.FEEDBACK_FORM_WEBHOOK_URL;
         >
         </div>
 
-        <button type="submit" id="submit-button" class="btn-blue mt-5" disabled
+        <button type="submit" id="submit-button" class="btn-blue mt-5"
           >Send Feedback</button
         >
       </form>
