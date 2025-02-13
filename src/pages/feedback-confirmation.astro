@@ -1,0 +1,32 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Banner from "../assets/beech-baron-b55-front.jpg";
+import { FaCheckCircle } from "react-icons/fa";
+import { PHONE_NUMBER } from "../consts";
+---
+
+<BaseLayout
+  siteTitle="Thank You for Your Feedback | High Tide Aviation"
+  siteDescription="Thank you for providing feedback to High Tide Aviation. We appreciate your input and will review your message as soon as possible. We value your opinion and will use your feedback to improve our services and better serve our customers."
+  siteKeywords="feedback confirmation, High Tide Aviation, pilot training inquiry, flight school information, commercial pilot training, private pilot certification, aviation services, flight instructor training, helicopter training St Simons Island, aviation resources Southport NC, aviation training Wallace NC, flight school St Simons Island, flight school programs, contact form submission"
+>
+  <Header
+    slot="header"
+    image={Banner}
+    title="Thank You for Your Feedback"
+    alt="Beech Baron B55 from the front"
+  />
+
+  <section class="py-16 px-5">
+    <div class="flex flex-col items-center max-w-5xl mx-auto text-center gap-8">
+      <FaCheckCircle className="text-9xl text-medium-blue" />
+      <p class="text-gray-600 leading-loose">
+        Thank you for providing feedback to High Tide Aviation. We appreciate
+        your input and will review your message as soon as possible. We value
+        your opinion and will use your feedback to improve our services and
+        better serve our customers.
+      </p>
+    </div>
+  </section>
+</BaseLayout>
