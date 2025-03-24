@@ -66,11 +66,11 @@ const Navbar = ({ pathname }) => {
             id="navbar"
           >
             <div className="flex w-full items-center justify-between">
-              <a href="/" className="shrink-0">
+              <a href="/">
                 <img
                   src={HighTideLogo.src}
                   alt="High Tide Aviation Logo"
-                  className="lg:h-14 h-12 w-auto"
+                  className="xl:h-14 h-12 w-auto"
                 />
               </a>
               <div className="hidden lg:block">
@@ -94,7 +94,7 @@ const Navbar = ({ pathname }) => {
                 >
                   <FaPhone className="size-4 group-hover:text-dark-blue duration-300" />
                 </a>
-                <div className="hidden xl:block shrink-0">
+                <div className="hidden 2xl:block shrink-0">
                   <p className="text-sm text-white/80">Call Anytime</p>
                   <a
                     href={`tel:${PHONE_NUMBER}`}
