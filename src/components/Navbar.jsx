@@ -66,7 +66,7 @@ const Navbar = ({ pathname }) => {
             id="navbar"
           >
             <div className="flex w-full items-center justify-between">
-              <a href="/">
+              <a href="/" className="shrink-0">
                 <img
                   src={HighTideLogo.src}
                   alt="High Tide Aviation Logo"

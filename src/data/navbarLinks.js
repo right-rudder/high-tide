@@ -65,6 +65,10 @@ export const navbarLinks = [
         link: "/blog",
       },
       {
+        name: "Work With Us",
+        link: "/job-application",
+      },
+      {
         name: "Contact Us",
         link: "/contact-us",
       },
@@ -80,6 +84,11 @@ export const navbarLinks = [
     name: "Pilot Shop",
     link: "https://shop.flyhightide.com/",
     external: true,
+    submenu: [],
+  },
+  {
+    name: "Contact Us",
+    link: "/contact-us",
     submenu: [],
   },
 ];
