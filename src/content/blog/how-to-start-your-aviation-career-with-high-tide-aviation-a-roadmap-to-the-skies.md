@@ -1,6 +1,6 @@
 ---
 pubDate: "January 9, 2025"
-author: "Ed Simpson"
+author: "Jessica Ward"
 title: "How to Start Your Aviation Career with High Tide Aviation: A Roadmap to the Skies"
 description: "Have you always dreamed of soaring above the clouds? Do you yearn for the freedom and adventure of flight? High Tide Aviation offers a pathway to turn your aviation aspirations into reality. This roadmap will guide you through the steps to embark on your aviation career with us."
 heroImage: "/src/assets/cessna-over-st-simons-island.jpg"

@@ -1,6 +1,7 @@
 ---
 title: "Aviation Career Financing"
 description: "Looking to start a career in aviation but not sure how to pay for it?"
+author: "Jessica Ward"
 pubDate: "Aug 23, 2023"
 heroImage: "/src/assets/aviation-financing.jpeg"
 ---

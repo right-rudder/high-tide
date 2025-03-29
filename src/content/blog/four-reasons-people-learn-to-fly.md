@@ -1,6 +1,7 @@
 ---
 title: "Four Reasons People Learn to Fly"
 description: "At some point in their life, just about everyone has looked around and wondered what their next big adventure is going to be. For some people, that next adventure is learning to fly. "
+author: "Jessica Ward"
 pubDate: "Mar 6, 2023"
 heroImage: "/src/assets/mother-and-daughter-discovery-flight.jpeg"
 ---

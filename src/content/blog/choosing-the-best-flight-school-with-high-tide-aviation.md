@@ -1,5 +1,5 @@
 ---
-author: "Ed Simpson"
+author: "Jessica Ward"
 title: "Choosing the Best Flight School with High Tide Aviation"
 description: "Explore how High Tide Aviation stands out as a top flight school, focusing on quality instruction, a diverse curriculum, and a supportive learning environment that caters to both aspiring professional pilots and aviation enthusiasts."
 heroImage: "/src/assets/people-ready-for-cessna-discovery-flight.jpg"

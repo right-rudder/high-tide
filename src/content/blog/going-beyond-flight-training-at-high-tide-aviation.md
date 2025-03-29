@@ -1,6 +1,6 @@
 ---
 pubDate: "2024-06-12"
-author: "Ed Simpson"
+author: "Jessica Ward"
 title: "Going Beyond Flight Training at High Tide Aviation: Maximizing the Potential of Our Fleet"
 description: "Explore the expanded offerings of High Tide Aviation, including enhanced aircraft services, aerial photography for real estate showcasing, and comprehensive flight training programs. Learn how our fleet's potential is fully realized to meet diverse client needs."
 heroImage: "/src/assets/bald-head-island-nc.jpg"

@@ -2,6 +2,7 @@
 title: "How Long Does It Take To Learn To Fly?"
 description: "If you have ever dreamed of becoming a pilot, one of the first questions that likely comes to mind is, 'How long does it take to learn to fly?'"
 pubDate: "Mar 21, 2025"
+author: "Jessica Ward"
 heroImage: "/src/assets/beech-bonanza-at-high-tide-aviation-wilmington-hangar.webp"
 ---
 
@@ -15,7 +16,7 @@ Let’s take a look at what goes into the timeline for earning your wings.
 
 ## The Basics of Private Pilot Training
 
-Most new pilots begin their journey with the **Private Pilot Certificate**, which allows you to fly for personal and recreational purposes. The Federal Aviation Administration requires a **minimum of 40 flight hours** to qualify, but the national average is closer to **60 to 70 hours** before a student is ready for the final checkride.
+Most new pilots begin their journey with the **Private Pilot Certificate**, which allows you to fly for personal and recreational purposes. The [Federal Aviation Administration](https://www.faa.gov/faq/what-are-hourly-requirements-becoming-pilot#:~:text=A%20person%20applying%20for%20a,three%20hours%20of%20cross%20country%3B) requires a **minimum of 40 flight hours** to qualify, but the national average is closer to **60 to 70 hours** before a student is ready for the final checkride.
 
 These hours include flight lessons with an instructor, solo practice flights, cross-country flights, and preparation for both the written and practical exams. Learning to fly is about much more than just handling the controls. It also involves understanding weather, airspace, communication, and making safe decisions in a wide variety of scenarios.
 
@@ -33,7 +34,7 @@ If you fly once or twice a week, the journey to your private pilot certificate t
 
 If you have the flexibility to fly **three to five times a week**, your training can move much faster. Many full-time students are able to complete their certification in as little as **two to three months**. This is a great option for those who are focused on career goals or want to get licensed quickly.
 
-At High Tide Aviation, we tailor training programs to fit your availability and learning preferences. Whether you are flying from **coastal North Carolina** or **southern Georgia**, we are here to support your journey.
+At High Tide Aviation, we tailor [training programs](/flight-training/ground-school) to fit your availability and learning preferences. Whether you are flying from **coastal North Carolina** or **southern Georgia**, we are here to support your journey.
 
 ---
 
@@ -42,7 +43,7 @@ At High Tide Aviation, we tailor training programs to fit your availability and 
 There are a few other elements that can influence how quickly you progress:
 
 - **Weather conditions** can affect your ability to fly regularly. Fortunately, our locations in **Southport**, **St. Simons Island**, and surrounding areas offer generally favorable weather for flying throughout the year.
-- **Aircraft and instructor availability** are important too. High Tide Aviation has a well-maintained fleet and a team of certified flight instructors at each location to keep your training on track.
+- **Aircraft and instructor availability** are important too. High Tide Aviation has a well maintained fleet and a team of certified flight instructors at each location to keep your training on track.
 - **Student preparation** plays a big role. Studying between lessons and staying engaged with your ground school can help reduce the total number of hours you need.
 
 ---

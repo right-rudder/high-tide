@@ -1,6 +1,6 @@
 ---
 pubDate: "October 6, 2024"
-author: "Ed Simpson"
+author: "Jessica Ward"
 title: "High Tide Aviation Expands Flight Training Operations to Wallace, NC"
 description: "High Tide Aviation is expanding its flight training operations to Wallace, NC, at Wallace-Pender Airport (KACZ), serving aspiring pilots and military personnel from nearby communities."
 heroImage: "/src/assets/high-tide-aviation-front-sign-in-southport-nc.jpg"

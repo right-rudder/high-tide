@@ -1,5 +1,5 @@
 ---
-author: "Ed Simpson"
+author: "Jessica Ward"
 title: "More Than Flight Training: High Tide Aviation's Extended Services"
 description: "Explore the wide range of additional services offered by High Tide Aviation, including aircraft brokerage, management, airplane tours, helicopter tours, aerial photography, and videography, all based near Wilmington, NC, in Southport and Cape Fear."
 heroImage: "/src/assets/ocean-crest-pier-southport-wilmington-nc.webp"

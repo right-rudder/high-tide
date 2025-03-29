@@ -1,5 +1,5 @@
 ---
-author: "Ed Simpson"
+author: "Jessica Ward"
 title: "Why Flight Simulators Are Important: Train in the Redbird FMX"
 description: "Understand the essential role flight simulators play in pilot training, focusing on High Tide Aviation's Redbird FMX simulator, and how it enhances learning in a controlled environment at Southport, NC."
 heroImage: "/src/assets/redbird-fmx-simulator-exterior-high-tide-aviation-flight-school.jpg"

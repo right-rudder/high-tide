@@ -4,4 +4,5 @@ description: "The latest updates and events from High Tide Aviation in March 202
 pubDate: "March 8, 2024"
 heroImage: "/src/assets/cessna-flying-over-southport.jpg"
 url: "https://mailchi.mp/11032c89faa1/high-tide-aviation-march-newsletter"
+author: "Jessica Ward"
 ---

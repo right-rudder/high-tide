@@ -1,6 +1,6 @@
 ---
 pubDate: "December 27, 2024"
-author: "Ed Simpson"
+author: "Jessica Ward"
 title: "The Thrill of Discovery Flights: Experience the Magic of Flight with High Tide Aviation"
 description: "Have you ever wondered what it feels like to soar above the clouds? To experience the freedom and exhilaration of flight firsthand? A discovery flight with High Tide Aviation offers a unique opportunity to explore your passion for aviation and experience the magic of flight in a safe and supportive environment. "
 heroImage: "/src/assets/heading-to-training-at-high-tide-aviation-st-simons-island-ga.jpg"

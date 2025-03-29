@@ -1,6 +1,6 @@
 ---
 pubDate: "July 12, 2024"
-author: "High Tide Training Support"
+author: "Jessica Ward"
 title: "The Written Exam: What Is It and Why Do I Need It?"
 description: "Learn about the importance of the Private Pilot License (PPL) written exam, its significance in your pilot training, and how High Tide Aviation prepares you for success."
 heroImage: "/src/assets/student-receiving-a-pilot-certificate.jpg"

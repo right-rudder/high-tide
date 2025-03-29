@@ -1,6 +1,7 @@
 ---
 title: "How Airplanes Defy Gravity: The Magic of Lift"
 description: "Discover the science behind how airplanes fly! Learn about lift, Bernoulli's principle, wing design, angle of attack, and flaps, and understand how these elements defy gravity."
+author: "Jessica Ward"
 pubDate: "Feb 27 2025"
 heroImage: "/src/assets/high-tide-aviation-plane-in-the-sky.jpg"
 ---

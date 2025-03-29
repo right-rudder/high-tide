@@ -1,6 +1,7 @@
 ---
 title: "Aircraft Rentals: What to Know"
 description: "Aircraft rentals are a popular way to have a fun and unique adventure. Whether you know how to fly or know someone who can, renting an airplane can be fun and exciting."
+author: "Jessica Ward"
 pubDate: "Feb 6, 2023"
 heroImage: "/src/assets/cessna-about-to-take-off.jpg"
 ---

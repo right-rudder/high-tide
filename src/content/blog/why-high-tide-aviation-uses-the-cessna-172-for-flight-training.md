@@ -1,6 +1,6 @@
 ---
 pubDate: "May 16, 2024"
-author: "Ed Simpson"
+author: "Jessica Ward"
 title: "Why High Tide Aviation Uses the Cessna 172 for Flight Training"
 description: "Understand why the Cessna 172 Skyhawk is a standout among pilot training aircraft and how High Tide Aviation uses it to train expert pilots in Southport, NC, and St Simons Island, GA."
 heroImage: "/src/assets/high-tide-fleet.jpg"

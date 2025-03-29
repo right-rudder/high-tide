@@ -1,6 +1,7 @@
 ---
 title: "Three Reasons to Book Scenic Air Tours"
 description: "Are you ready to go exploring? Our popular scenic air tours are perfect for you! We are always looking for ways to help connect people to beautiful scenery and give them an appreciation for aircraft. Our science air tours are the perfect way to do that."
+author: "Jessica Ward"
 pubDate: "Apr 5, 2023"
 heroImage: "/src/assets/scenic-air-tours.jpeg"
 ---
