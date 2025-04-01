@@ -69,6 +69,10 @@ export const navbarLinks = [
         link: "/job-application",
       },
       {
+        name: "Visit Us",
+        link: "/school-tour",
+      },
+      {
         name: "Contact Us",
         link: "/contact-us",
       },

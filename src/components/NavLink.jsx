@@ -39,7 +39,7 @@ const NavLink = ({ menuItem, pathname, toggled, onShow }) => {
       {linkOrDropdown}
       <div
         className={`overflow-hidden ${
-          toggled ? "max-h-[30rem] opacity-100" : "max-h-0 opacity-0"
+          toggled ? "max-h-[34rem] opacity-100" : "max-h-0 opacity-0"
         } w-64 duration-700 ease-in-out absolute bg-white flex flex-col whitespace-nowrap top-[61px]`}
       >
         {menuItem.submenu.map((item) => (
