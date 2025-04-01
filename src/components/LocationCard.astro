@@ -1,0 +1,47 @@
+---
+const { name, price, imagePath, url, location } = Astro.props;
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  "/src/assets/*.{jpeg,jpg,png,gif,webp}",
+);
+if (!images[imagePath])
+  throw new Error(
+    `"${imagePath}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif,webp}"`,
+  );
+---
+
+<a
+  href={url}
+  target="_blank"
+  class="flex cursor-pointer flex-col bg-white group relative overflow-hidden h-[30rem]"
+>
+  <Image
+    src={images[imagePath]()}
+    alt={name}
+    class="h-full object-cover object-left group-hover:scale-105 duration-700 ease-in-out"
+    quality={10}
+  />
+  <div
+    class="absolute w-full h-full bg-dark-blue/15 -translate-x-[101%] group-hover:translate-x-0 duration-700"
+  >
+  </div>
+  <div
+    class="py-4 px-6 md:py-6 md:px-6 z-10 absolute bottom-0 left-0 bg-dark-blue/80 w-11/12"
+  >
+    <h2 class="text-white text-2xl font-medium md:mb-3 duration-700">
+      {name}
+    </h2>
+    <div class="flex flex-col gap-0 text-sm sm:text-sm">
+      <div class="flex gap-2">
+        <p class="text-white">Location:</p>
+        <p class="text-mustard-yellow">{location}</p>
+      </div>
+
+      <div class="flex gap-2">
+        <p class="text-white">Price:</p>
+        <p class="text-mustard-yellow">{price}</p>
+      </div>
+    </div>
+  </div>
+</a>
