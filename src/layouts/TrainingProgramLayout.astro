@@ -8,6 +8,7 @@ import { Image } from "astro:assets";
 import { FaArrowAltCircleRight } from "react-icons/fa";
 import FlightProgramCard from "../components/FlightProgramCard.astro";
 import PricingComponent from "../components/PricingComponent";
+import ToursCTA from "../components/ToursCTA.astro";
 const {
   bannerImagePath,
   imagePath,
@@ -212,4 +213,6 @@ function getLastWord(str) {
       </div>
     </div>
   </section>
+
+  <ToursCTA />
 </BaseLayout>
