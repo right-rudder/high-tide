@@ -11,5 +11,10 @@ document.addEventListener("DOMContentLoaded", function () {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
+    pagination: {
+      el: ".swiper-pagination", // Specify the pagination element
+      clickable: true, // Make the pagination clickable
+    },
+    loop: true,
   });
 });
