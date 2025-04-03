@@ -1,0 +1,74 @@
+---
+const {
+  name,
+  rentalPrice,
+  imagePath,
+  slug,
+  model,
+  hasRibbon,
+  ribbonTitle,
+  horsepower,
+  imagesArray,
+  usableLoad,
+} = Astro.props;
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
+import PlaneCarousel from "./PlaneCarousel";
+import PlaneCarousel2 from "./PlaneCarousel2.astro";
+
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  "/src/assets/*.{jpeg,jpg,png,gif,webp}",
+);
+if (!images[imagePath]) {
+  throw new Error(
+    `"${imagePath}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif,webp}"`,
+  );
+}
+---
+
+<div
+  class="max-w-xl gap-5 lg:max-w-6xl w-full mx-auto flex flex-col lg:flex-row items-center"
+>
+  <!-- <PlaneCarousel
+    client:load
+    imagesArray={newImagesArray}
+    swiperClass="inline lg:h-[27rem] lg:flex-[4_4_0] w-full"
+  /> -->
+  <div class="flex-[4_4_0]">
+    <PlaneCarousel2 imagesArray={imagesArray} />
+  </div>
+  <div
+    class="flex flex-1 w-full h-full py-8 px-10 flex-col justify-around gap-2 bg-mustard-yellow/15"
+  >
+    <div class="flex flex-col gap-2">
+      <h4 class="text-dark-blue font-medium">Model:</h4>
+      <p class="text-medium-blue">{model}</p>
+    </div>
+    <hr />
+    <div class="flex flex-col gap-2">
+      <h4 class="text-dark-blue font-medium">Tail Number:</h4>
+      <p class="text-medium-blue">{slug}</p>
+    </div>
+    <hr />
+    <div class="flex flex-col gap-2">
+      <h4 class="text-dark-blue font-medium">Horsepower:</h4>
+      <p class="text-medium-blue">{horsepower}</p>
+    </div>
+    <hr />
+    <div class="flex flex-col gap-2">
+      <h4 class="text-dark-blue font-medium">Usable Load:</h4>
+      <p class="text-medium-blue">{usableLoad}</p>
+    </div>
+    {
+      rentalPrice && (
+        <>
+          <hr />
+          <div class="flex flex-col gap-2">
+            <h4 class="text-dark-blue font-medium">Rental Price:</h4>
+            <p class="text-medium-blue">{rentalPrice}</p>
+          </div>
+        </>
+      )
+    }
+  </div>
+</div>

@@ -3,6 +3,8 @@ export const fleet = [
     name: "N7085G",
     slug: "N7085G",
     rentalPrice: "$190 /hr wet",
+    usableLoad: "882 lbs",
+    horsepower: "150 HP",
     usableFuel: "38 gal",
     model: "Cessna 172K",
     equipment: [
@@ -25,6 +27,8 @@ export const fleet = [
     name: "N35461",
     slug: "N35461",
     rentalPrice: "$190 /hr wet",
+    usableLoad: "913.79 lbs",
+    horsepower: "150 HP",
     usableFuel: "38 gal",
     model: "Cessna 172I",
     equipment: [
@@ -45,6 +49,8 @@ export const fleet = [
     name: "N79072",
     slug: "N79072",
     rentalPrice: "$190 /hr wet",
+    usableLoad: "891.5 lbs",
+    horsepower: "150 HP",
     usableFuel: "38 gal",
     model: "Cessna 172K",
     equipment: [
@@ -67,6 +73,8 @@ export const fleet = [
     name: "N8234U",
     slug: "N8234U",
     rentalPrice: "$190 /hr wet",
+    usableLoad: "916.7 lbs",
+    horsepower: "145 HP",
     usableFuel: "38 gal",
     model: "Cessna 172F",
     equipment: ["Garmin GNS 430W"],
@@ -81,6 +89,8 @@ export const fleet = [
     name: "N8409L",
     slug: "N8409L",
     rentalPrice: "$190 /hr wet",
+    usableLoad: "930.6 lbs",
+    horsepower: "160 HP",
     usableFuel: "38 gal",
     model: "Cessna 172I",
     equipment: [
@@ -107,6 +117,8 @@ export const fleet = [
     name: "N79136",
     slug: "N79136",
     rentalPrice: "$190 /hr wet",
+    usableLoad: "892.72 lbs",
+    horsepower: "150 HP",
     usableFuel: "38 gal",
     model: "Cessna 172K",
     equipment: [
@@ -128,6 +140,8 @@ export const fleet = [
     name: "N79475",
     slug: "N79475",
     rentalPrice: "$190 /hr wet",
+    usableLoad: "1089.2 lbs",
+    horsepower: "180 HP",
     usableFuel: "- gal",
     model: "Cessna 172K",
     equipment: [],
@@ -143,6 +157,8 @@ export const fleet = [
     slug: "RedbirdFMX",
     rentalPrice: "$85 /hr",
     specialUrl: "/flight-simulator",
+    usableLoad: "N/A",
+    horsepower: "N/A",
     usableFuel: "N/A",
     model: "Redbird FMX",
     equipment: [],
@@ -165,6 +181,8 @@ export const fleet = [
   {
     name: "Bonanza",
     slug: "N4457S",
+    usableLoad: "-- lbs",
+    horsepower: "-- HP",
     usableFuel: "74 gal",
     model: "Beechcraft Bonanza",
     equipment: [],
@@ -178,6 +196,8 @@ export const fleet = [
   {
     name: "N626H",
     slug: "N626H",
+    usableLoad: "-- lbs",
+    horsepower: "-- HP",
     usableFuel: "127 gal",
     model: "Beechcraft Baron B55",
     equipment: ["Garmin G500 glass panel", "Garmin GTN 650"],
@@ -191,6 +211,8 @@ export const fleet = [
   {
     name: "N531Q",
     slug: "N531Q",
+    usableLoad: "-- lbs",
+    horsepower: "-- HP",
     usableFuel: "127 gal",
     model: "Beechcraft Baron B55",
     equipment: ["Dual Garmin G5s", "Garmin GNS 430W"],
@@ -204,6 +226,8 @@ export const fleet = [
   {
     name: "N570H",
     slug: "N570H",
+    usableLoad: "-- lbs",
+    horsepower: "-- HP",
     usableFuel: "29.5 gal",
     model: "Robinson R44 Raven I",
     equipment: [],
@@ -217,6 +241,8 @@ export const fleet = [
   {
     name: "N830FM",
     slug: "N830FM",
+    usableLoad: "-- lbs",
+    horsepower: "-- HP",
     usableFuel: "29.5 gal",
     model: "Robinson R44 Raven II",
     equipment: ["IFR Certified"],
