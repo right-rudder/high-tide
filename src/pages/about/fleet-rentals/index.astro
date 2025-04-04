@@ -6,6 +6,7 @@ import { Image } from "astro:assets";
 import Intro from "../../../assets/high-tide-aviation-logo-on-plane-tail.jpg";
 import { fleet } from "../../../data/fleet";
 import PlaneCard from "../../../components/PlaneCard.astro";
+import PlaneCard2 from "../../../components/PlaneCard2.astro";
 ---
 
 <BaseLayout
@@ -71,12 +72,12 @@ import PlaneCard from "../../../components/PlaneCard.astro";
       <h3 class="text-5xl text-dark-blue font-bold leading-tight mb-5">
         Meet Our Cessna Skyhawk Fleet
       </h3>
-      <div class="grid gap-8 mt-5 lg:grid-cols-2">
+      <div class="grid gap-8 mt-5">
         {
           fleet
             .slice(0, 8)
             .map((plane) => (
-              <PlaneCard
+              <PlaneCard2
                 name={plane.name}
                 rentalPrice={plane.rentalPrice}
                 imagePath={plane.imagePath}
@@ -85,6 +86,11 @@ import PlaneCard from "../../../components/PlaneCard.astro";
                 hasRibbon={plane.hasRibbon}
                 ribbonTitle={plane.ribbonTitle}
                 specialUrl={plane.specialUrl}
+                imagesArray={plane.imagesArray}
+                usableFuel={plane.usableFuel}
+                usefulLoad={plane.usefulLoad}
+                horsepower={plane.horsepower}
+                equipment={plane.equipment}
               />
             ))
         }
@@ -100,17 +106,25 @@ import PlaneCard from "../../../components/PlaneCard.astro";
       <h3 class="text-5xl text-dark-blue font-bold leading-tight mb-5">
         Our Advanced Aircraft
       </h3>
-      <div class="grid gap-8 mt-5 lg:grid-cols-2">
+      <div class="grid gap-8 mt-5">
         {
           fleet
             .slice(8)
             .map((plane) => (
-              <PlaneCard
+              <PlaneCard2
                 name={plane.name}
                 rentalPrice={plane.rentalPrice}
                 imagePath={plane.imagePath}
                 slug={plane.slug}
                 model={plane.model}
+                hasRibbon={plane.hasRibbon}
+                ribbonTitle={plane.ribbonTitle}
+                specialUrl={plane.specialUrl}
+                imagesArray={plane.imagesArray}
+                usableFuel={plane.usableFuel}
+                usefulLoad={plane.usefulLoad}
+                horsepower={plane.horsepower}
+                equipment={plane.equipment}
               />
             ))
         }
