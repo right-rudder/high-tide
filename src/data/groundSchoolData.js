@@ -146,6 +146,28 @@ const groundSchool = {
         cta: "Contact for Custom Quote",
       },
     ],
+    online: [
+      {
+        name: "Private Pilot",
+        id: "tier-private-pilot-online",
+        href: "#",
+        price: "$299",
+        discountedPrice: "$275",
+        description: "Online ground school for aspiring pilots.",
+        schedule: "Start anytime",
+        features: [
+          "Lifetime enrollment",
+          "Interactive lessons",
+          "Instructor monitoring",
+          "One-time Payment",
+          "FAA Written Endorsement",
+          "Pass your exam GUARANTEED",
+        ],
+        featured: false,
+        cta: "Get Started",
+        url: "https://hightideaviation.groundschool.com/",
+      },
+    ],
   },
   futurePathways: [
     {

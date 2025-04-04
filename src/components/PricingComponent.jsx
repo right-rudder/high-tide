@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { RadioGroup } from "@headlessui/react";
 import { CheckIcon, XMarkIcon } from "@heroicons/react/20/solid";
 import { FaRegHourglassHalf } from "react-icons/fa6";
@@ -16,6 +16,18 @@ function classNames(...classes) {
 }
 
 export default function PricingComponent({ tiers, program, meet }) {
+  const initialLocations = [
+    { value: "southport", label: "Southport" },
+    { value: "simons", label: "St Simons Island" },
+  ];
+
+  const [locations, setLocations] = useState(() => {
+    if (tiers.online) {
+      return [...initialLocations, { value: "online", label: "Online" }];
+    }
+    return initialLocations;
+  });
+
   const [location, setLocation] = useState(locations[0]);
 
   return (
@@ -35,7 +47,7 @@ export default function PricingComponent({ tiers, program, meet }) {
           <RadioGroup
             value={location}
             onChange={setLocation}
-            className="grid grid-cols-2 gap-x-1 rounded-full p-1 text-center text-xs font-semibold leading-5 ring-2 ring-inset ring-medium-blue"
+            className={`grid grid-cols-${locations.length} gap-x-1 rounded-full p-1 text-center text-xs font-semibold leading-5 ring-2 ring-inset ring-medium-blue`}
           >
             <RadioGroup.Label className="sr-only">
               Payment location
@@ -126,10 +138,17 @@ export default function PricingComponent({ tiers, program, meet }) {
                   className={classNames(
                     tier.featured ? "text-white" : "text-gray-900",
                     "text-4xl font-bold tracking-tight",
+                    tier.discountedPrice ? "line-through" : "",
                   )}
                 >
                   {tier.price}
                 </span>
+
+                {tier.discountedPrice && (
+                  <span className="text-2xl font-bold leading-6">
+                    {tier.discountedPrice}
+                  </span>
+                )}
 
                 {tier.price !== "Custom" && (
                   <span
@@ -143,7 +162,8 @@ export default function PricingComponent({ tiers, program, meet }) {
                 )}
               </p>
               <a
-                href="/enrollment-form"
+                href={tier.url ? tier.url : "/enrollment-form"}
+                target={tier.url ? "_blank" : ""}
                 aria-describedby={tier.id}
                 className={classNames(
                   tier.featured
