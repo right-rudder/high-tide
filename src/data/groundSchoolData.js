@@ -157,9 +157,9 @@ const groundSchool = {
         schedule: "Start anytime",
         features: [
           "Lifetime enrollment",
+          "One-time Payment",
           "Interactive lessons",
           "Instructor monitoring",
-          "One-time Payment",
           "FAA Written Endorsement",
           "Pass your exam GUARANTEED",
         ],
