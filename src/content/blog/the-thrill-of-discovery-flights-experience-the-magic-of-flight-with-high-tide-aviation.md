@@ -17,7 +17,6 @@ tags:
     "Flight lessons",
     "Cessna 172 training",
     "North Carolina aviation",
-    "Wallace-Pender Airport",
     "KACZ",
   ]
 ---

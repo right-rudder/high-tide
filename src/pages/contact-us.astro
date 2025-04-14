@@ -22,7 +22,7 @@ const CONTACT_US_FORM_WEBHOOK_URL = import.meta.env.CONTACT_US_FORM_WEBHOOK_URL;
 
 <BaseLayout
   siteTitle="Contact Us | High Tide Aviation"
-  siteDescription="Reach out to High Tide Aviation in Southport, NC; St Simons, GA; Wilmington NC; or Wallace, NC for any inquiries about flight training, aircraft rentals, or our other aviation services. Our team is here to assist you on your aviation journey."
+  siteDescription="Reach out to High Tide Aviation in Southport, NC; St Simons, GA; or Wilmington NC; for any inquiries about flight training, aircraft rentals, or our other aviation services. Our team is here to assist you on your aviation journey."
   siteKeywords="contact High Tide Aviation, flight school contact Southport NC, aviation inquiries Southeast Coast, High Tide Aviation support, pilot training questions Southport NC."
 >
   <Header
@@ -158,42 +158,6 @@ const CONTACT_US_FORM_WEBHOOK_URL = import.meta.env.CONTACT_US_FORM_WEBHOOK_URL;
               </div>
             </li>
           </ul>
-          <h3
-            class="text-3xl max-w-2xl mt-10 text-dark-blue font-bold leading-tight"
-          >
-            Wallace Location
-          </h3>
-          <ul class="flex flex-col gap-3 mt-3 text-gray-600">
-            <li class="flex gap-2 items-center">
-              <FaPhone className="size-4 text-mustard-yellow" />
-              <a
-                class="hover:text-medium-blue duration-300"
-                href=`tel:${PHONE_NUMBER}`>{PHONE_NUMBER}</a
-              >
-            </li>
-            <li class="flex gap-2">
-              <IoLocationSharp
-                className="size-4 mt-1 shrink-0 text-mustard-yellow"
-              />
-              <a
-                class="hover:text-medium-blue duration-300"
-                href="https://maps.app.goo.gl/s4BgrU8ekYS625d27"
-                target="_blank"
-              >
-                <p>250 Skydive Lane</p>
-                <p>Wallace, NC 28466</p>
-              </a>
-            </li>
-            <li class="flex gap-2">
-              <FaClock className="size-4 mt-1 shrink-0 text-mustard-yellow" />
-              <div class="flex flex-col">
-                <p>Mon - Thurs: 10AM - 5PM</p>
-                <p>Fri - Sat: 10AM - 6PM</p>
-                <p>Sun: Closed</p>
-                <p>All other times by appointment</p>
-              </div>
-            </li>
-          </ul>
         </div>
         <form
           id="contact-us-form"
@@ -302,22 +266,6 @@ const CONTACT_US_FORM_WEBHOOK_URL = import.meta.env.CONTACT_US_FORM_WEBHOOK_URL;
                   </label>
                 </div>
               </div>
-              <div class="relative flex gap-x-3">
-                <div class="flex h-6 items-center">
-                  <input
-                    id="wallace"
-                    value="Wallace, NC"
-                    name="campus"
-                    type="radio"
-                    class="h-4 w-4 rounded border-gray-300 text-main-color focus:ring-main-color"
-                  />
-                </div>
-                <div class="text-sm leading-6">
-                  <label for="wallace" class="text-gray-700"
-                    >Wallace, NC
-                  </label>
-                </div>
-              </div>
             </div>
           </fieldset>
 
@@ -376,14 +324,6 @@ const CONTACT_US_FORM_WEBHOOK_URL = import.meta.env.CONTACT_US_FORM_WEBHOOK_URL;
   <div class="flex flex-col md:flex-row">
     <iframe
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d759.1340441650116!2d-77.91133732738646!3d34.27502321694563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89a98bccbd60a291%3A0x8bd8c545e511c1c!2sAero%20Center%20Wilmington!5e0!3m2!1sen!2sca!4v1738100051537!5m2!1sen!2sca"
-      width="100%"
-      height="350"
-      style="border:0;"
-      allowfullscreen=""
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"></iframe>
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6558.878096236644!2d-78.004173!3d34.719326!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89abd6a4c0ca44ff%3A0xae306acb0e8c169f!2sHenderson%20Field%20Airport!5e0!3m2!1sen!2sca!4v1738099117150!5m2!1sen!2sca"
       width="100%"
       height="350"
       style="border:0;"

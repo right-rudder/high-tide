@@ -8,7 +8,7 @@ heroImage: "/src/assets/beech-bonanza-at-high-tide-aviation-wilmington-hangar.we
 
 If you have ever dreamed of becoming a pilot, one of the first questions that likely comes to mind is, **"How long does it take to learn to fly?"**
 
-The answer depends on your schedule, your learning style, and how often you are able to train. At **High Tide Aviation**, we offer professional flight instruction in **Southport, Wilmington, and Wallace, North Carolina**, as well as **St. Simons Island, Georgia**. No matter where you train, our team is dedicated to helping you reach your goals safely and efficiently.
+The answer depends on your schedule, your learning style, and how often you are able to train. At **High Tide Aviation**, we offer professional flight instruction in **Southport, Wilmington, North Carolina**, as well as **St. Simons Island, Georgia**. No matter where you train, our team is dedicated to helping you reach your goals safely and efficiently.
 
 Let’s take a look at what goes into the timeline for earning your wings.
 
@@ -64,7 +64,6 @@ High Tide Aviation offers Discovery Flights and complete pilot training programs
 
 - **Southport, NC**
 - **Wilmington, NC**
-- **Wallace, NC**
 - **St. Simons Island, GA**
 
 Whether your goal is to fly for fun or pursue a career in aviation, our team is ready to help you take flight.
