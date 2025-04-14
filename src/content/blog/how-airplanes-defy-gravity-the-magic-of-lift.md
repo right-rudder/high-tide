@@ -3,7 +3,7 @@ title: "How Airplanes Defy Gravity: The Magic of Lift"
 description: "Discover the science behind how airplanes fly! Learn about lift, Bernoulli's principle, wing design, angle of attack, and flaps, and understand how these elements defy gravity."
 author: "Jessica Ward"
 pubDate: "Feb 27 2025"
-heroImage: "/src/assets/high-tide-aviation-plane-in-the-sky.jpg"
+heroImage: "/src/assets/cessna-n79136-flying-over-st-simons.jpg"
 ---
 
 Have you ever gazed up at an airplane soaring effortlessly through the sky, and wondered, "How does it stay up there?" It seems like magic, doesn't it? But it's not magic – it's science! The secret to flight lies in a fundamental principle called **lift**. Let's dive into the fascinating world of aerodynamics and unravel the mysteries of how airplanes conquer gravity.
