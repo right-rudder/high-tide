@@ -339,33 +339,34 @@ import StudenPilot from "../assets/pilot-flying-over-southport.jpg";
       </div>
     </div>
   </section>
-</BaseLayout>
 
-<script define:vars={{ reviews }}>
-  let currentIndex = 0;
-  const reviewTextElement = document.getElementById("review-text");
-  const reviewAuthorElement = document.getElementById("review-author");
-  const reviewsContainerElement = document.getElementById("reviews-container");
+  <script define:vars={{ reviews }}>
+    let currentIndex = 0;
+    const reviewTextElement = document.getElementById("review-text");
+    const reviewAuthorElement = document.getElementById("review-author");
+    const reviewsContainerElement =
+      document.getElementById("reviews-container");
 
-  function showMessage() {
-    if (reviewAuthorElement && reviewTextElement) {
-      reviewTextElement.textContent = reviews[currentIndex].review;
-      reviewAuthorElement.textContent = `— ${reviews[currentIndex].name}`;
+    function showMessage() {
+      if (reviewAuthorElement && reviewTextElement) {
+        reviewTextElement.textContent = reviews[currentIndex].review;
+        reviewAuthorElement.textContent = `— ${reviews[currentIndex].name}`;
+      }
+      reviewsContainerElement?.classList.add("opacity-100");
+      reviewsContainerElement?.classList.remove("opacity-0");
+
+      currentIndex = (currentIndex + 1) % reviews.length;
+
+      setTimeout(hideMessage, 6000);
     }
-    reviewsContainerElement?.classList.add("opacity-100");
-    reviewsContainerElement?.classList.remove("opacity-0");
 
-    currentIndex = (currentIndex + 1) % reviews.length;
+    function hideMessage() {
+      reviewsContainerElement?.classList.remove("opacity-100");
+      reviewsContainerElement?.classList.add("opacity-0");
 
-    setTimeout(hideMessage, 6000);
-  }
+      setTimeout(showMessage, 1200);
+    }
 
-  function hideMessage() {
-    reviewsContainerElement?.classList.remove("opacity-100");
-    reviewsContainerElement?.classList.add("opacity-0");
-
-    setTimeout(showMessage, 1200);
-  }
-
-  showMessage();
-</script>
+    showMessage();
+  </script>
+</BaseLayout>

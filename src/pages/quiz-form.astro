@@ -552,107 +552,107 @@ const QUIZ_FORM_WEBHOOK_URL = import.meta.env.QUIZ_FORM_WEBHOOK_URL;
       >
     </form>
   </section>
-</BaseLayout>
 
-<script define:vars={{ QUIZ_FORM_WEBHOOK_URL }}>
-  // Wait for the DOM content to be fully loaded
-  document.addEventListener("DOMContentLoaded", function () {
-    // Get the quiz form element
-    const quizForm = document.getElementById("quiz-form");
+  <script define:vars={{ QUIZ_FORM_WEBHOOK_URL }}>
+    // Wait for the DOM content to be fully loaded
+    document.addEventListener("DOMContentLoaded", function () {
+      // Get the quiz form element
+      const quizForm = document.getElementById("quiz-form");
 
-    // Check if the quiz form element exists
-    if (quizForm !== null) {
-      // Add submit event listener to the quiz form
-      quizForm.addEventListener("submit", function (event) {
-        // Prevent the default form submission
-        event.preventDefault();
+      // Check if the quiz form element exists
+      if (quizForm !== null) {
+        // Add submit event listener to the quiz form
+        quizForm.addEventListener("submit", function (event) {
+          // Prevent the default form submission
+          event.preventDefault();
 
-        // Serialize the form data
-        const formData = new FormData(quizForm);
+          // Serialize the form data
+          const formData = new FormData(quizForm);
 
-        // Check the value of the honeypot field
-        const confirmEmailValue = formData.get("confirm-email");
-        if (confirmEmailValue === "" || confirmEmailValue === null) {
-          // If the honeypot field is empty, it's a human
-          // Set the form action to the URL for processing the form and redirecting to thank you
-          quizForm.action = QUIZ_FORM_WEBHOOK_URL;
-        }
-
-        const inspirations = [];
-        formData.getAll("inspirations").forEach((inspiration) => {
-          inspirations.push(inspiration);
-        });
-
-        formData.delete("inspirations");
-
-        formData.append("what-inspires-you", inspirations.join(","));
-
-        const kindOfGuidance = [];
-        formData.getAll("kind-of-guidance").forEach((guidance) => {
-          kindOfGuidance.push(guidance);
-        });
-
-        formData.delete("kind-of-guidance");
-
-        formData.append(
-          "what-kind-of-guidance-and-support-you-prefer",
-          kindOfGuidance.join(","),
-        );
-
-        // Convert FormData to URLSearchParams
-        const urlSearchParams = new URLSearchParams();
-        for (const pair of formData.entries()) {
-          urlSearchParams.append(pair[0], pair[1]);
-        }
-
-        // Send an AJAX request to submit the form
-        const xhr = new XMLHttpRequest();
-        xhr.open("POST", quizForm.action);
-        xhr.setRequestHeader(
-          "Content-Type",
-          "application/x-www-form-urlencoded",
-        );
-        xhr.onload = function () {
-          // Check if the request was successful (status 200)
-          if (xhr.status === 200) {
-            // Redirect the user after a successful form submission
-            window.location.href = "/quiz-confirmation";
-          } else {
-            // Handle errors if any
-            console.error("Form submission failed:", xhr.statusText);
+          // Check the value of the honeypot field
+          const confirmEmailValue = formData.get("confirm-email");
+          if (confirmEmailValue === "" || confirmEmailValue === null) {
+            // If the honeypot field is empty, it's a human
+            // Set the form action to the URL for processing the form and redirecting to thank you
+            quizForm.action = QUIZ_FORM_WEBHOOK_URL;
           }
-        };
-        xhr.onerror = function () {
-          // Handle network errors
-          console.error("Network error occurred while submitting the form.");
-        };
-        xhr.send(urlSearchParams);
-      });
-    } else {
-      console.error("Quiz form element not found.");
-    }
-  });
 
-  const checkbox = document.getElementById("agree-data-collection");
-  const submitButton = document.getElementById("submit-button");
+          const inspirations = [];
+          formData.getAll("inspirations").forEach((inspiration) => {
+            inspirations.push(inspiration);
+          });
 
-  checkbox.addEventListener("change", function () {
-    if (checkbox.checked) {
-      submitButton.disabled = false;
-      submitButton.classList.remove(
-        "cursor-not-allowed",
-        "bg-gray-400",
-        "hover:bg-gray-400",
-        "hover:text-white",
-      );
-    } else {
-      submitButton.disabled = true;
-      submitButton.classList.add(
-        "cursor-not-allowed",
-        "bg-gray-400",
-        "hover:bg-gray-400",
-        "hover:text-white",
-      );
-    }
-  });
-</script>
+          formData.delete("inspirations");
+
+          formData.append("what-inspires-you", inspirations.join(","));
+
+          const kindOfGuidance = [];
+          formData.getAll("kind-of-guidance").forEach((guidance) => {
+            kindOfGuidance.push(guidance);
+          });
+
+          formData.delete("kind-of-guidance");
+
+          formData.append(
+            "what-kind-of-guidance-and-support-you-prefer",
+            kindOfGuidance.join(","),
+          );
+
+          // Convert FormData to URLSearchParams
+          const urlSearchParams = new URLSearchParams();
+          for (const pair of formData.entries()) {
+            urlSearchParams.append(pair[0], pair[1]);
+          }
+
+          // Send an AJAX request to submit the form
+          const xhr = new XMLHttpRequest();
+          xhr.open("POST", quizForm.action);
+          xhr.setRequestHeader(
+            "Content-Type",
+            "application/x-www-form-urlencoded",
+          );
+          xhr.onload = function () {
+            // Check if the request was successful (status 200)
+            if (xhr.status === 200) {
+              // Redirect the user after a successful form submission
+              window.location.href = "/quiz-confirmation";
+            } else {
+              // Handle errors if any
+              console.error("Form submission failed:", xhr.statusText);
+            }
+          };
+          xhr.onerror = function () {
+            // Handle network errors
+            console.error("Network error occurred while submitting the form.");
+          };
+          xhr.send(urlSearchParams);
+        });
+      } else {
+        console.error("Quiz form element not found.");
+      }
+    });
+
+    const checkbox = document.getElementById("agree-data-collection");
+    const submitButton = document.getElementById("submit-button");
+
+    checkbox.addEventListener("change", function () {
+      if (checkbox.checked) {
+        submitButton.disabled = false;
+        submitButton.classList.remove(
+          "cursor-not-allowed",
+          "bg-gray-400",
+          "hover:bg-gray-400",
+          "hover:text-white",
+        );
+      } else {
+        submitButton.disabled = true;
+        submitButton.classList.add(
+          "cursor-not-allowed",
+          "bg-gray-400",
+          "hover:bg-gray-400",
+          "hover:text-white",
+        );
+      }
+    });
+  </script>
+</BaseLayout>

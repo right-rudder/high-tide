@@ -331,112 +331,112 @@ const CONTACT_US_FORM_WEBHOOK_URL = import.meta.env.CONTACT_US_FORM_WEBHOOK_URL;
       loading="lazy"
       referrerpolicy="no-referrer-when-downgrade"></iframe>
   </div>
-</BaseLayout>
 
-<script define:vars={{ CONTACT_US_FORM_WEBHOOK_URL }}>
-  // Wait for the DOM content to be fully loaded
-  let isRecaptchaVerified = false;
+  <script define:vars={{ CONTACT_US_FORM_WEBHOOK_URL }}>
+    // Wait for the DOM content to be fully loaded
+    let isRecaptchaVerified = false;
 
-  document.addEventListener("DOMContentLoaded", function () {
-    // Get the contactUs form element
-    const contactUsForm = document.getElementById("contact-us-form");
+    document.addEventListener("DOMContentLoaded", function () {
+      // Get the contactUs form element
+      const contactUsForm = document.getElementById("contact-us-form");
 
-    // Check if the contactUs form element exists
-    if (contactUsForm !== null) {
-      // Add submit event listener to the contactUs form
-      contactUsForm.addEventListener("submit", function (event) {
-        // Prevent the default form submission
-        event.preventDefault();
+      // Check if the contactUs form element exists
+      if (contactUsForm !== null) {
+        // Add submit event listener to the contactUs form
+        contactUsForm.addEventListener("submit", function (event) {
+          // Prevent the default form submission
+          event.preventDefault();
 
-        if (!isRecaptchaVerified) {
-          alert("Please complete the reCAPTCHA verification.");
-          return;
-        }
-
-        // Serialize the form data
-        const formData = new FormData(contactUsForm);
-
-        // Check the value of the honeypot field
-        const confirmEmailValue = formData.get("confirm-email");
-        if (confirmEmailValue === "" || confirmEmailValue === null) {
-          // If the honeypot field is empty, it's a human
-          // Set the form action to the URL for processing the form and redirecting to thank you
-          contactUsForm.action = CONTACT_US_FORM_WEBHOOK_URL;
-        }
-
-        // Convert FormData to URLSearchParams
-        const urlSearchParams = new URLSearchParams();
-        for (const pair of formData.entries()) {
-          urlSearchParams.append(pair[0], pair[1]);
-        }
-
-        // Send an AJAX request to submit the form
-        const xhr = new XMLHttpRequest();
-        xhr.open("POST", contactUsForm.action);
-        xhr.setRequestHeader(
-          "Content-Type",
-          "application/x-www-form-urlencoded",
-        );
-        xhr.onload = function () {
-          // Check if the request was successful (status 200)
-          if (xhr.status === 200) {
-            // Redirect the user after a successful form submission
-            window.location.href = "/contact-us-confirmation";
-          } else {
-            // Handle errors if any
-            console.error("Form submission failed:", xhr.statusText);
+          if (!isRecaptchaVerified) {
+            alert("Please complete the reCAPTCHA verification.");
+            return;
           }
-        };
-        xhr.onerror = function () {
-          // Handle network errors
-          console.error("Network error occurred while submitting the form.");
-        };
-        xhr.send(urlSearchParams);
-      });
-    } else {
-      console.error("Contact us form element not found.");
+
+          // Serialize the form data
+          const formData = new FormData(contactUsForm);
+
+          // Check the value of the honeypot field
+          const confirmEmailValue = formData.get("confirm-email");
+          if (confirmEmailValue === "" || confirmEmailValue === null) {
+            // If the honeypot field is empty, it's a human
+            // Set the form action to the URL for processing the form and redirecting to thank you
+            contactUsForm.action = CONTACT_US_FORM_WEBHOOK_URL;
+          }
+
+          // Convert FormData to URLSearchParams
+          const urlSearchParams = new URLSearchParams();
+          for (const pair of formData.entries()) {
+            urlSearchParams.append(pair[0], pair[1]);
+          }
+
+          // Send an AJAX request to submit the form
+          const xhr = new XMLHttpRequest();
+          xhr.open("POST", contactUsForm.action);
+          xhr.setRequestHeader(
+            "Content-Type",
+            "application/x-www-form-urlencoded",
+          );
+          xhr.onload = function () {
+            // Check if the request was successful (status 200)
+            if (xhr.status === 200) {
+              // Redirect the user after a successful form submission
+              window.location.href = "/contact-us-confirmation";
+            } else {
+              // Handle errors if any
+              console.error("Form submission failed:", xhr.statusText);
+            }
+          };
+          xhr.onerror = function () {
+            // Handle network errors
+            console.error("Network error occurred while submitting the form.");
+          };
+          xhr.send(urlSearchParams);
+        });
+      } else {
+        console.error("Contact us form element not found.");
+      }
+    });
+
+    const checkbox = document.getElementById("agree-data-collection");
+    const submitButton = document.getElementById("submit-button");
+
+    checkbox.addEventListener("change", function () {
+      if (checkbox.checked) {
+        submitButton.disabled = false;
+        submitButton.classList.remove(
+          "cursor-not-allowed",
+          "bg-gray-400",
+          "hover:bg-gray-400",
+          "hover:text-white",
+        );
+      } else {
+        submitButton.disabled = true;
+        submitButton.classList.add(
+          "cursor-not-allowed",
+          "bg-gray-400",
+          "hover:bg-gray-400",
+          "hover:text-white",
+        );
+      }
+    });
+
+    function onRecaptchaSuccess(token) {
+      fetch("/recaptcha", {
+        method: "POST",
+        body: JSON.stringify({ recaptcha: token }),
+      })
+        .then((response) => response.json())
+        .then((gResponse) => {
+          if (gResponse.success) {
+            isRecaptchaVerified = true;
+          } else {
+            isRecaptchaVerified = false;
+            alert("reCAPTCHA verification failed. Please try again.");
+          }
+        });
     }
-  });
 
-  const checkbox = document.getElementById("agree-data-collection");
-  const submitButton = document.getElementById("submit-button");
-
-  checkbox.addEventListener("change", function () {
-    if (checkbox.checked) {
-      submitButton.disabled = false;
-      submitButton.classList.remove(
-        "cursor-not-allowed",
-        "bg-gray-400",
-        "hover:bg-gray-400",
-        "hover:text-white",
-      );
-    } else {
-      submitButton.disabled = true;
-      submitButton.classList.add(
-        "cursor-not-allowed",
-        "bg-gray-400",
-        "hover:bg-gray-400",
-        "hover:text-white",
-      );
-    }
-  });
-
-  function onRecaptchaSuccess(token) {
-    fetch("/recaptcha", {
-      method: "POST",
-      body: JSON.stringify({ recaptcha: token }),
-    })
-      .then((response) => response.json())
-      .then((gResponse) => {
-        if (gResponse.success) {
-          isRecaptchaVerified = true;
-        } else {
-          isRecaptchaVerified = false;
-          alert("reCAPTCHA verification failed. Please try again.");
-        }
-      });
-  }
-
-  window.onRecaptchaSuccess = onRecaptchaSuccess; // Make the function globally accessible
-</script>
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    window.onRecaptchaSuccess = onRecaptchaSuccess; // Make the function globally accessible
+  </script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</BaseLayout>
