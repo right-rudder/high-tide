@@ -1,0 +1,296 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+import Banner from "../../assets/purdue-global-horizontal-logo.png";
+import { IoIosArrowRoundForward } from "react-icons/io";
+import { BsListCheck } from "react-icons/bs";
+import { BsPersonFillUp } from "react-icons/bs";
+import { BsClipboardCheckFill } from "react-icons/bs";
+import { GiReceiveMoney } from "react-icons/gi";
+import { FaArrowAltCircleRight, FaMoneyCheckAlt } from "react-icons/fa";
+import { MdCardMembership } from "react-icons/md";
+import { IoSchoolSharp } from "react-icons/io5";
+import { FaUsers } from "react-icons/fa";
+---
+
+<BaseLayout
+  siteTitle="Purdue Global | High Tide Aviation"
+  siteDescription="Our partnership with Purdue Global offers benefits to our flight school students who are interested in advancing their aviation career. The School of Aviation includes online bachelor’s degrees in professional flight or aviation management."
+  siteKeywords="Purdue Global, High Tide Aviation, flight school, aviation career, online bachelor’s degrees, professional flight, aviation management, flight training, Southport NC"
+>
+  <Header
+    slot="header"
+    image={Banner}
+    title="Purdue University’s School of Aviation"
+    alt="Purdue Global logo"
+  />
+
+  <section class="py-24 px-5 bg-medium-blue/10 scroll-my-20">
+    <div
+      class="max-w-xl gap-10 lg:max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:gap-20"
+    >
+      <div class="flex flex-col lg:flex-1">
+        <h2 class="uppercase text-medium-blue font-bold tracking-widest">
+          Purdue Global
+        </h2>
+        <h3 class="text-5xl text-dark-blue font-bold leading-tight">
+          Your Path to a Successful Aviation Career
+        </h3>
+        <p class="text-gray-500 leading-relaxed my-5">
+          Our partnership with Purdue Global offers benefits to our flight
+          school students who are interested in advancing their aviation career.
+          The School of Aviation includes online bachelor’s degrees in
+          professional flight or aviation management.
+        </p>
+        <a
+          href="http://hightide.purdueglobal.edu/"
+          target="_blank"
+          class="btn-blue">Enroll Now</a
+        >
+      </div>
+
+      <div class="flex-1 w-full">
+        <iframe
+          src="https://tube.rvere.com/embed?v=60LpO_jJvTA"
+          class="w-full aspect-video"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 px-5 bg-white scroll-my-20">
+    <div
+      class="max-w-xl gap-10 lg:max-w-7xl mx-auto flex flex-col lg:flex-row lg:gap-20"
+    >
+      <div class="flex-1 flex flex-col gap-5">
+        <h2
+          class="text-lg text-dark-blue uppercase font-semibold tracking-widest duration-700"
+        >
+          BS in Professional Flight
+        </h2>
+        <p class="text-gray-600 leading-relaxed">
+          Purdue Global’s professional flight degree program is a collaboration
+          between Purdue Global and Purdue University’s School of Aviation and
+          Transportation Technology. It combines the quality of Purdue’s
+          legendary aviation program spanning more than six decades with the
+          flexibility and affordability that Purdue Global offers. Legendary
+          aviators like Amelia Earhart, Neil Armstrong, and Sully Sullenberger
+          once called Purdue University their home.
+        </p>
+        <p class="text-gray-600 leading-relaxed">
+          After completing your professional pilot certificates and ratings, you
+          could receive 45 transfer credits when enrolled in the professional
+          flight degree at Purdue Global, which could help you:
+        </p>
+        <ul class="flex flex-col gap-1">
+          <li class="flex gap-3">
+            <FaArrowAltCircleRight
+              className="text-mustard-yellow size-5 flex-shrink-0 mt-1"
+            />
+            <p class="text-dark-blue">
+              Complete a bachelor’s degree in professional flight online in 2–3
+              years
+            </p>
+          </li>
+          <li class="flex gap-3">
+            <FaArrowAltCircleRight
+              className="text-mustard-yellow size-5 flex-shrink-0 mt-1"
+            />
+            <p class="text-dark-blue">Save up to $28,400 in tuition</p>
+          </li>
+          <li class="flex gap-3">
+            <FaArrowAltCircleRight
+              className="text-mustard-yellow size-5 flex-shrink-0 mt-1"
+            />
+            <p class="text-dark-blue">
+              Work on your degree while completing your flight training or
+              working as a full-time flight instructor
+            </p>
+          </li>
+        </ul>
+      </div>
+      <div class="flex-1 flex flex-col gap-5">
+        <h2
+          class="text-lg text-dark-blue uppercase font-semibold tracking-widest duration-700"
+        >
+          BS in Professional Flight
+        </h2>
+        <p class="text-gray-600 leading-relaxed">
+          Purdue Global’s aviation management program combines aviation
+          operations and business management skills to develop you for
+          managerial-level positions. Offered 100% online, you’ll gain
+          specialized knowledge of the aviation industry, taught by faculty with
+          years of aviation industry experience as pilots, entrepreneurs,
+          executives, managers, and military personnel. This program can also
+          accept eligible transfer credits for those who hold FAA certificates
+          and ratings.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-medium-blue/10 scroll-my-12" id="aopa-programs">
+    <div
+      class="py-16 px-5 flex flex-col gap-5 max-w-xl lg:max-w-7xl scroll-my-20 mx-auto"
+    >
+      <div class="flex-1">
+        <h3
+          class="text-5xl text-dark-blue font-bold leading-tight max-w-2xl text-center lg:text-left"
+        >
+          Why Choose Purdue Global?
+        </h3>
+      </div>
+      <div class="flex-[2.2_2.2_0%] grid lg:grid-cols-2 gap-10">
+        <div
+          class="bg-white py-8 px-12 flex flex-col gap-5 justify-between hover:bg-medium-blue/20 duration-700 group"
+        >
+          <div class="flex flex-col gap-5">
+            <GiReceiveMoney className="size-14 text-medium-blue" />
+            <h3
+              class="text-lg text-dark-blue uppercase font-semibold tracking-widest duration-700"
+            >
+              Receive a Partner School Tuition Reduction
+            </h3>
+            <p class="text-gray-600 leading-relaxed">
+              Purdue Global’s alliance with our school includes a variety of
+              time- and money-saving benefits. Through the partnership, all
+              students and immediate family members receive a 20% tuition
+              reduction on undergraduate programs and a 14% tuition reduction on
+              graduate programs. Textbooks are included for undergraduate
+              programs.
+            </p>
+          </div>
+          <a
+            href="http://hightide.purdueglobal.edu/"
+            class="flex gap-3 items-center self-end cursor-pointer group"
+            target="_blank"
+          >
+            <p class="text-gray-500 text-sm">Apply Now</p>
+            <div
+              class="p-3 bg-light-blue/15 rounded-full group-hover:bg-medium-blue duration-700"
+            >
+              <IoIosArrowRoundForward
+                className="text-dark-blue size-6 group-hover:text-white duration-700"
+              />
+            </div>
+          </a>
+        </div>
+        <div
+          class="bg-white py-8 px-12 flex flex-col gap-5 justify-between hover:bg-medium-blue/20 duration-700 group"
+        >
+          <div class="flex flex-col gap-5">
+            <IoSchoolSharp className="size-14 text-medium-blue" />
+            <h3
+              class="text-lg text-dark-blue uppercase font-semibold tracking-widest duration-700"
+            >
+              An Education That’s Proven and Respected
+            </h3>
+            <p class="text-gray-600 leading-relaxed">
+              Purdue Global is part of the respected Purdue University system,
+              one of the most prestigious research universities in the world.
+            </p>
+          </div>
+          <a
+            href="http://hightide.purdueglobal.edu/"
+            class="flex gap-3 items-center self-end cursor-pointer group"
+            target="_blank"
+          >
+            <p class="text-gray-500 text-sm">Apply Now</p>
+            <div
+              class="p-3 bg-light-blue/15 rounded-full group-hover:bg-medium-blue duration-700"
+            >
+              <IoIosArrowRoundForward
+                className="text-dark-blue size-6 group-hover:text-white duration-700"
+              />
+            </div>
+          </a>
+        </div>
+        <div
+          class="bg-white py-8 px-12 flex flex-col gap-5 justify-between hover:bg-medium-blue/20 duration-700 group"
+        >
+          <div class="flex flex-col gap-5">
+            <MdCardMembership className="size-14 text-medium-blue" />
+            <h3
+              class="text-lg text-dark-blue uppercase font-semibold tracking-widest duration-700"
+            >
+              Created for Adults
+            </h3>
+            <p class="text-gray-600 leading-relaxed">
+              With flexible learning options, a generous transfer credit policy,
+              and personalized support, we're dedicated to helping you achieve
+              your goals.
+            </p>
+          </div>
+          <a
+            href="http://hightide.purdueglobal.edu/"
+            class="flex gap-3 items-center self-end cursor-pointer group"
+            target="_blank"
+          >
+            <p class="text-gray-500 text-sm">Apply Now</p>
+            <div
+              class="p-3 bg-light-blue/15 rounded-full group-hover:bg-medium-blue duration-700"
+            >
+              <IoIosArrowRoundForward
+                className="text-dark-blue size-6 group-hover:text-white duration-700"
+              />
+            </div>
+          </a>
+        </div>
+        <div
+          class="bg-white py-8 px-12 flex flex-col gap-5 justify-between hover:bg-medium-blue/20 duration-700 group"
+        >
+          <div class="flex flex-col gap-5">
+            <FaUsers className="size-14 text-medium-blue" />
+            <h3
+              class="text-lg text-dark-blue uppercase font-semibold tracking-widest duration-700"
+            >
+              Career & Networking Opportunities
+            </h3>
+            <p class="text-gray-600 leading-relaxed">
+              Our team of Career Specialists connects you with job and
+              networking opportunities, including resume review, interview prep,
+              job search support and more.
+            </p>
+          </div>
+          <a
+            href="http://hightide.purdueglobal.edu/"
+            class="flex gap-3 items-center self-end cursor-pointer group"
+            target="_blank"
+          >
+            <p class="text-gray-500 text-sm">Apply Now</p>
+            <div
+              class="p-3 bg-light-blue/15 rounded-full group-hover:bg-medium-blue duration-700"
+            >
+              <IoIosArrowRoundForward
+                className="text-dark-blue size-6 group-hover:text-white duration-700"
+              />
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 px-5 bg-mustard-yellow">
+    <div class="max-w-7xl mx-auto flex flex-col items-center">
+      <h2 class="uppercase text-medium-blue font-bold tracking-widest">
+        Questions
+      </h2>
+      <h3
+        class="text-3xl lg:text-5xl font-bold leading-tight text-dark-blue text-center max-w-5xl"
+      >
+        Have any questions about Purdue Global university programs?
+      </h3>
+      <p class="text-dark-blue text-lg mt-5 text-center">
+        Feel free to reach out to our team. We’re here to help guide you through
+        every step of the process, ensuring your aviation training journey is
+        smooth and stress-free.
+      </p>
+      <a href="/contact-us" class="btn-blue mt-5 hover:bg-white"
+        >Contact High Tide</a
+      >
+    </div>
+  </section>
+</BaseLayout>
