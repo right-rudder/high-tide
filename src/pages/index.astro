@@ -26,6 +26,7 @@ import { TbUserScreen } from "react-icons/tb";
 import AnnouncementBanner from "../components/AnnouncementBanner.astro";
 import ScreenBanner from "../components/ScreenBanner.astro";
 import DonationBanner from "../components/DonationBanner.astro";
+import NewsletterCTA from "../components/NewsletterCTA.astro";
 const posts = (await getCollection("blog")).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
@@ -313,6 +314,8 @@ const posts = (await getCollection("blog")).sort(
       </a>
     </div>
   </section>
+
+  <NewsletterCTA />
 
   <section class="text-white mx-auto grid sm:grid-cols-2 lg:grid-cols-4">
     {

@@ -1,0 +1,133 @@
+---
+const NEWSLETTER_FORM_WEBHOOK_URL = import.meta.env.NEWSLETTER_FORM_WEBHOOK_URL;
+---
+
+<section id="newsletterCTA" class="scroll-my-20 bg-mustard-yellow">
+  <div
+    class="py-16 px-5 text-white flex max-w-xl lg:max-w-[95rem] mx-auto items-center flex-col lg:flex-row gap-8"
+  >
+    <div class="flex-1">
+      <h2 class="uppercase text-medium-blue font-bold tracking-widest">
+        Want to know about our latest updates?
+      </h2>
+      <h3 class="text-5xl font-bold leading-tight text-dark-blue">
+        Subscribe to our Newsletter
+      </h3>
+    </div>
+
+    <form id="newsletter-form" method="POST" class="flex-[2_2_0] w-full">
+      <div class="flex flex-col lg:flex-row gap-3 mb-5 w-full">
+        <input
+          class="bg-white rounded-full text-dark-blue py-4 px-6 w-full outline-none placeholder:text-gray/50"
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Email"
+          required
+        />
+        <button
+          type="submit"
+          id="submit-button"
+          class="btn-blue whitespace-nowrap w-full lg:w-auto">Subscribe</button
+        >
+      </div>
+      <div class="hidden">
+        <label>
+          Don't fill this out if you're human: <input name="confirm-email" />
+        </label>
+      </div>
+
+      <div
+        class="g-recaptcha"
+        data-sitekey="6LdINgwqAAAAAHqhspAFZMyuR1ks9CeEVI8lWl2B"
+        data-callback="onRecaptchaSuccess"
+      >
+      </div>
+    </form>
+  </div>
+</section>
+
+<script define:vars={{ NEWSLETTER_FORM_WEBHOOK_URL }}>
+  // Wait for the DOM content to be fully loaded
+  let isRecaptchaVerified = false;
+
+  document.addEventListener("DOMContentLoaded", function () {
+    // Get the contactUs form element
+    const pageForm = document.getElementById("newsletter-form");
+
+    // Check if the contactUs form element exists
+    if (pageForm !== null) {
+      // Add submit event listener to the contactUs form
+      pageForm.addEventListener("submit", function (event) {
+        // Prevent the default form submission
+        event.preventDefault();
+
+        if (!isRecaptchaVerified) {
+          alert("Please complete the reCAPTCHA verification.");
+          return;
+        }
+
+        // Serialize the form data
+        const formData = new FormData(pageForm);
+
+        // Check the value of the honeypot field
+        const confirmEmailValue = formData.get("confirm-email");
+        if (confirmEmailValue === "" || confirmEmailValue === null) {
+          // If the honeypot field is empty, it's a human
+          // Set the form action to the URL for processing the form and redirecting to thank you
+          pageForm.action = NEWSLETTER_FORM_WEBHOOK_URL;
+        }
+
+        // Convert FormData to URLSearchParams
+        const urlSearchParams = new URLSearchParams();
+        for (const pair of formData.entries()) {
+          urlSearchParams.append(pair[0], pair[1]);
+        }
+
+        // Send an AJAX request to submit the form
+        const xhr = new XMLHttpRequest();
+        xhr.open("POST", pageForm.action);
+        xhr.setRequestHeader(
+          "Content-Type",
+          "application/x-www-form-urlencoded",
+        );
+        xhr.onload = function () {
+          // Check if the request was successful (status 200)
+          if (xhr.status === 200) {
+            // Redirect the user after a successful form submission
+            window.location.href = "/newsletter-confirmation";
+          } else {
+            // Handle errors if any
+            console.error("Form submission failed:", xhr.statusText);
+          }
+        };
+        xhr.onerror = function () {
+          // Handle network errors
+          console.error("Network error occurred while submitting the form.");
+        };
+        xhr.send(urlSearchParams);
+      });
+    } else {
+      console.error("Contact us form element not found.");
+    }
+  });
+
+  function onRecaptchaSuccess(token) {
+    fetch("/recaptcha", {
+      method: "POST",
+      body: JSON.stringify({ recaptcha: token }),
+    })
+      .then((response) => response.json())
+      .then((gResponse) => {
+        if (gResponse.success) {
+          isRecaptchaVerified = true;
+        } else {
+          isRecaptchaVerified = false;
+          alert("reCAPTCHA verification failed. Please try again.");
+        }
+      });
+  }
+
+  window.onRecaptchaSuccess = onRecaptchaSuccess;
+</script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>

@@ -4,6 +4,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import Header from "../../components/Header.astro";
 import Banner from "../../assets/high-tide-aviation-front-sign-in-southport-nc.jpg";
 import BlogPostCard from "../../components/BlogPostCard.astro";
+import NewsletterCTA from "../../components/NewsletterCTA.astro";
 
 const posts = (await getCollection("blog")).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
@@ -47,4 +48,6 @@ const posts = (await getCollection("blog")).sort(
       </div>
     </div>
   </section>
+
+  <NewsletterCTA />
 </BaseLayout>

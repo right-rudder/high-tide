@@ -1,0 +1,38 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Banner from "../assets/beech-baron-b55-front.jpg";
+import { FaCheckCircle } from "react-icons/fa";
+import { PHONE_NUMBER } from "../consts";
+---
+
+<BaseLayout
+  siteTitle="Thank You for Susbscribing | High Tide Aviation"
+  siteDescription="Thank you for subscribing to our newsletter! Your interest in aviation is greatly appreciated. We look forward to sharing valuable insights, updates, and resources with you. Stay tuned for our upcoming newsletters filled with tips, training opportunities, and more!"
+  siteKeywords="ebook download, High Tide Aviation, free ebook, pilot training resources, aviation education, flight school resources, commercial pilot training, private pilot certification, flight instructor training, aviation services, helicopter training, aviation blog, aviation resources"
+>
+  <Header
+    slot="header"
+    image={Banner}
+    title="Thank You for Subscribing"
+    alt="Beech Baron B55 from the front"
+  />
+
+  <section class="py-16 px-5">
+    <div class="flex flex-col items-center max-w-5xl mx-auto text-center gap-8">
+      <FaCheckCircle className="text-9xl text-medium-blue" />
+      <p class="text-gray-600 leading-loose">
+        Thank you for subscribing to our newsletter! Your interest in aviation
+        is greatly appreciated. We look forward to sharing valuable insights,
+        updates, and resources with you. Stay tuned for our upcoming newsletters
+        filled with tips, training opportunities, and more!
+      </p>
+      <p class="text-gray-600 leading-loose">
+        Are you interested in flight training with us? You can give us a call at <a
+          class="hover:text-dark-blue hover:underline duration-300"
+          href=`tel:${PHONE_NUMBER}`>{PHONE_NUMBER}</a
+        > to schedule a visit.
+      </p>
+    </div>
+  </section>
+</BaseLayout>
