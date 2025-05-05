@@ -15,6 +15,21 @@ import { MdFlightTakeoff } from "react-icons/md";
 import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
 import { reviews } from "../../data/reviews";
 
+export async function getStaticPaths() {
+  const locations = await getCollection("pilot-training");
+
+  return locations.map((entry) => {
+    const city = entry.data.city;
+    const state = entry.data.stateShort;
+    const customSlug = `${city}-${state}`.toLowerCase().replace(/\s+/g, "-");
+
+    return {
+      params: { slug: customSlug },
+      props: entry,
+    };
+  });
+}
+
 import AerialNC from "../../assets/aerial-photography-on-display-over-north-carolina-coast.webp";
 import BaldHead from "../../assets/bald-head-island-nc.jpg";
 import CessnaFlight from "../../assets/cessna-in-flight-high-tide-aviation.jpg";
@@ -22,16 +37,6 @@ import CessnaStSimons from "../../assets/cessna-over-st-simons-island.jpg";
 import FlyingStSimons from "../../assets/flying-over-st-simons-island-ga.jpeg";
 import GoldenIsles from "../../assets/golden-isles-passport-tour-high-tide-aviation.jpeg";
 import SouthportCessna from "../../assets/high-tide-cessna-flying-over-southport.png";
-
-const location = Astro.props;
-const locationCity = location.data.city || "your area";
-const locationStateShort = location.data.stateShort || "your state";
-const locationStateLong = location.data.stateLong || "your state";
-const locationDescription = location.data.description || "A great place with unique attractions and a welcoming community.";
-const locationCounty = location.data.baseLocation || "A well-known county with rich history and local charm.";
-const locationKeyPlace1 = location.data.keyPlace1 || "A popular landmark worth visiting.";
-const locationKeyPlace2 = location.data.keyPlace2 || "Another must-see location in the area.";
-const trainingLocation = location.data.trainingLocation;
 
 const imageMap = [
   AerialNC,
@@ -42,6 +47,16 @@ const imageMap = [
   GoldenIsles,
   SouthportCessna,
 ];
+
+const location = Astro.props;
+const locationCity = location.data.city || "your area";
+const locationStateShort = location.data.stateShort || "your state";
+const locationStateLong = location.data.stateLong || "your state";
+const locationDescription = location.data.description || "A great place with unique attractions and a welcoming community.";
+const locationCounty = location.data.baseLocation || "A well-known county with rich history and local charm.";
+const locationKeyPlace1 = location.data.keyPlace1 || "A popular landmark worth visiting.";
+const locationKeyPlace2 = location.data.keyPlace2 || "Another must-see location in the area.";
+const trainingLocation = location.data.trainingLocation;
 
 function randomItem(arr) {
   return arr[Math.floor(Math.random() * arr.length)];
