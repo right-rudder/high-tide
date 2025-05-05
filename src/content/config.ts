@@ -14,4 +14,23 @@ const blog = defineCollection({
   }),
 });
 
-export const collections = { blog };
+const locationCollection = defineCollection({
+  type: "content",
+  schema: z.object({
+    city: z.string(),
+    stateShort: z.string(),
+    stateLong: z.string(),
+    description: z.string(),
+    baseLocation: z.string(),
+    keyPlace1: z.string(),
+    keyPlace2: z.string(),
+    trainingLocation: z.string(),
+    headerImages: z.array(z.string()),
+    headlines: z.array(z.string()),
+  }),
+});
+
+export const collections = {
+  blog: blog,
+  "pilot-training": locationCollection,
+};

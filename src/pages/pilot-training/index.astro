@@ -1,0 +1,45 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const locations = await getCollection("pilot-training");
+---
+
+<BaseLayout
+  siteTitle="All Flight School Locations | High Tide Aviation"
+  siteDescription="Browse all High Tide Aviation locations for flight training in Georgia and North Carolina."
+  siteKeywords="flight training locations, High Tide Aviation, flight school near me, North Carolina flight training, Georgia pilot school"
+>
+  <div class="p-12 bg-dark-blue"></div>
+  <section class="px-5 py-24">
+    <div class="max-w-7xl mx-auto">
+      <h1 class="text-5xl font-bold text-dark-blue mb-10 text-center">
+        Explore Our Training Locations
+      </h1>
+      <p class="text-gray-600 text-lg max-w-3xl mx-auto text-center mb-12">
+        High Tide Aviation proudly serves pilots across scenic coastal regions of North Carolina and Georgia. Select a location to learn more about training opportunities and local highlights.
+      </p>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+        {
+          locations.map((entry) => {
+            const city = entry.data.city;
+            const state = entry.data.stateShort;
+            const trainingBase = entry.data.trainingLocation;
+            const headline = entry.data.headlines?.[0]?.replace("{{city}}", city).replace("{{stateShort}}", state) || `Flight Training in ${city}`;
+            const slug = `${city}-${state}`.toLowerCase().replace(/\s+/g, "-");
+            return (
+              <a
+                href={`/pilot-training/${slug}`}
+                class="border border-gray-200 rounded-xl p-7 hover:bg-medium-blue/10 transition"
+              >
+                <h3 class="text-xl font-bold text-dark-blue mb-2">{city}, {state}</h3>
+                <p class="text-gray-600 text-sm mb-2">{headline}</p>
+                <p class="text-gray-500 text-xs italic">Closest Training: {trainingBase}</p>
+              </a>
+            );
+          })
+        }
+      </div>
+    </div>
+  </section>
+</BaseLayout>
