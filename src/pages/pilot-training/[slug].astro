@@ -2,19 +2,18 @@
 import { type CollectionEntry, getCollection } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import Header from "../../components/Header.astro";
-import Banner from "../../assets/private-pilot-sits-in-multi-engine-plane.jpg";
 import { Image } from "astro:assets";
 import Intro from "../../assets/first-time-pilot-on-cessna.jpg";
 import CounterCard from "../../components/CounterCard";
 import { stats } from "../../data/stats";
+import StudentSupport from "../../assets/student-support.jpg";
+import StudenPilot from "../../assets/pilot-flying-over-southport.jpg";
 import { RiTeamLine } from "react-icons/ri";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { GiExitDoor } from "react-icons/gi";
 import { MdFlightTakeoff } from "react-icons/md";
 import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
 import { reviews } from "../../data/reviews";
-import StudentSupport from "../../assets/student-support.jpg";
-import StudenPilot from "../../assets/pilot-flying-over-southport.jpg";
 
 export async function getStaticPaths() {
   const locations = await getCollection("pilot-training");
@@ -26,11 +25,11 @@ export async function getStaticPaths() {
 
     return {
       params: { slug: customSlug },
-      props: entry, // still pass full entry data
+      props: entry,
     };
   });
 }
-type Props = CollectionEntry<"location">;
+
 const location = Astro.props;
 const locationCity = location.data.city || "your area";
 const locationStateShort = location.data.stateShort || "your state";
@@ -39,6 +38,7 @@ const locationDescription = location.data.description || "A great place with uni
 const locationCounty = location.data.baseLocation || "A well-known county with rich history and local charm.";
 const locationKeyPlace1 = location.data.keyPlace1 || "A popular landmark worth visiting.";
 const locationKeyPlace2 = location.data.keyPlace2 || "Another must-see location in the area.";
+const trainingLocation = location.data.trainingLocation;
 
 function randomItem(arr: string[]) {
   return arr[Math.floor(Math.random() * arr.length)];
@@ -50,52 +50,70 @@ const headerH1 = rawHeadline
   .replace("{{city}}", locationCity)
   .replace("{{stateShort}}", locationStateShort)
   .replace("{{baseLocation}}", locationCounty);
-
-
 ---
 
 <BaseLayout
-  siteTitle="First-Time Pilots | High Tide Aviation"
-  siteDescription="Begin your aviation journey with High Tide Aviation, offering comprehensive guidance and support for first-time pilots in Southport, NC, and St Simons Island, GA."
-  siteKeywords="first-time pilot Southport NC, beginner flight training St Simons Island GA, aviation introduction Southeast Coast, learn to fly Southport NC, pilot training for beginners."
+  siteTitle={`Flight Training in ${locationCity}, ${locationStateShort} | High Tide Aviation`}
+  siteDescription={`Flight training and scenic tours in ${locationCity}, ${locationStateShort}, based in ${locationCounty}. Learn to fly while enjoying views of ${locationKeyPlace1} and ${locationKeyPlace2}.`}
+  siteKeywords={`flight training ${locationCity}, learn to fly ${locationStateShort}, discovery flight ${locationCounty}, pilot school near ${locationCity}, fly over ${locationKeyPlace1}, fly ${locationKeyPlace2}`}
 >
-  <Header
-    slot="header"
-    image={Banner}
-    title="Why Become a Pilot?"
-    ctaText="Discover Flight Training"
-    ctaLink="#first-time-pilots"
-    alt="Private pilot sits in multi-engine plane"
-  />
-
-  <section class="py-24 px-5">
+  <section>
     <div
-      class="max-w-xl gap-10 lg:max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:gap-20"
+      class="relative isolate pt-24 overflow-hidden h-[44rem] text-white flex items-center flex-col"
     >
-      <div class="flex-1 relative">
-        <Image class="pr-6" src={Intro} alt="Private pilot sits in Cessna" />
-        <div
-          class="h-3/4 bg-mustard-yellow absolute -z-10 -right-0 w-20 top-[12.5%]"
-        >
+      <Image
+        src={headerImage}
+        alt={`Flight training in ${locationCity}, ${locationStateShort}`}
+        width={1980}
+        height={700}
+        class="-z-50 absolute min-w-[120rem] h-[44rem] -translate-y-24 object-cover object-[50%_40%]"
+        widths={[240, 540, 720, 1080, 1440, 1980]}
+        sizes={`(max-width: 240px) 240px, (max-width: 540px) 540px, (max-width: 720px) 720px, (max-width: 1080px) 1080px, (max-width: 1440px) 1440px, 1920px`}
+      />
+      <div class="absolute inset-0 bg-dark-blue/70 -z-40"></div>
+  
+      <div class="max-w-7xl flex w-full mx-auto h-full items-center py-14 z-10">
+        <div class="max-w-5xl px-5 mx-auto">
+          <h1
+            class="text-5xl font-medium tracking-tight sm:text-5xl animate-fade-in"
+          >
+            {headerH1}
+          </h1>
+          <p class="mt-5 text-lg text-gray-100 leading-relaxed animate-fade-in">
+            {locationDescription}</br>
+            Look for our closest training grounds, located in {trainingLocation}, and enroll in our flight training program today! 
+          </p>
         </div>
+      </div>
+    </div>
+        <div class="flex justify-center -translate-y-7">
+          <a href="#first-time-pilots" class="btn-yellow">
+            {`Train in ${locationCity}, ${locationStateShort}`}
+          </a>
+        </div>
+  </section>
+  
+  <section class="py-24 px-5">
+    <div class="max-w-xl gap-10 lg:max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:gap-20">
+      <div class="flex-1 relative">
+        <Image 
+          class="pr-6" 
+          src={Intro} 
+          alt="Private pilot sits in Cessna" 
+          widths={[240, 540, 720, 1080, 1440, 1980]}
+          sizes={`(max-width: 240px) 240px, (max-width: 540px) 540px, (max-width: 720px) 720px, (max-width: 1080px) 1080px, (max-width: 1440px) 1440px, 1920px`}      
+        />
+        <div class="h-3/4 bg-mustard-yellow absolute -z-10 -right-0 w-20 top-[12.5%]"></div>
       </div>
       <div class="flex flex-col flex-1">
         <h2 class="uppercase text-medium-blue font-bold tracking-widest">
           Training with High Tide
         </h2>
         <h3 class="text-5xl text-dark-blue font-bold leading-tight">
-          Why Learn to Fly?
+          Learn to Fly in {locationCity}, {locationStateShort}
         </h3>
         <p class="text-gray-500 leading-relaxed my-5">
-          Flying is freedom. As a pilot, you'll soar above the earth, exploring
-          the skies with an independence shared by only a select few
-          individuals, and experience thrilling new perspectives. Pilots at High
-          Tide Aviation have a unique opportunity to do so over the gorgeous
-          coastlines of North Carolina and Georgia. The journey to earn your
-          wings cultivates essential skills - from navigation to aircraft
-          management. Whether your goal is a rewarding hobby or a fulfilling
-          career, learning to fly offers unmatched personal and professional
-          growth. Take control and discover the timeless allure of aviation.
+          High Tide Aviation offers aspiring pilots in {locationCity}, {locationStateShort} an unforgettable training experience. With views of {locationKeyPlace1} and {locationKeyPlace2}, learning to fly here combines real-world instruction with breathtaking scenery. Located in {locationCounty}, our training programs are perfect for first-time pilots ready to explore the skies in one of the most scenic areas of {locationStateLong}.
         </p>
         <div class="flex flex-col sm:flex-row items-center gap-5">
           <a href="/enrollment-form" class="btn-blue"> Enroll Today! </a>
@@ -105,39 +123,31 @@ const headerH1 = rawHeadline
   </section>
 
   <section class="py-24 px-5 scroll-my-20 bg-medium-blue/10">
-    <div
-      class="max-w-xl gap-10 lg:max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:gap-10"
-    >
+    <div class="max-w-xl gap-10 lg:max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:gap-10">
       <div class="flex flex-col flex-1">
         <h2 class="uppercase text-medium-blue font-bold tracking-widest">
           Student Support Specialist
         </h2>
         <h3 class="text-5xl text-dark-blue font-bold leading-tight">
-          Personalized Guidance at High Tide
+          Flight Training Support in {locationCity}
         </h3>
         <p class="text-gray-500 leading-relaxed mt-5">
-          As such a specialized skill, flight training can be confusing on even
-          its best day. We understand that each student comes to us with
-          different learning preferences and a diverse range of experiences. To
-          better support our students, we have an in-house Student Support
-          Department and assign a specific support specialist to every High Tide
-          student in Southport, St Simons Island, and Wilmington.
+          At High Tide Aviation, we know that every pilot’s journey is different. That’s why students training near {locationCity}, {locationStateShort} receive personalized support from our team of experts. With breathtaking views of {locationKeyPlace1} and {locationKeyPlace2} just outside the cockpit, our local training environment offers inspiration at every altitude. Whether you're flying out of {locationCounty} or visiting from afar, we're here to guide you every step of the way.
         </p>
         <p class="font-medium mb-5 mt-2 text-gray-600">
-          Contact us today and receive tailored flight instruction at High Tide
-          Aviation.
+          Contact us today and receive tailored flight instruction at High Tide Aviation.
         </p>
-
         <div class="flex flex-col sm:flex-row items-center gap-5">
           <a href="/contact-us" class="btn-blue"> Contact Us </a>
         </div>
       </div>
       <div class="flex-1">
-        <Image
-          src={StudentSupport}
-          alt="Student getting ready to fly"
-          class="object-cover top-0 left-0 -z-10 max-h-96"
-          quality={10}
+        <Image 
+          src={StudentSupport} 
+          alt="Student getting ready to fly" 
+          class="object-cover top-0 left-0 -z-10 max-h-96" 
+          widths={[240, 540, 720, 1080, 1440, 1980]}
+          sizes={`(max-width: 240px) 240px, (max-width: 540px) 540px, (max-width: 720px) 720px, (max-width: 1080px) 1080px, (max-width: 1440px) 1440px, 1920px`}
         />
       </div>
     </div>
@@ -197,6 +207,8 @@ const headerH1 = rawHeadline
             src={StudenPilot}
             alt="Pilot flying over Southport"
             class="object-cover w-full"
+            widths={[240, 540, 720, 1080, 1440, 1980]}
+            sizes={`(max-width: 240px) 240px, (max-width: 540px) 540px, (max-width: 720px) 720px, (max-width: 1080px) 1080px, (max-width: 1440px) 1440px, 1920px`}        
           />
         </div>
       </div>
