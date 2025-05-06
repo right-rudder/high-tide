@@ -28,13 +28,13 @@ if (!images[imagePath]) {
 ---
 
 <div
-  class="max-w-xl gap-5 lg:max-w-6xl w-full mx-auto flex flex-col lg:flex-row items-center"
+  class="max-w-xl gap-5 lg:max-w-6xl max-h-none lg:max-h-[24rem] w-full mx-auto flex flex-col lg:flex-row items-center"
 >
-  <div class="flex-[3_3_0]">
+  <div class="h-[12rem] sm:h-[20rem] lg:h-full aspect-video flex-[3_3_0]">
     <PlaneCarousel2 imagesArray={imagesArray} />
   </div>
   <div
-    class="grid grid-cols-2 items-center flex-1 w-full h-full p-5 flex-col justify-around gap-2 bg-mustard-yellow/15"
+    class="grid grid-cols-2 items-center flex-1 w-full h-full p-5 justify-around gap-2 bg-mustard-yellow/15"
   >
     <div class="flex flex-col gap-2">
       <h4 class="text-dark-blue font-medium">Model:</h4>

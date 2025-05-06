@@ -3,15 +3,15 @@ import ImageComp from "./ImageComp.astro";
 const { imagesArray } = Astro.props;
 ---
 
-<div class="swiper-body">
-  <div class="swiper">
-    <div class="swiper-wrapper">
+<div class="swiper-body h-full">
+  <div class="swiper h-full">
+    <div class="swiper-wrapper h-full">
       {
         imagesArray.map((image) => (
           <ImageComp
             src={image}
             alt="Plane Image"
-            classes="swiper-slide object-cover aspect-video"
+            classes="swiper-slide aspect-video h-full"
           />
         ))
       }
@@ -28,8 +28,7 @@ const { imagesArray } = Astro.props;
     position: relative;
   }
   .swiper {
-    width: 100%;
-    height: 100%;
+    aspect-ratio: 16/9;
   }
   .swiper-slide {
     text-align: center;
@@ -42,7 +41,6 @@ const { imagesArray } = Astro.props;
 
   .swiper-slide img {
     display: block;
-    width: 100%;
     height: 100%;
     object-fit: cover;
   }
