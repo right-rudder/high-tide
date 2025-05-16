@@ -1,6 +1,7 @@
 ---
 import { IoBookOutline } from "react-icons/io5";
 const EBOOK_FORM_WEBHOOK_URL = import.meta.env.EBOOK_FORM_WEBHOOK_URL;
+const PORTAL_API_KEY = import.meta.env.PORTAL_API_KEY;
 ---
 
 <section id="ebook" class="scroll-my-24">
@@ -16,11 +17,7 @@ const EBOOK_FORM_WEBHOOK_URL = import.meta.env.EBOOK_FORM_WEBHOOK_URL;
         Get Your FREE Quick Start Guide
       </h3>
 
-      <form
-        id="ebook-form"
-        method="POST"
-        class="max-w-3xl grid lg:grid-cols-2 gap-5 my-10"
-      >
+      <form id="ebook-form" class="max-w-3xl grid lg:grid-cols-2 gap-5 my-10">
         <input
           class="bg-[#00215D] text-white/70 py-4 px-6 w-full outline-none placeholder:text-white/50"
           type="text"
@@ -59,102 +56,74 @@ const EBOOK_FORM_WEBHOOK_URL = import.meta.env.EBOOK_FORM_WEBHOOK_URL;
           required
         />
 
-        <div
-          class="g-recaptcha"
-          data-sitekey="6LdINgwqAAAAAHqhspAFZMyuR1ks9CeEVI8lWl2B"
-          data-callback="onRecaptchaSuccess"
-        >
-        </div>
-
         <button type="submit" id="submit-button" class="btn-yellow my-2"
           >Download Now</button
         >
       </form>
     </div>
   </div>
-</section>
+  <script define:vars={{ EBOOK_FORM_WEBHOOK_URL, PORTAL_API_KEY }}>
+    document.addEventListener("DOMContentLoaded", () => {
+      const form = document.getElementById("ebook-form");
 
-<script define:vars={{ EBOOK_FORM_WEBHOOK_URL }}>
-  // Wait for the DOM content to be fully loaded
-  let isRecaptchaVerified = false;
+      if (!form) {
+        console.error("Form element not found.");
+        return;
+      }
 
-  document.addEventListener("DOMContentLoaded", function () {
-    // Get the contactUs form element
-    const pageForm = document.getElementById("ebook-form");
-
-    // Check if the contactUs form element exists
-    if (pageForm !== null) {
-      // Add submit event listener to the contactUs form
-      pageForm.addEventListener("submit", function (event) {
-        // Prevent the default form submission
+      form.addEventListener("submit", async (event) => {
         event.preventDefault();
 
-        if (!isRecaptchaVerified) {
-          alert("Please complete the reCAPTCHA verification.");
-          return;
-        }
+        const formData = new FormData(form);
+        const confirmEmail = formData.get("confirm-email")?.trim();
+        if (confirmEmail) return;
 
-        // Serialize the form data
-        const formData = new FormData(pageForm);
+        const webhookURL = EBOOK_FORM_WEBHOOK_URL;
+        const apiKey = PORTAL_API_KEY;
 
-        // Check the value of the honeypot field
-        const confirmEmailValue = formData.get("confirm-email");
-        if (confirmEmailValue === "" || confirmEmailValue === null) {
-          // If the honeypot field is empty, it's a human
-          // Set the form action to the URL for processing the form and redirecting to thank you
-          pageForm.action = EBOOK_FORM_WEBHOOK_URL;
-        }
+        const urlEncodedBody = new URLSearchParams(formData).toString();
 
-        // Convert FormData to URLSearchParams
-        const urlSearchParams = new URLSearchParams();
-        for (const pair of formData.entries()) {
-          urlSearchParams.append(pair[0], pair[1]);
-        }
+        const jsonBody = {
+          first_name: formData.get("first-name")?.trim() || "",
+          last_name: formData.get("last-name")?.trim() || "",
+          email: formData.get("email")?.trim() || "",
+          phone: formData.get("phone")?.trim() || "",
+          campaign: "ebook",
+          account_random_id: "ac_yec3jxiy",
+        };
 
-        // Send an AJAX request to submit the form
-        const xhr = new XMLHttpRequest();
-        xhr.open("POST", pageForm.action);
-        xhr.setRequestHeader(
-          "Content-Type",
-          "application/x-www-form-urlencoded",
-        );
-        xhr.onload = function () {
-          // Check if the request was successful (status 200)
-          if (xhr.status === 200) {
-            // Redirect the user after a successful form submission
+        try {
+          const [ghlRes, portalRes] = await Promise.all([
+            fetch(webhookURL, {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/x-www-form-urlencoded",
+              },
+              body: urlEncodedBody,
+            }),
+            fetch("https://portal.rightruddermarketing.com/api/leads", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json",
+                "x-api-key": apiKey,
+              },
+              body: JSON.stringify(jsonBody),
+            }),
+          ]);
+
+          if (ghlRes.ok && portalRes.ok) {
             window.location.href = "/ebook-confirmation";
           } else {
-            // Handle errors if any
-            console.error("Form submission failed:", xhr.statusText);
+            console.error("Submission failed", {
+              ghlStatus: ghlRes.status,
+              portalStatus: portalRes.status,
+            });
           }
-        };
-        xhr.onerror = function () {
-          // Handle network errors
-          console.error("Network error occurred while submitting the form.");
-        };
-        xhr.send(urlSearchParams);
-      });
-    } else {
-      console.error("Contact us form element not found.");
-    }
-  });
-
-  function onRecaptchaSuccess(token) {
-    fetch("/recaptcha", {
-      method: "POST",
-      body: JSON.stringify({ recaptcha: token }),
-    })
-      .then((response) => response.json())
-      .then((gResponse) => {
-        if (gResponse.success) {
-          isRecaptchaVerified = true;
-        } else {
-          isRecaptchaVerified = false;
-          alert("reCAPTCHA verification failed. Please try again.");
+        } catch (err) {
+          console.error("Submission error:", err);
         }
       });
-  }
-
-  window.onRecaptchaSuccess = onRecaptchaSuccess;
-</script>
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    });
+  </script>
+</section>
