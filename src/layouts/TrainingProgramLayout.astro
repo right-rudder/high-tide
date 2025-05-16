@@ -56,7 +56,7 @@ function getLastWord(str) {
     image={Banner}
     title={programName}
     ctaText="Enroll Now"
-    ctaLink={pathname === "/flight-training/ground-school"
+    ctaLink={pathname.replace(/\/$/, "") === "/flight-training/ground-school"
       ? "https://brunswickcc-register.fundfive.com/course/section/21399"
       : "/enrollment-form"}
     alt={alt}
@@ -179,7 +179,7 @@ function getLastWord(str) {
       </div>
     </div>
     <a
-      href={pathname === "/flight-training/ground-school"
+      href={pathname.replace(/\/$/, "") === "/flight-training/ground-school"
         ? "https://brunswickcc-register.fundfive.com/course/section/21399"
         : "/enrollment-form"}
       class="btn-blue mx-auto"
@@ -249,8 +249,4 @@ function getLastWord(str) {
   </section>
 
   <ToursCTA />
-  <script define:vars={{ pathname }}>
-    console.log(pathname);
-    console.log(pathname === "/flight-training/ground-school");
-  </script>
 </BaseLayout>
