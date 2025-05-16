@@ -3,6 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Header from "../components/Header.astro";
 import Banner from "../assets/private-pilot-sits-in-multi-engine-plane.jpg";
 const ENROLLMENT_FORM_WEBHOOK_URL = import.meta.env.ENROLLMENT_FORM_WEBHOOK_URL;
+const PORTAL_API_KEY = import.meta.env.PORTAL_API_KEY;
 ---
 
 <BaseLayout
@@ -18,12 +19,7 @@ const ENROLLMENT_FORM_WEBHOOK_URL = import.meta.env.ENROLLMENT_FORM_WEBHOOK_URL;
   />
 
   <section class="py-16 px-5">
-    <form
-      id="enrollment-form"
-      method="POST"
-      action=""
-      class="flex flex-col items-center"
-    >
+    <form id="enrollment-form" class="flex flex-col items-center">
       <h2 class="uppercase text-medium-blue font-bold tracking-widest">
         Enrollment Process
       </h2>
@@ -330,91 +326,107 @@ const ENROLLMENT_FORM_WEBHOOK_URL = import.meta.env.ENROLLMENT_FORM_WEBHOOK_URL;
     </form>
   </section>
 
-  <script define:vars={{ ENROLLMENT_FORM_WEBHOOK_URL }}>
-    // Wait for the DOM content to be fully loaded
+  <script define:vars={{ ENROLLMENT_FORM_WEBHOOK_URL, PORTAL_API_KEY }}>
     let isRecaptchaVerified = false;
-    document.addEventListener("DOMContentLoaded", function () {
-      // Get the enrollment form element
-      const enrollmentForm = document.getElementById("enrollment-form");
 
-      // Check if the enrollment form element exists
-      if (enrollmentForm !== null) {
-        // Add submit event listener to the enrollment form
-        enrollmentForm.addEventListener("submit", function (event) {
-          // Prevent the default form submission
-          event.preventDefault();
+    document.addEventListener("DOMContentLoaded", () => {
+      const form = document.getElementById("enrollment-form");
+      const checkbox = document.getElementById("agree-data-collection");
+      const submitButton = document.getElementById("submit-button");
 
-          if (!isRecaptchaVerified) {
-            alert("Please complete the reCAPTCHA verification.");
-            return;
+      if (!form) {
+        console.error("Form element not found.");
+        return;
+      }
+
+      if (checkbox && submitButton) {
+        checkbox.addEventListener("change", () => {
+          if (checkbox.checked) {
+            submitButton.disabled = false;
+            submitButton.classList.remove(
+              "cursor-not-allowed",
+              "bg-gray-400",
+              "hover:bg-gray-400",
+              "hover:text-white",
+            );
+          } else {
+            submitButton.disabled = true;
+            submitButton.classList.add(
+              "cursor-not-allowed",
+              "bg-gray-400",
+              "hover:bg-gray-400",
+              "hover:text-white",
+            );
           }
-
-          // Serialize the form data
-          const formData = new FormData(enrollmentForm);
-
-          // Check the value of the honeypot field
-          const confirmEmailValue = formData.get("confirm-email");
-          if (confirmEmailValue === "" || confirmEmailValue === null) {
-            // If the honeypot field is empty, it's a human
-            // Set the form action to the URL for processing the form and redirecting to thank you
-            enrollmentForm.action = ENROLLMENT_FORM_WEBHOOK_URL;
-          }
-
-          // Convert FormData to URLSearchParams
-          const urlSearchParams = new URLSearchParams();
-          for (const pair of formData.entries()) {
-            urlSearchParams.append(pair[0], pair[1]);
-          }
-
-          // Send an AJAX request to submit the form
-          const xhr = new XMLHttpRequest();
-          xhr.open("POST", enrollmentForm.action);
-          xhr.setRequestHeader(
-            "Content-Type",
-            "application/x-www-form-urlencoded",
-          );
-          xhr.onload = function () {
-            // Check if the request was successful (status 200)
-            if (xhr.status === 200) {
-              // Redirect the user after a successful form submission
-              window.location.href = "/enrollment-confirmation";
-            } else {
-              // Handle errors if any
-              console.error("Form submission failed:", xhr.statusText);
-            }
-          };
-          xhr.onerror = function () {
-            // Handle network errors
-            console.error("Network error occurred while submitting the form.");
-          };
-          xhr.send(urlSearchParams);
         });
-      } else {
-        console.error("Enrollment form element not found.");
       }
-    });
 
-    const checkbox = document.getElementById("agree-data-collection");
-    const submitButton = document.getElementById("submit-button");
+      form.addEventListener("submit", async (event) => {
+        event.preventDefault();
 
-    checkbox.addEventListener("change", function () {
-      if (checkbox.checked) {
-        submitButton.disabled = false;
-        submitButton.classList.remove(
-          "cursor-not-allowed",
-          "bg-gray-400",
-          "hover:bg-gray-400",
-          "hover:text-white",
-        );
-      } else {
-        submitButton.disabled = true;
-        submitButton.classList.add(
-          "cursor-not-allowed",
-          "bg-gray-400",
-          "hover:bg-gray-400",
-          "hover:text-white",
-        );
-      }
+        if (!isRecaptchaVerified) {
+          alert("Please complete the reCAPTCHA verification.");
+          return;
+        }
+
+        const formData = new FormData(form);
+        const confirmEmail = formData.get("confirm-email")?.trim();
+        if (confirmEmail) return;
+
+        const webhookURL = ENROLLMENT_FORM_WEBHOOK_URL;
+        const apiKey = PORTAL_API_KEY;
+
+        const urlEncodedBody = new URLSearchParams(formData).toString();
+
+        const jsonBody = {
+          first_name: formData.get("first-name")?.trim() || "",
+          last_name: formData.get("last-name")?.trim() || "",
+          email: formData.get("email")?.trim() || "",
+          phone: formData.get("phone")?.trim() || "",
+          campaign: "enrollment_form",
+          account_random_id: "ac_yec3jxiy",
+          metadata: {
+            training_type: formData.get("training-type")?.trim() || "",
+            preferred_programs: formData
+              .getAll("preferred-programs")
+              .map((program) => program.trim()),
+            campus: formData.get("campus")?.trim() || "",
+            message: formData.get("message")?.trim() || "",
+          },
+        };
+
+        try {
+          const [ghlRes, portalRes] = await Promise.all([
+            fetch(webhookURL, {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/x-www-form-urlencoded",
+              },
+              body: urlEncodedBody,
+            }),
+            fetch("https://portal.rightruddermarketing.com/api/leads", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json",
+                "x-api-key": apiKey,
+              },
+              body: JSON.stringify(jsonBody),
+            }),
+          ]);
+
+          if (ghlRes.ok && portalRes.ok) {
+            window.location.href = "/enrollment-confirmation";
+          } else {
+            console.error("Submission failed", {
+              ghlStatus: ghlRes.status,
+              portalStatus: portalRes.status,
+            });
+          }
+        } catch (err) {
+          console.error("Submission error:", err);
+        }
+      });
     });
 
     function onRecaptchaSuccess(token) {
