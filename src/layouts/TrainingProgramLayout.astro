@@ -9,6 +9,7 @@ import { FaArrowAltCircleRight } from "react-icons/fa";
 import FlightProgramCard from "../components/FlightProgramCard.astro";
 import PricingComponent from "../components/PricingComponent";
 import ToursCTA from "../components/ToursCTA.astro";
+const { pathname } = Astro.url;
 const {
   bannerImagePath,
   imagePath,
@@ -55,7 +56,9 @@ function getLastWord(str) {
     image={Banner}
     title={programName}
     ctaText="Enroll Now"
-    ctaLink="/enrollment-form"
+    ctaLink={pathname === "/flight-training/ground-school"
+      ? "https://brunswickcc-register.fundfive.com/course/section/21399"
+      : "/enrollment-form"}
     alt={alt}
   />
 
@@ -175,7 +178,14 @@ function getLastWord(str) {
         }
       </div>
     </div>
-    <a href="/enrollment-form" class="btn-blue mx-auto"> Enroll Today </a>
+    <a
+      href={pathname === "/flight-training/ground-school"
+        ? "https://brunswickcc-register.fundfive.com/course/section/21399"
+        : "/enrollment-form"}
+      class="btn-blue mx-auto"
+    >
+      Enroll Today</a
+    >
   </section>
 
   {
