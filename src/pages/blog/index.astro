@@ -23,6 +23,7 @@ const posts = (await getCollection("blog")).sort(
     alt="High Tide Aviation front sign in Southport, NC"
   />
 
+  <NewsletterCTA />
   <section class="py-24 px-5">
     <div class="max-w-7xl mx-auto flex flex-col items-center">
       <h2 class="uppercase text-medium-blue font-bold tracking-widest">
@@ -33,6 +34,7 @@ const posts = (await getCollection("blog")).sort(
       >
         Read the latest from High Tide
       </h3>
+
       <div class="grid md:grid-cols-2 lg:grid-cols-3 mt-10 gap-7">
         {
           posts.map((post) => (
@@ -48,6 +50,4 @@ const posts = (await getCollection("blog")).sort(
       </div>
     </div>
   </section>
-
-  <NewsletterCTA />
 </BaseLayout>
