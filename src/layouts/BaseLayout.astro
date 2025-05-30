@@ -18,9 +18,11 @@ const { siteTitle, siteDescription, keywords } = Astro.props;
     />
   </head>
   <body class="Inter">
-    <Navbar pathname={pathname} client:load />
-    <slot name="header" />
+    <header>
+      <Navbar pathname={pathname} client:load />
+    </header>
     <main>
+      <slot name="header" />
       <slot />
     </main>
     <Footer />
