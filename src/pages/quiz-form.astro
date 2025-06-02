@@ -4,6 +4,7 @@ import Header from "../components/Header.astro";
 import Banner from "../assets/private-pilot-sits-in-multi-engine-plane.jpg";
 import { MdOutlineQuiz } from "react-icons/md";
 const QUIZ_FORM_WEBHOOK_URL = import.meta.env.QUIZ_FORM_WEBHOOK_URL;
+const PORTAL_API_KEY = import.meta.env.PORTAL_API_KEY;
 ---
 
 <BaseLayout
@@ -14,23 +15,25 @@ const QUIZ_FORM_WEBHOOK_URL = import.meta.env.QUIZ_FORM_WEBHOOK_URL;
   <Header
     slot="header"
     image={Banner}
-    title="High Tide Aviation Flight Training Readiness Assessment"
+    title="Are You Ready to Become a Pilot?"
     alt="Private pilot sits in multi-engine plane"
   />
 
   <section class="py-16 px-5 max-w-5xl mx-auto">
     <div class="mx-auto flex flex-col justify-center items-center">
       <MdOutlineQuiz className="size-14 text-mustard-yellow mb-5" />
-      <h2 class="uppercase text-medium-blue font-bold tracking-widest">
-        Become a Pilot
-      </h2>
-      <h3
-        class="text-5xl font-bold leading-tight text-dark-blue text-center max-w-xl"
+      <h2
+        class="uppercase text-medium-blue font-bold tracking-widest text-center"
       >
         Are You Ready to Become a Pilot?
+      </h2>
+      <h3
+        class="text-5xl font-bold leading-tight text-dark-blue text-center max-w-3xl"
+      >
+        High Tide Aviation Flight Training Readiness Assessment
       </h3>
     </div>
-    <form id="quiz-form" method="POST" action="">
+    <form id="quiz-form">
       <div class="space-y-12">
         <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
           <div class="sm:col-span-3">
@@ -124,7 +127,7 @@ const QUIZ_FORM_WEBHOOK_URL = import.meta.env.QUIZ_FORM_WEBHOOK_URL;
                   id="e-mail"
                   name="preferred-contact-method"
                   type="radio"
-                  class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
+                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
                   value="Email"
                 />
                 <label for="e-mail" class="block leading-6 text-gray-600"
@@ -136,7 +139,7 @@ const QUIZ_FORM_WEBHOOK_URL = import.meta.env.QUIZ_FORM_WEBHOOK_URL;
                   id="phone-call"
                   name="preferred-contact-method"
                   type="radio"
-                  class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
+                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
                   value="Phone call"
                 />
                 <label for="phone-call" class="block leading-6 text-gray-600"
@@ -148,8 +151,9 @@ const QUIZ_FORM_WEBHOOK_URL = import.meta.env.QUIZ_FORM_WEBHOOK_URL;
                   id="text-message"
                   name="preferred-contact-method"
                   type="radio"
-                  class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
+                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
                   value="Text message"
+                  required
                 />
                 <label for="text-message" class="block leading-6 text-gray-600"
                   >Text message</label
@@ -168,7 +172,7 @@ const QUIZ_FORM_WEBHOOK_URL = import.meta.env.QUIZ_FORM_WEBHOOK_URL;
                   id="yes"
                   name="prior-experience"
                   type="radio"
-                  class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
+                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
                   value="yes"
                 />
                 <label for="yes" class="block leading-6 text-gray-600"
@@ -187,7 +191,7 @@ const QUIZ_FORM_WEBHOOK_URL = import.meta.env.QUIZ_FORM_WEBHOOK_URL;
                   id="no"
                   name="prior-experience"
                   type="radio"
-                  class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
+                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
                   value="no"
                   required
                 />
@@ -206,7 +210,7 @@ const QUIZ_FORM_WEBHOOK_URL = import.meta.env.QUIZ_FORM_WEBHOOK_URL;
                   id="fighter-pilot"
                   name="what-kind-of-pilot"
                   type="radio"
-                  class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
+                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
                   value="Fighter pilot"
                 />
                 <label for="fighter-pilot" class="block leading-6 text-gray-600"
@@ -218,7 +222,7 @@ const QUIZ_FORM_WEBHOOK_URL = import.meta.env.QUIZ_FORM_WEBHOOK_URL;
                   id="crop-duster"
                   name="what-kind-of-pilot"
                   type="radio"
-                  class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
+                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
                   value="Crop duster"
                 />
                 <label for="crop-duster" class="block leading-6 text-gray-600"
@@ -230,7 +234,7 @@ const QUIZ_FORM_WEBHOOK_URL = import.meta.env.QUIZ_FORM_WEBHOOK_URL;
                   id="commercial-pilot"
                   name="what-kind-of-pilot"
                   type="radio"
-                  class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
+                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
                   value="Commercial pilot"
                 />
                 <label
@@ -243,7 +247,7 @@ const QUIZ_FORM_WEBHOOK_URL = import.meta.env.QUIZ_FORM_WEBHOOK_URL;
                   id="recreational-pilot"
                   name="what-kind-of-pilot"
                   type="radio"
-                  class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
+                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
                   value="Recreational pilot"
                   required
                 />
@@ -267,7 +271,7 @@ const QUIZ_FORM_WEBHOOK_URL = import.meta.env.QUIZ_FORM_WEBHOOK_URL;
                   id="try-to-identify"
                   name="when-a-plane-flies-overhead-how-do-you-react"
                   type="radio"
-                  class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
+                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
                   value="I immediately try to identify it"
                 />
                 <label
@@ -281,7 +285,7 @@ const QUIZ_FORM_WEBHOOK_URL = import.meta.env.QUIZ_FORM_WEBHOOK_URL;
                   id="wish-i-were-up-there"
                   name="when-a-plane-flies-overhead-how-do-you-react"
                   type="radio"
-                  class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
+                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
                   value="I wish I were up there"
                 />
                 <label
@@ -295,7 +299,7 @@ const QUIZ_FORM_WEBHOOK_URL = import.meta.env.QUIZ_FORM_WEBHOOK_URL;
                   id="glance-at-it"
                   name="when-a-plane-flies-overhead-how-do-you-react"
                   type="radio"
-                  class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
+                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
                   value="I glance at it and continue"
                 />
                 <label for="glance-at-it" class="block leading-6 text-gray-600"
@@ -307,7 +311,7 @@ const QUIZ_FORM_WEBHOOK_URL = import.meta.env.QUIZ_FORM_WEBHOOK_URL;
                   id="stay-focused"
                   name="when-a-plane-flies-overhead-how-do-you-react"
                   type="radio"
-                  class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
+                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
                   value="I acknowledge it but stay focused"
                 />
                 <label for="stay-focused" class="block leading-6 text-gray-600"
@@ -319,7 +323,7 @@ const QUIZ_FORM_WEBHOOK_URL = import.meta.env.QUIZ_FORM_WEBHOOK_URL;
                   id="don’t-notice-it"
                   name="when-a-plane-flies-overhead-how-do-you-react"
                   type="radio"
-                  class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
+                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
                   value="I don’t notice it"
                   required
                 />
@@ -342,7 +346,7 @@ const QUIZ_FORM_WEBHOOK_URL = import.meta.env.QUIZ_FORM_WEBHOOK_URL;
                   id="complete-it-ahead-of-schedule"
                   name="major-project-due-tomorrow-what-do-you-do"
                   type="radio"
-                  class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
+                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
                   value="Complete it ahead of schedule"
                 />
                 <label
@@ -356,7 +360,7 @@ const QUIZ_FORM_WEBHOOK_URL = import.meta.env.QUIZ_FORM_WEBHOOK_URL;
                   id="work-through-the-night-if-needed"
                   name="major-project-due-tomorrow-what-do-you-do"
                   type="radio"
-                  class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
+                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
                   value="Work through the night if needed"
                 />
                 <label
@@ -370,7 +374,7 @@ const QUIZ_FORM_WEBHOOK_URL = import.meta.env.QUIZ_FORM_WEBHOOK_URL;
                   id="request-an-extension"
                   name="major-project-due-tomorrow-what-do-you-do"
                   type="radio"
-                  class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
+                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
                   value="Request an extension"
                 />
                 <label
@@ -384,7 +388,7 @@ const QUIZ_FORM_WEBHOOK_URL = import.meta.env.QUIZ_FORM_WEBHOOK_URL;
                   id="take-a-short-break-and-continue"
                   name="major-project-due-tomorrow-what-do-you-do"
                   type="radio"
-                  class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
+                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
                   value="Take a short break and continue"
                 />
                 <label
@@ -398,7 +402,7 @@ const QUIZ_FORM_WEBHOOK_URL = import.meta.env.QUIZ_FORM_WEBHOOK_URL;
                   id="feel-overwhelmed-and-freeze-up"
                   name="major-project-due-tomorrow-what-do-you-do"
                   type="radio"
-                  class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
+                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
                   value="Feel overwhelmed and freeze up"
                   required
                 />
@@ -421,7 +425,7 @@ const QUIZ_FORM_WEBHOOK_URL = import.meta.env.QUIZ_FORM_WEBHOOK_URL;
                   id="certainty-100"
                   name="how-certain-about-becoming-a-pilot"
                   type="radio"
-                  class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
+                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
                   value="100%"
                 />
                 <label
@@ -436,7 +440,7 @@ const QUIZ_FORM_WEBHOOK_URL = import.meta.env.QUIZ_FORM_WEBHOOK_URL;
                   id="certainty-90"
                   name="how-certain-about-becoming-a-pilot"
                   type="radio"
-                  class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
+                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
                   value="90%"
                 />
                 <label for="certainty-90" class="block leading-6 text-gray-600">
@@ -448,7 +452,7 @@ const QUIZ_FORM_WEBHOOK_URL = import.meta.env.QUIZ_FORM_WEBHOOK_URL;
                   id="certainty-75"
                   name="how-certain-about-becoming-a-pilot"
                   type="radio"
-                  class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
+                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
                   value="75%"
                 />
                 <label for="certainty-75" class="block leading-6 text-gray-600">
@@ -460,7 +464,7 @@ const QUIZ_FORM_WEBHOOK_URL = import.meta.env.QUIZ_FORM_WEBHOOK_URL;
                   id="certainty-less-than-75"
                   name="how-certain-about-becoming-a-pilot"
                   type="radio"
-                  class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
+                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
                   value="Less than 75%"
                 />
                 <label
@@ -475,7 +479,7 @@ const QUIZ_FORM_WEBHOOK_URL = import.meta.env.QUIZ_FORM_WEBHOOK_URL;
                   id="still-considering"
                   name="how-certain-about-becoming-a-pilot"
                   type="radio"
-                  class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
+                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
                   value="Still considering"
                   required
                 />
@@ -499,7 +503,7 @@ const QUIZ_FORM_WEBHOOK_URL = import.meta.env.QUIZ_FORM_WEBHOOK_URL;
                   id="passion-for-flying"
                   name="why-do-you-want-to-become-a-pilot"
                   type="radio"
-                  class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
+                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
                   value="Passion for flying"
                 />
                 <label
@@ -514,7 +518,7 @@ const QUIZ_FORM_WEBHOOK_URL = import.meta.env.QUIZ_FORM_WEBHOOK_URL;
                   id="desire-for-control"
                   name="why-do-you-want-to-become-a-pilot"
                   type="radio"
-                  class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
+                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
                   value="Desire for control and independence"
                 />
                 <label
@@ -529,7 +533,7 @@ const QUIZ_FORM_WEBHOOK_URL = import.meta.env.QUIZ_FORM_WEBHOOK_URL;
                   id="to-meet-new-people"
                   name="why-do-you-want-to-become-a-pilot"
                   type="radio"
-                  class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
+                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
                   value="To meet new people"
                 />
                 <label
@@ -544,7 +548,7 @@ const QUIZ_FORM_WEBHOOK_URL = import.meta.env.QUIZ_FORM_WEBHOOK_URL;
                   id="inspired-by-media"
                   name="why-do-you-want-to-become-a-pilot"
                   type="radio"
-                  class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
+                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
                   value="Inspired by media"
                   required
                 />
@@ -568,7 +572,7 @@ const QUIZ_FORM_WEBHOOK_URL = import.meta.env.QUIZ_FORM_WEBHOOK_URL;
                   id="under-25"
                   name="age-range"
                   type="radio"
-                  class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
+                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
                   value="Under 25"
                 />
                 <label for="under-25" class="block leading-6 text-gray-600">
@@ -580,7 +584,7 @@ const QUIZ_FORM_WEBHOOK_URL = import.meta.env.QUIZ_FORM_WEBHOOK_URL;
                   id="26-55"
                   name="age-range"
                   type="radio"
-                  class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
+                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
                   value="26–55"
                 />
                 <label for="26-55" class="block leading-6 text-gray-600">
@@ -592,7 +596,7 @@ const QUIZ_FORM_WEBHOOK_URL = import.meta.env.QUIZ_FORM_WEBHOOK_URL;
                   id="over-55"
                   name="age-range"
                   type="radio"
-                  class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
+                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
                   value="Over 55"
                   required
                 />
@@ -613,7 +617,7 @@ const QUIZ_FORM_WEBHOOK_URL = import.meta.env.QUIZ_FORM_WEBHOOK_URL;
                   id="under-200"
                   name="weight-range"
                   type="radio"
-                  class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
+                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
                   value="Under 200 lbs"
                 />
                 <label for="under-200" class="block leading-6 text-gray-600">
@@ -625,7 +629,7 @@ const QUIZ_FORM_WEBHOOK_URL = import.meta.env.QUIZ_FORM_WEBHOOK_URL;
                   id="200-250"
                   name="weight-range"
                   type="radio"
-                  class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
+                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
                   value="200–250 lbs"
                 />
                 <label for="200-250" class="block leading-6 text-gray-600">
@@ -637,7 +641,7 @@ const QUIZ_FORM_WEBHOOK_URL = import.meta.env.QUIZ_FORM_WEBHOOK_URL;
                   id="over-250"
                   name="weight-range"
                   type="radio"
-                  class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
+                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
                   value="Over 250 lbs"
                   required
                 />
@@ -659,7 +663,7 @@ const QUIZ_FORM_WEBHOOK_URL = import.meta.env.QUIZ_FORM_WEBHOOK_URL;
                   id="medical-yes"
                   name="faa-medical-conditions"
                   type="radio"
-                  class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
+                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
                   value="Yes"
                 />
                 <label for="medical-yes" class="block leading-6 text-gray-600">
@@ -671,7 +675,7 @@ const QUIZ_FORM_WEBHOOK_URL = import.meta.env.QUIZ_FORM_WEBHOOK_URL;
                   id="medical-no"
                   name="faa-medical-conditions"
                   type="radio"
-                  class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
+                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
                   value="No"
                 />
                 <label for="medical-no" class="block leading-6 text-gray-600">
@@ -683,7 +687,7 @@ const QUIZ_FORM_WEBHOOK_URL = import.meta.env.QUIZ_FORM_WEBHOOK_URL;
                   id="medical-unsure"
                   name="faa-medical-conditions"
                   type="radio"
-                  class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
+                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
                   value="Unsure"
                   required
                 />
@@ -707,7 +711,7 @@ const QUIZ_FORM_WEBHOOK_URL = import.meta.env.QUIZ_FORM_WEBHOOK_URL;
                   id="medications-yes"
                   name="currently-taking-medications"
                   type="radio"
-                  class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
+                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
                   value="Yes"
                 />
                 <label
@@ -722,7 +726,7 @@ const QUIZ_FORM_WEBHOOK_URL = import.meta.env.QUIZ_FORM_WEBHOOK_URL;
                   id="medications-no"
                   name="currently-taking-medications"
                   type="radio"
-                  class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
+                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
                   value="No"
                 />
                 <label
@@ -737,7 +741,7 @@ const QUIZ_FORM_WEBHOOK_URL = import.meta.env.QUIZ_FORM_WEBHOOK_URL;
                   id="medications-prefer-not-to-say"
                   name="currently-taking-medications"
                   type="radio"
-                  class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
+                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
                   value="Prefer not to say"
                   required
                 />
@@ -762,7 +766,7 @@ const QUIZ_FORM_WEBHOOK_URL = import.meta.env.QUIZ_FORM_WEBHOOK_URL;
                   id="learning-visual"
                   name="learning-methods"
                   type="checkbox"
-                  class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
+                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
                   value="Visual (e.g., diagrams, videos)"
                 />
                 <label
@@ -777,7 +781,7 @@ const QUIZ_FORM_WEBHOOK_URL = import.meta.env.QUIZ_FORM_WEBHOOK_URL;
                   id="learning-auditory"
                   name="learning-methods"
                   type="checkbox"
-                  class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
+                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
                   value="Auditory (e.g., lectures, discussions)"
                 />
                 <label
@@ -792,7 +796,7 @@ const QUIZ_FORM_WEBHOOK_URL = import.meta.env.QUIZ_FORM_WEBHOOK_URL;
                   id="learning-reading-writing"
                   name="learning-methods"
                   type="checkbox"
-                  class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
+                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
                   value="Reading/Writing (e.g., manuals, note-taking)"
                 />
                 <label
@@ -807,7 +811,7 @@ const QUIZ_FORM_WEBHOOK_URL = import.meta.env.QUIZ_FORM_WEBHOOK_URL;
                   id="learning-kinesthetic"
                   name="learning-methods"
                   type="checkbox"
-                  class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
+                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
                   value="Kinesthetic (e.g., hands-on practice, simulations)"
                 />
                 <label
@@ -831,7 +835,7 @@ const QUIZ_FORM_WEBHOOK_URL = import.meta.env.QUIZ_FORM_WEBHOOK_URL;
                   id="training-one-on-one"
                   name="training-formats"
                   type="checkbox"
-                  class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
+                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
                   value="One-on-one tutoring (most personalized, higher cost)"
                 />
                 <label
@@ -846,7 +850,7 @@ const QUIZ_FORM_WEBHOOK_URL = import.meta.env.QUIZ_FORM_WEBHOOK_URL;
                   id="training-classroom"
                   name="training-formats"
                   type="checkbox"
-                  class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
+                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
                   value="Classroom instruction at a local community college (structured, cost-effective)"
                 />
                 <label
@@ -862,7 +866,7 @@ const QUIZ_FORM_WEBHOOK_URL = import.meta.env.QUIZ_FORM_WEBHOOK_URL;
                   id="training-online"
                   name="training-formats"
                   type="checkbox"
-                  class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
+                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
                   value="Online computer-based training (flexible, self-paced)"
                 />
                 <label
@@ -877,7 +881,7 @@ const QUIZ_FORM_WEBHOOK_URL = import.meta.env.QUIZ_FORM_WEBHOOK_URL;
                   id="training-combination"
                   name="training-formats"
                   type="checkbox"
-                  class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
+                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
                   value="A combination of the above"
                 />
                 <label
@@ -900,7 +904,7 @@ const QUIZ_FORM_WEBHOOK_URL = import.meta.env.QUIZ_FORM_WEBHOOK_URL;
                   id="lessons-1-or-fewer"
                   name="flight-lessons-per-week"
                   type="radio"
-                  class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
+                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
                   value="1 or fewer"
                 />
                 <label
@@ -915,7 +919,7 @@ const QUIZ_FORM_WEBHOOK_URL = import.meta.env.QUIZ_FORM_WEBHOOK_URL;
                   id="lessons-2-3"
                   name="flight-lessons-per-week"
                   type="radio"
-                  class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
+                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
                   value="2–3"
                 />
                 <label for="lessons-2-3" class="block leading-6 text-gray-600">
@@ -927,7 +931,7 @@ const QUIZ_FORM_WEBHOOK_URL = import.meta.env.QUIZ_FORM_WEBHOOK_URL;
                   id="lessons-4-or-more"
                   name="flight-lessons-per-week"
                   type="radio"
-                  class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
+                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
                   value="4 or more"
                   required
                 />
@@ -952,7 +956,7 @@ const QUIZ_FORM_WEBHOOK_URL = import.meta.env.QUIZ_FORM_WEBHOOK_URL;
                   id="flexibility-yes"
                   name="schedule-flexibility"
                   type="radio"
-                  class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
+                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
                   value="Yes"
                 />
                 <label
@@ -967,7 +971,7 @@ const QUIZ_FORM_WEBHOOK_URL = import.meta.env.QUIZ_FORM_WEBHOOK_URL;
                   id="flexibility-no"
                   name="schedule-flexibility"
                   type="radio"
-                  class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
+                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
                   value="No"
                 />
                 <label
@@ -982,7 +986,7 @@ const QUIZ_FORM_WEBHOOK_URL = import.meta.env.QUIZ_FORM_WEBHOOK_URL;
                   id="flexibility-limited"
                   name="schedule-flexibility"
                   type="radio"
-                  class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
+                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
                   value="Limited flexibility"
                   required
                 />
@@ -1007,7 +1011,7 @@ const QUIZ_FORM_WEBHOOK_URL = import.meta.env.QUIZ_FORM_WEBHOOK_URL;
                   id="financial-full-amount"
                   name="flight-training-finances"
                   type="radio"
-                  class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
+                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
                   value="Yes, I have the full amount saved ($12,000–$15,000 for a Private Pilot License)"
                 />
                 <label
@@ -1023,7 +1027,7 @@ const QUIZ_FORM_WEBHOOK_URL = import.meta.env.QUIZ_FORM_WEBHOOK_URL;
                   id="financial-pay-as-you-go"
                   name="flight-training-finances"
                   type="radio"
-                  class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
+                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
                   value="Yes, I plan to pay as I go"
                 />
                 <label
@@ -1038,7 +1042,7 @@ const QUIZ_FORM_WEBHOOK_URL = import.meta.env.QUIZ_FORM_WEBHOOK_URL;
                   id="financial-assistance"
                   name="flight-training-finances"
                   type="radio"
-                  class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
+                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
                   value="Yes, I have financial assistance (e.g., GI Bill, scholarships, employer reimbursement)"
                 />
                 <label
@@ -1054,7 +1058,7 @@ const QUIZ_FORM_WEBHOOK_URL = import.meta.env.QUIZ_FORM_WEBHOOK_URL;
                   id="financial-need-guidance"
                   name="flight-training-finances"
                   type="radio"
-                  class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
+                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
                   value="No, I need guidance on financing options"
                   required
                 />
@@ -1078,7 +1082,7 @@ const QUIZ_FORM_WEBHOOK_URL = import.meta.env.QUIZ_FORM_WEBHOOK_URL;
                   id="goal-recreational"
                   name="pilot-license-goal"
                   type="radio"
-                  class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
+                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
                   value="Recreational flying"
                 />
                 <label
@@ -1093,7 +1097,7 @@ const QUIZ_FORM_WEBHOOK_URL = import.meta.env.QUIZ_FORM_WEBHOOK_URL;
                   id="goal-career"
                   name="pilot-license-goal"
                   type="radio"
-                  class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
+                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
                   value="Career in aviation (e.g., airline pilot, corporate pilot, CFI)"
                 />
                 <label for="goal-career" class="block leading-6 text-gray-600">
@@ -1105,7 +1109,7 @@ const QUIZ_FORM_WEBHOOK_URL = import.meta.env.QUIZ_FORM_WEBHOOK_URL;
                   id="goal-other"
                   name="pilot-license-goal"
                   type="radio"
-                  class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
+                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
                   value="Other"
                 />
                 <label for="goal-other" class="block leading-6 text-gray-600">
@@ -1114,12 +1118,12 @@ const QUIZ_FORM_WEBHOOK_URL = import.meta.env.QUIZ_FORM_WEBHOOK_URL;
                 <input
                   type="text"
                   name="pilot-license-goal-other"
-                  class="ml-2 flex-1 border border-gray-300 rounded-md px-2 py-1 text-sm text-gray-700 focus:ring-medium-blue focus:border-medium-blue"
-                  placeholder="Your goal"
+                  class="ml-2 flex-1 p-2 rounded-md border-0 py-1.5 text-dark-blue shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-medium-blue sm:sm:leading-6"
                 />
               </div>
             </div>
           </fieldset>
+
           <fieldset>
             <legend class="font-medium leading-6 text-dark-blue">
               Do you currently hold a college degree?
@@ -1130,7 +1134,7 @@ const QUIZ_FORM_WEBHOOK_URL = import.meta.env.QUIZ_FORM_WEBHOOK_URL;
                   id="college-degree-yes"
                   name="hold-college-degree"
                   type="radio"
-                  class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
+                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
                   value="Yes"
                 />
                 <label
@@ -1145,7 +1149,7 @@ const QUIZ_FORM_WEBHOOK_URL = import.meta.env.QUIZ_FORM_WEBHOOK_URL;
                   id="college-degree-no"
                   name="hold-college-degree"
                   type="radio"
-                  class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
+                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
                   value="No"
                   required
                 />
@@ -1170,7 +1174,7 @@ const QUIZ_FORM_WEBHOOK_URL = import.meta.env.QUIZ_FORM_WEBHOOK_URL;
                   id="degree-before-training"
                   name="pursue-degree-flight-training"
                   type="radio"
-                  class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
+                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
                   value="Yes, before flight training"
                 />
                 <label
@@ -1185,7 +1189,7 @@ const QUIZ_FORM_WEBHOOK_URL = import.meta.env.QUIZ_FORM_WEBHOOK_URL;
                   id="degree-during-training"
                   name="pursue-degree-flight-training"
                   type="radio"
-                  class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
+                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
                   value="Yes, during flight training"
                 />
                 <label
@@ -1200,7 +1204,7 @@ const QUIZ_FORM_WEBHOOK_URL = import.meta.env.QUIZ_FORM_WEBHOOK_URL;
                   id="degree-after-training"
                   name="pursue-degree-flight-training"
                   type="radio"
-                  class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
+                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
                   value="Yes, after flight training"
                 />
                 <label
@@ -1215,7 +1219,7 @@ const QUIZ_FORM_WEBHOOK_URL = import.meta.env.QUIZ_FORM_WEBHOOK_URL;
                   id="degree-no"
                   name="pursue-degree-flight-training"
                   type="radio"
-                  class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
+                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
                   value="No"
                   required
                 />
@@ -1236,7 +1240,7 @@ const QUIZ_FORM_WEBHOOK_URL = import.meta.env.QUIZ_FORM_WEBHOOK_URL;
                   id="heard-online-search"
                   name="hear-about-high-tide-aviation"
                   type="radio"
-                  class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
+                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
                   value="Online Search"
                 />
                 <label
@@ -1251,7 +1255,7 @@ const QUIZ_FORM_WEBHOOK_URL = import.meta.env.QUIZ_FORM_WEBHOOK_URL;
                   id="heard-social-media"
                   name="hear-about-high-tide-aviation"
                   type="radio"
-                  class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
+                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
                   value="Social Media"
                 />
                 <label
@@ -1266,7 +1270,7 @@ const QUIZ_FORM_WEBHOOK_URL = import.meta.env.QUIZ_FORM_WEBHOOK_URL;
                   id="heard-referred-friend"
                   name="hear-about-high-tide-aviation"
                   type="radio"
-                  class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
+                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
                   value="Referred by a friend or pilot"
                 />
                 <label
@@ -1281,7 +1285,7 @@ const QUIZ_FORM_WEBHOOK_URL = import.meta.env.QUIZ_FORM_WEBHOOK_URL;
                   id="heard-visited-airport"
                   name="hear-about-high-tide-aviation"
                   type="radio"
-                  class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
+                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
                   value="Visited the airport"
                 />
                 <label
@@ -1296,20 +1300,16 @@ const QUIZ_FORM_WEBHOOK_URL = import.meta.env.QUIZ_FORM_WEBHOOK_URL;
                   id="heard-other"
                   name="hear-about-high-tide-aviation"
                   type="radio"
-                  class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
+                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
                   value="Other"
                 />
-                <label for="heard-other" class="block leading-6 text-gray-600"
-                  >Other</label
-                >
-              </div>
-              <div class="mt-1">
+                <label for="heard-other" class="block leading-6 text-gray-600">
+                  Other (please specify):
+                </label>
                 <input
                   type="text"
-                  name="hear-about-high-tide-aviation-other-text"
-                  id="hear-about-high-tide-aviation-other-text"
-                  placeholder="Please specify"
-                  class="block w-full rounded-md border-gray-300 shadow-sm focus:border-medium-blue focus:ring-medium-blue sm:text-sm"
+                  name="hear-about-high-tide-aviation-other"
+                  class="ml-2 flex-1 p-2 rounded-md border-0 py-1.5 text-dark-blue shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-medium-blue sm:sm:leading-6"
                 />
               </div>
             </div>
@@ -1323,410 +1323,9 @@ const QUIZ_FORM_WEBHOOK_URL = import.meta.env.QUIZ_FORM_WEBHOOK_URL;
               <textarea
                 name="additional-comments"
                 id="additional-comments"
-                rows="4"
-                class="block w-full rounded-md border-gray-300 shadow-sm focus:border-medium-blue focus:ring-medium-blue sm:text-sm"
-                placeholder="Type your comments or questions here..."
+                rows="3"
+                class="block w-full p-2 rounded-md border-0 py-1.5 text-dark-blue shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-medium-blue sm:sm:leading-6"
               ></textarea>
-            </div>
-          </fieldset>
-
-          <fieldset>
-            <legend class="font-medium leading-6 text-dark-blue"
-              >What inspires you to pursue a career as a pilot?</legend
-            >
-            <p class="text-gray-500 text-sm">You can select multiple options</p>
-            <div class="mt-2 space-y-1">
-              <div class="relative flex gap-x-3">
-                <div class="flex h-6 items-center">
-                  <input
-                    id="adventure"
-                    name="inspirations"
-                    type="checkbox"
-                    class="h-4 w-4 rounded border-gray-300 text-medium-blue focus:ring-medium-blue"
-                    value="A passion for adventure"
-                  />
-                </div>
-                <div class="leading-6">
-                  <label for="adventure" class="text-gray-600"
-                    >A passion for adventure</label
-                  >
-                </div>
-              </div>
-              <div class="relative flex gap-x-3">
-                <div class="flex h-6 items-center">
-                  <input
-                    id="opportunities"
-                    name="inspirations"
-                    type="checkbox"
-                    class="h-4 w-4 rounded border-gray-300 text-medium-blue focus:ring-medium-blue"
-                    value="Professional growth and opportunities"
-                  />
-                </div>
-                <div class="leading-6">
-                  <label for="opportunities" class="text-gray-600"
-                    >Professional growth and opportunities</label
-                  >
-                </div>
-              </div>
-              <div class="relative flex gap-x-3">
-                <div class="flex h-6 items-center">
-                  <input
-                    id="hobby"
-                    name="inspirations"
-                    type="checkbox"
-                    class="h-4 w-4 rounded border-gray-300 text-medium-blue focus:ring-medium-blue"
-                    value="Personal hobby"
-                  />
-                </div>
-                <div class="leading-6">
-                  <label for="hobby" class="text-gray-600">Personal hobby</label
-                  >
-                </div>
-              </div>
-              <div class="relative flex gap-x-3">
-                <div class="flex h-6 items-center">
-                  <input
-                    id="other"
-                    name="inspirations"
-                    type="checkbox"
-                    class="h-4 w-4 rounded border-gray-300 text-medium-blue focus:ring-medium-blue"
-                    value="Other:"
-                  />
-                </div>
-                <div class="leading-6">
-                  <label for="other" class="text-gray-600"
-                    >Other (please specify)</label
-                  >
-                </div>
-              </div>
-              <input
-                class="block w-full lg:w-1/2 p-2 rounded-md border-0 py-1.5 text-dark-blue shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-medium-blue sm:sm:leading-6"
-                type="text"
-                name="inspirations"
-                id="other-text"
-              />
-            </div>
-          </fieldset>
-        </div>
-
-        <div class="col-span-full">
-          <label
-            for="long-term-goals"
-            class="block font-medium leading-6 text-dark-blue"
-            >What are your long-term goals within the aviation industry?</label
-          >
-          <div class="mt-2">
-            <textarea
-              id="long-term-goals"
-              name="long-term-goals"
-              rows="3"
-              class="block w-full p-2 rounded-md border-0 py-1.5 text-dark-blue shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-medium-blue sm:sm:leading-6"
-            ></textarea>
-          </div>
-        </div>
-
-        <div class="mt-10 space-y-10">
-          <fieldset>
-            <legend class="font-medium leading-6 text-dark-blue"
-              >What is your current level of aviation experience?</legend
-            >
-            <div class="mt-2 space-y-1">
-              <div class="flex items-center gap-x-3">
-                <input
-                  id="no-experience"
-                  name="level-of-experience"
-                  type="radio"
-                  class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
-                  value="No prior experience with piloting aircraft"
-                />
-                <label for="no-experience" class="block leading-6 text-gray-600"
-                  >No prior experience with piloting aircraft</label
-                >
-              </div>
-              <div class="flex items-center gap-x-3">
-                <input
-                  id="simulator-experience"
-                  name="level-of-experience"
-                  type="radio"
-                  class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
-                  value="Experience with flight simulators or drones"
-                />
-                <label
-                  for="simulator-experience"
-                  class="block leading-6 text-gray-600"
-                  >Experience with flight simulators or drones</label
-                >
-              </div>
-              <div class="flex items-center gap-x-3">
-                <input
-                  id="flight-training"
-                  name="level-of-experience"
-                  type="radio"
-                  class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
-                  value="Some flight training but haven't soloed yet"
-                />
-                <label
-                  for="flight-training"
-                  class="block leading-6 text-gray-600"
-                  >Some flight training but haven't soloed yet</label
-                >
-              </div>
-              <div class="flex items-center gap-x-3">
-                <input
-                  id="checkride"
-                  name="level-of-experience"
-                  type="radio"
-                  class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
-                  value="Currently working towards completing a checkride"
-                  required
-                />
-                <label for="checkride" class="block leading-6 text-gray-600"
-                  >Currently working towards completing a checkride</label
-                >
-              </div>
-            </div>
-          </fieldset>
-
-          <fieldset>
-            <legend class="font-medium leading-6 text-dark-blue"
-              >Which learning style resonates with you the most?</legend
-            >
-            <div class="mt-2 space-y-1">
-              <div class="flex items-center gap-x-3">
-                <input
-                  id="practical"
-                  name="preferred-learning-style"
-                  type="radio"
-                  class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
-                  value="Hands-on, practical learning"
-                />
-                <label for="practical" class="block leading-6 text-gray-600"
-                  >Hands-on, practical learning</label
-                >
-              </div>
-              <div class="flex items-center gap-x-3">
-                <input
-                  id="visual"
-                  name="preferred-learning-style"
-                  type="radio"
-                  class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
-                  value="Visual learning through observation"
-                />
-                <label for="visual" class="block leading-6 text-gray-600"
-                  >Visual learning through observation</label
-                >
-              </div>
-              <div class="flex items-center gap-x-3">
-                <input
-                  id="reading"
-                  name="preferred-learning-style"
-                  type="radio"
-                  class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
-                  value="Learning through reading and studying materials"
-                  required
-                />
-                <label for="reading" class="block leading-6 text-gray-600"
-                  >Learning through reading and studying materials</label
-                >
-              </div>
-            </div>
-          </fieldset>
-
-          <fieldset>
-            <legend class="font-medium leading-6 text-dark-blue"
-              >Do you prefer a structured learning environment with clearly
-              defined expectations, or a more flexible, adaptable approach?</legend
-            >
-            <div class="mt-2 space-y-1">
-              <div class="flex items-center gap-x-3">
-                <input
-                  id="structured"
-                  name="preferred-approach"
-                  type="radio"
-                  class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
-                  value="I prefer a structured approach"
-                />
-                <label for="structured" class="block leading-6 text-gray-600"
-                  >I prefer a structured approach</label
-                >
-              </div>
-              <div class="flex items-center gap-x-3">
-                <input
-                  id="flexible"
-                  name="preferred-approach"
-                  type="radio"
-                  class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
-                  value="I prefer a flexible approach"
-                  required
-                />
-                <label for="flexible" class="block leading-6 text-gray-600"
-                  >I prefer a flexible approach</label
-                >
-              </div>
-            </div>
-          </fieldset>
-
-          <fieldset>
-            <legend class="font-medium leading-6 text-dark-blue"
-              >What kind of guidance and support would you prefer from your
-              flight instructor?
-            </legend>
-            <p class="text-gray-500 text-sm">You can select multiple options</p>
-            <div class="mt-2 space-y-1">
-              <div class="relative flex gap-x-3">
-                <div class="flex h-6 items-center">
-                  <input
-                    id="personalized-approach"
-                    name="kind-of-guidance"
-                    type="checkbox"
-                    class="h-4 w-4 rounded border-gray-300 text-medium-blue focus:ring-medium-blue"
-                    value="A personalized approach tailored to my individual learning needs and preferences"
-                  />
-                </div>
-                <div class="leading-6">
-                  <label for="personalized-approach" class="text-gray-600"
-                    >A personalized approach tailored to my individual learning
-                    needs and preferences</label
-                  >
-                </div>
-              </div>
-              <div class="relative flex gap-x-3">
-                <div class="flex h-6 items-center">
-                  <input
-                    id="hands-on-involvement"
-                    name="kind-of-guidance"
-                    type="checkbox"
-                    class="h-4 w-4 rounded border-gray-300 text-medium-blue focus:ring-medium-blue"
-                    value="Hands-on involvement from the instructor, with constant feedback and guidance"
-                  />
-                </div>
-                <div class="leading-6">
-                  <label for="hands-on-involvement" class="text-gray-600"
-                    >Hands-on involvement from the instructor, with constant
-                    feedback and guidance</label
-                  >
-                </div>
-              </div>
-              <div class="relative flex gap-x-3">
-                <div class="flex h-6 items-center">
-                  <input
-                    id="structured-approach"
-                    name="kind-of-guidance"
-                    type="checkbox"
-                    class="h-4 w-4 rounded border-gray-300 text-medium-blue focus:ring-medium-blue"
-                    value="A structured approach with clear goals and objectives"
-                  />
-                </div>
-                <div class="leading-6">
-                  <label for="structured-approach" class="text-gray-600"
-                    >A structured approach with clear goals and objectives</label
-                  >
-                </div>
-              </div>
-              <div class="relative flex gap-x-3">
-                <div class="flex h-6 items-center">
-                  <input
-                    id="guidance"
-                    name="kind-of-guidance"
-                    type="checkbox"
-                    class="h-4 w-4 rounded border-gray-300 text-medium-blue focus:ring-medium-blue"
-                    value="Supportive and encouraging guidance, with a focus on building confidence"
-                  />
-                </div>
-                <div class="leading-6">
-                  <label for="guidance" class="text-gray-600"
-                    >Supportive and encouraging guidance, with a focus on
-                    building confidence</label
-                  >
-                </div>
-              </div>
-              <div class="relative flex gap-x-3">
-                <div class="flex h-6 items-center">
-                  <input
-                    id="other2"
-                    name="kind-of-guidance"
-                    type="checkbox"
-                    class="h-4 w-4 rounded border-gray-300 text-medium-blue focus:ring-medium-blue"
-                    value="Other:"
-                  />
-                </div>
-                <div class="leading-6">
-                  <label for="other2" class="text-gray-600"
-                    >Other (please specify)</label
-                  >
-                </div>
-              </div>
-              <input
-                class="block w-full lg:w-1/2 p-2 rounded-md border-0 py-1.5 text-dark-blue shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-medium-blue sm:sm:leading-6"
-                type="text"
-                name="kind-of-guidance"
-                id="other2-text"
-              />
-            </div>
-          </fieldset>
-
-          <div class="col-span-full">
-            <label
-              for="lift-generation"
-              class="block font-medium leading-6 text-dark-blue"
-              >Do you know how a wing generates lift?</label
-            >
-            <div class="mt-2">
-              <textarea
-                id="lift-generation"
-                name="do-you-know-how-a-wing-generates-lift"
-                rows="3"
-                class="block w-full p-2 rounded-md border-0 py-1.5 text-dark-blue shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-medium-blue sm:sm:leading-6"
-                required></textarea>
-            </div>
-          </div>
-
-          <div class="col-span-full">
-            <label
-              for="expectations"
-              class="block font-medium leading-6 text-dark-blue"
-              >Is there anything else you'd like us to know about your interests
-              or expectations regarding flight training?</label
-            >
-            <div class="mt-2">
-              <textarea
-                id="expectations"
-                name="anything-else-youd-like-us-to-know-about-your-interests-or-expectations-regarding-flight-training"
-                rows="3"
-                class="block w-full p-2 rounded-md border-0 py-1.5 text-dark-blue shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-medium-blue sm:sm:leading-6"
-                required></textarea>
-            </div>
-          </div>
-
-          <fieldset>
-            <legend class="font-medium leading-6 text-dark-blue"
-              >Would you be interested in scheduling a visit to High Tide
-              Aviation?</legend
-            >
-            <div class="mt-2 space-y-1">
-              <div class="flex items-center gap-x-3">
-                <input
-                  id="yes"
-                  name="interested-in-visit"
-                  type="radio"
-                  class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
-                  value="yes"
-                />
-                <label for="yes" class="block leading-6 text-gray-600"
-                  >Yes</label
-                >
-              </div>
-              <div class="flex items-center gap-x-3">
-                <input
-                  id="no"
-                  name="interested-in-visit"
-                  type="radio"
-                  class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue"
-                  value="no"
-                  required
-                />
-                <label for="no" class="block leading-6 text-gray-600">No</label>
-              </div>
             </div>
           </fieldset>
         </div>
@@ -1736,7 +1335,7 @@ const QUIZ_FORM_WEBHOOK_URL = import.meta.env.QUIZ_FORM_WEBHOOK_URL;
           type="checkbox"
           name="agree-data-collection"
           id="agree-data-collection"
-          class="h-4 w-4 rounded border-gray-300 text-medium-blue focus:ring-medium-blue"
+          class="h-4 w-4 shrink-0 rounded border-gray-300 text-medium-blue focus:ring-medium-blue"
         />
 
         <label for="agree-data-collection" class="text-gray-500 text-sm">
@@ -1754,85 +1353,7 @@ const QUIZ_FORM_WEBHOOK_URL = import.meta.env.QUIZ_FORM_WEBHOOK_URL;
     </form>
   </section>
 
-  <script define:vars={{ QUIZ_FORM_WEBHOOK_URL }}>
-    // Wait for the DOM content to be fully loaded
-    document.addEventListener("DOMContentLoaded", function () {
-      // Get the quiz form element
-      const quizForm = document.getElementById("quiz-form");
-
-      // Check if the quiz form element exists
-      if (quizForm !== null) {
-        // Add submit event listener to the quiz form
-        quizForm.addEventListener("submit", function (event) {
-          // Prevent the default form submission
-          event.preventDefault();
-
-          // Serialize the form data
-          const formData = new FormData(quizForm);
-
-          // Check the value of the honeypot field
-          const confirmEmailValue = formData.get("confirm-email");
-          if (confirmEmailValue === "" || confirmEmailValue === null) {
-            // If the honeypot field is empty, it's a human
-            // Set the form action to the URL for processing the form and redirecting to thank you
-            quizForm.action = QUIZ_FORM_WEBHOOK_URL;
-          }
-
-          const inspirations = [];
-          formData.getAll("inspirations").forEach((inspiration) => {
-            inspirations.push(inspiration);
-          });
-
-          formData.delete("inspirations");
-
-          formData.append("what-inspires-you", inspirations.join(","));
-
-          const kindOfGuidance = [];
-          formData.getAll("kind-of-guidance").forEach((guidance) => {
-            kindOfGuidance.push(guidance);
-          });
-
-          formData.delete("kind-of-guidance");
-
-          formData.append(
-            "what-kind-of-guidance-and-support-you-prefer",
-            kindOfGuidance.join(","),
-          );
-
-          // Convert FormData to URLSearchParams
-          const urlSearchParams = new URLSearchParams();
-          for (const pair of formData.entries()) {
-            urlSearchParams.append(pair[0], pair[1]);
-          }
-
-          // Send an AJAX request to submit the form
-          const xhr = new XMLHttpRequest();
-          xhr.open("POST", quizForm.action);
-          xhr.setRequestHeader(
-            "Content-Type",
-            "application/x-www-form-urlencoded",
-          );
-          xhr.onload = function () {
-            // Check if the request was successful (status 200)
-            if (xhr.status === 200) {
-              // Redirect the user after a successful form submission
-              window.location.href = "/quiz-confirmation";
-            } else {
-              // Handle errors if any
-              console.error("Form submission failed:", xhr.statusText);
-            }
-          };
-          xhr.onerror = function () {
-            // Handle network errors
-            console.error("Network error occurred while submitting the form.");
-          };
-          xhr.send(urlSearchParams);
-        });
-      } else {
-        console.error("Quiz form element not found.");
-      }
-    });
-
+  <script define:vars={{ QUIZ_FORM_WEBHOOK_URL, PORTAL_API_KEY }}>
     const checkbox = document.getElementById("agree-data-collection");
     const submitButton = document.getElementById("submit-button");
 
@@ -1854,6 +1375,85 @@ const QUIZ_FORM_WEBHOOK_URL = import.meta.env.QUIZ_FORM_WEBHOOK_URL;
           "hover:text-white",
         );
       }
+    });
+    document.addEventListener("DOMContentLoaded", () => {
+      const form = document.getElementById("quiz-form");
+      if (!form) {
+        console.error("Form element not found.");
+        return;
+      }
+
+      form.addEventListener("submit", async (event) => {
+        event.preventDefault();
+
+        const formData = new FormData(form);
+        const confirmEmail = formData.get("confirm-email")?.trim();
+        if (confirmEmail) return;
+
+        const webhookURL = QUIZ_FORM_WEBHOOK_URL;
+        const apiKey = PORTAL_API_KEY;
+
+        const urlEncodedBody = new URLSearchParams(formData).toString();
+
+        const excludedFields = [
+          "first-name",
+          "last-name",
+          "email",
+          "phone",
+          "confirm-email",
+          "agree-data-collection",
+        ];
+
+        const metadata = {};
+
+        for (const [key, value] of formData.entries()) {
+          if (!excludedFields.includes(key)) {
+            metadata[key] = value?.trim?.() ?? value;
+          }
+        }
+
+        const jsonBody = {
+          first_name: formData.get("first-name")?.trim() || "",
+          last_name: formData.get("last-name")?.trim() || "",
+          email: formData.get("email")?.trim() || "",
+          phone: formData.get("phone")?.trim() || "",
+          campaign: "quiz",
+          account_random_id: "ac_yec3jxiy",
+          metadata: metadata,
+        };
+
+        try {
+          const [ghlRes, portalRes] = await Promise.all([
+            fetch(webhookURL, {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/x-www-form-urlencoded",
+              },
+              body: urlEncodedBody,
+            }),
+            fetch("https://portal.rightruddermarketing.com/api/leads", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json",
+                "x-api-key": apiKey,
+              },
+              body: JSON.stringify(jsonBody),
+            }),
+          ]);
+
+          if (ghlRes.ok && portalRes.ok) {
+            window.location.href = "/quiz-confirmation";
+          } else {
+            console.error("Submission failed", {
+              ghlStatus: ghlRes.status,
+              portalStatus: portalRes.status,
+            });
+          }
+        } catch (err) {
+          console.error("Submission error:", err);
+        }
+      });
     });
   </script>
 </BaseLayout>
