@@ -33,8 +33,25 @@ const PORTAL_API_KEY = import.meta.env.PORTAL_API_KEY;
         High Tide Aviation Flight Training Readiness Assessment
       </h3>
     </div>
+    <div class="mt-10">
+      <p class="text-dark-blue">
+        <span class="text-dark-blue font-semibold">Purpose:</span>
+        To help prospective students evaluate their preparedness for flight training
+        and allow High Tide Aviation to tailor a personalized training plan.
+      </p>
+    </div>
+    <div class="mt-3">
+      <p class="text-dark-blue">
+        <span class="text-dark-blue font-semibold">Instructions:</span>
+        Please answer the following questions honestly. Your responses will remain
+        confidential and will be used solely to assist in your flight training journey.
+      </p>
+    </div>
     <form id="quiz-form">
-      <div class="space-y-12">
+      <div class="mt-10">
+        <h2 class="text-2xl font-bold leading-7 text-dark-blue">
+          Personal Information
+        </h2>
         <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
           <div class="sm:col-span-3">
             <label
@@ -162,6 +179,9 @@ const PORTAL_API_KEY = import.meta.env.PORTAL_API_KEY;
             </div>
           </fieldset>
 
+          <h2 class="text-2xl font-bold leading-7 text-dark-blue">
+            Flight Experience
+          </h2>
           <fieldset>
             <legend class="font-medium leading-6 text-dark-blue"
               >Do you have any prior flight experience or training?</legend
@@ -200,6 +220,9 @@ const PORTAL_API_KEY = import.meta.env.PORTAL_API_KEY;
             </div>
           </fieldset>
 
+          <h2 class="text-2xl font-bold leading-7 text-dark-blue">
+            Aspirations and Mindset
+          </h2>
           <fieldset>
             <legend class="font-medium leading-6 text-dark-blue"
               >What kind of pilot do you aspire to be?</legend
@@ -562,6 +585,18 @@ const PORTAL_API_KEY = import.meta.env.PORTAL_API_KEY;
             </div>
           </fieldset>
 
+          <div>
+            <h2 class="text-2xl font-bold leading-7 text-dark-blue">
+              Medical Fitness
+            </h2>
+            <div class="mt-3">
+              <p class="text-dark-blue">
+                <span class="text-dark-blue font-semibold">Note:</span>
+                All pilots must obtain an FAA Medical Certificate. It’s essential
+                to assess your medical fitness early in your training journey.
+              </p>
+            </div>
+          </div>
           <fieldset>
             <legend class="font-medium leading-6 text-dark-blue">
               Age Range:
@@ -752,9 +787,20 @@ const PORTAL_API_KEY = import.meta.env.PORTAL_API_KEY;
                   Prefer not to say
                 </label>
               </div>
+              <div class="mt-3">
+                <p class="text-dark-blue">
+                  <span class="text-dark-blue font-semibold">Important:</span>
+                  If you are taking medications or have medical conditions, we recommend
+                  consulting with an FAA-certified Aviation Medical Examiner (AME)
+                  to determine your eligibility for a medical certificate.
+                </p>
+              </div>
             </div>
           </fieldset>
 
+          <h2 class="text-2xl font-bold leading-7 text-dark-blue">
+            Learning Preferences
+          </h2>
           <fieldset>
             <legend class="font-medium leading-6 text-dark-blue">
               Which learning methods do you prefer?
@@ -894,6 +940,9 @@ const PORTAL_API_KEY = import.meta.env.PORTAL_API_KEY;
             </div>
           </fieldset>
 
+          <h2 class="text-2xl font-bold leading-7 text-dark-blue">
+            Time Commitment
+          </h2>
           <fieldset>
             <legend class="font-medium leading-6 text-dark-blue">
               How many flight lessons do you plan to schedule per week?
@@ -997,9 +1046,20 @@ const PORTAL_API_KEY = import.meta.env.PORTAL_API_KEY;
                   Limited flexibility
                 </label>
               </div>
+              <div class="mt-3">
+                <p class="text-dark-blue">
+                  <span class="text-dark-blue font-semibold">Note:</span>
+                  Consistent practice and study are crucial for success in flight
+                  training. Less frequent flying can lead to longer training durations
+                  and increased costs.
+                </p>
+              </div>
             </div>
           </fieldset>
 
+          <h2 class="text-2xl font-bold leading-7 text-dark-blue">
+            Financial Planning
+          </h2>
           <fieldset>
             <legend class="font-medium leading-6 text-dark-blue">
               Have you prepared financially for the costs associated with flight
@@ -1072,6 +1132,9 @@ const PORTAL_API_KEY = import.meta.env.PORTAL_API_KEY;
             </div>
           </fieldset>
 
+          <h2 class="text-2xl font-bold leading-7 text-dark-blue">
+            Training Objectives
+          </h2>
           <fieldset>
             <legend class="font-medium leading-6 text-dark-blue">
               What is your primary goal for obtaining a pilot’s license?
@@ -1228,8 +1291,19 @@ const PORTAL_API_KEY = import.meta.env.PORTAL_API_KEY;
                 </label>
               </div>
             </div>
+            <div class="mt-3">
+              <p class="text-dark-blue">
+                <span class="text-dark-blue font-semibold">Note:</span>
+                High Tide Aviation has an affiliate program with Purdue University
+                for students interested in combining flight training with a degree
+                program.
+              </p>
+            </div>
           </fieldset>
 
+          <h2 class="text-2xl font-bold leading-7 text-dark-blue">
+            Additional Information
+          </h2>
           <fieldset>
             <legend class="font-medium leading-6 text-dark-blue">
               How did you hear about High Tide Aviation?
@@ -1329,6 +1403,16 @@ const PORTAL_API_KEY = import.meta.env.PORTAL_API_KEY;
             </div>
           </fieldset>
         </div>
+      </div>
+      <div class="mt-3">
+        <h2 class="text-medium-blue text-sm font-semibold">Final Note</h2>
+        <p class="text-medium-blue text-sm font-medium">
+          Once submitted, your answers will be reviewed by our team, and we’ll
+          reach out to discuss your personalized training path. This assessment
+          can be exported into your student profile and used to tailor
+          recommendations for scheduling, instruction format, and financial
+          planning.
+        </p>
       </div>
       <div class="flex gap-3 my-5 items-center">
         <input
