@@ -17,6 +17,7 @@ import {
 import { FaPhone } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { IoLocationSharp } from "react-icons/io5";
+import Quiz from "../components/Quiz.astro";
 const CONTACT_US_FORM_WEBHOOK_URL = import.meta.env.CONTACT_US_FORM_WEBHOOK_URL;
 const PORTAL_API_KEY = import.meta.env.PORTAL_API_KEY;
 ---
@@ -301,6 +302,7 @@ const PORTAL_API_KEY = import.meta.env.PORTAL_API_KEY;
   </section>
 
   <ToursCTA />
+  <Quiz />
 
   <div class="flex flex-col md:flex-row">
     <iframe
