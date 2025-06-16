@@ -16,7 +16,7 @@ export const fleet = [
       "/src/assets/n7085g-cessna-skyhawk-172-high-tide-aviation-flight-school.jpg",
     imagesArray: [
       "/src/assets/n7085g-cessna-skyhawk-172-high-tide-aviation-flight-school.jpg",
-      "/src/assets/N7085G-panel.webp",
+      "/src/assets/N7085G-control-panel.webp",
     ],
     description: [
       "The Cessna 172 is the gold standard for new pilots. Its forgiving flight characteristics and robust reliability make it the perfect choice for initial flight training. The high-wing design offers exceptional stability and visibility, boosting student confidence as they master essential flying skills. The aircraft responds gently to control inputs and recovers smoothly from errors, instilling the poise needed to become a competent pilot. With widespread availability and easy access to maintenance expertise, the Cessna 172 keeps operational costs low, allowing for consistent training schedules.",
@@ -82,7 +82,10 @@ export const fleet = [
       "Continental 0-300 (145 BHP",
     ],
     imagePath: "/src/assets/N8234U-high-tide-aviation-fleet.jpg",
-    imagesArray: ["/src/assets/N8234U-high-tide-aviation-fleet.jpg"],
+    imagesArray: [
+      "/src/assets/N8234U-high-tide-aviation-fleet.jpg",
+      "/src/assets/N8234U-control-panel.webp",
+    ],
     description: [
       "The Cessna 172 is the gold standard for new pilots. Its forgiving flight characteristics and robust reliability make it the perfect choice for initial flight training. The high-wing design offers exceptional stability and visibility, boosting student confidence as they master essential flying skills. The aircraft responds gently to control inputs and recovers smoothly from errors, instilling the poise needed to become a competent pilot. With widespread availability and easy access to maintenance expertise, the Cessna 172 keeps operational costs low, allowing for consistent training schedules.",
       "Beyond its physical attributes, the aircraft is equipped with modern avionics and instrumentation, giving students a real-world flying experience. Its versatility extends from solo flights to instrument training, making the Cessna 172 a fundamental tool in developing proficient pilots",
@@ -212,7 +215,10 @@ export const fleet = [
     model: "Beechcraft Bonanza",
     equipment: [],
     imagePath: "/src/assets/N4457S.jpg",
-    imagesArray: ["/src/assets/N4457S.jpg"],
+    imagesArray: [
+      "/src/assets/N4457S.jpg",
+      "/src/assets/bonanza-control-panel.webp",
+    ],
     description: [
       "The Beechcraft Bonanza remains a prominent choice for pilots in training due to its blend of classic design and modern performance. The aircraft boasts a high-performance six-cylinder engine and a low-wing configuration with retractable landing gear, making it a robust platform for teaching advanced flying skills. This single-engined, six-seater has been continuously produced for over seven decades, highlighting its reliability and enduring popularity.",
       "The Bonanza is an excellent option for flight training at High Tide Aviation because it offers a blend of complex systems and manageable handling, ideal for students progressing beyond basic skills to more sophisticated piloting. Its reputation for speed and comfort adds to its appeal as a training aircraft that students can aspire to master, bridging the gap between learning environments and real-world aviation demands.",
