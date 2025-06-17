@@ -23,7 +23,7 @@ import { getCollection } from "astro:content";
 import CounterCard from "../components/CounterCard.jsx";
 import ToursCTA from "../components/ToursCTA.astro";
 import { TbUserScreen } from "react-icons/tb";
-import AnnouncementBanner from "../components/AnnouncementBanner.astro";
+import AnnouncementBanner2 from "../components/AnnouncementBanner2.astro";
 import ScreenBanner from "../components/ScreenBanner.astro";
 import DonationBanner from "../components/DonationBanner.astro";
 import NewsletterCTA from "../components/NewsletterCTA.astro";
@@ -40,11 +40,11 @@ const posts = (await getCollection("blog")).sort(
 >
   <HomepageHeader slot="header" />
 
-  <!-- <AnnouncementBanner
+  <AnnouncementBanner2
     btnId="dismiss-button"
     btnTitle="Sign Up Now"
     url="https://ce.coastalpines.edu/search/publicCourseSearchDetails.do?method=load&courseId=1020462"
-  /> -->
+  />
 
   <!-- <DonationBanner
     btnId="dismiss-button"

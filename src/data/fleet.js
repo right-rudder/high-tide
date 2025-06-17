@@ -13,9 +13,9 @@ export const fleet = [
       "Lycoming O-320 (150 BHP)",
     ],
     imagePath:
-      "/src/assets/n7085g-cessna-skyhawk-172-high-tide-aviation-flight-school.jpg",
+      "/src/assets/n7085g-cessna-skyhawk-172-high-tide-aviation-flight-school.webp",
     imagesArray: [
-      "/src/assets/n7085g-cessna-skyhawk-172-high-tide-aviation-flight-school.jpg",
+      "/src/assets/n7085g-cessna-skyhawk-172-high-tide-aviation-flight-school.webp",
       "/src/assets/N7085G-control-panel.webp",
     ],
     description: [
@@ -36,8 +36,8 @@ export const fleet = [
       "Stratus Transponder with ADS-B in",
       "Lycoming O-320 (160 BHP)",
     ],
-    imagePath: "/src/assets/N35461.jpg",
-    imagesArray: ["/src/assets/N35461.jpg", "/src/assets/n35461-panel.webp"],
+    imagePath: "/src/assets/N35461.webp",
+    imagesArray: ["/src/assets/N35461.webp", "/src/assets/n35461-panel.webp"],
     description: [
       "The Cessna 172 is the gold standard for new pilots. Its forgiving flight characteristics and robust reliability make it the perfect choice for initial flight training. The high-wing design offers exceptional stability and visibility, boosting student confidence as they master essential flying skills. The aircraft responds gently to control inputs and recovers smoothly from errors, instilling the poise needed to become a competent pilot. With widespread availability and easy access to maintenance expertise, the Cessna 172 keeps operational costs low, allowing for consistent training schedules.",
       "Beyond its physical attributes, the aircraft is equipped with modern avionics and instrumentation, giving students a real-world flying experience. Its versatility extends from solo flights to instrument training, making the Cessna 172 a fundamental tool in developing proficient pilots",
@@ -58,10 +58,10 @@ export const fleet = [
       "GTR 205 COM",
       "Lycoming O-320 (150 BHP",
     ],
-    imagePath: "/src/assets/N79072-high-tide-aviation-flight-school.jpg",
+    imagePath: "/src/assets/N79072-high-tide-aviation-flight-school.webp",
     imagesArray: [
-      "/src/assets/N79072-high-tide-aviation-flight-school.jpg",
-      "/src/assets/N79072-panel.webp",
+      "/src/assets/N79072-high-tide-aviation-flight-school.webp",
+      "/src/assets/N79072-control-panel.webp",
     ],
     description: [
       "The Cessna 172 is the gold standard for new pilots. Its forgiving flight characteristics and robust reliability make it the perfect choice for initial flight training. The high-wing design offers exceptional stability and visibility, boosting student confidence as they master essential flying skills. The aircraft responds gently to control inputs and recovers smoothly from errors, instilling the poise needed to become a competent pilot. With widespread availability and easy access to maintenance expertise, the Cessna 172 keeps operational costs low, allowing for consistent training schedules.",
@@ -81,9 +81,9 @@ export const fleet = [
       "King KX 170B NAV/COM",
       "Continental 0-300 (145 BHP",
     ],
-    imagePath: "/src/assets/N8234U-high-tide-aviation-fleet.jpg",
+    imagePath: "/src/assets/N8234U-high-tide-aviation-fleet.webp",
     imagesArray: [
-      "/src/assets/N8234U-high-tide-aviation-fleet.jpg",
+      "/src/assets/N8234U-high-tide-aviation-fleet.webp",
       "/src/assets/N8234U-control-panel.webp",
     ],
     description: [
@@ -107,10 +107,10 @@ export const fleet = [
       "Scout ADS-B Receiver",
       "Lycoming O-320 (160 BHP)",
     ],
-    imagePath: "/src/assets/high-tide-aviation-cessna-172-n8409l-side.jpg",
+    imagePath: "/src/assets/high-tide-aviation-cessna-172-n8409l-side.webp",
     imagesArray: [
-      "/src/assets/high-tide-aviation-cessna-172-n8409l-side.jpg",
-      "/src/assets/N8409L-panel.webp",
+      "/src/assets/high-tide-aviation-cessna-172-n8409l-side.webp",
+      "/src/assets/N8409L-control-panel.webp",
     ],
     description: [
       "The Cessna 172 is the gold standard for new pilots. Its forgiving flight characteristics and robust reliability make it the perfect choice for initial flight training. The high-wing design offers exceptional stability and visibility, boosting student confidence as they master essential flying skills. The aircraft responds gently to control inputs and recovers smoothly from errors, instilling the poise needed to become a competent pilot. With widespread availability and easy access to maintenance expertise, the Cessna 172 keeps operational costs low, allowing for consistent training schedules.",
@@ -131,8 +131,11 @@ export const fleet = [
       "Scout ADS-B Receiver",
       "Lycoming O-320 (150 BHP)",
     ],
-    imagePath: "/src/assets/N79136.jpg",
-    imagesArray: ["/src/assets/N79136.jpg", "/src/assets/N79136-panel.webp"],
+    imagePath: "/src/assets/N79136.webp",
+    imagesArray: [
+      "/src/assets/N79136.webp",
+      "/src/assets/N79136-control-panel.webp",
+    ],
     description: [
       "The Cessna 172 is the gold standard for new pilots. Its forgiving flight characteristics and robust reliability make it the perfect choice for initial flight training. The high-wing design offers exceptional stability and visibility, boosting student confidence as they master essential flying skills. The aircraft responds gently to control inputs and recovers smoothly from errors, instilling the poise needed to become a competent pilot. With widespread availability and easy access to maintenance expertise, the Cessna 172 keeps operational costs low, allowing for consistent training schedules.",
       "Beyond its physical attributes, the aircraft is equipped with modern avionics and instrumentation, giving students a real-world flying experience. Its versatility extends from solo flights to instrument training, making the Cessna 172 a fundamental tool in developing proficient pilots",
@@ -141,19 +144,24 @@ export const fleet = [
   {
     name: "N79475",
     slug: "N79475",
-    rentalPrice: "$190 /hr wet",
+    rentalPrice: "$210 /hr wet",
     usefulLoad: "1089.2 lbs",
     horsepower: "180 HP",
     usableFuel: "- gal",
     model: "Cessna 172K",
     equipment: [
-      "Garmin GNS 430 w/ WAAS",
-      "Narco COM 81",
-      "Stratus Transponder with ADS-B in",
-      "Lycoming O-360 (180 BHP)",
+      "G3X Touch Display",
+      "G5 Attitude Indicator",
+      "GTN650 GPS/NAV/COMM/MFD",
+      "GTX 345 Transponder",
+      "GFC 500 Autopilot",
+      "Technically Advanced Airplane (TAA)",
     ],
     imagePath: "/src/assets/N79475.jpg",
-    imagesArray: ["/src/assets/N79475.jpg", "/src/assets/N79475-panel.webp"],
+    imagesArray: [
+      "/src/assets/N79475.jpg",
+      "/src/assets/79475-control-panel.webp",
+    ],
     description: [
       "The Cessna 172 is the gold standard for new pilots. Its forgiving flight characteristics and robust reliability make it the perfect choice for initial flight training. The high-wing design offers exceptional stability and visibility, boosting student confidence as they master essential flying skills. The aircraft responds gently to control inputs and recovers smoothly from errors, instilling the poise needed to become a competent pilot. With widespread availability and easy access to maintenance expertise, the Cessna 172 keeps operational costs low, allowing for consistent training schedules.",
       "Beyond its physical attributes, the aircraft is equipped with modern avionics and instrumentation, giving students a real-world flying experience. Its versatility extends from solo flights to instrument training, making the Cessna 172 a fundamental tool in developing proficient pilots",
@@ -174,7 +182,10 @@ export const fleet = [
       "Continental O-300 (145BHP)",
     ],
     imagePath: "/src/assets/N7994X.webp",
-    imagesArray: ["/src/assets/N7994X.webp", "/src/assets/N7994X-panel.webp"],
+    imagesArray: [
+      "/src/assets/N7994X.webp",
+      "/src/assets/N7994X-control-panel.webp",
+    ],
     description: [
       "The Cessna 172 is the gold standard for new pilots. Its forgiving flight characteristics and robust reliability make it the perfect choice for initial flight training. The high-wing design offers exceptional stability and visibility, boosting student confidence as they master essential flying skills. The aircraft responds gently to control inputs and recovers smoothly from errors, instilling the poise needed to become a competent pilot. With widespread availability and easy access to maintenance expertise, the Cessna 172 keeps operational costs low, allowing for consistent training schedules.",
       "Beyond its physical attributes, the aircraft is equipped with modern avionics and instrumentation, giving students a real-world flying experience. Its versatility extends from solo flights to instrument training, making the Cessna 172 a fundamental tool in developing proficient pilots",
@@ -209,11 +220,17 @@ export const fleet = [
   {
     name: "Bonanza",
     slug: "N4457S",
+    rentalPrice: "$395 /hr",
     usefulLoad: "-- lbs",
     horsepower: "285 HP",
     usableFuel: "74 gal",
     model: "Beechcraft Bonanza",
-    equipment: [],
+    equipment: [
+      "G3X Touch Display",
+      "Garmin GI 275",
+      "GTN 650 GPS",
+      "Garmin GFC 500 Autopilot",
+    ],
     imagePath: "/src/assets/N4457S.jpg",
     imagesArray: [
       "/src/assets/N4457S.jpg",
