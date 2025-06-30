@@ -221,7 +221,7 @@ export default function PricingComponent({ tiers, program, meet }) {
 
       <a
         href="/about/financing"
-        className="text-white uppercase underline hover:text-mustard-yellow mt-10 block text-center font-semibold tracking-widest duration-300"
+        className="btn-yellow hover:bg-white hover:text-dark-blue mx-auto mt-5"
       >
         Explore financing options
       </a>

@@ -49,6 +49,7 @@ const groundSchool = {
       {
         name: "Private Pilot",
         id: "tier-private-pilot",
+        url: "https://brunswickcc-register.fundfive.com/course/section/21399",
         href: "#",
         price: "$180",
         description: "Your first step toward the skies.",
@@ -66,6 +67,7 @@ const groundSchool = {
       {
         name: "Instrument Rating",
         id: "tier-instrument-rating",
+        url: "https://brunswickcc-register.fundfive.com/course/section/21399",
         href: "#",
         price: "$180",
         description: "Elevate your piloting with instrument mastery.",
@@ -83,6 +85,7 @@ const groundSchool = {
       {
         name: "Small Unmanned Aircraft Systems (Drones)",
         id: "tier-drones",
+        url: "https://brunswickcc-register.fundfive.com/course/section/21399",
         href: "#",
         price: "$125",
         schedule: "Offered every fall and spring semester",
@@ -117,6 +120,7 @@ const groundSchool = {
         name: "Private Pilot",
         id: "tier-private-pilot-simons",
         href: "#",
+        url: "https://brunswickcc-register.fundfive.com/course/section/21399",
         price: "$550",
         description: "Embark on your aviation journey by the coast.",
         schedule: "Offered every fall and spring semester",
