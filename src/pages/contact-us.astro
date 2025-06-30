@@ -165,7 +165,34 @@ const PORTAL_API_KEY = import.meta.env.PORTAL_API_KEY;
           id="contact-us-form"
           class="relative z-20 flex flex-col items-center p-5 shadow-lg xl:scale-125 bg-white xl:order-2"
         >
-          <div class="grid lg:grid-cols-2 gap-5 mt-10">
+          <fieldset class="w-full">
+            <legend class="text-sm font-semibold leading-6 text-dark-blue">
+              What is the purpose of your inquiry?
+            </legend>
+            <div class="mt-2">
+              <select
+                name="purpose"
+                id="purpose-select"
+                class="block w-full py-4 px-4 outline-none bg-medium-blue/15 sm:text-sm text-lg text-dark-blue"
+                required
+              >
+                <option class="bg-white" value="">Please select one</option>
+                <option class="bg-white" value="general-inquiry"
+                  >General Inquiry</option
+                >
+                <option class="bg-white" value="flight-training"
+                  >Flight Training</option
+                >
+                <option class="bg-white" value="aircraft-rental"
+                  >Aircraft Rental</option
+                >
+                <option class="bg-white" value="tours">Tours</option>
+                <option class="bg-white" value="jobs">Job Opportunities</option>
+              </select>
+            </div>
+          </fieldset>
+
+          <div class="grid lg:grid-cols-2 gap-5 mt-5">
             <input
               class="bg-medium-blue/15 text-dark-blue py-4 px-6 w-full outline-none placeholder:text-gray-500"
               type="text"
@@ -334,6 +361,14 @@ const PORTAL_API_KEY = import.meta.env.PORTAL_API_KEY;
   </div>
 
   <script define:vars={{ CONTACT_US_FORM_WEBHOOK_URL, PORTAL_API_KEY }}>
+    document
+      .getElementById("purpose-select")
+      .addEventListener("change", function () {
+        if (this.value === "jobs") {
+          this.value = "";
+          window.location.href = "/job-application";
+        }
+      });
     let isRecaptchaVerified = false;
 
     document.addEventListener("DOMContentLoaded", () => {
