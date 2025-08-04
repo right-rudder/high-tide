@@ -1,0 +1,354 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Banner from "../assets/private-pilot-sits-in-multi-engine-plane.jpg";
+import { Image } from "astro:assets";
+import Intro from "../assets/first-time-pilot-on-cessna.jpg";
+import CounterCard from "../components/CounterCard";
+import { stats } from "../data/stats";
+import { RiTeamLine } from "react-icons/ri";
+import { IoIosArrowRoundForward } from "react-icons/io";
+import { GiExitDoor } from "react-icons/gi";
+import { MdFlightTakeoff } from "react-icons/md";
+import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
+import { reviews } from "../data/reviews";
+import { FaHelicopter } from "react-icons/fa";
+import StudentSupport from "../assets/student-support.jpg";
+import StudenPilot from "../assets/pilot-flying-over-southport.jpg";
+import Quiz from "../components/Quiz.astro";
+import HeroImage from "../assets/beech-baron-in-front-of-high-tide-aviation-hangar.jpg";
+import MultiEngineImage from "../assets/beech-bonanza-at-high-tide-aviation.jpg";
+import HeliImage from "../assets/high-tide-r44-helicopter-in-southport-nc.jpg";
+---
+
+<BaseLayout
+  siteTitle="Pilot Proficiency & Finish-Up Training | High Tide Aviation"
+  siteDescription="High Tide Aviation specializes in advanced rating finish-ups, multi-engine proficiency, and real-world flight training for pilots who need more than just the basics."
+  siteKeywords="multi-engine training, finish pilot training, rusty pilot flight school, real-world flight training, King Air training, Baron flight school, hydraulic R44, helicopter commercial training"
+>
+  <Header
+    slot="header"
+    image={HeroImage}
+    title="Pilot Proficiency & Finish-Up Training"
+    ctaText="Take Your Training Further"
+    ctaLink="#advanced-pilots"
+    alt="Pilot in King Air during flight check"
+  />
+
+  <section class="py-24 px-5">
+    <div
+      class="max-w-xl gap-10 lg:max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:gap-20"
+    >
+      <div class="flex-1 relative">
+        <Image
+          class="pr-6"
+          src={HeliImage}
+          alt="Multi-engine pilot at controls"
+        />
+        <div
+          class="h-3/4 bg-medium-blue absolute -z-10 -right-0 w-20 top-[12.5%]"
+        >
+        </div>
+      </div>
+      <div class="flex flex-col flex-1">
+        <h2 class="uppercase text-medium-blue font-bold tracking-widest">
+          High-Caliber Finish-Up Training
+        </h2>
+        <h3 class="text-5xl text-dark-blue font-bold leading-tight">
+          Training That Meets the Standard
+        </h3>
+        <p class="text-gray-500 leading-relaxed my-2">
+          Many pilots come to High Tide Aviation after unsatisfying experiences
+          elsewhere — where quality aircraft, experienced instruction, or
+          real-world relevance were lacking. Whether you’re wrapping up your
+          multi-engine, need complex/high-performance time, or want to fly
+          aircraft that employers respect, High Tide is where your serious
+          training begins.
+        </p>
+        <p class="text-gray-500 leading-relaxed my-2">
+          From rusty pilots with gaps since the early 2000s to recent students
+          disappointed by bare-minimum training, we help them regain
+          proficiency, confidence, and logbook credibility.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center gap-5 mt-2">
+          <a href="/contact-us#contact-us-form" class="btn-blue">
+            Start Your Finish-Up
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 px-5 scroll-my-20 bg-medium-blue/10">
+    <div
+      class="max-w-xl gap-10 lg:max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:gap-20"
+    >
+      <div class="flex flex-col flex-1">
+        <h2 class="uppercase text-medium-blue font-bold tracking-widest">
+          Multi-Engine & Real Aircraft
+        </h2>
+        <h3 class="text-5xl text-dark-blue font-bold leading-tight">
+          Train on Aircraft That Matter
+        </h3>
+        <p class="text-gray-500 leading-relaxed mt-5">
+          Many multi-engine ratings are completed in non-critical engine
+          trainers. That may check a box, but it doesn't prepare you for
+          real-world operations. At High Tide, you’ll train in Barons,
+          pressurized 58s, and King Airs — aircraft that employers know and
+          trust.
+        </p>
+        <p class="font-medium mb-5 mt-2 text-gray-600">
+          Fly with instructors who bring real-world ops experience and care
+          about preparing you beyond the checkride.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center gap-5">
+          <a href="/contact-us#contact-us-form" class="btn-blue">
+            Talk to Our Team
+          </a>
+        </div>
+      </div>
+      <div class="flex-1">
+        <Image
+          src={MultiEngineImage}
+          alt="Training in Baron 58"
+          class="object-cover top-0 left-0 -z-10 max-h-96"
+          quality={10}
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="">
+    <section class="py-24 px-5">
+      <div
+        class="max-w-xl gap-10 lg:max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:gap-20"
+      >
+        <div class="flex-1 w-full">
+          <Image
+            src={Intro}
+            alt="Rusty pilot retraining in simulator"
+            class="object-cover w-full"
+          />
+        </div>
+        <div class="flex flex-col flex-1">
+          <h2 class="uppercase text-medium-blue font-bold tracking-widest">
+            Rusty Pilot? We Can Help.
+          </h2>
+          <h3 class="text-5xl text-dark-blue font-bold leading-tight">
+            Return to Flight With Confidence
+          </h3>
+          <p class="text-gray-500 leading-relaxed my-5">
+            Haven’t flown in years? You’re not alone. We’ve worked with pilots
+            who’ve been out of the cockpit for decades and helped them get back
+            in safely and confidently. Whether you're returning to fly your
+            Baron or transitioning to a commercial path, we offer tailored
+            flight plans that meet your needs — not just a syllabus.
+          </p>
+          <div class="flex flex-col sm:flex-row items-center gap-5">
+            <a href="/contact-us#contact-us-form" class="btn-blue">
+              Rebuild Proficiency
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+
+  <section
+    id="advanced-pilots"
+    class="py-16 px-5 flex flex-col items-center max-w-xl lg:max-w-7xl mx-auto scroll-my-20"
+  >
+    <h2 class="uppercase text-medium-blue font-bold tracking-widest">
+      Advanced Pilot Services
+    </h2>
+    <h3
+      class="text-5xl text-dark-blue font-bold leading-tight max-w-2xl text-center"
+    >
+      Go Beyond the Basics
+    </h3>
+    <p class="text-gray-600 text-center max-w-5xl my-10 leading-loose">
+      High Tide Aviation offers customized training tracks for advanced pilots:
+    </p>
+    <div class="grid lg:grid-cols-3 mx-auto gap-10">
+      <div
+        class="border border-white/50 py-8 px-12 flex flex-col gap-5 justify-between hover:bg-medium-blue/20 duration-700 group"
+      >
+        <div class="flex flex-col gap-5">
+          <MdFlightTakeoff className="size-14 text-medium-blue" />
+          <h3
+            class="text-lg text-dark-blue uppercase font-semibold tracking-widest duration-700"
+          >
+            Multi-Engine Finish-Up
+          </h3>
+          <p class="text-gray-600 leading-relaxed">
+            Wrap up your multi-engine in real aircraft like the Baron 58 or King
+            Air with experienced instructors and complex scenarios.
+          </p>
+        </div>
+        <a
+          href="/contact-us#contact-us-form"
+          class="flex gap-3 items-center self-end cursor-pointer group"
+        >
+          <p class="text-gray-500 text-sm">Book Training</p>
+          <div
+            class="p-3 bg-light-blue/15 rounded-full group-hover:bg-medium-blue duration-700"
+          >
+            <IoIosArrowRoundForward
+              className="text-dark-blue size-6 group-hover:text-white duration-700"
+            />
+          </div>
+        </a>
+      </div>
+      <div
+        class="border border-white/50 py-8 px-12 flex flex-col gap-5 justify-between hover:bg-medium-blue/20 duration-700 group"
+      >
+        <div class="flex flex-col gap-5">
+          <GiExitDoor className="size-14 text-medium-blue" />
+          <h3
+            class="text-lg text-dark-blue uppercase font-semibold tracking-widest duration-700"
+          >
+            Rusty Pilot Recurrent
+          </h3>
+          <p class="text-gray-600 leading-relaxed">
+            Haven’t flown in years? We’ll build a custom recurrent training
+            program to safely return you to proficiency and confidence.
+          </p>
+        </div>
+        <a
+          href="/contact-us#contact-us-form"
+          class="flex gap-3 items-center self-end cursor-pointer group"
+        >
+          <p class="text-gray-500 text-sm">Talk to an Instructor</p>
+          <div
+            class="p-3 bg-light-blue/15 rounded-full group-hover:bg-medium-blue duration-700"
+          >
+            <IoIosArrowRoundForward
+              className="text-dark-blue size-6 group-hover:text-white duration-700"
+            />
+          </div>
+        </a>
+      </div>
+      <div
+        class="border border-white/50 py-8 px-12 flex flex-col gap-5 justify-between hover:bg-medium-blue/20 duration-700 group"
+      >
+        <div class="flex flex-col gap-5">
+          <FaHelicopter className="size-14 text-medium-blue" />
+          <h3
+            class="text-lg text-dark-blue uppercase font-semibold tracking-widest duration-700"
+          >
+            Helicopter Commercial Prep
+          </h3>
+          <p class="text-gray-600 leading-relaxed">
+            Train in our hydraulic R44s — no outdated R22s — so you're prepared
+            for commercial work that expects modern experience.
+          </p>
+        </div>
+        <a
+          href="/contact-us#contact-us-form"
+          class="flex gap-3 items-center self-end cursor-pointer group"
+        >
+          <p class="text-gray-500 text-sm">Get Helicopter Time</p>
+          <div
+            class="p-3 bg-light-blue/15 rounded-full group-hover:bg-medium-blue duration-700"
+          >
+            <IoIosArrowRoundForward
+              className="text-dark-blue size-6 group-hover:text-white duration-700"
+            />
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="flex flex-col lg:flex-row">
+    <div
+      class="flex flex-col justify-center bg-mustard-yellow flex-1 py-16 px-5"
+    >
+      <div class="max-w-xl lg:max-w-none mx-auto lg:mx-20">
+        <h2 class="uppercase text-medium-blue font-bold tracking-widest">
+          Take Your First Flight
+        </h2>
+        <h3 class="text-5xl text-dark-blue font-bold leading-tight">
+          Introductory Flights at High Tide Aviation
+        </h3>
+        <p class="text-gray-600 my-10 mr-10">
+          Join High Tide Aviation for an introductory flight that combines
+          hands-on flying with spectacular views of coastal landmarks. In
+          Southport, you'll fly over the historic Southport Pier, Oak Island
+          Lighthouse, and Fort Caswell, capturing unique perspectives only seen
+          from the sky. From St Simons Island, your route includes the iconic St
+          Simons Lighthouse, lush Sea Island Golf Course, and the majestic
+          Sidney Lanier Bridge. Each flight is an opportunity to pilot an
+          aircraft and explore scenic vistas that highlight the beauty and
+          history of these coastal regions.
+        </p>
+
+        <div class="flex flex-col xl:flex-row gap-3">
+          <a
+            href="/intro-flight"
+            target="_blank"
+            class="btn-blue hover:bg-white"
+          >
+            Book an Intro Flight
+          </a>
+          <a href="#toursCTA" class="btn-white">Book a School Tour </a>
+        </div>
+      </div>
+    </div>
+    <div
+      class="flex flex-col items-center justify-center text-white bg-medium-blue flex-1 relative py-16 px-5"
+    >
+      <div
+        class="max-w-xl lg:max-w-none mx-auto lg:mx-28 my-20 lg:my-0 duration-1000"
+        id="reviews-container"
+      >
+        <p
+          id="review-text"
+          class="md:text-2xl italic indent-10 leading-relaxed font-medium"
+        >
+          I earned my private pilot license through High Tide out of St Simons
+          Island, GA. They are an excellent program with a great cadre of
+          instructors. I am very thankful to have had such a great team to help
+          me start this journey into aviation!
+        </p>
+        <p id="review-author" class="mt-5 md:text-xl float-end">- Jake B.</p>
+        <ImQuotesLeft
+          className="absolute text-white/70 size-16 z-10 top-20 left-20"
+        />
+        <ImQuotesRight
+          className="absolute text-white/70 size-16 z-10 bottom-20 right-20"
+        />
+      </div>
+    </div>
+  </section>
+
+  <script define:vars={{ reviews }}>
+    let currentIndex = 0;
+    const reviewTextElement = document.getElementById("review-text");
+    const reviewAuthorElement = document.getElementById("review-author");
+    const reviewsContainerElement =
+      document.getElementById("reviews-container");
+
+    function showMessage() {
+      if (reviewAuthorElement && reviewTextElement) {
+        reviewTextElement.textContent = reviews[currentIndex].review;
+        reviewAuthorElement.textContent = `— ${reviews[currentIndex].name}`;
+      }
+      reviewsContainerElement?.classList.add("opacity-100");
+      reviewsContainerElement?.classList.remove("opacity-0");
+
+      currentIndex = (currentIndex + 1) % reviews.length;
+
+      setTimeout(hideMessage, 6000);
+    }
+
+    function hideMessage() {
+      reviewsContainerElement?.classList.remove("opacity-100");
+      reviewsContainerElement?.classList.add("opacity-0");
+
+      setTimeout(showMessage, 1200);
+    }
+
+    showMessage();
+  </script>
+</BaseLayout>
