@@ -12,6 +12,7 @@ import { GiExitDoor } from "react-icons/gi";
 import { MdFlightTakeoff } from "react-icons/md";
 import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
 import { reviews } from "../data/reviews";
+import { FaHelicopter } from "react-icons/fa";
 import StudentSupport from "../assets/student-support.jpg";
 import StudenPilot from "../assets/pilot-flying-over-southport.jpg";
 import Quiz from "../components/Quiz.astro";
@@ -21,14 +22,14 @@ import HeliImage from "../assets/high-tide-r44-helicopter-in-southport-nc.jpg";
 ---
 
 <BaseLayout
-  siteTitle="Advanced Ratings & Proficiency | High Tide Aviation"
+  siteTitle="Pilot Proficiency & Finish-Up Training | High Tide Aviation"
   siteDescription="High Tide Aviation specializes in advanced rating finish-ups, multi-engine proficiency, and real-world flight training for pilots who need more than just the basics."
   siteKeywords="multi-engine training, finish pilot training, rusty pilot flight school, real-world flight training, King Air training, Baron flight school, hydraulic R44, helicopter commercial training"
 >
   <Header
     slot="header"
     image={HeroImage}
-    title="Advanced Ratings & Proficiency"
+    title="Pilot Proficiency & Finish-Up Training"
     ctaText="Take Your Training Further"
     ctaLink="#advanced-pilots"
     alt="Pilot in King Air during flight check"
@@ -231,7 +232,7 @@ import HeliImage from "../assets/high-tide-r44-helicopter-in-southport-nc.jpg";
         class="border border-white/50 py-8 px-12 flex flex-col gap-5 justify-between hover:bg-medium-blue/20 duration-700 group"
       >
         <div class="flex flex-col gap-5">
-          <RiTeamLine className="size-14 text-medium-blue" />
+          <FaHelicopter className="size-14 text-medium-blue" />
           <h3
             class="text-lg text-dark-blue uppercase font-semibold tracking-widest duration-700"
           >

@@ -40,7 +40,7 @@ const NavLink = ({ menuItem, pathname, toggled, onShow }) => {
       <div
         className={`overflow-hidden ${
           toggled ? "max-h-[34rem] opacity-100" : "max-h-0 opacity-0"
-        } w-64 duration-700 ease-in-out absolute bg-white flex flex-col whitespace-nowrap top-[61px]`}
+        } duration-700 ease-in-out absolute bg-white flex flex-col whitespace-nowrap top-[61px]`}
       >
         {menuItem.submenu.map((item) => (
           <a
@@ -53,7 +53,7 @@ const NavLink = ({ menuItem, pathname, toggled, onShow }) => {
             } my-2 mx-5 px-3 py-2 hover:bg-mustard-yellow/15 font-medium group duration-200 hover:text-dark-blue first:mt-8 last:mb-8 flex items-center justify-between`}
           >
             <p>{item.name}</p>
-            <IoIosArrowForward className="text-dark-blue opacity-0 group-hover:opacity-100 duration-200" />
+            <IoIosArrowForward className="text-dark-blue opacity-0 group-hover:opacity-100 duration-200 ml-3" />
           </a>
         ))}
       </div>

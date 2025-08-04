@@ -39,6 +39,10 @@ export const navbarLinks = [
         name: "University Program",
         link: "/flight-training/university-program",
       },
+      {
+        name: "Pilot Proficiency & Finish-Up Training",
+        link: "/pilot-proficiency",
+      },
     ],
   },
   {
