@@ -5,11 +5,12 @@ import flyer1 from "../assets/coastal-pines-ground-school-flyer.webp";
 import flyer2 from "../assets/brunswick-ground-school.webp";
 ---
 
-<astro-banner btnId={btnId}>
+<astro-banner btnId={btnId} section-key="homepage">
   <div
     class="fixed bottom-0 start-1/2 z-50 mx-auto w-full -translate-x-1/2 transform sm:max-w-4xl max-h-[40rem] overflow-y-auto -translate-y-10 flex flex-col gap-2"
     role="region"
     aria-label="Informational Banner"
+    style="display:none"
   >
     <button
       type="button"
@@ -63,11 +64,28 @@ import flyer2 from "../assets/brunswick-ground-school.webp";
     </div>
   </div>
 </astro-banner>
+
 <script type="module">
   class AstroBanner extends HTMLElement {
     connectedCallback() {
       const btnId = this.getAttribute("btnId");
-      const button = this.querySelector(`#${btnId}`);
+      const sectionKey = this.getAttribute("section-key") || "global";
+      const storageKey = `ht-banner:${sectionKey}:shown`;
+
+      // If already shown this session for this section, do nothing.
+      if (sessionStorage.getItem(storageKey) === "1") return;
+
+      const wrapper = this.querySelector('[role="region"]');
+      const button = this.querySelector(`#${CSS.escape(btnId)}`);
+
+      // Show after ~5 seconds
+      setTimeout(() => {
+        // Double-check: maybe another instance already showed
+        if (sessionStorage.getItem(storageKey) === "1") return;
+        if (wrapper) wrapper.style.display = "";
+        sessionStorage.setItem(storageKey, "1");
+      }, 5000);
+
       if (button != null) {
         button.addEventListener("click", () => this.remove());
       }
