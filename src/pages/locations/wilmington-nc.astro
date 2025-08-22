@@ -1,0 +1,283 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+import Banner from "../../assets/cessna-172-flying-over-st-simons-island.jpg";
+import { RiTeamLine } from "react-icons/ri";
+import { IoIosArrowRoundForward } from "react-icons/io";
+import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
+import { reviews } from "../../data/reviews";
+import { IoLocationSharp } from "react-icons/io5";
+import { TfiBlackboard } from "react-icons/tfi";
+import { PiAirplaneTilt } from "react-icons/pi";
+import { GiMilitaryFort } from "react-icons/gi";
+---
+
+<BaseLayout
+  siteTitle="Flight Training with High Tide at Wilmington International Airport (KILM)"
+  siteDescription="High Tide Aviation offers specialized flight training at Wilmington International Airport (ILM) in Wilmington, NC. Convenient for local students and professionals, we provide Private Pilot License (PPL) and Instrument Rating (IR) training with a Cessna 172 Skyhawk."
+  siteKeywords="Wilmington NC flight training, Wilmington International Airport, ILM, pilot training, Private Pilot License, Instrument Rating, Cessna 172, High Tide Aviation"
+>
+  <Header
+    slot="header"
+    image={Banner}
+    title="Flight Training in Wilmington, NC"
+    alt="Sunset flight over Wilmington, NC, near the coast"
+  />
+
+  <section class="py-24 px-5">
+    <div
+      class="max-w-xl gap-10 lg:max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:gap-20"
+    >
+      <div class="flex flex-col flex-1">
+        <h2 class="uppercase text-medium-blue font-bold tracking-widest">
+          Training with High Tide
+        </h2>
+        <h3 class="text-5xl text-dark-blue font-bold leading-tight">
+          At Wilmington International Airport (ILM)
+        </h3>
+        <div class="text-gray-500 leading-relaxed my-5 flex gap-3">
+          <IoLocationSharp className="size-10 mt-1 shrink-0" />
+          <div>
+            <p>1740 Airport Blvd</p>
+            <p>Wilmington, NC 28405</p>
+          </div>
+        </div>
+        <p class="text-gray-500 leading-relaxed my-5">
+          High Tide Aviation provides focused flight training at Wilmington
+          International Airport (ILM) in Wilmington, NC. This facility
+          specializes in Private Pilot License (PPL) and Instrument Rating (IR)
+          training using the Cessna 172 Skyhawk, a reliable aircraft ideal for
+          both beginner and advanced flight training.
+        </p>
+        <h4 class="text-medium-blue text-xl font-bold mt-5">
+          How do I find this High Tide Aviation training center?
+        </h4>
+        <p class="text-gray-500 leading-relaxed mt-5">
+          Wilmington International Airport is easily accessible from major
+          routes and located just minutes from downtown Wilmington. Contact us
+          for detailed directions from your location.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center gap-5 mt-5">
+          <a href="/enrollment-form" class="btn-blue"
+            >Request Training with High Tide</a
+          >
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3297.1453484222766!2d-77.9099665!3d34.2703456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89a98b9213dfa305%3A0xe74b80ead02cfb42!2sHigh%20Tide%20Aviation!5e0!3m2!1sen!2sbr!4v1755886511998!5m2!1sen!2sbr"
+    class="w-full h-96"
+    style="border:0;"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+  >
+  </iframe>
+
+  <section class="bg-medium-blue/10">
+    <div
+      class="py-16 px-5 flex flex-col lg:flex-row gap-5 max-w-xl lg:max-w-7xl scroll-my-20 mx-auto"
+    >
+      <div class="flex-1">
+        <h3
+          class="text-5xl text-dark-blue font-bold leading-tight max-w-2xl text-center lg:text-left"
+        >
+          Our Wilmington Facilities
+        </h3>
+
+        <a href="/contact-us" class="btn-blue mx-auto my-5 lg:mx-0"
+          >Contact Us</a
+        >
+      </div>
+      <div class="flex-[2.2_2.2_0%] grid lg:grid-cols-2 gap-10">
+        <div
+          class="bg-white py-8 px-12 flex flex-col gap-5 justify-between hover:bg-medium-blue/20 duration-700 group"
+        >
+          <div class="flex flex-col gap-5">
+            <TfiBlackboard className="size-14 text-medium-blue" />
+            <h3
+              class="text-lg text-dark-blue uppercase font-semibold tracking-widest duration-700"
+            >
+              Programs
+            </h3>
+            <p class="text-gray-600 leading-relaxed">
+              We offer lessons to obtain your Fixed-Wing <a
+                href="/flight-training/private-pilot"
+                class="text-dark-blue font-medium hover:underline"
+                >Private Pilot Certificate (PPL)</a
+              > and <a
+                href="/flight-training/instrument-rating"
+                class="text-dark-blue font-medium hover:underline"
+                >Instrument Rating (IR)</a
+              > at KILM.
+            </p>
+          </div>
+          <a
+            href="/flight-training/private-pilot"
+            class="flex gap-3 items-center self-end cursor-pointer group"
+          >
+            <p class="text-gray-500 text-sm">Training Programs</p>
+            <div
+              class="p-3 bg-light-blue/15 rounded-full group-hover:bg-medium-blue duration-700"
+            >
+              <IoIosArrowRoundForward
+                className="text-dark-blue size-6 group-hover:text-white duration-700"
+              />
+            </div>
+          </a>
+        </div>
+        <div
+          class="bg-white py-8 px-12 flex flex-col gap-5 justify-between hover:bg-medium-blue/20 duration-700 group"
+        >
+          <div class="flex flex-col gap-5">
+            <PiAirplaneTilt className="size-14 text-medium-blue" />
+            <h3
+              class="text-lg text-dark-blue uppercase font-semibold tracking-widest duration-700"
+            >
+              Aircraft
+            </h3>
+            <p class="text-gray-600 leading-relaxed">
+              At the moment, we only offer training in our Cessna 172 at the
+              Wilmington location.
+            </p>
+          </div>
+        </div>
+        <div
+          class="bg-white py-8 px-12 flex flex-col gap-5 justify-between hover:bg-medium-blue/20 duration-700 group"
+        >
+          <div class="flex flex-col gap-5">
+            <GiMilitaryFort className="size-14 text-medium-blue" />
+            <h3
+              class="text-lg text-dark-blue uppercase font-semibold tracking-widest duration-700"
+            >
+              Nearby
+            </h3>
+            <p class="text-gray-600 leading-relaxed">
+              Wilmington International Airport (ILM) is close to downtown
+              Wilmington and coastal communities such as Wrightsville Beach and
+              Carolina Beach. This location also attracts students from nearby
+              cities including Jacksonville and Fayetteville.
+            </p>
+          </div>
+        </div>
+        <div
+          class="bg-white py-8 px-12 flex flex-col gap-5 justify-between hover:bg-medium-blue/20 duration-700 group"
+        >
+          <div class="flex flex-col gap-5">
+            <RiTeamLine className="size-14 text-medium-blue" />
+            <h3
+              class="text-lg text-dark-blue uppercase font-semibold tracking-widest duration-700"
+            >
+              Availability
+            </h3>
+            <p class="text-gray-600 leading-relaxed">
+              This is our newest location! While we’re proud to be expanding our
+              reach and mission to remain the number one flight school on the
+              Southeast Coast, we will offer training on limited days until
+              we have enough volume. <span class="font-medium"
+                >Contact us at the Southport location for more information on
+                training in Wilmington, NC.</span
+              >
+            </p>
+          </div>
+          <a
+            href="/contact-us"
+            class="flex gap-3 items-center self-end cursor-pointer group"
+          >
+            <p class="text-gray-500 text-sm">Contact Us</p>
+            <div
+              class="p-3 bg-light-blue/15 rounded-full group-hover:bg-medium-blue duration-700"
+            >
+              <IoIosArrowRoundForward
+                className="text-dark-blue size-6 group-hover:text-white duration-700"
+              />
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="flex flex-col lg:flex-row">
+    <div
+      class="flex flex-col justify-center bg-mustard-yellow flex-1 py-16 px-5"
+    >
+      <div class="max-w-xl lg:max-w-none mx-auto lg:mx-20">
+        <h2 class="uppercase text-medium-blue font-bold tracking-widest">
+          Intro flights at high tide
+        </h2>
+        <h3 class="text-5xl text-dark-blue font-bold leading-tight">
+          Take a Test Flight with High Tide Aviation
+        </h3>
+        <p class="text-gray-600 my-10 mr-10 leading-loose">
+          <span class="font-semibold"
+            >Still on the fence about flying or pursuing flight training in
+            Wilmington?</span
+          > Come fly with us at our Southport location and experience the
+          genuine thrill flying brings our pilots. You can book an intro flight
+          (discovery flight) with us and visit the team. We know you’ll love it!
+        </p>
+        <a href="/intro-flight" target="_blank" class="btn-blue hover:bg-white">
+          Book an Intro Flight
+        </a>
+      </div>
+    </div>
+    <div
+      class="flex flex-col items-center justify-center text-white bg-medium-blue flex-1 relative py-16 px-5"
+    >
+      <div
+        class="max-w-xl lg:max-w-none mx-auto lg:mx-28 my-20 lg:my-0 duration-1000"
+        id="reviews-container"
+      >
+        <p
+          id="review-text"
+          class="md:text-2xl italic indent-10 leading-relaxed font-medium"
+        >
+          I earned my private pilot license through High Tide out of St Simons
+          Island, GA. They are an excellent program with a great cadre of
+          instructors. I am very thankful to have had such a great team to help
+          me start this journey into aviation!
+        </p>
+        <p id="review-author" class="mt-5 md:text-xl float-end">- Jake B.</p>
+        <ImQuotesLeft
+          className="absolute text-white/70 size-16 z-10 top-20 left-20"
+        />
+        <ImQuotesRight
+          className="absolute text-white/70 size-16 z-10 bottom-20 right-20"
+        />
+      </div>
+    </div>
+  </section>
+
+  <script define:vars={{ reviews }}>
+    let currentIndex = 0;
+    const reviewTextElement = document.getElementById("review-text");
+    const reviewAuthorElement = document.getElementById("review-author");
+    const reviewsContainerElement =
+      document.getElementById("reviews-container");
+
+    function showMessage() {
+      if (reviewAuthorElement && reviewTextElement) {
+        reviewTextElement.textContent = reviews[currentIndex].review;
+        reviewAuthorElement.textContent = `— ${reviews[currentIndex].name}`;
+      }
+      reviewsContainerElement?.classList.add("opacity-100");
+      reviewsContainerElement?.classList.remove("opacity-0");
+
+      currentIndex = (currentIndex + 1) % reviews.length;
+
+      setTimeout(hideMessage, 6000);
+    }
+
+    function hideMessage() {
+      reviewsContainerElement?.classList.remove("opacity-100");
+      reviewsContainerElement?.classList.add("opacity-0");
+
+      setTimeout(showMessage, 1200);
+    }
+
+    showMessage();
+  </script>
+</BaseLayout>
