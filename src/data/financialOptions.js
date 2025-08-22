@@ -1,12 +1,12 @@
 export const financialOptions = [
-  {
-    name: "Meratas",
-    imagePath: "/src/assets/meratas-logo.png",
-    description:
-      "We’ve teamed up with Meratas to offer customizable financing solutions for your flight training. With Meratas, you can design a payment plan tailored to your needs, giving you the freedom to focus on your training without financial stress. Whether you're pursuing a Private Pilot License, Instrument Rating, Commercial Pilot Certificate, Multi-Engine Rating, or aiming to become a Career Pilot, Meratas makes it easier to achieve your aviation goals. Click below to learn more about our financing options.",
-    ctaText: "Learn More about Meratas",
-    ctaLink: "/about/financing/meratas",
-  },
+  // {
+  //   name: "Meratas",
+  //   imagePath: "/src/assets/meratas-logo.png",
+  //   description:
+  //     "We’ve teamed up with Meratas to offer customizable financing solutions for your flight training. With Meratas, you can design a payment plan tailored to your needs, giving you the freedom to focus on your training without financial stress. Whether you're pursuing a Private Pilot License, Instrument Rating, Commercial Pilot Certificate, Multi-Engine Rating, or aiming to become a Career Pilot, Meratas makes it easier to achieve your aviation goals. Click below to learn more about our financing options.",
+  //   ctaText: "Learn More about Meratas",
+  //   ctaLink: "/about/financing/meratas",
+  // },
   {
     name: "Wurthy",
     imagePath: "/src/assets/wurthy_logo.png",

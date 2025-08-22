@@ -15,7 +15,6 @@ High Tide Aviation is the Southeast Coast's leading flight training center, spec
 - **Southport, NC** - Cape Fear Regional Jetport (KSUT) - _Flagship Location_
 - **St. Simons Island, GA** - McKinnon-St. Simons Airport (KSSI)
 - **Wilmington, NC** - Wilmington International Airport (ILM)
-- **Wallace, NC** - Wallace-Pender Airport (KACZ)
 
 ### Training Programs
 
