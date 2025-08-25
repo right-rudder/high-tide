@@ -20,7 +20,8 @@ if (!images[imagePath])
     src={images[imagePath]()}
     alt={name}
     class="h-full object-cover object-left group-hover:scale-105 duration-700 ease-in-out"
-    quality={10}
+    widths={[240, 540, 720]}
+    sizes={`(max-width: 240px) 240px, (max-width: 540px) 540px, 720px`}
   />
   <div
     class="absolute w-full h-full bg-dark-blue/15 -translate-x-[101%] group-hover:translate-x-0 duration-700"
