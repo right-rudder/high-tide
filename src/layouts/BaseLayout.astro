@@ -26,15 +26,9 @@ const { siteTitle, siteDescription, keywords } = Astro.props;
       <slot />
     </main>
     <Footer />
-    <script is:inline>
-      window.addEventListener("load", () => {
-        const script = document.createElement("script");
-        script.src = "https://beta.leadconnectorhq.com/loader.js";
-        script.dataset.resourcesUrl =
-          "https://beta.leadconnectorhq.com/chat-widget/loader.js";
-        script.dataset.widgetId = "66c4bc2010d8484fcb5562a0";
-        document.body.appendChild(script);
-      });
-    </script>
+    <script
+      src="https://beta.leadconnectorhq.com/loader.js"
+      data-resources-url="https://beta.leadconnectorhq.com/chat-widget/loader.js"
+      data-widget-id="66c4bc2010d8484fcb5562a0"></script>
   </body>
 </html>
