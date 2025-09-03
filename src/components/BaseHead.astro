@@ -68,7 +68,7 @@ const {
 <link rel="sitemap" href="/sitemap-index.xml" />
 
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-M7S5SBC1X0"
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-M7S5SBC1X0"
 ></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -78,10 +78,10 @@ const {
   gtag("js", new Date());
 
   gtag("config", "G-M7S5SBC1X0");
-</script>
+</script> -->
 
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-718919118"
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=AW-718919118"
 ></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -91,6 +91,24 @@ const {
   gtag("js", new Date());
 
   gtag("config", "AW-718919118");
+</script> -->
+
+<script is:inline>
+  window.addEventListener("load", () => {
+    const gtagScript = document.createElement("script");
+    gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-M7S5SBC1X0";
+    gtagScript.async = true;
+    document.head.appendChild(gtagScript);
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-M7S5SBC1X0");
+    gtag("config", "AW-718919118");
+  });
 </script>
 
 <script type="application/ld+json">
