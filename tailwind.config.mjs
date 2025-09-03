@@ -12,7 +12,7 @@ export default {
         "mustard-yellow": "#ffc220",
       },
       fontFamily: {
-        sans: ["DMSans", ...defaultTheme.fontFamily.sans],
+        sans: ["DMSans", "system-ui", "sans-serif"],
       },
       keyframes: {
         "fade-down": {
