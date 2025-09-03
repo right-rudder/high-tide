@@ -1,7 +1,6 @@
 ---
 import HomepageHeader from "../components/HomepageHeader.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { TbAward } from "react-icons/tb";
 import { BsAirplaneEngines } from "react-icons/bs";
 import { FaRegStar } from "react-icons/fa6";
 import { FaPhoneAlt } from "react-icons/fa";
@@ -24,8 +23,7 @@ import CounterCard from "../components/CounterCard.jsx";
 import ToursCTA from "../components/ToursCTA.astro";
 import { TbUserScreen } from "react-icons/tb";
 import AnnouncementBanner2 from "../components/AnnouncementBanner2.astro";
-import ScreenBanner from "../components/ScreenBanner.astro";
-import DonationBanner from "../components/DonationBanner.astro";
+import { YouTube } from "astro-embed";
 import NewsletterCTA from "../components/NewsletterCTA.astro";
 import Quiz from "../components/Quiz.astro";
 const posts = (await getCollection("blog")).sort(
@@ -157,18 +155,7 @@ const posts = (await getCollection("blog")).sort(
         </div>
       </div>
       <div class="flex-1 w-full">
-        <div
-          style="height: 0px; overflow: hidden; padding-top: 56.25%; position: relative; width: 100%;"
-        >
-          <iframe
-            style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;"
-            src="https://tube.rvere.com/embed?v=2jVkLit8I4k"
-            title="YouTube video player"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          >
-          </iframe>
-        </div>
+        <YouTube id="2jVkLit8I4k" posterQuality="high" />
       </div>
     </div>
   </section>
