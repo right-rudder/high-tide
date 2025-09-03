@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+html,
+body {
+  font-family: "DMSans", system-ui, sans-serif !important;
+}
+
 @property --num-hours {
   syntax: "<integer>";
   initial-value: 0;
