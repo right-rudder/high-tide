@@ -4,6 +4,7 @@ import Footer from "../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION, KEYWORDS } from "../consts";
 import "@fontsource-variable/dm-sans";
 import Navbar from "../components/Navbar";
+import Banner from "../components/Banner.astro";
 const { pathname } = Astro.url;
 const { siteTitle, siteDescription, keywords } = Astro.props;
 ---
@@ -18,7 +19,8 @@ const { siteTitle, siteDescription, keywords } = Astro.props;
     />
   </head>
   <body>
-    <header class="fixed z-50 w-full">
+    <Banner />
+    <header class="sticky inset-0 z-50 w-full">
       <Navbar pathname={pathname} client:load />
     </header>
     <main>

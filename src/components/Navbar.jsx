@@ -3,7 +3,7 @@ import NavLink from "./NavLink";
 import { navbarLinks } from "../data/navbarLinks.js";
 import { useEffect, useState } from "react";
 import { IoStorefront } from "react-icons/io5";
-import { FaPhone } from "react-icons/fa";
+import { FaPlane } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import HighTideLogo from "../assets/high-tide-aviation-logo-gradation.png";
 import {
@@ -88,20 +88,20 @@ const Navbar = ({ pathname }) => {
               </div>
               <div className="hidden lg:flex items-center gap-3 text-white border-l border-white/20 pl-10">
                 <a
-                  href={`tel:${PHONE_NUMBER}`}
+                  href={`/enrollment-form`}
                   aria-label="Call High Tide Aviation Now!"
                   className="group border p-3 border-mustard-yellow rounded-full bg-mustard-yellow hover:bg-white hover:border-white duration-300"
                 >
-                  <FaPhone className="size-4 group-hover:text-dark-blue duration-300" />
+                  <FaPlane className="size-4 group-hover:text-dark-blue duration-300" />
                 </a>
                 <div className="hidden 2xl:block shrink-0">
-                  <p className="text-sm text-white/80">Call Anytime</p>
+                  <p className="text-sm text-white/80">Get Ready to Fly</p>
                   <a
-                    href={`tel:${PHONE_NUMBER}`}
+                    href={`/enrollment-form`}
                     aria-label="Call High Tide Aviation to Book a Flight Now!"
                     className="font-medium hover:text-mustard-yellow duration-300"
                   >
-                    {PHONE_NUMBER}
+                    {`Enroll Now`}
                   </a>
                 </div>
               </div>
@@ -210,13 +210,13 @@ const Navbar = ({ pathname }) => {
           </div>
           <div className="flex gap-3 items-center">
             <a
-              href={`tel:${PHONE_NUMBER}`}
+              href={`/enrollment-form`}
               className="border p-2 w-fit border-mustard-yellow rounded-full bg-mustard-yellow"
-              aria-label={`Call us at ${PHONE_NUMBER}`}
+              aria-label={`Enroll at HighTide`}
             >
-              <FaPhone className="size-3" />
+              <FaPlane className="size-3" />
             </a>
-            <a href={`tel:${PHONE_NUMBER}`}>{PHONE_NUMBER}</a>
+            <a href={`/enrollment-form`}>{`Enroll Now`}</a>
           </div>
 
           <div className="flex gap-3 mt-2">
