@@ -2,7 +2,7 @@ export const fleet = [
   {
     name: "N7085G",
     slug: "N7085G",
-    rentalPrice: "$190 /hr wet",
+    rentalPrice: "$195 /hr wet",
     usefulLoad: "882 lbs",
     horsepower: "150 HP",
     usableFuel: "38 gal",
@@ -26,7 +26,7 @@ export const fleet = [
   {
     name: "N35461",
     slug: "N35461",
-    rentalPrice: "$190 /hr wet",
+    rentalPrice: "$195 /hr wet",
     usefulLoad: "913.79 lbs",
     horsepower: "150 HP",
     usableFuel: "38 gal",
@@ -46,7 +46,7 @@ export const fleet = [
   {
     name: "N79072",
     slug: "N79072",
-    rentalPrice: "$190 /hr wet",
+    rentalPrice: "$195 /hr wet",
     usefulLoad: "891.5 lbs",
     horsepower: "150 HP",
     usableFuel: "38 gal",
@@ -69,32 +69,9 @@ export const fleet = [
     ],
   },
   {
-    name: "N8234U",
-    slug: "N8234U",
-    rentalPrice: "$190 /hr wet",
-    usefulLoad: "916.7 lbs",
-    horsepower: "145 HP",
-    usableFuel: "38 gal",
-    model: "Cessna 172F",
-    equipment: [
-      "Garmin GNS 430 w/ WAAS",
-      "King KX 170B NAV/COM",
-      "Continental 0-300 (145 BHP",
-    ],
-    imagePath: "/src/assets/N8234U-high-tide-aviation-fleet.webp",
-    imagesArray: [
-      "/src/assets/N8234U-high-tide-aviation-fleet.webp",
-      "/src/assets/N8234U-control-panel.webp",
-    ],
-    description: [
-      "The Cessna 172 is the gold standard for new pilots. Its forgiving flight characteristics and robust reliability make it the perfect choice for initial flight training. The high-wing design offers exceptional stability and visibility, boosting student confidence as they master essential flying skills. The aircraft responds gently to control inputs and recovers smoothly from errors, instilling the poise needed to become a competent pilot. With widespread availability and easy access to maintenance expertise, the Cessna 172 keeps operational costs low, allowing for consistent training schedules.",
-      "Beyond its physical attributes, the aircraft is equipped with modern avionics and instrumentation, giving students a real-world flying experience. Its versatility extends from solo flights to instrument training, making the Cessna 172 a fundamental tool in developing proficient pilots",
-    ],
-  },
-  {
     name: "N8409L",
     slug: "N8409L",
-    rentalPrice: "$190 /hr wet",
+    rentalPrice: "$195 /hr wet",
     usefulLoad: "930.6 lbs",
     horsepower: "160 HP",
     usableFuel: "38 gal",
@@ -120,7 +97,7 @@ export const fleet = [
   {
     name: "N79136",
     slug: "N79136",
-    rentalPrice: "$190 /hr wet",
+    rentalPrice: "$195 /hr wet",
     usefulLoad: "892.72 lbs",
     horsepower: "150 HP",
     usableFuel: "38 gal",
@@ -170,7 +147,7 @@ export const fleet = [
   {
     name: "N7994X",
     slug: "N7994X",
-    rentalPrice: "$190 /hr wet",
+    rentalPrice: "$195 /hr wet",
     usefulLoad: "857.4 lbs",
     horsepower: "145 HP",
     usableFuel: "- gal",
@@ -220,7 +197,6 @@ export const fleet = [
   {
     name: "Bonanza",
     slug: "N4457S",
-    rentalPrice: "$395 /hr",
     usefulLoad: "-- lbs",
     horsepower: "285 HP",
     usableFuel: "74 gal",
