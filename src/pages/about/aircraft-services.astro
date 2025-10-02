@@ -8,6 +8,8 @@ import { MdSell } from "react-icons/md";
 import { MdManageAccounts } from "react-icons/md";
 import BrokerageServices from "../../components/BrokerageServices";
 import ManagementServices from "../../components/ManagementServices";
+import NewRepairShopServices from "../../components/sections/NewRepairShopServices.astro";
+import NewRepairShopServicesComponent from "../../components/sections/NewRepairShopServicesComponent";
 ---
 
 <BaseLayout
@@ -160,6 +162,43 @@ import ManagementServices from "../../components/ManagementServices";
 
       <div class="flex-1 w-full overflow-hidden">
         <ManagementServices client:visible />
+      </div>
+    </div>
+  </section>
+
+  <section
+    id="newRepairShopService"
+    class="py-24 px-5 bg-medium-blue/10 scroll-my-20"
+  >
+    <div
+      class="max-w-xl gap-10 lg:max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:gap-20"
+    >
+      <div class="flex flex-col lg:flex-1">
+        <h2 class="uppercase text-medium-blue font-bold tracking-widest">
+          Aircraft Services
+        </h2>
+        <h3 class="text-5xl text-dark-blue font-bold leading-tight">
+          Comprehensive Care for Your Aircraft
+        </h3>
+        <p class="text-gray-500 leading-relaxed my-5">
+          High Tide Aviation provides a full range of aircraft services to keep
+          your operations safe, efficient, and worry-free. From routine <strong
+            >Annual Inspections</strong
+          > and detailed <strong>Pre-Purchase Inspections</strong>
+          to <strong>Maintenance and Repairs</strong>, our certified team
+          ensures your aircraft remains in peak condition. We also offer
+          rapid-response <strong>AOG Service with Travel</strong> to get you back
+          in the air quickly, and secure <strong>Aircraft Ferrying</strong> to relocate
+          your aircraft with confidence. Wherever you fly, High Tide Aviation is
+          here to support your journey.
+        </p>
+
+        <a href="/contact-us" class="btn-blue">
+          Schedule Your Aircraft Service Today
+        </a>
+      </div>
+      <div class="flex-1 w-full overflow-hidden">
+        <NewRepairShopServicesComponent client:visible />
       </div>
     </div>
   </section>
