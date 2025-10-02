@@ -3,7 +3,7 @@ pubDate: "October 2, 2025"
 author: "Jessica Ward"
 title: "High Tide Aviation Earns FAA Part 141 Certification, Expanding Flight Training Opportunities"
 description: "High Tide Aviation has officially earned FAA Part 141 certification, opening new opportunities for local and international students with structured, efficient, and cost-saving flight training programs."
-heroImage: "/src/assets/high-tide-aviation-team-of-cfis.jpg"
+heroImage: "/src/assets/high-tide-aviation-team-of-cfis.webp"
 category: "Flight Training News"
 tags:
   [
