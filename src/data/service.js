@@ -12,7 +12,7 @@ export const service = {
     "St Simons Island - GA, Aircraft annual inspections, Pre-purchase aircraft inspections, Aircraft maintenance and repairs, AOG aircraft service, Aircraft ferrying service, Aviation repair services, High Tide Aviation, Aircraft services North Carolina, Aircraft repair Southport NC",
   header: {
     title: "High Tide Aviation Service & Repair",
-    bannerImg: "src/assets/service-aircraft-repair-high-tide-southport-NC.jpeg",
+    bannerImg: "/src/assets/service-aircraft-repair-high-tide-southport-NC.jpeg",
     bannerImgAlt: "Aircraft repair",
     ctaText: "Request Our Services",
   },
