@@ -3,6 +3,7 @@ import prePurchaseInspectionsImg from "../assets/wilmington-nc-cfi-checking-airc
 import maintenanceAndRepairsImg from "../assets/service-aircraft-maintenance-high-tide-southport-NC.jpeg";
 import aogServiceImg from "../assets/private-pilot-getting-ready-to-take-off.jpeg";
 import aircraftFerryingImg from "../assets/heading-to-training-at-high-tide-aviation-st-simons-island-ga.jpg";
+import bannerImg from "../assets/service-aircraft-repair-high-tide-southport-NC.jpeg";
 
 export const service = {
   siteTitle: "Service & Repair | High Tide Aviation",
@@ -12,7 +13,7 @@ export const service = {
     "St Simons Island - GA, Aircraft annual inspections, Pre-purchase aircraft inspections, Aircraft maintenance and repairs, AOG aircraft service, Aircraft ferrying service, Aviation repair services, High Tide Aviation, Aircraft services North Carolina, Aircraft repair Southport NC",
   header: {
     title: "High Tide Aviation Service & Repair",
-    bannerImg: "/src/assets/service-aircraft-repair-high-tide-southport-NC.jpeg",
+    bannerImg: bannerImg,
     bannerImgAlt: "Aircraft repair",
     ctaText: "Request Our Services",
   },
