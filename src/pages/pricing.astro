@@ -1,0 +1,79 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Banner from "../assets/cessna-172-flying-over-st-simons-island.jpg";
+import DiscoveryFlightCard from "../components/DiscoveryFlightCard.astro";
+import { discoveryFlights } from "../data/discoveryFlights";
+import ToursCTA from "../components/ToursCTA.astro";
+---
+
+<BaseLayout
+    siteTitle="Flight Training Pricing | High Tide Aviation"
+    siteDescription="Explore our flight training pricing options for Southport, St. Simons, and Wilmington. Find the best value for your aviation journey with High Tide Aviation."
+    siteKeywords="flight training pricing, High Tide Aviation, pilot training cost, aviation pricing, flight school rates"
+>
+    <Header
+        image={Banner}
+        title="Pricing"
+        alt="Cessna 172 flying over St. Simons Island"
+    />
+
+    
+    <section class="py-16 bg-mustard-yellow scroll-my-20">
+        <div class="w-full flex flex-col items-center">
+            <h2 class="uppercase text-medium-blue font-bold tracking-widest text-center mb-4">
+                Explore Our Pricing Options
+            </h2>
+            <p class="text-dark-blue text-lg text-center mb-8">
+                Find the best value for your aviation journey. Use the calculator below to explore our flight training pricing options. 
+            </p>
+            <div class="w-full">
+                <!-- Below is the iframe for the pricing calculator -->
+                <iframe
+                    src="https://htacostcalculator.replit.app/"
+                    title="Pricing Details"
+                    width="120%"
+                    height="600"
+                    frameborder="0"
+                    allowfullscreen
+                    class="rounded-xl shadow-lg bg-white w-full"
+                ></iframe>
+            </div>
+        </div>
+    </section>
+</BaseLayout>
+<script>
+if (window.matchMedia("(max-width: 768px)").matches) {
+    window.addEventListener("DOMContentLoaded", () => {
+        setTimeout(() => {
+            // Hide by data attribute
+            const chatWidget = document.querySelector('[data-widget-id="66c4bc2010d8484fcb5562a0"]');
+            if (chatWidget && chatWidget instanceof HTMLElement) {
+                chatWidget.style.display = "none";
+            }
+            // Hide iframes from leadconnectorhq
+            document.querySelectorAll('iframe').forEach(el => {
+                if (el instanceof HTMLIFrameElement && el.src.includes("leadconnectorhq")) {
+                    el.style.display = "none";
+                }
+            });
+            // Hide common floating chat widget containers
+            document.querySelectorAll('[class*="chat"], [class*="widget"]').forEach(el => {
+                if (el instanceof HTMLElement) {
+                    el.style.display = "none";
+                }
+            });
+        }, 2000);
+    });
+}
+</script>
+<style>
+@media (max-width: 768px) {
+    [data-widget-id="66c4bc2010d8484fcb5562a0"] {
+        display: none !important;
+    }
+    iframe[title="Pricing Details"] {
+        height: 8=700px !important;
+    }
+}
+</style>
