@@ -83,9 +83,17 @@ export const navbarLinks = [
     ],
   },
   {
-    name: "Aircraft Services",
-    link: "/about/aircraft-services",
-    submenu: [],
+    name: "Services",
+    submenu: [
+      {
+        name: "Service Request",
+        link: "/service",
+      },
+      {
+        name: "Aircraft Services",
+        link: "/about/aircraft-services",
+      },
+    ],
   },
   {
     name: "Aerial Tours",

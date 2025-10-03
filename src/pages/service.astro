@@ -1,0 +1,490 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import { Image } from "astro:assets";
+import { service } from "../data/service";
+
+const REQUEST_SERVICES_WEBHOOK_URL = import.meta.env
+  .REQUEST_SERVICES_WEBHOOK_URL;
+const PORTAL_API_KEY = import.meta.env.PORTAL_API_KEY;
+---
+
+<BaseLayout
+  siteTitle={service.siteTitle}
+  siteDescription={service.siteDescription}
+  siteKeywords={service.siteKeywords}
+>
+  <Header
+    slot="header"
+    image={service.header.bannerImg}
+    title={service.header.title}
+    alt={service.header.bannerImgAlt}
+    ctaText={service.header.ctaText}
+    ctaLink="#service-request-form"
+  />
+
+  <section class="py-24 px-5">
+    <div
+      class="max-w-xl gap-10 lg:max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:gap-20"
+    >
+      <div class="flex-1 relative">
+        <Image
+          class="pr-6"
+          src={service.services.annualInspections.image.src}
+          alt={service.services.annualInspections.image.alt}
+        />
+        <div
+          class="h-3/4 bg-mustard-yellow absolute -z-10 -right-0 w-20 top-[12.5%]"
+        >
+        </div>
+      </div>
+      <div class="flex flex-col flex-1">
+        <h2 class="uppercase text-medium-blue font-bold tracking-widest">
+          {service.serviceSubtitle}
+        </h2>
+        <h3 class="text-5xl text-dark-blue font-bold leading-tight">
+          {service.services.annualInspections.title}
+        </h3>
+        {
+          service.services.annualInspections.description.map((item) => (
+            <p class="text-gray-500 leading-relaxed mt-3 mb-2">{item}</p>
+          ))
+        }
+        <div class="flex flex-col sm:flex-row items-center gap-5 mt-3">
+          <a href="#service-request-form" class="btn-blue"
+            >{service.services.annualInspections.cta}</a
+          >
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 px-5 scroll-my-20 bg-medium-blue/10">
+    <div
+      class="max-w-xl gap-10 lg:max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:gap-10"
+    >
+      <div class="flex flex-col flex-1">
+        <h2 class="uppercase text-medium-blue font-bold tracking-widest">
+          {service.serviceSubtitle}
+        </h2>
+        <h3 class="text-5xl text-dark-blue font-bold leading-tight">
+          {service.services.prePurchaseInspections.title}
+        </h3>
+        {
+          service.services.prePurchaseInspections.description.map((item) => (
+            <p class="text-gray-500 leading-relaxed mt-3 mb-2">{item}</p>
+          ))
+        }
+        <div class="flex flex-col sm:flex-row items-center gap-5 mt-3">
+          <a href="#service-request-form" class="btn-blue"
+            >{service.services.prePurchaseInspections.cta}</a
+          >
+        </div>
+      </div>
+      <div class="flex-1">
+        <Image
+          src={service.services.prePurchaseInspections.image.src}
+          alt={service.services.prePurchaseInspections.image.alt}
+          class="object-cover top-0 left-0 -z-10 max-h-96"
+          quality={60}
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 px-5 scroll-my-20">
+    <div
+      class="max-w-xl gap-10 lg:max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:gap-20"
+    >
+      <div class="flex-1 relative">
+        <Image
+          class="pr-6"
+          src={service.services.maintenanceAndRepairs.image.src}
+          alt={service.services.maintenanceAndRepairs.image.alt}
+        />
+        <div
+          class="h-3/4 bg-mustard-yellow absolute -z-10 -right-0 w-20 top-[12.5%]"
+        >
+        </div>
+      </div>
+      <div class="flex flex-col flex-1">
+        <h2 class="uppercase text-medium-blue font-bold tracking-widest">
+          {service.serviceSubtitle}
+        </h2>
+        <h3 class="text-5xl text-dark-blue font-bold leading-tight">
+          {service.services.maintenanceAndRepairs.title}
+        </h3>
+        {
+          service.services.maintenanceAndRepairs.description.map((item) => (
+            <p class="text-gray-500 leading-relaxed mt-3 mb-2">{item}</p>
+          ))
+        }
+        <div class="flex flex-col sm:flex-row items-center gap-5 mt-3">
+          <a href="#service-request-form" class="btn-blue"
+            >{service.services.maintenanceAndRepairs.cta}</a
+          >
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 px-5 scroll-my-20 bg-medium-blue/10">
+    <div
+      class="max-w-xl gap-10 lg:max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:gap-10"
+    >
+      <div class="flex flex-col flex-1">
+        <h2 class="uppercase text-medium-blue font-bold tracking-widest">
+          {service.serviceSubtitle}
+        </h2>
+        <h3 class="text-5xl text-dark-blue font-bold leading-tight">
+          {service.services.aogService.title}
+        </h3>
+        {
+          service.services.aogService.description.map((item) => (
+            <p class="text-gray-500 leading-relaxed mt-3 mb-2">{item}</p>
+          ))
+        }
+        <div class="flex flex-col sm:flex-row items-center gap-5 mt-3">
+          <a href="#service-request-form" class="btn-blue"
+            >{service.services.aogService.cta}</a
+          >
+        </div>
+      </div>
+      <div class="flex-1">
+        <Image
+          src={service.services.aogService.image.src}
+          alt={service.services.aogService.image.alt}
+          class="object-cover top-0 left-0 -z-10 max-h-96"
+          quality={60}
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 px-5 scroll-my-20">
+    <div
+      class="max-w-xl gap-10 lg:max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:gap-20"
+    >
+      <div class="flex-1 relative">
+        <Image
+          class="pr-6"
+          src={service.services.aircraftFerrying.image.src}
+          alt={service.services.aircraftFerrying.image.alt}
+        />
+        <div
+          class="h-3/4 bg-mustard-yellow absolute -z-10 -right-0 w-20 top-[12.5%]"
+        >
+        </div>
+      </div>
+      <div class="flex flex-col flex-1">
+        <h2 class="uppercase text-medium-blue font-bold tracking-widest">
+          {service.serviceSubtitle}
+        </h2>
+        <h3 class="text-5xl text-dark-blue font-bold leading-tight">
+          {service.services.aircraftFerrying.title}
+        </h3>
+        {
+          service.services.aircraftFerrying.description.map((item) => (
+            <p class="text-gray-500 leading-relaxed mt-3 mb-2">{item}</p>
+          ))
+        }
+        <div class="flex flex-col sm:flex-row items-center gap-5 mt-3">
+          <a href="#service-request-form" class="btn-blue"
+            >{service.services.aircraftFerrying.cta}</a
+          >
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 px-5">
+    <form id="service-request-form" class="flex flex-col items-center">
+      <h2 class="uppercase text-medium-blue font-bold tracking-widest">
+        {service.form.subTitle}
+      </h2>
+      <h3
+        class="text-5xl font-bold leading-tight text-dark-blue text-center max-w-2xl"
+      >
+        {service.form.title}
+      </h3>
+      <div class="grid md:grid-cols-2 gap-5 mt-10">
+        <input
+          class="bg-medium-blue/15 text-dark-blue py-4 px-6 w-full outline-none placeholder:text-gray-500"
+          type="text"
+          name={service.form.fields.firstName.id}
+          id={service.form.fields.firstName.id}
+          placeholder={service.form.fields.firstName.placeholder}
+          required
+        />
+        <input
+          class="bg-medium-blue/15 text-dark-blue py-4 px-6 w-full outline-none placeholder:text-gray-500"
+          type="text"
+          name={service.form.fields.lastName.id}
+          id={service.form.fields.lastName.id}
+          placeholder={service.form.fields.lastName.placeholder}
+          required
+        />
+        <input
+          class="bg-medium-blue/15 text-dark-blue py-4 px-6 w-full outline-none placeholder:text-gray-500"
+          type="email"
+          name={service.form.fields.email.id}
+          id={service.form.fields.email.id}
+          placeholder={service.form.fields.email.placeholder}
+          required
+        />
+        <div class="hidden">
+          <label>
+            Don't fill this out if you're human: <input name="confirm-email" />
+          </label>
+        </div>
+        <input
+          class="bg-medium-blue/15 text-dark-blue py-4 px-6 w-full outline-none placeholder:text-gray-500"
+          type="tel"
+          name={service.form.fields.phone.id}
+          id={service.form.fields.phone.id}
+          placeholder={service.form.fields.phone.placeholder}
+          required
+        />
+
+        <fieldset class="col-span-2">
+          <legend class="font-medium leading-6 text-dark-blue"
+            >{service.form.fields.services.legend}</legend
+          >
+          <p class="text-gray-500 text-sm">Select all that apply</p>
+          <div class="mt-2 space-y-1 grid grid-cols-2 gap-2 sm:grid-cols-3">
+            {
+              service.form.fields.services.checkboxes.map((item, index) => (
+                <div
+                  class={`relative flex gap-x-3 ${index % 2 === 0 ? "col-span-1" : "col-span-1 sm:col-span-2"}`}
+                >
+                  <div class="flex h-6 items-center">
+                    <input
+                      id={item.id}
+                      name={service.form.fields.services.name}
+                      type="checkbox"
+                      value={item.label}
+                      class="h-4 w-4 rounded border-gray-300 text-medium-blue focus:ring-medium-blue"
+                    />
+                  </div>
+                  <div class="leading-6">
+                    <label for={item.id} class="text-gray-600">
+                      {item.label}
+                    </label>
+                  </div>
+                </div>
+              ))
+            }
+          </div>
+          <div id="service-selection-error-msg" class="border-l-4 border-red-400 bg-red-50 p-4 mt-2 hidden">
+            <div class="flex">
+              <div class="shrink-0">
+                <svg
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  data-slot="icon"
+                  aria-hidden="true"
+                  class="size-5 text-red-400"
+                >
+                  <path
+                    d="M8.485 2.495c.673-1.167 2.357-1.167 3.03 0l6.28 10.875c.673 1.167-.17 2.625-1.516 2.625H3.72c-1.347 0-2.189-1.458-1.515-2.625L8.485 2.495ZM10 5a.75.75 0 0 1 .75.75v3.5a.75.75 0 0 1-1.5 0v-3.5A.75.75 0 0 1 10 5Zm0 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z"
+                    clip-rule="evenodd"
+                    fill-rule="evenodd"></path>
+                </svg>
+              </div>
+              <div class="ml-3">
+                <p class="text-sm text-red-700">
+                  {service.form.fields.services.selectionErrorMessage}
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </fieldset>
+
+        <textarea
+          class="bg-medium-blue/15 text-dark-blue py-4 px-6 w-full outline-none placeholder:text-gray-500 col-span-2 h-36"
+          name={service.form.fields.message.id}
+          id={service.form.fields.message.id}
+          placeholder={service.form.fields.message.placeholder}></textarea>
+      </div>
+      <div class="flex gap-3 my-5 max-w-xs md:max-w-xl mx-auto">
+        <input
+          type="checkbox"
+          name="agree-data-collection"
+          id="agree-data-collection"
+        />
+
+        <label for="agree-data-collection" class="text-gray-500 text-sm">
+          By providing my email and phone number, I agree to receive email and
+          text messages from High Tide Aviation. I understand that I can opt-out
+          at any time.
+        </label>
+      </div>
+
+      <div
+        class="g-recaptcha"
+        data-sitekey="6LdINgwqAAAAAHqhspAFZMyuR1ks9CeEVI8lWl2B"
+        data-callback="onRecaptchaSuccess"
+      >
+      </div>
+
+      <button
+        type="submit"
+        id="submit-button"
+        class="btn-blue cursor-not-allowed mt-5 bg-gray-400 hover:bg-gray-400 hover:text-white"
+        disabled>Submit</button
+      >
+    </form>
+  </section>
+
+  <script
+    define:vars={{ REQUEST_SERVICES_WEBHOOK_URL, PORTAL_API_KEY, service }}
+  >
+    let isRecaptchaVerified = false;
+
+    function validateCheckboxes() {
+      const checkboxes = document.querySelectorAll(
+        `input[name="${service.form.fields.services.name}"]`
+      );
+
+      let isChecked = false;
+      for (const checkbox of checkboxes) {
+        if (checkbox.checked) {
+          isChecked = true;
+          break;
+        }
+      }
+
+      const errorMsg = document.querySelector("#service-selection-error-msg");
+      if (isChecked) {
+        errorMsg.classList.add("hidden");
+      } else {
+        errorMsg.classList.remove("hidden");
+      }
+
+      return isChecked;
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const form = document.getElementById("service-request-form");
+      const checkbox = document.getElementById("agree-data-collection");
+      const submitButton = document.getElementById("submit-button");
+
+      if (!form) {
+        console.error("Form element not found.");
+        return;
+      }
+
+      if (checkbox && submitButton) {
+        checkbox.addEventListener("change", () => {
+          if (checkbox.checked) {
+            submitButton.disabled = false;
+            submitButton.classList.remove(
+              "cursor-not-allowed",
+              "bg-gray-400",
+              "hover:bg-gray-400",
+              "hover:text-white"
+            );
+          } else {
+            submitButton.disabled = true;
+            submitButton.classList.add(
+              "cursor-not-allowed",
+              "bg-gray-400",
+              "hover:bg-gray-400",
+              "hover:text-white"
+            );
+          }
+        });
+      }
+
+      form.addEventListener("submit", async (event) => {
+        event.preventDefault();
+
+        if (!validateCheckboxes()) {
+          return;
+        }
+
+        if (!isRecaptchaVerified) {
+          alert("Please complete the reCAPTCHA verification.");
+          return;
+        }
+
+        const formData = new FormData(form);
+
+        const webhookURL = REQUEST_SERVICES_WEBHOOK_URL;
+        const apiKey = PORTAL_API_KEY;
+
+        const urlEncodedBody = new URLSearchParams(formData).toString();
+
+        const jsonBody = {
+          first_name:
+            formData.get(service.form.fields.firstName.id)?.trim() || "",
+          last_name:
+            formData.get(service.form.fields.lastName.id)?.trim() || "",
+          email: formData.get(service.form.fields.email.id)?.trim() || "",
+          phone: formData.get(service.form.fields.phone.id)?.trim() || "",
+          campaign: "request_services_form",
+          account_random_id: "ac_yec3jxiy",
+          metadata: {
+            services: formData
+              .getAll(service.form.fields.services.name)
+              .map((item) => item.trim()),
+            message: formData.get(service.form.fields.message.id)?.trim() || "",
+          },
+        };
+
+        try {
+          const [ghlRes, portalRes] = await Promise.all([
+            fetch(webhookURL, {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/x-www-form-urlencoded",
+              },
+              body: urlEncodedBody,
+            }),
+            fetch("https://portal.rightruddermarketing.com/api/leads", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json",
+                "x-api-key": apiKey,
+              },
+              body: JSON.stringify(jsonBody),
+            }),
+          ]);
+
+          if (ghlRes.ok && portalRes.ok) {
+            window.location.href = "/service-confirmation";
+          } else {
+            alert("Submission failed! Please try again later.");
+            console.error("Submission failed", {
+              ghlStatus: ghlRes.status,
+              portalStatus: portalRes.status,
+            });
+          }
+        } catch (err) {
+          console.error("Submission error:", err);
+        }
+      });
+    });
+
+    function onRecaptchaSuccess(token) {
+      fetch("/recaptcha", {
+        method: "POST",
+        body: JSON.stringify({ recaptcha: token }),
+      })
+        .then((response) => response.json())
+        .then((gResponse) => {
+          if (gResponse.success) {
+            isRecaptchaVerified = true;
+          } else {
+            isRecaptchaVerified = false;
+            alert("reCAPTCHA verification failed. Please try again.");
+          }
+        });
+    }
+
+    window.onRecaptchaSuccess = onRecaptchaSuccess;
+  </script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</BaseLayout>
