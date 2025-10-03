@@ -14,7 +14,7 @@ import ToursCTA from "../components/ToursCTA.astro";
 >
     <Header
         image={Banner}
-        title="Pricing"
+        title="Pricing Calculator"
         alt="Cessna 172 flying over St. Simons Island"
     />
 
@@ -22,17 +22,17 @@ import ToursCTA from "../components/ToursCTA.astro";
     <section class="py-16 bg-mustard-yellow scroll-my-20">
         <div class="w-full flex flex-col items-center">
             <h2 class="uppercase text-medium-blue font-bold tracking-widest text-center mb-4">
-                Explore Our Pricing Options
+                Configure Your Own Quote
             </h2>
             <p class="text-dark-blue text-lg text-center mb-8">
                 Find the best value for your aviation journey. Use the calculator below to explore our flight training pricing options. 
             </p>
-            <div class="w-full">
+            <div class="w-full max-w-6xl mx-auto px-2">
                 <!-- Below is the iframe for the pricing calculator -->
                 <iframe
                     src="https://htacostcalculator.replit.app/"
                     title="Pricing Details"
-                    width="120%"
+                    width="100%"
                     height="600"
                     frameborder="0"
                     allowfullscreen
@@ -73,7 +73,12 @@ if (window.matchMedia("(max-width: 768px)").matches) {
         display: none !important;
     }
     iframe[title="Pricing Details"] {
-        height: 8=700px !important;
+        height: 900px !important;
+    }
+}
+@media (min-width: 769px) {
+    iframe[title="Pricing Details"] {
+        height: 800px !important;
     }
 }
 </style>
