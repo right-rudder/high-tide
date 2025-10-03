@@ -61,10 +61,6 @@ export const navbarLinks = [
         link: "/flight-simulator",
       },
       {
-        name: "Aircraft Services",
-        link: "/about/aircraft-services",
-      },
-      {
         name: "Financing",
         link: "/about/financing",
       },
@@ -87,6 +83,11 @@ export const navbarLinks = [
     ],
   },
   {
+    name: "Aircraft Services",
+    link: "/about/aircraft-services",
+    submenu: [],
+  },
+  {
     name: "Aerial Tours",
     link: "https://flyhightide.com/",
     external: true,
@@ -96,11 +97,6 @@ export const navbarLinks = [
     name: "Pilot Shop",
     link: "https://shop.flyhightide.com/",
     external: true,
-    submenu: [],
-  },
-  {
-    name: "Contact Us",
-    link: "/contact-us",
     submenu: [],
   },
 ];

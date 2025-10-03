@@ -4,10 +4,11 @@ import Header from "../../components/Header.astro";
 import Banner from "../../assets/cessna-n79136-flying-over-st-simons.jpg";
 import { Image } from "astro:assets";
 import Intro from "../../assets/student-checking-cessna-motor.jpg";
-import { MdSell } from "react-icons/md";
-import { MdManageAccounts } from "react-icons/md";
+import { MdSell, MdManageAccounts } from "react-icons/md";
+import { FaPlaneCircleCheck } from "react-icons/fa6";
 import BrokerageServices from "../../components/BrokerageServices";
 import ManagementServices from "../../components/ManagementServices";
+import NewRepairShopServicesComponent from "../../components/sections/NewRepairShopServicesComponent";
 ---
 
 <BaseLayout
@@ -26,10 +27,10 @@ import ManagementServices from "../../components/ManagementServices";
 
   <section class="py-24 px-5">
     <div
-      class="max-w-xl gap-10 lg:max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:gap-20"
+      class="max-w-xl gap-10 md:max-w-5xl xl:max-w-7xl mx-auto flex flex-col xl:flex-row items-center"
     >
       <div class="lg:flex-1 flex justify-center">
-        <div class="lg:w-[28rem] lg:h-[33rem]">
+        <div class="xl:w-[28rem] xl:h-[33rem]">
           <Image
             class="object-cover h-full"
             src={Intro}
@@ -37,7 +38,7 @@ import ManagementServices from "../../components/ManagementServices";
           />
         </div>
       </div>
-      <div class="flex flex-col lg:flex-1">
+      <div class="flex flex-col lg:flex-1 max-w-[724px] xl:max-w-none">
         <h2 class="uppercase text-medium-blue font-bold tracking-widest">
           Professional services
         </h2>
@@ -52,24 +53,24 @@ import ManagementServices from "../../components/ManagementServices";
           prime condition, ensuring compliance with all safety and regulatory
           standards.
         </p>
-        <div class="flex gap-7 flex-col md:flex-row">
+        <div class="flex gap-7 flex-col">
           <a
-            href="#brokerageServices"
+            href="#aircraftServices"
             class="bg-mustard-yellow/20 py-2 px-5 flex gap-5 items-center group hover:bg-dark-blue duration-500"
           >
-            <MdSell
-              className="size-28 text-dark-blue group-hover:text-mustard-yellow duration-500"
+            <FaPlaneCircleCheck
+              className="size-16 text-dark-blue group-hover:text-mustard-yellow duration-500"
             />
             <div>
               <p
                 class="text-dark-blue font-medium text-xl leading-tight group-hover:text-white duration-500"
               >
-                Brokerage Services
+                Aircraft Services
               </p>
               <p
                 class="text-gray-500 text-sm group-hover:text-white/80 duration-500"
               >
-                Buy and sell aircraft with High Tide
+                Maintenance services for your aircraft
               </p>
             </div>
           </a>
@@ -78,7 +79,7 @@ import ManagementServices from "../../components/ManagementServices";
             class="bg-mustard-yellow/20 py-2 px-5 flex gap-5 items-center group hover:bg-dark-blue duration-500"
           >
             <MdManageAccounts
-              className="size-28 text-dark-blue group-hover:text-mustard-yellow duration-500"
+              className="size-16  text-dark-blue group-hover:text-mustard-yellow duration-500"
             />
             <div>
               <p
@@ -93,6 +94,26 @@ import ManagementServices from "../../components/ManagementServices";
               </p>
             </div>
           </a>
+          <a
+            href="#brokerageServices"
+            class="bg-mustard-yellow/20 py-2 px-5 flex gap-5 items-center group hover:bg-dark-blue duration-500"
+          >
+            <MdSell
+              className="size-16 text-dark-blue group-hover:text-mustard-yellow duration-500"
+            />
+            <div>
+              <p
+                class="text-dark-blue font-medium text-xl leading-tight group-hover:text-white duration-500"
+              >
+                Brokerage Services
+              </p>
+              <p
+                class="text-gray-500 text-sm group-hover:text-white/80 duration-500"
+              >
+                Buy and sell aircraft with High Tide
+              </p>
+            </div>
+          </a>
         </div>
         <div class="flex flex-col sm:flex-row items-center gap-5 mt-5">
           <a href="/contact-us" class="btn-blue"> Contact High Tide </a>
@@ -101,6 +122,77 @@ import ManagementServices from "../../components/ManagementServices";
     </div>
   </section>
 
+  <!-- Aircraft Services-->
+  <section
+    id="aircraftServices"
+    class="py-24 px-5 bg-medium-blue/10 scroll-my-20"
+  >
+    <div
+      class="max-w-xl gap-10 lg:max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:gap-20"
+    >
+      <div class="flex flex-col lg:flex-1">
+        <h2 class="uppercase text-medium-blue font-bold tracking-widest">
+          Aircraft Services
+        </h2>
+        <h3 class="text-5xl text-dark-blue font-bold leading-tight">
+          Comprehensive Care for Your Aircraft
+        </h3>
+        <p class="text-gray-500 leading-relaxed my-5">
+          High Tide Aviation provides a full range of aircraft services to keep
+          your operations safe, efficient, and worry-free. From routine <strong
+            >Annual Inspections</strong
+          > and detailed <strong>Pre-Purchase Inspections</strong>
+          to <strong>Maintenance and Repairs</strong>, our certified team
+          ensures your aircraft remains in peak condition. We also offer
+          rapid-response <strong>AOG Service with Travel</strong> to get you back
+          in the air quickly, and secure <strong>Aircraft Ferrying</strong> to relocate
+          your aircraft with confidence. Wherever you fly, High Tide Aviation is
+          here to support your journey.
+        </p>
+
+        <a href="/contact-us" class="btn-blue">
+          Schedule Your Aircraft Service Today
+        </a>
+      </div>
+      <div class="flex-1 w-full overflow-hidden">
+        <NewRepairShopServicesComponent client:visible />
+      </div>
+    </div>
+  </section>
+
+  <!-- Management Services -->
+  <section id="managementServices" class="py-24 px-5 scroll-my-20">
+    <div
+      class="max-w-xl gap-10 lg:max-w-7xl mx-auto flex flex-col lg:flex-row-reverse items-center lg:gap-20"
+    >
+      <div class="flex flex-col lg:flex-1">
+        <h2 class="uppercase text-medium-blue font-bold tracking-widest">
+          Management Services
+        </h2>
+        <h3 class="text-5xl text-dark-blue font-bold leading-tight">
+          Benefits of Hide Tide’s Aircraft Management
+        </h3>
+        <p class="text-gray-500 leading-relaxed my-5">
+          Our management services are designed to ease the responsibilities of
+          aircraft ownership. We handle everything from routine maintenance to
+          comprehensive operational management, ensuring your aircraft operates
+          smoothly without any hassles. Our offerings include tailored
+          maintenance solutions, crew management, and scheduling services,
+          delivered by our expert team based in Southport, Wilmington, St Simons
+          Island, and Bald Head Island.
+        </p>
+        <a href="/contact-us" class="btn-blue">
+          Leverage High Tide Management Services
+        </a>
+      </div>
+
+      <div class="flex-1 w-full overflow-hidden">
+        <ManagementServices client:visible />
+      </div>
+    </div>
+  </section>
+
+  <!-- Brokerage Services -->
   <section
     id="brokerageServices"
     class="py-24 px-5 bg-medium-blue/10 scroll-my-20"
@@ -129,37 +221,6 @@ import ManagementServices from "../../components/ManagementServices";
 
       <div class="flex-1 w-full overflow-hidden">
         <BrokerageServices client:visible />
-      </div>
-    </div>
-  </section>
-
-  <section id="managementServices" class="py-24 px-5 scroll-my-20">
-    <div
-      class="max-w-xl gap-10 lg:max-w-7xl mx-auto flex flex-col lg:flex-row-reverse items-center lg:gap-20"
-    >
-      <div class="flex flex-col lg:flex-1">
-        <h2 class="uppercase text-medium-blue font-bold tracking-widest">
-          Management Services
-        </h2>
-        <h3 class="text-5xl text-dark-blue font-bold leading-tight">
-          Benefits of Hide Tide’s Aircraft Management
-        </h3>
-        <p class="text-gray-500 leading-relaxed my-5">
-          Our management services are designed to ease the responsibilities of
-          aircraft ownership. We handle everything from routine maintenance to
-          comprehensive operational management, ensuring your aircraft operates
-          smoothly without any hassles. Our offerings include tailored
-          maintenance solutions, crew management, and scheduling services,
-          delivered by our expert team based in Southport, Wilmington, St Simons
-          Island, and Bald Head Island.
-        </p>
-        <a href="/contact-us" class="btn-blue">
-          Leverage High Tide Management Services
-        </a>
-      </div>
-
-      <div class="flex-1 w-full overflow-hidden">
-        <ManagementServices client:visible />
       </div>
     </div>
   </section>
