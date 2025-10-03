@@ -4,8 +4,8 @@ import Header from "../../components/Header.astro";
 import Banner from "../../assets/cessna-n79136-flying-over-st-simons.jpg";
 import { Image } from "astro:assets";
 import Intro from "../../assets/student-checking-cessna-motor.jpg";
-import { MdSell } from "react-icons/md";
-import { MdManageAccounts } from "react-icons/md";
+import { MdSell, MdManageAccounts } from "react-icons/md";
+import { FaPlaneCircleCheck } from "react-icons/fa6";
 import BrokerageServices from "../../components/BrokerageServices";
 import ManagementServices from "../../components/ManagementServices";
 import NewRepairShopServicesComponent from "../../components/sections/NewRepairShopServicesComponent";
@@ -53,24 +53,24 @@ import NewRepairShopServicesComponent from "../../components/sections/NewRepairS
           prime condition, ensuring compliance with all safety and regulatory
           standards.
         </p>
-        <div class="flex gap-7 flex-col 2xl:flex-row">
+        <div class="flex gap-7 flex-col">
           <a
-            href="#brokerageServices"
+            href="#aircraftServices"
             class="bg-mustard-yellow/20 py-2 px-5 flex gap-5 items-center group hover:bg-dark-blue duration-500"
           >
-            <MdSell
-              className="size-24 2xl:size-28 text-dark-blue group-hover:text-mustard-yellow duration-500"
+            <FaPlaneCircleCheck
+              className="size-16 text-dark-blue group-hover:text-mustard-yellow duration-500"
             />
             <div>
               <p
                 class="text-dark-blue font-medium text-xl leading-tight group-hover:text-white duration-500"
               >
-                Brokerage Services
+                Aircraft Services
               </p>
               <p
                 class="text-gray-500 text-sm group-hover:text-white/80 duration-500"
               >
-                Buy and sell aircraft with High Tide
+                Maintenance services for your aircraft
               </p>
             </div>
           </a>
@@ -79,7 +79,7 @@ import NewRepairShopServicesComponent from "../../components/sections/NewRepairS
             class="bg-mustard-yellow/20 py-2 px-5 flex gap-5 items-center group hover:bg-dark-blue duration-500"
           >
             <MdManageAccounts
-              className="size-24 2xl:size-28 text-dark-blue group-hover:text-mustard-yellow duration-500"
+              className="size-16  text-dark-blue group-hover:text-mustard-yellow duration-500"
             />
             <div>
               <p
@@ -94,6 +94,26 @@ import NewRepairShopServicesComponent from "../../components/sections/NewRepairS
               </p>
             </div>
           </a>
+          <a
+            href="#brokerageServices"
+            class="bg-mustard-yellow/20 py-2 px-5 flex gap-5 items-center group hover:bg-dark-blue duration-500"
+          >
+            <MdSell
+              className="size-16 text-dark-blue group-hover:text-mustard-yellow duration-500"
+            />
+            <div>
+              <p
+                class="text-dark-blue font-medium text-xl leading-tight group-hover:text-white duration-500"
+              >
+                Brokerage Services
+              </p>
+              <p
+                class="text-gray-500 text-sm group-hover:text-white/80 duration-500"
+              >
+                Buy and sell aircraft with High Tide
+              </p>
+            </div>
+          </a>
         </div>
         <div class="flex flex-col sm:flex-row items-center gap-5 mt-5">
           <a href="/contact-us" class="btn-blue"> Contact High Tide </a>
@@ -102,9 +122,9 @@ import NewRepairShopServicesComponent from "../../components/sections/NewRepairS
     </div>
   </section>
 
-  <!-- New Repair Shop Service-->
+  <!-- Aircraft Services-->
   <section
-    id="newRepairShopService"
+    id="aircraftServices"
     class="py-24 px-5 bg-medium-blue/10 scroll-my-20"
   >
     <div
