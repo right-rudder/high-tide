@@ -28,7 +28,7 @@ const { siteTitle, siteDescription, keywords } = Astro.props;
       <slot />
     </main>
     <Footer />
-    {pathname !== "/pricing" && (
+    {!(pathname === "/pricing" || pathname === "/pricing/") && (
       <script src="https://widgets.leadconnectorhq.com/loader.js" data-widget-id="66c4bc2010d8484fcb5562a0"></script>
     )}
   </body>
