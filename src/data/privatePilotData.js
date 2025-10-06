@@ -82,8 +82,8 @@ const privatePilot = {
       {
         name: "Zero to Hero Program",
         id: "tier-zero-to-hero",
-        href: "#",
-        price: "Custom",
+        url: "/pricing",
+        price: "Build your own",
         description: "Full-range training for aspiring pilots.",
         features: [
           "All-inclusive from Private to CFI/CFII/MEI",
@@ -91,7 +91,7 @@ const privatePilot = {
           "Customized training schedule",
         ],
         featured: true,
-        cta: "Contact for Custom Quote",
+        cta: "Configure Your Own",
       },
     ],
   },

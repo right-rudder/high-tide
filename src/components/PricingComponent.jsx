@@ -163,7 +163,7 @@ export default function PricingComponent({ tiers, program, meet }) {
               </p>
               <a
                 href={tier.url ? tier.url : "/enrollment-form"}
-                target={tier.url ? "_blank" : ""}
+                target="_self"
                 aria-describedby={tier.id}
                 className={classNames(
                   tier.featured
