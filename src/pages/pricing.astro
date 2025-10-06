@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Header from "../components/Header.astro";
-import Banner from "../assets/cessna-172-flying-over-st-simons-island.jpg";
+import Banner from "../assets/cessna-flying-over-southport.jpg";
 import DiscoveryFlightCard from "../components/DiscoveryFlightCard.astro";
 import { discoveryFlights } from "../data/discoveryFlights";
 import ToursCTA from "../components/ToursCTA.astro";
@@ -14,20 +14,20 @@ import ToursCTA from "../components/ToursCTA.astro";
 >
     <Header
         image={Banner}
-        title="Pricing Calculator"
-        alt="Cessna 172 flying over St. Simons Island"
+        title="Pricing Calculator Private Pilot"
+        alt="Cessna 172 flying over Wilmington and Southport, NC"
     />
 
     
-    <section class="py-16 bg-mustard-yellow scroll-my-20">
-        <div class="w-full flex flex-col items-center">
-            <h2 class="uppercase text-medium-blue font-bold tracking-widest text-center mb-4">
+    <section class="py-16 bg-white scroll-my-20">
+        <div class="w-full flex flex-col items-center relative">
+            <h2 class="uppercase text-medium-blue font-bold tracking-wider text-center mb-4 text-3xl">
                 Configure Your Own Quote
             </h2>
             <p class="text-dark-blue text-lg text-center mb-8">
                 Find the best value for your aviation journey. Use the calculator below to explore our flight training pricing options. 
             </p>
-            <div class="w-full max-w-6xl mx-auto px-2">
+            <div class="w-full max-w-7xl mx-auto px-2 rounded-xl bg-mustard-yellow p-8">
                 <!-- Below is the iframe for the pricing calculator -->
                 <iframe
                     src="https://htacostcalculator.replit.app/"
@@ -36,7 +36,7 @@ import ToursCTA from "../components/ToursCTA.astro";
                     height="600"
                     frameborder="0"
                     allowfullscreen
-                    class="rounded-xl shadow-lg bg-white w-full"
+                    class="rounded-xl shadow-lg w-[97%] mx-auto"
                 ></iframe>
             </div>
         </div>
