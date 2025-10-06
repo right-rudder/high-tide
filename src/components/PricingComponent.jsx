@@ -128,7 +128,7 @@ export default function PricingComponent({ tiers, program, meet }) {
               </div>
 
               <p
-                className={`mt-6 text-xs font-bold ${tier.price !== "Custom" ? "" : "opacity-0"}`}
+                className={`mt-6 text-xs font-bold ${tier.price !== "Build your own" ? "" : "opacity-0"}`}
               >
                 Starting at
               </p>
@@ -163,7 +163,7 @@ export default function PricingComponent({ tiers, program, meet }) {
               </p>
               <a
                 href={tier.url ? tier.url : "/enrollment-form"}
-                target={tier.url ? "_blank" : ""}
+                target="_self"
                 aria-describedby={tier.id}
                 className={classNames(
                   tier.featured

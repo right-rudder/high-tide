@@ -28,9 +28,14 @@ const { siteTitle, siteDescription, keywords } = Astro.props;
       <slot />
     </main>
     <Footer />
-    <script
-      src="https://beta.leadconnectorhq.com/loader.js"
-      data-resources-url="https://beta.leadconnectorhq.com/chat-widget/loader.js"
-      data-widget-id="66c4bc2010d8484fcb5562a0"></script>
+    {
+      !(pathname === "/pricing" || pathname === "/pricing/") && (
+        <script
+          src="https://widgets.leadconnectorhq.com/loader.js"
+          data-resources-url="https://beta.leadconnectorhq.com/chat-widget/loader.js"
+          data-widget-id="66c4bc2010d8484fcb5562a0"
+        />
+      )
+    }
   </body>
 </html>

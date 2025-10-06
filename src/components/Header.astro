@@ -11,7 +11,8 @@ const { image, title, ctaText, ctaLink, alt } = Astro.props;
       src={image}
       alt={alt}
       class="-z-50 absolute min-w-[120rem] h-[28rem] -translate-y-24 object-cover object-[50%_40%]"
-      quality={10}
+      widths={[240, 540, 720, 1080, 1440, 1980]}
+      sizes={`(max-width: 240px) 240px, (max-width: 540px) 540px, (max-width: 720px) 720px, (max-width: 1080px) 1080px, (max-width: 1440px) 1440px, 1920px`}
     />
     <div class="absolute inset-0 bg-dark-blue/70 -z-40"></div>
 
