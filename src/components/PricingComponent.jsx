@@ -128,7 +128,7 @@ export default function PricingComponent({ tiers, program, meet }) {
               </div>
 
               <p
-                className={`mt-6 text-xs font-bold ${tier.price !== "Build your own" ? "" : "opacity-0"}`}
+                className={`mt-6 text-xs font-bold ${tier.price !== "Custom" ? "" : "opacity-0"} ${tier.price !== "Build your own" ? "" : "opacity-0"}`}
               >
                 Starting at
               </p>
