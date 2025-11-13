@@ -38,7 +38,7 @@ High Tide Aviation encourages students to plan ahead and train consistently. Gap
 
 Using a mix of aircraft and simulator time can also help manage budget expectations. The academy’s instructors guide students on when to use the simulator, when to fly the airplane, and how to combine both for the most efficient progress.
 
-![High Tide Aviation airplane and helicopter training fleet](/src/assets/high-tide-cessna-helicopter-fleet-southport-nc.webp)
+![High Tide Aviation airplane and helicopter training fleet](/src/assets/flying-the-r44-at-high-tide-aviation-flight-school.webp)
 
 ## Transparent Pricing and Personalized Guidance
 
