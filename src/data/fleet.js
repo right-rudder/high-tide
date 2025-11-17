@@ -13,9 +13,9 @@ export const fleet = [
       "Lycoming O-320 (150 BHP)",
     ],
     imagePath:
-      "/src/assets/n7085g-cessna-skyhawk-172-high-tide-aviation-flight-school.webp",
+      "/src/assets/fleet-n7085g-exterior-photo-aircraft-renting-north-carolina.jpg",
     imagesArray: [
-      "/src/assets/n7085g-cessna-skyhawk-172-high-tide-aviation-flight-school.webp",
+      "/src/assets/fleet-n7085g-exterior-photo-aircraft-renting-north-carolina.jpg",
       "/src/assets/N7085G-control-panel.webp",
     ],
     description: [
