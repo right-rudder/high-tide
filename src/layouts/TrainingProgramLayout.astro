@@ -47,7 +47,7 @@ function getLastWord(str) {
 
 const cleanedPath = pathname.replace(/\/$/, "");
 const groundSchoolLinks = {
-  "/flight-training/ground-school": "https://ce.coastalpines.edu/search/publicCourseSearchDetails.do?method=load&courseId=1020462",
+  "/flight-training/ground-school": "/enrollment-form",
 };
 const ctaLink = groundSchoolLinks[cleanedPath] ?? "/enrollment-form";
 ---
@@ -66,18 +66,38 @@ const ctaLink = groundSchoolLinks[cleanedPath] ?? "/enrollment-form";
     alt={alt}
   />
 
-  {programName === "Ground School" && (
-    <div class="max-w-6xl mx-auto my-6 px-5">
-      <div class="bg-mustard-yellow text-dark-blue p-4 rounded-lg shadow-md text-center">
-        <strong class="block text-lg font-bold">St. Simons Ground School</strong>
-        <p class="mt-1">Register now to reserve your spot for the upcoming St. Simons  Classes.</p>
-        <p class="mt-1">Classes are held every Tuesday and Thursday February 10 to April 30 from 6:00 PM to 9:00 PM at Coastal Pines Technical College.</p>
-        <p class="mt-1">Cost: $550 <strong>(includes textbook and materials)</strong></p>
-        <a href="https://ce.coastalpines.edu/search/publicCourseSearchDetails.do?method=load&courseId=1020462" class="inline-block mt-3 btn-blue hover:bg-white">Reserve Your Spot</a>
-        <p class="mt-2 text-sm">*Seats are limited and fill up quickly. Don't miss out on this opportunity to kickstart your aviation journey!</p>
+  {
+    programName === "Ground School" && (
+      <div class="max-w-6xl mx-auto my-6 px-5">
+        <div class="bg-mustard-yellow text-dark-blue p-4 rounded-lg shadow-md text-center">
+          <strong class="block text-lg font-bold">
+            St. Simons Ground School
+          </strong>
+          <p class="mt-1">
+            Register now to reserve your spot for the upcoming St. Simons
+            Classes.
+          </p>
+          <p class="mt-1">
+            Classes are held every Tuesday and Thursday February 10 to April 30
+            from 6:00 PM to 9:00 PM at Coastal Pines Technical College.
+          </p>
+          <p class="mt-1">
+            Cost: $550 <strong>(includes textbook and materials)</strong>
+          </p>
+          <a
+            href="/enrollment-form"
+            class="inline-block mt-3 btn-blue hover:bg-white"
+          >
+            Reserve Your Spot
+          </a>
+          <p class="mt-2 text-sm">
+            *Seats are limited and fill up quickly. Don't miss out on this
+            opportunity to kickstart your aviation journey!
+          </p>
+        </div>
       </div>
-    </div>
-  )}
+    )
+  }
 
   <section class="max-w-6xl mx-auto py-16 px-5">
     <div class="flex flex-col md:flex-row gap-10">
@@ -94,7 +114,9 @@ const ctaLink = groundSchoolLinks[cleanedPath] ?? "/enrollment-form";
             {getLastWord(programName) === "Training" ? "" : "Training"} is available
             in
           </p>
-          <ul class="flex flex-col flex-wrap justify-center gap-3 md:gap-10 md:flex-row">
+          <ul
+            class="flex flex-col flex-wrap justify-center gap-3 md:gap-10 md:flex-row"
+          >
             {
               locations.map((location) => (
                 <li class="text-xl font-medium tracking-wider">{location}</li>
@@ -197,15 +219,13 @@ const ctaLink = groundSchoolLinks[cleanedPath] ?? "/enrollment-form";
     </div>
     <a
       href={pathname.replace(/\/$/, "") === "/flight-training/ground-school"
-        ? "https://ce.coastalpines.edu/search/publicCourseSearchDetails.do?method=load&courseId=1020462"
+        ? "/enrollment-form"
         : "/enrollment-form"}
       class="btn-blue mx-auto"
     >
       Enroll Today</a
     >
   </section>
-
-
 
   {
     programName === "Ground School" && (
