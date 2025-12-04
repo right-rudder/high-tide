@@ -88,7 +88,7 @@ export const fleet = [
     imagePath: "/src/assets/high-tide-aviation-cessna-172-n8409l-side.webp",
     imagesArray: [
       "/src/assets/high-tide-aviation-cessna-172-n8409l-side.webp",
-      "/src/assets/N8409L-control-panel.webp",
+      "/src/assets/Fleet-N8409L-cockpit-panel-cessna_high-tide-flight-academy_flight-school_pilot-training.jpg",
     ],
     description: [
       "The Cessna 172 is the gold standard for new pilots. Its forgiving flight characteristics and robust reliability make it the perfect choice for initial flight training. The high-wing design offers exceptional stability and visibility, boosting student confidence as they master essential flying skills. The aircraft responds gently to control inputs and recovers smoothly from errors, instilling the poise needed to become a competent pilot. With widespread availability and easy access to maintenance expertise, the Cessna 172 keeps operational costs low, allowing for consistent training schedules.",
@@ -108,11 +108,12 @@ export const fleet = [
       "Dual Narco MK-12D NAV/COMM",
       "Scout ADS-B Receiver",
       "Lycoming O-320 (150 BHP)",
-      "Sentry Mini ADS-B In"
+      "Sentry Mini ADS-B In",
     ],
-    imagePath: "/src/assets/N79136.webp",
+    imagePath:
+      "/src/assets/Fleet-N79136-cessna_high-tide-flight-academy_flight-school_pilot-training_plane-on-ground.jpg",
     imagesArray: [
-      "/src/assets/N79136.webp",
+      "/src/assets/Fleet-N79136-cessna_high-tide-flight-academy_flight-school_pilot-training_plane-on-ground.jpg",
       "/src/assets/N79136-control-panel.webp",
     ],
     description: [
@@ -243,10 +244,7 @@ export const fleet = [
     model: "Beechcraft Baron B55",
     equipment: ["Dual Garmin G5s", "Garmin GNS 430W"],
     imagePath: "/src/assets/N531Q.jpg",
-    imagesArray: [
-      "/src/assets/N531Q.jpg",
-      "/src/assets/N531Q-Interior.jpg",
-    ],
+    imagesArray: ["/src/assets/N531Q.jpg", "/src/assets/N531Q-Interior.jpg"],
     description: [
       "The Beech Baron B55, utilized for Multi-Engine training, stands out as an excellent aircraft for aspiring pilots seeking to obtain their multi-engine rating. This training aircraft is pivotal in mastering both Visual Flight Rules (VFR) and Instrument Flight Rules (IFR) operations, without specific minimum time requirements.",
       "Our syllabus is designed to cover all necessary skills for safe multi-engine operations, including emergency procedures and high-altitude operations, typically over a concise training period of 1-2 weeks. This aircraft is an ideal choice for pilots to efficiently and effectively gain multi-engine competencies.",
