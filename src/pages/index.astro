@@ -41,12 +41,12 @@ const posts = (await getCollection("blog")).sort(
   <!-- <AnnouncementBanner2
     btnId="dismiss-button"
     btnTitle="Sign Up Now"
-    url="https://ce.coastalpines.edu/search/publicCourseSearchDetails.do?method=load&courseId=1020462"
+    url="/enrollment-form"
   /> -->
   <!-- <DonationBanner
     btnId="dismiss-button"
     btnTitle="Sign Up Now"
-    url="https://ce.coastalpines.edu/search/publicCourseSearchDetails.do?method=load&courseId=1020462"
+    url="/enrollment-form"
   /> -->
 
   <section id="home-menu" class="py-16 bg-mustard-yellow px-5 scroll-my-20">
@@ -354,7 +354,9 @@ const posts = (await getCollection("blog")).sort(
           >
             Book an Intro Flight
           </a>
-          <a href="#toursCTA" class="btn-white"> Book a School Tour </a>
+          <a href="/contact-us#toursCTA" class="btn-white">
+            Book a School Tour
+          </a>
         </div>
       </div>
     </div>

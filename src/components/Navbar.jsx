@@ -84,9 +84,16 @@ const Navbar = ({ pathname }) => {
                       onShow={handleMenuItemClick}
                     />
                   ))}
+                  <a
+                    href="https://flyhightide.com"
+                    target="_blank"
+                    class="hidden lg:flex border-white/20 border-r text-xs 2xl:text-base tracking-widest uppercase font-semibold md:px-6 ml-2 px-5.5 py-2.5 shadow-none w-auto rounded-full text-center px-3 transition duration-200 bg-mustard-yellow hover:bg-white text-dark-blue border-mustard-yellow filter "
+                  >
+                    Aerial Tours
+                  </a>
                 </div>
               </div>
-              <div className="hidden lg:flex items-center gap-3 text-white border-l border-white/20 pl-10">
+              <div className="hidden lg:flex items-center gap-3 text-white border-l border-white/20 pl-10 ">
                 <a
                   href={`/enrollment-form`}
                   aria-label="Call High Tide Aviation Now!"
@@ -208,6 +215,7 @@ const Navbar = ({ pathname }) => {
             </a>
             <a href={`mailto:${EMAIL_ADDRESS}`}>{EMAIL_ADDRESS}</a>
           </div>
+
           <div className="flex gap-3 items-center">
             <a
               href={`/enrollment-form`}
@@ -219,7 +227,15 @@ const Navbar = ({ pathname }) => {
             <a href={`/enrollment-form`}>{`Enroll Now`}</a>
           </div>
 
-          <div className="flex gap-3 mt-2">
+          <a
+            href="https://flyhightide.com"
+            target="_blank"
+            class="border-white/20 border-r text-xs 2xl:text-base tracking-widest uppercase font-semibold md:px-6 ml-2 px-5.5 py-2.5 shadow-none w-auto  text-center px-3 transition duration-200 bg-mustard-yellow hover:bg-white text-dark-blue border-mustard-yellow filter "
+          >
+            Aerial Tours
+          </a>
+
+          <div className="flex gap-3 mt-2 justify-around">
             <a href={FACEBOOK_URL} target="_blank">
               <span className="sr-only">Facebook</span>
               <svg

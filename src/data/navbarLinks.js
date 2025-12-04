@@ -95,12 +95,12 @@ export const navbarLinks = [
       },
     ],
   },
-  {
-    name: "Aerial Tours",
-    link: "https://flyhightide.com/",
-    external: true,
-    submenu: [],
-  },
+  // {
+  //   name: "Aerial Tours",
+  //   link: "https://flyhightide.com/",
+  //   external: true,
+  //   submenu: [],
+  // },
   {
     name: "Pilot Shop",
     link: "https://shop.flyhightide.com/",
