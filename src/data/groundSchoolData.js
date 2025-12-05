@@ -155,8 +155,9 @@ const groundSchool = {
         name: "Private Pilot",
         id: "tier-private-pilot-online",
         href: "#",
-        price: "$299",
-        discountedPrice: "$275",
+        /* price: "$299", */
+        /* discountedPrice: "$275", */
+        price: "$275",
         description: "Online ground school for aspiring pilots.",
         schedule: "Start anytime",
         features: [
