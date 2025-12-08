@@ -77,6 +77,10 @@ export const navbarLinks = [
         link: "/school-tour",
       },
       {
+        name: "Our Aerial Tours",
+        link: "https://flyhightide.com/",
+      },
+      {
         name: "Contact Us",
         link: "/contact-us",
       },

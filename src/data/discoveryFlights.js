@@ -28,7 +28,7 @@ export const discoveryFlights = [
     url: "https://www.flightcircle.com/shop/5c9443ea346a/4000014491",
   },
   {
-    name: "*NEW* Deluxe Helicopter Discovery Flight",
+    name: "Deluxe Helicopter Discovery Flight",
     location: "Southport, NC",
     price: "$299 per person",
     imagePath: "/src/assets/r44-helicopter-at-high-tide-aviation.jpg",
