@@ -67,67 +67,82 @@ const ctaLink = groundSchoolLinks[cleanedPath] ?? "/enrollment-form";
   />
 
   {programName === "Ground School" && (
-  <div class="max-w-6xl mx-auto my-6 px-5 grid grid-cols-1 lg:grid-cols-2 gap-4">
-        <div class="bg-mustard-yellow text-dark-blue p-4 rounded-lg shadow-md text-center flex flex-col justify-between">
-          <div class="flex flex-col items-center">
-            <strong class="block text-lg font-bold">
-            St. Simons Ground School
-            </strong>
-            <p class="mt-1 max-w-[80%]">
-            Register now to reserve your spot for the upcoming St. Simons
-            Classes.
-            </p>
-            <p class="mt-1">
-            Classes are held every Tuesday and Thursday from January 6 to March 26 at Coastal Pines Technical College.
-            </p>
-            <p class="mt-1">
-            Cost: $550 <strong>(includes textbook and materials)</strong>
-            </p>
-          </div>
-          <div class="mt-3">
-            <a
-              href="/enrollment-form"
-              class="inline-block btn-blue hover:bg-white"
-            >
-              Reserve Your Spot
-            </a>
-            <p class="mt-3 text-sm">
-              *Seats are limited and fill up quickly. Don't miss out on this
-              opportunity to kickstart your aviation journey!
-            </p>
-          </div>
-        </div>
-
-        <div class="bg-mustard-yellow text-dark-blue p-4 rounded-lg shadow-md text-center flex flex-col justify-between">
-         <div class="flex flex-col items-center">
-           <strong class="block text-lg font-bold">
-            Southport Ground School
-          </strong>
-          <p class="mt-1 max-w-[80%]">
-            Register now to reserve your spot for the upcoming Southport Ground School Classes.
-          </p>
-          <p class="mt-1">
-            Classes are held every Tuesday and Thursday from January 6 to March 26 at Brunswick Community College.
-          </p>
-          <p class="mt-1">
-            Cost: $550 <strong>(includes textbook and materials)</strong>
-          </p>
-         </div>
-          <div class="mt-3">
-              <a
-              href="/enrollment-form"
-              class="inline-block mt-1 btn-blue hover:bg-white"
-              >
-              Reserve Your Spot
-              </a>
-              <p class="mt-3 text-sm">
-              *Seats are limited and fill up quickly. Don't miss out on this
-              opportunity to kickstart your aviation journey!
-              </p>
-          </div>
-        </div>
+  <div class="max-w-6xl mx-auto my-8 px-5">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- St. Simons -->
+      <div class="bg-mustard-yellow text-dark-blue p-6 rounded-xl shadow-md flex flex-col items-center text-center">
+        <h3 class="text-2xl font-bold">St. Simons Ground School</h3>
+        <p class="mt-2 max-w-prose">
+          Register now to reserve your spot for the upcoming St. Simons classes.
+        </p>
+        <p class="mt-2">
+          Classes every Tuesday and Thursday, Feb 10 – April 30 at Coastal Pines Technical College.
+        </p>
+        <p class="mt-2 font-medium">
+          Cost: $550 <span class="font-semibold">(includes textbook and materials)</span>
+        </p>
+        <a
+          href="https://ce.coastalpines.edu/search/publicCourseSearchDetails.do?method=load&courseId=1020462"
+          class="btn-blue hover:bg-white mt-4 inline-block"
+        >
+          Reserve Your Spot
+        </a>
+        <p class="mt-3 text-sm opacity-80">
+          *Seats are limited and fill up quickly. Don't miss out!
+        </p>
       </div>
-  )}
+
+      <!-- Southport -->
+      <div class="bg-mustard-yellow text-dark-blue p-6 rounded-xl shadow-md flex flex-col items-center text-center">
+        <h3 class="text-2xl font-bold">Southport Private Pilot Ground School</h3>
+        <p class="mt-2 max-w-prose">
+          Register now to reserve your spot for the upcoming Southport Ground School classes.
+        </p>
+        <p class="mt-2">
+          Classes every Tuesday and Thursday, Jan 6 – Mar 26 at Brunswick Community College Leland Center.
+        </p>
+        <p class="mt-2 font-medium">
+          Cost: $180
+        </p>
+        <a
+          href="https://brunswickcc-register.fundfive.com/course/section/27032"
+          class="btn-blue hover:bg-white mt-4 inline-block"
+        >
+          Reserve Your Spot
+        </a>
+        <p class="mt-3 text-sm opacity-80">
+          *Seats are limited and fill up quickly. Don't miss out!
+        </p>
+      </div>
+
+      <!-- Southport Instrument (new block) -->
+      <div class="bg-mustard-yellow text-dark-blue p-6 rounded-xl shadow-md flex flex-col text-center md:col-span-2 md:max-w-xl md:mx-auto">
+        <h3 class="text-2xl font-bold">Southport Instrument Ground School</h3>
+        <p class="mt-2 mx-auto">
+          Register now to reserve your spot for the upcoming Wilmington classes.
+        </p>
+        <p class="mt-2">
+          Classes every Monday and Wednesday, Jan 5 – Mar 30 at Brunswick Community College Leland Center.
+        </p>
+        <p class="mt-2 font-medium">
+          Cost: $180
+        </p>
+
+        <div class="mt-auto"></div>
+
+        <a
+          href="https://brunswickcc-register.fundfive.com/course/section/27033"
+          class="btn-blue hover:bg-white mt-4 inline-block mx-auto"
+>
+          Reserve Your Spot
+        </a>
+        <p class="mt-3 text-sm opacity-80">
+          *Seats are limited and fill up quickly. Don't miss out!
+        </p>
+      </div>
+    </div>
+  </div>
+)}
 
 
   <section class="max-w-6xl mx-auto py-16 px-5">
