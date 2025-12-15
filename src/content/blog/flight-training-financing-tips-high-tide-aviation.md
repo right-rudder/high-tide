@@ -46,9 +46,3 @@ Operating in **Southport, NC; Wilmington, NC; and St. Simons Island, GA**, High 
 Whether you’re starting your journey as a student pilot or planning to continue toward your private or commercial license, High Tide Aviation can help you navigate financing options and training strategies. Take flight without breaking your holiday budget.
 
 Visit [our financing page](/about/financing) to learn more about financing options and enroll in a program today.
-
----
-**Jessica Ward**  
-Chief Pilot, High Tide Aviation  
-📞 910-294-5871  
-📧 HighTideAV@gmail.com
