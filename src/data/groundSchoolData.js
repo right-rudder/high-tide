@@ -4,15 +4,17 @@ const groundSchool = {
   alt: "Student and instructor reviewing flight charts in a classroom setting.",
   programName: "Ground School",
   siteDescription:
-    "High Tide Aviation’s Ground School Training provides aspiring pilots with essential knowledge on flight operations, navigation, weather patterns, and aviation regulations. Offered at our locations in Southport, St Simons Island, and Wilmington, our comprehensive program prepares students for the FAA written exam and sets them up for success in their aviation career. Join us today and gain the foundational skills needed to become a skilled pilot!",
+    "High Tide Aviation’s Ground School Training provides aspiring pilots with essential aeronautical knowledge, from flight operations and navigation to weather and FAA regulations. Our programs include immersive in-person classes in partnership with Brunswick Community College, location-based ground schools in North Carolina and Georgia, and flexible online training options — all designed to prepare students for FAA written exams and long-term success in aviation.",
   title: "Ground School | High Tide Aviation",
   subtitle: "What is Ground School?",
   locations: ["Southport, NC", "St Simons Island, GA", "Wilmington, NC"],
+
   description: [
-    "High Tide Aviation's ground school is where your aviation dreams take flight. As the first step in pilot training, our program equips you with the essential knowledge every pilot needs. Guided by our expert instructors - seasoned aviators themselves - you'll explore a wide range of subjects, from the principles of flight and aircraft operations to navigation, weather, flight planning, and federal regulations. Through interactive lessons and practical exercises, you'll learn to think and act like a pilot.",
-    "Safety is paramount throughout your ground school experience. You'll not only master the technical skills, but also develop the confidence to operate an aircraft responsibly and confidently. Whether you're pursuing recreational flying or a professional pilot career, High Tide's ground school lays the groundwork for a lifetime of aviation success.",
-    "Upon completion, you'll be fully prepared to ace the FAA written examination - a crucial milestone on your journey to a Private Pilot License (PPL). But this is more than just preparation for a test; it's an immersive experience that sets you on course for the skies.",
+    "High Tide Aviation's ground school is where your aviation journey begins. As the foundation of pilot training, ground school equips students with the essential knowledge required to become safe, confident pilots. Instruction is led by experienced aviation professionals who bring real-world flying insight into every lesson.",
+    "Students explore core aviation subjects including aerodynamics, aircraft systems, navigation, weather interpretation, flight planning, radio communication, and Federal Aviation Regulations. Lessons are interactive and designed to ensure true understanding — not rote memorization.",
+    "Upon completion, students are prepared to take the FAA knowledge (written) examination and move confidently into flight training. Whether your goal is recreational flying or a professional pilot career, ground school sets the stage for everything that follows.",
   ],
+
   prerequisites: {
     subtitle: "Before joining us, ensure you meet the following criteria:",
     list: [
@@ -21,152 +23,173 @@ const groundSchool = {
         description:
           "Must be at least 16 years old to enroll in ground school.",
       },
+      {
+        heading: "No Prior Experience Required",
+        description:
+          "This course is designed for beginners. No previous flight training is necessary.",
+      },
     ],
   },
+
   enrollmentProcess: {
     subtitle:
-      "Ready to take the first step towards your aviation goals? Here's how:",
+      "Ready to take the first step toward your aviation goals? Here's how:",
     list: [
       {
         heading: "Choose Your Program",
         description:
-          "Select the course that aligns with your aspirations, available in both North Carolina and Georgia.",
+          "Select the ground school option that best fits your goals — in-person, location-based, or online.",
       },
       {
-        heading: "Contact Us",
+        heading: "Reserve Your Seat",
         description:
-          "Call the team at High Tide Aviation to reserve your spot or pick up a registration form from our office.",
+          "In-person classes have limited enrollment. Registration closes automatically once full.",
       },
       {
         heading: "Get Started",
         description:
-          "Complete your enrollment and get ready for an incredible learning experience.",
+          "Complete your enrollment and begin building the knowledge needed to succeed as a pilot.",
       },
     ],
   },
+
   tiers: {
     southport: [
       {
-        name: "Private Pilot",
-        id: "tier-private-pilot",
+        name: "In-Person Private Pilot Ground School (Brunswick CC)",
+        id: "tier-private-pilot-brunswick-cc",
         url: "https://brunswickcc-register.fundfive.com/course/section/21399",
-        href: "#",
         price: "$180",
-        description: "Your first step toward the skies.",
-        schedule: "Offered every fall and spring semester",
+        description:
+          "An immersive, in-person Private Pilot Ground School designed specifically for first-time pilots.",
+        schedule:
+          "January 5, 2026 – March 26, 2026 | Tuesdays & Thursdays, 6–9 PM",
+        location:
+          "Brunswick Community College – Leland Campus (2045 Enterprise Dr NE, Leland, NC 28451)",
         features: [
-          "In-depth study of aerodynamics, weather, and navigation",
-          "Understanding of instruments, preflight planning, and regulations",
-          "Mastery of radio communications and flight procedures",
-          "Preparedness for the FAA Private Pilot written exam",
+          "12-week in-person ground school",
+          "Twice-weekly live instruction with experienced aviation professionals",
+          "Interactive classroom environment with real-world application",
+          "Covers aerodynamics, weather, navigation, regulations, and flight planning",
+          "Direct path to FAA Private Pilot written endorsement",
+          "Small class size with limited seats",
         ],
-        nonfeatures: ["Prices do not include books and supplies"],
-        featured: false,
-        cta: "Reserve Your Spot",
+        nonfeatures: [
+          "FAA written exam fee not included",
+          "Books and supplies not included",
+        ],
+        requirements: [
+          "Regular attendance required for instructor endorsement",
+          "Completion of assigned coursework",
+        ],
+        featured: true,
+        cta: "Reserve Your Seat",
       },
+
       {
-        name: "Instrument Rating",
+        name: "Instrument Rating Ground School",
         id: "tier-instrument-rating",
         url: "https://brunswickcc-register.fundfive.com/course/section/21399",
-        href: "#",
         price: "$180",
-        description: "Elevate your piloting with instrument mastery.",
-        schedule: "Offered every fall and spring semester",
+        description:
+          "Advance your training with structured instrument rating ground instruction.",
+        schedule: "Offered during select semesters",
         features: [
-          "Training for instrument rating status",
-          "Courses on instrument flying and navigation systems",
-          "Knowledge of Federal Aviation Regulations and aeromedical factors",
-          "Preparedness for the FAA Instrument Pilot written exam",
+          "Instrument flying principles and navigation systems",
+          "Federal Aviation Regulations and aeromedical factors",
+          "Preparation for the FAA Instrument Rating written exam",
         ],
-        nonfeatures: ["Prices do not include books and supplies"],
+        nonfeatures: ["Books and supplies not included"],
         featured: false,
         cta: "Enroll Now",
       },
+
       {
         name: "Small Unmanned Aircraft Systems (Drones)",
         id: "tier-drones",
         url: "https://brunswickcc-register.fundfive.com/course/section/21399",
-        href: "#",
         price: "$125",
-        schedule: "Offered every fall and spring semester",
+        schedule: "Offered during select semesters",
         features: [
-          "Introduction to commercial and recreational drone uses",
-          "Comprehension of regulations, weather, and airspace",
-          "Focus on human factors and drone performance",
-          "Preparation for the FAA Part 107 Remote Pilot Knowledge Test",
+          "Commercial and recreational drone operations",
+          "Airspace, weather, and regulatory compliance",
+          "Human factors and UAV performance",
+          "Preparation for FAA Part 107 Remote Pilot exam",
         ],
-        nonfeatures: ["Prices do not include books and supplies"],
+        nonfeatures: ["Books and supplies not included"],
         featured: false,
         cta: "Start Drone Training",
       },
+
       {
         name: "One-on-One Ground School",
         id: "tier-one-on-one",
         href: "#",
         price: "Custom",
         description:
-          "Contact us to set up your personalized ground school instruction in Southport or St Simons Island.",
+          "Personalized ground school instruction tailored to your schedule and goals.",
         features: [
-          "Full range of instruction available",
-          "Cater ground school to your schedule",
-          "Personalized support",
+          "Custom-paced instruction",
+          "Flexible scheduling",
+          "Direct instructor support",
         ],
-        featured: true,
+        featured: false,
         cta: "Contact for Custom Quote",
       },
     ],
+
     simons: [
       {
-        name: "Private Pilot",
+        name: "Private Pilot Ground School (St Simons Island)",
         id: "tier-private-pilot-simons",
         href: "#",
-        url: "https://brunswickcc-register.fundfive.com/course/section/21399",
         price: "$550",
-        description: "Embark on your aviation journey by the coast.",
-        schedule: "Offered every fall and spring semester",
+        description:
+          "Coastal-based Private Pilot Ground School with expanded materials included.",
+        schedule: "Offered during select semesters",
         features: [
           "Includes books and supplies",
-          "Full-scale private pilot training",
-          "Hands-on experience with weather, aerodynamics, and navigation",
-          "Detailed study of flight regulations and communication",
-          "Preparedness for the FAA Private Pilot written exam",
+          "Comprehensive private pilot curriculum",
+          "Focused instruction on navigation, weather, and regulations",
+          "Preparation for FAA Private Pilot written exam",
         ],
         featured: false,
         cta: "Join GA Ground School",
       },
+
       {
         name: "One-on-One Ground School",
         id: "tier-one-on-one-simons",
         href: "#",
         price: "Custom",
         description:
-          "Contact us to set up your personalized ground school instruction in Southport or St Simons Island.",
+          "Personalized ground school instruction in St Simons Island.",
         features: [
-          "Full range of instruction available",
-          "Cater ground school to your schedule",
-          "Personalized support",
+          "Flexible pacing",
+          "Custom curriculum",
+          "Instructor-led support",
         ],
-        featured: true,
+        featured: false,
         cta: "Contact for Custom Quote",
       },
     ],
+
     online: [
       {
-        name: "Private Pilot",
+        name: "Online Private Pilot Ground School",
         id: "tier-private-pilot-online",
         href: "#",
-        /* price: "$299", */
-        /* discountedPrice: "$275", */
         price: "$275",
-        description: "Online ground school for aspiring pilots.",
+        description:
+          "Self-paced online ground school with instructor oversight and endorsement.",
         schedule: "Start anytime",
         features: [
-          "Lifetime enrollment",
-          "One-time Payment",
+          "Lifetime access",
+          "One-time payment",
           "Interactive lessons",
           "Instructor monitoring",
-          "FAA Written Endorsement",
-          "Pass your exam GUARANTEED",
+          "FAA written endorsement included",
+          "Pass guarantee",
         ],
         featured: false,
         cta: "Get Started",
@@ -174,20 +197,20 @@ const groundSchool = {
       },
     ],
   },
+
   futurePathways: [
     {
       heading: "Private Pilot",
       subheading: "Start Your Journey",
       description:
-        "If you're new to flight training, we have the resources and training to help you earn your wings (and rotors).",
+        "Build on your ground school foundation and take your first steps into flight training.",
       imagePath: "/src/assets/commercial-pilot.jpg",
       url: "/flight-training/private-pilot",
     },
     {
       heading: "Commercial Pilot",
       subheading: "Fly for Your Career",
-      description:
-        "No matter how far you want to venture down the pilot career path, it all starts here.",
+      description: "Turn your passion for aviation into a professional career.",
       imagePath: "/src/assets/commercial-pilot-discussing-flight-plans.jpg",
       url: "/flight-training/commercial-pilot",
     },
@@ -195,7 +218,7 @@ const groundSchool = {
       heading: "Flight Instructor",
       subheading: "Train the Next Class",
       description:
-        "Interested in training the next class of pilots? Perhaps you want to give back to the community that trained you? Become a CFI, CFII, & MEI with High Tide.",
+        "Become a CFI, CFII, or MEI and help shape the next generation of pilots.",
       imagePath: "/src/assets/high-tide-aviation-team-of-cfis-talking.jpg",
       url: "/flight-training/flight-instructor",
     },
