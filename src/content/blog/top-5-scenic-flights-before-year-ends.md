@@ -26,25 +26,35 @@ Here are our top 5 tours to experience before the year ends:
 
 ## 1. Cape Fear Passport (Southport, NC)
 
+![Cape Fear North Carolina](/blog/tours/cape-fear-north-carolina.jpg)
+
 Fly over **Southport’s waterfront, historic forts, and the Cape Fear River**. This tour offers stunning views of the river meeting the Atlantic Ocean and is perfect for photography enthusiasts.  
 [Learn more →](https://flyhightide.com/southport/cape-fear-passport)
 
 ## 2. Golden Isles Passport (St. Simons Island, GA)
+
+![Sandbar at Cumberland Island, St Simons, GA](/blog/tours/sandbar-at-cumberland-st-simons-island-ga-high-tide-tours.webp)
 
 Soar above **St. Simons Island, Sea Island, and Jekyll Island**, taking in lighthouses, salt marshes, and pristine barrier islands. A must-do for nature lovers and first-time visitors.  
 [Learn more →](https://flyhightide.com/st-simons-island/golden-isles-passport)
 
 ## 3. Beach Lover Tour (Wilmington, NC)
 
+![Beach Lover Tour](/blog/tours/wilmington-nc-downtown-tour.png)
+
 Enjoy aerial views of **Wrightsville Beach, Carolina Beach, and surrounding waterways**. Perfect for couples, families, or anyone wanting a coastal adventure with photo-worthy vistas.  
 [Learn more →](https://flyhightide.com/wilmington/beach-lover-tour)
 
 ## 4. Bald Head Island Tour (Southport, NC)
 
+![View from above of city with beach and sea at sight](/blog/tours/bald-head-island-nc-tours.jpg)
+
 Experience the **serenity of Bald Head Island**, where maritime forests, dunes, and beaches create an unforgettable coastal landscape. This flight gives you sweeping views of Old Baldy Lighthouse and the island’s untouched beauty.  
 [Learn more →](https://flyhightide.com/southport/bald-head-island)
 
 ## 5. Battleship to the Beach (Wilmington, NC)
+
+![View from above of a battleship in a city river](/blog/tours/battleship-to-the-beach-high-tide-tours.jpg)
 
 Take off on a unique journey from **the USS North Carolina Battleship** to the **Carolina coast**, tracing the scenic path from river to ocean. It’s a one-of-a-kind way to experience Wilmington’s rich history and coastal charm from above.  
 [Learn more →](https://flyhightide.com/wilmington/battleship-to-the-beach)
@@ -60,9 +70,3 @@ Take off on a unique journey from **the USS North Carolina Battleship** to the *
 Don’t miss your chance to **experience the Carolina coast from above** before 2025 ends. Book your flight today and make it a holiday season to remember.
 
 Visit [FlyHighTide.com](https://flyhightide.com) to reserve your scenic flight and explore tour details.
-
----
-**Jessica Ward**  
-Chief Pilot, High Tide Aviation  
-📞 910-294-5871  
-📧 HighTideAV@gmail.com
