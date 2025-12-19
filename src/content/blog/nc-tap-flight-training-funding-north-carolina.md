@@ -3,7 +3,7 @@ pubDate: "December 20, 2025"
 author: "High Tide Aviation Team"
 title: "How NC-TAP Can Help Fund Your Flight Training in North Carolina"
 description: "Applications for the North Carolina Tuition Assistance Program (NC-TAP) open January 1st. Learn how this state-funded program can help reduce the cost of your flight training and support your journey toward becoming a pilot."
-heroImage: "/src/assets/ocean-crest-pier-southport-wilmington-nc.webp"
+heroImage: "/src/assets/happy-high-tide-student.jpg"
 category: "Flight Training"
 tags:
   [
