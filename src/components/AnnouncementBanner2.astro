@@ -1,8 +1,23 @@
 ---
-const { title, btnId, btnTitle, url } = Astro.props;
 import { Image } from "astro:assets";
 import flyer1 from "../assets/coastal-pines-ground-school-flyer.webp";
 import flyer2 from "../assets/brunswick-ground-school.webp";
+
+const example = {
+  offer: `<strong class="text-lg text-dark-blue font-bold">20% off </strong> all gift certificates <strong class="text-red-700 font-semibold text-base">now through christmas</strong> using code <strong class="text-lg text-dark-blue font-bold">TAKEOFF20</strong>`,
+  link: {
+    url: "/about/fleet-rentals#advanced-aircraft",
+    text: "Our Fleet",
+  },
+};
+
+const {
+  title,
+  btnId = "dismiss-button",
+  btnTitle = "Sign Up Now",
+  url = "/enrollment-form",
+  content = example,
+} = Astro.props;
 ---
 
 <astro-banner btnId={btnId} section-key="homepage">
@@ -35,16 +50,10 @@ import flyer2 from "../assets/brunswick-ground-school.webp";
       class="rounded-xl bg-neutral-200/90 bg-cover bg-center bg-no-repeat p-4 text-center shadow-sm"
     >
       <div class="flex items-center justify-center flex-col gap-2">
-        <p class="font-medium order-2 text-sm">
-          We’re excited to announce a major upgrade to High Tide Aviation’s
-          advanced training fleet. Our Beechcraft Bonanza V35B has been
-          outfitted with a cutting-edge <strong>Garmin glass cockpit</strong>,
-          featuring dual <strong>G3X Touch displays,</strong> a <strong
-            >Garmin GI 275, GTN 650 GPS,</strong
-          > and the <strong>Garmin GFC 500 autopilot</strong>—providing the same
-          modern avionics environment found in today’s high-performance
-          aircraft.
-        </p>
+        <p
+          class="font-medium order-2 text-sm capitalize"
+          set:html={content.offer}
+        />
         <div class="order-3 flex gap-3">
           {
             title && (
@@ -53,12 +62,16 @@ import flyer2 from "../assets/brunswick-ground-school.webp";
               </p>
             )
           }
-          <a
-            href="/about/fleet-rentals#advanced-aircraft"
-            class="group inline-flex items-center gap-x-2 rounded-full border-2 border-dark-blue bg-mustard-yellow backdrop-brightness-75 sm:backdrop-brightness-100 px-3 py-2 text-sm font-semibold text-dark-blue transition duration-300 hover:brightness-110 cursor-pointer disabled:pointer-events-none disabled:opacity-50"
-          >
-            Our Fleet
-          </a>
+          {
+            content.link && (
+              <a
+                href={content.link.url}
+                class="group inline-flex items-center gap-x-2 rounded-full border-2 border-dark-blue bg-mustard-yellow backdrop-brightness-75 sm:backdrop-brightness-100 px-3 py-2 text-sm font-semibold text-dark-blue transition duration-300 hover:brightness-110 cursor-pointer disabled:pointer-events-none disabled:opacity-50"
+              >
+                {content.link.text}
+              </a>
+            )
+          }
         </div>
       </div>
     </div>
@@ -68,26 +81,32 @@ import flyer2 from "../assets/brunswick-ground-school.webp";
 <script type="module">
   class AstroBanner extends HTMLElement {
     connectedCallback() {
-      const btnId = this.getAttribute("btnId");
-      const sectionKey = this.getAttribute("section-key") || "global";
-      const storageKey = `ht-banner:${sectionKey}:shown`;
+      // Show only before dueDate
+      const currentDate = new Date().getTime();
+      const dueDate = new Date("2024-12-26").getTime(); // Set dueDate
+      console.log("Current Date:", currentDate, "Due Date:", dueDate);
+      if (currentDate > dueDate) {
+        const btnId = this.getAttribute("btnId");
+        const sectionKey = this.getAttribute("section-key") || "global";
+        const storageKey = `ht-banner:${sectionKey}:shown`;
 
-      // If already shown this session for this section, do nothing.
-      if (sessionStorage.getItem(storageKey) === "1") return;
-
-      const wrapper = this.querySelector('[role="region"]');
-      const button = this.querySelector(`#${CSS.escape(btnId)}`);
-
-      // Show after ~5 seconds
-      setTimeout(() => {
-        // Double-check: maybe another instance already showed
+        // If already shown this session for this section, do nothing.
         if (sessionStorage.getItem(storageKey) === "1") return;
-        if (wrapper) wrapper.style.display = "";
-        sessionStorage.setItem(storageKey, "1");
-      }, 5000);
 
-      if (button != null) {
-        button.addEventListener("click", () => this.remove());
+        const wrapper = this.querySelector('[role="region"]');
+        const button = this.querySelector(`#${CSS.escape(btnId)}`);
+
+        // Show after ~5 seconds
+        setTimeout(() => {
+          // Double-check: maybe another instance already showed
+          if (sessionStorage.getItem(storageKey) === "1") return;
+          if (wrapper) wrapper.style.display = "";
+          sessionStorage.setItem(storageKey, "1");
+        }, 5000);
+
+        if (button != null) {
+          button.addEventListener("click", () => this.remove());
+        }
       }
     }
   }
