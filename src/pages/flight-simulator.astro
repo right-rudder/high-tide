@@ -3,18 +3,19 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import SimulatorHeader from "../components/SimulatorHeader.astro";
 import PlaneCarousel from "../components/PlaneCarousel";
 import { fleet } from "../data/fleet";
+import { redbirdFMXData } from "../data/simulators";
 import type { ImageMetadata } from "astro";
 const simulatorImages = fleet.find(
-  (fleetItem) => fleetItem.slug === "RedbirdFMX",
+  (fleetItem) => fleetItem.slug === "RedbirdFMX"
 )?.imagesArray;
 const images = import.meta.glob<{ default: ImageMetadata }>(
-  "/src/assets/*.{jpeg,jpg,png,gif,webp}",
+  "/src/assets/*.{jpeg,jpg,png,gif,webp}"
 );
 const newImagesArray = await Promise.all(
   simulatorImages?.map(async (image) => {
     const imgModule = await images[image]();
     return imgModule.default;
-  }) ?? [],
+  }) ?? []
 );
 ---
 
@@ -72,6 +73,171 @@ const newImagesArray = await Promise.all(
     />
   </section>
 
+  <!-- Overview Section -->
+
+  <section class="py-16 px-5">
+    <div class="flex flex-col items-center text-center">
+      <h2 class="uppercase text-medium-blue font-bold tracking-widest">
+        {redbirdFMXData.overview.subtitle}
+      </h2>
+
+      <h3 class="text-5xl max-w-4xl text-dark-blue font-bold leading-tight">
+        {redbirdFMXData.overview.title}
+      </h3>
+    </div>
+
+    <div
+      class="mt-10 max-w-5xl mx-auto flex flex-col gap-8 md:text-xl text-center leading-loose"
+    >
+      {redbirdFMXData.overview.description.map((text, index) => <p>{text}</p>)}
+
+      <p class="font-semibold text-dark-blue">
+        Hourly Rate (No Plan): ${
+          redbirdFMXData.overview.hourlyRateWithoutPlan
+        }/hr
+      </p>
+    </div>
+  </section>
+  <!-- Simulator Package -->
+  <section class="py-16 px-5 bg-gray-50">
+    <div class="max-w-6xl mx-auto">
+      <h3 class="text-4xl text-center font-bold text-dark-blue mb-10">
+        Redbird FMX Simulator Packages
+      </h3>
+
+      <div class="overflow-x-auto">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="border-b">
+              <th class="py-3">Rating</th>
+              <th class="py-3">Hours Included</th>
+              <th class="py-3">Instructor Rate</th>
+              <th class="py-3">Package Cost</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              redbirdFMXData.packagePlans.map((plan, index) => (
+                <tr class="border-b">
+                  <td class="py-3">{plan.rating}</td>
+                  <td class="py-3">{plan.hoursIncluded}</td>
+                  <td class="py-3">${plan.instructorRate}/hr</td>
+                  <td class="py-3 font-semibold">${plan.packageCost}</td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Logabble hours -->
+  <section class="py-16 px-5">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
+      {/* Part 61 */}
+      <div>
+        <h3 class="text-3xl font-bold text-dark-blue mb-6">
+          Loggable Hours – Part 61
+        </h3>
+
+        <ul class="space-y-4">
+          {
+            redbirdFMXData.loggableHours.part61.map((item, index) => (
+              <li class="border-l-4 border-medium-blue pl-4">
+                <>
+                  <strong>{item.rating}</strong>
+                  <br />
+                </>
+                Max Hours: {item.maxLoggableHours}
+                <br />
+                Instructor Required: {item.instructorRequired ? "Yes" : "No"}
+                <br />
+                <span class="text-sm text-gray-500">{item.reference}</span>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+
+      {/* Part 141 */}
+      <div>
+        <h3 class="text-3xl font-bold text-dark-blue mb-6">
+          Loggable Hours – Part 141
+        </h3>
+
+        <ul class="space-y-4">
+          {
+            redbirdFMXData.loggableHours.part141.map((item, index) => (
+              <li class="border-l-4 border-medium-blue pl-4">
+                <>
+                  <strong>{item.rating}</strong>
+                  <br />
+                </>
+                Max Percentage: {item.maxPercentage}
+                <br />
+                {item.maxHours && <>Max Hours: {item.maxHours}</>}
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Notes -->
+  <section class="py-16 px-5 bg-gray-50">
+    <div class="max-w-4xl mx-auto text-center">
+      <h3 class="text-3xl font-bold text-dark-blue mb-6">Important Notes</h3>
+
+      <ul class="space-y-4 text-lg">
+        {redbirdFMXData.notes.map((note, index) => <li>• {note}</li>)}
+      </ul>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 px-5">
+    <div class="max-w-5xl mx-auto">
+      <h3 class="text-4xl text-center font-bold text-dark-blue mb-12">
+        Redbird FMX Frequently Asked Questions
+      </h3>
+
+      {/* General FAQ */}
+      <div class="mb-12">
+        <h4 class="text-2xl font-semibold mb-6">General Questions</h4>
+
+        <div class="space-y-6">
+          {
+            redbirdFMXData.faq.general.map((item, index) => (
+              <div>
+                <p class="font-semibold">{item.question}</p>
+                <p class="text-gray-600 mt-2">{item.answer}</p>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+
+      {/* Logging FAQ */}
+      <div>
+        <h4 class="text-2xl font-semibold mb-6">Logging Questions</h4>
+
+        <div class="space-y-6">
+          {
+            redbirdFMXData.faq.logging.map((item, index) => (
+              <div>
+                <p class="font-semibold">{item.question}</p>
+                <p class="text-gray-600 mt-2">{item.answer}</p>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
   <section class="py-16 px-5 bg-mustard-yellow">
     <div class="max-w-7xl mx-auto flex flex-col items-center">
       <h2
