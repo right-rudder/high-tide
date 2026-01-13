@@ -4,13 +4,13 @@ export const fleet = [
     slug: "N7085G",
     rentalPrice: "$195 /hr wet",
     usefulLoad: "882 lbs",
-    horsepower: "150 HP",
+    horsepower: "160 HP",
     usableFuel: "38 gal",
     model: "Cessna 172K",
     equipment: [
       "Garmin GNX 375 w/ WAAS & Bluetooth",
       "Dual KX-155 NAV/COMM w/ GS",
-      "Lycoming O-320 (150 BHP)",
+      "Lycoming O-320 (160 BHP)",
     ],
     imagePath:
       "/src/assets/fleet-n7085g-exterior-photo-aircraft-renting-north-carolina.jpg",
