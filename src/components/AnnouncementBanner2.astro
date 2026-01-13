@@ -1,8 +1,4 @@
 ---
-import { Image } from "astro:assets";
-import flyer1 from "../assets/coastal-pines-ground-school-flyer.webp";
-import flyer2 from "../assets/brunswick-ground-school.webp";
-
 const example = {
   offer: `<strong class="text-lg text-dark-blue font-bold">20% off </strong> all gift certificates <strong class="text-red-700 font-semibold text-base">now through christmas</strong> using code <strong class="text-lg text-dark-blue font-bold">TAKEOFF20</strong>`,
   link: {
@@ -83,9 +79,9 @@ const {
     connectedCallback() {
       // Show only before dueDate
       const currentDate = new Date().getTime();
-      const dueDate = new Date("2024-12-26").getTime(); // Set dueDate
-      console.log("Current Date:", currentDate, "Due Date:", dueDate);
-      if (currentDate > dueDate) {
+      const dueDate = new Date("2025-12-31").getTime(); // Set dueDate
+      //console.log("Current Date:", currentDate, "Due Date:", dueDate);
+      if (currentDate < dueDate) {
         const btnId = this.getAttribute("btnId");
         const sectionKey = this.getAttribute("section-key") || "global";
         const storageKey = `ht-banner:${sectionKey}:shown`;
