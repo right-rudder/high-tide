@@ -229,7 +229,10 @@ export const fleet = [
     model: "Beechcraft Baron B55",
     equipment: ["Garmin G500 glass panel", "Garmin GTN 650"],
     imagePath: "/src/assets/N626H.jpg",
-    imagesArray: ["/src/assets/N626H.jpg"],
+    imagesArray: [
+      "/src/assets/N626H.jpg",
+      "/src/assets/Fleet-N626H-cockpit_high-tide-flight-academy_flight-school_pilot-training_plane-on-ground.jpg",
+    ],
     description: [
       "The Beech Baron B55, utilized for Multi-Engine training, stands out as an excellent aircraft for aspiring pilots seeking to obtain their multi-engine rating. This training aircraft is pivotal in mastering both Visual Flight Rules (VFR) and Instrument Flight Rules (IFR) operations, without specific minimum time requirements.",
       "Our syllabus is designed to cover all necessary skills for safe multi-engine operations, including emergency procedures and high-altitude operations, typically over a concise training period of 1-2 weeks. This aircraft is an ideal choice for pilots to efficiently and effectively gain multi-engine competencies.",
