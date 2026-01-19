@@ -1,0 +1,276 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Banner from "../assets/private-pilot-sits-in-multi-engine-plane.jpg";
+const SCHOOL_TOUR_FORM_WEBHOOK_URL = import.meta.env.SCHOOL_TOUR_FORM_WEBHOOK_URL;
+const PORTAL_API_KEY = import.meta.env.PORTAL_API_KEY;
+---
+
+<BaseLayout
+  siteTitle="Request a School Visit | High Tide Aviation"
+  siteDescription="Schedule a tour of our flight school facilities. Meet our instructors and see our fleet in Southport, St. Simons Island, or Wilmington."
+  siteKeywords="flight school tour, aviation school visit, pilot training consultation, High Tide Aviation tour"
+>
+  <Header
+    slot="header"
+    image={Banner}
+    title="Schedule a School Visit"
+    alt="Potential student visiting the flight school"
+  />
+
+  <section class="py-16 px-5">
+    <form id="visit-form" class="flex flex-col items-center">
+      <h2 class="uppercase text-medium-blue font-bold tracking-widest">
+        Come Fly With Us
+      </h2>
+      <h3 class="text-5xl font-bold leading-tight text-dark-blue text-center max-w-xl">
+        Book Your School Tour
+      </h3>
+
+      <div class="grid md:grid-cols-2 gap-5 mt-10 w-full max-w-2xl">
+        <input
+          class="bg-medium-blue/15 text-dark-blue py-4 px-6 w-full outline-none placeholder:text-gray-500"
+          type="text"
+          name="first-name"
+          placeholder="First Name"
+          required
+        />
+        <input
+          class="bg-medium-blue/15 text-dark-blue py-4 px-6 w-full outline-none placeholder:text-gray-500"
+          type="text"
+          name="last-name"
+          placeholder="Last Name"
+          required
+        />
+        <input
+          class="bg-medium-blue/15 text-dark-blue py-4 px-6 w-full outline-none placeholder:text-gray-500"
+          type="email"
+          name="email"
+          placeholder="Email"
+          required
+        />
+        <input
+          class="bg-medium-blue/15 text-dark-blue py-4 px-6 w-full outline-none placeholder:text-gray-500"
+          type="tel"
+          name="phone"
+          placeholder="Phone"
+          required
+        />
+
+        <fieldset class="md:col-span-2">
+          <legend class="font-medium leading-6 text-dark-blue mb-2">Choose The School Location You'd Like to Visit:</legend>
+          <div class="space-y-2">
+            <div class="flex items-center gap-x-3 p-3 border border-gray-200 rounded-md">
+              <input id="southport" name="location" type="radio" value="Southport, NC" required class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue" />
+              <label for="southport" class="block text-sm leading-6 text-gray-600 cursor-pointer">Southport School Tour (Southport, NC) - <span class="font-bold text-green-600">FREE</span></label>
+            </div>
+            <div class="flex items-center gap-x-3 p-3 border border-gray-200 rounded-md">
+              <input id="st-simons" name="location" type="radio" value="St Simons Island, GA" class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue" />
+              <label for="st-simons" class="block text-sm leading-6 text-gray-600 cursor-pointer">St Simons School Tour (St Simons Island, GA) - <span class="font-bold text-green-600">FREE</span></label>
+            </div>
+            <div class="flex items-center gap-x-3 p-3 border border-gray-200 rounded-md">
+              <input id="wilmington" name="location" type="radio" value="Wilmington, NC" class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue" />
+              <label for="wilmington" class="block text-sm leading-6 text-gray-600 cursor-pointer">Wilmington School Tour (Wilmington, NC) - <span class="font-bold text-green-600">FREE</span></label>
+            </div>
+          </div>
+        </fieldset>
+
+        <div class="flex flex-col gap-1">
+          <label class="text-xs text-gray-500 ml-1">Preferred Date & Time</label>
+          <input 
+            class="bg-medium-blue/15 text-dark-blue py-4 px-6 w-full outline-none" 
+            type="datetime-local" 
+            name="visit-date" 
+            id="visit-date"
+            required 
+          />
+        </div>
+
+        <fieldset class="md:col-span-1">
+          <legend class="text-xs text-gray-500 ml-1 block mb-1">Training Type</legend>
+          <div class="bg-medium-blue/15 p-4 space-y-2">
+            <div class="flex items-center gap-x-3">
+              <input id="airplane" name="training-type" type="radio" value="Airplane" class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue" required />
+              <label for="airplane" class="text-dark-blue text-sm">Airplane</label>
+            </div>
+            <div class="flex items-center gap-x-3">
+              <input id="helicopter" name="training-type" type="radio" value="Helicopter" class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue" />
+              <label for="helicopter" class="text-dark-blue text-sm">Helicopter (Southport exclusive)</label>
+            </div>
+            <div class="flex items-center gap-x-3">
+              <input id="both" name="training-type" type="radio" value="Both" class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue" />
+              <label for="both" class="text-dark-blue text-sm">Both</label>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="md:col-span-2">
+          <legend class="text-xs text-gray-500 ml-1 block mb-1">Preferred Program (Select all that apply)</legend>
+          <div class="bg-medium-blue/15 p-4 grid sm:grid-cols-2 gap-2">
+            <div class="flex items-center gap-x-3">
+              <input id="ground-school" name="preferred-programs" type="checkbox" value="Ground School" class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue" />
+              <label for="ground-school" class="text-dark-blue text-sm">Ground School</label>
+            </div>
+            <div class="flex items-center gap-x-3">
+              <input id="private-pilot" name="preferred-programs" type="checkbox" value="Private Pilot" class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue" />
+              <label for="private-pilot" class="text-dark-blue text-sm">Private Pilot</label>
+            </div>
+            <div class="flex items-center gap-x-3">
+              <input id="instrument-rating" name="preferred-programs" type="checkbox" value="Instrument Rating" class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue" />
+              <label for="instrument-rating" class="text-dark-blue text-sm">Instrument Rating</label>
+            </div>
+            <div class="flex items-center gap-x-3">
+              <input id="commercial-pilot" name="preferred-programs" type="checkbox" value="Commercial Pilot" class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue" />
+              <label for="commercial-pilot" class="text-dark-blue text-sm">Commercial Pilot</label>
+            </div>
+            <div class="flex items-center gap-x-3">
+              <input id="flight-instructor" name="preferred-programs" type="checkbox" value="Flight Instructor" class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue" />
+              <label for="flight-instructor" class="text-dark-blue text-sm">Flight Instructor</label>
+            </div>
+            <div class="flex items-center gap-x-3">
+              <input id="multi-engine" name="preferred-programs" type="checkbox" value="Multi-Engine" class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue" />
+              <label for="multi-engine" class="text-dark-blue text-sm">Multi-Engine (Airplane only)</label>
+            </div>
+            <div class="flex items-center gap-x-3">
+              <input id="zero-to-hero" name="preferred-programs" type="checkbox" value="Zero to Hero" class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue" />
+              <label for="zero-to-hero" class="text-dark-blue text-sm">Zero to Hero</label>
+            </div>
+          </div>
+        </fieldset>
+
+        <textarea
+          class="bg-medium-blue/15 text-dark-blue py-4 px-6 w-full outline-none placeholder:text-gray-500 md:col-span-2 h-36"
+          name="message"
+          placeholder="Notes (Optional)"></textarea>
+
+        <div class="hidden">
+          <input name="confirm-email" />
+        </div>
+      </div>
+
+      <div class="flex gap-3 my-5 max-w-xs md:max-w-xl mx-auto">
+        <input type="checkbox" id="agree-data-collection" />
+        <label for="agree-data-collection" class="text-gray-500 text-sm">
+          I agree to receive messages from High Tide Aviation regarding my school visit request.
+        </label>
+      </div>
+
+      <div class="g-recaptcha" data-sitekey="6LdINgwqAAAAAHqhspAFZMyuR1ks9CeEVI8lWl2B" data-callback="onRecaptchaSuccess"></div>
+
+      <button type="submit" id="submit-button" class="btn-blue cursor-not-allowed mt-5 bg-gray-400" disabled>Request Visit</button>
+    </form>
+  </section>
+
+<script define:vars={{ SCHOOL_TOUR_FORM_WEBHOOK_URL, PORTAL_API_KEY }}>
+  let isRecaptchaVerified = false;
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+
+    document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("visit-form");
+    const checkbox = document.getElementById("agree-data-collection");
+    const submitButton = document.getElementById("submit-button");
+    const dateInput = document.getElementById("visit-date");
+
+    if (dateInput) {
+    // Set minimum date to now
+    const now = new Date();
+    now.setMinutes(now.getMinutes() - now.getTimezoneOffset());
+    dateInput.min = now.toISOString().slice(0, 16);
+
+    dateInput.addEventListener("change", (e) => {
+        const inputValue = e.target.value; // Format: "2026-01-20T09:30"
+        
+        if (!inputValue) return;
+
+        // Parse datetime-local correctly (treats it as LOCAL time, not UTC)
+        const [datePart, timePart] = inputValue.split('T');
+        const [year, month, day] = datePart.split('-').map(Number);
+        const [hour, minute] = timePart.split(':').map(Number);
+        
+        // Create date in LOCAL timezone
+        const inputDate = new Date(year, month - 1, day, hour, minute);
+        const dayOfWeek = inputDate.getDay();
+        
+        console.log('Selected:', inputValue);
+        console.log('Parsed hour:', hour);
+        console.log('Day of week:', dayOfWeek);
+
+        // Check if Sunday (0)
+        if (dayOfWeek === 0) {
+        alert("We are closed on Sundays. Please select a time between Monday and Saturday.");
+        e.target.value = "";
+        return;
+        }
+
+        // Check Hours (10 AM - 5 PM) - using the parsed hour directly
+        if (hour < 10 || hour >= 17) {
+        alert("Our business hours are 10:00 AM - 5:00 PM. Please select a time within these hours.");
+        e.target.value = "";
+        return;
+        }
+    });
+    }
+
+    checkbox?.addEventListener("change", () => {
+      submitButton.disabled = !checkbox.checked;
+      submitButton.classList.toggle("cursor-not-allowed", !checkbox.checked);
+      submitButton.classList.toggle("bg-gray-400", !checkbox.checked);
+    });
+
+    form?.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      if (!isRecaptchaVerified) return alert("Please complete reCAPTCHA.");
+
+      const formData = new FormData(form);
+      if (formData.get("confirm-email")) return;
+
+      const jsonBody = {
+        first_name: formData.get("first-name")?.trim(),
+        last_name: formData.get("last-name")?.trim(),
+        email: formData.get("email")?.trim(),
+        phone: formData.get("phone")?.trim(),
+        campaign: "school_visit_request",
+        account_random_id: "ac_yec3jxiy",
+        metadata: {
+          location: formData.get("location"),
+          visit_date: formData.get("visit-date"),
+          training_type: formData.get("training-type"),
+          program: formData.getAll("preferred-programs").join(", "),
+          message: formData.get("message")
+        },
+      };
+
+      try {
+        const [ghlRes, portalRes] = await Promise.all([
+          fetch(SCHOOL_TOUR_FORM_WEBHOOK_URL, { method: "POST", body: new URLSearchParams(formData) }),
+          fetch("https://portal.rightruddermarketing.com/api/leads", {
+            method: "POST",
+            headers: { "Content-Type": "application/json", "x-api-key": PORTAL_API_KEY },
+            body: JSON.stringify(jsonBody),
+          }),
+        ]);
+
+        if (ghlRes.ok && portalRes.ok) {
+          if (typeof gtag === 'function') {
+            gtag("event", "generate_lead", {
+              event_category: "engagement",
+              event_label: "school_visit_request",
+              location_requested: jsonBody.metadata.location
+            });
+          }
+          setTimeout(() => {
+            window.location.href = "/school-tour-confirmation";
+          }, 300);
+        }
+      } catch (err) { 
+        console.error('❌ Error:', err); 
+      }
+    });
+  });
+
+  window.onRecaptchaSuccess = () => { isRecaptchaVerified = true; };
+</script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</BaseLayout>

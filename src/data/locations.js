@@ -5,7 +5,7 @@ export const locations = [
     price: "FREE",
     imagePath:
       "/src/assets/cfi-and-student-at-high-tide-aviation-southport-nc.jpg",
-    url: "/enrollment-form",
+    url: "/school-tour-form",
     // placeholder,change link once new form is created
   },
   {
@@ -14,7 +14,7 @@ export const locations = [
     price: "FREE",
     imagePath:
       "/src/assets/private-pilot-in-front-of-cessna-172-skyhawk-st-simons-island-ga.jpg",
-    url: "/enrollment-form",
+    url: "/school-tour-form",
     // placeholder, change once new form is done
   },
   {
@@ -22,7 +22,7 @@ export const locations = [
     location: "Wilmington, NC",
     price: "FREE",
     imagePath: "/src/assets/wilmington-nc-cfi-checking-aircraft.jpg",
-    url: "/enrollment-form",
+    url: "/school-tour-form",
     // placeholder, change once new form is done
   },
 ];
