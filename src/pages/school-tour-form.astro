@@ -60,15 +60,15 @@ const PORTAL_API_KEY = import.meta.env.PORTAL_API_KEY;
         <fieldset class="md:col-span-2">
           <legend class="font-medium leading-6 text-dark-blue mb-2">Choose The School Location You'd Like to Visit:</legend>
           <div class="space-y-2">
-            <div class="flex items-center gap-x-3 p-3 border border-gray-200 rounded-md">
+            <div class="flex items-center gap-x-3 p-3 border border-gray-200 rounded-md transition-opacity" id="southport-container">
               <input id="southport" name="location" type="radio" value="Southport, NC" required class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue" />
               <label for="southport" class="block text-sm leading-6 text-gray-600 cursor-pointer">Southport School Tour (Southport, NC) - <span class="font-bold text-green-600">FREE</span></label>
             </div>
-            <div class="flex items-center gap-x-3 p-3 border border-gray-200 rounded-md">
+            <div class="flex items-center gap-x-3 p-3 border border-gray-200 rounded-md transition-opacity" id="st-simons-container">
               <input id="st-simons" name="location" type="radio" value="St Simons Island, GA" class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue" />
               <label for="st-simons" class="block text-sm leading-6 text-gray-600 cursor-pointer">St Simons School Tour (St Simons Island, GA) - <span class="font-bold text-green-600">FREE</span></label>
             </div>
-            <div class="flex items-center gap-x-3 p-3 border border-gray-200 rounded-md">
+            <div class="flex items-center gap-x-3 p-3 border border-gray-200 rounded-md transition-opacity" id="wilmington-container">
               <input id="wilmington" name="location" type="radio" value="Wilmington, NC" class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue" />
               <label for="wilmington" class="block text-sm leading-6 text-gray-600 cursor-pointer">Wilmington School Tour (Wilmington, NC) - <span class="font-bold text-green-600">FREE</span></label>
             </div>
@@ -93,7 +93,7 @@ const PORTAL_API_KEY = import.meta.env.PORTAL_API_KEY;
               <input id="airplane" name="training-type" type="radio" value="Airplane" class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue" required />
               <label for="airplane" class="text-dark-blue text-sm">Airplane</label>
             </div>
-            <div class="flex items-center gap-x-3">
+            <div class="flex items-center gap-x-3 transition-opacity" id="helicopter-container">
               <input id="helicopter" name="training-type" type="radio" value="Helicopter" class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue" />
               <label for="helicopter" class="text-dark-blue text-sm">Helicopter (Southport exclusive)</label>
             </div>
@@ -111,7 +111,7 @@ const PORTAL_API_KEY = import.meta.env.PORTAL_API_KEY;
               <input id="ground-school" name="preferred-programs" type="checkbox" value="Ground School" class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue" />
               <label for="ground-school" class="text-dark-blue text-sm">Ground School</label>
             </div>
-            <div class="flex items-center gap-x-3">
+            <div class="flex items-center gap-x-3 transition-opacity" id="private-pilot-container">
               <input id="private-pilot" name="preferred-programs" type="checkbox" value="Private Pilot" class="h-4 w-4 border-gray-300 text-medium-blue focus:ring-medium-blue" />
               <label for="private-pilot" class="text-dark-blue text-sm">Private Pilot</label>
             </div>
@@ -164,53 +164,106 @@ const PORTAL_API_KEY = import.meta.env.PORTAL_API_KEY;
 <script define:vars={{ SCHOOL_TOUR_FORM_WEBHOOK_URL, PORTAL_API_KEY }}>
   let isRecaptchaVerified = false;
 
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
 
-    document.addEventListener("DOMContentLoaded", () => {
+  document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("visit-form");
     const checkbox = document.getElementById("agree-data-collection");
     const submitButton = document.getElementById("submit-button");
     const dateInput = document.getElementById("visit-date");
+    const locationRadios = document.getElementsByName("location");
+    const trainingRadios = document.getElementsByName("training-type");
+    const stSimonsRadio = document.getElementById("st-simons");
+    const wilmingtonRadio = document.getElementById("wilmington");
+    const southportRadio = document.getElementById("southport");
+    const helicopterRadio = document.getElementById("helicopter");
+    const airplaneRadio = document.getElementById("airplane");
+    const stSimonsContainer = document.getElementById("st-simons-container");
+    const wilmingtonContainer = document.getElementById("wilmington-container");
+    const helicopterContainer = document.getElementById("helicopter-container");
+    const privatePilotCheckbox = document.getElementById("private-pilot");
+    const privatePilotContainer = document.getElementById("private-pilot-container");
+
+    function updateFormState() {
+      let selectedLocation = "";
+      for (const radio of locationRadios) {
+        if (radio.checked) selectedLocation = radio.value;
+      }
+
+      let selectedTraining = "";
+      for (const radio of trainingRadios) {
+        if (radio.checked) selectedTraining = radio.value;
+      }
+
+      if (selectedTraining === "Helicopter") {
+        stSimonsRadio.disabled = true;
+        wilmingtonRadio.disabled = true;
+        stSimonsContainer.classList.add("opacity-50", "cursor-not-allowed");
+        wilmingtonContainer.classList.add("opacity-50", "cursor-not-allowed");
+        
+        if (selectedLocation === "St Simons Island, GA" || selectedLocation === "Wilmington, NC") {
+          southportRadio.checked = true;
+        }
+
+        privatePilotCheckbox.disabled = true;
+        privatePilotCheckbox.checked = false;
+        privatePilotContainer.classList.add("opacity-50", "cursor-not-allowed");
+
+      } else {
+        stSimonsRadio.disabled = false;
+        wilmingtonRadio.disabled = false;
+        stSimonsContainer.classList.remove("opacity-50", "cursor-not-allowed");
+        wilmingtonContainer.classList.remove("opacity-50", "cursor-not-allowed");
+
+        privatePilotCheckbox.disabled = false;
+        privatePilotContainer.classList.remove("opacity-50", "cursor-not-allowed");
+      }
+
+      if (selectedLocation === "St Simons Island, GA" || selectedLocation === "Wilmington, NC") {
+        helicopterRadio.disabled = true;
+        helicopterContainer.classList.add("opacity-50", "cursor-not-allowed");
+        if (selectedTraining === "Helicopter") {
+          airplaneRadio.checked = true;
+        }
+      } else {
+        helicopterRadio.disabled = false;
+        helicopterContainer.classList.remove("opacity-50", "cursor-not-allowed");
+      }
+    }
+
+    locationRadios.forEach(radio => radio.addEventListener("change", updateFormState));
+    trainingRadios.forEach(radio => radio.addEventListener("change", updateFormState));
 
     if (dateInput) {
-    // Set minimum date to now
-    const now = new Date();
-    now.setMinutes(now.getMinutes() - now.getTimezoneOffset());
-    dateInput.min = now.toISOString().slice(0, 16);
+      const now = new Date();
+      now.setMinutes(now.getMinutes() - now.getTimezoneOffset());
+      dateInput.min = now.toISOString().slice(0, 16);
 
-    dateInput.addEventListener("change", (e) => {
-        const inputValue = e.target.value; // Format: "2026-01-20T09:30"
+      dateInput.addEventListener("change", (e) => {
+        const inputValue = e.target.value;
         
         if (!inputValue) return;
 
-        // Parse datetime-local correctly (treats it as LOCAL time, not UTC)
         const [datePart, timePart] = inputValue.split('T');
         const [year, month, day] = datePart.split('-').map(Number);
         const [hour, minute] = timePart.split(':').map(Number);
         
-        // Create date in LOCAL timezone
         const inputDate = new Date(year, month - 1, day, hour, minute);
         const dayOfWeek = inputDate.getDay();
         
-        console.log('Selected:', inputValue);
-        console.log('Parsed hour:', hour);
-        console.log('Day of week:', dayOfWeek);
-
-        // Check if Sunday (0)
         if (dayOfWeek === 0) {
-        alert("We are closed on Sundays. Please select a time between Monday and Saturday.");
-        e.target.value = "";
-        return;
+          alert("We are closed on Sundays. Please select a time between Monday and Saturday.");
+          e.target.value = "";
+          return;
         }
 
-        // Check Hours (10 AM - 5 PM) - using the parsed hour directly
         if (hour < 10 || hour >= 17) {
-        alert("Our business hours are 10:00 AM - 5:00 PM. Please select a time within these hours.");
-        e.target.value = "";
-        return;
+          alert("Our business hours are 10:00 AM - 5:00 PM. Please select a time within these hours.");
+          e.target.value = "";
+          return;
         }
-    });
+      });
     }
 
     checkbox?.addEventListener("change", () => {
@@ -265,7 +318,7 @@ const PORTAL_API_KEY = import.meta.env.PORTAL_API_KEY;
           }, 300);
         }
       } catch (err) { 
-        console.error('❌ Error:', err); 
+        console.error('Error:', err); 
       }
     });
   });
