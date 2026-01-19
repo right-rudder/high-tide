@@ -45,7 +45,7 @@ If you enroll in an **eligible flight training program**, you may be able to use
 - Commercial Pilot License (CPL)
 - Certified Flight Instructor (CFI/CFII) programs
 
-At High Tide Aviation, we offer structured, professional programs across all these levels, with training available in both airplanes and helicopters.
+At High Tide Aviation, we offer structured, professional programs across all these levels, specializing in airplane training and advanced helicopter ratings.
 
 ---
 
@@ -65,8 +65,8 @@ Here’s how to start using these benefits today:
 
 With training locations in **Southport, NC**, **Wilmington, NC**, and **St. Simons Island, GA**, High Tide Aviation offers one of the most comprehensive, scenic, and student-centered aviation training environments in the Southeast. We provide:
 
-- Full-spectrum training from **Private Pilot to CFII and MEI**
-- **Helicopter training** exclusive to our Southport location
+- Full-spectrum airplane training from **Private Pilot to CFII and MEI**
+- **Advanced helicopter training** ratings exclusive to our Southport location
 - A **Student Support Department** that assigns you a personal flight training advisor
 - Modern fleet including advanced avionics and simulators
 

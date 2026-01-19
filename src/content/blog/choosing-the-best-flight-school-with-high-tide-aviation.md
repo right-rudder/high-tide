@@ -20,7 +20,7 @@ High Tide Aviation epitomizes quality training programs considering a large numb
 
 The right training program from the flight school should be tailored to afford you the skills and knowledge specifically to achieve your objectives, whether that's a career as a professional pilot or flying for leisure. This variety of training is crucial, as it ensures the school has you in mind regardless of your aviation aspirations.
 
-High Tide Aviation includes both fixed-wing aircraft and helicopter training in our curriculum, providing the breadth of instruction needed to cater to the diverse needs of our students.
+"High Tide Aviation includes both fixed-wing aircraft and advanced helicopter training in our curriculum. By offering specialized helicopter ratings and add-ons, we provide the depth of instruction needed to help licensed pilots reach their professional goals.
 
 ## Nurturing Learning Environment
 

@@ -2,13 +2,12 @@
 pubDate: "October 30, 2025"
 author: "Jessica Ward"
 title: "Discover the Carolina Coast from Above"
-description: "See the Carolinas and Georgia from a whole new perspective. Explore why High Tide Aviation’s scenic airplane and helicopter tours are the best way to experience the coast."
+description: "See the Carolinas and Georgia from a whole new perspective. Explore why High Tide Aviation’s scenic airplane tours are the best way to experience the coast."
 heroImage: "/src/assets/southport-nc-waterways.jpg"
 category: "Aerial Tours"
 tags:
   [
     "Aerial tours",
-    "Helicopter tours",
     "Scenic flights",
     "Coastal North Carolina",
     "St. Simons Island",
@@ -16,7 +15,7 @@ tags:
     "Wilmington NC",
     "Things to do North Carolina coast",
     "Fly High Tide",
-    "Helicopter rides Georgia"
+    "Airplane rides Georgia"
   ]
 ---
 
@@ -45,7 +44,7 @@ Gift certificates are also available, the perfect surprise for someone who loves
 ## Why Choose High Tide Aviation Tours
 
 - **Experienced Pilots:** All tours are flown by certified commercial pilots who know the coastline inside and out.  
-- **Comfortable, Scenic Aircraft:** Choose between smooth fixed-wing tours or exciting helicopter rides.  
+- **Comfortable, Scenic Aircraft:** Experience the coastline from the panoramic windows of our reliable fixed-wing fleet.  
 - **Local Expertise:** We’re proud to operate out of **Southport, Wilmington, and St. Simons Island**, offering authentic local insight along with the best views in the region.  
 
 ## Book Your Coastal Adventure
@@ -55,7 +54,6 @@ Ready to take flight? Book your tour today and experience why High Tide Aviation
 Visit [FlyHighTide.com](https://flyhightide.com/packages/custom-tours) to view routes, pricing, and availability, and start your next adventure in the skies.
 
 ---
-**Jessica Ward**  
-Chief Pilot, High Tide Aviation  
+**Jessica Ward** Chief Pilot, High Tide Aviation  
 📞 910-294-5871  
 📧 HighTideAV@gmail.com

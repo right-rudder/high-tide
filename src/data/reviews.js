@@ -23,10 +23,10 @@ export const reviews = [
     review:
       "Life is too short to fly commercial and be treated like dirt. Fly High Tide Aviation and set your own schedule. Be treated like an appreciated customer flown by folks who love what they do. When it works, it works.",
   },
-  {
+{
     name: "David R.",
     title: "High Tide Commercial Pilot",
     review:
-      "I took my daughter on a helicopter Discovery Flight. We both loved it. She flew the helicopter using all 3 controls. If we lived nearby, she would definitely take helicopter flight training from High Tide Aviation. Willis was a great instructor and encouragement to her! Now, I want to do it!",
+      "I took my daughter on an airplane Discovery Flight and we both loved it. She even got to handle the controls during the lesson! If we lived nearby, she would definitely take flight training from High Tide Aviation. Willis was a great instructor and a huge encouragement to her. Now, I want to do it!",
   },
 ];

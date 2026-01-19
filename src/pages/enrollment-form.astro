@@ -8,8 +8,8 @@ const PORTAL_API_KEY = import.meta.env.PORTAL_API_KEY;
 
 <BaseLayout
   siteTitle="Enrollment Form | High Tide Aviation"
-  siteDescription="Start your aviation journey with High Tide Aviation by filling out our easy and secure enrollment form. Whether you're looking to become a commercial pilot, flight instructor, or private pilot, our comprehensive training programs are designed to help you reach your goals. Simply provide your information, and our team will assist you with the next steps in your training. Get ready to take flight at one of our locations in Southport, St. Simons Island, or Wilmington"
-  siteKeywords="enrollment form, High Tide Aviation, pilot training enrollment, flight school application, commercial pilot training, private pilot certification, flight instructor training, aviation services, helicopter training, aviation resources, aviation training programs, flight school programs"
+  siteDescription="Start your aviation journey with High Tide Aviation. Fill out our secure enrollment form for airplane flight training or advanced helicopter ratings for professional pilots."
+  siteKeywords="enrollment form, High Tide Aviation, pilot training enrollment, flight school application, commercial pilot training, private airplane pilot certification, advanced helicopter ratings, flight instructor training, helicopter add-on certificates"
 >
   <Header
     slot="header"
@@ -93,7 +93,7 @@ const PORTAL_API_KEY = import.meta.env.PORTAL_API_KEY;
                 value="helicopter"
               />
               <label for="helicopter" class="block leading-6 text-gray-600"
-                >Helicopter (Southport exclusive)</label
+                >Helicopter (Advanced/Add-on - Southport Exclusive)</label
               >
             </div>
             <div class="flex items-center gap-x-3">
@@ -106,7 +106,7 @@ const PORTAL_API_KEY = import.meta.env.PORTAL_API_KEY;
                 required
               />
               <label for="both" class="block leading-6 text-gray-600"
-                >Both</label
+                >Both (Airplane & Advanced Helicopter)</label
               >
             </div>
           </div>
@@ -146,7 +146,7 @@ const PORTAL_API_KEY = import.meta.env.PORTAL_API_KEY;
               </div>
               <div class="leading-6">
                 <label for="private-pilot" class="text-gray-600"
-                  >Private Pilot</label
+                  >Private Pilot (Airplane Only)</label
                 >
               </div>
             </div>
@@ -237,7 +237,7 @@ const PORTAL_API_KEY = import.meta.env.PORTAL_API_KEY;
           class="bg-medium-blue/15 text-dark-blue py-4 px-6 w-full outline-none placeholder:text-gray-500 md:col-span-2 h-36"
           name="message"
           id="message"
-          placeholder="Feel free to elaborate"></textarea>
+          placeholder="If inquiring about helicopter training, please mention your current pilot ratings here."></textarea>
 
         <fieldset class="w-full mt-5">
           <legend class="font-medium leading-6 text-dark-blue"
@@ -370,6 +370,12 @@ const PORTAL_API_KEY = import.meta.env.PORTAL_API_KEY;
         }
 
         const formData = new FormData(form);
+        const trainingType = formData.get("training-type");
+        const preferredPrograms = formData.getAll("preferred-programs");
+        if (trainingType === "helicopter" && preferredPrograms.includes("Private Pilot")) {
+          alert("Notice: Private Pilot training is only available for Airplanes. For Helicopters, we offer Advanced Ratings (Instrument, Commercial, CFI) for existing pilots.");
+          return;
+        }
         const confirmEmail = formData.get("confirm-email")?.trim();
         if (confirmEmail) return;
 

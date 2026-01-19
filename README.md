@@ -18,7 +18,6 @@ High Tide Aviation is the Southeast Coast's leading flight training center, spec
 
 ### Training Programs
 
-- **Private Pilot License (PPL)** - Fixed-wing and helicopter
 - **Instrument Rating (IR)** - Advanced weather flying
 - **Commercial Pilot License (CPL)** - Professional certification
 - **Multi-Engine Rating (ME)** - Twin-engine aircraft

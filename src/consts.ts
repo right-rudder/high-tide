@@ -3,11 +3,12 @@
 
 export const SITE_TITLE = "High Tide Aviation";
 export const SITE_DESCRIPTION =
-  "Join the Southeast Coast's leading airplane and helicopter training center. High Tide Aviation in Southport, NC, and St Simons Island, GA, offers premier flight training across the southeastern coast.";
-export const KEYWORDS =
-  "Southeast Coast flight training, Southport NC pilot school, St Simons Island GA flight instruction, airplane training Southeast, helicopter lessons Southeast Coast";
+  "Join the Southeast Coast's leading airplane and advanced helicopter training center. High Tide Aviation offers premier flight instruction and advanced helicopter ratings in Southport, NC, and St Simons Island, GA.";
 
-export const PHONE_NUMBER = "(910) 294-5871";
+export const KEYWORDS =
+  "Southeast Coast flight training, Southport NC pilot school, advanced helicopter ratings, airplane training Southeast, helicopter add-on certificates";
+
+  export const PHONE_NUMBER = "(910) 294-5871";
 export const ADDRESS_LINE_1 = "4345 Airport Rd SE";
 export const ADDRESS_LINE_2 = "Southport, NC 28461";
 export const PHONE_NUMBER_2 = "(912) 434-2937";
