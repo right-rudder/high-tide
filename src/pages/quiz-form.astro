@@ -8,9 +8,8 @@ const PORTAL_API_KEY = import.meta.env.PORTAL_API_KEY;
 ---
 
 <BaseLayout
-  siteTitle="High Tide Aviation Flight Training Readiness Assessment | High Tide Aviation"
-  siteDescription="Take the 'Are You Ready to Become a Pilot?' quiz from High Tide Aviation to assess your readiness for flight training. Whether you're in Southport, St. Simons Island, or Wilmington, NC, this quick, interactive quiz will help you determine if you're prepared for the challenges and excitement of becoming a pilot. Get personalized feedback and learn about the next steps on your journey to earning a Private Pilot Certificate, Commercial Pilot License, and beyond."
-  siteKeywords="pilot readiness quiz, High Tide Aviation quiz, pilot training assessment, flight school quiz, aviation career readiness, pilot certification quiz, flight training preparation, private pilot quiz, commercial pilot quiz, pilot aptitude test, aviation quiz, pilot training quiz"
+  siteTitle="Pilot Training Inquiry | High Tide Aviation"
+  siteDescription="Fill out our revised pilot training inquiry form to assess your readiness and start your aviation journey with High Tide Aviation."
 >
   <Header
     slot="header"
@@ -22,1418 +21,208 @@ const PORTAL_API_KEY = import.meta.env.PORTAL_API_KEY;
   <section class="py-16 px-5 max-w-5xl mx-auto">
     <div class="mx-auto flex flex-col justify-center items-center">
       <MdOutlineQuiz className="size-14 text-mustard-yellow mb-5" />
-      <h2
-        class="uppercase text-medium-blue font-bold tracking-widest text-center"
-      >
-        Are You Ready to Become a Pilot?
+      <h2 class="uppercase text-medium-blue font-bold tracking-widest text-center">
+        Pilot Training Inquiry Form
       </h2>
-      <h3
-        class="text-5xl font-bold leading-tight text-dark-blue text-center max-w-3xl"
-      >
-        High Tide Aviation Flight Training Readiness Assessment
+      <h3 class="text-5xl font-bold leading-tight text-dark-blue text-center max-w-3xl">
+        High Tide Aviation Training Assessment
       </h3>
     </div>
-    <div class="mt-10">
-      <p class="text-dark-blue">
-        <span class="text-dark-blue font-semibold">Purpose:</span>
-        To help prospective students evaluate their preparedness for flight training
-        and allow High Tide Aviation to tailor a personalized training plan.
-      </p>
-    </div>
-    <div class="mt-3">
-      <p class="text-dark-blue">
-        <span class="text-dark-blue font-semibold">Instructions:</span>
-        Please answer the following questions honestly. Your responses will remain
-        confidential and will be used solely to assist in your flight training journey.
-      </p>
-    </div>
-    <form id="quiz-form">
-      <div class="mt-10">
-        <h2 class="text-2xl font-bold leading-7 text-dark-blue">
-          Personal Information
-        </h2>
-        <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
-          <div class="sm:col-span-3">
-            <label
-              for="first-name"
-              class="block font-medium leading-6 text-dark-blue"
-              >First name</label
-            >
-            <div class="mt-2">
-              <input
-                type="text"
-                name="first-name"
-                id="first-name"
-                autocomplete="given-name"
-                class="block w-full p-2 rounded-md border-0 py-1.5 text-dark-blue shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-medium-blue sm:sm:leading-6"
-                required
-              />
-            </div>
-          </div>
 
-          <div class="sm:col-span-3">
-            <label
-              for="last-name"
-              class="block font-medium leading-6 text-dark-blue"
-              >Last name</label
-            >
-            <div class="mt-2">
-              <input
-                type="text"
-                name="last-name"
-                id="last-name"
-                autocomplete="family-name"
-                class="block w-full p-2 rounded-md border-0 py-1.5 text-dark-blue shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-medium-blue sm:sm:leading-6"
-                required
-              />
-            </div>
-          </div>
-
-          <div class="sm:col-span-3">
-            <label
-              for="email"
-              class="block font-medium leading-6 text-dark-blue"
-              >Email address</label
-            >
-            <div class="mt-2">
-              <input
-                id="email"
-                name="email"
-                type="email"
-                autocomplete="email"
-                class="block w-full p-2 rounded-md border-0 py-1.5 text-dark-blue shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-medium-blue sm:sm:leading-6"
-                required
-              />
-            </div>
-          </div>
-
-          <p class="hidden">
-            <label>
-              Don't fill this out if you're human: <input
-                name="confirm-email"
-              />
-            </label>
-          </p>
-
-          <div class="sm:col-span-3">
-            <label
-              for="phone"
-              class="block font-medium leading-6 text-dark-blue">Phone</label
-            >
-            <div class="mt-2">
-              <input
-                id="phone"
-                name="phone"
-                type="tel"
-                autocomplete="phone"
-                class="block w-full p-2 rounded-md border-0 py-1.5 text-dark-blue shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-medium-blue sm:sm:leading-6"
-                required
-              />
-            </div>
-          </div>
-        </div>
-
-        <div class="mt-10 space-y-10">
-          <fieldset>
-            <legend class="font-medium leading-6 text-dark-blue"
-              >Preferred method of contact</legend
-            >
-            <div class="mt-2 space-y-1">
-              <div class="flex items-center gap-x-3">
-                <input
-                  id="e-mail"
-                  name="preferred-contact-method"
-                  type="radio"
-                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
-                  value="Email"
-                />
-                <label for="e-mail" class="block leading-6 text-gray-600"
-                  >Email
-                </label>
-              </div>
-              <div class="flex items-center gap-x-3">
-                <input
-                  id="phone-call"
-                  name="preferred-contact-method"
-                  type="radio"
-                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
-                  value="Phone call"
-                />
-                <label for="phone-call" class="block leading-6 text-gray-600"
-                  >Phone call</label
-                >
-              </div>
-              <div class="flex items-center gap-x-3">
-                <input
-                  id="text-message"
-                  name="preferred-contact-method"
-                  type="radio"
-                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
-                  value="Text message"
-                  required
-                />
-                <label for="text-message" class="block leading-6 text-gray-600"
-                  >Text message</label
-                >
-              </div>
-            </div>
-          </fieldset>
-
-          <h2 class="text-2xl font-bold leading-7 text-dark-blue">
-            Flight Experience
-          </h2>
-          <fieldset>
-            <legend class="font-medium leading-6 text-dark-blue"
-              >Do you have any prior flight experience or training?</legend
-            >
-            <div class="mt-2 space-y-1">
-              <div class="flex items-center gap-x-3">
-                <input
-                  id="yes"
-                  name="prior-experience"
-                  type="radio"
-                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
-                  value="yes"
-                />
-                <label for="yes" class="block leading-6 text-gray-600"
-                  >Yes</label
-                >
-                <input
-                  class="block w-full p-2 rounded-md border-0 py-1.5 text-dark-blue shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-medium-blue sm:sm:leading-6"
-                  type="text"
-                  name="prior-experience"
-                  placeholder="Please specify"
-                  id="other-text"
-                />
-              </div>
-              <div class="flex items-center gap-x-3">
-                <input
-                  id="no"
-                  name="prior-experience"
-                  type="radio"
-                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
-                  value="no"
-                  required
-                />
-                <label for="no" class="block leading-6 text-gray-600">No</label>
-              </div>
-            </div>
-          </fieldset>
-
-          <h2 class="text-2xl font-bold leading-7 text-dark-blue">
-            Aspirations and Mindset
-          </h2>
-          <fieldset>
-            <legend class="font-medium leading-6 text-dark-blue"
-              >What kind of pilot do you aspire to be?</legend
-            >
-            <div class="mt-2 space-y-1">
-              <div class="flex items-center gap-x-3">
-                <input
-                  id="fighter-pilot"
-                  name="what-kind-of-pilot"
-                  type="radio"
-                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
-                  value="Fighter pilot"
-                />
-                <label for="fighter-pilot" class="block leading-6 text-gray-600"
-                  >Fighter pilot
-                </label>
-              </div>
-              <div class="flex items-center gap-x-3">
-                <input
-                  id="crop-duster"
-                  name="what-kind-of-pilot"
-                  type="radio"
-                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
-                  value="Crop duster"
-                />
-                <label for="crop-duster" class="block leading-6 text-gray-600"
-                  >Crop duster</label
-                >
-              </div>
-              <div class="flex items-center gap-x-3">
-                <input
-                  id="commercial-pilot"
-                  name="what-kind-of-pilot"
-                  type="radio"
-                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
-                  value="Commercial pilot"
-                />
-                <label
-                  for="commercial-pilot"
-                  class="block leading-6 text-gray-600">Commercial pilot</label
-                >
-              </div>
-              <div class="flex items-center gap-x-3">
-                <input
-                  id="recreational-pilot"
-                  name="what-kind-of-pilot"
-                  type="radio"
-                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
-                  value="Recreational pilot"
-                  required
-                />
-                <label
-                  for="recreational-pilot"
-                  class="block leading-6 text-gray-600"
-                  >Recreational pilot</label
-                >
-              </div>
-            </div>
-          </fieldset>
-
-          <fieldset>
-            <legend class="font-medium leading-6 text-dark-blue"
-              >When a plane flies overhead during a conversation, how do you
-              react?</legend
-            >
-            <div class="mt-2 space-y-1">
-              <div class="flex items-center gap-x-3">
-                <input
-                  id="try-to-identify"
-                  name="when-a-plane-flies-overhead-how-do-you-react"
-                  type="radio"
-                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
-                  value="I immediately try to identify it"
-                />
-                <label
-                  for="try-to-identify"
-                  class="block leading-6 text-gray-600"
-                  >I immediately try to identify it
-                </label>
-              </div>
-              <div class="flex items-center gap-x-3">
-                <input
-                  id="wish-i-were-up-there"
-                  name="when-a-plane-flies-overhead-how-do-you-react"
-                  type="radio"
-                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
-                  value="I wish I were up there"
-                />
-                <label
-                  for="wish-i-were-up-there"
-                  class="block leading-6 text-gray-600"
-                  >I wish I were up there</label
-                >
-              </div>
-              <div class="flex items-center gap-x-3">
-                <input
-                  id="glance-at-it"
-                  name="when-a-plane-flies-overhead-how-do-you-react"
-                  type="radio"
-                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
-                  value="I glance at it and continue"
-                />
-                <label for="glance-at-it" class="block leading-6 text-gray-600"
-                  >I glance at it and continue</label
-                >
-              </div>
-              <div class="flex items-center gap-x-3">
-                <input
-                  id="stay-focused"
-                  name="when-a-plane-flies-overhead-how-do-you-react"
-                  type="radio"
-                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
-                  value="I acknowledge it but stay focused"
-                />
-                <label for="stay-focused" class="block leading-6 text-gray-600"
-                  >I acknowledge it but stay focused</label
-                >
-              </div>
-              <div class="flex items-center gap-x-3">
-                <input
-                  id="don’t-notice-it"
-                  name="when-a-plane-flies-overhead-how-do-you-react"
-                  type="radio"
-                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
-                  value="I don’t notice it"
-                  required
-                />
-                <label
-                  for="don’t-notice-it"
-                  class="block leading-6 text-gray-600">I don’t notice it</label
-                >
-              </div>
-            </div>
-          </fieldset>
-
-          <fieldset>
-            <legend class="font-medium leading-6 text-dark-blue"
-              >You have a major project due tomorrow and are only partially
-              through. What do you do?</legend
-            >
-            <div class="mt-2 space-y-1">
-              <div class="flex items-center gap-x-3">
-                <input
-                  id="complete-it-ahead-of-schedule"
-                  name="major-project-due-tomorrow-what-do-you-do"
-                  type="radio"
-                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
-                  value="Complete it ahead of schedule"
-                />
-                <label
-                  for="complete-it-ahead-of-schedule"
-                  class="block leading-6 text-gray-600"
-                  >Complete it ahead of schedule
-                </label>
-              </div>
-              <div class="flex items-center gap-x-3">
-                <input
-                  id="work-through-the-night-if-needed"
-                  name="major-project-due-tomorrow-what-do-you-do"
-                  type="radio"
-                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
-                  value="Work through the night if needed"
-                />
-                <label
-                  for="work-through-the-night-if-needed"
-                  class="block leading-6 text-gray-600"
-                  >Work through the night if needed</label
-                >
-              </div>
-              <div class="flex items-center gap-x-3">
-                <input
-                  id="request-an-extension"
-                  name="major-project-due-tomorrow-what-do-you-do"
-                  type="radio"
-                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
-                  value="Request an extension"
-                />
-                <label
-                  for="request-an-extension"
-                  class="block leading-6 text-gray-600"
-                  >Request an extension</label
-                >
-              </div>
-              <div class="flex items-center gap-x-3">
-                <input
-                  id="take-a-short-break-and-continue"
-                  name="major-project-due-tomorrow-what-do-you-do"
-                  type="radio"
-                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
-                  value="Take a short break and continue"
-                />
-                <label
-                  for="take-a-short-break-and-continue"
-                  class="block leading-6 text-gray-600"
-                  >Take a short break and continue</label
-                >
-              </div>
-              <div class="flex items-center gap-x-3">
-                <input
-                  id="feel-overwhelmed-and-freeze-up"
-                  name="major-project-due-tomorrow-what-do-you-do"
-                  type="radio"
-                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
-                  value="Feel overwhelmed and freeze up"
-                  required
-                />
-                <label
-                  for="feel-overwhelmed-and-freeze-up"
-                  class="block leading-6 text-gray-600"
-                  >Feel overwhelmed and freeze up</label
-                >
-              </div>
-            </div>
-          </fieldset>
-
-          <fieldset>
-            <legend class="font-medium leading-6 text-dark-blue">
-              How certain are you about becoming a pilot?
-            </legend>
-            <div class="mt-2 space-y-1">
-              <div class="flex items-center gap-x-3">
-                <input
-                  id="certainty-100"
-                  name="how-certain-about-becoming-a-pilot"
-                  type="radio"
-                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
-                  value="100%"
-                />
-                <label
-                  for="certainty-100"
-                  class="block leading-6 text-gray-600"
-                >
-                  100%
-                </label>
-              </div>
-              <div class="flex items-center gap-x-3">
-                <input
-                  id="certainty-90"
-                  name="how-certain-about-becoming-a-pilot"
-                  type="radio"
-                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
-                  value="90%"
-                />
-                <label for="certainty-90" class="block leading-6 text-gray-600">
-                  90%
-                </label>
-              </div>
-              <div class="flex items-center gap-x-3">
-                <input
-                  id="certainty-75"
-                  name="how-certain-about-becoming-a-pilot"
-                  type="radio"
-                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
-                  value="75%"
-                />
-                <label for="certainty-75" class="block leading-6 text-gray-600">
-                  75%
-                </label>
-              </div>
-              <div class="flex items-center gap-x-3">
-                <input
-                  id="certainty-less-than-75"
-                  name="how-certain-about-becoming-a-pilot"
-                  type="radio"
-                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
-                  value="Less than 75%"
-                />
-                <label
-                  for="certainty-less-than-75"
-                  class="block leading-6 text-gray-600"
-                >
-                  Less than 75%
-                </label>
-              </div>
-              <div class="flex items-center gap-x-3">
-                <input
-                  id="still-considering"
-                  name="how-certain-about-becoming-a-pilot"
-                  type="radio"
-                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
-                  value="Still considering"
-                  required
-                />
-                <label
-                  for="still-considering"
-                  class="block leading-6 text-gray-600"
-                >
-                  Still considering
-                </label>
-              </div>
-            </div>
-          </fieldset>
-
-          <fieldset>
-            <legend class="font-medium leading-6 text-dark-blue">
-              Why do you want to become a pilot?
-            </legend>
-            <div class="mt-2 space-y-1">
-              <div class="flex items-center gap-x-3">
-                <input
-                  id="passion-for-flying"
-                  name="why-do-you-want-to-become-a-pilot"
-                  type="radio"
-                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
-                  value="Passion for flying"
-                />
-                <label
-                  for="passion-for-flying"
-                  class="block leading-6 text-gray-600"
-                >
-                  Passion for flying
-                </label>
-              </div>
-              <div class="flex items-center gap-x-3">
-                <input
-                  id="desire-for-control"
-                  name="why-do-you-want-to-become-a-pilot"
-                  type="radio"
-                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
-                  value="Desire for control and independence"
-                />
-                <label
-                  for="desire-for-control"
-                  class="block leading-6 text-gray-600"
-                >
-                  Desire for control and independence
-                </label>
-              </div>
-              <div class="flex items-center gap-x-3">
-                <input
-                  id="to-meet-new-people"
-                  name="why-do-you-want-to-become-a-pilot"
-                  type="radio"
-                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
-                  value="To meet new people"
-                />
-                <label
-                  for="to-meet-new-people"
-                  class="block leading-6 text-gray-600"
-                >
-                  To meet new people
-                </label>
-              </div>
-              <div class="flex items-center gap-x-3">
-                <input
-                  id="inspired-by-media"
-                  name="why-do-you-want-to-become-a-pilot"
-                  type="radio"
-                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
-                  value="Inspired by media"
-                  required
-                />
-                <label
-                  for="inspired-by-media"
-                  class="block leading-6 text-gray-600"
-                >
-                  Inspired by media
-                </label>
-              </div>
-            </div>
-          </fieldset>
-
+    <form id="quiz-form" class="mt-10 space-y-12">
+      <div class="space-y-8">
+        <h2 class="text-2xl font-bold border-b-2 border-mustard-yellow pb-2 text-dark-blue">Personal Information</h2>
+        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
           <div>
-            <h2 class="text-2xl font-bold leading-7 text-dark-blue">
-              Medical Fitness
-            </h2>
-            <div class="mt-3">
-              <p class="text-dark-blue">
-                <span class="text-dark-blue font-semibold">Note:</span>
-                All pilots must obtain an FAA Medical Certificate. It’s essential
-                to assess your medical fitness early in your training journey.
-              </p>
-            </div>
+            <label for="first-name" class="block font-medium text-dark-blue">First name</label>
+            <input type="text" name="first-name" id="first-name" class="block w-full p-2 mt-1 rounded-md border-gray-300 ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-medium-blue" required />
           </div>
-          <fieldset>
-            <legend class="font-medium leading-6 text-dark-blue">
-              Age Range:
-            </legend>
-            <div class="mt-2 space-y-1">
-              <div class="flex items-center gap-x-3">
-                <input
-                  id="under-25"
-                  name="age-range"
-                  type="radio"
-                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
-                  value="Under 25"
-                />
-                <label for="under-25" class="block leading-6 text-gray-600">
-                  Under 25
-                </label>
-              </div>
-              <div class="flex items-center gap-x-3">
-                <input
-                  id="26-55"
-                  name="age-range"
-                  type="radio"
-                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
-                  value="26–55"
-                />
-                <label for="26-55" class="block leading-6 text-gray-600">
-                  26–55
-                </label>
-              </div>
-              <div class="flex items-center gap-x-3">
-                <input
-                  id="over-55"
-                  name="age-range"
-                  type="radio"
-                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
-                  value="Over 55"
-                  required
-                />
-                <label for="over-55" class="block leading-6 text-gray-600">
-                  Over 55
-                </label>
-              </div>
-            </div>
-          </fieldset>
-
-          <fieldset>
-            <legend class="font-medium leading-6 text-dark-blue">
-              Weight Range:
-            </legend>
-            <div class="mt-2 space-y-1">
-              <div class="flex items-center gap-x-3">
-                <input
-                  id="under-200"
-                  name="weight-range"
-                  type="radio"
-                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
-                  value="Under 200 lbs"
-                />
-                <label for="under-200" class="block leading-6 text-gray-600">
-                  Under 200 lbs
-                </label>
-              </div>
-              <div class="flex items-center gap-x-3">
-                <input
-                  id="200-250"
-                  name="weight-range"
-                  type="radio"
-                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
-                  value="200–250 lbs"
-                />
-                <label for="200-250" class="block leading-6 text-gray-600">
-                  200–250 lbs
-                </label>
-              </div>
-              <div class="flex items-center gap-x-3">
-                <input
-                  id="over-250"
-                  name="weight-range"
-                  type="radio"
-                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
-                  value="Over 250 lbs"
-                  required
-                />
-                <label for="over-250" class="block leading-6 text-gray-600">
-                  Over 250 lbs
-                </label>
-              </div>
-            </div>
-          </fieldset>
-
-          <fieldset>
-            <legend class="font-medium leading-6 text-dark-blue">
-              Do you currently have any known medical conditions that might
-              affect your ability to obtain an FAA Medical Certificate?
-            </legend>
-            <div class="mt-2 space-y-1">
-              <div class="flex items-center gap-x-3">
-                <input
-                  id="medical-yes"
-                  name="faa-medical-conditions"
-                  type="radio"
-                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
-                  value="Yes"
-                />
-                <label for="medical-yes" class="block leading-6 text-gray-600">
-                  Yes
-                </label>
-              </div>
-              <div class="flex items-center gap-x-3">
-                <input
-                  id="medical-no"
-                  name="faa-medical-conditions"
-                  type="radio"
-                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
-                  value="No"
-                />
-                <label for="medical-no" class="block leading-6 text-gray-600">
-                  No
-                </label>
-              </div>
-              <div class="flex items-center gap-x-3">
-                <input
-                  id="medical-unsure"
-                  name="faa-medical-conditions"
-                  type="radio"
-                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
-                  value="Unsure"
-                  required
-                />
-                <label
-                  for="medical-unsure"
-                  class="block leading-6 text-gray-600"
-                >
-                  Unsure
-                </label>
-              </div>
-            </div>
-          </fieldset>
-
-          <fieldset>
-            <legend class="font-medium leading-6 text-dark-blue">
-              Are you currently taking any medications?
-            </legend>
-            <div class="mt-2 space-y-1">
-              <div class="flex items-center gap-x-3">
-                <input
-                  id="medications-yes"
-                  name="currently-taking-medications"
-                  type="radio"
-                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
-                  value="Yes"
-                />
-                <label
-                  for="medications-yes"
-                  class="block leading-6 text-gray-600"
-                >
-                  Yes
-                </label>
-              </div>
-              <div class="flex items-center gap-x-3">
-                <input
-                  id="medications-no"
-                  name="currently-taking-medications"
-                  type="radio"
-                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
-                  value="No"
-                />
-                <label
-                  for="medications-no"
-                  class="block leading-6 text-gray-600"
-                >
-                  No
-                </label>
-              </div>
-              <div class="flex items-center gap-x-3">
-                <input
-                  id="medications-prefer-not-to-say"
-                  name="currently-taking-medications"
-                  type="radio"
-                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
-                  value="Prefer not to say"
-                  required
-                />
-                <label
-                  for="medications-prefer-not-to-say"
-                  class="block leading-6 text-gray-600"
-                >
-                  Prefer not to say
-                </label>
-              </div>
-              <div class="mt-3">
-                <p class="text-dark-blue">
-                  <span class="text-dark-blue font-semibold">Important:</span>
-                  If you are taking medications or have medical conditions, we recommend
-                  consulting with an FAA-certified Aviation Medical Examiner (AME)
-                  to determine your eligibility for a medical certificate.
-                </p>
-              </div>
-            </div>
-          </fieldset>
-
-          <h2 class="text-2xl font-bold leading-7 text-dark-blue">
-            Learning Preferences
-          </h2>
-          <fieldset>
-            <legend class="font-medium leading-6 text-dark-blue">
-              Which learning methods do you prefer?
-            </legend>
-            <p class="text-gray-500 text-sm">Select all that apply</p>
-            <div class="mt-2 space-y-1">
-              <div class="flex items-center gap-x-3">
-                <input
-                  id="learning-visual"
-                  name="learning-methods"
-                  type="checkbox"
-                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
-                  value="Visual (e.g., diagrams, videos)"
-                />
-                <label
-                  for="learning-visual"
-                  class="block leading-6 text-gray-600"
-                >
-                  Visual (e.g., diagrams, videos)
-                </label>
-              </div>
-              <div class="flex items-center gap-x-3">
-                <input
-                  id="learning-auditory"
-                  name="learning-methods"
-                  type="checkbox"
-                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
-                  value="Auditory (e.g., lectures, discussions)"
-                />
-                <label
-                  for="learning-auditory"
-                  class="block leading-6 text-gray-600"
-                >
-                  Auditory (e.g., lectures, discussions)
-                </label>
-              </div>
-              <div class="flex items-center gap-x-3">
-                <input
-                  id="learning-reading-writing"
-                  name="learning-methods"
-                  type="checkbox"
-                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
-                  value="Reading/Writing (e.g., manuals, note-taking)"
-                />
-                <label
-                  for="learning-reading-writing"
-                  class="block leading-6 text-gray-600"
-                >
-                  Reading/Writing (e.g., manuals, note-taking)
-                </label>
-              </div>
-              <div class="flex items-center gap-x-3">
-                <input
-                  id="learning-kinesthetic"
-                  name="learning-methods"
-                  type="checkbox"
-                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
-                  value="Kinesthetic (e.g., hands-on practice, simulations)"
-                />
-                <label
-                  for="learning-kinesthetic"
-                  class="block leading-6 text-gray-600"
-                >
-                  Kinesthetic (e.g., hands-on practice, simulations)
-                </label>
-              </div>
-            </div>
-          </fieldset>
-
-          <fieldset>
-            <legend class="font-medium leading-6 text-dark-blue">
-              Which of the following training formats are you interested in?
-            </legend>
-            <p class="text-gray-500 text-sm">Select all that apply</p>
-            <div class="mt-2 space-y-1">
-              <div class="flex items-center gap-x-3">
-                <input
-                  id="training-one-on-one"
-                  name="training-formats"
-                  type="checkbox"
-                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
-                  value="One-on-one tutoring (most personalized, higher cost)"
-                />
-                <label
-                  for="training-one-on-one"
-                  class="block leading-6 text-gray-600"
-                >
-                  One-on-one tutoring (most personalized, higher cost)
-                </label>
-              </div>
-              <div class="flex items-center gap-x-3">
-                <input
-                  id="training-classroom"
-                  name="training-formats"
-                  type="checkbox"
-                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
-                  value="Classroom instruction at a local community college (structured, cost-effective)"
-                />
-                <label
-                  for="training-classroom"
-                  class="block leading-6 text-gray-600"
-                >
-                  Classroom instruction at a local community college
-                  (structured, cost-effective)
-                </label>
-              </div>
-              <div class="flex items-center gap-x-3">
-                <input
-                  id="training-online"
-                  name="training-formats"
-                  type="checkbox"
-                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
-                  value="Online computer-based training (flexible, self-paced)"
-                />
-                <label
-                  for="training-online"
-                  class="block leading-6 text-gray-600"
-                >
-                  Online computer-based training (flexible, self-paced)
-                </label>
-              </div>
-              <div class="flex items-center gap-x-3">
-                <input
-                  id="training-combination"
-                  name="training-formats"
-                  type="checkbox"
-                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
-                  value="A combination of the above"
-                />
-                <label
-                  for="training-combination"
-                  class="block leading-6 text-gray-600"
-                >
-                  A combination of the above
-                </label>
-              </div>
-            </div>
-          </fieldset>
-
-          <h2 class="text-2xl font-bold leading-7 text-dark-blue">
-            Time Commitment
-          </h2>
-          <fieldset>
-            <legend class="font-medium leading-6 text-dark-blue">
-              How many flight lessons do you plan to schedule per week?
-            </legend>
-            <div class="mt-2 space-y-1">
-              <div class="flex items-center gap-x-3">
-                <input
-                  id="lessons-1-or-fewer"
-                  name="flight-lessons-per-week"
-                  type="radio"
-                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
-                  value="1 or fewer"
-                />
-                <label
-                  for="lessons-1-or-fewer"
-                  class="block leading-6 text-gray-600"
-                >
-                  1 or fewer
-                </label>
-              </div>
-              <div class="flex items-center gap-x-3">
-                <input
-                  id="lessons-2-3"
-                  name="flight-lessons-per-week"
-                  type="radio"
-                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
-                  value="2–3"
-                />
-                <label for="lessons-2-3" class="block leading-6 text-gray-600">
-                  2–3
-                </label>
-              </div>
-              <div class="flex items-center gap-x-3">
-                <input
-                  id="lessons-4-or-more"
-                  name="flight-lessons-per-week"
-                  type="radio"
-                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
-                  value="4 or more"
-                  required
-                />
-                <label
-                  for="lessons-4-or-more"
-                  class="block leading-6 text-gray-600"
-                >
-                  4 or more
-                </label>
-              </div>
-            </div>
-          </fieldset>
-
-          <fieldset>
-            <legend class="font-medium leading-6 text-dark-blue">
-              Do you have flexibility in your schedule to accommodate additional
-              study or practice time?
-            </legend>
-            <div class="mt-2 space-y-1">
-              <div class="flex items-center gap-x-3">
-                <input
-                  id="flexibility-yes"
-                  name="schedule-flexibility"
-                  type="radio"
-                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
-                  value="Yes"
-                />
-                <label
-                  for="flexibility-yes"
-                  class="block leading-6 text-gray-600"
-                >
-                  Yes
-                </label>
-              </div>
-              <div class="flex items-center gap-x-3">
-                <input
-                  id="flexibility-no"
-                  name="schedule-flexibility"
-                  type="radio"
-                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
-                  value="No"
-                />
-                <label
-                  for="flexibility-no"
-                  class="block leading-6 text-gray-600"
-                >
-                  No
-                </label>
-              </div>
-              <div class="flex items-center gap-x-3">
-                <input
-                  id="flexibility-limited"
-                  name="schedule-flexibility"
-                  type="radio"
-                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
-                  value="Limited flexibility"
-                  required
-                />
-                <label
-                  for="flexibility-limited"
-                  class="block leading-6 text-gray-600"
-                >
-                  Limited flexibility
-                </label>
-              </div>
-              <div class="mt-3">
-                <p class="text-dark-blue">
-                  <span class="text-dark-blue font-semibold">Note:</span>
-                  Consistent practice and study are crucial for success in flight
-                  training. Less frequent flying can lead to longer training durations
-                  and increased costs.
-                </p>
-              </div>
-            </div>
-          </fieldset>
-
-          <h2 class="text-2xl font-bold leading-7 text-dark-blue">
-            Financial Planning
-          </h2>
-          <fieldset>
-            <legend class="font-medium leading-6 text-dark-blue">
-              Have you prepared financially for the costs associated with flight
-              training?
-            </legend>
-            <div class="mt-2 space-y-1">
-              <div class="flex items-center gap-x-3">
-                <input
-                  id="financial-full-amount"
-                  name="flight-training-finances"
-                  type="radio"
-                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
-                  value="Yes, I have the full amount saved ($12,000–$15,000 for a Private Pilot License)"
-                />
-                <label
-                  for="financial-full-amount"
-                  class="block leading-6 text-gray-600"
-                >
-                  Yes, I have the full amount saved ($12,000–$15,000 for a
-                  Private Pilot License)
-                </label>
-              </div>
-              <div class="flex items-center gap-x-3">
-                <input
-                  id="financial-pay-as-you-go"
-                  name="flight-training-finances"
-                  type="radio"
-                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
-                  value="Yes, I plan to pay as I go"
-                />
-                <label
-                  for="financial-pay-as-you-go"
-                  class="block leading-6 text-gray-600"
-                >
-                  Yes, I plan to pay as I go
-                </label>
-              </div>
-              <div class="flex items-center gap-x-3">
-                <input
-                  id="financial-assistance"
-                  name="flight-training-finances"
-                  type="radio"
-                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
-                  value="Yes, I have financial assistance (e.g., GI Bill, scholarships, employer reimbursement)"
-                />
-                <label
-                  for="financial-assistance"
-                  class="block leading-6 text-gray-600"
-                >
-                  Yes, I have financial assistance (e.g., GI Bill, scholarships,
-                  employer reimbursement)
-                </label>
-              </div>
-              <div class="flex items-center gap-x-3">
-                <input
-                  id="financial-need-guidance"
-                  name="flight-training-finances"
-                  type="radio"
-                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
-                  value="No, I need guidance on financing options"
-                  required
-                />
-                <label
-                  for="financial-need-guidance"
-                  class="block leading-6 text-gray-600"
-                >
-                  No, I need guidance on financing options
-                </label>
-              </div>
-            </div>
-          </fieldset>
-
-          <h2 class="text-2xl font-bold leading-7 text-dark-blue">
-            Training Objectives
-          </h2>
-          <fieldset>
-            <legend class="font-medium leading-6 text-dark-blue">
-              What is your primary goal for obtaining a pilot’s license?
-            </legend>
-            <div class="mt-2 space-y-1">
-              <div class="flex items-center gap-x-3">
-                <input
-                  id="goal-recreational"
-                  name="pilot-license-goal"
-                  type="radio"
-                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
-                  value="Recreational flying"
-                />
-                <label
-                  for="goal-recreational"
-                  class="block leading-6 text-gray-600"
-                >
-                  Recreational flying
-                </label>
-              </div>
-              <div class="flex items-center gap-x-3">
-                <input
-                  id="goal-career"
-                  name="pilot-license-goal"
-                  type="radio"
-                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
-                  value="Career in aviation (e.g., airline pilot, corporate pilot, CFI)"
-                />
-                <label for="goal-career" class="block leading-6 text-gray-600">
-                  Career in aviation (e.g., airline pilot, corporate pilot, CFI)
-                </label>
-              </div>
-              <div class="flex items-center gap-x-3">
-                <input
-                  id="goal-other"
-                  name="pilot-license-goal"
-                  type="radio"
-                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
-                  value="Other"
-                />
-                <label for="goal-other" class="block leading-6 text-gray-600">
-                  Other (please specify):
-                </label>
-                <input
-                  type="text"
-                  name="pilot-license-goal-other"
-                  class="ml-2 flex-1 p-2 rounded-md border-0 py-1.5 text-dark-blue shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-medium-blue sm:sm:leading-6"
-                />
-              </div>
-            </div>
-          </fieldset>
-
-          <fieldset>
-            <legend class="font-medium leading-6 text-dark-blue">
-              Do you currently hold a college degree?
-            </legend>
-            <div class="mt-2 space-y-1">
-              <div class="flex items-center gap-x-3">
-                <input
-                  id="college-degree-yes"
-                  name="hold-college-degree"
-                  type="radio"
-                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
-                  value="Yes"
-                />
-                <label
-                  for="college-degree-yes"
-                  class="block leading-6 text-gray-600"
-                >
-                  Yes
-                </label>
-              </div>
-              <div class="flex items-center gap-x-3">
-                <input
-                  id="college-degree-no"
-                  name="hold-college-degree"
-                  type="radio"
-                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
-                  value="No"
-                  required
-                />
-                <label
-                  for="college-degree-no"
-                  class="block leading-6 text-gray-600"
-                >
-                  No
-                </label>
-              </div>
-            </div>
-          </fieldset>
-
-          <fieldset>
-            <legend class="font-medium leading-6 text-dark-blue">
-              Are you interested in pursuing a degree in conjunction with your
-              flight training?
-            </legend>
-            <div class="mt-2 space-y-1">
-              <div class="flex items-center gap-x-3">
-                <input
-                  id="degree-before-training"
-                  name="pursue-degree-flight-training"
-                  type="radio"
-                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
-                  value="Yes, before flight training"
-                />
-                <label
-                  for="degree-before-training"
-                  class="block leading-6 text-gray-600"
-                >
-                  Yes, before flight training
-                </label>
-              </div>
-              <div class="flex items-center gap-x-3">
-                <input
-                  id="degree-during-training"
-                  name="pursue-degree-flight-training"
-                  type="radio"
-                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
-                  value="Yes, during flight training"
-                />
-                <label
-                  for="degree-during-training"
-                  class="block leading-6 text-gray-600"
-                >
-                  Yes, during flight training
-                </label>
-              </div>
-              <div class="flex items-center gap-x-3">
-                <input
-                  id="degree-after-training"
-                  name="pursue-degree-flight-training"
-                  type="radio"
-                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
-                  value="Yes, after flight training"
-                />
-                <label
-                  for="degree-after-training"
-                  class="block leading-6 text-gray-600"
-                >
-                  Yes, after flight training
-                </label>
-              </div>
-              <div class="flex items-center gap-x-3">
-                <input
-                  id="degree-no"
-                  name="pursue-degree-flight-training"
-                  type="radio"
-                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
-                  value="No"
-                  required
-                />
-                <label for="degree-no" class="block leading-6 text-gray-600">
-                  No
-                </label>
-              </div>
-            </div>
-            <div class="mt-3">
-              <p class="text-dark-blue">
-                <span class="text-dark-blue font-semibold">Note:</span>
-                High Tide Aviation has an affiliate program with Purdue University
-                for students interested in combining flight training with a degree
-                program.
-              </p>
-            </div>
-          </fieldset>
-
-          <h2 class="text-2xl font-bold leading-7 text-dark-blue">
-            Additional Information
-          </h2>
-          <fieldset>
-            <legend class="font-medium leading-6 text-dark-blue">
-              How did you hear about High Tide Aviation?
-            </legend>
-            <div class="mt-2 space-y-1">
-              <div class="flex items-center gap-x-3">
-                <input
-                  id="heard-online-search"
-                  name="hear-about-high-tide-aviation"
-                  type="radio"
-                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
-                  value="Online Search"
-                />
-                <label
-                  for="heard-online-search"
-                  class="block leading-6 text-gray-600"
-                >
-                  Online Search
-                </label>
-              </div>
-              <div class="flex items-center gap-x-3">
-                <input
-                  id="heard-social-media"
-                  name="hear-about-high-tide-aviation"
-                  type="radio"
-                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
-                  value="Social Media"
-                />
-                <label
-                  for="heard-social-media"
-                  class="block leading-6 text-gray-600"
-                >
-                  Social Media
-                </label>
-              </div>
-              <div class="flex items-center gap-x-3">
-                <input
-                  id="heard-referred-friend"
-                  name="hear-about-high-tide-aviation"
-                  type="radio"
-                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
-                  value="Referred by a friend or pilot"
-                />
-                <label
-                  for="heard-referred-friend"
-                  class="block leading-6 text-gray-600"
-                >
-                  Referred by a friend or pilot
-                </label>
-              </div>
-              <div class="flex items-center gap-x-3">
-                <input
-                  id="heard-visited-airport"
-                  name="hear-about-high-tide-aviation"
-                  type="radio"
-                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
-                  value="Visited the airport"
-                />
-                <label
-                  for="heard-visited-airport"
-                  class="block leading-6 text-gray-600"
-                >
-                  Visited the airport
-                </label>
-              </div>
-              <div class="flex items-center gap-x-3">
-                <input
-                  id="heard-other"
-                  name="hear-about-high-tide-aviation"
-                  type="radio"
-                  class="h-4 w-4 shrink-0 border-gray-300 text-medium-blue focus:ring-medium-blue"
-                  value="Other"
-                />
-                <label for="heard-other" class="block leading-6 text-gray-600">
-                  Other (please specify):
-                </label>
-                <input
-                  type="text"
-                  name="hear-about-high-tide-aviation-other"
-                  class="ml-2 flex-1 p-2 rounded-md border-0 py-1.5 text-dark-blue shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-medium-blue sm:sm:leading-6"
-                />
-              </div>
-            </div>
-          </fieldset>
-
-          <fieldset>
-            <legend class="font-medium leading-6 text-dark-blue">
-              Do you have any additional comments or questions for our team?
-            </legend>
-            <div class="mt-2">
-              <textarea
-                name="additional-comments"
-                id="additional-comments"
-                rows="3"
-                class="block w-full p-2 rounded-md border-0 py-1.5 text-dark-blue shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-medium-blue sm:sm:leading-6"
-              ></textarea>
-            </div>
-          </fieldset>
+          <div>
+            <label for="last-name" class="block font-medium text-dark-blue">Last name</label>
+            <input type="text" name="last-name" id="last-name" class="block w-full p-2 mt-1 rounded-md border-gray-300 ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-medium-blue" required />
+          </div>
+          <div>
+            <label for="email" class="block font-medium text-dark-blue">Email address</label>
+            <input id="email" name="email" type="email" class="block w-full p-2 mt-1 rounded-md border-gray-300 ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-medium-blue" required />
+          </div>
+          <div>
+            <label for="phone" class="block font-medium text-dark-blue">Phone</label>
+            <input id="phone" name="phone" type="tel" class="block w-full p-2 mt-1 rounded-md border-gray-300 ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-medium-blue" required />
+          </div>
+          <div class="hidden">
+            <input name="confirm-email" />
+          </div>
         </div>
       </div>
-      <div class="mt-3">
-        <h2 class="text-medium-blue text-sm font-semibold">Final Note</h2>
-        <p class="text-medium-blue text-sm font-medium">
-          Once submitted, your answers will be reviewed by our team, and we’ll
-          reach out to discuss your personalized training path. This assessment
-          can be exported into your student profile and used to tailor
-          recommendations for scheduling, instruction format, and financial
-          planning.
-        </p>
-      </div>
-      <div class="flex gap-3 my-5 items-center">
-        <input
-          type="checkbox"
-          name="agree-data-collection"
-          id="agree-data-collection"
-          class="h-4 w-4 shrink-0 rounded border-gray-300 text-medium-blue focus:ring-medium-blue"
-        />
 
-        <label for="agree-data-collection" class="text-gray-500 text-sm">
-          By providing my email and phone number, I agree to receive email and
-          text messages from High Tide Aviation. I understand that I can opt-out
-          at any time.
-        </label>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <fieldset>
+          <legend class="font-bold text-dark-blue mb-3">Aircraft of Interest</legend>
+          <div class="space-y-2">
+            <label class="flex items-center gap-3"><input type="checkbox" name="aircraft-interest" value="Airplane" /> Airplane</label>
+            <label class="flex items-center gap-3"><input type="checkbox" name="aircraft-interest" value="Helicopter" /> Helicopter</label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend class="font-bold text-dark-blue mb-3">Preferred Method of Contact</legend>
+          <div class="space-y-2">
+            <label class="flex items-center gap-3"><input type="radio" name="contact-method" value="Text" required /> Text</label>
+            <label class="flex items-center gap-3"><input type="radio" name="contact-method" value="Email" /> Email</label>
+            <label class="flex items-center gap-3"><input type="radio" name="contact-method" value="Phone Call" /> Phone Call</label>
+          </div>
+          <div class="mt-4">
+            <label class="text-sm text-gray-600 block">If Phone, best days/times to contact you:</label>
+            <input type="text" name="best-contact-time" class="block w-full p-2 mt-1 rounded-md ring-1 ring-gray-300" />
+          </div>
+        </fieldset>
       </div>
-      <button
-        type="submit"
-        id="submit-button"
-        class="btn-blue cursor-not-allowed bg-gray-400 hover:bg-gray-400 hover:text-white"
-        disabled>Submit</button
-      >
+
+      <div class="space-y-6">
+        <h2 class="text-2xl font-bold border-b-2 border-mustard-yellow pb-2 text-dark-blue">Pilot Background</h2>
+        <fieldset>
+          <legend class="font-medium text-dark-blue mb-3">Do you have any prior flight experience?</legend>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+            <label class="flex items-center gap-3"><input type="radio" name="prior-experience" value="None" required /> None</label>
+            <label class="flex items-center gap-3"><input type="radio" name="prior-experience" value="Discovery flight" /> Discovery flight</label>
+            <label class="flex items-center gap-3"><input type="radio" name="prior-experience" value="Some flight training" /> Some flight training (not licensed)</label>
+            <label class="flex items-center gap-3"><input type="radio" name="prior-experience" value="Licensed pilot" /> Licensed pilot (specify rating below)</label>
+          </div>
+        </fieldset>
+        <div>
+          <label class="block font-medium text-dark-blue">If yes, approximately how many flight hours do you have?</label>
+          <input type="text" name="flight-hours" class="block w-full p-2 mt-1 rounded-md ring-1 ring-gray-300" />
+        </div>
+      </div>
+
+      <div class="space-y-6">
+        <h2 class="text-2xl font-bold border-b-2 border-mustard-yellow pb-2 text-dark-blue">Training Goals</h2>
+        <fieldset>
+          <legend class="font-medium text-dark-blue mb-3">What certificate are you most interested in pursuing?</legend>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+            <label class="flex items-center gap-3"><input type="checkbox" name="pursuing-certificate" value="Private Pilot" /> Private Pilot</label>
+            <label class="flex items-center gap-3"><input type="checkbox" name="pursuing-certificate" value="Instrument" /> Instrument</label>
+            <label class="flex items-center gap-3"><input type="checkbox" name="pursuing-certificate" value="Commercial" /> Commercial</label>
+            <label class="flex items-center gap-3"><input type="checkbox" name="pursuing-certificate" value="CFI/CFII" /> CFI/CFII</label>
+            <label class="flex items-center gap-3"><input type="checkbox" name="pursuing-certificate" value="Multi Engine" /> Multi Engine</label>
+            <label class="flex items-center gap-3"><input type="checkbox" name="pursuing-certificate" value="Recreational only" /> Recreational flying only</label>
+            <label class="flex items-center gap-3"><input type="checkbox" name="pursuing-certificate" value="Not sure" /> Not sure yet — need guidance</label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend class="font-medium text-dark-blue mb-3">What is your long-term aviation goal?</legend>
+          <div class="space-y-2">
+            <label class="flex items-center gap-3"><input type="radio" name="long-term-goal" value="Recreational" required /> Recreational flying</label>
+            <label class="flex items-center gap-3"><input type="radio" name="long-term-goal" value="Career pilot" /> Career pilot (airlines, charter, etc.)</label>
+            <label class="flex items-center gap-3"><input type="radio" name="long-term-goal" value="Unsure" /> Unsure — exploring aviation</label>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="space-y-6">
+        <h2 class="text-2xl font-bold border-b-2 border-mustard-yellow pb-2 text-dark-blue">Readiness & Commitment</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <fieldset>
+            <legend class="font-medium text-dark-blue mb-3">How soon would you like to begin training?</legend>
+            <select name="start-readiness" class="block w-full p-2 rounded-md ring-1 ring-gray-300">
+              <option value="Immediately">Immediately</option>
+              <option value="Within 30 days">Within 30 days</option>
+              <option value="1–3 months">1–3 months</option>
+              <option value="3+ months">3+ months</option>
+            </select>
+          </fieldset>
+          <fieldset>
+            <legend class="font-medium text-dark-blue mb-3">How often do you plan to fly?</legend>
+            <select name="fly-frequency" class="block w-full p-2 rounded-md ring-1 ring-gray-300">
+              <option value="1 lesson per week">1 lesson per week</option>
+              <option value="2 lessons per week">2 lessons per week</option>
+              <option value="3+ lessons per week">3+ lessons per week</option>
+            </select>
+          </fieldset>
+        </div>
+        <fieldset>
+          <legend class="font-medium text-dark-blue mb-3">Flexibility for additional study time?</legend>
+          <div class="flex gap-10">
+            <label class="flex items-center gap-3"><input type="radio" name="study-flexibility" value="Yes" required /> Yes</label>
+            <label class="flex items-center gap-3"><input type="radio" name="study-flexibility" value="No" /> No</label>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="space-y-6">
+        <h2 class="text-2xl font-bold border-b-2 border-mustard-yellow pb-2 text-dark-blue">Financial Planning</h2>
+        <fieldset>
+          <legend class="font-medium text-dark-blue mb-3">How do you plan to pay for training?</legend>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+            <label class="flex items-center gap-3"><input type="checkbox" name="payment-plan" value="Pay-as-you-go" /> Pay-as-you-go</label>
+            <label class="flex items-center gap-3"><input type="checkbox" name="payment-plan" value="Financing" /> Financing</label>
+            <label class="flex items-center gap-3"><input type="checkbox" name="payment-plan" value="Scholarships" /> Scholarships / grants</label>
+            <label class="flex items-center gap-3"><input type="checkbox" name="payment-plan" value="Employer benefits" /> Employer benefits</label>
+            <label class="flex items-center gap-3"><input type="checkbox" name="payment-plan" value="GI Bill" /> GI Bill</label>
+            <label class="flex items-center gap-3"><input type="checkbox" name="payment-plan" value="NC TAP" /> NC TAP</label>
+            <label class="flex items-center gap-3"><input type="checkbox" name="payment-plan" value="Not sure yet" /> Not sure yet</label>
+          </div>
+        </fieldset>
+        <div>
+          <label class="block font-medium text-dark-blue">Estimated monthly training budget?</label>
+          <input type="text" name="monthly-budget" class="block w-full p-2 mt-1 rounded-md ring-1 ring-gray-300" />
+        </div>
+      </div>
+
+      <div class="space-y-6">
+        <h2 class="text-2xl font-bold border-b-2 border-mustard-yellow pb-2 text-dark-blue">Medical Eligibility</h2>
+        <fieldset>
+          <legend class="font-medium text-dark-blue mb-3">Held an FAA Medical Certificate?</legend>
+          <div class="flex gap-10">
+            <label class="flex items-center gap-3"><input type="radio" name="held-medical" value="Yes" required /> Yes</label>
+            <label class="flex items-center gap-3"><input type="radio" name="held-medical" value="No" /> No</label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend class="font-medium text-dark-blue mb-3">Known medical conditions that may affect eligibility?</legend>
+          <div class="flex flex-wrap gap-10">
+            <label class="flex items-center gap-3"><input type="radio" name="medical-conditions" value="No" required /> No</label>
+            <label class="flex items-center gap-3"><input type="radio" name="medical-conditions" value="Yes" /> Yes</label>
+          </div>
+          <input type="text" name="medical-details" placeholder="Optional details" class="block w-full p-2 mt-2 rounded-md ring-1 ring-gray-300" />
+        </fieldset>
+        <fieldset>
+          <legend class="font-medium text-dark-blue mb-3">Currently taking any medications?</legend>
+          <div class="flex flex-wrap gap-10">
+            <label class="flex items-center gap-3"><input type="radio" name="taking-meds" value="No" required /> No</label>
+            <label class="flex items-center gap-3"><input type="radio" name="taking-meds" value="Yes" /> Yes</label>
+          </div>
+          <input type="text" name="medication-details" placeholder="Optional details" class="block w-full p-2 mt-2 rounded-md ring-1 ring-gray-300" />
+        </fieldset>
+      </div>
+
+      <div class="space-y-6">
+        <h2 class="text-2xl font-bold border-b-2 border-mustard-yellow pb-2 text-dark-blue">Final Notes</h2>
+        <fieldset>
+          <legend class="font-medium text-dark-blue mb-3">How did you hear about us?</legend>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+            <label class="flex items-center gap-3"><input type="radio" name="marketing-source" value="Google" required /> Google / Online search</label>
+            <label class="flex items-center gap-3"><input type="radio" name="marketing-source" value="Social media" /> Social media</label>
+            <label class="flex items-center gap-3"><input type="radio" name="marketing-source" value="Referral" /> Referral</label>
+            <label class="flex items-center gap-3"><input type="radio" name="marketing-source" value="Airport visit" /> Airport visit</label>
+            <label class="flex items-center gap-3"><input type="radio" name="marketing-source" value="Other" /> Other</label>
+          </div>
+        </fieldset>
+        <div>
+          <label class="block font-medium text-dark-blue">Any questions for your consultation?</label>
+          <textarea name="questions" rows="4" class="block w-full p-2 mt-1 rounded-md ring-1 ring-gray-300"></textarea>
+        </div>
+      </div>
+
+      <div class="bg-gray-100 p-6 rounded-lg">
+        <div class="flex gap-3 items-start">
+          <input type="checkbox" id="agree-data-collection" class="h-5 w-5 mt-1" />
+          <label for="agree-data-collection" class="text-gray-600 text-sm">
+            I agree to receive messages from High Tide Aviation.
+          </label>
+        </div>
+        <button type="submit" id="submit-button" class="btn-blue w-full mt-6 opacity-50 cursor-not-allowed" disabled>Submit Assessment</button>
+      </div>
     </form>
   </section>
 
@@ -1441,103 +230,52 @@ const PORTAL_API_KEY = import.meta.env.PORTAL_API_KEY;
     const checkbox = document.getElementById("agree-data-collection");
     const submitButton = document.getElementById("submit-button");
 
-    checkbox.addEventListener("change", function () {
-      if (checkbox.checked) {
-        submitButton.disabled = false;
-        submitButton.classList.remove(
-          "cursor-not-allowed",
-          "bg-gray-400",
-          "hover:bg-gray-400",
-          "hover:text-white",
-        );
-      } else {
-        submitButton.disabled = true;
-        submitButton.classList.add(
-          "cursor-not-allowed",
-          "bg-gray-400",
-          "hover:bg-gray-400",
-          "hover:text-white",
-        );
-      }
+    checkbox.addEventListener("change", () => {
+      submitButton.disabled = !checkbox.checked;
+      submitButton.classList.toggle("opacity-50", !checkbox.checked);
+      submitButton.classList.toggle("cursor-not-allowed", !checkbox.checked);
     });
-    document.addEventListener("DOMContentLoaded", () => {
-      const form = document.getElementById("quiz-form");
-      if (!form) {
-        console.error("Form element not found.");
-        return;
-      }
 
-      form.addEventListener("submit", async (event) => {
-        event.preventDefault();
+    document.getElementById("quiz-form").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const formData = new FormData(e.target);
+      if (formData.get("confirm-email")) return;
 
-        const formData = new FormData(form);
-        const confirmEmail = formData.get("confirm-email")?.trim();
-        if (confirmEmail) return;
-
-        const webhookURL = QUIZ_FORM_WEBHOOK_URL;
-        const apiKey = PORTAL_API_KEY;
-
-        const urlEncodedBody = new URLSearchParams(formData).toString();
-
-        const excludedFields = [
-          "first-name",
-          "last-name",
-          "email",
-          "phone",
-          "confirm-email",
-          "agree-data-collection",
-        ];
-
-        const metadata = {};
-
-        for (const [key, value] of formData.entries()) {
-          if (!excludedFields.includes(key)) {
-            metadata[key] = value?.trim?.() ?? value;
-          }
-        }
-
-        const jsonBody = {
-          first_name: formData.get("first-name")?.trim() || "",
-          last_name: formData.get("last-name")?.trim() || "",
-          email: formData.get("email")?.trim() || "",
-          phone: formData.get("phone")?.trim() || "",
-          campaign: "quiz",
-          account_random_id: "ac_yec3jxiy",
-          metadata: metadata,
-        };
-
-        try {
-          const [ghlRes, portalRes] = await Promise.all([
-            fetch(webhookURL, {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/x-www-form-urlencoded",
-              },
-              body: urlEncodedBody,
-            }),
-            fetch("https://portal.rightruddermarketing.com/api/leads", {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-                Accept: "application/json",
-                "x-api-key": apiKey,
-              },
-              body: JSON.stringify(jsonBody),
-            }),
-          ]);
-
-          if (ghlRes.ok && portalRes.ok) {
-            window.location.href = "/quiz-confirmation";
+      const metadata = {};
+      const excluded = ["first-name", "last-name", "email", "phone", "confirm-email", "agree-data-collection"];
+      
+      formData.forEach((value, key) => {
+        if (!excluded.includes(key)) {
+          if (metadata[key]) {
+            metadata[key] = Array.isArray(metadata[key]) ? [...metadata[key], value] : [metadata[key], value];
           } else {
-            console.error("Submission failed", {
-              ghlStatus: ghlRes.status,
-              portalStatus: portalRes.status,
-            });
+            metadata[key] = value;
           }
-        } catch (err) {
-          console.error("Submission error:", err);
         }
       });
+
+      const jsonBody = {
+        first_name: formData.get("first-name"),
+        last_name: formData.get("last-name"),
+        email: formData.get("email"),
+        phone: formData.get("phone"),
+        campaign: "revised_quiz_2026",
+        account_random_id: "ac_yec3jxiy",
+        metadata: metadata
+      };
+
+      try {
+        const [ghl, portal] = await Promise.all([
+          fetch(QUIZ_FORM_WEBHOOK_URL, { method: "POST", body: new URLSearchParams(formData) }),
+          fetch("https://portal.rightruddermarketing.com/api/leads", {
+            method: "POST",
+            headers: { "Content-Type": "application/json", "x-api-key": PORTAL_API_KEY },
+            body: JSON.stringify(jsonBody)
+          })
+        ]);
+
+        if (ghl.ok && portal.ok) window.location.href = "/quiz-confirmation";
+      } catch (err) { console.error(err); }
     });
   </script>
 </BaseLayout>
