@@ -12,12 +12,12 @@ export const navbarLinks = [
         link: "/flight-training/ground-school",
       },
       {
-        name: "Private Pilot",
-        link: "/flight-training/private-pilot",
-      },
-      {
         name: "Sport Pilot Program",
         link: "/flight-training/sport-pilot",
+      },
+      {
+        name: "Private Pilot",
+        link: "/flight-training/private-pilot",
       },
       {
         name: "Instrument Rating",
