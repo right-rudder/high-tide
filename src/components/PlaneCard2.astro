@@ -11,10 +11,11 @@ const {
   imagesArray,
   usefulLoad,
   equipment,
+  availability,
 } = Astro.props;
+
 import type { ImageMetadata } from "astro";
 import { Image } from "astro:assets";
-import PlaneCarousel from "./PlaneCarousel";
 import PlaneCarousel2 from "./PlaneCarousel2.astro";
 
 const images = import.meta.glob<{ default: ImageMetadata }>(
@@ -28,14 +29,19 @@ if (!images[imagePath]) {
 ---
 
 <div
-  class="max-w-xl gap-5 lg:max-w-6xl max-h-none lg:max-h-[24rem] w-full mx-auto flex flex-col lg:flex-row items-center"
+  class="max-w-xl gap-5 lg:max-w-6xl w-full mx-auto flex flex-col lg:flex-row items-center bg-mustard-yellow/15 overflow-hidden"
 >
-  <div class="h-[12rem] sm:h-[20rem] lg:h-full aspect-video flex-[3_3_0]">
+  <div class="h-[18rem] sm:h-[20rem] lg:h-full aspect-video flex-[3] w-full min-w-0">
     <PlaneCarousel2 imagesArray={imagesArray} />
   </div>
+
   <div
-    class="grid grid-cols-2 items-center flex-1 w-full h-full p-5 justify-around gap-2 bg-mustard-yellow/15"
+    class="grid grid-cols-2 items-center flex-1 w-full h-full p-5 justify-around gap-2"
   >
+    <div class="col-span-2 flex flex-col gap-1 mb-2 border-b border-medium-blue/20 pb-2">
+       <h4 class="text-dark-blue font-bold text-xs uppercase tracking-widest">Status:</h4>
+       <p class="text-medium-blue font-bold">{availability}</p>
+    </div>
     <div class="flex flex-col gap-2">
       <h4 class="text-dark-blue font-medium">Model:</h4>
       <p class="text-medium-blue">{model}</p>
