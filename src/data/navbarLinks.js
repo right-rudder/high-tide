@@ -16,6 +16,10 @@ export const navbarLinks = [
         link: "/flight-training/private-pilot",
       },
       {
+        name: "Sport Pilot Program",
+        link: "/flight-training/sport-pilot",
+      },
+      {
         name: "Instrument Rating",
         link: "/flight-training/instrument-rating",
       },
