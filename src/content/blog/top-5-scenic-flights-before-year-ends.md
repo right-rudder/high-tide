@@ -20,7 +20,7 @@ tags:
   ]
 ---
 
-There’s no better way to celebrate the end of the year than with a breathtaking flight over the Carolina coast. High Tide Aviation offers a variety of **scenic airplane and helicopter tours** that highlight the natural beauty, historic landmarks, and coastal charm of the region.  
+There’s no better way to celebrate the end of the year than with a breathtaking flight over the Carolina coast. High Tide Aviation offers a variety of **scenic airplane tours** that highlight the natural beauty, historic landmarks, and coastal charm of the region.  
 
 Here are our top 5 tours to experience before the year ends:
 
@@ -62,7 +62,7 @@ Take off on a unique journey from **the USS North Carolina Battleship** to the *
 ## Why Choose High Tide Aviation Tours
 
 - **Experienced Pilots:** Certified commercial pilots ensure safety and comfort.  
-- **Diverse Fleet:** Options include smooth fixed-wing aircraft and helicopters.  
+- **Comfortable Aircraft:** Our fleet is maintained to the highest standards for a smooth ride.  
 - **Unforgettable Views:** Coastal landmarks, beaches, and marshes visible only from the sky.  
 
 ## Book Your Year-End Aerial Adventure

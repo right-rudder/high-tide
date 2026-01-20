@@ -23,7 +23,7 @@ tags:
 
 ## 1. Explore Your Options
 
-- [**Discover Your Passion:**](/first-time-pilots) Determine your specific aviation interests. Are you drawn to the thrill of commercial aviation, the flexibility of private piloting, or the unique challenges of seaplane or helicopter flight?
+- [**Discover Your Passion:**](/first-time-pilots) Determine your specific aviation interests. Are you drawn to the thrill of commercial aviation, the flexibility of private piloting, or adding advanced helicopter ratings to your professional credentials?
 - [**Research Pilot Licenses:**](/flight-training/private-pilot) Familiarize yourself with the different types of pilot licenses available (Private Pilot, Commercial Pilot, Instrument Rating, etc.) and their associated requirements.
 - [**Consult with High Tide Aviation:**](/contact-us) Schedule a free consultation with one of our experienced flight instructors. Discuss your goals, ask questions, and gain valuable insights into the best training path for you.
 

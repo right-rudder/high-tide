@@ -81,7 +81,7 @@ At High Tide Aviation, our goal isn’t just to help you get a license. It’s t
 
 - **Personalized training support**
 - **FAA-certified instructors** with extensive real-world flying experience
-- **Helicopter and multi-engine programs** at our Southport and St. Simons locations
+- **Advanced Helicopter and multi-engine programs** at our Southport and St. Simons locations
 
 Avoiding the most common mistakes starts with choosing the right school.
 

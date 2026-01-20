@@ -4,9 +4,7 @@ import Header from "../../../components/Header.astro";
 import Banner from "../../../assets/high-tide-fleet.jpg";
 import { Image } from "astro:assets";
 import Intro from "../../../assets/high-tide-aviation-logo-on-plane-tail.jpg";
-import { fleet } from "../../../data/fleet";
-import PlaneCard from "../../../components/PlaneCard.astro";
-import PlaneCard2 from "../../../components/PlaneCard2.astro";
+import FleetFilterForPlaneCard2 from "../../../components/FleetFilterForPlaneCard2.astro";
 ---
 
 <BaseLayout
@@ -67,72 +65,14 @@ import PlaneCard2 from "../../../components/PlaneCard2.astro";
   <section id="fleet" class="py-24 px-5 bg-light-blue/10 scroll-my-20">
     <div class="max-w-xl lg:max-w-7xl mx-auto flex flex-col items-center">
       <h2 class="uppercase text-medium-blue font-bold tracking-widest">
-        Available for Rent
+        Available for Rent & Instruction
       </h2>
-      <h3 class="text-5xl text-dark-blue font-bold leading-tight mb-5">
-        Meet Our Cessna Skyhawk Fleet
+      <h3 class="text-5xl text-dark-blue font-bold leading-tight mb-8">
+        Explore Our Aircraft
       </h3>
-      <div class="grid gap-8 mt-5">
-        {
-          fleet
-            .slice(0, 8)
-            .map((plane) => (
-              <PlaneCard2
-                name={plane.name}
-                rentalPrice={plane.rentalPrice}
-                imagePath={plane.imagePath}
-                slug={plane.slug}
-                model={plane.model}
-                hasRibbon={plane.hasRibbon}
-                ribbonTitle={plane.ribbonTitle}
-                specialUrl={plane.specialUrl}
-                imagesArray={plane.imagesArray}
-                usableFuel={plane.usableFuel}
-                usefulLoad={plane.usefulLoad}
-                horsepower={plane.horsepower}
-                equipment={plane.equipment}
-              />
-            ))
-        }
-      </div>
-    </div>
-  </section>
+      
+      <FleetFilterForPlaneCard2 />
 
-  <section
-    id="advanced-aircraft"
-    class="py-24 px-5 scroll-my-20"
-    id="advanced-aircraft"
-  >
-    <div class="max-w-xl lg:max-w-7xl mx-auto flex flex-col items-center">
-      <h2 class="uppercase text-medium-blue font-bold tracking-widest">
-        Available for Dual Instruction Only
-      </h2>
-      <h3 class="text-5xl text-dark-blue font-bold leading-tight mb-5">
-        Our Advanced Aircraft
-      </h3>
-      <div class="grid gap-8 mt-5">
-        {
-          fleet
-            .slice(8)
-            .map((plane) => (
-              <PlaneCard2
-                name={plane.name}
-                rentalPrice={plane.rentalPrice}
-                imagePath={plane.imagePath}
-                slug={plane.slug}
-                model={plane.model}
-                hasRibbon={plane.hasRibbon}
-                ribbonTitle={plane.ribbonTitle}
-                specialUrl={plane.specialUrl}
-                imagesArray={plane.imagesArray}
-                usableFuel={plane.usableFuel}
-                usefulLoad={plane.usefulLoad}
-                horsepower={plane.horsepower}
-                equipment={plane.equipment}
-              />
-            ))
-        }
-      </div>
     </div>
   </section>
 
@@ -153,3 +93,4 @@ import PlaneCard2 from "../../../components/PlaneCard2.astro";
     </div>
   </section>
 </BaseLayout>
+

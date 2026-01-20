@@ -1,7 +1,7 @@
 ---
 author: "Jessica Ward"
 title: "More Than Flight Training: High Tide Aviation's Extended Services"
-description: "Explore the wide range of additional services offered by High Tide Aviation, including aircraft brokerage, management, airplane tours, helicopter tours, aerial photography, and videography, all based near Wilmington, NC, in Southport and Cape Fear."
+description: "Explore the wide range of additional services offered by High Tide Aviation, including aircraft brokerage, management, airplane tours, aerial photography, and videography, all based near Wilmington, NC, in Southport and Cape Fear."
 heroImage: "/src/assets/ocean-crest-pier-southport-wilmington-nc.webp"
 pubDate: "Aug 7, 2024"
 category: "Aviation Services"
@@ -11,7 +11,6 @@ tags:
     "aircraft-brokerage",
     "aircraft-management",
     "airplane-tours",
-    "helicopter-tours",
     "aerial-photography",
     "aerial-videography",
     "Wilmington NC",
@@ -40,13 +39,6 @@ _Find out more about our Aircraft Management services [here](https://hightideavi
 Experience the beauty of Wilmington and its surroundings from the sky with our Airplane Tours. These tours offer a unique perspective of the coastal region, providing breathtaking views of the beaches, landmarks, and natural scenery. Whether you are a tourist or a local looking for a new adventure, our airplane tours are an unforgettable experience.
 
 Discover our Airplane Tours [here](https://flyhightide.com/).
-
-## Helicopter Tours
-
-For a more dynamic and versatile aerial experience, consider our Helicopter Tours. These tours offer unparalleled access to Wilmington’s most scenic spots, allowing you to hover, land, and explore areas that are inaccessible by plane. High Tide Aviation’s helicopter tours are perfect for sightseeing, special occasions, or simply enjoying the thrill of helicopter flight.
-
-![Helicopter taking off at High Tide Aviation in Southport](/src/assets/flying-the-r44-at-high-tide-aviation-flight-school.webp)
-_Explore our Helicopter Tours [here](https://flyhightide.com/)._
 
 ## Aerial Photography
 

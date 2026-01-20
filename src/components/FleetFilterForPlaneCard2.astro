@@ -1,0 +1,142 @@
+---
+import PlaneCard2 from "./PlaneCard2.astro";
+import { fleet } from "../data/fleet";
+
+const categories = [
+  { label: "All", value: "all" },
+  { label: "Cessna", value: "cessna" },
+  { label: "Advanced", value: "advanced" },
+  { label: "Helicopter", value: "helicopter" },
+  { label: "Simulator", value: "simulator" },
+];
+---
+
+<div class="flex flex-col items-center w-full">
+  <div class="flex flex-wrap justify-center gap-4 mb-10">
+    {
+      categories.map((cat, index) => (
+        <button
+          class={`filter-btn px-6 py-2 rounded-full border-2 font-bold transition-all duration-300 ${
+            index === 0
+              ? "bg-mustard-yellow border-mustard-yellow text-white active hover:bg-mustard-yellow"
+              : "bg-transparent border-medium-blue text-medium-blue hover:bg-medium-blue hover:text-white"
+          }`}
+          data-filter={cat.value}
+        >
+          {cat.label}
+        </button>
+      ))
+    }
+  </div>
+
+  <div class="grid gap-8 w-full transition-all duration-500 min-h-[500px]">
+    {
+      fleet.map((plane) => (
+        <div
+          class="fleet-card transition-all duration-500 ease-in-out"
+          data-category={plane.category}
+        >
+          <PlaneCard2
+            name={plane.name}
+            rentalPrice={plane.rentalPrice}
+            imagePath={plane.imagePath}
+            slug={plane.slug}
+            model={plane.model}
+            hasRibbon={plane.hasRibbon}
+            ribbonTitle={plane.ribbonTitle}
+            specialUrl={plane.specialUrl}
+            imagesArray={plane.imagesArray}
+            usableFuel={plane.usableFuel}
+            usefulLoad={plane.usefulLoad}
+            horsepower={plane.horsepower}
+            equipment={plane.equipment}
+            availability={plane.availability}
+          />
+        </div>
+      ))
+    }
+    <div
+      id="no-results"
+      class="hidden text-center text-xl text-gray-500 py-10 w-full"
+    >
+      No aircraft found in this category.
+    </div>
+  </div>
+</div>
+
+<script>
+  function setupFilter() {
+    const buttons = document.querySelectorAll(".filter-btn");
+    const cards = document.querySelectorAll(".fleet-card");
+    const noResults = document.getElementById("no-results");
+
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => {
+        buttons.forEach((btn) => {
+         btn.classList.remove(
+          "bg-mustard-yellow",
+          "border-mustard-yellow",
+          "text-white",
+          "active",
+          "hover:bg-mustard-yellow"
+        );
+        btn.classList.add(
+          "bg-transparent",
+          "border-medium-blue",
+          "text-medium-blue",
+          "hover:bg-medium-blue",
+          "hover:text-white"
+          );
+        });
+        
+        button.classList.remove(
+          "bg-transparent",
+          "border-medium-blue",
+          "text-medium-blue",
+          "hover:bg-medium-blue",
+          "hover:text-white"
+        );
+        button.classList.add(
+          "bg-mustard-yellow",
+          "border-mustard-yellow",
+          "text-white",
+          "active",
+          "hover:bg-mustard-yellow"
+        );
+
+        const filterValue = button.getAttribute("data-filter");
+        let visibleCount = 0;
+
+        cards.forEach((card) => {
+          const cardCategory = card.getAttribute("data-category");
+
+          if (filterValue === "all" || filterValue === cardCategory) {
+            card.classList.remove("hidden");
+            card.style.display = "block";
+            setTimeout(() => {
+              card.style.opacity = "1";
+              card.style.transform = "translateY(0)";
+            }, 10);
+            visibleCount++;
+          } else {
+            card.style.opacity = "0";
+            card.style.transform = "translateY(20px)";
+            setTimeout(() => {
+              card.style.display = "none";
+              card.classList.add("hidden");
+            }, 300);
+          }
+        });
+
+        if (visibleCount === 0) {
+          noResults.classList.remove("hidden");
+        } else {
+          noResults.classList.add("hidden");
+        }
+      });
+    });
+  }
+
+  document.addEventListener("astro:page-load", setupFilter);
+  document.addEventListener("DOMContentLoaded", setupFilter);
+</script>

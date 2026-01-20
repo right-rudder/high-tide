@@ -2,6 +2,8 @@ export const fleet = [
   {
     name: "N7085G",
     slug: "N7085G",
+    category: "cessna",
+    availability: "Available for Rent",
     rentalPrice: "$195 /hr wet",
     usefulLoad: "882 lbs",
     horsepower: "160 HP",
@@ -12,8 +14,7 @@ export const fleet = [
       "Dual KX-155 NAV/COMM w/ GS",
       "Lycoming O-320 (160 BHP)",
     ],
-    imagePath:
-      "/src/assets/fleet-n7085g-exterior-photo-aircraft-renting-north-carolina.jpg",
+    imagePath: "/src/assets/fleet-n7085g-exterior-photo-aircraft-renting-north-carolina.jpg",
     imagesArray: [
       "/src/assets/fleet-n7085g-exterior-photo-aircraft-renting-north-carolina.jpg",
       "/src/assets/N7085G-control-panel.webp",
@@ -26,6 +27,8 @@ export const fleet = [
   {
     name: "N35461",
     slug: "N35461",
+    category: "cessna",
+    availability: "Available for Rent",
     rentalPrice: "$195 /hr wet",
     usefulLoad: "917.28 lbs",
     horsepower: "150 HP",
@@ -47,6 +50,8 @@ export const fleet = [
   {
     name: "N79072",
     slug: "N79072",
+    category: "cessna",
+    availability: "Available for Rent",
     rentalPrice: "$195 /hr wet",
     usefulLoad: "891.5 lbs",
     horsepower: "150 HP",
@@ -72,6 +77,8 @@ export const fleet = [
   {
     name: "N8409L",
     slug: "N8409L",
+    category: "cessna",
+    availability: "Available for Rent",
     rentalPrice: "$195 /hr wet",
     usefulLoad: "937.05 lbs",
     horsepower: "160 HP",
@@ -98,6 +105,8 @@ export const fleet = [
   {
     name: "N79136",
     slug: "N79136",
+    category: "cessna",
+    availability: "Available for Rent",
     rentalPrice: "$195 /hr wet",
     usefulLoad: "892.72 lbs",
     horsepower: "150 HP",
@@ -110,8 +119,7 @@ export const fleet = [
       "Lycoming O-320 (150 BHP)",
       "Sentry Mini ADS-B In",
     ],
-    imagePath:
-      "/src/assets/Fleet-N79136-cessna_high-tide-flight-academy_flight-school_pilot-training_plane-on-ground.jpg",
+    imagePath: "/src/assets/Fleet-N79136-cessna_high-tide-flight-academy_flight-school_pilot-training_plane-on-ground.jpg",
     imagesArray: [
       "/src/assets/Fleet-N79136-cessna_high-tide-flight-academy_flight-school_pilot-training_plane-on-ground.jpg",
       "/src/assets/N79136-control-panel.webp",
@@ -124,6 +132,8 @@ export const fleet = [
   {
     name: "N79475",
     slug: "N79475",
+    category: "cessna",
+    availability: "Available for Rent",
     rentalPrice: "$210 /hr wet",
     usefulLoad: "1089.2 lbs",
     horsepower: "180 HP",
@@ -150,6 +160,8 @@ export const fleet = [
   {
     name: "N7994X",
     slug: "N7994X",
+    category: "cessna",
+    availability: "Available for Rent",
     rentalPrice: "$195 /hr wet",
     usefulLoad: "857.4 lbs",
     horsepower: "145 HP",
@@ -174,6 +186,8 @@ export const fleet = [
   {
     name: "Redbird FMX",
     slug: "RedbirdFMX",
+    category: "simulator",
+    availability: "Available for Rent",
     rentalPrice: "$85 /hr",
     specialUrl: "/flight-simulator",
     usefulLoad: "N/A",
@@ -181,8 +195,7 @@ export const fleet = [
     usableFuel: "N/A",
     model: "Redbird FMX",
     equipment: [],
-    imagePath:
-      "/src/assets/redbird-fmx-simulator-exterior-high-tide-aviation-flight-school.jpg",
+    imagePath: "/src/assets/redbird-fmx-simulator-exterior-high-tide-aviation-flight-school.jpg",
     hasRibbon: true,
     ribbonTitle: "Great for time building!",
     imagesArray: [
@@ -200,6 +213,8 @@ export const fleet = [
   {
     name: "Bonanza",
     slug: "N4457S",
+    category: "advanced",
+    availability: "Dual Instruction Only",
     usefulLoad: "-- lbs",
     horsepower: "285 HP",
     usableFuel: "74 gal",
@@ -223,6 +238,8 @@ export const fleet = [
   {
     name: "N626H",
     slug: "N626H",
+    category: "advanced",
+    availability: "Dual Instruction Only",
     usefulLoad: "-- lbs",
     horsepower: "520 HP",
     usableFuel: "127 gal",
@@ -241,6 +258,8 @@ export const fleet = [
   {
     name: "N531Q",
     slug: "N531Q",
+    category: "advanced",
+    availability: "Dual Instruction Only",
     usefulLoad: "-- lbs",
     horsepower: "520 HP",
     usableFuel: "127 gal",
@@ -256,6 +275,8 @@ export const fleet = [
   {
     name: "N570H",
     slug: "N570H",
+    category: "helicopter",
+    availability: "Dual Instruction Only",
     usefulLoad: "-- lbs",
     horsepower: "-- HP",
     usableFuel: "29.5 gal",
@@ -271,6 +292,8 @@ export const fleet = [
   {
     name: "N830FM",
     slug: "N830FM",
+    category: "helicopter",
+    availability: "Dual Instruction Only",
     usefulLoad: "-- lbs",
     horsepower: "-- HP",
     usableFuel: "29.5 gal",
