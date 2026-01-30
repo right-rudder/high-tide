@@ -13,6 +13,7 @@ const groundSchool = {
     "High Tide Aviation's ground school is where your aviation journey begins. As the foundation of pilot training, ground school equips students with the essential knowledge required to become safe, confident pilots. Instruction is led by experienced aviation professionals who bring real-world flying insight into every lesson.",
     "Students explore core aviation subjects including aerodynamics, aircraft systems, navigation, weather interpretation, flight planning, radio communication, and Federal Aviation Regulations. Lessons are interactive and designed to ensure true understanding — not rote memorization.",
     "Upon completion, students are prepared to take the FAA knowledge (written) examination and move confidently into flight training. Whether your goal is recreational flying or a professional pilot career, ground school sets the stage for everything that follows.",
+    "<strong>Please Note:</strong> We currently do not have any open enrollment for in-person ground school classes. Please check our online options below or contact us for one-on-one instruction availability.",
   ],
 
   prerequisites: {
@@ -54,149 +55,82 @@ const groundSchool = {
   },
 
   tiers: {
-    southport: [
-      {
-        name: "In-Person Private Pilot Ground School (Brunswick CC)",
-        id: "tier-private-pilot-brunswick-cc",
-        url: "https://brunswickcc-register.fundfive.com/course/section/21399",
-        price: "$180",
-        description:
-          "An immersive, in-person Private Pilot Ground School designed specifically for first-time pilots.",
-        schedule:
-          "January 5, 2026 – March 26, 2026 | Tuesdays & Thursdays, 6–9 PM",
-        location:
-          "Brunswick Community College – Leland Campus (2045 Enterprise Dr NE, Leland, NC 28451)",
-        features: [
-          "12-week in-person ground school",
-          "Twice-weekly live instruction with experienced aviation professionals",
-          "Interactive classroom environment with real-world application",
-          "Covers aerodynamics, weather, navigation, regulations, and flight planning",
-          "Direct path to FAA Private Pilot written endorsement",
-          "Small class size with limited seats",
-        ],
-        nonfeatures: [
-          "FAA written exam fee not included",
-          "Books and supplies not included",
-        ],
-        requirements: [
-          "Regular attendance required for instructor endorsement",
-          "Completion of assigned coursework",
-        ],
-        featured: true,
-        cta: "Reserve Your Seat",
-      },
+      southport: [
+        {
+          name: "Small Unmanned Aircraft Systems (Drones)",
+          id: "tier-drones",
+          url: "https://brunswickcc-register.fundfive.com/course/section/21399",
+          price: "$125",
+          schedule: "Offered during select semesters",
+          features: [
+            "Commercial and recreational drone operations",
+            "Airspace, weather, and regulatory compliance",
+            "Human factors and UAV performance",
+            "Preparation for FAA Part 107 Remote Pilot exam",
+          ],
+          nonfeatures: ["Books and supplies not included"],
+          featured: false,
+          cta: "Start Drone Training",
+        },
 
-      {
-        name: "Instrument Rating Ground School",
-        id: "tier-instrument-rating",
-        url: "https://brunswickcc-register.fundfive.com/course/section/21399",
-        price: "$180",
-        description:
-          "Advance your training with structured instrument rating ground instruction.",
-        schedule: "Offered during select semesters",
-        features: [
-          "Instrument flying principles and navigation systems",
-          "Federal Aviation Regulations and aeromedical factors",
-          "Preparation for the FAA Instrument Rating written exam",
-        ],
-        nonfeatures: ["Books and supplies not included"],
-        featured: false,
-        cta: "Enroll Now",
-      },
+        {
+          name: "One-on-One Ground School",
+          id: "tier-one-on-one",
+          href: "#",
+          price: "Custom",
+          description:
+            "Personalized ground school instruction tailored to your schedule and goals.",
+          features: [
+            "Custom-paced instruction",
+            "Flexible scheduling",
+            "Direct instructor support",
+          ],
+          featured: false,
+          cta: "Contact for Custom Quote",
+        },
+      ],
 
-      {
-        name: "Small Unmanned Aircraft Systems (Drones)",
-        id: "tier-drones",
-        url: "https://brunswickcc-register.fundfive.com/course/section/21399",
-        price: "$125",
-        schedule: "Offered during select semesters",
-        features: [
-          "Commercial and recreational drone operations",
-          "Airspace, weather, and regulatory compliance",
-          "Human factors and UAV performance",
-          "Preparation for FAA Part 107 Remote Pilot exam",
-        ],
-        nonfeatures: ["Books and supplies not included"],
-        featured: false,
-        cta: "Start Drone Training",
-      },
+      simons: [
+        {
+          name: "One-on-One Ground School",
+          id: "tier-one-on-one-simons",
+          href: "#",
+          price: "Custom",
+          description:
+            "Personalized ground school instruction in St Simons Island.",
+          features: [
+            "Flexible pacing",
+            "Custom curriculum",
+            "Instructor-led support",
+          ],
+          featured: false,
+          cta: "Contact for Custom Quote",
+        },
+      ],
 
-      {
-        name: "One-on-One Ground School",
-        id: "tier-one-on-one",
-        href: "#",
-        price: "Custom",
-        description:
-          "Personalized ground school instruction tailored to your schedule and goals.",
-        features: [
-          "Custom-paced instruction",
-          "Flexible scheduling",
-          "Direct instructor support",
-        ],
-        featured: false,
-        cta: "Contact for Custom Quote",
-      },
-    ],
-
-    simons: [
-      {
-        name: "Private Pilot Ground School (St Simons Island)",
-        id: "tier-private-pilot-simons",
-        href: "#",
-        price: "$550",
-        description:
-          "Coastal-based Private Pilot Ground School with expanded materials included.",
-        schedule: "Offered during select semesters",
-        features: [
-          "Includes books and supplies",
-          "Comprehensive private pilot curriculum",
-          "Focused instruction on navigation, weather, and regulations",
-          "Preparation for FAA Private Pilot written exam",
-        ],
-        featured: false,
-        cta: "Join GA Ground School",
-      },
-
-      {
-        name: "One-on-One Ground School",
-        id: "tier-one-on-one-simons",
-        href: "#",
-        price: "Custom",
-        description:
-          "Personalized ground school instruction in St Simons Island.",
-        features: [
-          "Flexible pacing",
-          "Custom curriculum",
-          "Instructor-led support",
-        ],
-        featured: false,
-        cta: "Contact for Custom Quote",
-      },
-    ],
-
-    online: [
-      {
-        name: "Online Private Pilot Ground School",
-        id: "tier-private-pilot-online",
-        href: "#",
-        price: "$275",
-        description:
-          "Self-paced online ground school with instructor oversight and endorsement.",
-        schedule: "Start anytime",
-        features: [
-          "Lifetime access",
-          "One-time payment",
-          "Interactive lessons",
-          "Instructor monitoring",
-          "FAA written endorsement included",
-          "Pass guarantee",
-        ],
-        featured: false,
-        cta: "Get Started",
-        url: "https://hightideaviation.groundschool.com/",
-      },
-    ],
-  },
+      online: [
+        {
+          name: "Online Private Pilot Ground School",
+          id: "tier-private-pilot-online",
+          href: "#",
+          price: "$275",
+          description:
+            "Self-paced online ground school with instructor oversight and endorsement.",
+          schedule: "Start anytime",
+          features: [
+            "Lifetime access",
+            "One-time payment",
+            "Interactive lessons",
+            "Instructor monitoring",
+            "FAA written endorsement included",
+            "Pass guarantee",
+          ],
+          featured: false,
+          cta: "Get Started",
+          url: "https://hightideaviation.groundschool.com/",
+        },
+      ],
+    },
 
   futurePathways: [
     {
