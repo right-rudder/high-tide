@@ -9,6 +9,7 @@ import { FaArrowAltCircleRight } from "react-icons/fa";
 import FlightProgramCard from "../components/FlightProgramCard.astro";
 import PricingComponent from "../components/PricingComponent";
 import ToursCTA from "../components/ToursCTA.astro";
+
 const { pathname } = Astro.url;
 const {
   bannerImagePath,
@@ -22,20 +23,21 @@ const {
   enrollmentProcess,
   futurePathways,
   alt,
-  programs,
   meet,
   programName,
   siteDescription,
-  requirements,
 } = Astro.props;
+
 const images = import.meta.glob<{ default: ImageMetadata }>(
   "/src/assets/*.{jpeg,jpg,png,gif,webp}",
 );
+
 if (!images[imagePath]) {
   throw new Error(
     `"${imagePath}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif,webp}"`,
   );
 }
+
 const Banner = images[bannerImagePath]();
 
 function getLastWord(str) {
@@ -49,7 +51,6 @@ const cleanedPath = pathname.replace(/\/$/, "");
 const groundSchoolLinks = {
   "/flight-training/ground-school": "https://ce.coastalpines.edu/search/publicCourseSearchDetails.do?method=load&courseId=1020462",
 };
-const ctaLink = groundSchoolLinks[cleanedPath] ?? "/enrollment-form";
 ---
 
 <BaseLayout
@@ -61,89 +62,10 @@ const ctaLink = groundSchoolLinks[cleanedPath] ?? "/enrollment-form";
     slot="header"
     image={Banner}
     title={programName}
-    ctaText="Enroll Now"
-    ctaLink={ctaLink}
+    ctaText={programName === "Ground School" ? "Check Other Courses" : "Enroll Now"}
+    ctaLink={programName === "Ground School" ? "/flight-training/sport-pilot" : (groundSchoolLinks[cleanedPath] ?? "/enrollment-form")}
     alt={alt}
   />
-
-  {programName === "Ground School" && (
-  <div class="max-w-6xl mx-auto my-8 px-5">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-      <!-- St. Simons -->
-      <div class="bg-mustard-yellow text-dark-blue p-6 rounded-xl shadow-md flex flex-col items-center text-center">
-        <h3 class="text-2xl font-bold">St. Simons Ground School</h3>
-        <p class="mt-2 max-w-prose">
-          Register now to reserve your spot for the upcoming St. Simons classes.
-        </p>
-        <p class="mt-2">
-          Classes every Tuesday and Thursday, Feb 10 – April 30 at Coastal Pines Technical College.
-        </p>
-        <p class="mt-2 font-medium">
-          Cost: $550 <span class="font-semibold">(includes textbook and materials)</span>
-        </p>
-        <a
-          href="https://ce.coastalpines.edu/search/publicCourseSearchDetails.do?method=load&courseId=1020462"
-          class="btn-blue hover:bg-white mt-4 inline-block"
-        >
-          Reserve Your Spot
-        </a>
-        <p class="mt-3 text-sm opacity-80">
-          *Seats are limited and fill up quickly. Don't miss out!
-        </p>
-      </div>
-
-      <!-- Southport -->
-      <div class="bg-mustard-yellow text-dark-blue p-6 rounded-xl shadow-md flex flex-col items-center text-center">
-        <h3 class="text-2xl font-bold">Southport Private Pilot Ground School</h3>
-        <p class="mt-2 max-w-prose">
-          Register now to reserve your spot for the upcoming Southport Ground School classes.
-        </p>
-        <p class="mt-2">
-          Classes every Tuesday and Thursday, Jan 6 – Mar 26 at Brunswick Community College Leland Center.
-        </p>
-        <p class="mt-2 font-medium">
-          Cost: $180
-        </p>
-        <a
-          href="https://brunswickcc-register.fundfive.com/course/section/27032"
-          class="btn-blue hover:bg-white mt-4 inline-block"
-        >
-          Reserve Your Spot
-        </a>
-        <p class="mt-3 text-sm opacity-80">
-          *Seats are limited and fill up quickly. Don't miss out!
-        </p>
-      </div>
-
-      <!-- Southport Instrument (new block) -->
-      <div class="bg-mustard-yellow text-dark-blue p-6 rounded-xl shadow-md flex flex-col text-center md:col-span-2 md:max-w-xl md:mx-auto">
-        <h3 class="text-2xl font-bold">Southport Instrument Ground School</h3>
-        <p class="mt-2 mx-auto">
-          Register now to reserve your spot for the upcoming Wilmington classes.
-        </p>
-        <p class="mt-2">
-          Classes every Monday and Wednesday, Jan 5 – Mar 30 at Brunswick Community College Leland Center.
-        </p>
-        <p class="mt-2 font-medium">
-          Cost: $180
-        </p>
-
-        <div class="mt-auto"></div>
-
-        <a
-          href="https://brunswickcc-register.fundfive.com/course/section/27033"
-          class="btn-blue hover:bg-white mt-4 inline-block mx-auto"
->
-          Reserve Your Spot
-        </a>
-        <p class="mt-3 text-sm opacity-80">
-          *Seats are limited and fill up quickly. Don't miss out!
-        </p>
-      </div>
-    </div>
-  </div>
-)}
-
 
   <section class="max-w-6xl mx-auto py-16 px-5">
     <div class="flex flex-col md:flex-row gap-10">
@@ -152,183 +74,107 @@ const ctaLink = groundSchoolLinks[cleanedPath] ?? "/enrollment-form";
         <BigCTA />
       </div>
       <div class="flex flex-col gap-5 flex-[2.5_2.5_0]">
-        <div
-          class="bg-dark-blue border-l-8 flex flex-col border-mustard-yellow text-white p-5 gap-2 items-center"
-        >
+        <div class="bg-dark-blue border-l-8 flex flex-col border-mustard-yellow text-white p-5 gap-2 items-center">
           <p class="uppercase text-xl text-center">
-            {programName}
-            {getLastWord(programName) === "Training" ? "" : "Training"} is available
-            in
+            {programName} {getLastWord(programName) === "Training" ? "" : "Training"} is available in
           </p>
           <ul class="flex flex-col flex-wrap justify-center gap-3 md:gap-10 md:flex-row">
-            {
-              locations.map((location) => (
-                <li class="text-xl font-medium tracking-wider">{location}</li>
-              ))
-            }
+            {locations.map((location) => (
+              <li class="text-xl font-medium tracking-wider">{location}</li>
+            ))}
           </ul>
         </div>
-        <Image
-          src={images[imagePath]()}
-          alt={title}
-          class="w-full h-full object-cover"
-        />
+        <Image src={images[imagePath]()} alt={title} class="w-full h-full object-cover" />
       </div>
     </div>
 
     <div class="flex flex-col my-8 gap-3">
       <h2 class="text-4xl font-medium text-dark-blue">{subtitle}</h2>
-      {
-        description.map((paragraph) => (
-          <p class="text-gray-600 leading-loose">{paragraph}</p>
-        ))
-      }
-      {
-        programs &&
-          programs.map((program) => (
-            <p class="text-gray-600 leading-loose">
-              <span class="font-medium text-gray-800">{program.title}: </span>
-              {program.description}
-            </p>
-          ))
-      }
+      {description.map((paragraph) => (
+        <p class="text-gray-600 leading-loose" set:html={paragraph}></p>
+      ))}
 
       <div class="flex flex-col lg:flex-row gap-8 lg:gap-16 mt-7">
         <div class="flex-1">
-          <h2 class="text-2xl font-medium text-dark-blue">
-            Program Prerequisites
-          </h2>
-          <h3 class="text-xl font-medium text-medium-blue max-w-md mt-5">
-            {prerequisites.subtitle}
-          </h3>
+          <h2 class="text-2xl font-medium text-dark-blue">Program Prerequisites</h2>
+          <h3 class="text-xl font-medium text-medium-blue max-w-md mt-5">{prerequisites.subtitle}</h3>
           <ul class="flex flex-col gap-1 mt-5">
-            {
-              prerequisites.list.map((item) => (
-                <li class="flex gap-3">
-                  <FaArrowAltCircleRight className="text-mustard-yellow size-5 flex-shrink-0 mt-1" />
-                  <p class="text-dark-blue">
-                    <span class="font-semibold">{item.heading}: </span>
-                    <span class="text-dark-blue/80">{item.description}</span>
-                  </p>
-                </li>
-              ))
-            }
+            {prerequisites.list.map((item) => (
+              <li class="flex gap-3">
+                <FaArrowAltCircleRight className="text-mustard-yellow size-5 flex-shrink-0 mt-1" />
+                <p class="text-dark-blue">
+                  <span class="font-semibold">{item.heading}: </span>
+                  <span class="text-dark-blue/80">{item.description}</span>
+                </p>
+              </li>
+            ))}
           </ul>
         </div>
+
         <div class="flex-1">
-          <h2 class="text-2xl font-medium text-dark-blue">
-            Enrollment Process
-          </h2>
-          <h3 class="text-xl font-medium text-medium-blue max-w-md mt-5">
-            {enrollmentProcess.subtitle}
-          </h3>
+          <h2 class="text-2xl font-medium text-dark-blue">Enrollment Process</h2>
+          <h3 class="text-xl font-medium text-medium-blue max-w-md mt-5">{enrollmentProcess.subtitle}</h3>
           <ul class="flex flex-col gap-1 mt-5">
-            {
-              enrollmentProcess.list.map((item) => (
-                <li class="flex gap-3">
-                  <FaArrowAltCircleRight className="text-mustard-yellow size-5 flex-shrink-0 mt-1" />
-                  <p class="text-dark-blue">
-                    <span class="font-semibold">{item.heading}: </span>
-                    <span class="text-dark-blue/80">{item.description}</span>
-                  </p>
-                </li>
-              ))
-            }
+            {enrollmentProcess.list.map((item) => (
+              <li class="flex gap-3">
+                <FaArrowAltCircleRight className="text-mustard-yellow size-5 flex-shrink-0 mt-1" />
+                <p class="text-dark-blue">
+                  <span class="font-semibold">{item.heading}: </span>
+                  <span class="text-dark-blue/80">{item.description}</span>
+                </p>
+              </li>
+            ))}
           </ul>
         </div>
-        {
-          requirements && (
-            <div class="flex-1">
-              <h2 class="text-2xl font-medium text-dark-blue">
-                Program Requirements
-              </h2>
-              <h3 class="text-xl font-medium text-medium-blue max-w-md mt-5">
-                {requirements.subtitle}
-              </h3>
-              <ul class="flex flex-col gap-1 mt-5">
-                {requirements.list.map((item) => (
-                  <li class="flex gap-3">
-                    <FaArrowAltCircleRight className="text-mustard-yellow size-5 flex-shrink-0 mt-1" />
-                    <p class="text-dark-blue">
-                      <span class="font-semibold">{item.heading}: </span>
-                      <span class="text-dark-blue/80">{item.description}</span>
-                    </p>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )
-        }
       </div>
     </div>
+    
     <a
-      href={pathname.replace(/\/$/, "") === "/flight-training/ground-school"
-        ? "https://ce.coastalpines.edu/search/publicCourseSearchDetails.do?method=load&courseId=1020462"
-        : "/enrollment-form"}
+      href={programName === "Ground School" ? "/flight-training/sport-pilot" : (groundSchoolLinks[cleanedPath] ?? "/enrollment-form")}
       class="btn-blue mx-auto"
     >
-      Enroll Today</a
-    >
+      {programName === "Ground School" ? "Check Other Courses" : "Enroll Today"}
+    </a>
   </section>
 
-
-
-  {
-    programName === "Ground School" && (
-      <section class="py-16 px-5 bg-mustard-yellow scroll-my-20" id="toursCTA">
-        <div class="max-w-7xl mx-auto flex flex-col items-center">
-          <h2 class="uppercase text-medium-blue font-bold tracking-widest">
-            Interested in online ground school?
-          </h2>
-          <h3 class="text-3xl md:text-5xl font-bold leading-tight text-dark-blue text-center max-w-5xl">
-            We've partnered with Gold Seal to offer you a discounted online
-            ground school course
-          </h3>
-          <div class="grid items-center gap-5 place-items-center">
-            <a
-              href="https://hightideaviation.groundschool.com/"
-              target="_blank"
-              class="btn-blue hover:bg-white mt-5"
-            >
-              Fill out the form to get started
-            </a>
-          </div>
+  {programName === "Ground School" && (
+    <section class="py-16 px-5 bg-mustard-yellow scroll-my-20" id="toursCTA">
+      <div class="max-w-7xl mx-auto flex flex-col items-center">
+        <h2 class="uppercase text-medium-blue font-bold tracking-widest">Our Online Ground School Alternative</h2>
+        <h3 class="text-3xl md:text-5xl font-bold leading-tight text-dark-blue text-center max-w-5xl">
+          We've partnered with Gold Seal to offer you a discounted online ground school course
+        </h3>
+        <div class="grid items-center gap-5 place-items-center">
+          <a href="https://hightideaviation.groundschool.com/" target="_blank" class="btn-blue hover:bg-white mt-5">
+            Fill out the form to get started
+          </a>
         </div>
-      </section>
-    )
-  }
+      </div>
+    </section>
+  )}
 
-  <section class="py-16 px-5 bg-dark-blue">
-    <PricingComponent
-      client:visible
-      tiers={tiers}
-      program={title}
-      meet={meet}
-    />
-  </section>
+  {programName !== "Ground School" && (
+    <section class="py-16 px-5 bg-dark-blue">
+      <PricingComponent client:visible tiers={tiers} program={title} meet={meet} />
+    </section>
+  )}
 
   <section class="max-w-6xl mx-auto py-16 px-5">
     <div class="flex flex-col items-center">
-      <h2 class="uppercase text-medium-blue font-bold tracking-widest">
-        Future Pathways
-      </h2>
-      <h3
-        class="text-4xl font-bold leading-tight max-w-xl text-dark-blue text-center capitalize"
-      >
+      <h2 class="uppercase text-medium-blue font-bold tracking-widest">Future Pathways</h2>
+      <h3 class="text-4xl font-bold leading-tight max-w-xl text-dark-blue text-center capitalize">
         What comes after my {programName} training?
       </h3>
       <div class="grid md:grid-cols-3 mt-10 gap-7">
-        {
-          futurePathways.map((program) => (
-            <FlightProgramCard
-              imagePath={program.imagePath}
-              heading={program.heading}
-              subheading={program.subheading}
-              description={program.description}
-              url={program.url}
-            />
-          ))
-        }
+        {futurePathways.map((program) => (
+          <FlightProgramCard
+            imagePath={program.imagePath}
+            heading={program.heading}
+            subheading={program.subheading}
+            description={program.description}
+            url={program.url}
+          />
+        ))}
       </div>
     </div>
   </section>

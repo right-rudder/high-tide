@@ -13,6 +13,7 @@ const groundSchool = {
     "High Tide Aviation's ground school is where your aviation journey begins. As the foundation of pilot training, ground school equips students with the essential knowledge required to become safe, confident pilots. Instruction is led by experienced aviation professionals who bring real-world flying insight into every lesson.",
     "Students explore core aviation subjects including aerodynamics, aircraft systems, navigation, weather interpretation, flight planning, radio communication, and Federal Aviation Regulations. Lessons are interactive and designed to ensure true understanding — not rote memorization.",
     "Upon completion, students are prepared to take the FAA knowledge (written) examination and move confidently into flight training. Whether your goal is recreational flying or a professional pilot career, ground school sets the stage for everything that follows.",
+    "<strong>Please Note:</strong> We currently do not have any open enrollment for in-person ground school classes. Please check our online options below or contact us for one-on-one instruction availability.",
   ],
 
   prerequisites: {
