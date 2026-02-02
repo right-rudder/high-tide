@@ -49,7 +49,7 @@ Timing is critical when applying for NC-TAP.
 - **Applications Open:** January 1
 - **Application Window:** Limited — early submission is strongly encouraged
 
-To apply, visit the official **NC National Guard Tuition Assistance page** hosted by the :contentReference[oaicite:1]{index=1}:
+To apply, visit the official **NC National Guard Tuition Assistance page**:
 
 👉 https://ng.nc.gov/north-carolina-tuition-assistance-program-nctap
 
