@@ -298,7 +298,14 @@ export const fleet = [
     horsepower: "-- HP",
     usableFuel: "29.5 gal",
     model: "Robinson R44 Raven II",
-    equipment: ["IFR Certified"],
+    equipment: [
+      "Garmin GTN 650xi",
+      "Garmin GMA 350Hc audio panel",
+      "Garmin GTR 225B",
+      "Garmin GI 275",
+      "RC Allen Electronic ADI",
+      "RC Allen Digital DG PFD",
+    ],
     imagePath: "/src/assets/r44-helicopter-at-high-tide-aviation.jpg",
     imagesArray: ["/src/assets/r44-helicopter-at-high-tide-aviation.jpg"],
     description: [
