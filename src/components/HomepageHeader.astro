@@ -12,7 +12,13 @@ import HeroImage from "../assets/multiengine-plane-at-high-tide-aviation.jpg";
       src={HeroImage}
       alt="Multi-engine plane at High Tide Aviation in Southport, NC"
       class="absolute top-0 w-full h-full object-cover -z-50"
-      quality={50}
+      width={1920} 
+      height={1080}
+      widths={[640, 1024, 1920]}
+      sizes="100vw"
+      loading="eager"
+      fetchpriority="high"
+      quality={80}
     />
 
     <!-- <iframe

@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { IoStorefront } from "react-icons/io5";
 import { FaPlane } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
-import HighTideLogo from "../assets/high-tide-aviation-logo-gradation.png";
+import HighTideLogo from "../assets/high-tide-aviation-logo-gradation-smaller.png";
 import {
   FACEBOOK_URL,
   INSTAGRAM_URL,
@@ -70,7 +70,11 @@ const Navbar = ({ pathname }) => {
                 <img
                   src={HighTideLogo.src}
                   alt="High Tide Aviation Logo"
+                  width="187"
+                  height="56" 
                   className="xl:h-14 h-12 w-auto"
+                  loading="eager"
+                  decoding="async"
                 />
               </a>
               <div className="hidden lg:block">

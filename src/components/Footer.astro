@@ -106,7 +106,7 @@ import { navbarLinks } from "../data/navbarLinks";
         navbarLinks.slice(1, 3).map((link) => (
           <div class="flex flex-col gap-3">
             <h3 class="font-medium">{link.name}</h3>
-            <ul class="flex flex-col gap-2 text-white/50">
+            <ul class="flex flex-col gap-2 text-white/80">
               {link.submenu.map((item) => (
                 <li>
                   <a class="hover:text-white duration-300" href={item.link}>
@@ -119,7 +119,7 @@ import { navbarLinks } from "../data/navbarLinks";
         ))
       }
 
-      <ul class="flex flex-col gap-1 text-white/50">
+      <ul class="flex flex-col gap-1 text-white/80">
         <li class="font-medium mb-3 text-white">Southport Location</li>
         <li class="flex gap-2 items-center">
           <FaPhone className="size-4 text-mustard-yellow" />
@@ -163,7 +163,7 @@ import { navbarLinks } from "../data/navbarLinks";
           </a>
         </li>
       </ul>
-      <ul class="flex flex-col gap-1 text-white/50">
+      <ul class="flex flex-col gap-1 text-white/80">
         <li class="font-medium mb-3 text-white">Wilmington Location</li>
         <li class="flex gap-2 items-center">
           <FaPhone className="size-4 text-mustard-yellow" />
@@ -189,7 +189,7 @@ import { navbarLinks } from "../data/navbarLinks";
     <div
       class="flex flex-col gap-5 md:flex-row py-8 border-t border-white/20 items-center justify-between"
     >
-      <p class="text-center text-white/50">
+      <p class="text-center text-white/80">
         &copy; Copyright {today.getFullYear()} by <span class="text-white"
           >High Tide Aviation</span
         >.
@@ -199,7 +199,7 @@ import { navbarLinks } from "../data/navbarLinks";
           >Privacy Policy</a
         >
       </p>
-      <p class="text-white/50">
+      <p class="text-white/80">
         Powered by <a
           href="https://rightruddermarketing.com/"
           target="_blank"
